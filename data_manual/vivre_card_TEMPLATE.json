@@ -1,0 +1,16 @@
+{
+  "source_type": "vivre_card",
+  "default_tier": "likely",
+  "_doc": "Each entry needs: subject, predicate, value, source_ref (with required fields: ['edition']), and optional notes. Tier defaults to 'likely' per canon-sources.md.",
+  "entries": [
+    {
+      "subject": "Roronoa Zoro",
+      "predicate": "favorite_food",
+      "value": "white rice + sea king meat",
+      "source_ref": {
+        "edition": "EXAMPLE_EDITION"
+      },
+      "notes": "Replace EXAMPLE_X values with the real source location."
+    }
+  ]
+}

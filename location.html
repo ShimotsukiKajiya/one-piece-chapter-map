@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+<title>Location · The Shimotsuki Codex</title>
+<meta name="description" content="Location profile in the Shimotsuki Codex — arcs visited, key events, debut chapter, and characters who debuted there.">
+<link rel="stylesheet" href="cite-styles.css">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  nav a{color:var(--text);text-decoration:none;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px;border-radius:6px}
+  nav a:hover,nav a.active{color:var(--gold-bright);background:var(--surface2)}
+  main{max-width:900px;margin:0 auto;padding:32px 24px 80px;position:relative;z-index:1}
+  .crumbs{color:var(--muted);font-size:.8rem;margin-bottom:16px}
+  .crumbs a{color:var(--ink-blue);text-decoration:none}
+  .head{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:14px;padding:24px 28px;margin-bottom:22px}
+  .head{display:flex;gap:20px;align-items:flex-start}
+  .loc-portrait-wrap{flex-shrink:0;width:120px;aspect-ratio:1/1;border-radius:10px;border:2px solid var(--border);background:var(--surface);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:2.8rem;font-weight:900;color:var(--muted);position:relative}
+  .loc-portrait-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:9px}
+  .loc-info{flex:1;min-width:0}
+  .name{font-size:2rem;font-weight:900;color:var(--gold-bright)}
+  .name-jp{color:var(--muted);font-size:1rem;margin-top:4px}
+  .name-en{font-style:italic;color:var(--ink-blue);margin-top:6px}
+  .quick{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;color:var(--muted);font-size:.9rem}
+  .quick strong{color:var(--text)}
+  .sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 22px}
+  .section h3{color:var(--gold);font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .field{display:flex;gap:12px;margin-bottom:10px}
+  .field-label{color:var(--muted);font-size:.78rem;letter-spacing:1px;text-transform:uppercase;min-width:100px;flex-shrink:0}
+  .field-value{color:var(--text);font-size:.95rem;line-height:1.5}
+  .not-found{text-align:center;padding:60px 24px;border:1px dashed var(--border);border-radius:12px}
+  .not-found h2{color:var(--gold);margin-bottom:12px}
+  .not-found a{display:inline-block;margin-top:18px;background:var(--gold);color:var(--bg);padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700}
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:900px;margin:0 auto}
+</style>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/location.html">
+  <meta property="og:title" content="Location · The Shimotsuki Codex">
+  <meta property="og:description" content="Location profile in the Shimotsuki Codex — arcs visited, key events, debut chapter, and characters who debuted there.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/location.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Location · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Location profile in the Shimotsuki Codex — arcs visited, key events, debut chapter, and characters who debuted there.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Location</span></a>
+  
+</header>
+<main id="root">Loading…</main>
+<footer>The Shimotsuki Codex · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial</footer>
+
+<script id="locations-data" type="application/json">
+{
+  "153rd Branch": {
+    "id": "loc:00137",
+    "name": "153rd Branch",
+    "slug": "153rd-branch",
+    "aliases": [
+      "海軍第153支部",
+      "Kaigun Dai-Hyakugojūsan Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍第153支部",
+    "name_romaji": "Kaigun Dai-Hyakugojūsan Shibu",
+    "name_en": "Marine 153rd Branch",
+    "first_appearance": "Chapter 3; Episode 2",
+    "region": "East Blue",
+    "affiliation": "Marines",
+    "debut_chapter": 3
+  },
+  "16th Branch": {
+    "id": "loc:00138",
+    "name": "16th Branch",
+    "slug": "16th-branch",
+    "aliases": [
+      "海軍第16支部",
+      "Kaigun Dai-Jūroku Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍第16支部",
+    "name_romaji": "Kaigun Dai-Jūroku Shibu",
+    "name_en": "Marine 16th BranchNavy's 16th Division (4Kids)",
+    "first_appearance": "Chapter 94; Episode 43",
+    "region": "East Blue",
+    "affiliation": "Marines",
+    "debut_chapter": 94
+  },
+  "77th Branch": {
+    "id": "loc:00139",
+    "name": "77th Branch",
+    "slug": "77th-branch",
+    "aliases": [
+      "海軍第77支部",
+      "Kaigun Dai-Nanajūnana Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍第77支部",
+    "name_romaji": "Kaigun Dai-Nanajūnana Shibu",
+    "name_en": "Marine 77th Branch",
+    "first_appearance": "Chapter 75; Episode 34",
+    "region": "East Blue",
+    "affiliation": "Marines",
+    "debut_chapter": 75
+  },
+  "Arlong Park": {
+    "id": "loc:00140",
+    "name": "Arlong Park",
+    "slug": "arlong-park",
+    "aliases": [
+      "アーロンパーク",
+      "Āron Pāku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_canonical": "Arlong Park",
+    "name_jp": "アーロンパーク",
+    "name_romaji": "Āron Pāku",
+    "name_en": "Arlong Park",
+    "first_appearance": "Chapter 69; Episode 30",
+    "region": "Conomi Islands",
+    "affiliation": "Arlong Pirates",
+    "debut_chapter": 69
+  },
+  "Ballon Terminal": {
+    "id": "loc:00141",
+    "name": "Ballon Terminal",
+    "slug": "ballon-terminal",
+    "aliases": [
+      "バロンターミナル",
+      "Baron Tāminaru"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "バロンターミナル",
+    "name_romaji": "Baron Tāminaru",
+    "name_en": "Balloon Terminal",
+    "first_appearance": "Chapter 793; Episode 736",
+    "region": "Sky",
+    "debut_chapter": 793
+  },
+  "Baratie": {
+    "id": "loc:00142",
+    "name": "Baratie",
+    "slug": "baratie",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Birka": {
+    "id": "loc:00143",
+    "name": "Birka",
+    "slug": "birka",
+    "aliases": [
+      "ビルカ",
+      "Biruka"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ビルカ",
+    "name_romaji": "Biruka",
+    "name_en": "Birka (Funimation);Bilka (VIZ)",
+    "first_appearance": "Chapter 241; Episode 155 (mentioned)",
+    "region": "Sky",
+    "debut_chapter": 241
+  },
+  "Blue Planet": {
+    "id": "loc:00144",
+    "name": "Blue Planet",
+    "slug": "blue-planet",
+    "aliases": [
+      "青色の星",
+      "Aoiro no Hoshi"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "World Infobox.png",
+    "name_jp": "青色の星",
+    "name_romaji": "Aoiro no Hoshi",
+    "name_en": "Blue Planet",
+    "first_appearance": "Chapter 1; Episode 1",
+    "region": "Outer Space",
+    "affiliation": "World Government",
+    "debut_chapter": 1
+  },
+  "Blue Sea": {
+    "id": "loc:00145",
+    "name": "Blue Sea",
+    "slug": "blue-sea",
+    "aliases": [
+      "青海",
+      "Seikai"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "青海",
+    "name_romaji": "Seikai",
+    "first_appearance": "Chapter 1; Episode 1",
+    "debut_chapter": 1
+  },
+  "Bourgeois Kingdom": {
+    "id": "loc:00146",
+    "name": "Bourgeois Kingdom",
+    "slug": "bourgeois-kingdom",
+    "aliases": [
+      "ブルジョア王国",
+      "Burujoa Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ブルジョア王国",
+    "name_romaji": "Burujoa Ōkoku",
+    "name_en": "Bourgeois Kingdom",
+    "first_appearance": "Chapter 865 (cover); Episode 885",
+    "region": "Grand Line",
+    "debut_chapter": 865
+  },
+  "Bunt Kingdom": {
+    "id": "loc:00147",
+    "name": "Bunt Kingdom",
+    "slug": "bunt-kingdom",
+    "aliases": [
+      "バント王国",
+      "Banto Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "バント王国",
+    "name_romaji": "Banto Ōkoku",
+    "first_appearance": "Chapter 1153",
+    "region": "New World",
+    "debut_chapter": 1153
+  },
+  "Cocoa Weed": {
+    "id": "loc:00148",
+    "name": "Cocoa Weed",
+    "slug": "cocoa-weed",
+    "aliases": [
+      "ココアウィード",
+      "Kokoa Wīdo"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ココアウィード",
+    "name_romaji": "Kokoa Wīdo",
+    "name_en": "Cocoa Weed",
+    "first_appearance": "Chapter 134; Episode 81",
+    "region": "Drum Island",
+    "debut_chapter": 134
+  },
+  "Cocoyasi Village": {
+    "id": "loc:00149",
+    "name": "Cocoyasi Village",
+    "slug": "cocoyasi-village",
+    "aliases": [
+      "ココヤシ村",
+      "Kokoyashi-mura"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ココヤシ村",
+    "name_romaji": "Kokoyashi-mura",
+    "name_en": "Coco Village (VIZ manga, 4Kids dub, Funimation dub (Episode of East Blue), Live Action);Cocoyashi Village (Funimation);Coconut Village (Odex)",
+    "first_appearance": "Chapter 70; Episode 32",
+    "region": "Conomi Islands",
+    "debut_chapter": 70
+  },
+  "Doerena Kingdom": {
+    "id": "loc:00150",
+    "name": "Doerena Kingdom",
+    "slug": "doerena-kingdom",
+    "aliases": [
+      "ドエレーナ王国",
+      "Doerēna Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ドエレーナ王国",
+    "name_romaji": "Doerēna Ōkoku",
+    "name_en": "Kingdom of Biggschots",
+    "first_appearance": "Chapter 720; Episode 650 (Mentioned)",
+    "region": "New World",
+    "debut_chapter": 720
+  },
+  "Edd War": {
+    "id": "loc:00151",
+    "name": "Edd War",
+    "slug": "edd-war",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Elbaph": {
+    "id": "loc:00152",
+    "name": "Elbaph",
+    "slug": "elbaph",
+    "aliases": [
+      "エルバフ",
+      "Erubafu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "エルバフ",
+    "name_romaji": "Erubafu",
+    "name_en": "Elbaph (VIZ, 4Kids, Crunchyroll subs);Elbaf (Funimation);Erhab (Odex)",
+    "first_appearance": "Chapter 865; Episode 836",
+    "region": "New World",
+    "debut_chapter": 865
+  },
+  "Foosha Village": {
+    "id": "loc:00153",
+    "name": "Foosha Village",
+    "slug": "foosha-village",
+    "aliases": [
+      "フーシャ村",
+      "Fūsha-mura"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "フーシャ村",
+    "name_romaji": "Fūsha-mura",
+    "name_en": "Windmill Village, Fusha Village (Funimation subs)",
+    "first_appearance": "Chapter 1; Episode 4",
+    "affiliation": "Goa Kingdom",
+    "debut_chapter": 1
+  },
+  "Frauce Kingdom": {
+    "id": "loc:00154",
+    "name": "Frauce Kingdom",
+    "slug": "frauce-kingdom",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "G-1": {
+    "id": "loc:00155",
+    "name": "G-1",
+    "slug": "g-1",
+    "aliases": [
+      "海軍G・L第1支部",
+      "Kaigun Gurando Rain Dai-Ichi Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍G・L第1支部",
+    "name_romaji": "Kaigun Gurando Rain Dai-Ichi Shibu",
+    "name_en": "G-1",
+    "first_appearance": "Chapter 598; Episode 517",
+    "region": "Paradise (currently), New World (formerly)",
+    "affiliation": "Marines",
+    "debut_chapter": 598
+  },
+  "G-14": {
+    "id": "loc:00156",
+    "name": "G-14",
+    "slug": "g-14",
+    "aliases": [
+      "海軍本部支部",
+      "Kaigun Honbu Jī Fōtīn Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍本部支部",
+    "name_romaji": "Kaigun Honbu Jī Fōtīn Shibu",
+    "first_appearance": "Chapter 1061; Episode 1090",
+    "region": "New World",
+    "affiliation": "Marines",
+    "debut_chapter": 1061
+  },
+  "G-5": {
+    "id": "loc:00157",
+    "name": "G-5",
+    "slug": "g-5",
+    "aliases": [
+      "海軍G・L第5支部",
+      "Kaigun Gurando Rain Dai-Go Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍G・L第5支部",
+    "name_romaji": "Kaigun Gurando Rain Dai-Go Shibu",
+    "first_appearance": "Chapter 681 (cover)",
+    "region": "New World",
+    "affiliation": "Marines",
+    "debut_chapter": 681
+  },
+  "Germa Kingdom": {
+    "id": "loc:00158",
+    "name": "Germa Kingdom",
+    "slug": "germa-kingdom",
+    "aliases": [
+      "ジェルマ王国",
+      "Jeruma Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ジェルマ王国",
+    "name_romaji": "Jeruma Ōkoku",
+    "name_en": "Kingdom of Germa",
+    "first_appearance": "Chapter 832; Episode 787",
+    "region": "North Blue (formerly);New World",
+    "debut_chapter": 832
+  },
+  "Gosa Village": {
+    "id": "loc:00159",
+    "name": "Gosa Village",
+    "slug": "gosa-village",
+    "aliases": [
+      "ゴサの町",
+      "Gosa no Machi"
+    ],
+    "type": "location",
+    "found": true,
+    "name_canonical": "Gosa Village",
+    "name_jp": "ゴサの町",
+    "name_romaji": "Gosa no Machi",
+    "name_en": "Gosa Village",
+    "first_appearance": "Chapter 70; Episode 31",
+    "region": "Conomi Islands",
+    "debut_chapter": 70
+  },
+  "Headband Catfish Village": {
+    "id": "loc:00160",
+    "name": "Headband Catfish Village",
+    "slug": "headband-catfish-village",
+    "aliases": [
+      "ハチマキナマズ村",
+      "Hachimaki Namazu-mura"
+    ],
+    "type": "location",
+    "found": true,
+    "name_canonical": "Headband Catfish Village",
+    "infobox_image": "250px",
+    "name_jp": "ハチマキナマズ村",
+    "name_romaji": "Hachimaki Namazu-mura",
+    "name_en": "Village of the Headband-Wearing Catfish",
+    "first_appearance": "Chapter 214 (cover)",
+    "region": "Sea Floor",
+    "debut_chapter": 214
+  },
+  "Hot-Hot Sea": {
+    "id": "loc:00161",
+    "name": "Hot-Hot Sea",
+    "slug": "hot-hot-sea",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "International Philanthropy Federation": {
+    "id": "loc:00162",
+    "name": "International Philanthropy Federation",
+    "slug": "international-philanthropy-federation",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Jewel Ice Sheet": {
+    "id": "loc:00163",
+    "name": "Jewel Ice Sheet",
+    "slug": "jewel-ice-sheet",
+    "aliases": [
+      "宝玉氷床",
+      "Hōgyoku Hyōshō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "宝玉氷床",
+    "name_romaji": "Hōgyoku Hyōshō",
+    "name_en": "Crystal Ice Sheet",
+    "first_appearance": "Chapter 719; Episode 649",
+    "region": "New World",
+    "affiliation": "Happo Navy‎ (Chinjao Family)",
+    "debut_chapter": 719
+  },
+  "Kenzan Island": {
+    "id": "loc:00164",
+    "name": "Kenzan Island",
+    "slug": "kenzan-island",
+    "aliases": [
+      "剣山島",
+      "Kenzan-tō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "剣山島",
+    "name_romaji": "Kenzan-tō",
+    "name_en": "Sword Mountain Island",
+    "first_appearance": "Chapter 596; Episode 512",
+    "region": "Paradise",
+    "debut_chapter": 596
+  },
+  "Kuen Village": {
+    "id": "loc:00165",
+    "name": "Kuen Village",
+    "slug": "kuen-village",
+    "aliases": [
+      "クエン村",
+      "Kuen-mura"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "クエン村",
+    "name_romaji": "Kuen-mura",
+    "name_en": "N/A",
+    "first_appearance": "Chapter 771; Episode 710",
+    "region": "North Blue",
+    "debut_chapter": 771
+  },
+  "Kuraigana Island": {
+    "id": "loc:00166",
+    "name": "Kuraigana Island",
+    "slug": "kuraigana-island",
+    "aliases": [
+      "クライガナ島",
+      "Kuraigana-tō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "クライガナ島",
+    "name_romaji": "Kuraigana-tō",
+    "name_en": "Gloom Island",
+    "first_appearance": "Chapter 524; Episode 421",
+    "region": "Paradise",
+    "affiliation": "Shikkearu Kingdom (former)",
+    "debut_chapter": 524
+  },
+  "Loguetown": {
+    "id": "loc:00167",
+    "name": "Loguetown",
+    "slug": "loguetown",
+    "aliases": [
+      "ローグタウン",
+      "Rōgutaun"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ローグタウン",
+    "name_romaji": "Rōgutaun",
+    "name_en": "Roguetown;Logue Town (Funimation, formerly);Loague Town (Odex);Loguetown (OPCG)",
+    "first_appearance": "Chapter 1; We Are!",
+    "region": "East Blue",
+    "debut_chapter": 1
+  },
+  "Majiatsuka Kingdom": {
+    "id": "loc:00168",
+    "name": "Majiatsuka Kingdom",
+    "slug": "majiatsuka-kingdom",
+    "aliases": [
+      "マジアツカ王国",
+      "Majiatsuka Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "マジアツカ王国",
+    "name_romaji": "Majiatsuka Ōkoku",
+    "name_en": "Scorchistan; Majiatsuka (formerly Funimation)",
+    "first_appearance": "Chapter 725; Episode 654 (mentioned)",
+    "region": "New World",
+    "debut_chapter": 725
+  },
+  "Marine Headquarters": {
+    "id": "loc:00169",
+    "name": "Marine Headquarters",
+    "slug": "marine-headquarters",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Merveille": {
+    "id": "loc:00170",
+    "name": "Merveille",
+    "slug": "merveille",
+    "aliases": [
+      "メルヴィユ",
+      "Meruviyu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "メルヴィユ",
+    "name_romaji": "Meruviyu",
+    "name_en": "Merville (VIZ);Merveille (Funimation)",
+    "first_appearance": "Chapter 0; Episode 0; Movie 10",
+    "region": "Sky",
+    "affiliation": "Golden Lion Pirates",
+    "debut_chapter": 0
+  },
+  "Meshi": {
+    "id": "loc:00171",
+    "name": "Meshi",
+    "slug": "meshi",
+    "aliases": [
+      "N/A"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "N/A",
+    "name_romaji": "N/A",
+    "name_en": "Meshi",
+    "first_appearance": "Chapter 23; Episode 9",
+    "debut_chapter": 23
+  },
+  "Mogaro Kingdom": {
+    "id": "loc:00172",
+    "name": "Mogaro Kingdom",
+    "slug": "mogaro-kingdom",
+    "aliases": [
+      "モガロ王国",
+      "Mogaro Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "モガロ王国",
+    "name_romaji": "Mogaro Ōkoku",
+    "name_en": "Mogaro Kingdom",
+    "first_appearance": "Chapter 715; Episode 645 (Mentioned)",
+    "region": "New World",
+    "debut_chapter": 715
+  },
+  "Mokomo Dukedom": {
+    "id": "loc:00173",
+    "name": "Mokomo Dukedom",
+    "slug": "mokomo-dukedom",
+    "aliases": [
+      "モコモ公国",
+      "Mokomo Kōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "モコモ公国",
+    "name_romaji": "Mokomo Kōkoku",
+    "name_en": "Mokomo Dukedom",
+    "first_appearance": "Chapter 804; Episode 753",
+    "region": "New World (Zou)",
+    "debut_chapter": 804
+  },
+  "Momoiro Island": {
+    "id": "loc:00174",
+    "name": "Momoiro Island",
+    "slug": "momoiro-island",
+    "aliases": [
+      "モモイロ",
+      "Momoiro Airando"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "モモイロ",
+    "name_romaji": "Momoiro Airando",
+    "name_en": "Peachy Island",
+    "first_appearance": "Chapter 523; Episode 419",
+    "region": "Paradise",
+    "affiliation": "Revolutionary Army",
+    "debut_chapter": 523
+  },
+  "Moon": {
+    "id": "loc:00175",
+    "name": "Moon",
+    "slug": "moon",
+    "aliases": [
+      "月",
+      "Tsuki"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "月",
+    "name_romaji": "Tsuki",
+    "first_appearance": "Chapter 5;Episode 12",
+    "region": "Outer space",
+    "debut_chapter": 5
+  },
+  "Mt. Kintoki": {
+    "id": "loc:00176",
+    "name": "Mt. Kintoki",
+    "slug": "mt-kintoki",
+    "aliases": [
+      "金時山",
+      "Kintoki-yama"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "金時山",
+    "name_romaji": "Kintoki-yama",
+    "name_en": "N/A",
+    "first_appearance": "Chapter 1091; Episode 1125",
+    "region": "Grand Line",
+    "debut_chapter": 1091
+  },
+  "Nagagutsu Kingdom": {
+    "id": "loc:00177",
+    "name": "Nagagutsu Kingdom",
+    "slug": "nagagutsu-kingdom",
+    "aliases": [
+      "ナガグツ王国",
+      "Nagagutsu Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ナガグツ王国",
+    "name_romaji": "Nagagutsu Ōkoku",
+    "name_en": "Galosh Kingdom;Nagagutsu (Live-Action)",
+    "first_appearance": "Vivre Card - One Piece Visual Dictionary (mentioned)",
+    "region": "East Blue"
+  },
+  "Ocean's Navel": {
+    "id": "loc:00178",
+    "name": "Ocean's Navel",
+    "slug": "ocean-s-navel",
+    "aliases": [
+      "海のヘソ",
+      "Umi no heso"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海のヘソ",
+    "name_romaji": "Umi no heso",
+    "name_en": "Ocean's Navel (BStation)Navel of the Sea (VIZ)",
+    "first_appearance": "Episode Special 1",
+    "region": "East Blue"
+  },
+  "Orange Town": {
+    "id": "loc:00179",
+    "name": "Orange Town",
+    "slug": "orange-town",
+    "aliases": [
+      "オレンジの町",
+      "Orenji no Machi"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "オレンジの町",
+    "name_romaji": "Orenji no Machi",
+    "name_en": "Orange Town (Funimation, Odex, later Viz)Port Town (4Kids, early Viz)Orange Village (Grand Adventure)",
+    "first_appearance": "Chapter 8; Episode 4",
+    "region": "Organ Islands",
+    "debut_chapter": 8
+  },
+  "Oykot Kingdom": {
+    "id": "loc:00180",
+    "name": "Oykot Kingdom",
+    "slug": "oykot-kingdom",
+    "aliases": [
+      "オイコット王国",
+      "Oikotto Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "オイコット王国",
+    "name_romaji": "Oikotto Ōkoku",
+    "name_en": "Oykot Kingdom",
+    "first_appearance": "Chapter 77; Episode 35 (flashback)",
+    "region": "East Blue",
+    "debut_chapter": 77
+  },
+  "Pepe Kingdom": {
+    "id": "loc:00181",
+    "name": "Pepe Kingdom",
+    "slug": "pepe-kingdom",
+    "aliases": [
+      "ペペ王国",
+      "Pepe Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ペペ王国",
+    "name_romaji": "Pepe Ōkoku",
+    "name_en": "Pepe Kingdom",
+    "first_appearance": "Chapter 1082; Episode 1116",
+    "debut_chapter": 1082
+  },
+  "Prodence Kingdom": {
+    "id": "loc:00182",
+    "name": "Prodence Kingdom",
+    "slug": "prodence-kingdom",
+    "aliases": [
+      "プロデンス王国",
+      "Purodensu Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "プロデンス王国",
+    "name_romaji": "Purodensu Ōkoku",
+    "name_en": "Kingdom of Prodence (Viz)",
+    "first_appearance": "Chapter 823; Episode 778",
+    "region": "New World",
+    "affiliation": "World Government",
+    "debut_chapter": 823
+  },
+  "Punk Records": {
+    "id": "loc:00183",
+    "name": "Punk Records",
+    "slug": "punk-records",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Rainbow Island": {
+    "id": "loc:00184",
+    "name": "Rainbow Island",
+    "slug": "rainbow-island",
+    "aliases": [
+      "虹の島",
+      "Niji no Shima"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "虹の島",
+    "name_romaji": "Niji no Shima",
+    "name_en": "N/A",
+    "first_appearance": "Legend of the Rainbow Island",
+    "region": "Paradise"
+  },
+  "Satsuruzo Kingdom": {
+    "id": "loc:00185",
+    "name": "Satsuruzo Kingdom",
+    "slug": "satsuruzo-kingdom",
+    "aliases": [
+      "サーツルゾ王国",
+      "Sātsuruzo Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "サーツルゾ王国",
+    "name_romaji": "Sātsuruzo Ōkoku",
+    "name_en": "N/A",
+    "first_appearance": "Vivre Card - One Piece Visual Dictionary (mentioned)",
+    "region": "East Blue"
+  },
+  "Shakky's Rip-off Bar": {
+    "id": "loc:00186",
+    "name": "Shakky's Rip-off Bar",
+    "slug": "shakky-s-rip-off-bar",
+    "aliases": [
+      "シャッキー'S ぼったくりBAR",
+      "Shakkī-zu Bottakuri Bā"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nShakky's Rip-off Bar Infobox.png",
+    "name_jp": "シャッキー'S ぼったくりBAR",
+    "name_romaji": "Shakkī-zu Bottakuri Bā",
+    "name_en": "Shakky's Rip-off Bar",
+    "first_appearance": "Sabaody Archipelago: Chapter 498; Episode 392Hachinosu: Chapter 1157",
+    "region": "Sabaody Archipelago (Grove 13); Hachinosu",
+    "debut_chapter": 498
+  },
+  "Shells Town": {
+    "id": "loc:00187",
+    "name": "Shells Town",
+    "slug": "shells-town",
+    "aliases": [
+      "シェルズタウン",
+      "Sheruzu Taun"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "シェルズタウン",
+    "name_romaji": "Sheruzu Taun",
+    "name_en": "Shells Town;Naval Base Island (4Kids)",
+    "first_appearance": "Chapter 3; Episode 1",
+    "region": "East Blue (Yotsuba Island Region)",
+    "debut_chapter": 3
+  },
+  "Shimotsuki Village": {
+    "id": "loc:00188",
+    "name": "Shimotsuki Village",
+    "slug": "shimotsuki-village",
+    "aliases": [
+      "シモツキ村",
+      "Shimotsuki-mura"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "200px",
+    "name_jp": "シモツキ村",
+    "name_romaji": "Shimotsuki-mura",
+    "name_en": "Frost Moon Village (VIZ); Shimotsuki Village (Funimation)",
+    "first_appearance": "Chapter 5; Episode 2",
+    "region": "East Blue",
+    "debut_chapter": 5
+  },
+  "Sky Island": {
+    "id": "loc:00189",
+    "name": "Sky Island",
+    "slug": "sky-island",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Skypiea": {
+    "id": "loc:00190",
+    "name": "Skypiea",
+    "slug": "skypiea",
+    "aliases": [
+      "スカイピア",
+      "Sukaipia"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "スカイピア",
+    "name_romaji": "Sukaipia",
+    "first_appearance": "Chapter 239; Episode 154",
+    "region": "Sky",
+    "debut_chapter": 239
+  },
+  "Standing Kingdom": {
+    "id": "loc:00191",
+    "name": "Standing Kingdom",
+    "slug": "standing-kingdom",
+    "aliases": [
+      "スタンディング王国",
+      "Sutandingu Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "スタンディング王国",
+    "name_romaji": "Sutandingu Ōkoku",
+    "name_en": "Standing Kingdom",
+    "first_appearance": "Chapter 904 (cover); Episode 885",
+    "region": "Grand Line",
+    "debut_chapter": 904
+  },
+  "Syrup Village": {
+    "id": "loc:00192",
+    "name": "Syrup Village",
+    "slug": "syrup-village",
+    "aliases": [
+      "シロップ村",
+      "Shiroppu-mura"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "シロップ村",
+    "name_romaji": "Shiroppu-mura",
+    "first_appearance": "Chapter 23; Episode 8",
+    "region": "Gecko Islands",
+    "debut_chapter": 23
+  },
+  "Tequila Wolf": {
+    "id": "loc:00193",
+    "name": "Tequila Wolf",
+    "slug": "tequila-wolf",
+    "aliases": [
+      "テキーラウルフ",
+      "Tekīra Urufu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "テキーラウルフ",
+    "name_romaji": "Tekīra Urufu",
+    "name_en": "Tequila Wolf",
+    "first_appearance": "Chapter 524; Episode 420",
+    "region": "East Blue",
+    "debut_chapter": 524
+  },
+  "Third Research Institute": {
+    "id": "loc:00194",
+    "name": "Third Research Institute",
+    "slug": "third-research-institute",
+    "aliases": [
+      "第三研究所",
+      "Daisan Kenkyūjo"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "第三研究所",
+    "name_romaji": "Daisan Kenkyūjo",
+    "name_en": "Third Lab Complex",
+    "first_appearance": "Chapter 657; Episode 581",
+    "region": "Punk Hazard (Ice Lands)",
+    "affiliation": "Caesar Clown;Vegapunk (former)",
+    "debut_chapter": 657
+  },
+  "Tontatta Kingdom": {
+    "id": "loc:00195",
+    "name": "Tontatta Kingdom",
+    "slug": "tontatta-kingdom",
+    "aliases": [
+      "トンタッタ王国",
+      "Tontatta Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "トンタッタ王国",
+    "name_romaji": "Tontatta Ōkoku",
+    "name_en": "Kingdom of Tontatta",
+    "first_appearance": "Chapter 711; Episode 641",
+    "region": "Green Bit, New World",
+    "debut_chapter": 711
+  },
+  "Torino Kingdom": {
+    "id": "loc:00196",
+    "name": "Torino Kingdom",
+    "slug": "torino-kingdom",
+    "aliases": [
+      "トリノ王国",
+      "Torino Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "トリノ王国",
+    "name_romaji": "Torino Ōkoku",
+    "name_en": "Birdie Kingdom",
+    "first_appearance": "Chapter 524; Episode 419",
+    "region": "South Blue",
+    "debut_chapter": 524
+  },
+  "Totto Land": {
+    "id": "loc:00197",
+    "name": "Totto Land",
+    "slug": "totto-land",
+    "aliases": [
+      "Totto Rando"
+    ],
+    "type": "location",
+    "found": true,
+    "name_romaji": "Totto Rando",
+    "first_appearance": "Chapter 651; Episode 571",
+    "region": "New World",
+    "affiliation": "Big Mom Pirates",
+    "debut_chapter": 651
+  },
+  "Vodka Kingdom": {
+    "id": "loc:00198",
+    "name": "Vodka Kingdom",
+    "slug": "vodka-kingdom",
+    "aliases": [
+      "ウォッカ王国",
+      "Wokka Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ウォッカ王国",
+    "name_romaji": "Wokka Ōkoku",
+    "name_en": "Vodka Kingdom",
+    "first_appearance": "Chapter 1049; Episode 1076",
+    "region": "Grand Line",
+    "affiliation": "World Government",
+    "debut_chapter": 1049
+  },
+  "Waford": {
+    "id": "loc:00199",
+    "name": "Waford",
+    "slug": "waford",
+    "aliases": [
+      "ワフルド",
+      "Wafurudo"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nWaford Infobox.png",
+    "name_jp": "ワフルド",
+    "name_romaji": "Wafurudo",
+    "name_en": "Waford",
+    "first_appearance": "One Piece Odyssey",
+    "region": "New World"
+  },
+  "Wano Country": {
+    "id": "loc:00200",
+    "name": "Wano Country",
+    "slug": "wano-country",
+    "aliases": [
+      "ワノ国",
+      "Wano Kuni"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nWano Country Present.png",
+    "name_jp": "ワノ国",
+    "name_romaji": "Wano Kuni",
+    "name_en": "Land of WanoWano KingdomWano Country",
+    "first_appearance": "Monsters (Wanted!); Chapter 793; Episode 736",
+    "region": "New World",
+    "affiliation": "Straw Hat Pirates, Beasts Pirates (formerly)",
+    "debut_chapter": 793
+  },
+  "Weatheria": {
+    "id": "loc:00201",
+    "name": "Weatheria",
+    "slug": "weatheria",
+    "aliases": [
+      "ウェザリア",
+      "Wezaria"
+    ],
+    "type": "location",
+    "found": true,
+    "name_canonical": "Weatheria",
+    "name_jp": "ウェザリア",
+    "name_romaji": "Wezaria",
+    "name_en": "Weatheria",
+    "first_appearance": "Chapter 523; Episode 418",
+    "region": "Sky",
+    "debut_chapter": 523
+  },
+  "Acacia": {
+    "id": "loc:00202",
+    "name": "Acacia",
+    "slug": "acacia",
+    "aliases": [
+      "アカシア",
+      "Akashia"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "アカシア",
+    "name_romaji": "Akashia",
+    "first_appearance": "Chapter 701; Episode 630",
+    "region": "Dressrosa",
+    "debut_chapter": 701
+  },
+  "Antonio's Graman": {
+    "id": "loc:00203",
+    "name": "Antonio's Graman",
+    "slug": "antonio-s-graman",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Aurust Castle": {
+    "id": "loc:00204",
+    "name": "Aurust Castle",
+    "slug": "aurust-castle",
+    "aliases": [
+      "アウルスト城",
+      "Aurusuto-jō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "アウルスト城",
+    "name_romaji": "Aurusuto-jō",
+    "name_en": "Aurust Castle",
+    "first_appearance": "Chapter 1132",
+    "region": "Branch Route 8 (Sun World)",
+    "debut_chapter": 1132
+  },
+  "Bigstein Castle": {
+    "id": "loc:00205",
+    "name": "Bigstein Castle",
+    "slug": "bigstein-castle",
+    "aliases": [
+      "神々の国",
+      "Kamigami no Kuni"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "神々の国",
+    "name_romaji": "Kamigami no Kuni",
+    "name_en": "Land of Gods",
+    "first_appearance": "Chapter 1126; Episode 1156",
+    "region": "Underworld (Elbaph)",
+    "debut_chapter": 1126
+  },
+  "Branchi": {
+    "id": "loc:00206",
+    "name": "Branchi",
+    "slug": "branchi",
+    "aliases": [
+      "ブランチ",
+      "Buranchi"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ブランチ",
+    "name_romaji": "Buranchi",
+    "name_en": "Branch",
+    "first_appearance": "Future Present from God"
+  },
+  "Candy Factory": {
+    "id": "loc:00207",
+    "name": "Candy Factory",
+    "slug": "candy-factory",
+    "aliases": [
+      "おかし工場",
+      "Okashi Kōjō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "おかし工場",
+    "name_romaji": "Okashi Kōjō",
+    "name_en": "Candy Factory",
+    "first_appearance": "Chapter 610; Episode 529",
+    "region": "Fish-Man Island",
+    "debut_chapter": 610
+  },
+  "Carta": {
+    "id": "loc:00208",
+    "name": "Carta",
+    "slug": "carta",
+    "aliases": [
+      "カルタ",
+      "Karuta"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "カルタ",
+    "name_romaji": "Karuta",
+    "first_appearance": "Chapter 743; Episode 677",
+    "region": "Dressrosa",
+    "debut_chapter": 743
+  },
+  "Cloud End": {
+    "id": "loc:00209",
+    "name": "Cloud End",
+    "slug": "cloud-end",
+    "aliases": [
+      "Kuraudo Endo"
+    ],
+    "type": "location",
+    "found": true,
+    "name_romaji": "Kuraudo Endo",
+    "name_en": "Cloud's End (VIZ)Cloud End (Funimation)",
+    "first_appearance": "Chapter 302; Episode 195",
+    "region": "Sky",
+    "debut_chapter": 302
+  },
+  "Coral Hill": {
+    "id": "loc:00210",
+    "name": "Coral Hill",
+    "slug": "coral-hill",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Corrida Colosseum": {
+    "id": "loc:00211",
+    "name": "Corrida Colosseum",
+    "slug": "corrida-colosseum",
+    "aliases": [
+      "コリーダコロシアム",
+      "Korīda Koroshiamu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "コリーダコロシアム",
+    "name_romaji": "Korīda Koroshiamu",
+    "first_appearance": "Chapter 702; Episode 631",
+    "region": "Dressrosa",
+    "affiliation": "Donquixote Pirates",
+    "debut_chapter": 702
+  },
+  "Criminal": {
+    "id": "loc:00212",
+    "name": "Criminal",
+    "slug": "criminal",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "D&B": {
+    "id": "loc:00213",
+    "name": "D&B",
+    "slug": "d-b",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Devil's Tower": {
+    "id": "loc:00214",
+    "name": "Devil's Tower",
+    "slug": "devil-s-tower",
+    "aliases": [
+      "悪魔の塔",
+      "Akuma no tō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "悪魔の塔",
+    "name_romaji": "Akuma no tō",
+    "name_en": "N/A",
+    "first_appearance": "One Piece - Defeat Him! The Pirate Ganzack",
+    "region": "East Blue",
+    "affiliation": "Ganzack Pirates (former)"
+  },
+  "Dock 1": {
+    "id": "loc:00215",
+    "name": "Dock 1",
+    "slug": "dock-1",
+    "aliases": [
+      "1番ドック",
+      "Ichiban Dokku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "1番ドック",
+    "name_romaji": "Ichiban Dokku",
+    "first_appearance": "Chapter 323; Episode 230",
+    "affiliation": "Galley-La Company",
+    "region": "Water 7",
+    "debut_chapter": 323
+  },
+  "Drum Castle": {
+    "id": "loc:00216",
+    "name": "Drum Castle",
+    "slug": "drum-castle",
+    "aliases": [
+      "ドラム城",
+      "Doramu-jō"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "Drum Castle.png",
+    "name_jp": "ドラム城",
+    "name_romaji": "Doramu-jō",
+    "name_en": "Drum Castle",
+    "first_appearance": "Chapter 132; Episode 80",
+    "region": "Drum Island",
+    "debut_chapter": 132
+  },
+  "Drum Rockies": {
+    "id": "loc:00217",
+    "name": "Drum Rockies",
+    "slug": "drum-rockies",
+    "aliases": [
+      "ドラムロッキー",
+      "Doramu Rokkī"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "Drum Island Infobox.png",
+    "name_jp": "ドラムロッキー",
+    "name_romaji": "Doramu Rokkī",
+    "name_en": "Drum Rockies",
+    "first_appearance": "Chapter 132; Episode 79",
+    "region": "Drum Island",
+    "debut_chapter": 132
+  },
+  "Fish-Man District": {
+    "id": "loc:00218",
+    "name": "Fish-Man District",
+    "slug": "fish-man-district",
+    "aliases": [
+      "魚人街",
+      "Gyojin-gai"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nFish-Man District Infobox.png",
+    "name_jp": "魚人街",
+    "name_romaji": "Gyojin-gai",
+    "first_appearance": "Chapter 608; Episode 527",
+    "affiliation": "Ryugu KingdomNew Fish-Man Pirates (formerly)",
+    "debut_chapter": 608
+  },
+  "Fish-Man Karate Dojo": {
+    "id": "loc:00219",
+    "name": "Fish-Man Karate Dojo",
+    "slug": "fish-man-karate-dojo",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Florian Triangle": {
+    "id": "loc:00220",
+    "name": "Florian Triangle",
+    "slug": "florian-triangle",
+    "aliases": [
+      "Furorian Toraianguru"
+    ],
+    "type": "location",
+    "found": true,
+    "name_romaji": "Furorian Toraianguru",
+    "name_en": "Florian Triangle",
+    "first_appearance": "Chapter 442; Episode 337",
+    "region": "Paradise",
+    "debut_chapter": 442
+  },
+  "Flower Hill": {
+    "id": "loc:00221",
+    "name": "Flower Hill",
+    "slug": "flower-hill",
+    "aliases": [
+      "花畑",
+      "Hanabatake"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "花畑",
+    "name_romaji": "Hanabatake",
+    "first_appearance": "Chapter 701; Episode 630",
+    "region": "Dressrosa",
+    "debut_chapter": 701
+  },
+  "Franky House": {
+    "id": "loc:00222",
+    "name": "Franky House",
+    "slug": "franky-house",
+    "aliases": [
+      "フランキーハウス",
+      "Furankii Hausu"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nRebuilt Franky House.png",
+    "name_jp": "フランキーハウス",
+    "name_romaji": "Furankii Hausu",
+    "name_en": "Franky House",
+    "first_appearance": "Chapter 329; Episode 233.",
+    "region": "Water 7",
+    "debut_chapter": 329
+  },
+  "G-2": {
+    "id": "loc:00223",
+    "name": "G-2",
+    "slug": "g-2",
+    "aliases": [
+      "海軍G・L第2支部",
+      "Kaigun Gurando Rain Dai-Ni Shibu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "海軍G・L第2支部",
+    "name_romaji": "Kaigun Gurando Rain Dai-Ni Shibu",
+    "first_appearance": "Chapter 282 (cover); Episode 490",
+    "region": "Paradise, Grand Line",
+    "affiliation": "Marines",
+    "debut_chapter": 282
+  },
+  "Galley-La Headquarters": {
+    "id": "loc:00224",
+    "name": "Galley-La Headquarters",
+    "slug": "galley-la-headquarters",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Giant Jack": {
+    "id": "loc:00225",
+    "name": "Giant Jack",
+    "slug": "giant-jack",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "God Valley": {
+    "id": "loc:00226",
+    "name": "God Valley",
+    "slug": "god-valley",
+    "aliases": [
+      "ゴッドバレー",
+      "Goddo Barē"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ゴッドバレー",
+    "name_romaji": "Goddo Barē",
+    "name_en": "God Valley",
+    "first_appearance": "Chapter 957; Episode 958",
+    "region": "West Blue",
+    "debut_chapter": 957
+  },
+  "Gyoncorde Plaza": {
+    "id": "loc:00227",
+    "name": "Gyoncorde Plaza",
+    "slug": "gyoncorde-plaza",
+    "aliases": [
+      "ギョンコルド広場",
+      "Gyonkorudo Hiroba"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ギョンコルド広場",
+    "name_romaji": "Gyonkorudo Hiroba",
+    "name_en": "Conchcorde Plaza (VIZ, Funimation)",
+    "first_appearance": "Chapter 626; Episode 546",
+    "region": "Fish-Man Island",
+    "debut_chapter": 626
+  },
+  "Gyoverly Hills": {
+    "id": "loc:00228",
+    "name": "Gyoverly Hills",
+    "slug": "gyoverly-hills",
+    "aliases": [
+      "ギョバリーヒルズ",
+      "Gyobarī Hiruzu"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "Criminal Infobox.png",
+    "name_jp": "ギョバリーヒルズ",
+    "name_romaji": "Gyobarī Hiruzu",
+    "name_en": "Fishverly Hills (VIZ Manga and FUNimation Subs)",
+    "first_appearance": "Chapter 611; Episode 530",
+    "region": "Fish-Man Island",
+    "debut_chapter": 611
+  },
+  "High Mountain": {
+    "id": "loc:00229",
+    "name": "High Mountain",
+    "slug": "high-mountain",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Human Auctioning House": {
+    "id": "loc:00230",
+    "name": "Human Auctioning House",
+    "slug": "human-auctioning-house",
+    "aliases": [
+      "オークション会場",
+      "Hyūman Ōkushon Kaijō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "オークション会場",
+    "name_romaji": "Hyūman Ōkushon Kaijō",
+    "first_appearance": "Chapter 501, Episode 394",
+    "region": "Paradise",
+    "debut_chapter": 501
+  },
+  "Impel Down": {
+    "id": "loc:00231",
+    "name": "Impel Down",
+    "slug": "impel-down",
+    "aliases": [
+      "インペルダウン",
+      "Inperu Daun"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "インペルダウン",
+    "name_romaji": "Inperu Daun",
+    "first_appearance": "Chapter 525; Episode 422",
+    "region": "Calm Belt",
+    "affiliation": "World GovernmentMarines",
+    "debut_chapter": 525
+  },
+  "John's Candies Shop": {
+    "id": "loc:00232",
+    "name": "John's Candies Shop",
+    "slug": "john-s-candies-shop",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Lovely Land": {
+    "id": "loc:00233",
+    "name": "Lovely Land",
+    "slug": "lovely-land",
+    "aliases": [
+      "ラブリーランド",
+      "Raburī Rando"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ラブリーランド",
+    "name_romaji": "Raburī Rando",
+    "name_en": "Lovely Land",
+    "first_appearance": "Episode 330",
+    "region": "Hyokaido"
+  },
+  "Lulusia Kingdom": {
+    "id": "loc:00234",
+    "name": "Lulusia Kingdom",
+    "slug": "lulusia-kingdom",
+    "aliases": [
+      "ルルシア王国",
+      "Rurushia Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ルルシア王国",
+    "name_romaji": "Rurushia Ōkoku",
+    "name_en": "Lulusia;Lulucia (OPCG; formerly VIZ & Funimation)",
+    "first_appearance": "Chapter 272 (cover); Episode 880",
+    "region": "Paradise",
+    "affiliation": "Revolutionary Army; World Government (formerly)",
+    "debut_chapter": 272
+  },
+  "Mermaid Cove": {
+    "id": "loc:00235",
+    "name": "Mermaid Cove",
+    "slug": "mermaid-cove",
+    "aliases": [
+      "人魚の入り江",
+      "Ningyo no Irie"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "人魚の入り江",
+    "name_romaji": "Ningyo no Irie",
+    "name_en": "Mermaid Inlet",
+    "first_appearance": "Chapter 608; Episode 527",
+    "region": "Coral Hill",
+    "debut_chapter": 608
+  },
+  "Milky Road": {
+    "id": "loc:00236",
+    "name": "Milky Road",
+    "slug": "milky-road",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Miraba Elementary School": {
+    "id": "loc:00237",
+    "name": "Miraba Elementary School",
+    "slug": "miraba-elementary-school",
+    "aliases": [
+      "小学校",
+      "Miraba Shōgakkō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "小学校",
+    "name_romaji": "Miraba Shōgakkō",
+    "name_en": "N/A",
+    "first_appearance": "MiraBato Chapter 0",
+    "debut_chapter": 0
+  },
+  "Mock Town": {
+    "id": "loc:00238",
+    "name": "Mock Town",
+    "slug": "mock-town",
+    "aliases": [
+      "モックタウン",
+      "Mokku Taun"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "モックタウン",
+    "name_romaji": "Mokku Taun",
+    "name_en": "Mock Town",
+    "first_appearance": "Chapter 222; Episode 146",
+    "region": "Jaya",
+    "debut_chapter": 222
+  },
+  "Mountain Zone": {
+    "id": "loc:00239",
+    "name": "Mountain Zone",
+    "slug": "mountain-zone",
+    "aliases": [
+      "白銀に凍る雪山",
+      "Shirogane ni Kōru Yukiyama"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "白銀に凍る雪山",
+    "name_romaji": "Shirogane ni Kōru Yukiyama",
+    "name_en": "Silver Mountains",
+    "first_appearance": "One Piece: Unlimited Adventure",
+    "region": "Paradise"
+  },
+  "Mt. Colubo": {
+    "id": "loc:00240",
+    "name": "Mt. Colubo",
+    "slug": "mt-colubo",
+    "aliases": [
+      "コルボ山",
+      "Korubo-yama"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "コルボ山",
+    "name_romaji": "Korubo-yama",
+    "name_en": "Mt. CorvoMt. Colvo (Funimation Subs);Colubo (Live-Action Series)",
+    "first_appearance": "Chapter 582; Episode 493",
+    "region": "Dawn Island",
+    "debut_chapter": 582
+  },
+  "Mt. Mauri": {
+    "id": "loc:00241",
+    "name": "Mt. Mauri",
+    "slug": "mt-mauri",
+    "aliases": [
+      "マウリ火山",
+      "Mauri-kazan"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "マウリ火山",
+    "name_romaji": "Mauri-kazan",
+    "name_en": "Mt. Mauri",
+    "first_appearance": "Chapter 860; Episode 830 (mentioned)",
+    "debut_chapter": 860
+  },
+  "Onigashima": {
+    "id": "loc:00242",
+    "name": "Onigashima",
+    "slug": "onigashima",
+    "aliases": [
+      "鬼ヶ島"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "鬼ヶ島",
+    "name_romaji": "Onigashima",
+    "name_en": "Onigashima",
+    "first_appearance": "Chapter 793; Episode 736",
+    "region": "Wano Country",
+    "affiliation": "Beasts Pirates (Formerly)",
+    "debut_chapter": 793
+  },
+  "Owl Library": {
+    "id": "loc:00243",
+    "name": "Owl Library",
+    "slug": "owl-library",
+    "aliases": [
+      "フクロウの図書館",
+      "Fukurō no Toshokan"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "フクロウの図書館",
+    "name_romaji": "Fukurō no Toshokan",
+    "name_en": "Owl Library",
+    "first_appearance": "Chapter 1133",
+    "region": "Branch Route 8 (Sun World)",
+    "debut_chapter": 1133
+  },
+  "Pangaea Castle": {
+    "id": "loc:00244",
+    "name": "Pangaea Castle",
+    "slug": "pangaea-castle",
+    "aliases": [
+      "パンゲア城",
+      "Pangea-jō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "パンゲア城",
+    "name_romaji": "Pangea-jō",
+    "first_appearance": "Chapter 142; Episode 91",
+    "region": "Mary Geoise (Red Line)",
+    "affiliation": "World Government",
+    "debut_chapter": 142
+  },
+  "Paradise Farm": {
+    "id": "loc:00245",
+    "name": "Paradise Farm",
+    "slug": "paradise-farm",
+    "aliases": [
+      "桃源農園",
+      "Tōgen Nōen"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "桃源農園",
+    "name_romaji": "Tōgen Nōen",
+    "name_en": "Paradise Farm",
+    "first_appearance": "Chapter 917; Episode 904",
+    "region": "Kuri",
+    "debut_chapter": 917
+  },
+  "Pasta Lake": {
+    "id": "loc:00246",
+    "name": "Pasta Lake",
+    "slug": "pasta-lake",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "infobox_image": "Pasta Lake.png",
+    "name_en": "Pasta Lake",
+    "first_appearance": "Chapter 272 (cover)",
+    "region": "Lulusia Kingdom",
+    "debut_chapter": 272
+  },
+  "Primula": {
+    "id": "loc:00247",
+    "name": "Primula",
+    "slug": "primula",
+    "aliases": [
+      "プリムラ",
+      "Purimura"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "プリムラ",
+    "name_romaji": "Purimura",
+    "name_en": "Primula",
+    "first_appearance": "Chapter 743; Episode 677",
+    "region": "Dressrosa",
+    "debut_chapter": 743
+  },
+  "Prisoner Mine": {
+    "id": "loc:00248",
+    "name": "Prisoner Mine",
+    "slug": "prisoner-mine",
+    "aliases": [
+      "囚人採掘場",
+      "Shūjin Saikutsujō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "囚人採掘場",
+    "name_romaji": "Shūjin Saikutsujō",
+    "name_en": "Prisoner Mine;Excavation Labor Camp (Funimation)",
+    "first_appearance": "Chapter 924; Episode 916",
+    "region": "Wano Country (Udon)",
+    "affiliation": "Beasts Pirates",
+    "debut_chapter": 924
+  },
+  "Pumpkin Cafe": {
+    "id": "loc:00249",
+    "name": "Pumpkin Cafe",
+    "slug": "pumpkin-cafe",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Rainbow Tower": {
+    "id": "loc:00250",
+    "name": "Rainbow Tower",
+    "slug": "rainbow-tower",
+    "aliases": [
+      "虹の塔",
+      "Niji no Tō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "虹の塔",
+    "name_romaji": "Niji no Tō",
+    "name_en": "Rainbow Tower",
+    "first_appearance": "Episode 139",
+    "region": "Ruluka"
+  },
+  "Reverse Mountain": {
+    "id": "loc:00251",
+    "name": "Reverse Mountain",
+    "slug": "reverse-mountain",
+    "aliases": [
+      "リヴァース・マウンテン",
+      "Rivāsu Maunten"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "リヴァース・マウンテン",
+    "name_romaji": "Rivāsu Maunten",
+    "first_appearance": "Chapter 101; Episode 61",
+    "region": "Red Line",
+    "debut_chapter": 101
+  },
+  "Ryugu Kingdom": {
+    "id": "loc:00252",
+    "name": "Ryugu Kingdom",
+    "slug": "ryugu-kingdom",
+    "aliases": [
+      "リュウグウ王国",
+      "Ryūgū Ōkoku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "リュウグウ王国",
+    "name_romaji": "Ryūgū Ōkoku",
+    "name_en": "Ryugu KingdomKingdom of Ryugu",
+    "first_appearance": "Chapter 609; Episode 528",
+    "region": "Sea Floor",
+    "debut_chapter": 609
+  },
+  "Ryugu Palace": {
+    "id": "loc:00253",
+    "name": "Ryugu Palace",
+    "slug": "ryugu-palace",
+    "aliases": [
+      "竜宮城",
+      "Ryūgū-jō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_canonical": "Ryugu Palace",
+    "name_jp": "竜宮城",
+    "name_romaji": "Ryūgū-jō",
+    "name_en": "Ryugu Palace",
+    "first_appearance": "Chapter 612; Episode 531",
+    "debut_chapter": 612
+  },
+  "SMILE Factory": {
+    "id": "loc:00254",
+    "name": "SMILE Factory",
+    "slug": "smile-factory",
+    "aliases": [
+      "工場",
+      "Sumairu Kōjō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "工場",
+    "name_romaji": "Sumairu Kōjō",
+    "name_en": "SMILE Factory (VIZ)SMILE Manufacturing Factory (Funimation)",
+    "first_appearance": "Chapter 738; Episode 671",
+    "region": "Dressrosa (Underground Trade Port)",
+    "affiliation": "Donquixote Pirates",
+    "debut_chapter": 738
+  },
+  "Sabao Dome": {
+    "id": "loc:00255",
+    "name": "Sabao Dome",
+    "slug": "sabao-dome",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Sabaody Park": {
+    "id": "loc:00256",
+    "name": "Sabaody Park",
+    "slug": "sabaody-park",
+    "aliases": [
+      "シャボンディパーク",
+      "Shabondi Pāku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "シャボンディパーク",
+    "name_romaji": "Shabondi Pāku",
+    "first_appearance": "Chapter 499; Episode 393",
+    "region": "Paradise",
+    "debut_chapter": 499
+  },
+  "Sapoten Graveyard": {
+    "id": "loc:00257",
+    "name": "Sapoten Graveyard",
+    "slug": "sapoten-graveyard",
+    "aliases": [
+      "N/A"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "N/A",
+    "name_romaji": "N/A",
+    "name_en": "Sapoten Graveyard",
+    "first_appearance": "Chapter 107; Episode 64",
+    "region": "Cactus Island",
+    "debut_chapter": 107
+  },
+  "Scrap Island": {
+    "id": "loc:00258",
+    "name": "Scrap Island",
+    "slug": "scrap-island",
+    "aliases": [
+      "廃船島",
+      "Hai Funa-jima"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "廃船島",
+    "name_romaji": "Hai Funa-jima",
+    "name_en": "Scrap Heap Island",
+    "infobox_image": "Thousand Sunny Being Constructed.png",
+    "first_appearance": "Chapter 353; Episode 248",
+    "region": "Water 7",
+    "debut_chapter": 353
+  },
+  "Sea Forest": {
+    "id": "loc:00259",
+    "name": "Sea Forest",
+    "slug": "sea-forest",
+    "aliases": [
+      "海の森",
+      "Umi no Mori"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "Sea Forest.png",
+    "name_jp": "海の森",
+    "name_romaji": "Umi no Mori",
+    "name_en": "Forest of the SeaSea Forest (Funimation dub)",
+    "first_appearance": "Chapter 615; Episode 526‎",
+    "affiliation": "Fish-Man Island",
+    "debut_chapter": 615
+  },
+  "Sebio": {
+    "id": "loc:00260",
+    "name": "Sebio",
+    "slug": "sebio",
+    "aliases": [
+      "セビオ"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "セビオ",
+    "name_en": "Sevio",
+    "first_appearance": "Chapter 727; Episode 659",
+    "region": "Dressrosa",
+    "debut_chapter": 727
+  },
+  "Shandora": {
+    "id": "loc:00261",
+    "name": "Shandora",
+    "slug": "shandora",
+    "aliases": [
+      "シャンドラ"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nShandora Ruins.png",
+    "name_jp": "シャンドラ",
+    "name_romaji": "Shandora",
+    "name_en": "Shandora (VIZ Media, uncut Funimation dub); Loftra (edited Funimation dub);Shandola (BStation)",
+    "first_appearance": "Chapter 268; Episode 174",
+    "region": "Sky; Paradise (former)",
+    "debut_chapter": 268
+  },
+  "Sheep's House": {
+    "id": "loc:00262",
+    "name": "Sheep's House",
+    "slug": "sheep-s-house",
+    "aliases": [
+      "羊の家",
+      "Hitsuji no Ie"
+    ],
+    "type": "location",
+    "found": true,
+    "infobox_image": "\nSheep's House Infobox.png",
+    "name_jp": "羊の家",
+    "name_romaji": "Hitsuji no Ie",
+    "name_en": "House of Lambs",
+    "first_appearance": "Chapter 866; Episode 835",
+    "region": "Sun World (Elbaph); Whole Cake Island",
+    "debut_chapter": 866
+  },
+  "Skull Dome": {
+    "id": "loc:00263",
+    "name": "Skull Dome",
+    "slug": "skull-dome",
+    "aliases": [
+      "ドクロドーム",
+      "Dokuro Dōmu"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ドクロドーム",
+    "name_romaji": "Dokuro Dōmu",
+    "name_en": "Skull Dome",
+    "first_appearance": "Chapter 793; Episode 736",
+    "region": "Onigashima",
+    "affiliation": "Beasts Pirates",
+    "debut_chapter": 793
+  },
+  "Tomb of the Kings": {
+    "id": "loc:00264",
+    "name": "Tomb of the Kings",
+    "slug": "tomb-of-the-kings",
+    "aliases": [
+      "王家の墓",
+      "Ōke no Haka"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "王家の墓",
+    "name_romaji": "Ōke no Haka",
+    "name_en": "Royal Tomb/Royal Mausoleum",
+    "first_appearance": "Chapter 202; Episode 123",
+    "region": "Arabasta Kingdom",
+    "debut_chapter": 202
+  },
+  "Trump Castle": {
+    "id": "loc:00265",
+    "name": "Trump Castle",
+    "slug": "trump-castle",
+    "aliases": [
+      "トランプ城",
+      "Toranpu Jō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "トランプ城",
+    "name_romaji": "Toranpu Jō",
+    "name_en": "Card Castle (Manga Entertainment)Trump Castle (BStation)",
+    "first_appearance": "Movie 2",
+    "region": "Clockwork Island"
+  },
+  "Tsui Village": {
+    "id": "loc:00266",
+    "name": "Tsui Village",
+    "slug": "tsui-village",
+    "aliases": [
+      "終の里",
+      "Tsui no Sato"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "終の里",
+    "name_romaji": "Tsui no Sato",
+    "name_en": "Tsui Village",
+    "first_appearance": "Episode 317",
+    "region": "Water 7"
+  },
+  "Upper Yard": {
+    "id": "loc:00267",
+    "name": "Upper Yard",
+    "slug": "upper-yard",
+    "aliases": [],
+    "type": "location",
+    "found": false
+  },
+  "Uwazumi High School": {
+    "id": "loc:00268",
+    "name": "Uwazumi High School",
+    "slug": "uwazumi-high-school",
+    "aliases": [
+      "高校",
+      "Uwazumi Kōkō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "高校",
+    "name_romaji": "Uwazumi Kōkō",
+    "name_en": "N/A",
+    "first_appearance": "One Piece in Love Chapter 1; One Piece in Love Episode 1",
+    "debut_chapter": 1
+  },
+  "Wagomuland": {
+    "id": "loc:00269",
+    "name": "Wagomuland",
+    "slug": "wagomuland",
+    "aliases": [
+      "ワゴームランド",
+      "Wagōmu Rando"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ワゴームランド",
+    "name_romaji": "Wagōmu Rando",
+    "first_appearance": "Chapter 645 (cover)",
+    "region": "Sky",
+    "debut_chapter": 645
+  },
+  "Walrus School": {
+    "id": "loc:00270",
+    "name": "Walrus School",
+    "slug": "walrus-school",
+    "aliases": [
+      "セイウチの学校",
+      "Seiuchi no Gakkō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "セイウチの学校",
+    "name_romaji": "Seiuchi no Gakkō",
+    "name_en": "Walrus School",
+    "first_appearance": "Chapter 1134",
+    "region": "Branch Route 8 (Sun World)",
+    "debut_chapter": 1134
+  },
+  "Whisky Peak": {
+    "id": "loc:00271",
+    "name": "Whisky Peak",
+    "slug": "whisky-peak",
+    "aliases": [
+      "ウイスキーピーク",
+      "Uisukī Pīku"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ウイスキーピーク",
+    "name_romaji": "Uisukī Pīku",
+    "name_en": "Whisky Peak (Funimation, VIZ); Misty Peak (4Kids)",
+    "first_appearance": "Chapter 106; Episode 64",
+    "region": "Cactus Island",
+    "debut_chapter": 106
+  },
+  "Whole Cake Chateau": {
+    "id": "loc:00272",
+    "name": "Whole Cake Chateau",
+    "slug": "whole-cake-chateau",
+    "aliases": [
+      "ホールケーキ",
+      "Hōru Kēki Shatō"
+    ],
+    "type": "location",
+    "found": true,
+    "name_jp": "ホールケーキ",
+    "name_romaji": "Hōru Kēki Shatō",
+    "first_appearance": "Chapter 651; Episode 571",
+    "region": "Whole Cake Island",
+    "affiliation": "Big Mom Pirates",
+    "debut_chapter": 651
+  },
+  "Post-Enies Lobby (Shift Station)": {
+    "id": "loc:00273",
+    "name": "Post-Enies Lobby (Shift Station)",
+    "slug": "post-enies-lobby",
+    "aliases": [
+      "Shift Station"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Little Garden": {
+    "id": "loc:00274",
+    "name": "Little Garden",
+    "slug": "little-garden",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Drum Island": {
+    "id": "loc:00275",
+    "name": "Drum Island",
+    "slug": "drum-island",
+    "aliases": [
+      "Drum Kingdom"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Alabasta": {
+    "id": "loc:00276",
+    "name": "Alabasta",
+    "slug": "alabasta",
+    "aliases": [
+      "Arabasta"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Jaya": {
+    "id": "loc:00277",
+    "name": "Jaya",
+    "slug": "jaya",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Long Ring Long Land": {
+    "id": "loc:00278",
+    "name": "Long Ring Long Land",
+    "slug": "long-ring-long-land",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Water 7": {
+    "id": "loc:00279",
+    "name": "Water 7",
+    "slug": "water-7",
+    "aliases": [
+      "Water Seven"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Enies Lobby": {
+    "id": "loc:00280",
+    "name": "Enies Lobby",
+    "slug": "enies-lobby",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Thriller Bark": {
+    "id": "loc:00281",
+    "name": "Thriller Bark",
+    "slug": "thriller-bark",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Sabaody Archipelago": {
+    "id": "loc:00282",
+    "name": "Sabaody Archipelago",
+    "slug": "sabaody-archipelago",
+    "aliases": [
+      "Sabaody"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Amazon Lily": {
+    "id": "loc:00283",
+    "name": "Amazon Lily",
+    "slug": "amazon-lily",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Return to Sabaody": {
+    "id": "loc:00284",
+    "name": "Return to Sabaody",
+    "slug": "return-to-sabaody",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Fishman Island": {
+    "id": "loc:00285",
+    "name": "Fishman Island",
+    "slug": "fishman-island",
+    "aliases": [
+      "Fish-Man Island",
+      "Fish Island"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Punk Hazard": {
+    "id": "loc:00286",
+    "name": "Punk Hazard",
+    "slug": "punk-hazard",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Dressrosa": {
+    "id": "loc:00287",
+    "name": "Dressrosa",
+    "slug": "dressrosa",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "Egghead": {
+    "id": "loc:00288",
+    "name": "Egghead",
+    "slug": "egghead",
+    "aliases": [
+      "Egghead Island",
+      "Egghead Arc"
+    ],
+    "type": "location",
+    "found": true,
+    "raw_keys": []
+  },
+  "East Blue": {
+    "name": "East Blue",
+    "slug": "east-blue",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "first_appearance": "Chapter 1",
+    "debut_chapter": 1,
+    "id": "loc:00289"
+  },
+  "West Blue": {
+    "name": "West Blue",
+    "slug": "west-blue",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "id": "loc:00290"
+  },
+  "North Blue": {
+    "name": "North Blue",
+    "slug": "north-blue",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "id": "loc:00291"
+  },
+  "South Blue": {
+    "name": "South Blue",
+    "slug": "south-blue",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "id": "loc:00292"
+  },
+  "Grand Line": {
+    "name": "Grand Line",
+    "slug": "grand-line",
+    "aliases": [
+      "Paradise"
+    ],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "first_appearance": "Chapter 1",
+    "debut_chapter": 1,
+    "id": "loc:00293"
+  },
+  "New World": {
+    "name": "New World",
+    "slug": "new-world",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "id": "loc:00294"
+  },
+  "Calm Belt": {
+    "name": "Calm Belt",
+    "slug": "calm-belt",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "id": "loc:00295"
+  },
+  "Red Line": {
+    "name": "Red Line",
+    "slug": "red-line",
+    "aliases": [],
+    "type": "location",
+    "found": true,
+    "region_type": "sea",
+    "first_appearance": "Chapter 1",
+    "debut_chapter": 1,
+    "id": "loc:00296"
+  }
+}
+</script>
+<script id="location-shards-data" type="application/json">
+{"loc:00172":{"arcs":[],"born_here":[{"from":"chr:01684","to":"loc:00172","src":"wiki","origin_raw":"Grand Line (Mogaro Kingdom)","resolved_via":"sub-location","_display":"Bobby Funk"},{"from":"chr:02285","to":"loc:00172","src":"wiki","origin_raw":"Grand Line (Mogaro Kingdom)","resolved_via":"sub-location","_display":"Kelly Funk"}]},"loc:00296":{"arcs":[],"born_here":[{"from":"chr:01928","to":"loc:00296","src":"wiki","origin_raw":"Red Line (Mary Geoise)","resolved_via":"sea-region","_display":"Donquixote Doflamingo"},{"from":"chr:01931","to":"loc:00296","src":"wiki","origin_raw":"Red Line (Mary Geoise)","resolved_via":"sea-region","_display":"Donquixote Rosinante"},{"from":"chr:02221","to":"loc:00296","src":"wiki","origin_raw":"Red Line (Mary Geoise)","resolved_via":"sea-region","_display":"Jewelry Bonney"},{"from":"chr:02733","to":"loc:00296","src":"wiki","origin_raw":"Red Line (Mary Geoise)","resolved_via":"sea-region","_display":"Rosward Charlos"},{"from":"chr:02734","to":"loc:00296","src":"wiki","origin_raw":"Red Line (Mary Geoise)","resolved_via":"sea-region","_display":"Rosward Rosward"},{"from":"chr:02735","to":"loc:00296","src":"wiki","origin_raw":"Red Line (Mary Geoise)","resolved_via":"sea-region","_display":"Rosward Shalria"}]},"loc:00277":{"arcs":[{"from":"arc:jaya","to":"loc:00277","src":"inferred","_display":"Jaya"}],"born_here":[{"from":"chr:01840","to":"loc:00277","src":"wiki","origin_raw":"Jaya","resolved_via":"exact","_display":"Chiya"},{"from":"chr:01856","to":"loc:00277","src":"wiki","origin_raw":"Jaya","resolved_via":"exact","_display":"Coburn"},{"from":"chr:02260","to":"loc:00277","src":"wiki","origin_raw":"Grand Line (Jaya)","resolved_via":"sub-location","_display":"Kalgara"}]},"loc:00293":{"arcs":[],"born_here":[{"from":"chr:01552","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Adio Suerte"},{"from":"chr:01567","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Akumai"},{"from":"chr:01578","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"An Zengaiina"},{"from":"chr:01611","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Babe"},{"from":"chr:01612","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Baburu"},{"from":"chr:01631","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Baskerville"},{"from":"chr:01632","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Bastille"},{"from":"chr:01670","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Blenheim"},{"from":"chr:01673","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Blue Gilly"},{"from":"chr:01696","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Brannew"},{"from":"chr:01709","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Buckingham Stussy"},{"from":"chr:01711","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Buggy"},{"from":"chr:01724","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Caesar Clown"},{"from":"chr:01731","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Candy"},{"from":"chr:01748","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Chadros Higelyges"},{"from":"chr:01749","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Chaka"},{"from":"chr:01756","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Angel"},{"from":"chr:01762","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (At a random port)","resolved_via":"sea-region","_display":"Charlotte Broyé"},{"from":"chr:01763","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (At a random port)","resolved_via":"sea-region","_display":"Charlotte Brûlée"},{"from":"chr:01774","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Cracker"},{"from":"chr:01775","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Custard"},{"from":"chr:01777","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Daifuku"},{"from":"chr:01790","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Katakuri"},{"from":"chr:01793","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Charlotte Linlin"},{"from":"chr:01803","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Mont-d'Or"},{"from":"chr:01813","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (On a boat)","resolved_via":"sea-region","_display":"Charlotte Oven"},{"from":"chr:01815","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (At a random port)","resolved_via":"sea-region","_display":"Charlotte Perospero"},{"from":"chr:01876","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Crocodile"},{"from":"chr:01877","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Crocus"},{"from":"chr:01878","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Curiel"},{"from":"chr:01912","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Disco"},{"from":"chr:01923","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Domino"},{"from":"chr:01945","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Drophy"},{"from":"chr:01948","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Duval"},{"from":"chr:01950","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Sphinx)","resolved_via":"sea-region","_display":"Edward Newgate"},{"from":"chr:01951","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Edward Weevil"},{"from":"chr:01959","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Kamabakka Kingdom)","resolved_via":"sea-region","_display":"Emporio Ivankov"},{"from":"chr:01998","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Fukurou"},{"from":"chr:02046","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Porco Kingdom)","resolved_via":"sea-region","_display":"Ginny"},{"from":"chr:02175","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Ideo"},{"from":"chr:02176","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Igaram"},{"from":"chr:02194","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Island Eater"},{"from":"chr:02197","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Aoi Kingdom)","resolved_via":"sea-region","_display":"Issho"},{"from":"chr:02204","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Jack"},{"from":"chr:02215","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Jean Goen"},{"from":"chr:02220","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Jesus Burgess"},{"from":"chr:02240","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Judy"},{"from":"chr:02252","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Kaidou"},{"from":"chr:02261","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Kalifa"},{"from":"chr:02272","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Karoo"},{"from":"chr:02298","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"King"},{"from":"chr:02301","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Kingdew"},{"from":"chr:02324","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Moby Dick)","resolved_via":"sea-region","_display":"Kouzuki Hiyori"},{"from":"chr:02325","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Moby Dick)","resolved_via":"sea-region","_display":"Kouzuki Momonosuke"},{"from":"chr:02329","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Koza"},{"from":"chr:02360","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Lacuba"},{"from":"chr:02368","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Green Bit)","resolved_via":"sea-region","_display":"Leo"},{"from":"chr:02379","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Little Oars Jr."},{"from":"chr:02397","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Magellan"},{"from":"chr:02411","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Green Bit)","resolved_via":"sea-region","_display":"Mansherry"},{"from":"chr:02413","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Marco"},{"from":"chr:02420","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Marie"},{"from":"chr:02426","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Shade Port)","resolved_via":"sea-region","_display":"Marshall D. Teach"},{"from":"chr:02437","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Matsuge"},{"from":"chr:02472","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Miss Friday"},{"from":"chr:02473","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Miss Monday"},{"from":"chr:02491","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Momonga"},{"from":"chr:02492","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Momoo"},{"from":"chr:02507","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Morgans"},{"from":"chr:02514","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Rural Village)","resolved_via":"sea-region","_display":"Motobaro"},{"from":"chr:02527","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Mr. 11"},{"from":"chr:02529","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Mr. 13"},{"from":"chr:02532","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Mr. 9"},{"from":"chr:02533","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Mr. Beans"},{"from":"chr:02537","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Mr. Shimizu"},{"from":"chr:02549","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Namur"},{"from":"chr:02550","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Cactus Island)","resolved_via":"sea-region","_display":"Nanday"},{"from":"chr:02552","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Napoleon"},{"from":"chr:02557","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Nefertari Cobra"},{"from":"chr:02558","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Nefertari D. Lili"},{"from":"chr:02560","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Nefertari Vivi"},{"from":"chr:02619","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Page One"},{"from":"chr:02622","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Pankuta Dakeyan"},{"from":"chr:02638","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Arabasta Kingdom)","resolved_via":"sea-region","_display":"Pell"},{"from":"chr:02672","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Prometheus"},{"from":"chr:02678","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Queen"},{"from":"chr:02718","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Guanhao)","resolved_via":"sea-region","_display":"Rob Lucci"},{"from":"chr:02752","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Sadi"},{"from":"chr:02757","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Saldeath"},{"from":"chr:02761","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Samurai Batts"},{"from":"chr:02774","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Sasaki"},{"from":"chr:02785","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Scratchmen Apoo"},{"from":"chr:02811","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Sheepshead"},{"from":"chr:02830","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Shiryu"},{"from":"chr:02844","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Smoker"},{"from":"chr:02857","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Spandam"},{"from":"chr:02858","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Spandine"},{"from":"chr:02867","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Squard"},{"from":"chr:02869","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Stalker"},{"from":"chr:02870","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Stansen"},{"from":"chr:02874","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Streusen"},{"from":"chr:02894","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"T Bone"},{"from":"chr:02903","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Tamago"},{"from":"chr:02971","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Ulti"},{"from":"chr:02996","to":"loc:00293","src":"wiki","origin_raw":"Grand Line (Karakuri Island)","resolved_via":"sea-region","_display":"Vegapunk"},{"from":"chr:03053","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Yeti Cool Brothers"},{"from":"chr:03065","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Yuki"},{"from":"chr:03069","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Zala"},{"from":"chr:03076","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Zeus"},{"from":"chr:03080","to":"loc:00293","src":"wiki","origin_raw":"Grand Line","resolved_via":"exact","_display":"Zunesha"}]},"loc:00146":{"arcs":[],"born_here":[{"from":"chr:01743","to":"loc:00146","src":"wiki","origin_raw":"Grand Line (Bourgeois Kingdom)","resolved_via":"sub-location","_display":"Cavendish"}]},"loc:00153":{"arcs":[{"from":"arc:romance-dawn","to":"loc:00153","src":"inferred","_display":"Romance Dawn"}],"born_here":[{"from":"chr:02404","to":"loc:00153","src":"wiki","origin_raw":"East Blue (Foosha Village)","resolved_via":"sub-location","_display":"Makino"},{"from":"chr:02405","to":"loc:00153","src":"wiki","origin_raw":"East Blue (Foosha Village)","resolved_via":"sub-location","_display":"Makino's Child"},{"from":"chr:02499","to":"loc:00153","src":"wiki","origin_raw":"East Blue (Foosha Village)","resolved_via":"sub-location","_display":"Monkey D. Luffy"}]},"loc:00167":{"arcs":[{"from":"arc:loguetown","to":"loc:00167","src":"inferred","_display":"Loguetown"}],"born_here":[{"from":"chr:02061","to":"loc:00167","src":"wiki","origin_raw":"East Blue (Loguetown)","resolved_via":"sub-location","_display":"Gol D. Roger"},{"from":"chr:02188","to":"loc:00167","src":"wiki","origin_raw":"East Blue (Loguetown)","resolved_via":"sub-location","_display":"Ipponmatsu"}]},"loc:00271":{"arcs":[{"from":"arc:whiskey-peak","to":"loc:00271","src":"inferred","_display":"Whiskey Peak"}],"born_here":[]},"loc:00287":{"arcs":[{"from":"arc:dressrosa","to":"loc:00287","src":"inferred","_display":"Dressrosa"}],"born_here":[{"from":"chr:02354","to":"loc:00287","src":"wiki","origin_raw":"Grand Line (Dressrosa)","resolved_via":"sub-location","_display":"Kyros"},{"from":"chr:02699","to":"loc:00287","src":"wiki","origin_raw":"Grand Line (Dressrosa)","resolved_via":"sub-location","_display":"Rebecca"},{"from":"chr:02707","to":"loc:00287","src":"wiki","origin_raw":"Grand Line (Dressrosa)","resolved_via":"sub-location","_display":"Riku Doldo III"},{"from":"chr:03013","to":"loc:00287","src":"wiki","origin_raw":"Grand Line (Dressrosa)","resolved_via":"sub-location","_display":"Viola"}]},"loc:00179":{"arcs":[{"from":"arc:orange-town","to":"loc:00179","src":"inferred","_display":"Orange Town"}],"born_here":[{"from":"chr:02146","to":"loc:00179","src":"wiki","origin_raw":"East Blue (Orange Town)","resolved_via":"sub-location","_display":"Hocker"},{"from":"chr:02664","to":"loc:00179","src":"wiki","origin_raw":"East Blue (Orange Town)","resolved_via":"sub-location","_display":"Poro"}]},"loc:00191":{"arcs":[],"born_here":[{"from":"chr:02612","to":"loc:00191","src":"wiki","origin_raw":"Grand Line (Standing Kingdom)","resolved_via":"sub-location","_display":"Orlumbus"}]},"loc:00143":{"arcs":[],"born_here":[{"from":"chr:01960","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Enel"},{"from":"chr:02027","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Gedatsu"},{"from":"chr:02107","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Haredas"},{"from":"chr:02158","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Hotori and Kotori"},{"from":"chr:02600","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Ohm"},{"from":"chr:02776","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Satori"},{"from":"chr:02834","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Shura"},{"from":"chr:03042","to":"loc:00143","src":"wiki","origin_raw":"Sky Islands (Birka)","resolved_via":"sub-location","_display":"Yama"}]},"loc:00278":{"arcs":[{"from":"arc:long-ring-long-land","to":"loc:00278","src":"inferred","_display":"Long Ring Long Land"}],"born_here":[{"from":"chr:02935","to":"loc:00278","src":"wiki","origin_raw":"Grand Line (Long Ring Long Land)","resolved_via":"sub-location","_display":"Tonjil"},{"from":"chr:02936","to":"loc:00278","src":"wiki","origin_raw":"Grand Line (Long Ring Long Land)","resolved_via":"sub-location","_display":"Tonjit"},{"from":"chr:02937","to":"loc:00278","src":"wiki","origin_raw":"Grand Line (Long Ring Long Land)","resolved_via":"sub-location","_display":"Tonsfer"}]},"loc:00169":{"arcs":[{"from":"arc:marineford","to":"loc:00169","src":"inferred","_display":"Marineford"},{"from":"arc:post-war","to":"loc:00169","src":"inferred","_display":"Post-War"}],"born_here":[]},"loc:00279":{"arcs":[{"from":"arc:water-7","to":"loc:00279","src":"inferred","_display":"Water 7"}],"born_here":[{"from":"chr:01838","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7)","resolved_via":"sub-location","_display":"Chimney"},{"from":"chr:02172","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7)","resolved_via":"sub-location","_display":"Iceburg"},{"from":"chr:02525","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7, Slums)","resolved_via":"sub-location","_display":"Mozu and Kiwi"},{"from":"chr:02630","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7)","resolved_via":"sub-location","_display":"Paulie"},{"from":"chr:02635","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7)","resolved_via":"sub-location","_display":"Peepley Lulu"},{"from":"chr:02928","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7)","resolved_via":"sub-location","_display":"Tilestone"},{"from":"chr:03070","to":"loc:00279","src":"wiki","origin_raw":"Grand Line (Water 7)","resolved_via":"sub-location","_display":"Zambai"}]},"loc:00290":{"arcs":[],"born_here":[{"from":"chr:01548","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Absalom"},{"from":"chr:01605","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Atmos"},{"from":"chr:01618","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Banchi"},{"from":"chr:01630","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Basilisk"},{"from":"chr:01703","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Brook"},{"from":"chr:01721","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Byron"},{"from":"chr:01732","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Capone Bege"},{"from":"chr:01737","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Carmel"},{"from":"chr:01839","to":"loc:00290","src":"wiki","origin_raw":"West Blue (Kano Country)","resolved_via":"sea-region","_display":"Chinjao"},{"from":"chr:01854","to":"loc:00290","src":"wiki","origin_raw":"West Blue (Ohara)","resolved_via":"sea-region","_display":"Clou D. Clover"},{"from":"chr:01886","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Daigin"},{"from":"chr:01895","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Daz Bonez"},{"from":"chr:02026","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Gecko Moria"},{"from":"chr:02072","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Gotti"},{"from":"chr:02076","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Guernika"},{"from":"chr:02134","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Hina"},{"from":"chr:02149","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Hogback"},{"from":"chr:02225","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Jigoro"},{"from":"chr:02239","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Jozu"},{"from":"chr:02358","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Laboon"},{"from":"chr:02362","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Laffitte"},{"from":"chr:02425","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Marlon"},{"from":"chr:02454","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Mikita"},{"from":"chr:02509","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Morley"},{"from":"chr:02568","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Nero"},{"from":"chr:02572","to":"loc:00290","src":"wiki","origin_raw":"West Blue (Ohara)","resolved_via":"sea-region","_display":"Nico Olvia"},{"from":"chr:02573","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Nico Robin"},{"from":"chr:02642","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Perona"},{"from":"chr:02671","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Prince Grus"},{"from":"chr:02753","to":"loc:00290","src":"wiki","origin_raw":"West Blue (Kano Country)","resolved_via":"sea-region","_display":"Sai"},{"from":"chr:02765","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Sanjuan Wolf"},{"from":"chr:03005","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Victoria Cindry"},{"from":"chr:03016","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Vito"},{"from":"chr:03025","to":"loc:00290","src":"wiki","origin_raw":"West Blue","resolved_via":"exact","_display":"Wanze"}]},"loc:00190":{"arcs":[{"from":"arc:skypiea","to":"loc:00190","src":"inferred","_display":"Skypiea"}],"born_here":[{"from":"chr:01563","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Aisa"},{"from":"chr:01576","to":"loc:00190","src":"wiki","origin_raw":"Grand Line (Skypiea)","resolved_via":"sub-location","_display":"Amazon"},{"from":"chr:01695","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Braham"},{"from":"chr:01866","to":"loc:00190","src":"wiki","origin_raw":"Grand Line (Skypiea)","resolved_via":"sub-location","_display":"Conis"},{"from":"chr:02014","to":"loc:00190","src":"wiki","origin_raw":"Grand Line (Skypiea)","resolved_via":"sub-location","_display":"Gan Fall"},{"from":"chr:02029","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Genbo"},{"from":"chr:02262","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Kamakiri"},{"from":"chr:02618","to":"loc:00190","src":"wiki","origin_raw":"Grand Line (Skypiea)","resolved_via":"sub-location","_display":"Pagaya"},{"from":"chr:02688","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Raki"},{"from":"chr:02808","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Shandia Chief"},{"from":"chr:02966","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Ubau"},{"from":"chr:03040","to":"loc:00190","src":"wiki","origin_raw":"Sky Islands (Skypiea)","resolved_via":"sub-location","_display":"Wyper"}]},"loc:00289":{"arcs":[],"born_here":[{"from":"chr:01574","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Alvida"},{"from":"chr:01589","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Anjo"},{"from":"chr:01617","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Ban Dedessinée"},{"from":"chr:01628","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Bartolomeo"},{"from":"chr:01633","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Batchee"},{"from":"chr:01642","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Bell-mère"},{"from":"chr:01646","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Belo Betty"},{"from":"chr:01649","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Bentham"},{"from":"chr:01677","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Bluejam"},{"from":"chr:01692","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Organ Islands)","resolved_via":"sea-region","_display":"Boodle"},{"from":"chr:01707","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Buchi"},{"from":"chr:01723","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Cabaji"},{"from":"chr:01736","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Carina"},{"from":"chr:01738","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Carne"},{"from":"chr:01747","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Chabo"},{"from":"chr:01834","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Chicken"},{"from":"chr:01845","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Chocolat"},{"from":"chr:01849","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Organ Islands)","resolved_via":"sea-region","_display":"Chouchou"},{"from":"chr:01857","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Cocoa"},{"from":"chr:01858","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Island of Rare Animals)","resolved_via":"sea-region","_display":"Cocox"},{"from":"chr:01879","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Curly Dadan"},{"from":"chr:01881","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Daddy Dee"},{"from":"chr:01900","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Demalo Black"},{"from":"chr:01944","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Drip"},{"from":"chr:02006","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Gaimon"},{"from":"chr:02031","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Genzo"},{"from":"chr:02042","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Gin"},{"from":"chr:02083","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Gyoru"},{"from":"chr:02098","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Hanger"},{"from":"chr:02120","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Heppoko"},{"from":"chr:02128","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Higuma"},{"from":"chr:02166","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Hustle"},{"from":"chr:02174","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Ideaman"},{"from":"chr:02189","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Ipponume"},{"from":"chr:02210","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Jango"},{"from":"chr:02233","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Johnny"},{"from":"chr:02251","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Kagikko"},{"from":"chr:02256","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Kaku"},{"from":"chr:02279","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Gecko Islands)","resolved_via":"sea-region","_display":"Kaya"},{"from":"chr:02330","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Packy: Loguetown)","resolved_via":"sea-region","_display":"Koze and Packy"},{"from":"chr:02331","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Krieg"},{"from":"chr:02342","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Kuro"},{"from":"chr:02376","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Lines"},{"from":"chr:02384","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Lord of the Coast"},{"from":"chr:02409","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Manjaro"},{"from":"chr:02429","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Mashikaku"},{"from":"chr:02453","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Mikio Itoo"},{"from":"chr:02470","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Miss Catherina"},{"from":"chr:02489","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Mohji"},{"from":"chr:02497","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Monkey D. Dragon"},{"from":"chr:02498","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Monkey D. Garp"},{"from":"chr:02500","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Monster"},{"from":"chr:02503","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Moodie"},{"from":"chr:02516","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Motzel"},{"from":"chr:02517","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Mounblutain"},{"from":"chr:02543","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Mummy Mee"},{"from":"chr:02547","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Nako"},{"from":"chr:02548","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Nami"},{"from":"chr:02571","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Nezumi"},{"from":"chr:02577","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Gecko Islands)","resolved_via":"sea-region","_display":"Ninjin"},{"from":"chr:02582","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Nojiko"},{"from":"chr:02586","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Nora Gitsune"},{"from":"chr:02591","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Nugire Yainu"},{"from":"chr:02629","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Patty"},{"from":"chr:02633","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Pearl"},{"from":"chr:02641","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Peppoko"},{"from":"chr:02648","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Gecko Islands)","resolved_via":"sea-region","_display":"Piiman"},{"from":"chr:02650","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Pinky"},{"from":"chr:02660","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Poppoko"},{"from":"chr:02663","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Porchemy"},{"from":"chr:02673","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Pudding Pudding"},{"from":"chr:02706","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Rika"},{"from":"chr:02712","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Ripper"},{"from":"chr:02713","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Ririka"},{"from":"chr:02725","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Rokkaku"},{"from":"chr:02729","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Roronoa Zoro"},{"from":"chr:02738","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Roxanne"},{"from":"chr:02751","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Sabo"},{"from":"chr:02759","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Conomi Islands)","resolved_via":"sea-region","_display":"Sam"},{"from":"chr:02766","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Sapi"},{"from":"chr:02806","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Sham"},{"from":"chr:02817","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Shimotsuki Koushirou"},{"from":"chr:02853","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Soro"},{"from":"chr:02862","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Speed Jiru"},{"from":"chr:02871","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Dawn Island)","resolved_via":"sea-region","_display":"Sterry"},{"from":"chr:02905","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Gecko Islands)","resolved_via":"sea-region","_display":"Tamanegi"},{"from":"chr:02914","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Tashigi"},{"from":"chr:02963","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Turco"},{"from":"chr:02985","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Gecko Islands)","resolved_via":"sea-region","_display":"Usopp"},{"from":"chr:02993","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Van Augur"},{"from":"chr:03039","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Goa Kingdom)","resolved_via":"sea-region","_display":"Woop Slap"},{"from":"chr:03050","to":"loc:00289","src":"wiki","origin_raw":"East Blue (Gecko Islands)","resolved_via":"sea-region","_display":"Yasopp"},{"from":"chr:03059","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Yosaku"},{"from":"chr:03062","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Yu"},{"from":"chr:03073","to":"loc:00289","src":"wiki","origin_raw":"East Blue","resolved_via":"exact","_display":"Zeff"}]},"loc:00251":{"arcs":[{"from":"arc:reverse-mountain","to":"loc:00251","src":"inferred","_display":"Reverse Mountain"}],"born_here":[]},"loc:00273":{"arcs":[{"from":"arc:post-enies-lobby","to":"loc:00273","src":"inferred","_display":"Post-Enies Lobby"}],"born_here":[]},"loc:00152":{"arcs":[{"from":"arc:elbaph","to":"loc:00152","src":"inferred","_display":"Elbaph"}],"born_here":[{"from":"chr:01700","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Broggy"},{"from":"chr:01701","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Brogy"},{"from":"chr:01935","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Dorry"},{"from":"chr:01967","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Estrid"},{"from":"chr:02033","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Gerd"},{"from":"chr:02062","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Goldberg"},{"from":"chr:02088","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Hajrudin"},{"from":"chr:02106","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Harald"},{"from":"chr:02211","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Jarul"},{"from":"chr:02232","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"John Giant"},{"from":"chr:02235","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Jorul"},{"from":"chr:02276","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Kashii"},{"from":"chr:02380","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Loki"},{"from":"chr:02602","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Oimo"},{"from":"chr:02717","to":"loc:00152","src":"wiki","origin_raw":"Grand Line (Elbaph)","resolved_via":"sub-location","_display":"Road"}]},"loc:00276":{"arcs":[{"from":"arc:alabasta","to":"loc:00276","src":"inferred","_display":"Alabasta"}],"born_here":[]},"loc:00140":{"arcs":[{"from":"arc:arlong-park","to":"loc:00140","src":"inferred","_display":"Arlong Park"}],"born_here":[]},"loc:00176":{"arcs":[],"born_here":[{"from":"chr:02800","to":"loc:00176","src":"wiki","origin_raw":"Grand Line (Mt. Kintoki)","resolved_via":"sub-location","_display":"Sentomaru"}]},"loc:00189":{"arcs":[],"born_here":[{"from":"chr:02981","to":"loc:00189","src":"wiki","origin_raw":"Sky Island","resolved_via":"exact","_display":"Urouge"}]},"loc:00200":{"arcs":[{"from":"arc:wano-country","to":"loc:00200","src":"inferred","_display":"Wano Country"}],"born_here":[{"from":"chr:01601","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Ashura Doji"},{"from":"chr:01658","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Bishamon"},{"from":"chr:01665","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Black Maria"},{"from":"chr:01848","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Chome"},{"from":"chr:01887","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Daikoku"},{"from":"chr:01903","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Denjiro"},{"from":"chr:01994","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Fugetsu Omusubi"},{"from":"chr:01995","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Fujin"},{"from":"chr:01997","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Fukurokuju"},{"from":"chr:02102","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Hanzo"},{"from":"chr:02151","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Holed'em"},{"from":"chr:02167","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Hyougoro"},{"from":"chr:02201","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Izou"},{"from":"chr:02223","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Jigoku Benten"},{"from":"chr:02280","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kazekage"},{"from":"chr:02291","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kikunojo"},{"from":"chr:02295","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kin'emon"},{"from":"chr:02326","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kouzuki Oden"},{"from":"chr:02327","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kouzuki Sukiyaki"},{"from":"chr:02333","to":"loc:00200","src":"wiki","origin_raw":"Wano Country","resolved_via":"exact","_display":"Kukai"},{"from":"chr:02347","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kurozumi Higurashi"},{"from":"chr:02348","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kurozumi Kanjuro"},{"from":"chr:02349","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kurozumi Orochi"},{"from":"chr:02350","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kurozumi Semimaru"},{"from":"chr:02351","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Kurozumi Tama"},{"from":"chr:02610","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Onimaru"},{"from":"chr:02685","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Raijin"},{"from":"chr:02687","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Raizo"},{"from":"chr:02773","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Sarutobi"},{"from":"chr:02818","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Shimotsuki Kouzaburou"},{"from":"chr:02820","to":"loc:00200","src":"wiki","origin_raw":"Wano Country","resolved_via":"exact","_display":"Shimotsuki Ryuma"},{"from":"chr:02821","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Shimotsuki Ushimaru"},{"from":"chr:02822","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Shimotsuki Yasuie"},{"from":"chr:02826","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Shinobu"},{"from":"chr:02861","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Speed"},{"from":"chr:02931","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Toko"},{"from":"chr:02962","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Tsurujo"},{"from":"chr:02992","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Uzuki Tempura"},{"from":"chr:03052","to":"loc:00200","src":"wiki","origin_raw":"Grand Line (Wano Country)","resolved_via":"sub-location","_display":"Yazaemon"}]},"loc:00188":{"arcs":[],"born_here":[{"from":"chr:02819","to":"loc:00188","src":"wiki","origin_raw":"East Blue (Shimotsuki Village)","resolved_via":"sub-location","_display":"Shimotsuki Kuina"}]},"loc:00158":{"arcs":[],"born_here":[{"from":"chr:03007","to":"loc:00158","src":"wiki","origin_raw":"North Blue (Germa Kingdom)","resolved_via":"sub-location","_display":"Vinsmoke Ichiji"},{"from":"chr:03008","to":"loc:00158","src":"wiki","origin_raw":"North Blue (Germa Kingdom)","resolved_via":"sub-location","_display":"Vinsmoke Judge"},{"from":"chr:03009","to":"loc:00158","src":"wiki","origin_raw":"North Blue (Germa Kingdom)","resolved_via":"sub-location","_display":"Vinsmoke Niji"},{"from":"chr:03010","to":"loc:00158","src":"wiki","origin_raw":"North Blue (Germa Kingdom)","resolved_via":"sub-location","_display":"Vinsmoke Reiju"},{"from":"chr:03012","to":"loc:00158","src":"wiki","origin_raw":"North Blue (Germa Kingdom)","resolved_via":"sub-location","_display":"Vinsmoke Yonji"}]},"loc:00244":{"arcs":[{"from":"arc:reverie","to":"loc:00244","src":"inferred","_display":"Reverie"}],"born_here":[]},"loc:00291":{"arcs":[],"born_here":[{"from":"chr:01598","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Aruyutayan V"},{"from":"chr:01608","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Avalo Pizarro"},{"from":"chr:01613","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Baby 5"},{"from":"chr:01629","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Basil Hawkins"},{"from":"chr:01644","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Bellamy"},{"from":"chr:01647","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Benn Beckman"},{"from":"chr:01678","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Blueno"},{"from":"chr:01694","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Borsalino"},{"from":"chr:01710","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Buffalo"},{"from":"chr:01735","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Caribou"},{"from":"chr:01869","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Coribou"},{"from":"chr:01899","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Dellinger"},{"from":"chr:01905","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Diamante"},{"from":"chr:01917","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Doc Q"},{"from":"chr:01949","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Eddy"},{"from":"chr:01973","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Faust"},{"from":"chr:01987","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Fossa"},{"from":"chr:01999","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Fullbody"},{"from":"chr:02048","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Giolla"},{"from":"chr:02053","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Gladius"},{"from":"chr:02090","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Welbems Island)","resolved_via":"sea-region","_display":"Hakugan"},{"from":"chr:02125","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Hewitt"},{"from":"chr:02126","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Hibari"},{"from":"chr:02154","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Lvneel Kingdom)","resolved_via":"sea-region","_display":"Honner"},{"from":"chr:02203","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Jabra"},{"from":"chr:02269","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Karasu"},{"from":"chr:02332","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Kujaku"},{"from":"chr:02364","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Lao G"},{"from":"chr:02371","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Lily"},{"from":"chr:02392","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Machvise"},{"from":"chr:02408","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Mani"},{"from":"chr:02419","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Marianne"},{"from":"chr:02430","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Masira"},{"from":"chr:02494","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Monet"},{"from":"chr:02501","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Mont Blanc Cricket"},{"from":"chr:02502","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Lvneel Kingdom)","resolved_via":"sea-region","_display":"Mont Blanc Noland"},{"from":"chr:02544","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Muret"},{"from":"chr:02596","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Oars"},{"from":"chr:02640","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Penguin"},{"from":"chr:02645","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Pica"},{"from":"chr:02716","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Rivers"},{"from":"chr:02731","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Ross"},{"from":"chr:02756","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Sakazuki"},{"from":"chr:02764","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Sanji"},{"from":"chr:02771","to":"loc:00291","src":"wiki","origin_raw":"North Blue (Notice)","resolved_via":"sea-region","_display":"Sarquiss"},{"from":"chr:02799","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Senor Pink"},{"from":"chr:02803","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Shachi"},{"from":"chr:02880","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Sugar"},{"from":"chr:02890","to":"loc:00291","src":"wiki","origin_raw":"North Blue (North Pole)","resolved_via":"sea-region","_display":"Surume"},{"from":"chr:02925","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Thatch"},{"from":"chr:02947","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Trafalgar D. Water Law"},{"from":"chr:02948","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Trebol"},{"from":"chr:02958","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Tsuru"},{"from":"chr:03003","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Vergo"},{"from":"chr:03014","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Vista"},{"from":"chr:03033","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"Who's-Who"},{"from":"chr:03041","to":"loc:00291","src":"wiki","origin_raw":"North Blue","resolved_via":"exact","_display":"X Drake"}]},"loc:00226":{"arcs":[],"born_here":[{"from":"chr:01977","to":"loc:00226","src":"wiki","origin_raw":"West Blue (God Valley)","resolved_via":"sub-location","_display":"Figarland Shamrock"},{"from":"chr:02721","to":"loc:00226","src":"wiki","origin_raw":"West Blue (God Valley)","resolved_via":"sub-location","_display":"Rocks D. Xebec"},{"from":"chr:02809","to":"loc:00226","src":"wiki","origin_raw":"West Blue (God Valley)","resolved_via":"sub-location","_display":"Shanks"}]},"loc:00283":{"arcs":[{"from":"arc:amazon-lily","to":"loc:00283","src":"inferred","_display":"Amazon Lily"}],"born_here":[{"from":"chr:01593","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Aphelandra"},{"from":"chr:01615","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Bacura"},{"from":"chr:01643","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Belladonna"},{"from":"chr:01672","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Blue Fan"},{"from":"chr:01680","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Boa Hancock"},{"from":"chr:01681","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Boa Marigold"},{"from":"chr:01682","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Boa Sandersonia"},{"from":"chr:01873","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Cosmos"},{"from":"chr:01889","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Daisy"},{"from":"chr:01961","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Enishida"},{"from":"chr:02054","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Gloriosa"},{"from":"chr:02292","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Kikyo"},{"from":"chr:02416","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Marguerite"},{"from":"chr:02567","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Nerine"},{"from":"chr:02623","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Pansy"},{"from":"chr:02661","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Poppy"},{"from":"chr:02695","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Ran"},{"from":"chr:02709","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Rindo"},{"from":"chr:02893","to":"loc:00283","src":"wiki","origin_raw":"Calm Belt (Amazon Lily)","resolved_via":"sub-location","_display":"Sweet Pea"}]},"loc:00252":{"arcs":[],"born_here":[{"from":"chr:01551","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Adele"},{"from":"chr:01568","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Aladine"},{"from":"chr:01596","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Arlong"},{"from":"chr:01668","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Blakey"},{"from":"chr:01727","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Camie"},{"from":"chr:01832","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Chew"},{"from":"chr:01884","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Daidalos"},{"from":"chr:01893","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Daruma"},{"from":"chr:01902","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Den"},{"from":"chr:01936","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Dosun"},{"from":"chr:01980","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Fillonce"},{"from":"chr:01983","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Fisher Tiger"},{"from":"chr:01996","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Fukaboshi"},{"from":"chr:02080","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Gyaro"},{"from":"chr:02085","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Hack"},{"from":"chr:02094","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Hammond"},{"from":"chr:02139","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Hiramera"},{"from":"chr:02147","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Hody Jones"},{"from":"chr:02169","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Hyouzou"},{"from":"chr:02177","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Ikaros Much"},{"from":"chr:02193","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Ishilly"},{"from":"chr:02216","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Jean Noueilles"},{"from":"chr:02227","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Jinbe"},{"from":"chr:02246","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Junan"},{"from":"chr:02253","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Kairen"},{"from":"chr:02266","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Kaneshiro"},{"from":"chr:02274","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Kasagoba"},{"from":"chr:02278","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Kawamatsu"},{"from":"chr:02316","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Kokoro"},{"from":"chr:02344","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Kuroobi"},{"from":"chr:02388","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Lulis"},{"from":"chr:02393","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Macro"},{"from":"chr:02407","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Manboshi"},{"from":"chr:02418","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Maria Napole"},{"from":"chr:02445","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Medaka Mermaid Quintuplets"},{"from":"chr:02447","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Mero"},{"from":"chr:02455","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Miles"},{"from":"chr:02460","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Minister of the Left"},{"from":"chr:02461","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Minister of the Right"},{"from":"chr:02566","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Neptune"},{"from":"chr:02598","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Octopako"},{"from":"chr:02614","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Otohime"},{"from":"chr:02624","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Papaneel"},{"from":"chr:02626","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Pappag"},{"from":"chr:02654","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Pisaro"},{"from":"chr:02743","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Ryuboshi"},{"from":"chr:02795","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Seira"},{"from":"chr:02828","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Shioyaki"},{"from":"chr:02829","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Shirahoshi"},{"from":"chr:02835","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Shyarly"},{"from":"chr:02852","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Sora"},{"from":"chr:02899","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom, Fish-Man Island)","resolved_via":"sub-location","_display":"Take"},{"from":"chr:02909","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Tansui"},{"from":"chr:02932","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Tom"},{"from":"chr:02994","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Vander Decken IX"},{"from":"chr:03018","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom)","resolved_via":"sub-location","_display":"Wadatsumi"},{"from":"chr:03074","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Zeo"},{"from":"chr:03081","to":"loc:00252","src":"wiki","origin_raw":"Grand Line (Ryugu Kingdom; Fish-Man Island)","resolved_via":"sub-location","_display":"Zururin"}]},"loc:00274":{"arcs":[{"from":"arc:little-garden","to":"loc:00274","src":"inferred","_display":"Little Garden"}],"born_here":[{"from":"chr:01702","to":"loc:00274","src":"wiki","origin_raw":"Grand Line (Little Garden)","resolved_via":"sub-location","_display":"Brontosaurus"}]},"loc:00285":{"arcs":[{"from":"arc:fishman-island","to":"loc:00285","src":"inferred","_display":"Fishman Island"}],"born_here":[]},"loc:00286":{"arcs":[{"from":"arc:punk-hazard","to":"loc:00286","src":"inferred","_display":"Punk Hazard"}],"born_here":[{"from":"chr:01992","to":"loc:00286","src":"wiki","origin_raw":"Grand Line (Punk Hazard)","resolved_via":"sub-location","_display":"Fuga"},{"from":"chr:02112","to":"loc:00286","src":"wiki","origin_raw":"Grand Line (Punk Hazard)","resolved_via":"sub-location","_display":"Hatcha"}]},"loc:00185":{"arcs":[],"born_here":[{"from":"chr:02311","to":"loc:00185","src":"wiki","origin_raw":"East Blue (Satsuruzo Kingdom)","resolved_via":"sub-location","_display":"Koby"}]},"loc:00288":{"arcs":[{"from":"arc:egghead","to":"loc:00288","src":"inferred","_display":"Egghead"}],"born_here":[{"from":"chr:02370","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"Lilith"},{"from":"chr:02746","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"S-Bear"},{"from":"chr:02747","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"S-Hawk"},{"from":"chr:02748","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"S-Shark"},{"from":"chr:02749","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"S-Snake"},{"from":"chr:02997","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"Atlas"},{"from":"chr:02998","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"Edison"},{"from":"chr:02999","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"Lilith"},{"from":"chr:03000","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"Pythagoras"},{"from":"chr:03001","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"Shaka"},{"from":"chr:03002","to":"loc:00288","src":"wiki","origin_raw":"Grand Line (Egghead)","resolved_via":"sub-location","_display":"York"}]},"loc:00197":{"arcs":[{"from":"arc:whole-cake-island","to":"loc:00197","src":"inferred","_display":"Whole Cake Island"}],"born_here":[{"from":"chr:01767","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Chiffon"},{"from":"chr:01768","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Cinnamon"},{"from":"chr:01769","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Citron"},{"from":"chr:01783","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Flampe"},{"from":"chr:01794","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Lola"},{"from":"chr:01817","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Praline"},{"from":"chr:01818","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Prim"},{"from":"chr:01819","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Pudding"},{"from":"chr:01822","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Charlotte Smoothie"},{"from":"chr:02300","to":"loc:00197","src":"wiki","origin_raw":"Grand Line (Totto Land)","resolved_via":"sub-location","_display":"Kingbaum"}]},"loc:00242":{"arcs":[],"born_here":[{"from":"chr:02121","to":"loc:00242","src":"wiki","origin_raw":"Grand Line (Onigashima)","resolved_via":"sub-location","_display":"Hera"},{"from":"chr:02281","to":"loc:00242","src":"wiki","origin_raw":"Grand Line (Onigashima)","resolved_via":"sub-location","_display":"Kazenbo"},{"from":"chr:02468","to":"loc:00242","src":"wiki","origin_raw":"Grand Line (Onigashima)","resolved_via":"sub-location","_display":"Misery"}]},"loc:00173":{"arcs":[{"from":"arc:zou","to":"loc:00173","src":"inferred","_display":"Zou"}],"born_here":[{"from":"chr:01650","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Bepo"},{"from":"chr:01739","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Carrot"},{"from":"chr:01865","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Concelot"},{"from":"chr:02050","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Giovanni"},{"from":"chr:02185","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Inuarashi"},{"from":"chr:02563","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Nekomamushi"},{"from":"chr:02634","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Pedro"},{"from":"chr:02831","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Shishilian"},{"from":"chr:03022","to":"loc:00173","src":"wiki","origin_raw":"Grand Line (Mokomo Dukedom)","resolved_via":"sub-location","_display":"Wanda"}]},"loc:00294":{"arcs":[],"born_here":[{"from":"chr:02486","to":"loc:00294","src":"wiki","origin_raw":"Grand Line (New World)","resolved_via":"sub-location","_display":"Mocha"},{"from":"chr:02670","to":"loc:00294","src":"wiki","origin_raw":"Grand Line (New World)","resolved_via":"sub-location","_display":"Pound"}]},"loc:00292":{"arcs":[],"born_here":[{"from":"chr:01594","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Taya Kingdom)","resolved_via":"sea-region","_display":"Aramaki"},{"from":"chr:01627","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Sorbet Kingdom)","resolved_via":"sea-region","_display":"Bartholomew Kuma"},{"from":"chr:01669","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Blamenco"},{"from":"chr:01741","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Catarina Devon"},{"from":"chr:01852","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Sorbet Kingdom)","resolved_via":"sea-region","_display":"Clapp"},{"from":"chr:01867","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Sorbet Kingdom)","resolved_via":"sea-region","_display":"Conney"},{"from":"chr:01970","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Kutsukku Island)","resolved_via":"sea-region","_display":"Eustass Kid"},{"from":"chr:01989","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Foxy"},{"from":"chr:01991","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Franky"},{"from":"chr:02008","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Galdino"},{"from":"chr:02028","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Gem"},{"from":"chr:02081","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Gyogyo"},{"from":"chr:02101","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Hannyabal"},{"from":"chr:02110","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Haruta"},{"from":"chr:02118","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Kutsukku Island)","resolved_via":"sea-region","_display":"Heat"},{"from":"chr:02123","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Heracles"},{"from":"chr:02173","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Samuwanai Island)","resolved_via":"sea-region","_display":"Ida"},{"from":"chr:02181","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Inazuma"},{"from":"chr:02207","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Jaguar D. Saul"},{"from":"chr:02219","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Karate Island)","resolved_via":"sea-region","_display":"Jerry"},{"from":"chr:02293","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Kutsukku Island)","resolved_via":"sea-region","_display":"Killer"},{"from":"chr:02334","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Kumadori"},{"from":"chr:02352","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Vespa Kingdom territory)","resolved_via":"sea-region","_display":"Kuzan"},{"from":"chr:02387","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Lucky Roux"},{"from":"chr:02627","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Part"},{"from":"chr:02628","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Pascia"},{"from":"chr:02665","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Baterilla)","resolved_via":"sea-region","_display":"Portgas D. Ace"},{"from":"chr:02667","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Potato"},{"from":"chr:02691","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Rakuyo"},{"from":"chr:02797","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Sengoku"},{"from":"chr:02832","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Shoujou"},{"from":"chr:02836","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Sicily"},{"from":"chr:02886","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Suleiman"},{"from":"chr:02945","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Totts"},{"from":"chr:02995","to":"loc:00292","src":"wiki","origin_raw":"South Blue","resolved_via":"exact","_display":"Vasco Shot"},{"from":"chr:03035","to":"loc:00292","src":"wiki","origin_raw":"South Blue (Kutsukku Island)","resolved_via":"sea-region","_display":"Wire"}]},"loc:00199":{"arcs":[],"born_here":[{"from":"chr:02372","to":"loc:00199","src":"wiki","origin_raw":"New World (Waford)","resolved_via":"sub-location","_display":"Lim"}]},"loc:00142":{"arcs":[{"from":"arc:baratie","to":"loc:00142","src":"inferred","_display":"Baratie"}],"born_here":[]},"loc:00182":{"arcs":[],"born_here":[{"from":"chr:01955","to":"loc:00182","src":"wiki","origin_raw":"Grand Line (Prodence Kingdom)","resolved_via":"sub-location","_display":"Elizabello II"}]},"loc:00281":{"arcs":[{"from":"arc:thriller-bark","to":"loc:00281","src":"inferred","_display":"Thriller Bark"}],"born_here":[]},"loc:00282":{"arcs":[{"from":"arc:sabaody-archipelago","to":"loc:00282","src":"inferred","_display":"Sabaody Archipelago"}],"born_here":[{"from":"chr:02422","to":"loc:00282","src":"wiki","origin_raw":"Grand Line (Sabaody Archipelago)","resolved_via":"sub-location","_display":"Marin"}]},"loc:00275":{"arcs":[{"from":"arc:drum-island","to":"loc:00275","src":"inferred","_display":"Drum Island"}],"born_here":[{"from":"chr:01829","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Kingdom)","resolved_via":"sub-location","_display":"Chess"},{"from":"chr:01891","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Kingdom)","resolved_via":"sub-location","_display":"Dalton"},{"from":"chr:02140","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Kingdom)","resolved_via":"sub-location","_display":"Hiriluk"},{"from":"chr:02341","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Kingdom)","resolved_via":"sub-location","_display":"Kureha"},{"from":"chr:02343","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Kingdom)","resolved_via":"sub-location","_display":"Kuromarimo"},{"from":"chr:02562","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Island)","resolved_via":"sub-location","_display":"Negikuma Maria"},{"from":"chr:02902","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Island)","resolved_via":"sub-location","_display":"Tamachibi"},{"from":"chr:02938","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Island)","resolved_via":"sub-location","_display":"Tony Tony Chopper"},{"from":"chr:03026","to":"loc:00275","src":"wiki","origin_raw":"Grand Line (Drum Kingdom)","resolved_via":"sub-location","_display":"Wapol"}]},"loc:00231":{"arcs":[{"from":"arc:impel-down","to":"loc:00231","src":"inferred","_display":"Impel Down"}],"born_here":[]},"loc:00192":{"arcs":[{"from":"arc:syrup-village","to":"loc:00192","src":"inferred","_display":"Syrup Village"}],"born_here":[{"from":"chr:01619","to":"loc:00192","src":"wiki","origin_raw":"East Blue (Syrup Village)","resolved_via":"sub-location","_display":"Banchina"},{"from":"chr:02448","to":"loc:00192","src":"wiki","origin_raw":"East Blue (Syrup Village)","resolved_via":"sub-location","_display":"Merry"},{"from":"chr:02510","to":"loc:00192","src":"wiki","origin_raw":"East Blue (Syrup Village)","resolved_via":"sub-location","_display":"Mornin"}]},"loc:00284":{"arcs":[{"from":"arc:return-to-sabaody","to":"loc:00284","src":"inferred","_display":"Return to Sabaody"}],"born_here":[]},"loc:00280":{"arcs":[{"from":"arc:enies-lobby","to":"loc:00280","src":"inferred","_display":"Enies Lobby"}],"born_here":[]}}
+</script>
+<script>
+const RAW=JSON.parse(document.getElementById("locations-data").textContent||"{}");
+const SHARDS=JSON.parse(document.getElementById("location-shards-data").textContent||"{}");
+// Build id→name reverse map for ?id= routing
+const BY_ID={};
+Object.values(RAW).forEach(l=>{if(l&&l.id)BY_ID[l.id]=l.name});
+const params=new URLSearchParams(location.search);
+const idParam=params.get("id");
+const requested=idParam?BY_ID[idParam]:params.get("name");
+const root=document.getElementById("root");
+function escapeHTML(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function locImgUrl(img){if(!img)return null;img=img.trim().replace(/^File:/i,"");if(!img||/^\d+px$/.test(img)||img.length<4)return null;return"https://onepiece.fandom.com/wiki/Special:FilePath/"+encodeURIComponent(img)}
+if(!requested){root.innerHTML=`<div class="not-found"><h2>No location requested</h2><a href="locations.html">← Browse all locations</a></div>`}
+else{const l=RAW[requested];if(!l){root.innerHTML=`<div class="not-found"><h2>No record for "${escapeHTML(requested)}"</h2><a href="locations.html">← Browse all locations</a></div>`}
+else{document.title=`${l.name} · Location · The Shimotsuki Codex`;
+  const quick=[];
+  if(l.region)quick.push(`<span><strong>Region:</strong> ${escapeHTML(l.region)}</span>`);
+  if(l.first_appearance)quick.push(`<span><strong>Debut:</strong> ${escapeHTML(l.first_appearance)}</span>`);
+  if(l.status)quick.push(`<span><strong>Status:</strong> ${escapeHTML(l.status)}</span>`);
+  const ident=[["English",l.name_en],["Japanese",l.name_jp],["Romanised",l.name_romaji],["Region",l.region],["Type",l.type]].filter(([_,v])=>v).map(([k,v])=>`<div class="field"><div class="field-label">${k}</div><div class="field-value">${escapeHTML(v)}</div></div>`).join("");
+  const polit=[["Affiliation",l.affiliation],["Ruler",l.ruler||l.leader],["Inhabitants",l.inhabitants],["Industries",l.industries],["Population",l.population]].filter(([_,v])=>v).map(([k,v])=>`<div class="field"><div class="field-label">${k}</div><div class="field-value">${escapeHTML(v)}</div></div>`).join("");
+  root.innerHTML=`
+    <div class="crumbs"><a href="home.html">Home</a> › <a href="locations.html">Locations</a> › <span>${escapeHTML(l.name)}</span></div>
+    <div class="head">
+      ${(()=>{const url=locImgUrl(l.infobox_image);return url?`<div class="loc-portrait-wrap">${escapeHTML(l.name[0])}<img src="${url}" alt="${escapeHTML(l.name)}" onerror="this.style.display='none'"></div>`:"";})()}
+      <div class="loc-info">
+        <div class="name">${escapeHTML(l.name)}</div>
+        ${l.name_jp?`<div class="name-jp">${escapeHTML(l.name_jp)}</div>`:""}
+        ${l.name_en&&l.name_en!==l.name?`<div class="name-en">"${escapeHTML(l.name_en)}"</div>`:""}
+        ${quick.length?`<div class="quick">${quick.join("")}</div>`:""}
+      </div>
+    </div>
+    <div class="sections">
+      ${ident?`<div class="section"><h3>Identity</h3>${ident}</div>`:""}
+      ${polit?`<div class="section"><h3>Inhabitants &amp; Politics</h3>${polit}</div>`:""}
+      ${renderShardSections(l.id)}
+    </div>`;
+}}
+function escapeHTMLloc(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function chrLink(id,label){return`<a class="entity-link" href="character.html?id=${encodeURIComponent(id)}">${escapeHTMLloc(label||id)}</a>`}
+function arcLink(arcId,label){return`<a class="entity-link" href="arc.html?id=${encodeURIComponent(arcId)}">${escapeHTMLloc(label||arcId)}</a>`}
+function renderShardSections(locId){
+  const s=SHARDS[locId];
+  if(!s)return"";
+  const parts=[];
+  if(s.arcs&&s.arcs.length){
+    const rows=s.arcs.map(r=>`<div class="field"><div class="field-value">${escapeHTMLloc(r._display||r.from)}</div></div>`).join("");
+    parts.push(`<div class="section"><h3>Story Arcs Set Here</h3>${rows}</div>`);
+  }
+  if(s.born_here&&s.born_here.length){
+    const MAX=30;
+    const shown=s.born_here.slice(0,MAX);
+    const more=s.born_here.length>MAX?`<div class="field" style="color:var(--muted);font-size:0.85em">… and ${s.born_here.length-MAX} more characters</div>`:"";
+    const rows=shown.map(r=>`<div class="field"><div class="field-value">${chrLink(r.from,r._display)}</div></div>`).join("");
+    parts.push(`<div class="section"><h3>Characters Born Here <span style="color:var(--muted);font-size:0.85em">(${s.born_here.length})</span></h3>${rows}${more}</div>`);
+  }
+  return parts.join("");
+}
+</script>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

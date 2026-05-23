@@ -1,0 +1,1365 @@
+[
+  {
+    "from": "chr:02410",
+    "to": "fruit:00159",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1135",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02048",
+    "to": "fruit:00160",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:714",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02261",
+    "to": "fruit:00161",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:408",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Kalifa:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:03026",
+    "to": "fruit:00162",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:131",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Wapol:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01644",
+    "to": "fruit:00163",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:231",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01711",
+    "to": "fruit:00164",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:9",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01628",
+    "to": "fruit:00165",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:708",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01784",
+    "to": "fruit:00166",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:846",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02877",
+    "to": "fruit:00167",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1072",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:03004",
+    "to": "fruit:00169",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:426",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Very_Good:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02948",
+    "to": "fruit:00170",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:700",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Trebol:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01774",
+    "to": "fruit:00171",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:835",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02028",
+    "to": "fruit:00172",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:110",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01613",
+    "to": "fruit:00173",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:682",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01803",
+    "to": "fruit:00174",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:846",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02411",
+    "to": "fruit:00175",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:774",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02181",
+    "to": "fruit:00176",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:540",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02765",
+    "to": "fruit:00177",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:575",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01678",
+    "to": "fruit:00178",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:326",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02397",
+    "to": "fruit:00179",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:528",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02008",
+    "to": "fruit:00180",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:118",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02295",
+    "to": "fruit:00182",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:663",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02815",
+    "to": "fruit:00183",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:0",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Shiki:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02995",
+    "to": "fruit:00184",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1087",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01724",
+    "to": "fruit:00185",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:658",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:03013",
+    "to": "fruit:00186",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:712",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02499",
+    "to": "fruit:00188",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1",
+    "tier": "likely",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Monkey_D_Luffy:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01960",
+    "to": "fruit:00189",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:241",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02426",
+    "to": "fruit:00190",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:552",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01710",
+    "to": "fruit:00191",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:692",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02573",
+    "to": "fruit:00192",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:114",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Nico_Robin:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01682",
+    "to": "fruit:00193",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:518",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01681",
+    "to": "fruit:00194",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:518",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01592",
+    "to": "fruit:00196",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:303",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01905",
+    "to": "fruit:00197",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:736",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02938",
+    "to": "fruit:00198",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:138",
+    "tier": "likely",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Tony_Tony_Chopper:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02797",
+    "to": "fruit:00199",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:571",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02610",
+    "to": "fruit:00200",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:936",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02880",
+    "to": "fruit:00201",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:701",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02642",
+    "to": "fruit:00202",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:442",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01959",
+    "to": "fruit:00203",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:537",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01777",
+    "to": "fruit:00204",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:864",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02814",
+    "to": "fruit:00205",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1143",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01652",
+    "to": "fruit:00206",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1134",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02366",
+    "to": "fruit:00208",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:184",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Lassoo:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02160",
+    "to": "fruit:00209",
+    "src": "wiki",
+    "current": true,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Hound:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01749",
+    "to": "fruit:00210",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:196",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01741",
+    "to": "fruit:00211",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:925",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:03045",
+    "to": "fruit:00212",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:996",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01716",
+    "to": "fruit:00213",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:911",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02203",
+    "to": "fruit:00214",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:379",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Jabra:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02645",
+    "to": "fruit:00215",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:736",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01928",
+    "to": "fruit:00216",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:234",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02285",
+    "to": "fruit:00217",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:715",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01970",
+    "to": "fruit:00218",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:504",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Eustass_Kid:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02826",
+    "to": "fruit:00219",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:924",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02026",
+    "to": "fruit:00220",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:443",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02637",
+    "to": "fruit:00221",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:652",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02351",
+    "to": "fruit:00222",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:911",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02239",
+    "to": "fruit:00223",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:553",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02454",
+    "to": "fruit:00224",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:112",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01646",
+    "to": "fruit:00225",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:904",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02874",
+    "to": "fruit:00226",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:868",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01665",
+    "to": "fruit:00227",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:997",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01812",
+    "to": "fruit:00228",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:846",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01564",
+    "to": "fruit:00229",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:554",
+    "tier": "likely",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Sakazuki:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02687",
+    "to": "fruit:00230",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:817",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01649",
+    "to": "fruit:00231",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:156",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02994",
+    "to": "fruit:00232",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:613",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01819",
+    "to": "fruit:00233",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:851",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02751",
+    "to": "fruit:00234",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:158",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01763",
+    "to": "fruit:00236",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:831",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01790",
+    "to": "fruit:00237",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:863",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01945",
+    "to": "fruit:00238",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:184",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02844",
+    "to": "fruit:00239",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:100",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01594",
+    "to": "fruit:00240",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1052",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02332",
+    "to": "fruit:00241",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1080",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Kujaku:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02248",
+    "to": "fruit:00242",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:718",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01651",
+    "to": "fruit:00243",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:718",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02718",
+    "to": "fruit:00245",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:348",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:03033",
+    "to": "fruit:00246",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:998",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01813",
+    "to": "fruit:00247",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:864",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01676",
+    "to": "fruit:00250",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1094",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Bluegrass:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01989",
+    "to": "fruit:00251",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:308",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Foxy:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02368",
+    "to": "fruit:00252",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:711",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01735",
+    "to": "fruit:00253",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:603",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02947",
+    "to": "fruit:00254",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:504",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Trafalgar_D_Water_Law:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02134",
+    "to": "fruit:00255",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:217",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02509",
+    "to": "fruit:00256",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:904",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02785",
+    "to": "fruit:00257",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:509",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02053",
+    "to": "fruit:00258",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:723",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01815",
+    "to": "fruit:00260",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:834",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01694",
+    "to": "fruit:00261",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:506",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Borsalino:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01669",
+    "to": "fruit:00262",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:553",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02659",
+    "to": "fruit:00263",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1094",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Pomsky:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02220",
+    "to": "fruit:00264",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1063",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:03041",
+    "to": "fruit:00265",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:509",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02678",
+    "to": "fruit:00266",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:945",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02708",
+    "to": "fruit:00267",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1140",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02380",
+    "to": "fruit:00268",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1170",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02971",
+    "to": "fruit:00269",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:983",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02298",
+    "to": "fruit:00270",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:930",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02619",
+    "to": "fruit:00271",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:929",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02774",
+    "to": "fruit:00272",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:998",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02833",
+    "to": "fruit:00273",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:426",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Shu:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02810",
+    "to": "fruit:00275",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:428",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Sharinguru:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01822",
+    "to": "fruit:00276",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:846",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Charlotte_Smoothie:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01917",
+    "to": "fruit:00277",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1063",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01608",
+    "to": "fruit:00278",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1080",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01732",
+    "to": "fruit:00279",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:508",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01793",
+    "to": "fruit:00280",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:651",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01574",
+    "to": "fruit:00281",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:51",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02830",
+    "to": "fruit:00283",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:444",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01876",
+    "to": "fruit:00284",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:127",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02269",
+    "to": "fruit:00286",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:593",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02903",
+    "to": "fruit:00287",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:651",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Tamago:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:03069",
+    "to": "fruit:00288",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:190",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02392",
+    "to": "fruit:00290",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:735",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02507",
+    "to": "fruit:00291",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:860",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Morgans:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02638",
+    "to": "fruit:00293",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:169",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02413",
+    "to": "fruit:00295",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:553",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02221",
+    "to": "fruit:00297",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:499",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Jewelry_Bonney:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02980",
+    "to": "fruit:00298",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1095",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Urban:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02647",
+    "to": "fruit:00299",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:238",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02876",
+    "to": "fruit:00300",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1063",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01891",
+    "to": "fruit:00302",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:135",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Dalton:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02256",
+    "to": "fruit:00303",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:401",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02993",
+    "to": "fruit:00304",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:1063",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01629",
+    "to": "fruit:00305",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:508",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02958",
+    "to": "fruit:00306",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:556",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02426",
+    "to": "fruit:00307",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:440",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01703",
+    "to": "fruit:00308",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:442",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Brook:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02000",
+    "to": "fruit:00310",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:400",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02204",
+    "to": "fruit:00311",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:807",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02197",
+    "to": "fruit:00312",
+    "src": "wiki",
+    "current": true,
+    "chapter": "ch:701",
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02238",
+    "to": "fruit:00188",
+    "src": "manual",
+    "current": false,
+    "tier": "canon"
+  },
+  {
+    "from": "chr:01950",
+    "to": "fruit:00190",
+    "src": "manual",
+    "current": false,
+    "tier": "canon"
+  },
+  {
+    "from": "chr:02347",
+    "to": "fruit:00231",
+    "src": "manual",
+    "current": false,
+    "tier": "canon"
+  },
+  {
+    "from": "chr:02665",
+    "to": "fruit:00234",
+    "src": "manual",
+    "current": false,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Portgas_D_Ace:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01737",
+    "to": "fruit:00280",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:866",
+    "tier": "canon"
+  },
+  {
+    "from": "chr:01548",
+    "to": "fruit:00283",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:444",
+    "tier": "likely",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Absalom:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02348",
+    "to": "fruit:00181",
+    "src": "manual",
+    "current": false,
+    "tier": "canon"
+  },
+  {
+    "from": "chr:02349",
+    "to": "fruit:00195",
+    "src": "manual",
+    "current": false,
+    "tier": "canon"
+  },
+  {
+    "from": "chr:01931",
+    "to": "fruit:00244",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:762",
+    "tier": "likely",
+    "evidence": [
+      {
+        "canon_fact_id": "verified:Donquixote_Rosinante:devil_fruit_name",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02996",
+    "to": "fruit:00249",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:1058",
+    "tier": "canon"
+  },
+  {
+    "from": "chr:02843",
+    "to": "fruit:00274",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:659",
+    "tier": "canon"
+  },
+  {
+    "from": "chr:02328",
+    "to": "fruit:00289",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:966",
+    "tier": "canon"
+  },
+  {
+    "from": "chr:02494",
+    "to": "fruit:00309",
+    "src": "manual",
+    "current": false,
+    "chapter": "ch:658",
+    "tier": "canon"
+  }
+]

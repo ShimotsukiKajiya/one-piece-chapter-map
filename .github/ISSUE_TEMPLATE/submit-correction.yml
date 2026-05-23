@@ -1,0 +1,93 @@
+name: ✏️ Submit a canon correction
+description: Propose a change to a fact in the Codex with a citable source.
+title: "[Correction] "
+labels: ["correction", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a fact that's wrong, outdated, or contradicted by canon? Submit it here.
+
+        **Required:** every correction must cite a source from the
+        [registered source list](https://github.com/ShimotsukiKajiya/one-piece-chapter-map/blob/master/docs/canon-sources.md).
+        Submissions without a verifiable citation will be closed.
+
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      description: The character / location / object the fact is about
+      placeholder: "e.g. Roronoa Zoro"
+    validations:
+      required: true
+
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      description: Which fact about the subject (age, birthday, bounty, etc.)
+      placeholder: "birthday"
+    validations:
+      required: true
+
+  - type: input
+    id: current_value
+    attributes:
+      label: Current value (what the Codex says now)
+      description: Copy from the character profile or canon_facts.json
+      placeholder: "November 11"
+
+  - type: input
+    id: proposed_value
+    attributes:
+      label: Proposed value (what it should say)
+      placeholder: "November 11th"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: Source type
+      description: Must be a registered source — see canon-sources.md
+      options:
+        - Manga panel (chapter)
+        - SBS Q&A
+        - Cover story
+        - Vivre Card
+        - Color Walk (Oda commentary)
+        - One Piece Magazine SBS
+        - Other (explain in evidence below)
+    validations:
+      required: true
+
+  - type: input
+    id: source_reference
+    attributes:
+      label: Source reference
+      description: Specific page/Q&A/chapter that proves your value
+      placeholder: "SBS Vol 4 #0001  ·  or  Chapter 3 page 12  ·  or  Vivre Card 'Initial 2018' card L1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence_notes
+    attributes:
+      label: Evidence quote
+      description: Quote the relevant text or describe the panel content. The maintainer will verify against the cited source before merging.
+      placeholder: |
+        Oda explicitly states: "Zoro was born on November 11th."
+        — SBS Vol 4 #0001, in response to a reader asking about Strawhat birthdays.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Your confidence
+      options:
+        - I have the source in front of me — verbatim
+        - I'm confident from memory but haven't re-checked
+        - I'm reporting it because someone else cited it
+    validations:
+      required: true

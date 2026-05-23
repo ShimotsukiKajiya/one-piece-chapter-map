@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Den Den Mushi mystery placeholder. Original Codex art (CC BY-NC 4.0). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Hidden by Spoiler Guard">
+  <g fill="#1a1610">
+    <!-- Snail body base -->
+    <ellipse cx="42" cy="80" rx="34" ry="7"/>
+    <!-- Body protrusion / head forward (left) -->
+    <path d="M 12 78 Q 4 78 6 72 Q 12 68 20 72 L 22 78 Z"/>
+    <!-- Shell on back -->
+    <circle cx="50" cy="58" r="22"/>
+    <!-- Antenna bulb tips -->
+    <circle cx="10" cy="48" r="3.5"/>
+    <circle cx="20" cy="46" r="3.5"/>
+  </g>
+  <!-- Antenna stalks -->
+  <g stroke="#1a1610" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 14 70 Q 11 60 10 50"/>
+    <path d="M 22 68 Q 22 58 20 48"/>
+  </g>
+  <!-- Shell spiral details (lighter) -->
+  <g fill="none" stroke="#3a2a18" stroke-width="1.2">
+    <circle cx="50" cy="58" r="14"/>
+    <circle cx="50" cy="58" r="7"/>
+  </g>
+  <!-- Thought bubble trail -->
+  <circle cx="62" cy="40" r="2.5" fill="#1a1610"/>
+  <circle cx="68" cy="34" r="3.5" fill="#1a1610"/>
+  <!-- Thought bubble main -->
+  <circle cx="80" cy="22" r="14" fill="#1a1610"/>
+  <!-- "?" in bubble -->
+  <text x="80" y="29" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#e8d8b0">?</text>
+</svg>

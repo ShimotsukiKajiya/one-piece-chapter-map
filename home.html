@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shimotsuki Codex · One Piece Reference</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #0c0a14;
+      --surface:   #1a1610;
+      --surface2:  #251f15;
+      --border:    #4a3820;
+      --text:      #e8d8b0;
+      --muted:     #8a7548;
+      --orange:    #FF6B1A;
+      --gold:      #d4a44a;
+      --gold-bright:#f5c95e;
+      --ink-blue:  #6a9ec8;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 25% 15%, rgba(212,164,74,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 85%, rgba(106,158,200,0.04) 0%, transparent 50%),
+        var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Aged-paper grain */
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.012) 1px, transparent 1px);
+      background-size: 14px 14px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ──────────── NEW HERO ────────────
+       Clean, focused, treasure-map themed. No mascots, no rainbow.
+       The Codex is the brand; One Piece is the topic.                */
+    .hero {
+      position: relative;
+      padding: 70px 24px 50px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Logo crest at the top */
+    .hero-crest {
+      width: 110px; height: 110px;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 4px 22px rgba(212,164,74,0.4));
+      /* No float animation — new logo asset has a slight tilt that the
+         translateY animation amplifies awkwardly. Stay still until/unless
+         a re-export with corrected baseline lands. */
+    }
+
+    /* Top-line "ONE PIECE" — small, gold, set above the codex name */
+    .hero .top-line {
+      font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--ink-blue);
+      margin-bottom: 14px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    .hero .top-line::before, .hero .top-line::after {
+      content: ''; width: 36px; height: 1px;
+      background: linear-gradient(to right, transparent, var(--ink-blue), transparent);
+    }
+
+    /* Centerpiece: THE SHIMOTSUKI CODEX */
+    .hero h1 {
+      font-size: clamp(2.4rem, 6.5vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      line-height: 1.05;
+      background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 55%, #a07020 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(212,164,74,0.18);
+      margin-bottom: 16px;
+    }
+
+    /* Italic tagline beneath */
+    .hero .tagline {
+      font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+      color: var(--muted);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+
+    .hero .blurb {
+      font-size: 1.05rem; line-height: 1.8;
+      max-width: 640px; margin: 0 auto 28px;
+      color: var(--text);
+    }
+    .hero .blurb strong {
+      color: var(--gold-bright); font-weight: 700;
+    }
+
+    /* Hero CTA row */
+    .hero-ctas {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px;
+      border-radius: 100px;
+      font-size: 0.9rem; font-weight: 700;
+      text-decoration: none;
+      transition: all 0.18s ease;
+      letter-spacing: 0.5px;
+    }
+    .hero-cta.primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #a07020 100%);
+      color: #0c0a14;
+      border: 1px solid var(--gold-bright);
+      box-shadow: 0 4px 14px rgba(212,164,74,0.3);
+    }
+    .hero-cta.primary:hover {
+      box-shadow: 0 6px 20px rgba(212,164,74,0.5);
+      transform: translateY(-2px);
+    }
+    .hero-cta.secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .hero-cta.secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold-bright);
+      transform: translateY(-2px);
+    }
+
+    /* Gold rule with ✦ ends — reusable on every page */
+    .gold-rule {
+      width: 240px; height: 2px; margin: 0 auto 32px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      position: relative;
+    }
+    .gold-rule::before, .gold-rule::after {
+      content: '✦'; position: absolute; top: -10px;
+      color: var(--gold); font-size: 0.85rem;
+    }
+    .gold-rule::before { left: -2px; }
+    .gold-rule::after  { right: -2px; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+      position: relative;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 12px;
+      text-align: center;
+    }
+    .stat .num {
+      font-size: 1.8rem; font-weight: 900;
+      color: var(--gold-bright);
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    .stat .label {
+      font-size: 0.65rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-top: 7px;
+    }
+
+    /* ── DIFFERENTIATOR STRIP ── */
+    .diff-strip {
+      max-width: 1100px;
+      margin: 0 auto 56px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .diff-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .diff-item .diff-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .diff-item .diff-text strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+    }
+    .diff-item .diff-text span {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── SECTION HEADER ── */
+    .tier-header {
+      max-width: 1100px;
+      margin: 30px auto 18px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+    .tier-header h2 {
+      font-size: 0.85rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .tier-header .rule {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    /* ── HERO FEATURE GRID (the four entry doors) ── */
+    .features-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      position: relative;
+    }
+
+    /* ── SECONDARY FEATURE GRID (compact, 3-up) ── */
+    .features {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+    .features .feature {
+      padding: 20px 18px;
+    }
+    .features .feature-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .features .feature h3   { font-size: 1.05rem; margin-bottom: 7px; }
+    .features .feature p    { font-size: 0.84rem; line-height: 1.5; margin-bottom: 10px; }
+    .features .feature-stat { font-size: 0.7rem; padding-top: 9px; }
+
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 26px;
+      text-decoration: none;
+      color: inherit;
+      display: flex; flex-direction: column;
+      transition: all 0.18s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 0%, transparent 60%, rgba(212,164,74,0.06) 100%);
+      pointer-events: none;
+    }
+    .feature:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,164,74,0.3);
+    }
+
+    .feature-icon {
+      font-size: 2.4rem; margin-bottom: 14px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+    .feature h3 {
+      font-size: 1.3rem; font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .feature p {
+      font-size: 0.92rem; line-height: 1.6;
+      color: var(--text); flex: 1;
+      margin-bottom: 14px;
+    }
+    .feature-stat {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(212,164,74,0.2);
+    }
+    .feature-stat strong {
+      color: var(--gold-bright); font-weight: 800;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 30px 24px 50px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 980px) {
+      .features    { grid-template-columns: repeat(2, 1fr); }
+      .diff-strip  { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .features-hero { grid-template-columns: 1fr; }
+      .features      { grid-template-columns: 1fr; }
+      .stats-bar     { grid-template-columns: repeat(2, 1fr); }
+      .hero-crest    { width: 80px; height: 80px; }
+    }
+
+    /* Corner-ornament SVGs removed — conflicted with the action strip
+       (Search · Info · Settings · Burger) at the top-right. */
+  </style>
+<link rel="stylesheet" href="cite-styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+  <!-- OG / Twitter cards for shareability -->
+  <meta name="description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <link rel="canonical" href="https://shimotsukicodex.com/home.html">
+  <meta property="og:title" content="The Shimotsuki Codex · One Piece Reference">
+  <meta property="og:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="The Shimotsuki Codex · One Piece Reference">
+  <meta name="twitter:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+<style id="spoiler-portrait-gate">
+/* L18+L20: Silhouette character portraits + bounty poster images for users
+   who haven't caught up. The portrait files themselves are post-timeskip /
+   Egghead-era visuals; rendering them at low cutoff leaks the timeskip and
+   late-arc evolution. brightness(0) blacks out the image content while
+   preserving its layout box, giving a clean silhouette feel. Caught-up
+   readers see the originals as intended. */
+html[data-spoiler-silhouette="1"] .char-portrait img,
+html[data-spoiler-silhouette="1"] .poster-portrait img,
+html[data-spoiler-silhouette="1"] .poster-art img,
+html[data-spoiler-silhouette="1"] img.char-img,
+html[data-spoiler-silhouette="1"] img.bounty-img {
+  content: url('assets/silhouettes/generic-character-v02.jpg') !important; object-fit: cover !important;
+  opacity: 0.55 !important;
+}
+html[data-spoiler-silhouette="1"] .char-portrait::after,
+html[data-spoiler-silhouette="1"] .poster-portrait::after {
+  content: "🛡 silhouette";
+  position: absolute; bottom: 2px; right: 2px;
+  font-size: 0.62rem; color: #6a9ec8;
+  background: rgba(26,22,16,0.7); padding: 1px 5px;
+  border-radius: 3px; pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img class="hero-crest" src="logo/shimotsuki-codex-mark-primary-256.png" width="256" height="256" alt="Shimotsuki Codex crest">
+  <div class="top-line">A One Piece Reference</div>
+  <h1>The Shimotsuki Codex</h1>
+  <div class="tagline">Forging clarity from chaos</div>
+  <div class="gold-rule"></div>
+  <p class="blurb">
+    A fan-built One Piece reference that goes deeper than the wiki.
+    Every character cross-linked to their crew, fruit, weapons, family, and voice actors.
+    Every fact carries a <strong>canon tier badge</strong> — so you always know
+    whether you're reading Oda's pen or someone's best guess.
+    <strong>Sourced, cross-referenced, spoiler-aware, and free.</strong>
+  </p>
+  <div class="hero-ctas">
+    <a class="hero-cta primary" href="character.html?id=chr:02499">🧠 Try: Luffy's profile</a>
+    <a class="hero-cta secondary" href="characters.html">All 1,537 Characters</a>
+    <a class="hero-cta secondary" href="sbs.html">📜 SBS Vault</a>
+    <a class="hero-cta secondary" href="theories.html">🔥 Theory Forge</a>
+  </div>
+</section>
+
+<!-- ── TODAY IN CANON ── deterministic daily fact draw ── -->
+<section style="max-width:900px;margin:8px auto 8px;padding:0 24px;position:relative;z-index:1">
+  <div id="today-card" style="background:linear-gradient(135deg, #1a1610 0%, #251f15 100%);border:1px solid #4a3820;border-left:4px solid #d4a44a;border-radius:14px;padding:22px 28px;display:none">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="color:#d4a44a;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700">📅 Today in Canon</div>
+      <div id="today-date" style="color:#8a7548;font-size:0.78rem"></div>
+    </div>
+    <div id="today-body" style="color:#e8d8b0;font-size:1.05rem;line-height:1.6"></div>
+    <div id="today-link" style="margin-top:10px;font-size:0.85rem"></div>
+  </div>
+</section>
+
+<!-- ── RANDOM ── surprise-me discovery loop ── -->
+<section style="max-width:900px;margin:20px auto 32px;padding:0 24px;position:relative;z-index:1;text-align:center">
+  <button id="random-btn" style="background:linear-gradient(135deg,#1a1610 0%,#251f15 100%);border:1px solid #4a3820;border-left:4px solid #6a9ec8;color:#e8d8b0;border-radius:14px;padding:14px 28px;cursor:pointer;font-family:inherit;font-size:1rem;letter-spacing:1px;transition:transform .15s,border-color .15s">
+    🎲 <span style="color:#9bc1de;font-weight:700;letter-spacing:2px">SURPRISE ME</span> · open something at random from the Codex
+  </button>
+</section>
+
+<section class="stats-bar">
+  <div class="stat"><div class="num" id="s-chapters">1,181</div><div class="label">Chapters</div></div>
+  <div class="stat"><div class="num" id="s-characters">1,537</div><div class="label">Characters</div></div>
+  <div class="stat"><div class="num" id="s-sbs">1,685</div><div class="label">SBS Q&amp;A</div></div>
+  <div class="stat"><div class="num" id="s-theories">94</div><div class="label">Theories</div></div>
+  <div class="stat"><div class="num" id="s-crews">357</div><div class="label">Crews &amp; Orgs</div></div>
+  <div class="stat"><div class="num" id="s-ships">41</div><div class="label">Ships</div></div>
+  <div class="stat"><div class="num" id="s-locations">139</div><div class="label">Locations</div></div>
+  <div class="stat"><div class="num" id="s-voices">1,333</div><div class="label">Voice Actors</div></div>
+</section>
+<!-- L13 honest-disclosure caveat: counts are series-wide totals.
+     Your reading window context shown so the numbers don't imply
+     "you're seeing all of this." -->
+<div id="stats-caveat" style="max-width:1100px;margin:-32px auto 32px;padding:0 24px;text-align:center;font-size:0.74rem;color:var(--muted);font-style:italic;display:none">
+  Counts span the entire series · your reading window: <span id="stats-caveat-cutoff">—</span>
+</div>
+<script>
+(function () {
+  // Show the caveat only when the user has set a cutoff that's less than
+  // the latest published chapter (otherwise the numbers ARE what they're
+  // seeing, no caveat needed).
+  try {
+    var raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+    var cutoff = (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0)
+      ? Math.min(raw.cutoff_chapter, 1181)
+      : (parseInt(localStorage.getItem('spoilerCutoff') || '0', 10) || 597);
+    if (cutoff < 1181) {
+      var label = 'Ch. ' + cutoff;
+      var ep = (raw && raw.cutoff_episode) || parseInt(localStorage.getItem('spoilerCutoffEp') || '0', 10);
+      if (ep) label += ' / Ep. ' + ep;
+      var node = document.getElementById('stats-caveat-cutoff');
+      var box  = document.getElementById('stats-caveat');
+      if (node) node.textContent = label;
+      if (box)  box.style.display = 'block';
+    }
+  } catch (_) {}
+})();
+</script>
+
+<section class="diff-strip">
+  <div class="diff-item">
+    <div class="diff-icon">🟢</div>
+    <div class="diff-text">
+      <strong>Canon tier on every fact</strong>
+      <span>CANON = Oda's pen directly. LIKELY = strong secondary match. SPEC = wiki only, unverified. You always know what you're reading.</span>
+    </div>
+  </div>
+  <div class="diff-item">
+    <div class="diff-icon">🔗</div>
+    <div class="diff-text">
+      <strong>Cross-linked character graph</strong>
+      <span>Every character links to their crew, devil fruit, weapons, family, birthplace, voice actors, and training relationships — not just a flat info-box.</span>
+    </div>
+  </div>
+  <div class="diff-item">
+    <div class="diff-icon">🛡</div>
+    <div class="diff-text">
+      <strong>Spoiler-aware by chapter or episode</strong>
+      <span>Set your current chapter or episode. Characters, relationships, and facts that debut after your cutoff are blurred — readable only when you choose to reveal them.</span>
+    </div>
+  </div>
+</section>
+
+<div class="tier-header"><h2>⚓ The Four Pillars</h2><div class="rule"></div></div>
+
+<section class="features-hero">
+
+  <a class="feature" href="atlas.html">
+    <div class="feature-icon">🗺️</div>
+    <h3>Chapter Atlas</h3>
+    <p>Visualize where every character appears across the entire series. Click a character to highlight every chapter they're in — full appearance, flashback, silhouette, or cover story.</p>
+    <div class="feature-stat" id="fs-map"><strong>…</strong> appearance entries · <strong>…</strong> characters</div>
+  </a>
+
+  <a class="feature" href="sbs.html">
+    <div class="feature-icon">📜</div>
+    <h3>SBS Vault</h3>
+    <p>Every "Question Corner" entry from every volume Oda has ever published, searchable and categorized. Filter by Devil Fruits, characters, worldbuilding, or just Oda being Oda.</p>
+    <div class="feature-stat" id="fs-sbs"><strong>…</strong> Q&amp;A · <strong>…</strong> volumes · <strong>…</strong> categories</div>
+  </a>
+
+  <a class="feature" href="characters.html">
+    <div class="feature-icon">🧠</div>
+    <h3>Character Archive</h3>
+    <p>Every character cross-linked to their crew, devil fruit, weapons, family, birthplace, and voice actors. Every fact carries a tier badge from Oda's pen to your screen.</p>
+    <div class="feature-stat" id="fs-punk"><strong>…</strong> characters · sourced &amp; tiered</div>
+  </a>
+
+  <a class="feature" href="theories.html">
+    <div class="feature-icon">🔥</div>
+    <h3>Theory Forge</h3>
+    <p>Browse Reddit's top fan theories — but every one has been weighed against actual canon. Each verdict cites Oda's own SBS quotes when relevant. No more taking strangers at their word.</p>
+    <div class="feature-stat" id="fs-theories"><strong>…</strong> theories · <strong>…</strong> debunked by canon · <strong>…</strong> confirmed</div>
+  </a>
+
+</section>
+
+<div class="tier-header"><h2>📚 Deeper Codex</h2><div class="rule"></div></div>
+
+<section class="features">
+
+  <a class="feature" href="arcs.html">
+    <div class="feature-icon">📚</div>
+    <h3>Story Arcs</h3>
+    <p>Every arc from East Blue through Egghead — chapter ranges, saga grouping, and set-in location links.</p>
+    <div class="feature-stat"><strong>33</strong> arcs · <strong>10</strong> sagas · <strong>1,181</strong> chapters</div>
+  </a>
+
+  <a class="feature" href="workbench.html">
+    <div class="feature-icon">📌</div>
+    <h3>Theory Workbench</h3>
+    <p>Build theories with cited evidence. Pin Fact Cards, set stance, submit to the Codex.</p>
+    <div class="feature-stat" id="fs-workbench"><strong>…</strong> Fact Cards · research tool</div>
+  </a>
+
+  <a class="feature" href="prove.html">
+    <div class="feature-icon">🔍</div>
+    <h3>Prove an Idea</h3>
+    <p>Type any claim. Returns CONFIRMED · LIKELY · CONTRADICTED · UNKNOWN with citation chain.</p>
+    <div class="feature-stat">Free-path matcher · zero cost</div>
+  </a>
+
+
+  <a class="feature" href="fruits.html">
+    <div class="feature-icon">🍎</div>
+    <h3>Devil Fruit Codex</h3>
+    <p>Every named fruit — Paramecia, Logia, Zoan, Mythical, Ancient. Type-coded with debut chapter.</p>
+    <div class="feature-stat"><strong>155</strong> fruits · <strong>5</strong> types</div>
+  </a>
+
+  <a class="feature" href="awakenings.html" data-min-ch="783">
+    <div class="feature-icon">💥</div>
+    <h3>Awakenings</h3>
+    <p>Every canonically-confirmed Devil Fruit awakening in chronological order. Type-coded with status.</p>
+    <div class="feature-stat" id="fs-awakenings"><strong>…</strong> awakenings tracked</div>
+  </a>
+
+  <a class="feature" href="bounties.html">
+    <div class="feature-icon">💰</div>
+    <h3>Bounty Wall</h3>
+    <p>Every Marine bounty pinned to a corkboard. Sortable by amount or by chronology of debut.</p>
+    <div class="feature-stat" id="fs-bounties"><strong>248</strong> bounties</div>
+  </a>
+
+  <a class="feature" href="ships.html">
+    <div class="feature-icon">⛵</div>
+    <h3>Ships</h3>
+    <p>Named canon ships — Going Merry, Sunny, Moby Dick, Queen Mama Chanter, and the rest of the fleet.</p>
+    <div class="feature-stat" id="fs-ships"><strong>…</strong> ships logged</div>
+  </a>
+
+  <a class="feature" href="crews.html">
+    <div class="feature-icon">⚓</div>
+    <h3>Crews &amp; Organisations</h3>
+    <p>Every pirate crew, marine unit, revolutionary cell, and faction with full membership rosters.</p>
+    <div class="feature-stat"><strong>357</strong> crews + orgs</div>
+  </a>
+
+  <a class="feature" href="locations.html">
+    <div class="feature-icon">🗺</div>
+    <h3>Locations</h3>
+    <p>Major canonical islands, kingdoms, and territories — region-coded by sea.</p>
+    <div class="feature-stat" id="fs-locs"><strong>…</strong> locations</div>
+  </a>
+
+  <a class="feature" href="families.html">
+    <div class="feature-icon">🌳</div>
+    <h3>Family Trees</h3>
+    <p>Hand-curated bloodlines and adoptive families. Each edge cites its confirming chapter.</p>
+    <div class="feature-stat"><strong>52</strong> relationships</div>
+  </a>
+
+  <a class="feature" href="compare.html">
+    <div class="feature-icon">⚖</div>
+    <h3>Character Compare</h3>
+    <p>Stack 2-6 characters side-by-side. Quick-pick the Strawhats, Yonko, Admirals, or D-Clan.</p>
+    <div class="feature-stat">Side-by-side stat grid</div>
+  </a>
+
+
+
+  <a class="feature" href="covers.html">
+    <div class="feature-icon">🏴‍☠️</div>
+    <h3>Cover Compendium</h3>
+    <p>The mini-arcs Oda runs on chapter title pages. Often canon, often foreshadowing.</p>
+    <div class="feature-stat"><strong>21</strong> mini-arcs</div>
+  </a>
+
+  <a class="feature" href="sbs-topics.html">
+    <div class="feature-icon">🗂</div>
+    <h3>SBS by Topic</h3>
+    <p>Q&amp;As organised by subject — characters, fruits, world, ages, jokes, behind-the-scenes.</p>
+    <div class="feature-stat">Categorised vault browse</div>
+  </a>
+
+  <a class="feature" href="heatmap.html">
+    <div class="feature-icon">🔥</div>
+    <h3>Canon Density</h3>
+    <p>Every chapter as a coloured cell — brighter means more canon-verified facts attached.</p>
+    <div class="feature-stat">1,181 cells · live-coloured</div>
+  </a>
+
+  <a class="feature" href="chapter-release-map.html">
+    <div class="feature-icon">📅</div>
+    <h3>Release Map</h3>
+    <p>30 years of One Piece on a single calendar — every manga chapter, anime episode, film, and milestone mapped by week.</p>
+    <div class="feature-stat">1,181 chapters · 1,155 episodes · 15 films · 30 yrs</div>
+  </a>
+
+  <a class="feature" href="voices.html">
+    <div class="feature-icon">🎙️</div>
+    <h3>Voice Cast</h3>
+    <p>Every JP and EN voice actor. Multi-role workhorses tagged — some VAs play 40+ characters.</p>
+    <div class="feature-stat" id="fs-voices"><strong>…</strong> JP · <strong>…</strong> EN</div>
+  </a>
+
+
+</section>
+
+<footer>
+  The Shimotsuki Codex · Built with calm and Claude · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial
+</footer>
+
+<script id="home-stats" type="application/json">
+{"chapters":"1,181","characters":"1,537","sbs":"1,685","sbs_volumes":"107","theories":"94","ships":"41","locations":"139","crews":"357","voices":"1,333","fsMap":"<strong>26,775</strong> appearance entries · <strong>1,538</strong> characters","fsSbs":"<strong>1,685</strong> Q&amp;A · <strong>107</strong> volumes · <strong>10</strong> categories","fsTheories":"<strong>94</strong> theories · <strong>29</strong> debunked by canon · <strong>2</strong> confirmed","fsPunk":"<strong>1,537</strong> characters · <strong>1,481</strong> with full canon data","fsAwakenings":"<strong>29</strong> awakenings tracked · type-coded","fsWorkbench":"<strong>3,281</strong> Fact Cards across SBS · characters · theories · covers","fsShips":"<strong>41</strong> named canon ships","fsVoices":"<strong>653</strong> JP · <strong>680</strong> EN voice actors","fsLocs":"<strong>139</strong> locations across the seas"}
+</script>
+<script id="home-arcs" type="application/json">
+[{"n":"Romance Dawn","s":1,"e":7},{"n":"Orange Town","s":8,"e":21},{"n":"Syrup Village","s":22,"e":41},{"n":"Baratie","s":42,"e":68},{"n":"Arlong Park","s":69,"e":95},{"n":"Loguetown","s":96,"e":100},{"n":"Reverse Mountain","s":101,"e":105},{"n":"Whiskey Peak","s":106,"e":114},{"n":"Little Garden","s":115,"e":129},{"n":"Drum Island","s":130,"e":154},{"n":"Alabasta","s":155,"e":217},{"n":"Jaya","s":218,"e":236},{"n":"Skypiea","s":237,"e":302},{"n":"Long Ring Long Land","s":303,"e":321},{"n":"Water 7","s":322,"e":374},{"n":"Enies Lobby","s":375,"e":430},{"n":"Post-Enies Lobby","s":431,"e":441},{"n":"Thriller Bark","s":442,"e":489},{"n":"Sabaody Archipelago","s":490,"e":513},{"n":"Amazon Lily","s":514,"e":524},{"n":"Impel Down","s":525,"e":549},{"n":"Marineford","s":550,"e":580},{"n":"Post-War","s":581,"e":597},{"n":"Return to Sabaody","s":598,"e":602},{"n":"Fishman Island","s":603,"e":653},{"n":"Punk Hazard","s":654,"e":699},{"n":"Dressrosa","s":700,"e":801},{"n":"Zou","s":802,"e":824},{"n":"Whole Cake Island","s":825,"e":902},{"n":"Reverie","s":903,"e":908},{"n":"Wano Country","s":909,"e":1057},{"n":"Egghead","s":1058,"e":1126},{"n":"Elbaph","s":1127,"e":9999}]
+</script>
+
+<script>
+// Stats loader — baked values are shown instantly; async fetches run in background.
+const fmt = n => n.toLocaleString();
+const CACHE_KEY = 'codex-stats-v1';
+
+function loadCache() {
+  try { return JSON.parse(localStorage.getItem(CACHE_KEY) || '{}'); } catch (_) { return {}; }
+}
+function saveCache(patch) {
+  try {
+    const c = loadCache();
+    localStorage.setItem(CACHE_KEY, JSON.stringify(Object.assign(c, patch)));
+  } catch (_) {}
+}
+
+// L13: hide feature cards whose subject is past the user's effective cutoff
+// (e.g. "Awakenings" — the concept itself debuts Ch.783, so pre-Wano readers
+// shouldn't see it advertised on the front door). Boot-safe: reads
+// localStorage directly because spoiler.js may not have loaded yet.
+(function _gateFeatureCards() {
+  function _eff() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.effectiveCutoff)
+      return CodexSpoiler.effectiveCutoff('public');
+    try {
+      const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+      const ch = raw && raw.cutoff_chapter;
+      return (typeof ch === 'number' && ch > 0) ? Math.min(ch, 1181) : 597;
+    } catch (_) { return 597; }
+  }
+  function apply() {
+    const eff = _eff();
+    document.querySelectorAll('[data-min-ch]').forEach(el => {
+      const min = parseInt(el.dataset.minCh, 10);
+      el.style.display = (min > eff) ? 'none' : '';
+    });
+  }
+  apply();
+  if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.onChange) {
+    CodexSpoiler.onChange(apply);
+  } else {
+    setTimeout(() => {
+      if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.onChange)
+        CodexSpoiler.onChange(apply);
+    }, 200);
+  }
+})();
+
+// Read baked stats immediately — synchronous, no fetch latency
+(function() {
+  try {
+    const b = JSON.parse(document.getElementById('home-stats').textContent || '{}');
+    const s = (id, v) => { const el = document.getElementById(id); if (el && v) el.textContent = v; };
+    const h = (id, v) => { const el = document.getElementById(id); if (el && v) el.innerHTML = v; };
+    s('s-chapters', b.chapters); s('s-characters', b.characters);
+    s('s-sbs', b.sbs); s('s-theories', b.theories);
+    s('s-ships', b.ships); s('s-locations', b.locations);
+    s('s-crews', b.crews); s('s-voices', b.voices);
+    h('fs-map', b.fsMap); h('fs-sbs', b.fsSbs); h('fs-theories', b.fsTheories);
+    h('fs-punk', b.fsPunk); h('fs-awakenings', b.fsAwakenings);
+    h('fs-workbench', b.fsWorkbench); h('fs-ships', b.fsShips);
+    h('fs-voices', b.fsVoices); h('fs-locs', b.fsLocs);
+  } catch (_) {}
+})();
+
+function set(id, val) {
+  const el = document.getElementById(id);
+  if (el && val != null) el.textContent = val;
+}
+function setHtml(id, val) {
+  const el = document.getElementById(id);
+  if (el && val != null) el.innerHTML = val;
+}
+
+// Background fetches — update + save on success, silently ignore failures
+fetch('appearances.csv').then(r => r.text()).then(text => {
+  const lines = text.trim().split(/\r?\n/).slice(1);
+  const chapters = new Set(), chars = new Set();
+  for (const line of lines) {
+    const [ch, name] = line.split(',');
+    if (ch) chapters.add(parseInt(ch));
+    if (name) chars.add(name.replace(/^"|"$/g,'').trim());
+  }
+  const fsMap = `<strong>${fmt(lines.length)}</strong> appearance entries · <strong>${fmt(chars.size)}</strong> characters`;
+  set('s-chapters', fmt(chapters.size));
+  setHtml('fs-map', fsMap);
+  saveCache({ chapters: fmt(chapters.size), fsMap });
+}).catch(_ => {});
+
+fetch('sbs_archive.json').then(r => r.json()).then(sbs => {
+  const vols = new Set(sbs.map(s => s.volume));
+  const cats = new Set(sbs.map(s => s.category).filter(Boolean));
+  const fsSbs = `<strong>${fmt(sbs.length)}</strong> Q&A · <strong>${vols.size}</strong> volumes · <strong>${cats.size}</strong> categories`;
+  set('s-sbs',     fmt(sbs.length));
+  set('s-volumes', vols.size);
+  setHtml('fs-sbs', fsSbs);
+  saveCache({ sbs: fmt(sbs.length), volumes: String(vols.size), fsSbs });
+}).catch(_ => {});
+
+fetch('theories_import.json').then(r => r.json()).then(theories => {
+  const debunked  = theories.filter(t => t.status === 'debunked').length;
+  const confirmed = theories.filter(t => t.status === 'confirmed').length;
+  const fsTheories = `<strong>${fmt(theories.length)}</strong> theories · <strong>${debunked}</strong> debunked by canon · <strong>${confirmed}</strong> confirmed`;
+  set('s-theories', fmt(theories.length));
+  setHtml('fs-theories', fsTheories);
+  saveCache({ theories: fmt(theories.length), fsTheories });
+}).catch(_ => {});
+
+fetch('punk_records.json').then(r => r.json()).then(pr => {
+  const records = Object.values(pr);
+  const total = records.length;
+  const found = records.filter(r => r.found).length;
+  const fsPunk = `<strong>${fmt(total)}</strong> characters · <strong>${fmt(found)}</strong> with full canon data`;
+  setHtml('fs-punk', fsPunk);
+  saveCache({ fsPunk });
+}).catch(_ => {});
+
+fetch('awakenings.json').then(r => r.json()).then(j => {
+  const n = (j.awakenings || []).length;
+  const fsAwakenings = `<strong>${n}</strong> awakenings tracked · type-coded`;
+  setHtml('fs-awakenings', fsAwakenings);
+  saveCache({ fsAwakenings });
+}).catch(_ => {});
+
+fetch('workbench.html').then(r => r.text()).then(html => {
+  const m = html.match(/<script id="workbench-cards"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) return;
+  const cards = JSON.parse(m[1]);
+  const fsWorkbench = `<strong>${fmt(cards.length)}</strong> Fact Cards across SBS · characters · theories · covers`;
+  setHtml('fs-workbench', fsWorkbench);
+  saveCache({ fsWorkbench });
+}).catch(_ => {});
+
+fetch('ships.html').then(r => r.text()).then(html => {
+  const m = html.match(/<script id="ships-data"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) return;
+  const ships = JSON.parse(m[1]);
+  const found = (Array.isArray(ships) ? ships : Object.values(ships)).filter(s => s && s.found).length;
+  const fsShips = `<strong>${found}</strong> named canon ships`;
+  setHtml('fs-ships', fsShips);
+  saveCache({ fsShips });
+}).catch(_ => {});
+
+fetch('voices.html').then(r => r.text()).then(html => {
+  const m = html.match(/<script id="voices-data"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) return;
+  const d = JSON.parse(m[1]);
+  const jp = Object.keys(d.jp || {}).filter(n => n && n.toLowerCase() !== 'unknown').length;
+  const en = Object.keys(d.en || {}).filter(n => n && n.toLowerCase() !== 'unknown').length;
+  const fsVoices = `<strong>${jp}</strong> JP · <strong>${en}</strong> EN voice actors`;
+  setHtml('fs-voices', fsVoices);
+  saveCache({ fsVoices });
+}).catch(_ => {});
+
+fetch('locations.json').then(r => r.json()).then(loc => {
+  const found = Object.values(loc).filter(r => r && r.found).length;
+  const fsLocs = `<strong>${found}</strong> locations across the seas`;
+  setHtml('fs-locs', fsLocs);
+  saveCache({ fsLocs });
+}).catch(_ => {});
+</script>
+
+<script>
+// ── RANDOM ── pick a random entity across multiple data sources
+(function() {
+  const btn = document.getElementById('random-btn');
+  if (!btn) return;
+  let pool = null;
+  async function buildPool() {
+    if (pool) return pool;
+    pool = [];
+    try {
+      const [pr, fr, sbs, th, loc] = await Promise.all([
+        fetch('punk_records.json').then(r => r.json()).catch(() => ({})),
+        fetch('devil_fruits.json').then(r => r.json()).catch(() => ({})),
+        fetch('sbs_archive.json').then(r => r.json()).catch(() => []),
+        fetch('theories_import.json').then(r => r.json()).catch(() => []),
+        fetch('locations.json').then(r => r.json()).catch(() => ({})),
+      ]);
+      for (const [n, r] of Object.entries(pr)) {
+        if (r.found && (r.appearances || 0) >= 5)
+          pool.push({ url: 'character.html?name=' + encodeURIComponent(n), label: '👤 ' + n });
+      }
+      for (const [n, r] of Object.entries(fr)) {
+        if (r && r.found)
+          pool.push({ url: 'fruit.html?name=' + encodeURIComponent(n), label: '🍎 ' + n });
+      }
+      for (const e of sbs) {
+        if (e.id_num)
+          pool.push({ url: 'sbs.html#' + String(e.id_num).padStart(4,'0'),
+                       label: '📜 SBS Vol ' + e.volume + ' #' + String(e.id_num).padStart(4,'0') });
+      }
+      for (const t of th) {
+        if (t.num)
+          pool.push({ url: 'theories.html#theory-' + String(t.num).padStart(4,'0'),
+                       label: '🔥 Theory #' + String(t.num).padStart(4,'0') });
+      }
+      for (const [n, r] of Object.entries(loc)) {
+        if (r && r.found)
+          pool.push({ url: 'location.html?name=' + encodeURIComponent(n), label: '🗺 ' + n });
+      }
+    } catch (_) {}
+    return pool;
+  }
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    const items = await buildPool();
+    if (!items.length) { btn.disabled = false; return; }
+    const pick = items[Math.floor(Math.random() * items.length)];
+    location.href = pick.url;
+  });
+})();
+</script>
+
+<script>
+// ── TODAY IN CANON ── deterministic per-day fact rotation
+// Hash today's date → pick from the canon_facts pool. Same fact for
+// everyone all day; new draw at UTC midnight.
+// Cached facts so re-renders after spoiler-cutoff change skip the network.
+let _todayCachedFacts = null;
+async function renderTodayInCanon() {
+  function dayHash() {
+    const d = new Date();
+    const ymd = d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
+    // Simple deterministic mix
+    let h = ymd ^ 0x9e3779b9;
+    h = ((h >>> 16) ^ h) * 0x85ebca6b;
+    h = ((h >>> 13) ^ h) * 0xc2b2ae35;
+    h = (h >>> 16) ^ h;
+    return Math.abs(h);
+  }
+
+  // Arc ranges baked into page for instant lookup
+  const _arcRanges = (() => {
+    try { return JSON.parse(document.getElementById('home-arcs').textContent || '[]'); }
+    catch (_) { return []; }
+  })();
+  function chapterToArc(ch) {
+    return (_arcRanges.find(a => ch >= a.s && ch <= a.e) || {}).n || null;
+  }
+
+  try {
+    if (!_todayCachedFacts) {
+      const res = await fetch('canon_facts.json');
+      if (!res.ok) return;
+      _todayCachedFacts = await res.json();
+    }
+    const facts = _todayCachedFacts;
+    // Filter to "interesting" facts — drop opaque appearance-count entries
+    // Spoiler protection: front page is the first thing visitors see, so
+    // default to a safe pre-timeskip boundary (Ch.597) when no user cutoff
+    // is set. If a cutoff IS set in localStorage (same key character.html uses),
+    // respect it instead. This stops a front-page draw spoiling Wano/Egghead/
+    // Elbaph reveals to readers who haven't reached those arcs.
+    // Migrated to CodexSpoiler library (2026-05-02 Phase 3). The library handles
+    // cutoff + buffer + episode-to-chapter conservative interpretation +
+    // shield_mode + greeted state. Falls back to legacy inline calc only if
+    // CodexSpoiler isn't loaded for some reason.
+    const _effectiveCutoff = (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.effectiveCutoff)
+      ? CodexSpoiler.effectiveCutoff('public')
+      : (parseInt(localStorage.getItem('spoilerCutoff') || '0', 10) || 597);
+    function _factChapter(f) {
+      if (f.predicate === 'first_appearance' && f.value && typeof f.value === 'object')
+        return f.value.chapter;
+      const ms = (f.sources || []).find(s => s.type === 'manga');
+      if (ms && typeof ms.chapter === 'number') return ms.chapter;
+      return null;  // unknown → not chapter-bound (e.g. SBS-sourced birthday)
+    }
+    // Build subject → debut-chapter map from first_appearance facts. Used to
+    // also filter facts whose CHARACTER hasn't been introduced yet (a SBS
+    // blood-type for a Wano character is still a 'this character exists'
+    // spoiler regardless of which SBS volume it appeared in).
+    const _debutByChar = {};
+    for (const f of facts) {
+      if (f.predicate === 'first_appearance' &&
+          f.value && typeof f.value === 'object' &&
+          typeof f.value.chapter === 'number') {
+        _debutByChar[f.subject.toLowerCase()] = f.value.chapter;
+      }
+    }
+    const pool = facts.filter(f => {
+      if (f.tier !== 'canon') return false;
+      if (!['birthday','blood_type','origin','devil_fruit_name','epithet','first_appearance'].includes(f.predicate)) return false;
+      // Gate 1: the fact itself was revealed at or before cutoff
+      const ch = _factChapter(f);
+      if (ch !== null && ch > _effectiveCutoff) return false;
+      // Gate 2: the SUBJECT has been introduced at or before cutoff. Catches
+      // SBS-sourced facts about post-cutoff characters (Tashigi blood type
+      // OK; Imu blood type would not be — Imu's debut Ch.906 > Ch.597 default).
+      const debut = _debutByChar[f.subject.toLowerCase()];
+      if (debut && debut > _effectiveCutoff) return false;
+      return true;
+    });
+    if (!pool.length) return;
+    const f = pool[dayHash() % pool.length];
+    const card = document.getElementById('today-card');
+    // today-date slot shows chapter context (arc · ch · ep), not today's calendar date
+    // — populated below after we know the chapter
+
+    // Format the value depending on predicate
+    const pretty = {
+      birthday:         "'s birthday is",
+      blood_type:       "'s blood type is",
+      origin:           "is from",
+      devil_fruit_name: "ate the",
+      epithet:          "is known as",
+      first_appearance: "first appeared in",
+    }[f.predicate] || "·";
+    let value = f.value;
+    let factChapter = null;
+    let bodyHtml = '';
+    if (f.predicate === 'first_appearance' && typeof value === 'object') {
+      factChapter = value.chapter;
+      // Header already shows the chapter context — body just says the event.
+      const typeNote = (f.value.type && f.value.type !== 'full') ? ` (${f.value.type})` : '';
+      bodyHtml = `<strong style="color:#f5c95e">${f.subject}</strong> makes their first appearance${typeNote}.`;
+    } else {
+      // Other predicates (birthday, blood_type, etc.) — body sentence carries
+      // the value directly; chapter context (if any) is in the header.
+      const valStr = String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+      bodyHtml = `<strong style="color:#f5c95e">${f.subject}</strong> ${pretty} <strong>${valStr}</strong>.`;
+    }
+    document.getElementById('today-body').innerHTML = bodyHtml;
+
+    // Chapter context → header date slot (arc · Ch.N · Ep.N)
+    const dateEl = document.getElementById('today-date');
+    if (dateEl) {
+      if (factChapter) {
+        const arcName = chapterToArc(factChapter);
+        const ctxBase = [];
+        if (arcName) ctxBase.push(`${arcName} Arc`);
+        ctxBase.push(`Ch.·${factChapter}`.replace('·',''));
+        dateEl.textContent = ctxBase.join(' · ');
+        // Async episode lookup — append ep number once loaded
+        fetch('episode_map.json').then(r => r.json()).then(em => {
+          const eps = (em.chapter_to_episodes || {})[String(factChapter)] || [];
+          if (eps.length) {
+            const epStr = eps.length === 1 ? `Ep.${eps[0]}` : `Ep.${eps[0]}–${eps[eps.length-1]}`;
+            if (dateEl) dateEl.textContent = ctxBase.join(' · ') + ' · ' + epStr;
+          }
+        }).catch(() => {});
+      } else {
+        dateEl.textContent = '';
+      }
+    }
+
+    const sbsSrc = (f.sources || []).find(s => s.type === 'sbs');
+    const mangaSrc = (f.sources || []).find(s => s.type === 'manga');
+    const linkParts = [`<a href="character.html?name=${encodeURIComponent(f.subject)}" style="color:#6a9ec8;text-decoration:none;border-bottom:1px dotted #6a9ec8">Open ${f.subject}'s profile →</a>`];
+    if (sbsSrc) {
+      const num = String(sbsSrc.qa_id || '').padStart(4, '0');
+      linkParts.push(`<a href="sbs.html#${num}" style="color:#d4a44a;text-decoration:none;border-bottom:1px dotted #d4a44a;margin-left:14px">SBS Vol ${sbsSrc.volume} #${num}</a>`);
+    } else if (mangaSrc && mangaSrc.chapter) {
+      // Just 'Manga' — chapter is already in the header context line.
+      linkParts.push(`<span style="color:#8a7548;margin-left:14px">Manga</span>`);
+    }
+    document.getElementById('today-link').innerHTML = linkParts.join('');
+    card.style.display = 'block';
+  } catch (_) {}
+}
+
+// Initial render + subscribe so the daily fact re-picks when the user
+// changes their cutoff (so an Egghead spoiler doesn't sit on the front
+// page after they tighten the shield).
+// Defer to DOMContentLoaded so spoiler.js (loaded later in the page) is
+// guaranteed to be ready when we try to subscribe.
+function _todayInit() {
+  renderTodayInCanon();
+  if (window.CodexSpoiler && CodexSpoiler.onChange) {
+    CodexSpoiler.onChange(renderTodayInCanon);
+    // The home page's spoiler-sensitive surface (Today in Canon) re-renders
+    // in place; skip the default reload so the rest of the page (stats bar,
+    // hero CTAs, etc.) doesn't flash for nothing.
+    if (CodexSpoiler.suppressDefaultReload) CodexSpoiler.suppressDefaultReload();
+  }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _todayInit);
+} else {
+  _todayInit();
+}
+</script>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>
+// L18+L20 portrait silhouette gate. Sets data-spoiler-silhouette="1" on
+// <html> when the user's cutoff is less than LATEST_PUBLISHED_CHAPTER.
+// CSS rule above handles the silhouette via brightness(0). Re-runs on
+// CodexSpoiler.onChange so toggling caught-up flips the silhouette live.
+(function () {
+  function _spoilerSilCutoff() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.snapshot) {
+      const ch = CodexSpoiler.snapshot().cutoff_chapter || 0;
+      return ch >= 1181 ? 1181 : ch;
+    }
+    try {
+      const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+      const ch = raw && raw.cutoff_chapter || parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
+      return Math.min(Math.max(ch || 0, 0), 1181);
+    } catch (_) { return 0; }
+  }
+  function _applySilhouette() {
+    const ch = _spoilerSilCutoff();
+    if (ch >= 1181 || ch === 0) {
+      document.documentElement.removeAttribute('data-spoiler-silhouette');
+    } else {
+      document.documentElement.setAttribute('data-spoiler-silhouette', '1');
+    }
+  }
+  _applySilhouette();
+  function _wireOnChange() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.onChange) {
+      CodexSpoiler.onChange(_applySilhouette);
+    } else { setTimeout(_wireOnChange, 100); }
+  }
+  _wireOnChange();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/member-of.json",
+  "title": "member-of relationship",
+  "description": "character → crew. Migrated from crews.json + crew_hierarchies.json.",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from":    {"$ref": "../_common.json#/$defs/character_id"},
+    "to":      {"$ref": "../_common.json#/$defs/crew_id"},
+    "src":     {"$ref": "../_common.json#/$defs/src"},
+    "role":    {"type": "string"},
+    "tier":    {"type": "integer", "minimum": 0},
+    "since":   {"$ref": "../_common.json#/$defs/chapter_id"},
+    "until":   {"oneOf": [{"$ref": "../_common.json#/$defs/chapter_id"}, {"type": "null"}]},
+    "current": {"type": "boolean"},
+    "tier":    {"$ref": "../_common.json#/$defs/tier"},
+    "evidence": {
+      "type": "array",
+      "items": {"$ref": "../_common.json#/$defs/evidence_ref"}
+    }
+  },
+  "additionalProperties": false
+}

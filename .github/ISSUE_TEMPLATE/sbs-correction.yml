@@ -1,0 +1,52 @@
+name: 📜 Report SBS error / missing entry
+description: Found an SBS Q&A that's misquoted, missing, or wrongly categorized
+title: "[SBS] "
+labels: ["sbs", "data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help keep the SBS archive accurate. Most issues come from wiki parsing —
+        thanks for catching them!
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Issue type
+      options:
+        - Q&A entirely missing
+        - Wrong text in question
+        - Wrong text in answer
+        - Wrong category (Devil Fruit / Character / etc)
+        - Wrong volume number
+        - Wrong reader pen name
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: volume
+    attributes:
+      label: Volume number
+      placeholder: "e.g. 56"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What's wrong + what should it say?
+      placeholder: |
+        Currently shows: "..."
+        Should say: "..."
+
+        (For missing entries, paste the question and answer text.)
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source / proof (optional)
+      description: Link to Library of Ohara, the wiki, or your scan
+      placeholder: "https://thelibraryofohara.com/..."

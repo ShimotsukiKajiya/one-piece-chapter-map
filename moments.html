@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iconic Moments · The Shimotsuki Codex</title>
+<meta name="description" content="Iconic moments in One Piece — Oda's chapter title pages, the great speeches, the cries, the fights, anchored to chapter and arc.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="stylesheet" href="tags.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+
+  main{max-width:1100px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:22px;max-width:780px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .pill{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:7px 14px;border-radius:20px;cursor:pointer;font-size:.78rem;letter-spacing:1px;transition:all .15s}
+  .pill.active,.pill:hover{color:var(--gold);border-color:var(--gold)}
+
+  /* Timeline-style render */
+  .moment{display:flex;gap:18px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:11px;padding:16px 20px;margin-bottom:14px;transition:transform .15s,border-color .15s}
+  .moment:hover{transform:translateX(3px);border-left-color:var(--gold-bright)}
+  .moment.declaration{border-left-color:#f5c95e}
+  .moment.death       {border-left-color:#8a7548}
+  .moment.victory     {border-left-color:#7ac290}
+  .moment.reveal      {border-left-color:#b388ff}
+  .moment.farewell    {border-left-color:#ff80a8}
+  .moment.battle      {border-left-color:#e07070}
+  .moment.alliance,.moment.promise{border-left-color:#6a9ec8}
+  .moment.powerup     {border-left-color:#ff8030}
+  .moment.humour      {border-left-color:#80c0ff}
+  .moment.political   {border-left-color:#c8a060}
+
+  .ch-badge{flex-shrink:0;width:78px;text-align:center;padding-top:4px}
+  .ch-badge .ch-num{font-family:'Consolas',monospace;font-size:1.3rem;font-weight:900;color:var(--gold-bright);letter-spacing:1px;line-height:1}
+  .ch-badge .ch-label{color:var(--muted);font-size:.62rem;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px}
+
+  .moment-body{flex:1;min-width:0}
+  .moment-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .moment-title{font-size:1.05rem;font-weight:800;color:var(--gold-bright);flex:1;min-width:200px}
+  .moment-kind{background:var(--surface2);color:var(--muted);font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:7px;font-weight:700}
+  .moment-summary{color:var(--text);font-size:.92rem;line-height:1.6}
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/moments.html">
+  <meta property="og:title" content="Iconic Moments · The Shimotsuki Codex">
+  <meta property="og:description" content="Iconic moments in One Piece — Oda">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/moments.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Iconic Moments · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Iconic moments in One Piece — Oda">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Iconic Moments</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">🪙 Iconic Moments</h2>
+  <p class="blurb">The single-panel beats and declarations that fans cite forever. Pirate King declarations, Going Merry's farewell, "One Piece is real!", the Empty Throne, the Nika reveal, Wano's rooftop — every moment that defines the series. Filtered by kind so you can browse the deaths, the battles, or just the reveals.</p>
+  <div class="gold-rule"></div>
+</div>
+  <div class="filters">
+    <span class="pill active" data-filter="all">All</span>
+    <span class="pill" data-filter="declaration">Declarations</span>
+    <span class="pill" data-filter="death">Deaths</span>
+    <span class="pill" data-filter="victory">Victories</span>
+    <span class="pill" data-filter="reveal">Reveals</span>
+    <span class="pill" data-filter="farewell">Farewells</span>
+    <span class="pill" data-filter="battle">Battles</span>
+  </div>
+  <div id="moments"></div>
+</main>
+<script id="moments-data" type="application/json">
+{
+  "_doc": "Hand-curated list of canon's most iconic moments — single-panel beats, declarations, deaths, victories that fans cite forever. Each entry: chapter, title, the line/moment, why iconic.",
+  "generated_on": "2026-04-27",
+  "moments": [
+    { "chapter": 1,    "title": "Shanks gives Luffy the Strawhat",                       "tag": "canon", "kind": "promise",      "summary": "'Bring it back to me, when you've become a great pirate.' The promise that frames the entire series." },
+    { "chapter": 1,    "title": "I'm gonna be the Pirate King!",                         "tag": "canon", "kind": "declaration",  "summary": "Luffy's first declaration — the line that defines the journey." },
+    { "chapter": 105,  "title": "Crew enters the Grand Line — Reverse Mountain",         "tag": "canon", "kind": "voyage",       "summary": "Foursome rounds Reverse Mountain, sees Laboon. The Grand Line begins." },
+    { "chapter": 217,  "title": "Vivi's farewell raised hand",                            "tag": "canon", "kind": "farewell",     "summary": "The crew lifts the X-marked arms one last time at Alabasta. Vivi is no longer crew, but always crew." },
+    { "chapter": 254,  "title": "Are you a god?",                                          "tag": "canon", "kind": "humour",       "summary": "Luffy to Enel, post-defeat. The most quoted line in the series." },
+    { "chapter": 297,  "title": "The Bell of Shandora rings",                             "tag": "canon", "kind": "victory",      "summary": "Enel defeated. The 400-year-old bell of Shandora rings out — Roger heard it once before." },
+    { "chapter": 374,  "title": "I want to live!",                                         "tag": "canon", "kind": "rescue",       "summary": "Robin's cry. The Strawhats burn the World Government flag. The Buster Call comes for Enies Lobby." },
+    { "chapter": 430,  "title": "Going Merry's farewell",                                  "tag": "canon", "kind": "death",        "summary": "The crew burns the Merry. The Klabautermann thanks them for sailing her. The most emotionally devastating moment in the series." },
+    { "chapter": 489,  "title": "Brook joins the crew",                                     "tag": "canon", "kind": "alliance",     "summary": "The musician finally joins. Bink's Sake plays one last time on the deck of Thriller Bark." },
+    { "chapter": 522,  "title": "Hancock's Mero Mero defeats the Pacifista",               "tag": "canon", "kind": "victory",      "summary": "Hancock loves Luffy and shows it." },
+    { "chapter": 574,  "title": "Ace dies in Luffy's arms",                                 "tag": "canon", "kind": "death",        "summary": "Akainu's magma fist through Ace's chest. 'Thank you for loving me.' Luffy's worst hour." },
+    { "chapter": 576,  "title": "One Piece is real!",                                       "tag": "canon", "kind": "declaration",  "summary": "Whitebeard's last words to the world. 'Someone WILL find One Piece. The world will be turned upside down.' Then he stands and dies on his feet." },
+    { "chapter": 597,  "title": "3D2Y — Luffy's message to the crew",                       "tag": "canon", "kind": "promise",      "summary": "The 2-year skip is set in motion. The crew agrees by reading the codes Luffy left in the Sabaody newspaper." },
+    { "chapter": 653,  "title": "Strawhats reach the New World",                            "tag": "canon", "kind": "voyage",       "summary": "Fishman Island concludes. The crew enters the second half of the Grand Line. The world's most dangerous era begins." },
+    { "chapter": 763,  "title": "Sabo eats the Mera Mera no Mi",                            "tag": "canon", "kind": "inheritance",  "summary": "Ace's flame-flame fruit lives on through his sworn brother. Doflamingo unsettled." },
+    { "chapter": 791,  "title": "King Punch — Doflamingo defeated",                         "tag": "canon", "kind": "victory",      "summary": "Gear Fourth + Conqueror's Haki. The largest single-chapter splash page of the post-timeskip era." },
+    { "chapter": 879,  "title": "Katakuri shows his face",                                   "tag": "canon", "kind": "respect",      "summary": "Luffy refuses to attack while Katakuri's mochi-shark mouth is exposed. Future Sight unlocked." },
+    { "chapter": 906,  "title": "Imu sits the Empty Throne",                                 "tag": "canon", "kind": "reveal",       "summary": "The hidden ruler of the World Government revealed. Bows from the Five Elders. Photographs viewed and marked for erasure." },
+    { "chapter": 967,  "title": "Roger laughs at Laugh Tale",                                "tag": "canon", "kind": "reveal",       "summary": "The Roger Pirates reach the final island and read the Rio Poneglyph. Roger laughs. He says he was 'born too early'. He decides to die." },
+    { "chapter": 1000, "title": "Strawhat & Heart & Kid Alliance vs Yonko",                  "tag": "canon", "kind": "battle",       "summary": "Three Worst Generation captains face Big Mom and Kaidou simultaneously. Onigashima rooftop. The page where Luffy declares 'I'm Going To Be Pirate King.'" },
+    { "chapter": 1010, "title": "Conqueror's Coating revealed — Luffy clashes Kaidou",        "tag": "canon", "kind": "powerup",      "summary": "Black-and-red lightning. The strongest creature meets his match." },
+    { "chapter": 1037, "title": "Kaidou defeated",                                            "tag": "canon", "kind": "victory",      "summary": "Bajrang Gun. Wano free. The strongest creature falls." },
+    { "chapter": 1043, "title": "Hito Hito no Mi, Model: Nika revealed",                     "tag": "canon", "kind": "reveal",       "summary": "The Devil Fruit was always Nika. The Gomu Gomu name was a 800-year lie. Luffy laughs and the world bends to it. Gear 5 awakens." },
+    { "chapter": 1057, "title": "Buggy becomes Yonko",                                        "tag": "canon", "kind": "political",    "summary": "Cross Guild reshapes the world's political balance. Mihawk + Crocodile + Buggy as figurehead. Reverse-bounty system on the Marines." },
+    { "chapter": 1085, "title": "Cobra dies — Imu revealed publicly",                        "tag": "canon", "kind": "death",        "summary": "Sabo's account: Cobra confronts the Five Elders, asks the meaning of D., Imu kills him. The truth begins to leak through Morgans's broadcasts." },
+    { "chapter": 1115, "title": "Vegapunk's broadcast",                                        "tag": "canon", "kind": "reveal",       "summary": "Vegapunk Stella's posthumous global address. The truth of the Void Century begins to leak. The world shakes." },
+    { "chapter": 1131, "title": "Loki revealed on Elbaph",                                     "tag": "canon", "kind": "reveal",       "summary": "Final Saga's Elbaph chapter — the imprisoned giant Loki seen for the first time. Sun God / Joy Boy connections deepen." }
+  ]
+}
+</script>
+<script src="spoiler.js?v=1"></script>
+<script>
+const RAW = JSON.parse(document.getElementById('moments-data').textContent || '{}');
+const _momCutoff = (typeof CodexSpoiler !== 'undefined') ? CodexSpoiler.effectiveCutoff('public') : Infinity;
+const items = (RAW.moments || []).filter(m => {
+  const ch = typeof m.chapter === 'number' ? m.chapter : null;
+  if (_momCutoff !== Infinity && ch == null) return false;
+  if (ch != null && ch > _momCutoff) return false;
+  return true;
+});
+function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let activeFilter='all';
+function render(){
+  const list = activeFilter==='all' ? items : items.filter(i=>i.kind===activeFilter);
+  document.getElementById('moments').innerHTML = list.map(m=>`
+    <article class="moment ${escapeHtml(m.kind||'')}">
+      <div class="ch-badge">
+        <div class="ch-num">${m.chapter}</div>
+        <div class="ch-label">CHAPTER</div>
+      </div>
+      <div class="moment-body">
+        <div class="moment-head">
+          <span class="moment-title">${escapeHtml(m.title)}</span>
+          <span class="codex-tag ${escapeHtml(m.tag||'canon')}">${escapeHtml((m.tag||'canon').toUpperCase())}</span>
+          <span class="moment-kind">${escapeHtml(m.kind||'')}</span>
+        </div>
+        <p class="moment-summary">${escapeHtml(m.summary||'')}</p>
+      </div>
+    </article>
+  `).join('');
+}
+document.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{
+  document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  activeFilter = p.dataset.filter;
+  render();
+}));
+render();
+</script>
+<footer>The Shimotsuki Codex · Iconic Moments curated from canon &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+</body>
+</html>

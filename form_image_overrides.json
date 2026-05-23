@@ -1,0 +1,173 @@
+{
+  "_doc": "Hand-curated form-image overrides. Maps character → form name → wiki image filename (no File: prefix). The scraper uses these as ground truth — they always win over heuristic matches. Add an entry whenever the heuristic scraper picks the wrong image or fails to find one. Filenames must exist on the wiki; check at https://onepiece.fandom.com/wiki/File:<filename> before adding. Special value '__NONE__' explicitly clears any auto-matched image (use when no good image exists and we want the CSS filter overlay only).",
+  "generated_on": "2026-04-27",
+  "overrides": {
+    "Monkey D. Luffy": {
+      "Gear 2":                   "Gear_2_Initial_Pose.png",
+      "Gear 3 — Bone Balloon":    "Gear_3.png",
+      "Gear 4 — Boundman":        "Boundman.png",
+      "Gear 4 — Tankman":         "Tankman_Manpuku_Version.png",
+      "Gear 4 — Snakeman":        "Snakeman.png",
+      "Gear 5 — Sun God Nika":    "Luffy_Gear_5_Cartoon.png"
+    },
+    "Tony Tony Chopper": {
+      "Walk Point":               "Walk_Point_17.png",
+      "Heavy Point":              "Heavy_Point_Post_Timeskip.png",
+      "Jumping Point":            "Jumping_Point.PNG",
+      "Arm Point":                "Arm_Point.PNG",
+      "Horn Point":               "Horn_Point.png",
+      "Kung-Fu Point":            "Chopper_Uses_Kung-Fu_Point.png",
+      "Monster Point":            "Monster_Chopper_Out_of_Control.png"
+    },
+    "Roronoa Zoro": {
+      "Asura":                    "Nine_Sword_Style.png",
+      "King of Hell":             "King_of_Hell_Rengoku_Oni_Giri.png"
+    },
+    "Sanji": {
+      "Diable Jambe":             "Diable_Jambe.png",
+      "Ifrit Jambe":              "Ifrit_Jambe_Infobox.png",
+      "Raid Suit (Stealth Black)":"Sanji_Raid_Suit_Invisibility.png",
+      "Awakened Genome":          "__NONE__"
+    },
+    "Nico Robin": {
+      "Demonio Fleur":            "__NONE__"
+    },
+    "Franky": {
+      "Black Rhino FR-U IV":      "__NONE__",
+      "General Franky":           "General_Franky_Digitally_Colored_Manga.png"
+    },
+    "Brook": {
+      "Soul King":                "__NONE__"
+    },
+    "Usopp": {
+      "Sogeking":                 "Usopp_Anime_Sogeking.png",
+      "Hero of the Sea":          "__NONE__"
+    },
+    "Nefertari Vivi": {
+      "Adventurer":               "__NONE__"
+    },
+
+    "Kaidou": {
+      "Hybrid (Beast Man)":       "Kaidou's_Alternate_Human-Beast_Form.png",
+      "Azure Dragon":             "Kaidou_Dragon_Color_Scheme.png"
+    },
+    "King": {
+      "Hybrid (Pteranodon)":      "Ryu_Ryu_no_Mi,_Model_Pteranodon_Hybrid_Form.png",
+      "Full Pteranodon":          "Ryu_Ryu_no_Mi,_Model_Pteranodon_Beast_Form.png",
+      "Lunarian Fire":            "__NONE__"
+    },
+    "Queen": {
+      "Hybrid (Brachiosaurus)":   "__NONE__",
+      "Full Brachiosaurus":       "Ryu_Ryu_no_Mi,_Model_Brachiosaurus_Beast_Form.png"
+    },
+    "Jack": {
+      "Hybrid (Mammoth)":         "Zou_Zou_no_Mi,_Model_Mammoth_Hybrid_Form.png",
+      "Full Mammoth":             "Zou_Zou_no_Mi,_Model_Mammoth_Beast_Form_Original_Anime_Color.png"
+    },
+    "Marco": {
+      "Hybrid (Phoenix)":         "__NONE__",
+      "Full Phoenix":             "Tori_Tori_no_Mi,_Model_Phoenix_Infobox.png"
+    },
+    "Donquixote Doflamingo": {
+      "Awakened (String God)":    "__NONE__"
+    },
+
+    "X Drake": {
+      "Hybrid (Allosaurus)":      "Drake_Allosaurus_Pirate_Warriors_4.png",
+      "Full Allosaurus":          "__NONE__"
+    },
+    "Page One": {
+      "Hybrid (Spinosaurus)":     "Page_One_spinosaurus-human_hybrid_form_Anime_Concept_Art.png",
+      "Full Spinosaurus":         "Ryu_Ryu_no_Mi,_Model_Spinosaurus_Beast_Form.png"
+    },
+    "Ulti": {
+      "Hybrid (Pachycephalosaurus)": "Ryu_Ryu_no_Mi,_Model_Pachycephalosaurus_Human-Beast_Form.png",
+      "Full Pachycephalosaurus":     "__NONE__"
+    },
+    "Sasaki": {
+      "Hybrid (Triceratops)":     "__NONE__",
+      "Full Triceratops":         "Ryu_Ryu_no_Mi,_Model_Triceratops_Beast_Form.png"
+    },
+    "Who's-Who": {
+      "Hybrid (Saber Tiger)":     "Neko_Neko_no_Mi,_Model_Saber_Tiger_Human-Beast_Form.png",
+      "Full Saber Tiger":         "__NONE__"
+    },
+    "Black Maria": {
+      "Hybrid (Tarantula)":       "__NONE__",
+      "Full Tarantula":           "__NONE__"
+    },
+    "Yamato": {
+      "Hybrid (Wolf)":            "__NONE__",
+      "Full Okuchi no Makami":    "Inu_Inu_no_Mi,_Model_Okuchi_no_Makami_Infobox.png"
+    },
+
+    "Jaygarcia Saturn": {
+      "Spider Ox (true form)":    "Saturn_Beast_Form.png"
+    },
+    "Marcus Mars": {
+      "Itsumade Bird (true form)":"Mars_Beast_Form.png"
+    },
+    "Topman Warcury": {
+      "Boar Demon (true form)":   "Warcury_Beast_Form.png"
+    },
+    "Ethanbaron V. Nusjuro": {
+      "Sabre-Toothed Cat (true form)":"Nusjuro_Beast_Form.png"
+    },
+    "Shepherd Ju Peter": {
+      "Snake-Plant (true form)":  "Ju_Peter_Beast_Form.png"
+    },
+    "Nerona Imu": {
+      "True form (silhouette)":   "Nerona_Imu_Portrait.png"
+    },
+
+    "Loki": {
+      "Unleashed Giant":          "__NONE__"
+    },
+    "Rob Lucci": {
+      "Hybrid (Leopard)":         "Lucci_Hybrid_Form_Burning_Will.png",
+      "Full Leopard":             "Neko_Neko_no_Mi,_Model_Leopard_Infobox.png",
+      "Awakened Leopard":         "Neko_Neko_no_Mi_Model_Leopard_Awakened_Form.png"
+    },
+    "Kaku": {
+      "Hybrid (Giraffe)":         "Kaku_Hybrid_Form.png",
+      "Full Giraffe":             "Ushi_Ushi_no_Mi,_Model_Giraffe_Infobox.png"
+    },
+    "Magellan": {
+      "Demon":                    "Venom_Demon_Jigoku_no_Shinpan.png"
+    },
+    "Caesar Clown": {
+      "Gas Logia":                "__NONE__"
+    },
+    "Sengoku": {
+      "Daibutsu (Golden Buddha)": "Sengoku_Buddha_Form_Pirate_Warriors_4.png"
+    },
+    "Catarina Devon": {
+      "Kyubi (Nine-Tailed Fox)":  "__NONE__"
+    },
+    "Jewelry Bonney": {
+      "Child":                    "Jewelry_Bonney_as_a_Child.png",
+      "Elder":                    "__NONE__"
+    },
+    "Buggy": {
+      "Bara split":               "Bara_Bara_Festival.png"
+    },
+    "Smoker": {
+      "Smoke (Logia)":            "__NONE__"
+    },
+    "Sir Crocodile": {
+      "Sand (Logia)":             "Crocodile_Sand_King_Thousand_Storm.png"
+    },
+    "Crocodile": {
+      "Sand (Logia)":             "Crocodile_Sand_King_Thousand_Storm.png"
+    },
+    "Sakazuki": {
+      "Magma (Logia)":            "__NONE__"
+    },
+    "Borsalino": {
+      "Light (Logia)":            "Borsalino_Wielding_Light_Sword.png"
+    },
+    "Kuzan": {
+      "Ice (Logia)":              "__NONE__"
+    }
+  }
+}

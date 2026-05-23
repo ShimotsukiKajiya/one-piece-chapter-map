@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curate · The Shimotsuki Codex</title>
+<meta name="description" content="Curate canon facts for the Shimotsuki Codex — submit verified claims with sources to grow the trust-tiered reference layer.">
+<link rel="stylesheet" href="cite-styles.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0c0a14; --surface: #1a1610; --surface2: #251f15;
+    --border: #4a3820; --text: #e8d8b0; --muted: #8a7548;
+    --gold: #d4a44a; --gold-bright: #f5c95e; --ink-blue: #6a9ec8;
+    --green: #5fb35f; --red: #c84b4b; --violet: #b07cd1;
+  }
+  body {
+    background: radial-gradient(circle at 25% 15%, rgba(212,164,74,0.05) 0%, transparent 50%), var(--bg);
+    color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh; padding-bottom: 80px;
+  }
+  header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 28px; border-bottom: 1px solid var(--border);
+    background: rgba(26,22,16,0.7); backdrop-filter: blur(6px);
+    position: sticky; top:0; z-index: 50;
+  }
+  .logo { text-decoration:none; color:inherit; }
+  .logo h1 {
+    font-size: 1.4rem; font-weight: 900; letter-spacing: 3px;
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-sub { font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  nav { display:flex; gap: 18px; align-items:center; flex-wrap: wrap; }
+  nav a {
+    color: var(--text); text-decoration:none; font-size: 0.85rem;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 6px 10px; border-radius: 6px;
+  }
+  nav a:hover, nav a.active { color: var(--gold-bright); background: var(--surface2); }
+
+  main { max-width: 900px; margin: 0 auto; padding: 30px 24px; }
+  h2 { color: var(--gold-bright); font-size: 1.6rem; margin-bottom: 6px; letter-spacing: 1px; }
+  .subhead { color: var(--muted); font-size: 0.92rem; margin-bottom: 22px; line-height: 1.6; }
+
+  .progress {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 20px; margin-bottom: 20px;
+  }
+  .progress-counts { color: var(--text); font-size: 0.95rem; }
+  .progress-counts strong { color: var(--gold-bright); }
+  .progress-bar {
+    flex: 1; max-width: 240px; height: 6px;
+    background: var(--surface2); border-radius: 3px; overflow: hidden;
+    margin-left: 18px;
+  }
+  .progress-bar-fill { height: 100%; background: var(--gold); transition: width .25s; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--violet);
+    border-radius: 12px; padding: 22px 26px; margin-bottom: 18px;
+  }
+  .card.empty {
+    text-align: center; color: var(--muted); padding: 60px 20px;
+    border-left-color: var(--border); font-style: italic;
+  }
+  .card-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .card-title { color: var(--gold-bright); font-weight: 700; font-size: 1.1rem; }
+  .card-rule { color: var(--muted); font-size: 0.78rem; font-family: ui-monospace, monospace; }
+
+  .row {
+    display: grid; grid-template-columns: 110px 1fr; gap: 12px 18px;
+    margin-bottom: 12px; align-items: baseline;
+  }
+  .row-label {
+    color: var(--muted); font-size: 0.75rem; letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .row-value { color: var(--text); font-size: 0.95rem; line-height: 1.5; }
+  .row-value.snippet {
+    background: var(--surface2); padding: 10px 14px; border-radius: 8px;
+    font-style: italic; color: var(--text);
+    border-left: 2px solid var(--ink-blue);
+  }
+  .row-value mark {
+    background: rgba(212,164,74,0.3); color: var(--gold-bright);
+    padding: 1px 3px; border-radius: 3px;
+  }
+
+  .actions {
+    display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;
+  }
+  .btn {
+    padding: 10px 18px; border-radius: 8px; font-size: 0.9rem;
+    font-weight: 600; cursor: pointer; border: 1px solid var(--border);
+    background: var(--surface2); color: var(--text);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .btn.promote { background: var(--green); color: #fff; border-color: var(--green); }
+  .btn.promote:hover { background: #7ac57a; border-color: #7ac57a; color: #fff; }
+  .btn.keep    { background: var(--ink-blue); color: #fff; border-color: var(--ink-blue); }
+  .btn.keep:hover { background: #8db8d6; border-color: #8db8d6; color: #fff; }
+  .btn.reject  { background: var(--red); color: #fff; border-color: var(--red); }
+  .btn.reject:hover { background: #d96868; border-color: #d96868; color: #fff; }
+  .kbd {
+    display: inline-block; min-width: 18px; height: 18px;
+    background: rgba(0,0,0,0.3); border-radius: 4px; padding: 1px 6px;
+    font-size: 0.7rem; font-family: ui-monospace, monospace;
+    color: rgba(255,255,255,0.85); line-height: 16px; text-align: center;
+  }
+
+  .hint { color: var(--muted); font-size: 0.78rem; margin-top: 14px; line-height: 1.6; }
+  .hint code {
+    background: var(--surface2); padding: 1px 6px; border-radius: 4px;
+    color: var(--gold); font-size: 0.85em;
+  }
+
+  #export-panel {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 14px 24px; display: flex; align-items: center; gap: 16px;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
+    z-index: 60;
+  }
+  #export-panel.hidden { display: none; }
+  #export-panel .summary { color: var(--text); font-size: 0.88rem; flex: 1; }
+  #export-panel .summary strong { color: var(--gold-bright); }
+</style>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/curate.html">
+  <meta property="og:title" content="Curate · The Shimotsuki Codex">
+  <meta property="og:description" content="Curate canon facts for the Shimotsuki Codex — submit verified claims with sources to grow the trust-tiered reference layer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/curate.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Curate · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Curate canon facts for the Shimotsuki Codex — submit verified claims with sources to grow the trust-tiered reference layer.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="home.html" title="Back to home">
+    <h1>The Shimotsuki Codex</h1>
+    <span class="logo-sub">Curate</span>
+  </a>
+  
+</header>
+
+<main>
+  <h2>Curate · ambiguous tier upgrades</h2>
+  <p class="subhead">
+    Each card below is a fact that the verifier matched but couldn't categorise with high
+    confidence. The match is real (digit groups + character name in same paragraph) but
+    something about the snippet is unclear — could be a translation mismatch, sarcasm, or
+    Oda dodging in nearby text. Decide whether to <strong>promote to canon</strong>, keep
+    as <strong>likely</strong>, or <strong>reject</strong> entirely.
+  </p>
+
+  <div class="progress">
+    <div class="progress-counts">
+      <strong id="position">0</strong> of <strong id="total">0</strong> reviewed
+      &nbsp;·&nbsp; <span id="counts">0 promoted · 0 kept · 0 rejected</span>
+    </div>
+    <div class="progress-bar"><div class="progress-bar-fill" id="bar" style="width:0%"></div></div>
+  </div>
+
+  <div id="card-slot"></div>
+
+  <div class="hint">
+    Keyboard: <span class="kbd">P</span> promote · <span class="kbd">K</span> keep ·
+    <span class="kbd">R</span> reject · <span class="kbd">←</span>/<span class="kbd">→</span> previous/next ·
+    <span class="kbd">E</span> export decisions JSON.
+    Decisions are stored in browser localStorage; export when done and submit via PR or attach to a GitHub Issue.
+  </div>
+</main>
+
+<div id="export-panel" class="hidden">
+  <div class="summary">
+    All reviewed. <strong id="ep-promote">0</strong> promote ·
+    <strong id="ep-keep">0</strong> keep · <strong id="ep-reject">0</strong> reject.
+  </div>
+  <button class="btn promote" id="export-btn">Export decisions JSON</button>
+  <button class="btn" id="reset-btn">Start over</button>
+</div>
+
+<!-- Curate queue: ambiguous facts written by verify.py v3 -->
+<script id="curate-data" type="application/json">[]</script>
+
+<script>
+const STORAGE_KEY = "op-curate-decisions-v1";
+const RAW = JSON.parse(document.getElementById("curate-data").textContent);
+
+function loadDecisions() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+  catch (_) { return {}; }
+}
+function saveDecisions(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
+
+let decisions = loadDecisions();
+let currentIndex = 0;
+
+function escapeHTML(s) {
+  if (s == null) return "";
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+  }[c]));
+}
+
+function highlightInSnippet(snippet, value) {
+  // Highlight the value (or its digit groups) inside the snippet
+  const escVal = String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  let out = escapeHTML(snippet);
+  try {
+    const re = new RegExp("\\b(" + escVal + ")\\b", "gi");
+    out = out.replace(re, "<mark>$1</mark>");
+  } catch (_) {}
+  return out;
+}
+
+function renderCard(idx) {
+  const slot = document.getElementById("card-slot");
+  if (!RAW.length) {
+    slot.innerHTML = `<div class="card empty">
+      <p>The curate queue is empty.</p>
+      <p>Either verify.py hasn't run yet, or every match was unambiguous.</p>
+    </div>`;
+    return;
+  }
+  if (idx >= RAW.length) {
+    slot.innerHTML = `<div class="card empty">
+      <p>All ${RAW.length} ambiguous facts reviewed.</p>
+      <p>Use the export button below to save your decisions.</p>
+    </div>`;
+    document.getElementById("export-panel").classList.remove("hidden");
+    updateExportSummary();
+    return;
+  }
+  const c = RAW[idx];
+  const decision = decisions[c.claim_id] || "—";
+  const tag = decision === "promote" ? "🟢 promoted"
+            : decision === "keep"    ? "🔵 kept"
+            : decision === "reject"  ? "🔴 rejected"
+            : "";
+
+  slot.innerHTML = `<div class="card">
+    <div class="card-head">
+      <div class="card-title">${escapeHTML(c.subject)} · ${escapeHTML(c.field)}</div>
+      <div class="card-rule">match rule: ${escapeHTML(c.rule || "?")}</div>
+    </div>
+    <div class="row">
+      <div class="row-label">Wiki value</div>
+      <div class="row-value"><strong>${escapeHTML(c.value)}</strong></div>
+    </div>
+    <div class="row">
+      <div class="row-label">SBS source</div>
+      <div class="row-value">
+        <a href="sbs.html#${String(c.qa_id || "").padStart(4,"0")}"
+           class="cite-canon" target="_blank">SBS Vol ${c.vol} #${String(c.qa_id || "?").padStart(4,"0")}</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-label">Snippet</div>
+      <div class="row-value snippet">${highlightInSnippet(c.snippet || "(no snippet)", c.value)}</div>
+    </div>
+    ${tag ? `<div class="row"><div class="row-label">Decision</div>
+      <div class="row-value"><strong>${tag}</strong></div></div>` : ""}
+    <div class="actions">
+      <button class="btn promote" data-action="promote">✅ Promote to canon  <span class="kbd">P</span></button>
+      <button class="btn keep" data-action="keep">🔵 Keep as likely  <span class="kbd">K</span></button>
+      <button class="btn reject" data-action="reject">❌ Reject (downgrade to spec)  <span class="kbd">R</span></button>
+      <button class="btn" data-action="prev">← Previous</button>
+      <button class="btn" data-action="next">Next →</button>
+    </div>
+  </div>`;
+  updateProgress();
+}
+
+function updateProgress() {
+  const total = RAW.length;
+  document.getElementById("position").textContent = Math.min(currentIndex + 1, total);
+  document.getElementById("total").textContent    = total;
+  let p = 0, k = 0, r = 0;
+  for (const v of Object.values(decisions)) {
+    if (v === "promote") p++;
+    else if (v === "keep") k++;
+    else if (v === "reject") r++;
+  }
+  document.getElementById("counts").textContent = `${p} promoted · ${k} kept · ${r} rejected`;
+  const reviewed = p + k + r;
+  document.getElementById("bar").style.width = `${total ? (reviewed/total)*100 : 0}%`;
+}
+
+function updateExportSummary() {
+  let p = 0, k = 0, r = 0;
+  for (const v of Object.values(decisions)) {
+    if (v === "promote") p++; else if (v === "keep") k++; else if (v === "reject") r++;
+  }
+  document.getElementById("ep-promote").textContent = p;
+  document.getElementById("ep-keep").textContent    = k;
+  document.getElementById("ep-reject").textContent  = r;
+}
+
+function recordDecision(action) {
+  if (currentIndex >= RAW.length) return;
+  const c = RAW[currentIndex];
+  if (["promote","keep","reject"].includes(action)) {
+    decisions[c.claim_id] = action;
+    saveDecisions(decisions);
+    currentIndex = Math.min(currentIndex + 1, RAW.length);
+  } else if (action === "prev") {
+    currentIndex = Math.max(currentIndex - 1, 0);
+  } else if (action === "next") {
+    currentIndex = Math.min(currentIndex + 1, RAW.length);
+  }
+  renderCard(currentIndex);
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-action]");
+  if (b) recordDecision(b.dataset.action);
+});
+
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  const k = e.key.toLowerCase();
+  if (k === "p") recordDecision("promote");
+  else if (k === "k") recordDecision("keep");
+  else if (k === "r") recordDecision("reject");
+  else if (k === "arrowleft")  recordDecision("prev");
+  else if (k === "arrowright") recordDecision("next");
+  else if (k === "e") exportDecisions();
+});
+
+function exportDecisions() {
+  const today = new Date().toISOString().slice(0, 10);
+  // Build a lookup from claim_id → queue item (for evidence_id construction)
+  const byClaimId = {};
+  for (const item of RAW) byClaimId[item.claim_id] = item;
+
+  const ACTION_MAP = { promote: "approve", keep: "defer", reject: "reject" };
+
+  const rows = [];
+  for (const [claim_id, action] of Object.entries(decisions)) {
+    const item = byClaimId[claim_id] || {};
+    const vol  = String(item.vol  || 0).padStart(3, "0");
+    const qa   = String(item.qa_id || 0).padStart(4, "0");
+    rows.push({
+      claim_id,
+      evidence_id:  `sbs:vol${vol}-q${qa}`,
+      decision:     ACTION_MAP[action] || action,
+      decided_by:   "manual",
+      decided_on:   today,
+    });
+  }
+  const blob = new Blob([JSON.stringify(rows, null, 2)], { type: "application/json" });
+  const url  = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = `curate_decisions_${today}.json`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+document.getElementById("export-btn").addEventListener("click", exportDecisions);
+document.getElementById("reset-btn").addEventListener("click", () => {
+  if (confirm("Clear all decisions and start over?")) {
+    decisions = {}; saveDecisions(decisions); currentIndex = 0;
+    document.getElementById("export-panel").classList.add("hidden");
+    renderCard(0);
+  }
+});
+
+renderCard(0);
+</script>
+
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<footer style="padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted,#8a7548);letter-spacing:1px;border-top:1px solid var(--border,#4a3820);max-width:1100px;margin:60px auto 0">The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+</body>
+</html>

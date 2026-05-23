@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generic strawhat-chibi placeholder. Original Codex art (CC BY-NC 4.0). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" role="img" aria-label="Hidden by Spoiler Guard">
+  <g fill="#1a1610">
+    <!-- Strawhat: brim + crown as one continuous outline -->
+    <path d="M 8 28 Q 6 32 12 33 L 30 32 Q 30 13 50 9 Q 70 13 70 32 L 88 33 Q 94 32 92 28 Q 50 22 8 28 Z"/>
+    <!-- Hat band shadow -->
+    <ellipse cx="50" cy="29" rx="20" ry="2.5" fill="#0a0808"/>
+    <!-- Head with right-side nose protrusion (Oda-style profile) -->
+    <path d="M 32 38 Q 28 46 30 56 Q 34 65 44 67 L 56 67 Q 60 67 62 64 L 65 62 Q 71 62 71 57 Q 71 53 65 52 L 63 50 Q 65 47 64 44 Q 62 39 56 37 Q 44 35 32 38 Z"/>
+    <!-- Neck -->
+    <path d="M 44 67 L 44 73 L 56 73 L 56 67 Z"/>
+    <!-- Chibi body / shoulders -->
+    <path d="M 28 76 Q 20 80 22 90 L 26 108 Q 28 117 38 119 L 50 120 L 62 119 Q 72 117 74 108 L 78 90 Q 80 80 72 76 Z"/>
+  </g>
+  <!-- Subtle "?" in body -->
+  <text x="50" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#4a3820" opacity="0.65">?</text>
+</svg>

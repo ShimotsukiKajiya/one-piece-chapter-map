@@ -1,0 +1,167 @@
+[
+  {
+    "from": "arc:romance-dawn",
+    "to": "loc:00153",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:orange-town",
+    "to": "loc:00179",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:syrup-village",
+    "to": "loc:00192",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:baratie",
+    "to": "loc:00142",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:arlong-park",
+    "to": "loc:00140",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:loguetown",
+    "to": "loc:00167",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:reverse-mountain",
+    "to": "loc:00251",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:whiskey-peak",
+    "to": "loc:00271",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:little-garden",
+    "to": "loc:00274",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:drum-island",
+    "to": "loc:00275",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:alabasta",
+    "to": "loc:00276",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:jaya",
+    "to": "loc:00277",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:skypiea",
+    "to": "loc:00190",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:long-ring-long-land",
+    "to": "loc:00278",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:water-7",
+    "to": "loc:00279",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:enies-lobby",
+    "to": "loc:00280",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:post-enies-lobby",
+    "to": "loc:00273",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:thriller-bark",
+    "to": "loc:00281",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:sabaody-archipelago",
+    "to": "loc:00282",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:amazon-lily",
+    "to": "loc:00283",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:impel-down",
+    "to": "loc:00231",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:marineford",
+    "to": "loc:00169",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:post-war",
+    "to": "loc:00169",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:return-to-sabaody",
+    "to": "loc:00284",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:fishman-island",
+    "to": "loc:00285",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:punk-hazard",
+    "to": "loc:00286",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:dressrosa",
+    "to": "loc:00287",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:zou",
+    "to": "loc:00173",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:whole-cake-island",
+    "to": "loc:00197",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:reverie",
+    "to": "loc:00244",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:wano-country",
+    "to": "loc:00200",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:egghead",
+    "to": "loc:00288",
+    "src": "inferred"
+  },
+  {
+    "from": "arc:elbaph",
+    "to": "loc:00152",
+    "src": "inferred"
+  }
+]

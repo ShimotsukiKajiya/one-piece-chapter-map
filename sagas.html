@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sagas · The Shimotsuki Codex</title>
+<meta name="description" content="All One Piece sagas grouped by era — East Blue through to the current Final Saga — with chapter ranges and arc lists.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  main{max-width:1100px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:30px;max-width:780px}
+
+  .saga{background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);border:1px solid var(--border);border-left:5px solid var(--gold);border-radius:14px;padding:22px 26px;margin-bottom:18px;transition:transform .15s,border-color .15s}
+  .saga:hover{transform:translateX(3px);border-color:var(--gold-bright)}
+  .saga-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+  .saga-num{font-family:'Consolas',monospace;color:var(--muted);font-size:.7rem;letter-spacing:1.5px;background:var(--surface2);padding:3px 9px;border-radius:5px}
+  .saga-icon{font-size:1.4rem}
+  .saga-name{font-size:1.4rem;font-weight:800;color:var(--gold-bright);letter-spacing:1px;flex:1}
+  .saga-range{color:var(--muted);font-size:.78rem;letter-spacing:1.5px;font-family:'Consolas',monospace;background:rgba(212,164,74,.08);border:1px solid rgba(212,164,74,.3);padding:3px 10px;border-radius:9px}
+  .saga-summary{color:var(--text);font-size:.92rem;line-height:1.65;margin:10px 0 14px}
+  .saga-arcs{display:flex;flex-wrap:wrap;gap:6px}
+  .arc-chip{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:5px 11px;border-radius:14px;font-size:.78rem;text-decoration:none;transition:all .12s}
+  .arc-chip:hover{border-color:var(--gold);color:var(--gold-bright)}
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/sagas.html">
+  <meta property="og:title" content="Sagas · The Shimotsuki Codex">
+  <meta property="og:description" content="All One Piece sagas grouped by era — East Blue through to the current Final Saga — with chapter ranges and arc lists.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/sagas.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Sagas · The Shimotsuki Codex">
+  <meta name="twitter:description" content="All One Piece sagas grouped by era — East Blue through to the current Final Saga — with chapter ranges and arc lists.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Sagas</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">📖 The 10 Sagas</h2>
+  <p class="blurb">The 33 arcs of One Piece grouped into the 10 canonical sagas. Each saga is a major chapter of the journey — from the East Blue rookies to the Final Saga endgame. Click any arc chip to jump to that arc's range in the Atlas.</p>
+  <div class="gold-rule"></div>
+</div>
+  <div id="sagas"></div>
+</main>
+<script id="sagas-data" type="application/json">
+{
+  "_doc": "The 10 canonical sagas grouping the 33 arcs of One Piece. Each saga has a chapter range, the arcs it contains, and a brief description.",
+  "generated_on": "2026-04-27",
+  "sagas": [
+    {
+      "name": "East Blue",
+      "ch_start": 1, "ch_end": 100,
+      "arcs": ["Romance Dawn", "Orange Town", "Syrup Village", "Baratie", "Arlong Park", "Loguetown"],
+      "summary": "Luffy assembles his crew (Zoro, Nami, Usopp, Sanji) and they conquer the East Blue's most notorious pirates. Ends with the Strawhats setting sail for the Grand Line.",
+      "icon": "🌊"
+    },
+    {
+      "name": "Alabasta",
+      "ch_start": 101, "ch_end": 217,
+      "arcs": ["Reverse Mountain", "Whisky Peak", "Little Garden", "Drum Island", "Alabasta"],
+      "summary": "Crew enters the Grand Line, gains Chopper and Vivi as a temporary member, defeats Sir Crocodile and Baroque Works, saves Alabasta from civil war.",
+      "icon": "🏜"
+    },
+    {
+      "name": "Sky Island",
+      "ch_start": 218, "ch_end": 302,
+      "arcs": ["Jaya", "Skypiea"],
+      "summary": "Strawhats sail to the sky on the Knock-Up Stream, discover Skypiea, defeat Enel and ring the Golden Bell of Shandora.",
+      "icon": "☁"
+    },
+    {
+      "name": "Water 7",
+      "ch_start": 303, "ch_end": 441,
+      "arcs": ["Long Ring Long Land", "Water 7", "Enies Lobby", "Post-Enies Lobby"],
+      "summary": "Foxy Pirates · CP9 attacks Water 7 · the Strawhats burn the World Government flag at Enies Lobby for Robin · Going Merry's farewell · Robin officially joins · Franky joins · the Thousand Sunny is born.",
+      "icon": "🌊"
+    },
+    {
+      "name": "Thriller Bark",
+      "ch_start": 442, "ch_end": 489,
+      "arcs": ["Thriller Bark"],
+      "summary": "Spooky Warlord arc — Gecko Moria, the Mysterious Four, the Ghost Ship. Brook joins the crew.",
+      "icon": "👻"
+    },
+    {
+      "name": "Summit War",
+      "ch_start": 490, "ch_end": 597,
+      "arcs": ["Sabaody Archipelago", "Amazon Lily", "Impel Down", "Marineford", "Post-War"],
+      "summary": "Kuma scatters the Strawhats. Luffy crashes Impel Down, then Marineford to save Ace. Ace dies. Whitebeard dies declaring 'One Piece is real.' The 2-year timeskip begins. The crew trains.",
+      "icon": "⚔"
+    },
+    {
+      "name": "Fish-Man Island",
+      "ch_start": 598, "ch_end": 653,
+      "arcs": ["Return to Sabaody", "Fish-Man Island"],
+      "summary": "Reunion after the timeskip. Crew descends to the bottom of the sea, defeats Hody Jones, meets Shirahoshi (a Poseidon weapon), enters the New World.",
+      "icon": "🐠"
+    },
+    {
+      "name": "Dressrosa",
+      "ch_start": 654, "ch_end": 801,
+      "arcs": ["Punk Hazard", "Dressrosa"],
+      "summary": "Punk Hazard alliance with Law and Smoker against Caesar Clown and Vergo. Dressrosa: defeat Doflamingo, free the country, the Strawhat Grand Fleet is formed.",
+      "icon": "🌹"
+    },
+    {
+      "name": "Yonko",
+      "ch_start": 802, "ch_end": 1057,
+      "arcs": ["Zou", "Whole Cake Island", "Levely", "Wano Country"],
+      "summary": "Mink alliance · Strawhats split — Sanji rescue from Big Mom · Reverie reveals Imu · Wano: Kaidou and Big Mom defeated · Luffy awakens Gear 5 · Buggy joins the Yonko · the Worst Generation reshape the world.",
+      "icon": "👑"
+    },
+    {
+      "name": "Final Saga",
+      "ch_start": 1058, "ch_end": 9999,
+      "arcs": ["Egghead", "Elbaph", "Endgame (TBA)"],
+      "summary": "Cross Guild forms · Vegapunk's broadcast reveals Void Century truths · Five Elders attack Egghead · Strawhats race for Laugh Tale and the truth of the world. Currently ongoing.",
+      "icon": "🎯"
+    }
+  ]
+}
+</script>
+<script src="spoiler.js?v=1"></script>
+<script>
+const RAW = JSON.parse(document.getElementById('sagas-data').textContent || '{}');
+// Spoiler Shield: filter sagas whose start chapter > effective cutoff.
+const _sagaCutoff = (typeof CodexSpoiler !== 'undefined') ? CodexSpoiler.effectiveCutoff('public') : Infinity;
+const sagas = (RAW.sagas || []).filter(s => {
+  const start = typeof s.ch_start === 'number' ? s.ch_start : null;
+  if (_sagaCutoff !== Infinity && start == null) return false;
+  if (start != null && start > _sagaCutoff) return false;
+  return true;
+});
+function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const root = document.getElementById('sagas');
+root.innerHTML = sagas.map((s,i)=>`
+  <article class="saga">
+    <div class="saga-head">
+      <span class="saga-num">SAGA ${String(i+1).padStart(2,'0')}</span>
+      <span class="saga-icon">${s.icon||''}</span>
+      <span class="saga-name">${escapeHtml(s.name)}</span>
+      <span class="saga-range">Ch. ${s.ch_start}${s.ch_end>=9999?'+':' – '+s.ch_end}</span>
+    </div>
+    <p class="saga-summary">${escapeHtml(s.summary)}</p>
+    <div class="saga-arcs">
+      ${(s.arcs||[]).map(a=>`<a class="arc-chip" href="arcs.html#${encodeURIComponent(a.toLowerCase().replace(/\s+/g,'-'))}">${escapeHtml(a)}</a>`).join('')}
+    </div>
+  </article>
+`).join('');
+</script>
+<footer>10 sagas · 33 arcs · 1,181+ chapters · The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+</body>
+</html>

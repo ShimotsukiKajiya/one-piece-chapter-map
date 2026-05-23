@@ -1,0 +1,17 @@
+{
+  "_doc": "Hand-curated raw materials and substances of canon. Distinct from items (consumables) and tech (engineered). Includes seastone, magical/legendary woods, special metals.",
+  "generated_on": "2026-04-27",
+  "materials": [
+    { "name": "Sea Prism Stone (Kairoseki)", "kind": "ore",     "debut": "Ch. 153", "notes": "Solidified seawater. Nullifies Devil Fruit powers on contact. Forged into Marine cuffs, weapon edges, Impel Down floors, and ship-plating." },
+    { "name": "Adam Wood (Treasure Tree Adam)", "kind": "wood", "debut": "Ch. 384", "notes": "Sacred wood from a near-extinct giant tree. Hull material of the Oro Jackson and the Thousand Sunny. Effectively indestructible." },
+    { "name": "Black Iron",                  "kind": "metal",   "debut": "Ch. 919", "notes": "Wano-mined dense iron used in samurai armour and ship-rigging. Heavier and harder than common steel." },
+    { "name": "Wapametal",                   "kind": "metal",   "debut": "Ch. 145", "notes": "Munch-Munch metal — a metal Wapol can chew, swallow, and re-form into improved versions. Drum Island origin." },
+    { "name": "Pyrobloin",                   "kind": "biology", "debut": "Ch. 1035", "notes": "Compound in Lunarian blood that fuels their inborn back-flame. Source of King's eternal fire." },
+    { "name": "Dyna Stones",                 "kind": "explosive", "debut": "Ch. 250", "notes": "Skypiean volcanic rock that explodes on impact. Used as ammo by the Shandian warriors." },
+    { "name": "Iron-Cloud / Sea-Cloud",      "kind": "skypiea", "debut": "Ch. 240", "notes": "Two cloud densities of Skypiea. Iron-cloud is solid (walkable); sea-cloud holds ships afloat in the sky." },
+    { "name": "Yarukiman Mangrove sap",      "kind": "biology", "debut": "Ch. 497", "notes": "Source of Sabaody Bubble Coral. Produces the bubbles that coat ships for underwater travel." },
+    { "name": "Amber Lead",                  "kind": "ore",     "debut": "Ch. 762", "notes": "Once-prized white-gold ore of Flevance — its mining caused a fatal disease that killed Law's family and the kingdom." },
+    { "name": "Granite of Mary Geoise",      "kind": "stone",   "debut": "Ch. 906", "notes": "Mariejois is built atop Pangaea Castle's granite — preserved from the Void Century. The Empty Throne sits on it." },
+    { "name": "Kabuto-bone",                 "kind": "biology", "debut": "Ch. 802", "notes": "Mink Tribe horn material — exceptionally hard, used in Mink jewellery and ceremonial weapons." }
+  ]
+}

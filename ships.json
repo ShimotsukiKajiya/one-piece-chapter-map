@@ -1,0 +1,730 @@
+{
+  "Alexandra": {
+    "id": "ship:00001",
+    "name": "Alexandra",
+    "slug": "alexandra",
+    "aliases": [
+      "アレクサンドラ号",
+      "Arekusandora-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "アレクサンドラ号",
+    "name_romaji": "Arekusandora-gō",
+    "name_en": "N/A",
+    "affiliation": "Marines",
+    "first_appearance": "Movie 4"
+  },
+  "Baratie": {
+    "id": "ship:00002",
+    "name": "Baratie",
+    "slug": "baratie",
+    "aliases": [
+      "バラティエ"
+    ],
+    "type": "ship",
+    "found": true,
+    "infobox_image": "\nBaratie Infobox.png",
+    "name_jp": "バラティエ",
+    "name_romaji": "Baratie",
+    "name_en": "Baratie",
+    "first_appearance": "Chapter 43; Episode 20",
+    "debut_chapter": 43
+  },
+  "Bezan Black": {
+    "id": "ship:00003",
+    "name": "Bezan Black",
+    "slug": "bezan-black",
+    "aliases": [
+      "ベザン・ブラック号",
+      "Bezan Burakku-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ベザン・ブラック号",
+    "name_romaji": "Bezan Burakku-gō",
+    "name_en": "Bezan Black",
+    "affiliation": "Black Cat Pirates",
+    "first_appearance": "Chapter 26; Episode 10",
+    "debut_chapter": 26
+  },
+  "Big Top": {
+    "id": "ship:00004",
+    "name": "Big Top",
+    "slug": "big-top",
+    "aliases": [
+      "ビッグトップ号",
+      "Biggu Toppu-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ビッグトップ号",
+    "name_romaji": "Biggu Toppu-gō",
+    "name_en": "Big Top",
+    "affiliation": "Buggy Pirates",
+    "first_appearance": "Chapter 8; Episode 4",
+    "debut_chapter": 8
+  },
+  "Bliking": {
+    "id": "ship:00005",
+    "name": "Bliking",
+    "slug": "bliking",
+    "aliases": [
+      "ブリキング号",
+      "Burikingu-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ブリキング号",
+    "name_romaji": "Burikingu-gō",
+    "name_en": "Bliking (VIZ),Tin Tyrant (Funimation)",
+    "affiliation": "Bliking Pirates",
+    "first_appearance": "Chapter 131; Episode 79",
+    "status": "1",
+    "debut_chapter": 131
+  },
+  "Bounty Maru": {
+    "id": "ship:00006",
+    "name": "Bounty Maru",
+    "slug": "bounty-maru",
+    "aliases": [
+      "バウンティ丸",
+      "Baunti Maru"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "バウンティ丸",
+    "name_romaji": "Baunti Maru",
+    "name_en": "Bounty Maru",
+    "affiliation": "Yosaku and Johnny",
+    "first_appearance": "Chapter 624 (cover)",
+    "debut_chapter": 624
+  },
+  "Chiryaku Ten'nen Maru": {
+    "id": "ship:00007",
+    "name": "Chiryaku Ten'nen Maru",
+    "slug": "chiryaku-ten-nen-maru",
+    "aliases": [
+      "智略天然丸",
+      "''Chiryaku Ten'nen Maru''"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "智略天然丸",
+    "name_romaji": "''Chiryaku Ten'nen Maru''",
+    "name_en": "N/A",
+    "affiliation": "Baroque Works",
+    "first_appearance": "Chapter 158; Episode 93",
+    "debut_chapter": 158
+  },
+  "Cutie Wagon": {
+    "id": "ship:00008",
+    "name": "Cutie Wagon",
+    "slug": "cutie-wagon",
+    "aliases": [
+      "キューティワゴン号",
+      "Kyūti Wagon-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "キューティワゴン号",
+    "name_romaji": "Kyūti Wagon-gō",
+    "name_en": "Cutie Wagon",
+    "affiliation": "Foxy Pirates",
+    "first_appearance": "Chapter 306; Episode 209",
+    "debut_chapter": 306
+  },
+  "Dial Boat": {
+    "id": "ship:00009",
+    "name": "Dial Boat",
+    "slug": "dial-boat",
+    "aliases": [
+      "船",
+      "Daiaru Sen"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "船",
+    "name_romaji": "Daiaru Sen",
+    "name_en": "Dial Ship",
+    "affiliation": "Skypiea",
+    "first_appearance": "Chapter 244; Episode 158",
+    "debut_chapter": 244
+  },
+  "Fleet": {
+    "id": "ship:00010",
+    "name": "Fleet",
+    "slug": "fleet",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Flying Dutchman": {
+    "id": "ship:00011",
+    "name": "Flying Dutchman",
+    "slug": "flying-dutchman",
+    "aliases": [
+      "フライング・ダッチマン号",
+      "Furaingu Datchiman-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "フライング・ダッチマン号",
+    "name_romaji": "Furaingu Datchiman-gō",
+    "name_en": "Flying Dutchman",
+    "affiliation": "Vander Decken and descendants; Flying Pirates (current)",
+    "first_appearance": "Chapter 606; Episode 525",
+    "debut_chapter": 606
+  },
+  "Flying Gas Balloon": {
+    "id": "ship:00012",
+    "name": "Flying Gas Balloon",
+    "slug": "flying-gas-balloon",
+    "aliases": [
+      "空飛ぶガス風船",
+      "Soratobu Gasu Fūsen"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "空飛ぶガス風船",
+    "name_romaji": "Soratobu Gasu Fūsen",
+    "name_en": "Flying Gas Balloon",
+    "affiliation": "Caesar Clown",
+    "first_appearance": "Chapter 674; Episode 600",
+    "debut_chapter": 674
+  },
+  "Hitsugibune": {
+    "id": "ship:00013",
+    "name": "Hitsugibune",
+    "slug": "hitsugibune",
+    "aliases": [
+      "棺船"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "棺船",
+    "name_romaji": "Hitsugibune",
+    "name_en": "Coffin Boat",
+    "affiliation": "Dracule Mihawk",
+    "first_appearance": "Chapter 49; Episode 23",
+    "debut_chapter": 49
+  },
+  "Karasumaru": {
+    "id": "ship:00014",
+    "name": "Karasumaru",
+    "slug": "karasumaru",
+    "aliases": [
+      "カラス丸"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "カラス丸",
+    "name_romaji": "Karasumaru",
+    "name_en": "Karasumaru (Viz);The Crow (Funimation)",
+    "affiliation": "Straw Hat Pirates; Conis",
+    "first_appearance": "Chapter 244; Episode 158",
+    "status": "1",
+    "debut_chapter": 244
+  },
+  "Little Gerais": {
+    "id": "ship:00015",
+    "name": "Little Gerais",
+    "slug": "little-gerais",
+    "aliases": [
+      "リトルジェライス号",
+      "Ritoru Jeraisu-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "リトルジェライス号",
+    "name_romaji": "Ritoru Jeraisu-gō",
+    "name_en": "N/A",
+    "affiliation": "Little Pirates",
+    "first_appearance": "Chapter 551; Episode 460",
+    "debut_chapter": 551
+  },
+  "MADS Research Ship": {
+    "id": "ship:00016",
+    "name": "MADS Research Ship",
+    "slug": "mads-research-ship",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Marine Ships": {
+    "id": "ship:00017",
+    "name": "Marine Ships",
+    "slug": "marine-ships",
+    "aliases": [
+      "海軍船",
+      "Kaigun-sen"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "海軍船",
+    "name_romaji": "Kaigun-sen",
+    "name_en": "Marine ships",
+    "affiliation": "Marines",
+    "first_appearance": "Chapter 43; Episode 1",
+    "debut_chapter": 43
+  },
+  "Maxim": {
+    "id": "ship:00018",
+    "name": "Maxim",
+    "slug": "maxim",
+    "aliases": [
+      "マクシム",
+      "Makushimu"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "マクシム",
+    "name_romaji": "Makushimu",
+    "name_en": "Maxim",
+    "affiliation": "Enel",
+    "first_appearance": "Chapter 277; Episode 181",
+    "debut_chapter": 277
+  },
+  "Miss Love Duck": {
+    "id": "ship:00019",
+    "name": "Miss Love Duck",
+    "slug": "miss-love-duck",
+    "aliases": [
+      "・ラブ・ダック号",
+      "Misu Rabu Dakku-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "・ラブ・ダック号",
+    "name_romaji": "Misu Rabu Dakku-gō",
+    "name_en": "Miss Love Duck",
+    "affiliation": "Alvida Pirates",
+    "first_appearance": "Chapter 2; Episode 1",
+    "status": "1",
+    "debut_chapter": 2
+  },
+  "Nasugasira": {
+    "id": "ship:00020",
+    "name": "Nasugasira",
+    "slug": "nasugasira",
+    "aliases": [
+      "ナスガシラ号",
+      "Nasugashira-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ナスガシラ号",
+    "name_romaji": "Nasugashira-gō",
+    "name_en": "Nasugashira",
+    "affiliation": "Baratie",
+    "first_appearance": "Chapter 627 (cover)",
+    "debut_chapter": 627
+  },
+  "New Witch's Tongue": {
+    "id": "ship:00021",
+    "name": "New Witch's Tongue",
+    "slug": "new-witch-s-tongue",
+    "aliases": [
+      "ニュー・ウィッチ・ベロ号",
+      "Nyū Wicchi Bero-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ニュー・ウィッチ・ベロ号",
+    "name_romaji": "Nyū Wicchi Bero-gō",
+    "name_en": "N/A",
+    "affiliation": "Bellamy Pirates",
+    "first_appearance": "Chapter 229; Episode 149",
+    "status": "unknown",
+    "debut_chapter": 229
+  },
+  "Noah": {
+    "id": "ship:00022",
+    "name": "Noah",
+    "slug": "noah",
+    "aliases": [
+      "ノア",
+      "Noa"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ノア",
+    "name_romaji": "Noa",
+    "name_en": "Noah",
+    "affiliation": "Fish-Man Island",
+    "first_appearance": "Chapter 608; Episode 527",
+    "debut_chapter": 608
+  },
+  "Numabou": {
+    "id": "ship:00023",
+    "name": "Numabou",
+    "slug": "numabou",
+    "aliases": [
+      "ヌマブー号",
+      "Numabū-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ヌマブー号",
+    "name_romaji": "Numabū-gō",
+    "name_en": "N/A",
+    "affiliation": "Caribou Pirates",
+    "first_appearance": "Chapter 604; Episode 524",
+    "status": "1",
+    "debut_chapter": 604
+  },
+  "Ox Lloyd's": {
+    "id": "ship:00024",
+    "name": "Ox Lloyd's",
+    "slug": "ox-lloyd-s",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Perfume Yuda": {
+    "id": "ship:00025",
+    "name": "Perfume Yuda",
+    "slug": "perfume-yuda",
+    "aliases": [
+      "パフューム号",
+      "Pafyūmu Yuda-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "パフューム号",
+    "name_romaji": "Pafyūmu Yuda-gō",
+    "name_en": "N/A",
+    "affiliation": "Kuja Pirates",
+    "first_appearance": "Chapter 516; Episode 410",
+    "debut_chapter": 516
+  },
+  "Pine Peak": {
+    "id": "ship:00026",
+    "name": "Pine Peak",
+    "slug": "pine-peak",
+    "aliases": [
+      "パインピーク号",
+      "Pain Pīku-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "パインピーク号",
+    "name_romaji": "Pain Pīku-gō",
+    "name_en": "Pinepeak",
+    "affiliation": "Marines",
+    "first_appearance": "Episode 205"
+  },
+  "Pluton": {
+    "id": "ship:00027",
+    "name": "Pluton",
+    "slug": "pluton",
+    "aliases": [
+      "プルトン",
+      "Puruton"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "プルトン",
+    "name_romaji": "Puruton",
+    "name_en": "Pluton",
+    "first_appearance": "Chapter 192; Episode 117 (mentioned)",
+    "status": "1",
+    "debut_chapter": 192
+  },
+  "Pop Rock Candy": {
+    "id": "ship:00028",
+    "name": "Pop Rock Candy",
+    "slug": "pop-rock-candy",
+    "aliases": [
+      "ポップロックキャンディ号",
+      "Poppu Rokku Kyandi-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ポップロックキャンディ号",
+    "name_romaji": "Poppu Rokku Kyandi-gō",
+    "name_en": "N/A",
+    "affiliation": "Baroque Works",
+    "first_appearance": "Big Trouble in Little Garden"
+  },
+  "Rocky Port": {
+    "id": "ship:00029",
+    "name": "Rocky Port",
+    "slug": "rocky-port",
+    "aliases": [
+      "ロッキーポート号",
+      "Rokkī Pōto-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ロッキーポート号",
+    "name_romaji": "Rokkī Pōto-gō",
+    "name_en": "Rocky Port",
+    "affiliation": "Blackbeard Pirates",
+    "first_appearance": "Chapter 1080; Episode 1113 (mentioned)",
+    "debut_chapter": 1080
+  },
+  "Ryugu": {
+    "id": "ship:00030",
+    "name": "Ryugu",
+    "slug": "ryugu",
+    "aliases": [
+      "リュウグウ号",
+      "Ryūgū-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "infobox_image": "250px",
+    "name_jp": "リュウグウ号",
+    "name_romaji": "Ryūgū-gō",
+    "name_en": "Ryugu",
+    "affiliation": "Ryugu Kingdom",
+    "first_appearance": "Chapter 609; Episode 528",
+    "debut_chapter": 609
+  },
+  "Sabagashira I": {
+    "id": "ship:00031",
+    "name": "Sabagashira I",
+    "slug": "sabagashira-i",
+    "aliases": [
+      "サバガシラ1号",
+      "Sabagashira Ichi-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "サバガシラ1号",
+    "name_romaji": "Sabagashira Ichi-gō",
+    "name_en": "Mackerel Head I;Mackerel Head (Odex)",
+    "affiliation": "Baratie",
+    "first_appearance": "Chapter 43; Episode 20 (idle)Chapter 53; Episode 25 (active)",
+    "debut_chapter": 43
+  },
+  "Saint Germain": {
+    "id": "ship:00032",
+    "name": "Saint Germain",
+    "slug": "saint-germain",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Stan Maley": {
+    "id": "ship:00033",
+    "name": "Stan Maley",
+    "slug": "stan-maley",
+    "aliases": [
+      "スタンマレー号",
+      "Sutan Marē-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "スタンマレー号",
+    "name_romaji": "Sutan Marē-gō",
+    "name_en": "Stan Marey",
+    "affiliation": "Marines",
+    "first_appearance": "Episode 197"
+  },
+  "Striker": {
+    "id": "ship:00034",
+    "name": "Striker",
+    "slug": "striker",
+    "aliases": [
+      "ストライカー",
+      "Sutoraikā"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ストライカー",
+    "name_romaji": "Sutoraikā",
+    "name_en": "Striker",
+    "affiliation": "Portgas D. Ace and Masked DeuceWhitebeard Pirates",
+    "first_appearance": "Chapter 159; Episode 95",
+    "debut_chapter": 159
+  },
+  "Svarr": {
+    "id": "ship:00035",
+    "name": "Svarr",
+    "slug": "svarr",
+    "aliases": [
+      "Suvaru"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_romaji": "Suvaru",
+    "name_en": "Svarr",
+    "affiliation": "Elbaph",
+    "first_appearance": "Chapter 1133",
+    "debut_chapter": 1133
+  },
+  "Takoyaki 8": {
+    "id": "ship:00036",
+    "name": "Takoyaki 8",
+    "slug": "takoyaki-8",
+    "aliases": [
+      "タコヤキ",
+      "Takoyaki Eito"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "タコヤキ",
+    "name_romaji": "Takoyaki Eito",
+    "name_en": "Takoyaki 8",
+    "affiliation": "Hatchan",
+    "first_appearance": "Chapter 227 (cover); Episode 390",
+    "debut_chapter": 227
+  },
+  "Thriller Bark": {
+    "id": "ship:00037",
+    "name": "Thriller Bark",
+    "slug": "thriller-bark",
+    "aliases": [
+      "スリラーバーク",
+      "Surirā Bāku"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "スリラーバーク",
+    "name_romaji": "Surirā Bāku",
+    "name_en": "Thriller Bark",
+    "affiliation": "Thriller Bark Pirates",
+    "first_appearance": "Chapter 443; Episode 338",
+    "debut_chapter": 443
+  },
+  "Utan Sonar": {
+    "id": "ship:00038",
+    "name": "Utan Sonar",
+    "slug": "utan-sonar",
+    "aliases": [
+      "ウータン・ソナー号",
+      "Ūtan Sonā-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ウータン・ソナー号",
+    "name_romaji": "Ūtan Sonā-gō",
+    "name_en": "N/A",
+    "affiliation": "Saruyama Alliance (Shoujou Pirates)",
+    "first_appearance": "Chapter 226; Episode 147",
+    "debut_chapter": 226
+  },
+  "Victory Hunter": {
+    "id": "ship:00039",
+    "name": "Victory Hunter",
+    "slug": "victory-hunter",
+    "aliases": [
+      "ビクトリー・ハンター号",
+      "Bikutorī Hantā-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ビクトリー・ハンター号",
+    "name_romaji": "Bikutorī Hantā-gō",
+    "name_en": "N/A",
+    "affiliation": "Saruyama Alliance (Masira Pirates)",
+    "first_appearance": "Chapter 219; Episode 144",
+    "debut_chapter": 219
+  },
+  "Waver": {
+    "id": "ship:00040",
+    "name": "Waver",
+    "slug": "waver",
+    "aliases": [
+      "ウェイバー",
+      "Weibā"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ウェイバー",
+    "name_romaji": "Weibā",
+    "name_en": "Waver",
+    "affiliation": "Skypiea",
+    "first_appearance": "Chapter 220; Episode 144",
+    "debut_chapter": 220
+  },
+  "Going Merry": {
+    "id": "ship:00041",
+    "name": "Going Merry",
+    "slug": "going-merry",
+    "aliases": [
+      "ゴーイング・メリー号",
+      "Goingu Merri-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ゴーイング・メリー号",
+    "name_romaji": "Goingu Merri-go",
+    "name_en": "Going Merry",
+    "affiliation": "Straw Hat Pirates",
+    "first_appearance": "Chapter 41; Episode 17",
+    "debut_chapter": 41,
+    "status": "Destroyed (Sea Burial, Chapter 430)"
+  },
+  "Thousand Sunny": {
+    "id": "ship:00042",
+    "name": "Thousand Sunny",
+    "slug": "thousand-sunny",
+    "aliases": [
+      "千陽号",
+      "Sauzando Sani-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "千陽号",
+    "name_romaji": "Sauzando Sani-go",
+    "name_en": "Thousand Sunny",
+    "affiliation": "Straw Hat Pirates",
+    "first_appearance": "Chapter 436; Episode 321",
+    "debut_chapter": 436
+  },
+  "Moby Dick": {
+    "id": "ship:00043",
+    "name": "Moby Dick",
+    "slug": "moby-dick",
+    "aliases": [
+      "白ひげの船",
+      "Mobi Dikku"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "白ひげの船",
+    "name_romaji": "Mobi Dikku",
+    "name_en": "Moby Dick",
+    "affiliation": "Whitebeard Pirates",
+    "first_appearance": "Chapter 550; Episode 459",
+    "debut_chapter": 550,
+    "status": "Destroyed (Marineford War)"
+  },
+  "Red Force": {
+    "id": "ship:00044",
+    "name": "Red Force",
+    "slug": "red-force",
+    "aliases": [
+      "レッド・フォース号",
+      "Reddo Fosu-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "レッド・フォース号",
+    "name_romaji": "Reddo Fosu-go",
+    "name_en": "Red Force",
+    "affiliation": "Red Hair Pirates",
+    "first_appearance": "Chapter 1; Episode 4",
+    "debut_chapter": 1
+  },
+  "Polar Tang": {
+    "id": "ship:00045",
+    "name": "Polar Tang",
+    "slug": "polar-tang",
+    "aliases": [
+      "ポーラータン号",
+      "Pora Tan-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ポーラータン号",
+    "name_romaji": "Pora Tan-go",
+    "name_en": "Polar Tang",
+    "affiliation": "Heart Pirates",
+    "first_appearance": "Chapter 655; Episode 579",
+    "debut_chapter": 655
+  }
+}

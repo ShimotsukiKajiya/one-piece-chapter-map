@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music & Songs · The Shimotsuki Codex</title>
+<meta name="description" content="One Piece music and songs — Bink's Sake, Soldier Song, Brook's compositions, and other in-canon music with debut chapters.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="stylesheet" href="tags.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  main{max-width:1100px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:22px;max-width:780px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .pill{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:7px 14px;border-radius:20px;cursor:pointer;font-size:.78rem;letter-spacing:1px;transition:all .15s}
+  .pill.active,.pill:hover{color:var(--gold);border-color:var(--gold)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+  .track{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:11px;padding:16px 20px;transition:transform .15s,border-color .15s}
+  .track:hover{transform:translateX(3px);border-left-color:var(--gold-bright)}
+  .track.in-universe   {border-left-color:#f5c95e}
+  .track.anime-opening {border-left-color:#80c0ff}
+  .track.anime-ending  {border-left-color:#80c0ff;opacity:.92}
+  .track.ost           {border-left-color:#b388ff}
+  .track.movie-track   {border-left-color:#c878e8}
+  .track-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .track-title{font-size:1.05rem;font-weight:800;color:var(--gold-bright);flex:1;min-width:160px}
+  .track-kind{background:var(--surface2);color:var(--muted);font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:7px;font-weight:700}
+  .track-debut{color:var(--muted);font-size:.72rem;font-family:'Consolas',monospace}
+  .track-summary{color:var(--text);font-size:.88rem;line-height:1.55;margin:6px 0 10px}
+  .performers{display:flex;flex-wrap:wrap;gap:5px}
+  .performer{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:3px 9px;border-radius:12px;font-size:.74rem}
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/music.html">
+  <meta property="og:title" content="Music & Songs · The Shimotsuki Codex">
+  <meta property="og:description" content="One Piece music and songs — Bink">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/music.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Music & Songs · The Shimotsuki Codex">
+  <meta name="twitter:description" content="One Piece music and songs — Bink">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Music & Songs</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">🎵 Music & Songs</h2>
+  <p class="blurb">The iconic music of One Piece — Bink's Sake, the openings (We Are! · Hikari e · Hands Up! · Wano-Kuni), the unforgettable OST cues (Overtaken, Mother Sea, Drum of Liberation), and the standout movie soundtracks. Every track tagged by source so you can tell what's in-universe canon vs anime-only vs movie-only.</p>
+  <div class="gold-rule"></div>
+</div>
+  <div class="filters">
+    <span class="pill active" data-filter="all">All</span>
+    <span class="pill" data-filter="in-universe">In-Universe</span>
+    <span class="pill" data-filter="anime-opening">Openings</span>
+    <span class="pill" data-filter="ost">OST</span>
+    <span class="pill" data-filter="movie-track">Movies</span>
+  </div>
+  <div id="grid" class="grid"></div>
+</main>
+<script id="music-data" type="application/json">
+{
+  "_doc": "Hand-curated music & songs catalog. Iconic tracks from One Piece — in-universe songs (Bink's Sake), anime openings, OST cues, character-specific themes. Each entry: title, kind, debut chapter or episode, performers, summary.",
+  "generated_on": "2026-04-27",
+  "tracks": [
+    {
+      "title": "Bink's Sake",
+      "kind": "in-universe",
+      "tag": "canon",
+      "debut": "Ch. 487",
+      "performers": ["Brook","Roger Pirates","most pirates"],
+      "summary": "The most iconic in-universe song. A pirate sea shanty about a journey to deliver Bink's sake. Brook's signature performance, played at every emotional pirate moment — Whole Cake departure, Sunny christening, Thriller Bark farewell."
+    },
+    {
+      "title": "We Are!",
+      "kind": "anime-opening",
+      "tag": "anime",
+      "debut": "Episode 1",
+      "performers": ["Hiroshi Kitadani","TVXQ (cover)"],
+      "summary": "The first and most iconic anime opening. Played as the Strawhats set sail at the start of the series. Returned for major milestone episodes."
+    },
+    {
+      "title": "Hikari e",
+      "kind": "anime-opening",
+      "tag": "anime",
+      "debut": "Episode 48",
+      "performers": ["The Babystars"],
+      "summary": "Second opening — the Alabasta-era theme. The Strawhats running across the desert is iconic OP imagery from this era."
+    },
+    {
+      "title": "Hands Up!",
+      "kind": "anime-opening",
+      "tag": "anime",
+      "debut": "Episode 590",
+      "performers": ["Kota Shinzato"],
+      "summary": "Dressrosa-era opening. Crowd-favourite chorus — fans throw their hands up at conventions."
+    },
+    {
+      "title": "Wano-Kuni",
+      "kind": "anime-opening",
+      "tag": "anime",
+      "debut": "Episode 957",
+      "performers": ["Hiroshi Kitadani"],
+      "summary": "Wano arc opening — bombastic samurai imagery, Kaidou storm, the rooftop fight teaser."
+    },
+    {
+      "title": "Memories",
+      "kind": "anime-ending",
+      "tag": "anime",
+      "debut": "Episode 1",
+      "performers": ["Maki Otsuki"],
+      "summary": "First ending theme — gentle, nostalgic. Played as Luffy walks away from Foosha at the start of the journey."
+    },
+    {
+      "title": "Overtaken (Difficulty x Pride)",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 312",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "The most iconic OST cue. Plays at impossible-victory moments — Luffy vs Lucci, Whitebeard's last stand, Marineford. Goosebumps guaranteed."
+    },
+    {
+      "title": "Mother Sea",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 32",
+      "performers": ["Kohei Tanaka (composer)","Etsuko Yakushimaru (vocals)"],
+      "summary": "The Going Merry's farewell. Played as the crew burns the Merry — the most heart-shattering scene in the series."
+    },
+    {
+      "title": "Brook's Soul Solid Songs",
+      "kind": "in-universe",
+      "tag": "canon",
+      "debut": "Ch. 489",
+      "performers": ["Brook"],
+      "summary": "Brook's various Soul-King-era anthems — 'New World' (his own song), 'Dead End Adventure' covers."
+    },
+    {
+      "title": "Dawn",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 1",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "The opening fanfare — heard before every major announcement, voyage start, treasure reveal."
+    },
+    {
+      "title": "Romance Dawn (theme)",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 1",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "Luffy's hat / Romance Dawn motif — most associated with the Strawhat hat, Shanks's final words, and emotional callbacks."
+    },
+    {
+      "title": "Pirate King's Fanfare",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 4",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "Plays whenever someone declares 'I'm going to be Pirate King!' Triumphant brass."
+    },
+    {
+      "title": "Difficulty x Pride",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 405",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "Sub-cue used in Marineford and beyond — desperation-into-resolve. Often paired with Overtaken."
+    },
+    {
+      "title": "Mugiwara no Luffy Tarou (Strawhat Luffy-tarou)",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 939",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "Wano-flavoured shamisen + brass version of the Luffy theme. Plays during his Wano sumo-style moments."
+    },
+    {
+      "title": "Drum of Liberation",
+      "kind": "ost",
+      "tag": "anime",
+      "debut": "Episode 1071",
+      "performers": ["Kohei Tanaka (composer)"],
+      "summary": "Gear 5 / Sun God Nika theme. Cartoon-style drums and laughter motif. Plays during Luffy's Nika awakening."
+    },
+    {
+      "title": "Binks no Sake (movie version)",
+      "kind": "movie-track",
+      "tag": "movie",
+      "debut": "Film: Stampede (2019)",
+      "performers": ["Strawhat crew (in-universe)"],
+      "summary": "Stampede movie's emotional callback rendition. Used in the climactic Crew-vs-Bullet sequence."
+    },
+    {
+      "title": "Film: Red — anything by Ado",
+      "kind": "movie-track",
+      "tag": "movie",
+      "debut": "Film: Red (2022)",
+      "performers": ["Ado","Uta (in-universe)"],
+      "summary": "Uta's set-list — 'New Genesis', 'Tot Musica', 'Backlight', 'I'm Invincible'. Ado vocals, Uta in-canon. The Red soundtrack went #1 in Japan."
+    },
+    {
+      "title": "Brand New World",
+      "kind": "anime-opening",
+      "tag": "anime",
+      "debut": "Episode 279",
+      "performers": ["D-51"],
+      "summary": "Post-Enies Lobby opening — Strawhat crew expanded after Robin's rescue, Sunny launched, beginning of the Thriller Bark era."
+    }
+  ]
+}
+</script>
+<script>
+const RAW = JSON.parse(document.getElementById('music-data').textContent || '{}');
+const items = RAW.tracks || [];
+function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let activeFilter = 'all';
+function render(){
+  const list = activeFilter==='all' ? items : items.filter(i => i.kind===activeFilter);
+  document.getElementById('grid').innerHTML = list.map(i=>`
+    <article class="track ${escapeHtml(i.kind)}">
+      <div class="track-head">
+        <span class="track-title">${escapeHtml(i.title)}</span>
+        <span class="codex-tag ${escapeHtml(i.tag||'canon')}">${escapeHtml((i.tag||'canon').toUpperCase())}</span>
+        <span class="track-kind">${escapeHtml(i.kind||'')}</span>
+      </div>
+      ${i.debut?`<div class="track-debut">debut: ${escapeHtml(i.debut)}</div>`:''}
+      <p class="track-summary">${escapeHtml(i.summary||'')}</p>
+      ${(i.performers||[]).length?`<div class="performers">${i.performers.map(p=>`<span class="performer">${escapeHtml(p)}</span>`).join('')}</div>`:''}
+    </article>
+  `).join('');
+}
+document.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{
+  document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  activeFilter = p.dataset.filter;
+  render();
+}));
+render();
+</script>
+<footer>The Shimotsuki Codex · Music & Songs curated from canon &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="spoiler.js?v=1"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script>
+  // Soft gate: read effective cutoff so any future per-page filter logic can
+  // hook in. Currently a no-op that sets data-spoiler-cutoff on the root
+  // element. (L12 Batch 4 — wired the library; deeper gating TBD per-page.)
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

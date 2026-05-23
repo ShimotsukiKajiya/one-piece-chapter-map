@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 Shimotsuki Kajiya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON SCOPE
+
+This MIT licence covers the *site code* — the HTML, CSS, and JavaScript that
+build The Shimotsuki Codex. It does not cover:
+
+- One Piece itself, its characters, story, artwork, or any other element
+  authored by Eiichiro Oda — those remain copyright © Eiichiro Oda / Shueisha.
+- The original curated and editorial content (theory analyses, tier
+  classifications, hand-written notes, structural compilations, design
+  documents) is licensed separately under CC BY-NC 4.0 — see LICENSE-DATA.md.
+- Images sourced from the One Piece Fandom wiki remain the property of their
+  respective rights holders. Fandom community contributions are licensed
+  CC BY-SA 3.0 where applicable.
+
+This is a non-commercial fan project. If you are a representative of
+Shueisha / Toei and wish content removed, please open an issue at
+https://github.com/ShimotsukiKajiya/one-piece-chapter-map/issues
+or contact via that GitHub account.

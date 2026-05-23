@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/set-in.json",
+  "title": "set-in relationship",
+  "description": "arc → location. Tier-1 migration (~33 rows). Almost trivial 1:1 mapping from arcs.json.",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from":     {"$ref": "../_common.json#/$defs/arc_id"},
+    "to":       {"$ref": "../_common.json#/$defs/location_id"},
+    "src":      {"$ref": "../_common.json#/$defs/src"},
+    "tier":     {"$ref": "../_common.json#/$defs/tier"},
+    "evidence": {
+      "type": "array",
+      "items": {"$ref": "../_common.json#/$defs/evidence_ref"}
+    }
+  },
+  "additionalProperties": false
+}

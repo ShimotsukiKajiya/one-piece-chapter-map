@@ -1,0 +1,7 @@
+{
+  "_doc": "Hand-curated base-portrait overrides. Maps character name → wiki image filename. Applied at bake time, after _upgrade_portrait_url() and before payload baking. Use this when the auto-scraped Anime_Post_Timeskip_Infobox isn't the best/clearest representation — e.g. arc-specific outfits, refreshed Egghead-era art, etc.",
+  "generated_on": "2026-04-27",
+  "overrides": {
+    "Roronoa Zoro": "Zoro_Egghead_Outfit.png"
+  }
+}

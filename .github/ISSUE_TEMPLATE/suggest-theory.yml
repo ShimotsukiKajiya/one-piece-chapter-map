@@ -1,0 +1,60 @@
+name: 💭 Suggest a theory to track
+description: Add a fan theory you'd like the tracker to evaluate against canon
+title: "[Theory] "
+labels: ["theory", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Theories submitted here will be reviewed and (if accepted)
+        added to the analyzer for canon verification.
+
+        💡 **Built your theory in the Workbench?** Your evidence chain is already
+        in the description field below — just review and submit.
+
+  - type: input
+    id: title
+    attributes:
+      label: Theory title
+      description: A short, clear statement of the theory
+      placeholder: e.g. "Imu is the original Pirate King"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: The theory
+      description: Explain the theory in 1-3 paragraphs. Include reasoning and any evidence.
+      placeholder: |
+        State the theory clearly. Then explain:
+        - What canon evidence supports it
+        - What's circumstantial
+        - What would confirm or debunk it
+    validations:
+      required: true
+
+  - type: input
+    id: chapters
+    attributes:
+      label: Relevant chapters (optional)
+      description: Comma-separated chapter numbers or ranges
+      placeholder: "1085, 1115, 1180–1181"
+
+  - type: input
+    id: source
+    attributes:
+      label: Source URL (optional)
+      description: Link to the original Reddit post / video / article if applicable
+      placeholder: "https://reddit.com/r/OnePiece/comments/..."
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How confident are you?
+      options:
+        - Just a fun idea
+        - Some textual evidence
+        - Strong evidence — could be canon
+    validations:
+      required: true

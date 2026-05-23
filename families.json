@@ -1,0 +1,318 @@
+{
+  "_doc": "Hand-curated canonical family relationships. Wiki Char Box doesn't carry a `family` field, so this is sourced manually from manga + SBS confirmations. Each edge: from -> to via relation. Add new edges via PR; cite the chapter or SBS that confirms it in the `source` field.",
+  "generated_on": "2026-04-26",
+  "edges": [
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Monkey D. Dragon",
+      "relation": "father",
+      "source": "Chapter 432"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Monkey D. Garp",
+      "relation": "grandfather",
+      "source": "Chapter 431"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Portgas D. Ace",
+      "relation": "sworn brother",
+      "source": "Chapter 525"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Sabo",
+      "relation": "sworn brother",
+      "source": "Chapter 583"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Curly Dadan",
+      "relation": "guardian (childhood)",
+      "source": "Chapter 583"
+    },
+    {
+      "from": "Monkey D. Dragon",
+      "to": "Monkey D. Garp",
+      "relation": "father",
+      "source": "Chapter 432"
+    },
+    {
+      "from": "Portgas D. Ace",
+      "to": "Gol D. Roger",
+      "relation": "father",
+      "source": "Chapter 551"
+    },
+    {
+      "from": "Portgas D. Ace",
+      "to": "Portgas D. Rouge",
+      "relation": "mother",
+      "source": "Chapter 551"
+    },
+    {
+      "from": "Portgas D. Ace",
+      "to": "Edward Newgate",
+      "relation": "adoptive father",
+      "source": "Chapter 552"
+    },
+    {
+      "from": "Sabo",
+      "to": "Outlook III",
+      "relation": "father",
+      "source": "Chapter 583"
+    },
+    {
+      "from": "Sabo",
+      "to": "Stelly",
+      "relation": "adoptive brother",
+      "source": "Chapter 587"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Judge",
+      "relation": "father",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Sora",
+      "relation": "mother",
+      "source": "Chapter 840"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Reiju",
+      "relation": "sister",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Ichiji",
+      "relation": "brother",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Niji",
+      "relation": "brother",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Yonji",
+      "relation": "brother",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Zeff",
+      "relation": "guardian",
+      "source": "Chapter 57"
+    },
+    {
+      "from": "Nami",
+      "to": "Nojiko",
+      "relation": "adoptive sister",
+      "source": "Chapter 78"
+    },
+    {
+      "from": "Nami",
+      "to": "Bell-mère",
+      "relation": "adoptive mother",
+      "source": "Chapter 78"
+    },
+    {
+      "from": "Roronoa Zoro",
+      "to": "Shimotsuki Ushimaru",
+      "relation": "ancestor",
+      "source": "Chapter 952"
+    },
+    {
+      "from": "Roronoa Zoro",
+      "to": "Kuina",
+      "relation": "rival (childhood)",
+      "source": "Chapter 5"
+    },
+    {
+      "from": "Nico Robin",
+      "to": "Nico Olvia",
+      "relation": "mother",
+      "source": "Chapter 391"
+    },
+    {
+      "from": "Tony Tony Chopper",
+      "to": "Hiriluk",
+      "relation": "guardian",
+      "source": "Chapter 142"
+    },
+    {
+      "from": "Tony Tony Chopper",
+      "to": "Kureha",
+      "relation": "mentor",
+      "source": "Chapter 153"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Lola",
+      "relation": "daughter",
+      "source": "Chapter 651"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Pudding",
+      "relation": "daughter",
+      "source": "Chapter 825"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Katakuri",
+      "relation": "son",
+      "source": "Chapter 834"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Cracker",
+      "relation": "son",
+      "source": "Chapter 836"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Smoothie",
+      "relation": "daughter",
+      "source": "Chapter 834"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Perospero",
+      "relation": "son",
+      "source": "Chapter 834"
+    },
+    {
+      "from": "Donquixote Doflamingo",
+      "to": "Donquixote Rosinante",
+      "relation": "brother",
+      "source": "Chapter 762"
+    },
+    {
+      "from": "Donquixote Doflamingo",
+      "to": "Donquixote Homing",
+      "relation": "father",
+      "source": "Chapter 762"
+    },
+    {
+      "from": "Trafalgar D. Water Law",
+      "to": "Lami",
+      "relation": "sister",
+      "source": "Chapter 762"
+    },
+    {
+      "from": "Trafalgar D. Water Law",
+      "to": "Donquixote Rosinante",
+      "relation": "adoptive father",
+      "source": "Chapter 763"
+    },
+    {
+      "from": "Boa Hancock",
+      "to": "Boa Sandersonia",
+      "relation": "sister",
+      "source": "Chapter 514"
+    },
+    {
+      "from": "Boa Hancock",
+      "to": "Boa Marigold",
+      "relation": "sister",
+      "source": "Chapter 514"
+    },
+    {
+      "from": "Edward Newgate",
+      "to": "Edward Weevil",
+      "relation": "alleged son",
+      "source": "Chapter 802"
+    },
+    {
+      "from": "Kaidou",
+      "to": "Yamato",
+      "relation": "child",
+      "source": "Chapter 984"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Sukiyaki",
+      "relation": "father",
+      "source": "Chapter 962"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Toki",
+      "relation": "wife",
+      "source": "Chapter 965"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Momonosuke",
+      "relation": "son",
+      "source": "Chapter 966"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Hiyori",
+      "relation": "daughter",
+      "source": "Chapter 966"
+    },
+    {
+      "from": "Shanks",
+      "to": "Uta",
+      "relation": "adoptive daughter",
+      "source": "Film: Red"
+    },
+    {
+      "from": "Gol D. Roger",
+      "to": "Portgas D. Rouge",
+      "relation": "lover",
+      "source": "Chapter 551"
+    },
+    {
+      "from": "Imu",
+      "to": "Five Elders",
+      "relation": "sovereign of",
+      "source": "Chapter 906"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Lilith",
+      "relation": "satellite",
+      "source": "Chapter 1062"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Edison",
+      "relation": "satellite",
+      "source": "Chapter 1067"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Pythagoras",
+      "relation": "satellite",
+      "source": "Chapter 1067"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Atlas",
+      "relation": "satellite",
+      "source": "Chapter 1064"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Shaka",
+      "relation": "satellite",
+      "source": "Chapter 1067"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk York",
+      "relation": "satellite",
+      "source": "Chapter 1062"
+    }
+  ]
+}

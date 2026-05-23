@@ -1,0 +1,115 @@
+# Scraper checkpoints / progress files — local only, regenerable
+scraper_progress.json
+sbs_progress.json
+
+# Wikitext caches — regenerable, large (~50MB+)
+cache/
+
+# Obsidian vault export — regenerable from to_obsidian.py
+obsidian_vault/
+
+# Obsidian personal state (workspace layout, graph filters, etc.)
+.obsidian/
+# Any Obsidian vault folder users may put inside the repo
+Shimotsuki Codex/
+
+# One-off snapshots — local safety nets, not for the published site
+*.backup.json
+*.backup
+*.preclean.json
+*.precredits.json
+
+# Local analysis / scratch output files
+extract_analysis.txt
+
+# Kaggle source files — belong to the dataset author, don't redistribute
+Characters.csv
+Chapters.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Claude local settings
+.claude/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Claude Code local-only state (preview launch config, lockfiles, local settings)
+.claude/
+
+# Build/render output
+out/
+
+# Claude internal briefings & session anchors (never public)
+CLAUDE.md
+.claude-context.md
+.claude-context-template.md
+
+# Maintainer-internal operational notes (OPSEC, outreach, launch artifacts)
+docs/launch-handles.md
+docs/liam-followup.md
+docs/mod-mail.md
+docs/reddit-post.md
+
+# Internal audits & hygiene reports (regenerable from scripts)
+docs/audit_report.md
+docs/conflicts_report.md
+docs/conflict_log.md
+docs/conflict_log.json
+docs/conflicts.json
+docs/ultra_audit_report.md
+docs/verification_report.md
+docs/design-audit-2026-05-02.md
+
+# Internal planning, punchlists, roadmaps, future plans
+docs/v1-punchlist.md
+docs/journey-outline.md
+docs/silhouette-plan.md
+docs/codex-engine-plan.md
+docs/convergence-plan.md
+docs/bootstrap-plan.md
+docs/canon-engine-roadmap.md
+docs/page-status.md
+docs/features-inventory.md
+docs/systems-assessment.md
+docs/broad-expand-survey.md
+docs/analytics-thinking.md
+docs/canon-bible.md
+docs/threat-model.md
+
+# Internal architecture docs (private until polished for public)
+docs/id-system.md
+docs/relationship-types.md
+
+# Spoiler-engine internal docs (also leak vectors — the watchlist literally lists big reveals)
+docs/spoiler-shield-remediation.md
+docs/spoiler-watchlist.md
+docs/spoiler-surface-map.md
+docs/spoiler-diagnosis-2026-05-03.md
+docs/spoilerguard-design.md
+docs/reveal_overrides.json
+
+# Workflow state (regenerable, internal)
+docs/curate_decisions.json
+docs/curate_queue.json
+docs/promotions_pending.md
+docs/promotions_pending.json
+bootstrap_unresolved.json
+
+# Cross-link audit reports (internal hygiene)
+docs/canon_link_report.md
+docs/canon_link_report_appears-in.md
+docs/canon_link_report_ate-fruit.md
+docs/canon_link_report_family.md
+docs/canon_link_report_owns.md
+docs/canon_link_conflicts_appears-in.json
+docs/canon_link_conflicts_ate-fruit.json
+docs/canon_link_conflicts_debuts-in.json
+docs/canon_link_conflicts_family.json
+docs/canon_link_conflicts_owns.json
+
+# Archived internal docs
+docs/archive/

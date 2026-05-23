@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/voices.json",
+  "title": "voices relationship",
+  "description": "voice actor → character. Migrated from punk_records.json voice_actor_jp / voice_actor_en.",
+  "type": "object",
+  "required": ["from", "to", "src", "lang"],
+  "properties": {
+    "from":  {"$ref": "../_common.json#/$defs/voice_actor_id"},
+    "to":    {"$ref": "../_common.json#/$defs/character_id"},
+    "src":   {"$ref": "../_common.json#/$defs/src"},
+    "lang":  {"type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$"},
+    "since": {"$ref": "../_common.json#/$defs/episode_id"},
+    "until": {"$ref": "../_common.json#/$defs/episode_id"},
+    "name":  {"type": "string", "description": "VA display name baked in for render convenience"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,689 @@
+{
+  "_doc": "Jolly Rogers per crew, scraped from wiki.",
+  "rogers": {
+    "A O Pirates": {
+      "filename": "A O Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/01/A_O_Pirates%27_Jolly_Roger.png/revision/latest?cb=20251117061451"
+    },
+    "Alvida Pirates": {
+      "filename": "Alvida Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f4/Alvida_Pirates%27_Jolly_Roger.png/revision/latest?cb=20250117025348"
+    },
+    "Antonio's Graman": {
+      "filename": "Antonio's Graman Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/de/Antonio%27s_Graman_Infobox.png/revision/latest?cb=20130517230740"
+    },
+    "Arabasta Kingdom": {
+      "filename": "Arabasta Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/29/Arabasta_Kingdom_Infobox.png/revision/latest?cb=20240103024400"
+    },
+    "Arlong Pirates": {
+      "filename": "Arlong Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/37/Arlong_Pirates%27_Jolly_Roger.png/revision/latest?cb=20230517144614"
+    },
+    "Baroque Works": {
+      "filename": "Baroque Works Hierarchy.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/49/Baroque_Works_Hierarchy.png/revision/latest?cb=20230907154711"
+    },
+    "Barto Club": {
+      "filename": "Barto Club Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/59/Barto_Club_Jolly_Roger.png/revision/latest?cb=20140622054814"
+    },
+    "Beasts Pirates": {
+      "filename": "Beasts Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f6/Beasts_Pirates%27_Jolly_Roger.png/revision/latest?cb=20230328221201"
+    },
+    "Beautiful Pirates": {
+      "filename": "Beautiful Pirates Digitally Colored Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/6a/Beautiful_Pirates_Digitally_Colored_Jolly_Roger.png/revision/latest?cb=20190808104220"
+    },
+    "Bellamy Pirates": {
+      "filename": "Bellamy's Crossed Out Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/2b/Bellamy%27s_Crossed_Out_Jolly_Roger.png/revision/latest?cb=20240312010742"
+    },
+    "Big Helmet Pirates": {
+      "filename": "Big Helmet Pirates.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/40/Big_Helmet_Pirates.png/revision/latest?cb=20180903024550"
+    },
+    "Big Mom Pirates": {
+      "filename": "Big Mom Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d8/Big_Mom_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190705081936"
+    },
+    "Black Cat Pirates": {
+      "filename": "Black Cat Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/49/Black_Cat_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190128152241"
+    },
+    "Blackbeard Pirates": {
+      "filename": "Blackbeard Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/b4/Blackbeard_Pirates%27_Jolly_Roger.png/revision/latest?cb=20181123105002"
+    },
+    "Bliking Pirates": {
+      "filename": "Bliking Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/68/Bliking_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130406213529"
+    },
+    "Bonney Pirates": {
+      "filename": "Bonney Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/5e/Bonney_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190130220438"
+    },
+    "Bourgeois Kingdom": {
+      "filename": "Bourgeois Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/54/Bourgeois_Kingdom_Infobox.png/revision/latest?cb=20190519085706"
+    },
+    "Brownbeard Pirates": {
+      "filename": "Brownbeard Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c3/Brownbeard_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130719120717"
+    },
+    "Buggy Pirates": {
+      "filename": "Buggy Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/11/Buggy_Pirates%27_Jolly_Roger.png/revision/latest?cb=20260125180023"
+    },
+    "Buggy's Delivery": {
+      "filename": "Buggy's Delivery Celebrates.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/77/Buggy%27s_Delivery_Celebrates.png/revision/latest?cb=20231114173102"
+    },
+    "Cacao Island": {
+      "filename": "Cacao Island Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/42/Cacao_Island_Infobox.png/revision/latest?cb=20180826092425"
+    },
+    "Caesar Clown": {
+      "filename": "Caesar Clown's Dressrosa Disguise.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/9b/Caesar_Clown%27s_Dressrosa_Disguise.png/revision/latest?cb=20231014134429"
+    },
+    "Caribou Pirates": {
+      "filename": "Caribou Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a8/Caribou_Pirates%27_Jolly_Roger.png/revision/latest?cb=20210531165642"
+    },
+    "Charlotte Family": {
+      "filename": "Charlotte Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a4/Charlotte_Family_Infobox.png/revision/latest?cb=20180227003641"
+    },
+    "Chinjao Family": {
+      "filename": "Chinjao Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f4/Chinjao_Family_Infobox.png/revision/latest?cb=20140331024148"
+    },
+    "Cocoyasi Village": {
+      "filename": "Cocoyasi Village Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d2/Cocoyasi_Village_Infobox.png/revision/latest?cb=20130902205453"
+    },
+    "Cook Pirates": {
+      "filename": "Cook Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/72/Cook_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130206011755"
+    },
+    "Corrida Colosseum": {
+      "filename": "Corrida Colosseum Gladiator List.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/66/Corrida_Colosseum_Gladiator_List.png/revision/latest?cb=20190611225147"
+    },
+    "Cross Guild": {
+      "filename": "Cross Guild Early Poster.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d1/Cross_Guild_Early_Poster.png/revision/latest?cb=20250308210735"
+    },
+    "Dadan Family": {
+      "filename": "Dadan Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/7f/Dadan_Family_Infobox.png/revision/latest?cb=20150606180727"
+    },
+    "Davy Family": {
+      "filename": "Davy Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/6e/Davy_Family_Infobox.png/revision/latest?cb=20250914150800"
+    },
+    "Divine Squad": {
+      "filename": "Divine Squad Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/76/Divine_Squad_Infobox.png/revision/latest?cb=20230807000512"
+    },
+    "Doerena Kingdom": {
+      "filename": "Doerena Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f8/Doerena_Kingdom_Infobox.png/revision/latest?cb=20250427192610"
+    },
+    "Donquixote Doflamingo": {
+      "filename": "Donquixote Doflamingo Anime Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/7e/Donquixote_Doflamingo_Anime_Infobox.png/revision/latest?cb=20231017082245"
+    },
+    "Donquixote Pirates": {
+      "filename": "Donquixote Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f5/Donquixote_Pirates%27_Jolly_Roger.png/revision/latest?cb=20200416005341"
+    },
+    "Dracule Mihawk": {
+      "filename": "Dracule Mihawk Anime Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/bf/Dracule_Mihawk_Anime_Infobox.png/revision/latest?cb=20151222105910"
+    },
+    "Drake Pirates": {
+      "filename": "Drake Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4a/Drake_Pirates%27_Jolly_Roger.png/revision/latest?cb=20140606201937"
+    },
+    "Dressrosa": {
+      "filename": "Dressrosa Aerial View.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/3e/Dressrosa_Aerial_View.png/revision/latest?cb=20150528230914"
+    },
+    "Easter Egg": {
+      "filename": "Caterpillar Easter Egg Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/52/Caterpillar_Easter_Egg_Portrait.png/revision/latest?cb=20130603012435"
+    },
+    "Endurance Curry Pirates": {
+      "filename": "Endurance Curry Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d5/Endurance_Curry_Pirates%27_Jolly_Roger.png/revision/latest?cb=20240804172339"
+    },
+    "Enel": {
+      "filename": "SBS102 Enel Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/9d/SBS102_Enel_Jolly_Roger.png/revision/latest?cb=20240823004606"
+    },
+    "Evil Black Drum Kingdom": {
+      "filename": "Black Drum Kingdom.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/98/Black_Drum_Kingdom.png/revision/latest?cb=20170612005056"
+    },
+    "Fake Straw Hat Crew": {
+      "filename": "Fake Straw Hat Crew's Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/32/Fake_Straw_Hat_Crew%27s_Jolly_Roger.png/revision/latest?cb=20241103020604"
+    },
+    "Fallen Monk Pirates": {
+      "filename": "Fallen Monk Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/5e/Fallen_Monk_Pirates%27_Jolly_Roger.png/revision/latest?cb=20241004023836"
+    },
+    "Fanged Toad Pirates": {
+      "filename": "Fanged Toad Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/5a/Fanged_Toad_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130210084600"
+    },
+    "Fire Tank Pirates": {
+      "filename": "Fire Tank Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/54/Fire_Tank_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190128151431"
+    },
+    "First Twenty": {
+      "filename": "First Twenty Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/01/First_Twenty_Infobox.png/revision/latest?cb=20231028021203"
+    },
+    "Fish-Man District": {
+      "filename": "Fish-Man District Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/15/Fish-Man_District_Infobox.png/revision/latest?cb=20240223225248"
+    },
+    "Fish-Man Island": {
+      "filename": "Fish-Man Island's Location.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/8/84/Fish-Man_Island%27s_Location.png/revision/latest?cb=20130224190631"
+    },
+    "Five Elders": {
+      "filename": "Current Five elders.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/57/Current_Five_elders.png/revision/latest?cb=20251228161429"
+    },
+    "Flying Pirates": {
+      "filename": "Flying Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/8/8c/Flying_Pirates%27_Jolly_Roger.png/revision/latest?cb=20241201022701"
+    },
+    "Foosha Village": {
+      "filename": "Foosha Village Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/cf/Foosha_Village_Infobox.png/revision/latest?cb=20130211003509"
+    },
+    "Four Emperors": {
+      "filename": "Four Emperors Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/23/Four_Emperors_Infobox.png/revision/latest?cb=20240915110859"
+    },
+    "Foxy Pirates": {
+      "filename": "Foxy Pirates' Current Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/49/Foxy_Pirates%27_Current_Jolly_Roger.png/revision/latest?cb=20151221171634"
+    },
+    "Franky Family": {
+      "filename": "Franky Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/b6/Franky_Family_Infobox.png/revision/latest?cb=20221108053922"
+    },
+    "Freedom Fighters": {
+      "filename": "Freedom Fighters Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/50/Freedom_Fighters_Infobox.png/revision/latest?cb=20250601163439"
+    },
+    "Galley-La Company": {
+      "filename": "Galley-La Company Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/02/Galley-La_Company_Infobox.png/revision/latest?cb=20161029194329"
+    },
+    "Gally Pirates": {
+      "filename": "Gally Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/46/Gally_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130103121655"
+    },
+    "Galzforce": {
+      "filename": "Bullet Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a1/Bullet_Jolly_Roger.png/revision/latest?cb=20210620171847"
+    },
+    "Ganzack Pirates": {
+      "filename": "Ganzack Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/33/Ganzack_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130705104239"
+    },
+    "Germ Pirates": {
+      "filename": "Germ Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/38/Germ_Pirates%27_Jolly_Roger.png/revision/latest?cb=20241117123139"
+    },
+    "Germa 66": {
+      "filename": "Germa Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d0/Germa_Jolly_Roger.png/revision/latest?cb=20170903082125"
+    },
+    "Germa Kingdom": {
+      "filename": "Germa Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d0/Germa_Jolly_Roger.png/revision/latest?cb=20170903082125"
+    },
+    "Giant Warrior Pirates": {
+      "filename": "Giant Warrior Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a9/Giant_Warrior_Pirates%27_Jolly_Roger.png/revision/latest?cb=20210217030540"
+    },
+    "Goa Kingdom": {
+      "filename": "Goa Kingdom Symbol.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/2a/Goa_Kingdom_Symbol.png/revision/latest?cb=20130403030254"
+    },
+    "God Guardians": {
+      "filename": "God Guardians Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c5/God_Guardians_Infobox.png/revision/latest?cb=20240430124232"
+    },
+    "God's Army": {
+      "filename": "God's Army Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/0e/God%27s_Army_Infobox.png/revision/latest?cb=20230806152711"
+    },
+    "God's Guards": {
+      "filename": "God's Guards.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/92/God%27s_Guards.png/revision/latest?cb=20231126004214"
+    },
+    "Golden Lion Pirates": {
+      "filename": "Golden Lion Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/ec/Golden_Lion_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130305183839"
+    },
+    "Goldfish Empire": {
+      "filename": "Goldfish Empire Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/30/Goldfish_Empire_Infobox.png/revision/latest?cb=20150324180514"
+    },
+    "Gran Tesoro": {
+      "filename": "Gran Tesoro's Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/ef/Gran_Tesoro%27s_Jolly_Roger.png/revision/latest?cb=20190324155018"
+    },
+    "Guardians": {
+      "filename": "Guardians Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/15/Guardians_Infobox.png/revision/latest?cb=20231113012504"
+    },
+    "Happo Navy": {
+      "filename": "Chinjao Happo Navy Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e5/Chinjao_Happo_Navy_Portrait.png/revision/latest?cb=20200504011804"
+    },
+    "Hawkins Pirates": {
+      "filename": "Hawkins Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d5/Hawkins_Pirates%27_Jolly_Roger.png/revision/latest?cb=20241004204356"
+    },
+    "Heart Pirates": {
+      "filename": "Heart Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/76/Heart_Pirates%27_Jolly_Roger.png/revision/latest?cb=20231112100540"
+    },
+    "Hound Pets": {
+      "filename": "Hound Pets Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/98/Hound_Pets_Infobox.png/revision/latest?cb=20241030000203"
+    },
+    "Human Auctioning House": {
+      "filename": "Human Auctioning House Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c2/Human_Auctioning_House_Infobox.png/revision/latest?cb=20150623202205"
+    },
+    "Hyougoro Family": {
+      "filename": "Hyougoro Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d3/Hyougoro_Family_Infobox.png/revision/latest?cb=20230826203703"
+    },
+    "Ideo Pirates": {
+      "filename": "Ideo Pirates Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c9/Ideo_Pirates_Jolly_Roger.png/revision/latest?cb=20190519090055"
+    },
+    "Ilisia Kingdom": {
+      "filename": "Ilisia Kingdom Ship.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/3e/Ilisia_Kingdom_Ship.png/revision/latest?cb=20180504082146"
+    },
+    "Impel Down": {
+      "filename": "Arlong Impel Down Prisoner Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/5f/Arlong_Impel_Down_Prisoner_Portrait.png/revision/latest?cb=20200915054302"
+    },
+    "Inuarashi Musketeer Squad": {
+      "filename": "Inuarashi Musketeer Squad Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/9c/Inuarashi_Musketeer_Squad_Infobox.png/revision/latest?cb=20231112111212"
+    },
+    "Karakuri Island": {
+      "filename": "Karakuri Island After The Nightmare of Baldimore.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/7f/Karakuri_Island_After_The_Nightmare_of_Baldimore.png/revision/latest?cb=20221010215434"
+    },
+    "Kid Pirates": {
+      "filename": "Kid Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/ad/Kid_Pirates%27_Jolly_Roger.png/revision/latest?cb=20240723105053"
+    },
+    "Knights of God": {
+      "filename": "Carmine God's Knights Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4a/Carmine_God%27s_Knights_Infobox.png/revision/latest?cb=20250810181732"
+    },
+    "Kouzuki Family": {
+      "filename": "Kouzuki Family Carving Poneglyphs.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/5f/Kouzuki_Family_Carving_Poneglyphs.png/revision/latest?cb=20161225230455"
+    },
+    "Krieg Pirates": {
+      "filename": "Krieg Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f9/Krieg_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190128152038"
+    },
+    "Kurozumi Family": {
+      "filename": "Kurozumi Family Persecuted.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/7a/Kurozumi_Family_Persecuted.png/revision/latest?cb=20210509085439"
+    },
+    "Kurozumi Orochi": {
+      "filename": "Kurozumi Orochi Anime Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/49/Kurozumi_Orochi_Anime_Infobox.png/revision/latest?cb=20230911061118"
+    },
+    "Kurozumi Tama": {
+      "filename": "Kurozumi Tama Anime Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/6d/Kurozumi_Tama_Anime_Infobox.png/revision/latest?cb=20210210051806"
+    },
+    "Kyoshiro Family": {
+      "filename": "Kyoshiro Family's Ship.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/75/Kyoshiro_Family%27s_Ship.png/revision/latest?cb=20210620033439"
+    },
+    "Little Pirates": {
+      "filename": "Little Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/ac/Little_Pirates%27_Jolly_Roger.png/revision/latest?cb=20250128011314"
+    },
+    "Lulusia Kingdom": {
+      "filename": "Lulusia Kingdom's Unnamed Town.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/48/Lulusia_Kingdom%27s_Unnamed_Town.png/revision/latest?cb=20180322131356"
+    },
+    "Lvneel Kingdom": {
+      "filename": "Lvneel Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/30/Lvneel_Kingdom_Infobox.png/revision/latest?cb=20130218233354"
+    },
+    "Maelstrom Spider Pirates": {
+      "filename": "Maelstrom Spider Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/2b/Maelstrom_Spider_Pirates%27_Jolly_Roger.png/revision/latest?cb=20250903020819"
+    },
+    "Marumieta": {
+      "filename": "Anonymous Citizen Replacing Marumieta.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/fd/Anonymous_Citizen_Replacing_Marumieta.png/revision/latest?cb=20220204073039"
+    },
+    "Mimawarigumi": {
+      "filename": "Mimawarigumi Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/39/Mimawarigumi_Infobox.png/revision/latest?cb=20201122084417"
+    },
+    "Mokomo Dukedom": {
+      "filename": "Mokomo Dukedom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/50/Mokomo_Dukedom_Infobox.png/revision/latest?cb=20231118003136"
+    },
+    "Mont Blanc Family": {
+      "filename": "Mont Blanc Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/8/8f/Mont_Blanc_Family_Infobox.png/revision/latest?cb=20251113191217"
+    },
+    "Mt. Atama Thieves": {
+      "filename": "Mt. Atama Thieves Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e3/Mt._Atama_Thieves_Infobox.png/revision/latest?cb=20191201030338"
+    },
+    "Nefertari Family": {
+      "filename": "Nefertari Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/73/Nefertari_Family_Infobox.png/revision/latest?cb=20240622144051"
+    },
+    "Neo Marines": {
+      "filename": "Neo Marines' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/0b/Neo_Marines%27_Jolly_Roger.png/revision/latest?cb=20130622052152"
+    },
+    "Neptune Family": {
+      "filename": "Neptune Family Arrives At The Red Port.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/74/Neptune_Family_Arrives_At_The_Red_Port.png/revision/latest?cb=20230408051539"
+    },
+    "New Fish-Man Pirates": {
+      "filename": "New Fish-Man Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/91/New_Fish-Man_Pirates%27_Jolly_Roger.png/revision/latest?cb=20230730225624"
+    },
+    "New Giant Warrior Pirates": {
+      "filename": "New Giant Warrior Pirates Members.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e2/New_Giant_Warrior_Pirates_Members.png/revision/latest?cb=20210718232138"
+    },
+    "Nico Robin": {
+      "filename": "Nico Robin Anime Post Timeskip Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/bc/Nico_Robin_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20190202051257"
+    },
+    "Nine Red Scabbards": {
+      "filename": "Nine Red Scabbards Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/76/Nine_Red_Scabbards_Infobox.png/revision/latest?cb=20210425042608"
+    },
+    "Ninja-Pirate-Mink-Samurai Alliance": {
+      "filename": "Ninja-Pirate-Mink-Samurai Alliance Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f0/Ninja-Pirate-Mink-Samurai_Alliance_Infobox.png/revision/latest?cb=20181007180536"
+    },
+    "On Air Pirates": {
+      "filename": "On Air Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/b4/On_Air_Pirates%27_Jolly_Roger.png/revision/latest?cb=20241004205339"
+    },
+    "Orange Town": {
+      "filename": "Orange Town Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/bb/Orange_Town_Infobox.png/revision/latest?cb=20130701185900"
+    },
+    "Organ Dealing Assassination Group": {
+      "filename": "Organ Dealing Assassination Group Grunt Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/98/Organ_Dealing_Assassination_Group_Grunt_Portrait.png/revision/latest?cb=20200913223224"
+    },
+    "Orochi Oniwabanshu": {
+      "filename": "Orochi Oniwabanshu Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/ae/Orochi_Oniwabanshu_Infobox.png/revision/latest?cb=20200927045557"
+    },
+    "Owl Library": {
+      "filename": "Owl Library Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e7/Owl_Library_Infobox.png/revision/latest?cb=20250405041152"
+    },
+    "Pacifista": {
+      "filename": "Pacifista Mark III Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/20/Pacifista_Mark_III_Infobox.png/revision/latest?cb=20250414120546"
+    },
+    "Peachbeard Pirates": {
+      "filename": "Peachbeard Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/8/8f/Peachbeard_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190414114656"
+    },
+    "Portgas D. Ace": {
+      "filename": "One Piece Burning Blood Fire Fist Portgas D. Ace (Artwork).png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/78/One_Piece_Burning_Blood_Fire_Fist_Portgas_D._Ace_%28Artwork%29.png/revision/latest?cb=20190208144447"
+    },
+    "Prodence Kingdom": {
+      "filename": "Prodence Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/7/7b/Prodence_Kingdom_Infobox.png/revision/latest?cb=20170312015423"
+    },
+    "Pumpkin Cafe": {
+      "filename": "Pumpkin Cafe Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d8/Pumpkin_Cafe_Infobox.png/revision/latest?cb=20240430124333"
+    },
+    "Raijin Island": {
+      "filename": "Roger Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/ff/Roger_Pirates%27_Jolly_Roger.png/revision/latest?cb=20181010222110"
+    },
+    "Rain Dinners": {
+      "filename": "Rain Dinners Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a7/Rain_Dinners_Infobox.png/revision/latest?cb=20230131162303"
+    },
+    "Red Hair Pirates": {
+      "filename": "Red Hair Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/8/81/Red_Hair_Pirates%27_Jolly_Roger.png/revision/latest?cb=20231029033157"
+    },
+    "Revolutionary Army": {
+      "filename": "Revolutionary Army Flag.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/9/94/Revolutionary_Army_Flag.png/revision/latest?cb=20231118125740"
+    },
+    "Riku Family": {
+      "filename": "Riku Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/1c/Riku_Family_Infobox.png/revision/latest?cb=20200920171433"
+    },
+    "Roger Pirates": {
+      "filename": "Early Roger Pirates Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4f/Early_Roger_Pirates_Jolly_Roger.png/revision/latest?cb=20250512201024"
+    },
+    "Roshio Pirates": {
+      "filename": "Roshio Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c1/Roshio_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130116024416"
+    },
+    "Rosward Family": {
+      "filename": "Rosward Family Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/b5/Rosward_Family_Infobox.png/revision/latest?cb=20240810203221"
+    },
+    "Rosy Life Riders": {
+      "filename": "Rosy Life Riders Base.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/0e/Rosy_Life_Riders_Base.png/revision/latest?cb=20230519055033"
+    },
+    "Rumbar Pirates": {
+      "filename": "Rumbar Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d3/Rumbar_Pirates%27_Jolly_Roger.png/revision/latest?cb=20210213151554"
+    },
+    "Ryugu Kingdom": {
+      "filename": "Ryugu Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/bc/Ryugu_Kingdom_Infobox.png/revision/latest?cb=20150528223944"
+    },
+    "SMILE Factory": {
+      "filename": "SMILE Factory Destroyed.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/49/SMILE_Factory_Destroyed.png/revision/latest?cb=20151129192914"
+    },
+    "Sabaody Archipelago": {
+      "filename": "Map of Sabaody Archipelago.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4c/Map_of_Sabaody_Archipelago.png/revision/latest?cb=20130125210806"
+    },
+    "Sakura Kingdom": {
+      "filename": "Sakura Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/0/0b/Sakura_Kingdom_Infobox.png/revision/latest?cb=20180629071511"
+    },
+    "Sand-Sand Clan": {
+      "filename": "Sand-Sand Clan Member 1 Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e4/Sand-Sand_Clan_Member_1_Portrait.png/revision/latest?cb=20260207173937"
+    },
+    "Saruyama Alliance": {
+      "filename": "Saruyama Alliance's Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/fd/Saruyama_Alliance%27s_Jolly_Roger.png/revision/latest?cb=20190205183442"
+    },
+    "Seven Warlords of the Sea": {
+      "filename": "Seven Warlords of the Sea Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4d/Seven_Warlords_of_the_Sea_Infobox.png/revision/latest?cb=20210111173353"
+    },
+    "Shakky's Rip-off Bar": {
+      "filename": "Shakky's Rip-off Bar Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/19/Shakky%27s_Rip-off_Bar_Infobox.png/revision/latest?cb=20151025185238"
+    },
+    "Sheep's House": {
+      "filename": "Elbaph Sheep's House.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a5/Elbaph_Sheep%27s_House.png/revision/latest?cb=20240928191538"
+    },
+    "Shimotsuki Family": {
+      "filename": "Shimotsuki Family Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/61/Shimotsuki_Family_Portrait.png/revision/latest?cb=20220511154406"
+    },
+    "Shoujou Pirates": {
+      "filename": "Shoujou Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4a/Shoujou_Pirates%27_Jolly_Roger.png/revision/latest?cb=20160815184757"
+    },
+    "Slavery": {
+      "filename": "Treasure Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/15/Treasure_Pirates%27_Jolly_Roger.png/revision/latest?cb=20160729115256"
+    },
+    "Social Club": {
+      "filename": "Social Club's Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/8/8f/Social_Club%27s_Jolly_Roger.png/revision/latest?cb=20240714121405"
+    },
+    "Sorbet Kingdom": {
+      "filename": "Ginny Sorbet Kingdom Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/ff/Ginny_Sorbet_Kingdom_Portrait.png/revision/latest?cb=20250601234517"
+    },
+    "Space Pirates": {
+      "filename": "Space Pirates' Flag.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4e/Space_Pirates%27_Flag.png/revision/latest?cb=20170119215905"
+    },
+    "Spade Pirates": {
+      "filename": "Spade Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/1d/Spade_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130305181623"
+    },
+    "Standing Kingdom": {
+      "filename": "King of Standing Kingdom Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/3d/King_of_Standing_Kingdom_Portrait.png/revision/latest?cb=20190519113856"
+    },
+    "Straw Hat Grand Fleet": {
+      "filename": "Straw Hat Grand Fleet.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/20/Straw_Hat_Grand_Fleet.png/revision/latest?cb=20230809020305"
+    },
+    "Straw Hat Pirates": {
+      "filename": "Ending 14 Straw Hat Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/f1/Ending_14_Straw_Hat_Jolly_Roger.png/revision/latest?cb=20150513222734"
+    },
+    "Sun Pirates": {
+      "filename": "Sun Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/44/Sun_Pirates%27_Jolly_Roger.png/revision/latest?cb=20130410222429"
+    },
+    "Super Spot-Billed Duck Troops": {
+      "filename": "Super Spot-Billed Duck Troops Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/43/Super_Spot-Billed_Duck_Troops_Infobox.png/revision/latest?cb=20190114123211"
+    },
+    "Takotopus Pirates": {
+      "filename": "Takotopus Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/28/Takotopus_Pirates%27_Jolly_Roger.png/revision/latest?cb=20210203133907"
+    },
+    "Thriller Bark": {
+      "filename": "Thriller Bark Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/37/Thriller_Bark_Infobox.png/revision/latest?cb=20230118010929"
+    },
+    "Thriller Bark Pirates": {
+      "filename": "Thriller Bark's Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e1/Thriller_Bark%27s_Jolly_Roger.png/revision/latest?cb=20141006182310"
+    },
+    "Thriller Bark Victim's Association": {
+      "filename": "Thriller Bark Victim's Association Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e6/Thriller_Bark_Victim%27s_Association_Infobox.png/revision/latest?cb=20140917050311"
+    },
+    "Tom's Workers": {
+      "filename": "Franky Tom's Workers Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/fd/Franky_Tom%27s_Workers_Portrait.png/revision/latest?cb=20200330162335"
+    },
+    "Tontatta Kingdom": {
+      "filename": "Tontatta Kingdom Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/db/Tontatta_Kingdom_Infobox.png/revision/latest?cb=20140421184124"
+    },
+    "Tontatta Pirates": {
+      "filename": "Tontatta Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/eb/Tontatta_Pirates%27_Jolly_Roger.png/revision/latest?cb=20190407230327"
+    },
+    "Torino Kingdom": {
+      "filename": "Torino Kingdom Bird.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/b5/Torino_Kingdom_Bird.png/revision/latest?cb=20150327205941"
+    },
+    "Ukkari Hot-Spring Island": {
+      "filename": "Ukkari Hot-Spring Island Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/1/1a/Ukkari_Hot-Spring_Island_Infobox.png/revision/latest?cb=20210423200212"
+    },
+    "Umit Shipping": {
+      "filename": "Umit Shipping Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/6/62/Umit_Shipping_Infobox.png/revision/latest?cb=20260405161620"
+    },
+    "Underworld": {
+      "filename": "Germa Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d0/Germa_Jolly_Roger.png/revision/latest?cb=20170903082125"
+    },
+    "Usopp Pirates": {
+      "filename": "Usopp Pirates' Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/b/bb/Usopp_Pirates%27_Jolly_Roger.png/revision/latest?cb=20121115053736"
+    },
+    "Vinsmoke Family": {
+      "filename": "Germa Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/d/d0/Germa_Jolly_Roger.png/revision/latest?cb=20170903082125"
+    },
+    "Wagomuland": {
+      "filename": "Wagomuland Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/5/56/Wagomuland_Infobox.png/revision/latest?cb=20130426010105"
+    },
+    "Walrus School": {
+      "filename": "Ange Burns Walrus School.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/4/4a/Ange_Burns_Walrus_School.png/revision/latest?cb=20250525151310"
+    },
+    "Wandering Clan": {
+      "filename": "Wandering Clan Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/f/fc/Wandering_Clan_Infobox.png/revision/latest?cb=20230418040516"
+    },
+    "Wano Country": {
+      "filename": "Lord of the Coast of Wano Country Portrait.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c1/Lord_of_the_Coast_of_Wano_Country_Portrait.png/revision/latest?cb=20250119200203"
+    },
+    "Whitebeard Pirates": {
+      "filename": "Revised Whitebeard Pirates Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/c/c9/Revised_Whitebeard_Pirates_Jolly_Roger.png/revision/latest?cb=20230617180155"
+    },
+    "World Economy News Paper": {
+      "filename": "World Economy News Paper.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/2/20/World_Economy_News_Paper.png/revision/latest?cb=20210110134510"
+    },
+    "World Government": {
+      "filename": "World Government Infobox.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/a/a1/World_Government_Infobox.png/revision/latest?cb=20221116004624"
+    },
+    "Yamato": {
+      "filename": "Yamato Oden Skewer Symbol.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/3/30/Yamato_Oden_Skewer_Symbol.png/revision/latest?cb=20220307044623"
+    },
+    "Yonta Maria Grand Fleet": {
+      "filename": "Yonta Maria Jolly Roger.png",
+      "url": "https://static.wikia.nocookie.net/onepiece/images/e/e2/Yonta_Maria_Jolly_Roger.png/revision/latest?cb=20190521125010"
+    }
+  }
+}

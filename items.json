@@ -1,0 +1,289 @@
+{
+  "_doc": "Hand-curated items and consumables — distinct from weapons. Pop Greens, drugs, foods, dials, currencies, etc.",
+  "generated_on": "2026-04-27",
+  "items": [
+    {
+      "id": "item:00001",
+      "name": "Energy Steroids",
+      "slug": "energy-steroids",
+      "aliases": [],
+      "type": "item",
+      "kind": "drug",
+      "debut": "Ch. 545",
+      "users": [
+        "Hody Jones",
+        "Fishman Pirates"
+      ],
+      "notes": "Boost a fishman's natural strength to dangerous levels — every dose ages the user one year. Hody overdosed and prematurely aged."
+    },
+    {
+      "id": "item:00002",
+      "name": "SMILE Fruits",
+      "slug": "smile-fruits",
+      "aliases": [],
+      "type": "item",
+      "kind": "df-variant",
+      "debut": "Ch. 681",
+      "users": [
+        "Beasts Pirates Gifters"
+      ],
+      "notes": "Artificial Devil Fruits made by Caesar Clown from SAD. Failure rate is high — failed users laugh uncontrollably forever."
+    },
+    {
+      "id": "item:00003",
+      "name": "Failed SMILEs (Smile)",
+      "slug": "failed-smiles-smile",
+      "aliases": [],
+      "type": "item",
+      "kind": "df-variant",
+      "debut": "Ch. 928",
+      "users": [
+        "Yasuie",
+        "Wano commoners"
+      ],
+      "notes": "Stolen by the Beasts and given to Wano civilians — they cannot stop smiling, even at funerals."
+    },
+    {
+      "id": "item:00004",
+      "name": "Rumble Ball",
+      "slug": "rumble-ball",
+      "aliases": [],
+      "type": "item",
+      "kind": "drug",
+      "debut": "Ch. 152",
+      "users": [
+        "Tony Tony Chopper"
+      ],
+      "notes": "Chopper's invention. Disrupts his Devil Fruit's wavelength to unlock additional Points. Overdosing causes Monster Point."
+    },
+    {
+      "id": "item:00005",
+      "name": "Pop Greens",
+      "slug": "pop-greens",
+      "aliases": [],
+      "type": "item",
+      "kind": "ammo",
+      "debut": "Ch. 599",
+      "users": [
+        "Usopp"
+      ],
+      "notes": "Boin Archipelago plants — sprout instantly on impact into vines, mushrooms, traps. Usopp's post-timeskip arsenal."
+    },
+    {
+      "id": "item:00006",
+      "name": "Cola (Franky's fuel)",
+      "slug": "cola-franky-s-fuel",
+      "aliases": [],
+      "type": "item",
+      "kind": "fuel",
+      "debut": "Ch. 332",
+      "users": [
+        "Franky"
+      ],
+      "notes": "Franky's bio-cybernetic body runs on cola. Empty tank = empty Franky."
+    },
+    {
+      "id": "item:00007",
+      "name": "Tone Dial",
+      "slug": "tone-dial",
+      "aliases": [],
+      "type": "item",
+      "kind": "skypiea",
+      "debut": "Ch. 237",
+      "users": [
+        "Skypieans",
+        "Robin",
+        "Bellamy (former)"
+      ],
+      "notes": "Sky-island shells that record and play back sound. Used by Roger to leave a message at Laugh Tale."
+    },
+    {
+      "id": "item:00008",
+      "name": "Impact Dial",
+      "slug": "impact-dial",
+      "aliases": [],
+      "type": "item",
+      "kind": "skypiea",
+      "debut": "Ch. 296",
+      "users": [
+        "Bellamy",
+        "Usopp (briefly)"
+      ],
+      "notes": "Stores impacts and releases them. Usopp received one from Conis."
+    },
+    {
+      "id": "item:00009",
+      "name": "Flame Dial",
+      "slug": "flame-dial",
+      "aliases": [],
+      "type": "item",
+      "kind": "skypiea",
+      "debut": "Ch. 264",
+      "users": [
+        "Skypiean warriors"
+      ],
+      "notes": "Belches flame on use."
+    },
+    {
+      "id": "item:00010",
+      "name": "Vivre Card",
+      "slug": "vivre-card",
+      "aliases": [],
+      "type": "item",
+      "kind": "navigation",
+      "debut": "Ch. 432",
+      "users": [
+        "Crew of Whitebeard",
+        "various pirates"
+      ],
+      "notes": "Paper imbued with a person's life-force. Burns away as their life fades — points to the carrier's location."
+    },
+    {
+      "id": "item:00011",
+      "name": "Eternal Pose",
+      "slug": "eternal-pose",
+      "aliases": [],
+      "type": "item",
+      "kind": "navigation",
+      "debut": "Ch. 154",
+      "users": [
+        "Strawhats and other Grand Line crews"
+      ],
+      "notes": "Permanently locked Log Pose, points to one specific island. Cannot be re-locked."
+    },
+    {
+      "id": "item:00012",
+      "name": "Log Pose",
+      "slug": "log-pose",
+      "aliases": [],
+      "type": "item",
+      "kind": "navigation",
+      "debut": "Ch. 105",
+      "users": [
+        "Every Grand Line ship"
+      ],
+      "notes": "Magnetic compass that locks onto an island. Required to navigate the Grand Line."
+    },
+    {
+      "id": "item:00013",
+      "name": "Bubble Coral",
+      "slug": "bubble-coral",
+      "aliases": [],
+      "type": "item",
+      "kind": "skypiea",
+      "debut": "Ch. 497",
+      "users": [
+        "Sabaody Archipelago locals"
+      ],
+      "notes": "Sap from Yarukiman Mangroves. Used to coat ships for underwater travel."
+    },
+    {
+      "id": "item:00014",
+      "name": "Mother Flame",
+      "slug": "mother-flame",
+      "aliases": [],
+      "type": "item",
+      "kind": "weapon",
+      "debut": "Ch. 1115",
+      "users": [
+        "World Government / Vegapunk"
+      ],
+      "notes": "Vegapunk's solar-flame weapon. Shown when the Five Elders Buster-Called Lulusia. Mass-destruction tier."
+    },
+    {
+      "id": "item:00015",
+      "name": "ENIES Lobby Gates",
+      "slug": "enies-lobby-gates",
+      "aliases": [],
+      "type": "item",
+      "kind": "structure",
+      "debut": "Ch. 376",
+      "users": [
+        "World Government"
+      ],
+      "notes": "Gate of Justice — controls the Tarai Current to Impel Down and Marineford."
+    },
+    {
+      "id": "item:00016",
+      "name": "Sea Prism Stone",
+      "slug": "sea-prism-stone",
+      "aliases": [],
+      "type": "item",
+      "kind": "material",
+      "debut": "Ch. 153",
+      "users": [
+        "Marines",
+        "Impel Down",
+        "CP0"
+      ],
+      "notes": "Ocean-mineral that nullifies Devil Fruits on contact. Made into cuffs, weapons, ship plating. (Detailed in Materials.)"
+    },
+    {
+      "id": "item:00017",
+      "name": "Beli (the Berry)",
+      "slug": "beli-the-berry",
+      "aliases": [],
+      "type": "item",
+      "kind": "currency",
+      "debut": "Ch. 9",
+      "users": [
+        "The world"
+      ],
+      "notes": "Standard currency. Wanted-poster bounties are denominated in Beli."
+    },
+    {
+      "id": "item:00018",
+      "name": "King's Plate",
+      "slug": "king-s-plate",
+      "aliases": [],
+      "type": "item",
+      "kind": "tech",
+      "debut": "Ch. 1106",
+      "users": [
+        "Vegapunk research"
+      ],
+      "notes": "Vegapunk's seastone-substitute experimental material — referenced during the Egghead arc."
+    },
+    {
+      "id": "item:00019",
+      "name": "Mochi (Whole Cake)",
+      "slug": "mochi-whole-cake",
+      "aliases": [],
+      "type": "item",
+      "kind": "food",
+      "debut": "Ch. 879",
+      "users": [
+        "Charlotte Katakuri"
+      ],
+      "notes": "Mochi-Mochi no Mi byproduct — Katakuri stuffs himself with mochi to hide his shark teeth."
+    },
+    {
+      "id": "item:00020",
+      "name": "Whole Cake (the cake)",
+      "slug": "whole-cake-the-cake",
+      "aliases": [],
+      "type": "item",
+      "kind": "food",
+      "debut": "Ch. 825",
+      "users": [
+        "Charlotte Linlin"
+      ],
+      "notes": "The eponymous wedding-cake mountain — Big Mom's craving central. Triggers a craving-fit when she can't have one."
+    },
+    {
+      "id": "item:00021",
+      "name": "Bink's Sake",
+      "slug": "bink-s-sake",
+      "aliases": [],
+      "type": "item",
+      "kind": "song",
+      "debut": "Ch. 487",
+      "users": [
+        "Brook",
+        "Roger Pirates",
+        "most pirates"
+      ],
+      "notes": "Iconic pirate shanty. Brook's signature song. Performed at Thriller Bark, Whole Cake, and many other moments."
+    }
+  ]
+}

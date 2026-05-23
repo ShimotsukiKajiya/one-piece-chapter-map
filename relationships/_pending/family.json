@@ -1,0 +1,296 @@
+[
+  {
+    "from": "chr:02499",
+    "to": "chr:02497",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 432
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:02498",
+    "src": "manual",
+    "relation": "grandfather",
+    "chapter": 431
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:02665",
+    "src": "manual",
+    "relation": "sworn-brother",
+    "chapter": 525
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:02751",
+    "src": "manual",
+    "relation": "sworn-brother",
+    "chapter": 583
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:01879",
+    "src": "manual",
+    "relation": "guardian",
+    "chapter": 583
+  },
+  {
+    "from": "chr:02497",
+    "to": "chr:02498",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 432
+  },
+  {
+    "from": "chr:02665",
+    "to": "chr:02061",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 551
+  },
+  {
+    "from": "chr:02665",
+    "to": "chr:02666",
+    "src": "manual",
+    "relation": "mother",
+    "chapter": 551
+  },
+  {
+    "from": "chr:02665",
+    "to": "chr:01950",
+    "src": "manual",
+    "relation": "adoptive-father",
+    "chapter": 552
+  },
+  {
+    "from": "chr:02751",
+    "to": "chr:02616",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 583
+  },
+  {
+    "from": "chr:02751",
+    "to": "chr:02871",
+    "src": "manual",
+    "relation": "adoptive-brother",
+    "chapter": 587
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03008",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 832
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:02852",
+    "src": "manual",
+    "relation": "mother",
+    "chapter": 840
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03010",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 832
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03007",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 832
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03009",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 832
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03012",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 832
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03073",
+    "src": "manual",
+    "relation": "guardian",
+    "chapter": 57
+  },
+  {
+    "from": "chr:02548",
+    "to": "chr:02582",
+    "src": "manual",
+    "relation": "adoptive-sister",
+    "chapter": 78
+  },
+  {
+    "from": "chr:02548",
+    "to": "chr:01642",
+    "src": "manual",
+    "relation": "adoptive-mother",
+    "chapter": 78
+  },
+  {
+    "from": "chr:02729",
+    "to": "chr:02821",
+    "src": "manual",
+    "relation": "ancestor",
+    "chapter": 952
+  },
+  {
+    "from": "chr:02573",
+    "to": "chr:02572",
+    "src": "manual",
+    "relation": "mother",
+    "chapter": 391
+  },
+  {
+    "from": "chr:02938",
+    "to": "chr:02140",
+    "src": "manual",
+    "relation": "guardian",
+    "chapter": 142
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01794",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 651
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01819",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 825
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01790",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 834
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01774",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 836
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01822",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 834
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01815",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 834
+  },
+  {
+    "from": "chr:01928",
+    "to": "chr:01931",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 762
+  },
+  {
+    "from": "chr:01928",
+    "to": "chr:01929",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 762
+  },
+  {
+    "from": "chr:02947",
+    "to": "chr:02363",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 762
+  },
+  {
+    "from": "chr:02947",
+    "to": "chr:01931",
+    "src": "manual",
+    "relation": "adoptive-father",
+    "chapter": 763
+  },
+  {
+    "from": "chr:01680",
+    "to": "chr:01682",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 514
+  },
+  {
+    "from": "chr:01680",
+    "to": "chr:01681",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 514
+  },
+  {
+    "from": "chr:02252",
+    "to": "chr:03045",
+    "src": "manual",
+    "relation": "child",
+    "chapter": 984
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02327",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 962
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02328",
+    "src": "manual",
+    "relation": "wife",
+    "chapter": 965
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02325",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 966
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02324",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 966
+  },
+  {
+    "from": "chr:02809",
+    "to": "chr:02987",
+    "src": "manual",
+    "relation": "adoptive-daughter",
+    "note": "Film: Red"
+  },
+  {
+    "from": "chr:02061",
+    "to": "chr:02666",
+    "src": "manual",
+    "relation": "partner",
+    "chapter": 551
+  }
+]

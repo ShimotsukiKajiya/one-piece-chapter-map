@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combat Styles · The Shimotsuki Codex</title>
+<meta name="description" content="Combat styles in One Piece — Rokushiki, Black Leg, Santoryu, Fishman Karate and more, with practitioners and signature techniques.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  main{max-width:1100px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:30px;max-width:780px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .pill{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:7px 14px;border-radius:20px;cursor:pointer;font-size:.78rem;letter-spacing:1px;transition:all .15s}
+  .pill.active,.pill:hover{color:var(--gold);border-color:var(--gold)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px}
+  .style{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--ink-blue);border-radius:12px;padding:18px 22px;transition:transform .15s,border-color .15s}
+  .style:hover{transform:translateX(3px);border-left-color:var(--gold)}
+  .style.swordsmanship{border-left-color:#d4a44a}
+  .style.kicking{border-left-color:#ff6b1a}
+  .style.martial-art{border-left-color:#7ac290}
+  .style.racial{border-left-color:#b388ff}
+  .style.weapon{border-left-color:#e07070}
+  .style-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .style-name{font-size:1.1rem;font-weight:800;color:var(--gold-bright)}
+  .style-jp{color:var(--ink-blue);font-style:italic;font-size:.82rem}
+  .style-kind{background:var(--surface2);color:var(--muted);font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:7px;font-weight:700}
+  .style-origin{color:var(--muted);font-size:.78rem;font-style:italic;margin-bottom:8px}
+  .style-summary{color:var(--text);font-size:.88rem;line-height:1.55;margin-bottom:10px}
+  .users,.attacks{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .user-chip,.attack-chip{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:3px 9px;border-radius:12px;font-size:.74rem;text-decoration:none}
+  .user-chip:hover{border-color:var(--gold);color:var(--gold-bright)}
+  .attack-chip{color:var(--ink-blue);font-style:italic;font-size:.72rem}
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/combat-styles.html">
+  <meta property="og:title" content="Combat Styles · The Shimotsuki Codex">
+  <meta property="og:description" content="Combat styles in One Piece — Rokushiki, Black Leg, Santoryu, Fishman Karate and more, with practitioners and signature techniques.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/combat-styles.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Combat Styles · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Combat styles in One Piece — Rokushiki, Black Leg, Santoryu, Fishman Karate and more, with practitioners and signature techniques.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Combat Styles</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">🥋 Combat Styles</h2>
+  <p class="blurb">Every named martial art, sword school, and learned technique in canon — distinct from Devil Fruit powers (which have their own page) and Haki (likewise). Includes Zoro's Three Sword Style, Sanji's Black Leg, Fishman Karate, the World Government's Rokushiki, racial techniques like Mink Electro, and the Wano traditions.</p>
+  <div class="gold-rule"></div>
+</div>
+  <div class="filters">
+    <span class="pill active" data-filter="all">All</span>
+    <span class="pill" data-filter="swordsmanship">Swordsmanship</span>
+    <span class="pill" data-filter="kicking">Kicking</span>
+    <span class="pill" data-filter="martial-art">Martial Art</span>
+    <span class="pill" data-filter="racial">Racial</span>
+    <span class="pill" data-filter="weapon">Weapon</span>
+  </div>
+  <div id="grid" class="grid"></div>
+</main>
+<script id="combat-data" type="application/json">
+{
+  "_doc": "Hand-curated combat styles, martial arts, and learned techniques (excluding Devil Fruit powers and Haki, which have their own pages). Sword styles, kicking arts, fishman karate, ninjutsu, etc.",
+  "generated_on": "2026-04-27",
+  "styles": [
+    {
+      "name": "Santoryu (Three Sword Style)",
+      "japanese": "三刀流",
+      "kind": "swordsmanship",
+      "origin": "Wano-influenced, Zoro's invention",
+      "users": ["Roronoa Zoro"],
+      "summary": "Wields three swords — one in each hand and one in the mouth. Zoro's signature combat form.",
+      "key_attacks": ["Onigiri","Tatsu Maki","Tora Gari","108 Pound Cannon","Three Thousand Worlds","Asura"]
+    },
+    {
+      "name": "Nine Sword Style (Asura)",
+      "japanese": "九刀流 阿修羅",
+      "kind": "swordsmanship",
+      "origin": "Zoro's spiritual extension of Santoryu",
+      "users": ["Roronoa Zoro"],
+      "summary": "An Observation-Haki-fuelled illusion that gives Zoro the appearance of three heads and six arms wielding nine swords. First used vs Kaku.",
+      "key_attacks": ["Asura Ichibugin","Asura Makyusen"]
+    },
+    {
+      "name": "King of Hell (Kiki Kutsugi)",
+      "japanese": "鬼気九所",
+      "kind": "swordsmanship",
+      "origin": "Wano — Zoro fully embraces Enma + Conqueror's Coating",
+      "users": ["Roronoa Zoro"],
+      "summary": "Onigashima rooftop form — Zoro's strikes coat in Conqueror's Haki via Enma's drain. Cuts through Kaidou's hide.",
+      "key_attacks": ["Hell Bringer","Three Sword Style: Black Rope Dragon Twister"]
+    },
+    {
+      "name": "Black Leg Style",
+      "japanese": "黒脚",
+      "kind": "kicking",
+      "origin": "Zeff's school, North Blue cooks-and-fighters",
+      "users": ["Vinsmoke Sanji","Zeff (former)"],
+      "summary": "All-kicks martial art — Sanji never uses his hands for combat to protect them as a chef's tools.",
+      "key_attacks": ["Mouton Shot","Collier Shoot","Concassé","Anti-Manner Kick Course"]
+    },
+    {
+      "name": "Diable Jambe",
+      "japanese": "悪魔風脚",
+      "kind": "kicking",
+      "origin": "Sanji's invention, Enies Lobby debut",
+      "users": ["Vinsmoke Sanji"],
+      "summary": "Heat-up kick — spin-friction creates fire on the leg. Enhanced by Armament Haki post-timeskip.",
+      "key_attacks": ["Flambage Shot","Bien Cuit: Grill Shot","Hell Memories"]
+    },
+    {
+      "name": "Ifrit Jambe",
+      "japanese": "イフリート・ジャンベ",
+      "kind": "kicking",
+      "origin": "Sanji, Wano — combines Diable Jambe with his awakened Vinsmoke Genome",
+      "users": ["Vinsmoke Sanji"],
+      "summary": "Blue-flame kick — colder yet more destructive. Used vs Queen on Onigashima.",
+      "key_attacks": ["Ifrit Jambe: Bien Cuit"]
+    },
+    {
+      "name": "Fishman Karate",
+      "japanese": "魚人空手",
+      "kind": "martial-art",
+      "origin": "Fishman Island — ancient fishman tradition",
+      "users": ["Jinbe","Hody Jones","Hammond","Aladine"],
+      "summary": "Strikes the water itself. Underwater, a fishman's strength is multiplied — water-shotting can shatter stone from a distance.",
+      "key_attacks": ["Buraikan","Karakusagawara Seiken","Yarinami","Samegawara Seiken"]
+    },
+    {
+      "name": "Fishman Jujutsu",
+      "japanese": "魚人柔術",
+      "kind": "martial-art",
+      "origin": "Fishman Island — companion grappling form to Karate",
+      "users": ["Jinbe"],
+      "summary": "Throws and joint-locks using the water as a medium. Can grab and redirect water itself.",
+      "key_attacks": ["Vagabond Drill","Onigawara Seiken: Counter"]
+    },
+    {
+      "name": "Rokushiki (Six Powers)",
+      "japanese": "六式",
+      "kind": "martial-art",
+      "origin": "World Government training — CP9, CP0",
+      "users": ["Rob Lucci","Kaku","Jabra","Kalifa","Blueno","Fukurō","Kumadori","Spandam"],
+      "summary": "Superhuman martial techniques developed by the World Government. The six are Geppo, Tekkai, Soru, Shigan, Rankyaku, Kami-e — plus the secret seventh, Rokuogan.",
+      "key_attacks": ["Geppo (sky-walking)","Tekkai (iron-body)","Soru (warp-speed step)","Shigan (finger-pistol)","Rankyaku (air-blade kick)","Kami-e (paper-art dodge)","Rokuogan (the ultimate secret strike)"]
+    },
+    {
+      "name": "Electro",
+      "japanese": "エレクトロ",
+      "kind": "racial",
+      "origin": "Mink Tribe natural ability",
+      "users": ["Inuarashi","Nekomamushi","Carrot","Pedro","Wanda","Pekoms","Bepo (latent)"],
+      "summary": "Inborn ability of the Mink Tribe — the body generates and discharges electric current. Can be channelled through weapons and limbs.",
+      "key_attacks": ["Electro Suteppu","Electrical Luna (Sulong-amplified)"]
+    },
+    {
+      "name": "Sulong",
+      "japanese": "スーロン",
+      "kind": "racial",
+      "origin": "Mink Tribe — full moon transformation",
+      "users": ["Nekomamushi","Inuarashi","Carrot","Pedro (capable)","Wanda","Mink Tribe (collectively)"],
+      "summary": "Under a full moon, Mink Tribe members transform into a hyper-evolved beast form — silver fur, vastly enhanced strength and speed. Considered Minks' true potential.",
+      "key_attacks": ["Sulong Electro Knight (Carrot)","Sulong Lightning Wolf"]
+    },
+    {
+      "name": "Ramen Kenpo",
+      "japanese": "ラーメン拳法",
+      "kind": "martial-art",
+      "origin": "Foxy Pirates' Hamburg, comic invention",
+      "users": ["Hamburg"],
+      "summary": "Joke martial art that uses the user's ramen-noodle-like braided hair as projectiles and grapples.",
+      "key_attacks": ["Ramen Whip","Noodle Grab"]
+    },
+    {
+      "name": "Tonkachi (Hammer Style)",
+      "japanese": "鉄槌流",
+      "kind": "weapon",
+      "origin": "Don Chinjao's school",
+      "users": ["Don Chinjao","Sai (heir)","Boo"],
+      "summary": "Sword/punch style that channels Conqueror's-tier striking force through a sharpened cone of will.",
+      "key_attacks": ["Hasshoken (8-impact strike)"]
+    },
+    {
+      "name": "Octopus Pot Rosary",
+      "japanese": "蛸壺ロザリオ",
+      "kind": "weapon",
+      "origin": "Hatchan / Sun Pirates",
+      "users": ["Hatchan"],
+      "summary": "Six-sword style using all six octopus arms — Hatchan's signature.",
+      "key_attacks": ["Six-Sword Style: Wax Wax Bubble"]
+    },
+    {
+      "name": "Iaido / Quick-Draw",
+      "japanese": "居合道",
+      "kind": "swordsmanship",
+      "origin": "Wano samurai tradition",
+      "users": ["Vista","Killer","Kuina (childhood Zoro flashback)","various Wano samurai"],
+      "summary": "Sword draw-and-cut as a single motion. Maximum damage on the opening strike.",
+      "key_attacks": ["Vista's Ten Petals","Wano-style draw cuts"]
+    },
+    {
+      "name": "Kappa-ryū / Fishman Sword Style",
+      "japanese": "河童流",
+      "kind": "swordsmanship",
+      "origin": "Wano — Kawamatsu's improvised river-spirit form",
+      "users": ["Kawamatsu the Kappa"],
+      "summary": "Sword style developed by Kawamatsu while imprisoned in the Sea Prison. Combines fishman strength with samurai blade work.",
+      "key_attacks": ["Kappa-ryū: Sara-zara"]
+    }
+  ]
+}
+</script>
+<script>
+const RAW = JSON.parse(document.getElementById('combat-data').textContent || '{}');
+const items = RAW.styles || [];
+function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let activeFilter = 'all';
+function render(){
+  const list = activeFilter==='all' ? items : items.filter(i => i.kind===activeFilter);
+  document.getElementById('grid').innerHTML = list.map(i=>`
+    <article class="style ${i.kind}">
+      <div class="style-head">
+        <span class="style-name">${escapeHtml(i.name)}</span>
+        ${i.japanese?`<span class="style-jp">${escapeHtml(i.japanese)}</span>`:''}
+        <span class="style-kind">${escapeHtml(i.kind)}</span>
+      </div>
+      ${i.origin?`<div class="style-origin">Origin: ${escapeHtml(i.origin)}</div>`:''}
+      <p class="style-summary">${escapeHtml(i.summary||'')}</p>
+      ${(i.users||[]).length?`<div class="users">${i.users.map(u=>`<a class="user-chip" href="character.html?name=${encodeURIComponent(u)}">${escapeHtml(u)}</a>`).join('')}</div>`:''}
+      ${(i.key_attacks||[]).length?`<div class="attacks">${i.key_attacks.map(a=>`<span class="attack-chip">${escapeHtml(a)}</span>`).join('')}</div>`:''}
+    </article>
+  `).join('');
+}
+document.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{
+  document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  activeFilter = p.dataset.filter;
+  render();
+}));
+render();
+</script>
+<footer>The Shimotsuki Codex · Combat styles curated from canon &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script id="chr-id-map" type="application/json">
+{"Wanda":"chr:03022","Hatchan":"chr:02113","Spandam":"chr:02857","Inuarashi":"chr:02185","Rob Lucci":"chr:02718","Jinbe":"chr:02227","Nekomamushi":"chr:02563","Fukurō":"chr:01998","Vista":"chr:03014","Hamburg":"chr:02092","Pedro":"chr:02634","Boo":"chr:01691","Kaku":"chr:02256","Asura":"chr:01602","Roronoa Zoro":"chr:02729","Aladine":"chr:01568","Pekoms":"chr:02637","Hody Jones":"chr:02147","Kalifa":"chr:02261","Blueno":"chr:01678","Killer":"chr:02293","Hammond":"chr:02094","Jabra":"chr:02203","Kumadori":"chr:02334","Carrot":"chr:01739","Vinsmoke Sanji":"chr:02764"}
+</script>
+<script src="chr-link-upgrader.js?v=2"></script>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

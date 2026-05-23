@@ -1,0 +1,331 @@
+{
+  "_doc": "Hand-curated named weapons of One Piece. Includes the meito sword grades (Saijo O Wazamono, O Wazamono, Ryo Wazamono), other named weapons (Yasopp's slingshot, Kabuto, Lassoo), and Pacifista/Seraphim-era weapon-tech.",
+  "generated_on": "2026-04-27",
+  "_grades": {
+    "saijo_o_wazamono": "Top 12 swords in the world. Supreme Grade.",
+    "o_wazamono": "Next 21 swords. Great Grade.",
+    "ryo_wazamono": "Next 50 swords. Skilful Grade.",
+    "wazamono": "Lesser-graded but still listed swords."
+  },
+  "weapons": [
+    {
+      "id": "weap:00001",
+      "name": "Yoru",
+      "slug": "yoru",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "saijo_o_wazamono",
+      "wielder": "Dracule Mihawk",
+      "notes": "World's Strongest Sword. A massive black blade wielded by the World's Strongest Swordsman."
+    },
+    {
+      "id": "weap:00002",
+      "name": "Ame no Habakiri",
+      "slug": "ame-no-habakiri",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "saijo_o_wazamono",
+      "wielder": "Kouzuki Oden → Kouzuki Momonosuke",
+      "notes": "Companion to Enma — Oden's twin blades. Cut Kaidou."
+    },
+    {
+      "id": "weap:00003",
+      "name": "Enma",
+      "slug": "enma",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "o_wazamono",
+      "wielder": "Kouzuki Oden → Roronoa Zoro",
+      "notes": "Drains the wielder's Haki to charge — only the worthy can wield it. Cut Kaidou."
+    },
+    {
+      "id": "weap:00004",
+      "name": "Wado Ichimonji",
+      "slug": "wado-ichimonji",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "o_wazamono",
+      "wielder": "Kuina → Roronoa Zoro",
+      "notes": "Pure white blade. Carried since childhood — Zoro's promise to Kuina."
+    },
+    {
+      "id": "weap:00005",
+      "name": "Sandai Kitetsu",
+      "slug": "sandai-kitetsu",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "o_wazamono",
+      "wielder": "Roronoa Zoro",
+      "notes": "Cursed blade — every prior owner died young. Zoro got it for free."
+    },
+    {
+      "id": "weap:00006",
+      "name": "Shusui",
+      "slug": "shusui",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "o_wazamono",
+      "wielder": "Ryuma → Roronoa Zoro → returned to Wano",
+      "notes": "Black blade — only black-blade in Zoro's possession. Returned to Ryuma's grave on Wano."
+    },
+    {
+      "id": "weap:00007",
+      "name": "Murakumogiri",
+      "slug": "murakumogiri",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "saijo_o_wazamono",
+      "wielder": "Edward Newgate (Whitebeard)",
+      "notes": "Massive naginata. Used to channel the Gura Gura no Mi's quake-cracks."
+    },
+    {
+      "id": "weap:00008",
+      "name": "Yubashiri",
+      "slug": "yubashiri",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "ryo_wazamono",
+      "wielder": "Roronoa Zoro (former)",
+      "notes": "Slim, dark blue blade. Destroyed by Shu's rust-hand at Enies Lobby."
+    },
+    {
+      "id": "weap:00009",
+      "name": "Nidai Kitetsu",
+      "slug": "nidai-kitetsu",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "o_wazamono",
+      "wielder": "Tashigi (formerly), historical figures",
+      "notes": "The second of the three cursed Kitetsu blades."
+    },
+    {
+      "id": "weap:00010",
+      "name": "Shodai Kitetsu",
+      "slug": "shodai-kitetsu",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "saijo_o_wazamono",
+      "wielder": "Lost — historical",
+      "notes": "The first and most powerful of the cursed Kitetsu trio. Whereabouts unknown."
+    },
+    {
+      "id": "weap:00011",
+      "name": "Soto Muso",
+      "slug": "soto-muso",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "ryo_wazamono",
+      "wielder": "Hyogoro the Flower (former)",
+      "notes": "Wano legend's blade."
+    },
+    {
+      "id": "weap:00012",
+      "name": "Kashū",
+      "slug": "kashu",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "ryo_wazamono",
+      "wielder": "Brook (former)",
+      "notes": "Brook's gentle-blade, lost long ago."
+    },
+    {
+      "id": "weap:00013",
+      "name": "Soul Solid",
+      "slug": "soul-solid",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": null,
+      "wielder": "Brook",
+      "notes": "Ice-imbued cane sword. Channels Brook's Yomi Yomi no Mi soul-cold strikes."
+    },
+    {
+      "id": "weap:00014",
+      "name": "Funkfreed",
+      "slug": "funkfreed",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": null,
+      "wielder": "Spandam → CP0 reserve",
+      "notes": "Sword with the Zou Zou no Mi (Elephant Devil Fruit). Becomes a small elephant."
+    },
+    {
+      "id": "weap:00015",
+      "name": "Kabuto",
+      "slug": "kabuto",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "slingshot",
+      "grade": null,
+      "wielder": "Usopp",
+      "notes": "Usopp's own creation. Combined with Pop Greens for biological ammo."
+    },
+    {
+      "id": "weap:00016",
+      "name": "Black Kabuto",
+      "slug": "black-kabuto",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "slingshot",
+      "grade": null,
+      "wielder": "Usopp",
+      "notes": "Post-timeskip upgrade — incorporates Heracles's plant-based growth ammo."
+    },
+    {
+      "id": "weap:00017",
+      "name": "Lassoo",
+      "slug": "lassoo",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "gun",
+      "grade": null,
+      "wielder": "Mr. 4",
+      "notes": "Sword/dog hybrid — a Devil Fruit dog that becomes a bazooka."
+    },
+    {
+      "id": "weap:00018",
+      "name": "Pop Greens",
+      "slug": "pop-greens",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "ammo",
+      "grade": null,
+      "wielder": "Usopp",
+      "notes": "Plant-based ammo — sprouts on impact (vines, mushrooms, traps)."
+    },
+    {
+      "id": "weap:00019",
+      "name": "Den Den Mushi (Black)",
+      "slug": "den-den-mushi-black",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "tech",
+      "grade": null,
+      "wielder": "Marines / WG",
+      "notes": "Encrypted snail used to call a Buster Call."
+    },
+    {
+      "id": "weap:00020",
+      "name": "Pacifista",
+      "slug": "pacifista",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "tech",
+      "grade": null,
+      "wielder": "World Government",
+      "notes": "Cyborg human-weapon series modelled on Bartholomew Kuma. Equipped with Kuma's Nikyu Nikyu no Mi tech."
+    },
+    {
+      "id": "weap:00021",
+      "name": "Seraphim",
+      "slug": "seraphim",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "tech",
+      "grade": null,
+      "wielder": "World Government",
+      "notes": "Vegapunk's SSG (Special Science Group) child-bodied weapons templated on the Seven Warlords with Lunarian DNA."
+    },
+    {
+      "id": "weap:00022",
+      "name": "Vegaforce-01",
+      "slug": "vegaforce-01",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "tech",
+      "grade": null,
+      "wielder": "Atlas (Vegapunk satellite)",
+      "notes": "Vegapunk-piloted humanoid combat mech. Defended Egghead."
+    },
+    {
+      "id": "weap:00023",
+      "name": "Climatact",
+      "slug": "climatact",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "weapon",
+      "grade": null,
+      "wielder": "Nami",
+      "notes": "Weather-controlling staff. Upgraded with Zeus's cloud body post-Whole Cake."
+    },
+    {
+      "id": "weap:00024",
+      "name": "Sorcery Climatact",
+      "slug": "sorcery-climatact",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "weapon",
+      "grade": null,
+      "wielder": "Nami (post-timeskip)",
+      "notes": "Usopp's upgrade — three-section staff with weather chemistry."
+    },
+    {
+      "id": "weap:00025",
+      "name": "Raid Suit (Stealth Black)",
+      "slug": "raid-suit-stealth-black",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "tech",
+      "grade": null,
+      "wielder": "Vinsmoke Sanji",
+      "notes": "Germa 66 raid suit — invisibility, flight, enhanced kicks."
+    },
+    {
+      "id": "weap:00026",
+      "name": "Lex Talionis",
+      "slug": "lex-talionis",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "weapon",
+      "grade": null,
+      "wielder": "Sentomaru",
+      "notes": "Sentomaru's giant axe-blade."
+    },
+    {
+      "id": "weap:00027",
+      "name": "Tortoise Shield",
+      "slug": "tortoise-shield",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "weapon",
+      "grade": null,
+      "wielder": "Sentomaru",
+      "notes": "Sentomaru's bigger half — the turtle-shaped buckler."
+    },
+    {
+      "id": "weap:00028",
+      "name": "Kogarashi",
+      "slug": "kogarashi",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "sword",
+      "grade": "o_wazamono",
+      "wielder": "Sasaki",
+      "notes": "Wano blade carried by Sasaki of the Tobi Roppo."
+    },
+    {
+      "id": "weap:00029",
+      "name": "Hawkings",
+      "slug": "hawkings",
+      "aliases": [],
+      "type": "weapon",
+      "kind": "weapon",
+      "grade": null,
+      "wielder": "Basil Hawkins",
+      "notes": "Straw-doll voodoo weapon — channels the Wara Wara no Mi."
+    }
+  ]
+}

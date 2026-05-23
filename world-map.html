@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Map · The Shimotsuki Codex</title>
+<meta name="description" content="Interactive One Piece world map — click any island to see its arcs, debut chapter, and characters introduced there.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="stylesheet" href="tags.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;--sea:#1a3050;--sea-deep:#0a1a30;--land:#3a2818}
+  body{background:radial-gradient(circle at 50% 50%,rgba(106,158,200,.08) 0%,transparent 60%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+
+  main{max-width:1200px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:22px;max-width:780px}
+
+  /* Map container */
+  .map-wrap{
+    background: linear-gradient(180deg, var(--sea-deep) 0%, var(--sea) 50%, var(--sea-deep) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.5), inset 0 0 60px rgba(212,164,74,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .map-wrap::before {
+    /* Aged paper grain on top of the sea */
+    content:''; position:absolute; inset:0;
+    background-image: radial-gradient(rgba(212,164,74,.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  svg.world-map { width: 100%; height: auto; display: block; position: relative; z-index: 1; }
+
+  /* Region label tooltips */
+  .region-label{font-family:'Georgia',serif;font-style:italic;font-weight:bold;letter-spacing:2px;text-anchor:middle;fill:var(--gold-bright);opacity:.7;text-transform:uppercase;font-size:14px}
+  .region-label.small{font-size:11px;opacity:.55}
+
+  /* Island dot interactions */
+  .island{cursor:pointer;transition:all .15s}
+  .island:hover{filter:drop-shadow(0 0 8px var(--gold-bright))}
+  .island circle{transition:r .15s}
+  .island:hover circle{r:8}
+
+  /* Detail panel */
+  .detail-panel{
+    margin-top: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 11px;
+    padding: 18px 22px;
+    min-height: 80px;
+  }
+  .detail-panel.empty{color:var(--muted);font-style:italic}
+  .detail-name{color:var(--gold-bright);font-size:1.2rem;font-weight:800;margin-bottom:5px}
+  .detail-region{color:var(--ink-blue);font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+  .detail-summary{color:var(--text);font-size:.92rem;line-height:1.6;margin-bottom:10px}
+  .detail-link{display:inline-block;background:var(--gold);color:var(--bg);font-weight:700;padding:6px 14px;border-radius:8px;font-size:.82rem;letter-spacing:1px}
+  .detail-link:hover{background:var(--gold-bright);color:var(--bg)}
+
+  /* Legend */
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;padding:12px 18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:.78rem}
+  .legend-item{display:flex;align-items:center;gap:7px;color:var(--muted)}
+  .legend-dot{width:10px;height:10px;border-radius:50%;border:1.5px solid #fff}
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1200px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/world-map.html">
+  <meta property="og:title" content="World Map · The Shimotsuki Codex">
+  <meta property="og:description" content="Interactive One Piece world map — click any island to see its arcs, debut chapter, and characters introduced there.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/world-map.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="World Map · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Interactive One Piece world map — click any island to see its arcs, debut chapter, and characters introduced there.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">World Map</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">🗺 World Map</h2>
+  <p class="blurb">A schematic of the One Piece world — the Four Blues (East, West, North, South), the Red Line dividing them, the Calm Belts walling off the Grand Line, and the New World beyond Fish-Man Island. Click any island marker to see its detail. The Red Line runs north-south; the Grand Line runs east-west; their intersection is Reverse Mountain.</p>
+  <div class="gold-rule"></div>
+</div>
+
+  <div class="map-wrap">
+    <svg class="world-map" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+      <!-- ── BACKGROUND BLUES ── -->
+      <!-- Sea is the base background. We draw the Red Line + Grand Line bands on top. -->
+
+      <!-- Red Line — vertical band, the unbroken continent that circles the globe -->
+      <rect x="495" y="0" width="14" height="600" fill="#7a1818" opacity="0.85"/>
+      <rect x="497" y="0" width="10" height="600" fill="#a02828" opacity="0.6"/>
+
+      <!-- Grand Line — horizontal band -->
+      <rect x="0" y="290" width="1000" height="22" fill="#2a4060" opacity="0.6"/>
+      <line x1="0" y1="290" x2="1000" y2="290" stroke="#d4a44a" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="312" x2="1000" y2="312" stroke="#d4a44a" stroke-width="1" opacity="0.5"/>
+
+      <!-- Calm Belts — narrow bands flanking the Grand Line -->
+      <rect x="0" y="285" width="1000" height="5" fill="#0a1a30" opacity="0.7"/>
+      <rect x="0" y="312" width="1000" height="5" fill="#0a1a30" opacity="0.7"/>
+
+      <!-- Reverse Mountain at intersection -->
+      <circle cx="502" cy="300" r="9" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+      <text x="502" y="278" text-anchor="middle" fill="#f5c95e" font-family="Georgia,serif" font-size="9" font-style="italic">Reverse Mtn</text>
+
+      <!-- ── REGION LABELS ── -->
+      <text x="200" y="100" class="region-label">North Blue</text>
+      <text x="800" y="100" class="region-label">East Blue</text>
+      <text x="200" y="540" class="region-label">West Blue</text>
+      <text x="800" y="540" class="region-label">South Blue</text>
+
+      <text x="280" y="305" class="region-label small">Paradise (Grand Line — first half)</text>
+      <text x="720" y="305" class="region-label small">New World (Grand Line — second half)</text>
+
+      <!-- ── ISLAND MARKERS ── -->
+      <!-- East Blue (top right quadrant) -->
+      <g class="island" data-name="Foosha Village" data-region="East Blue" data-summary="Luffy's hometown. Where Shanks gave him the Strawhat and his journey began." data-href="locations.html">
+        <circle cx="850" cy="80" r="6" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="858" y="84" font-size="10" fill="#f5c95e">Foosha</text>
+      </g>
+      <g class="island" data-name="Loguetown" data-region="East Blue" data-summary="The town of beginnings and ends. Roger born here, executed here. The end of East Blue, the entrance to the Grand Line." data-href="locations.html">
+        <circle cx="700" cy="180" r="6" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="708" y="184" font-size="10" fill="#f5c95e">Loguetown</text>
+      </g>
+      <g class="island" data-name="Cocoyasi Village" data-region="East Blue" data-summary="Nami's home village, freed from Arlong's tyranny." data-href="locations.html">
+        <circle cx="750" cy="120" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="758" y="124" font-size="9" fill="#e8d8b0" opacity=".8">Cocoyasi</text>
+      </g>
+      <g class="island" data-name="Syrup Village" data-region="East Blue" data-summary="Usopp's home — the village where he cried wolf about pirates that came." data-href="locations.html">
+        <circle cx="820" cy="150" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="828" y="154" font-size="9" fill="#e8d8b0" opacity=".8">Syrup</text>
+      </g>
+      <g class="island" data-name="Baratie" data-region="East Blue" data-summary="The floating restaurant. Sanji's home. Where Zeff raised him after losing his leg." data-href="locations.html">
+        <circle cx="780" cy="220" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="788" y="224" font-size="9" fill="#e8d8b0" opacity=".8">Baratie</text>
+      </g>
+
+      <!-- North Blue (top left quadrant) -->
+      <g class="island" data-name="Flevance" data-region="North Blue" data-summary="Law's home. The 'White City' destroyed by the Amber Lead disease — the World Government's cover-up." data-href="locations.html">
+        <circle cx="170" cy="120" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="178" y="124" font-size="9" fill="#e8d8b0" opacity=".8">Flevance</text>
+      </g>
+      <g class="island" data-name="Germa Kingdom" data-region="North Blue" data-summary="The Vinsmoke family's mobile mercenary kingdom. Sanji's blood family." data-href="locations.html">
+        <circle cx="280" cy="160" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="288" y="164" font-size="9" fill="#e8d8b0" opacity=".8">Germa</text>
+      </g>
+      <g class="island" data-name="Drum Island" data-region="North Blue → Grand Line" data-summary="Chopper's home. Doctor Hiluluk's rooftop. Wapol's tyranny ended by Luffy." data-href="locations.html">
+        <circle cx="220" cy="220" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="228" y="224" font-size="9" fill="#e8d8b0" opacity=".8">Drum</text>
+      </g>
+
+      <!-- Grand Line — Paradise (left half) -->
+      <g class="island" data-name="Reverse Mountain" data-region="Grand Line — Entry" data-summary="The mountain that brings ships from any of the Four Blues into the Grand Line via upward currents." data-href="locations.html">
+        <circle cx="502" cy="300" r="6" fill="#f5c95e" stroke="#7a4515" stroke-width="2"/>
+      </g>
+      <g class="island" data-name="Whisky Peak" data-region="Grand Line · Paradise" data-summary="Cactus-shaped mountains. Baroque Works' bounty-hunter front. Zoro's first 100-swordsman fight." data-href="locations.html">
+        <circle cx="445" cy="305" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="425" y="295" font-size="9" fill="#e8d8b0" opacity=".8">Whisky Peak</text>
+      </g>
+      <g class="island" data-name="Little Garden" data-region="Grand Line · Paradise" data-summary="Prehistoric island of dinosaurs. Where the giants Dorry and Brogy duelled for 100 years." data-href="locations.html">
+        <circle cx="395" cy="295" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="370" y="285" font-size="9" fill="#e8d8b0" opacity=".8">Little Garden</text>
+      </g>
+      <g class="island" data-name="Alabasta" data-region="Grand Line · Paradise" data-summary="Vivi's kingdom — the desert nation. Saved from civil war engineered by Crocodile." data-href="locations.html">
+        <circle cx="345" cy="305" r="6" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="324" y="320" font-size="10" fill="#f5c95e">Alabasta</text>
+      </g>
+      <g class="island" data-name="Skypiea" data-region="Grand Line · Sky" data-summary="The sky island above Jaya. Where Gan Fall ruled and Enel pretended to be God. The Bell of Shandora rings here." data-href="locations.html">
+        <circle cx="290" cy="280" r="5" fill="#a0c8e0" stroke="#4a7090" stroke-width="2"/>
+        <text x="270" y="270" font-size="9" fill="#a0c8e0" opacity=".9">Skypiea</text>
+      </g>
+      <g class="island" data-name="Jaya" data-region="Grand Line · Paradise" data-summary="Mock Town. The city the Knock-Up Stream launched the Strawhats from." data-href="locations.html">
+        <circle cx="290" cy="305" r="4" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+      </g>
+      <g class="island" data-name="Water 7" data-region="Grand Line · Paradise" data-summary="The shipwright city. The Galley-La. Iceburg, Tom, Franky. The Sea Train. Where the Going Merry was retired." data-href="locations.html">
+        <circle cx="245" cy="305" r="6" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="220" y="320" font-size="10" fill="#f5c95e">Water 7</text>
+      </g>
+      <g class="island" data-name="Enies Lobby" data-region="Grand Line · Paradise" data-summary="The Government's judicial island. The 'I want to live!' arc. Strawhats burned the WG flag here." data-href="locations.html">
+        <circle cx="195" cy="305" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="170" y="295" font-size="9" fill="#e8d8b0" opacity=".8">Enies Lobby</text>
+      </g>
+      <g class="island" data-name="Thriller Bark" data-region="Grand Line · Paradise" data-summary="Gecko Moria's giant ghost ship. Brook joined here. Largest pirate ship ever shown." data-href="locations.html">
+        <circle cx="150" cy="305" r="5" fill="#a07020" stroke="#4a2818" stroke-width="2"/>
+        <text x="125" y="295" font-size="9" fill="#e8d8b0" opacity=".8">Thriller Bark</text>
+      </g>
+      <g class="island" data-name="Sabaody Archipelago" data-region="Grand Line · Mid-point" data-summary="Pre-New World waystation. Mangrove trees, bubbles, slave auction. Kuma scattered the crew here." data-href="locations.html">
+        <circle cx="475" cy="305" r="6" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="455" y="280" font-size="9" fill="#e8d8b0" opacity=".9">Sabaody</text>
+      </g>
+      <g class="island" data-name="Amazon Lily" data-region="Grand Line · Calm Belt" data-summary="The Kuja island. Hancock's home. Women-only. Salamander pet. Luffy's training stop." data-href="locations.html">
+        <circle cx="100" cy="285" r="5" fill="#e07faa" stroke="#7a1840" stroke-width="2"/>
+        <text x="80" y="275" font-size="9" fill="#e07faa" opacity=".9">Amazon Lily</text>
+      </g>
+      <g class="island" data-name="Impel Down" data-region="Grand Line · Calm Belt" data-summary="The Government's underwater super-prison. Six levels of escalating hell. Luffy + Buggy escaped together." data-href="locations.html">
+        <circle cx="100" cy="320" r="5" fill="#3a3a4a" stroke="#1a1a2a" stroke-width="2"/>
+        <text x="78" y="335" font-size="9" fill="#a8a8b8" opacity=".9">Impel Down</text>
+      </g>
+
+      <!-- Marineford on the Red Line -->
+      <g class="island" data-name="Marineford" data-region="Red Line · Marines HQ" data-summary="Marine Headquarters. The Summit War. Whitebeard's last stand. Ace died here. Sengoku's Daibutsu form." data-href="locations.html">
+        <circle cx="502" cy="270" r="6" fill="#80c0ff" stroke="#1f4080" stroke-width="2"/>
+        <text x="510" y="266" font-size="10" fill="#80c0ff">Marineford</text>
+      </g>
+
+      <!-- Mariejois on the Red Line — top -->
+      <g class="island" data-name="Mariejois" data-region="Red Line · Holy Land" data-summary="The Holy Land. Pangaea Castle. The Empty Throne. Imu's hidden seat. The Reverie convenes here." data-href="locations.html">
+        <circle cx="502" cy="200" r="6" fill="#f5c95e" stroke="#7a4515" stroke-width="2"/>
+        <text x="510" y="204" font-size="10" fill="#f5c95e">Mariejois</text>
+      </g>
+
+      <!-- Fish-Man Island — UNDER the Red Line, midway down -->
+      <g class="island" data-name="Fish-Man Island" data-region="Underwater · Red Line" data-summary="10,000 metres beneath the sea, in a giant bubble at the foot of the Red Line. Shirahoshi the Poseidon. Hody Jones defeated." data-href="locations.html">
+        <circle cx="502" cy="370" r="6" fill="#80b890" stroke="#2a5840" stroke-width="2"/>
+        <text x="510" y="374" font-size="10" fill="#80b890">Fish-Man</text>
+      </g>
+
+      <!-- New World (right half of Grand Line) -->
+      <g class="island" data-name="Punk Hazard" data-region="New World · Yonko era" data-summary="Half-fire, half-ice from Akainu vs Aokiji's 10-day duel. Caesar's lab. Sliced in half by Trafalgar Law." data-href="locations.html">
+        <circle cx="555" cy="305" r="5" fill="#d4a44a" stroke="#7a4515" stroke-width="2"/>
+        <text x="550" y="293" font-size="9" fill="#e8d8b0" opacity=".8">Punk Hazard</text>
+      </g>
+      <g class="island" data-name="Dressrosa" data-region="New World · Yonko era" data-summary="Doflamingo's kingdom. Riku Doldo's home. The Strawhat Grand Fleet was formed here." data-href="locations.html">
+        <circle cx="610" cy="305" r="6" fill="#e07070" stroke="#7a1818" stroke-width="2"/>
+        <text x="595" y="320" font-size="10" fill="#e07070">Dressrosa</text>
+      </g>
+      <g class="island" data-name="Zou" data-region="New World · Yonko era" data-summary="The thousand-year-old Zunisha — an island carried on the back of an elephant. The Mink Tribe's home. Holds a Road Poneglyph." data-href="locations.html">
+        <circle cx="670" cy="295" r="6" fill="#a0c8a0" stroke="#2a5830" stroke-width="2"/>
+        <text x="660" y="280" font-size="10" fill="#a0c8a0">Zou</text>
+      </g>
+      <g class="island" data-name="Whole Cake Island" data-region="New World · Yonko era" data-summary="Big Mom's kingdom of sweets. The Charlotte Family. The wedding-cake mountain. Sanji rescue." data-href="locations.html">
+        <circle cx="725" cy="305" r="7" fill="#ff80a8" stroke="#7a1840" stroke-width="2"/>
+        <text x="720" y="325" font-size="10" fill="#ff80a8">Whole Cake</text>
+      </g>
+      <g class="island" data-name="Wano Country" data-region="New World · Yonko era" data-summary="The closed samurai nation. Kaidou's stronghold. The Onigashima raid. Where Luffy awakened Gear 5." data-href="locations.html">
+        <circle cx="790" cy="305" r="7" fill="#e07070" stroke="#7a1818" stroke-width="2"/>
+        <text x="780" y="325" font-size="10" fill="#e07070">Wano</text>
+      </g>
+      <g class="island" data-name="Egghead" data-region="New World · Final Saga" data-summary="Vegapunk's island. The Mother Flame. The Five Elders attack. Stella's broadcast." data-href="locations.html">
+        <circle cx="855" cy="305" r="7" fill="#80c0ff" stroke="#1f4080" stroke-width="2"/>
+        <text x="845" y="290" font-size="10" fill="#80c0ff">Egghead</text>
+      </g>
+      <g class="island" data-name="Elbaph" data-region="New World · Final Saga" data-summary="The giants' homeland. Loki the imprisoned giant. Sun God / Joy Boy lore." data-href="locations.html">
+        <circle cx="910" cy="305" r="7" fill="#a07030" stroke="#4a2010" stroke-width="2"/>
+        <text x="895" y="325" font-size="10" fill="#a07030">Elbaph</text>
+      </g>
+
+      <!-- South Blue (bottom right) -->
+      <g class="island" data-name="Karate Island" data-region="South Blue" data-summary="One of many South Blue islands referenced. Birthplace of Fishman Karate's foreign-influence style." data-href="locations.html">
+        <circle cx="800" cy="450" r="4" fill="#d4a44a" stroke="#7a4515" stroke-width="2" opacity=".6"/>
+        <text x="808" y="454" font-size="9" fill="#e8d8b0" opacity=".7">Karate Is.</text>
+      </g>
+
+      <!-- West Blue (bottom left) -->
+      <g class="island" data-name="Ohara" data-region="West Blue" data-summary="The destroyed island of scholars. Robin's home. Buster Call victim. The only people who tried to read the Poneglyphs." data-href="locations.html">
+        <circle cx="200" cy="450" r="6" fill="#7a3030" stroke="#3a1010" stroke-width="2"/>
+        <text x="180" y="475" font-size="10" fill="#e07070">Ohara</text>
+      </g>
+
+      <!-- Laugh Tale - end of the Grand Line, far right edge -->
+      <g class="island" data-name="Laugh Tale" data-region="New World · Final Island" data-summary="The end of the Grand Line. Where Roger's crew read the Rio Poneglyph and learned the truth. Roger laughed — hence the name." data-href="locations.html">
+        <circle cx="970" cy="305" r="9" fill="#f5c95e" stroke="#7a4515" stroke-width="3"/>
+        <text x="980" y="295" font-size="11" font-weight="bold" fill="#f5c95e">LAUGH TALE</text>
+        <text x="980" y="320" font-size="8" fill="#f5c95e" opacity=".8" font-style="italic">The end</text>
+      </g>
+    </svg>
+  </div>
+
+  <div id="detail" class="detail-panel empty">
+    Click any island marker on the map above to see its details.
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:#d4a44a;border-color:#7a4515"></span> Standard island</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#f5c95e;border-color:#7a4515"></span> Major / story-pivotal</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#e07070;border-color:#7a1818"></span> Yonko-tier</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#80c0ff;border-color:#1f4080"></span> Marines / Vegapunk</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#80b890;border-color:#2a5840"></span> Underwater / nature</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#ff80a8;border-color:#7a1840"></span> Big Mom faction</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#a0c8e0;border-color:#4a7090"></span> Sky island</div>
+  </div>
+</main>
+<script>
+const detail = document.getElementById('detail');
+document.querySelectorAll('.island').forEach(el => {
+  el.addEventListener('click', () => {
+    const name = el.dataset.name;
+    const region = el.dataset.region;
+    const summary = el.dataset.summary;
+    const href = el.dataset.href || 'locations.html';
+    detail.classList.remove('empty');
+    detail.innerHTML = `
+      <div class="detail-region">${region}</div>
+      <div class="detail-name">${name}</div>
+      <p class="detail-summary">${summary}</p>
+      <a class="detail-link" href="${href}?name=${encodeURIComponent(name)}">Open in Locations →</a>
+    `;
+  });
+});
+</script>
+<footer>The Shimotsuki Codex · World map (schematic) — for navigation, not geography exam &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script>
+// L6 fix: per-island min-chapter gate. Hides SVG islands whose first
+// canonical appearance is past the user's cutoff. Reads localStorage
+// directly so it fires before spoiler.js loads, then re-runs on
+// CodexSpoiler.onChange after the library settles.
+(function () {
+  const ISLAND_MIN_CH = {
+    'Foosha Village': 1, 'Loguetown': 95, 'Cocoyasi Village': 69,
+    'Syrup Village': 22, 'Baratie': 43,
+    'Flevance': 762, 'Germa Kingdom': 832, 'Drum Island': 130,
+    'Reverse Mountain': 101, 'Whisky Peak': 106, 'Little Garden': 115,
+    'Alabasta': 155, 'Skypiea': 237, 'Jaya': 218, 'Water 7': 322,
+    'Enies Lobby': 375, 'Thriller Bark': 442,
+    'Sabaody Archipelago': 490, 'Amazon Lily': 514, 'Impel Down': 525,
+    'Marineford': 550,
+    'Karate Island': 596, 'Fish-Man Island': 603,
+    'Punk Hazard': 654, 'Dressrosa': 700, 'Zou': 802,
+    'Whole Cake Island': 825, 'Wano Country': 909,
+    'Egghead': 1058, 'Elbaph': 1127,
+    'Mariejois': 233, 'Ohara': 391,
+    'Laugh Tale': 967,
+  };
+  function _wmCutoff() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.effectiveCutoff)
+      return CodexSpoiler.effectiveCutoff('public');
+    try {
+      const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+      if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0)
+        return Math.min(raw.cutoff_chapter, 1181);
+      const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
+      if (legacy > 0) return Math.min(legacy, 1181);
+    } catch (_) {}
+    return 597;
+  }
+  function _gateIslands() {
+    const cutoff = _wmCutoff();
+    const islands = document.querySelectorAll('.island[data-name]');
+    islands.forEach(el => {
+      const name = el.getAttribute('data-name');
+      const minCh = ISLAND_MIN_CH[name];
+      if (typeof minCh === 'number' && minCh > cutoff) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = '';
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', _gateIslands);
+  } else { _gateIslands(); }
+  function _wireOnChange() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.onChange) {
+      CodexSpoiler.onChange(_gateIslands);
+      if (CodexSpoiler.suppressDefaultReload) CodexSpoiler.suppressDefaultReload();
+    } else {
+      setTimeout(_wireOnChange, 100);
+    }
+  }
+  _wireOnChange();
+})();
+</script>
+</body>
+</html>

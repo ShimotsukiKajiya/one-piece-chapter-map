@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/appears-in.json",
+  "title": "appears-in relationship",
+  "description": "character → chapter. The biggest table; one row per character-appearance per chapter. Migrated from appearances.csv.",
+  "type": "object",
+  "required": ["from", "to", "src", "appearance_type"],
+  "properties": {
+    "from":            {"$ref": "../_common.json#/$defs/character_id"},
+    "to":              {"$ref": "../_common.json#/$defs/chapter_id"},
+    "src":             {"$ref": "../_common.json#/$defs/src"},
+    "appearance_type": {"$ref": "../_common.json#/$defs/appearance_type"}
+  },
+  "additionalProperties": false
+}

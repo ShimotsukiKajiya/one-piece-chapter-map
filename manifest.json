@@ -1,0 +1,57 @@
+{
+  "name": "The Shimotsuki Codex",
+  "short_name": "Codex",
+  "description": "Free, source-attributed One Piece reference. Forging clarity from chaos.",
+  "start_url": "./home.html",
+  "scope": "./",
+  "display": "browser",
+  "orientation": "any",
+  "background_color": "#0c0a14",
+  "theme_color": "#d4a44a",
+  "lang": "en",
+  "categories": [
+    "reference",
+    "books",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "logo/shimotsuki-codex-mark-primary.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo/apple-touch-icon-primary.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Atlas",
+      "short_name": "Atlas",
+      "description": "Browse the chapter map",
+      "url": "./index.html"
+    },
+    {
+      "name": "SBS Vault",
+      "short_name": "SBS",
+      "description": "Search Oda's Q&As",
+      "url": "./sbs.html"
+    },
+    {
+      "name": "Punk Records",
+      "short_name": "Characters",
+      "description": "Character database",
+      "url": "./characters.html"
+    },
+    {
+      "name": "Theory Workbench",
+      "short_name": "Workbench",
+      "description": "Build a theory with citations",
+      "url": "./workbench.html"
+    }
+  ]
+}

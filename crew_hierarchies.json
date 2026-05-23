@@ -1,0 +1,710 @@
+{
+  "_doc": "Hand-curated crew hierarchies for the major organised crews. Bake.py merges these into crews.json at bake time, attaching _tier and _tier_priority to each member. crew.html renders by tier when tiers are present, otherwise falls back to status+rank ordering. Add via PR.",
+  "generated_on": "2026-04-27",
+  "_tier_glossary": "Lower priority = higher in the hierarchy. Captain=0, lieutenants/commanders=10, elite officers=20, mid-tier officers=30, rank-and-file=40, support=50, current other=60, former=80, undercover=85, defected/traitor=88.",
+  "crews": {
+    "Baroque Works": {
+      "tiers": [
+        {
+          "label": "President (Mr. 0)",
+          "priority": 0,
+          "members": [
+            "Sir Crocodile"
+          ]
+        },
+        {
+          "label": "Vice-President (Miss All Sunday)",
+          "priority": 10,
+          "members": [
+            "Nico Robin"
+          ]
+        },
+        {
+          "label": "Officer Agents — Billions Tier",
+          "priority": 20,
+          "members": [
+            "Daz Bonez",
+            "Bentham",
+            "Galdino",
+            "Marianne",
+            "Babe",
+            "Zala"
+          ]
+        },
+        {
+          "label": "Officer Agents — Millions Tier",
+          "priority": 30,
+          "members": [
+            "Mr. 5",
+            "Miss Valentine",
+            "Mr. 4",
+            "Miss Merry Christmas",
+            "Mr. 6"
+          ]
+        },
+        {
+          "label": "Frontier Agents",
+          "priority": 40,
+          "members": [
+            "Mr. 7",
+            "Miss Father's Day",
+            "Mr. 8",
+            "Miss Monday",
+            "Mr. 9",
+            "Miss Wednesday",
+            "Mr. 11",
+            "Miss Friday",
+            "Mr. 13",
+            "Miss Sunday"
+          ]
+        }
+      ]
+    },
+    "Beasts Pirates": {
+      "tiers": [
+        {
+          "label": "Governor-General",
+          "priority": 0,
+          "members": [
+            "Kaidou"
+          ]
+        },
+        {
+          "label": "All-Stars (Lead Performers)",
+          "priority": 10,
+          "members": [
+            "King",
+            "Queen",
+            "Jack"
+          ]
+        },
+        {
+          "label": "Tobi Roppo (Flying Six)",
+          "priority": 20,
+          "members": [
+            "X Drake",
+            "Page One",
+            "Ulti",
+            "Who's-Who",
+            "Sasaki",
+            "Black Maria"
+          ]
+        },
+        {
+          "label": "Headliners",
+          "priority": 30,
+          "members": [
+            "Basil Hawkins",
+            "Scratchmen Apoo",
+            "Sheepshead",
+            "Holed'em",
+            "Speed",
+            "Ginrummy",
+            "Babanuki",
+            "Bao Huang",
+            "Daifugo",
+            "Solitaire",
+            "Briscola",
+            "Dobon",
+            "Hamlet",
+            "Madilloman",
+            "Mizerka",
+            "Wanyudo"
+          ]
+        },
+        {
+          "label": "Numbers",
+          "priority": 35,
+          "members": [
+            "Hatcha",
+            "Inbi",
+            "Nangi",
+            "Fuga",
+            "Goki",
+            "Jaki",
+            "Kunyun",
+            "Juki",
+            "Zanki"
+          ]
+        },
+        {
+          "label": "Gifters & Pleasures",
+          "priority": 40,
+          "members": [
+            "Alpacaman",
+            "Batman",
+            "Battaman",
+            "Beegirl",
+            "Beetleman",
+            "Caimanlady",
+            "Dachoman",
+            "Donannoyo",
+            "Gazelleman",
+            "Hippan Natte",
+            "Horseman",
+            "Kamakirigirl",
+            "Madilloman",
+            "Mouseman",
+            "Rabbitman",
+            "Redwolf",
+            "Sarahebi",
+            "Scorpionlady",
+            "Snakeman (Gifter)",
+            "Solitaire",
+            "Tenjo-Sagari",
+            "Yamanba"
+          ]
+        },
+        {
+          "label": "Allied Samurai (former Wano leadership)",
+          "priority": 50,
+          "members": [
+            "Kurozumi Orochi",
+            "Kurozumi Kanjuro",
+            "Fukurokuju"
+          ]
+        },
+        {
+          "label": "Defected",
+          "priority": 88,
+          "members": [
+            "Yamato"
+          ]
+        }
+      ]
+    },
+    "Big Mom Pirates": {
+      "tiers": [
+        {
+          "label": "Captain",
+          "priority": 0,
+          "members": [
+            "Charlotte Linlin"
+          ]
+        },
+        {
+          "label": "Sweet Commanders",
+          "priority": 10,
+          "members": [
+            "Charlotte Cracker",
+            "Charlotte Smoothie",
+            "Charlotte Katakuri",
+            "Charlotte Perospero"
+          ]
+        },
+        {
+          "label": "Ministers (Senior Officers)",
+          "priority": 20,
+          "members": [
+            "Charlotte Daifuku",
+            "Charlotte Oven",
+            "Charlotte Compote",
+            "Charlotte Mont-d'Or",
+            "Charlotte Galette",
+            "Charlotte Brulee",
+            "Charlotte Amande",
+            "Charlotte Chiffon"
+          ]
+        },
+        {
+          "label": "Charlotte Family — Officers",
+          "priority": 30,
+          "members": [
+            "Charlotte Pudding",
+            "Charlotte Praline",
+            "Charlotte Brownie",
+            "Charlotte Opera",
+            "Charlotte Mascarpone",
+            "Charlotte Joscarpone",
+            "Charlotte Snack",
+            "Charlotte Decuplets",
+            "Charlotte Chestnut",
+            "Charlotte Anglais",
+            "Charlotte Akimeg",
+            "Charlotte Allmeg",
+            "Charlotte Effilée",
+            "Charlotte Hachée",
+            "Charlotte Linlin"
+          ]
+        }
+      ]
+    },
+    "Blackbeard Pirates": {
+      "tiers": [
+        {
+          "label": "Captain (Admiral)",
+          "priority": 0,
+          "members": [
+            "Marshall D. Teach"
+          ]
+        },
+        {
+          "label": "Ten Titanic Captains",
+          "priority": 10,
+          "members": [
+            "Jesus Burgess",
+            "Shiryu",
+            "Van Augur",
+            "Avalo Pizarro",
+            "Vasco Shot",
+            "Catarina Devon",
+            "Sanjuan Wolf",
+            "Laffitte",
+            "Doc Q",
+            "Kuzan"
+          ]
+        },
+        {
+          "label": "Crewmates",
+          "priority": 30,
+          "members": [
+            "Stronger"
+          ]
+        }
+      ]
+    },
+    "Cross Guild": {
+      "tiers": [
+        {
+          "label": "Founders / Co-Leaders",
+          "priority": 0,
+          "members": [
+            "Buggy",
+            "Dracule Mihawk",
+            "Sir Crocodile"
+          ]
+        },
+        {
+          "label": "Bounty Hunters",
+          "priority": 20,
+          "members": [
+            "Daz Bonez",
+            "Galdino",
+            "Mohji",
+            "Cabaji",
+            "Alvida"
+          ]
+        }
+      ]
+    },
+    "Donquixote Pirates": {
+      "tiers": [
+        {
+          "label": "Captain (Young Master)",
+          "priority": 0,
+          "members": [
+            "Donquixote Doflamingo"
+          ]
+        },
+        {
+          "label": "Top Executive Officers",
+          "priority": 10,
+          "members": [
+            "Vergo",
+            "Trebol",
+            "Diamante",
+            "Pica"
+          ]
+        },
+        {
+          "label": "Elite Officers",
+          "priority": 20,
+          "members": [
+            "Lao G",
+            "Senor Pink",
+            "Machvise",
+            "Dellinger",
+            "Gladius"
+          ]
+        },
+        {
+          "label": "Family Pirates Officers",
+          "priority": 30,
+          "members": [
+            "Sugar",
+            "Monet",
+            "Buffalo",
+            "Baby 5",
+            "Giolla",
+            "Jora"
+          ]
+        }
+      ]
+    },
+    "Heart Pirates": {
+      "tiers": [
+        {
+          "label": "Captain",
+          "priority": 0,
+          "members": [
+            "Trafalgar D. Water Law"
+          ]
+        },
+        {
+          "label": "First Mate / Navigator",
+          "priority": 10,
+          "members": [
+            "Bepo"
+          ]
+        },
+        {
+          "label": "Officers",
+          "priority": 20,
+          "members": [
+            "Shachi",
+            "Penguin",
+            "Jean Bart",
+            "Ikkaku",
+            "Hakugan",
+            "Clione",
+            "Uni"
+          ]
+        }
+      ]
+    },
+    "Kid Pirates": {
+      "tiers": [
+        {
+          "label": "Captain",
+          "priority": 0,
+          "members": [
+            "Eustass Kid"
+          ]
+        },
+        {
+          "label": "Officers",
+          "priority": 20,
+          "members": [
+            "Killer",
+            "Heat",
+            "Wire"
+          ]
+        }
+      ]
+    },
+    "Marines": {
+      "tiers": [
+        {
+          "label": "Commander-in-Chief",
+          "priority": 0,
+          "members": [
+            "Kong"
+          ]
+        },
+        {
+          "label": "Fleet Admiral",
+          "priority": 2,
+          "members": [
+            "Sakazuki"
+          ]
+        },
+        {
+          "label": "Admiral",
+          "priority": 5,
+          "members": [
+            "Aramaki",
+            "Borsalino",
+            "Issho"
+          ]
+        },
+        {
+          "label": "Vice Admiral",
+          "priority": 10,
+          "members": [
+            "Bastille",
+            "Bluegrass",
+            "Cancer",
+            "Comil",
+            "Dalmatian",
+            "Doberman",
+            "Doll",
+            "Gion",
+            "Guillotine",
+            "Hototogisu",
+            "Hound",
+            "John Giant",
+            "Maynard",
+            "Mozambia",
+            "Onigumo",
+            "Pomsky",
+            "Red King",
+            "Smoker",
+            "Stainless",
+            "Strawberry",
+            "T Bone",
+            "Tokikake",
+            "Tosa",
+            "Tsuru",
+            "Urban",
+            "Yamakaji"
+          ]
+        },
+        {
+          "label": "Rear Admiral",
+          "priority": 15,
+          "members": [
+            "Catacombo",
+            "Hina",
+            "Kujaku",
+            "Prince Grus",
+            "Sicily"
+          ]
+        },
+        {
+          "label": "Commodore",
+          "priority": 20,
+          "members": [
+            "Brannew",
+            "Daigin",
+            "Kibin",
+            "Yarisugi"
+          ]
+        },
+        {
+          "label": "Captain",
+          "priority": 25,
+          "members": [
+            "Gorilla",
+            "Nezumi",
+            "Ratel",
+            "Sharinguru",
+            "Shu",
+            "Tashigi",
+            "Very Good"
+          ]
+        },
+        {
+          "label": "Commander",
+          "priority": 30,
+          "members": [
+            "Donquixote Rosinante",
+            "Glove",
+            "Hibari",
+            "Ripper"
+          ]
+        },
+        {
+          "label": "Officers",
+          "priority": 50,
+          "members": [
+            "Asahija",
+            "Bogard",
+            "Bomba (Marine)",
+            "Candre",
+            "Fishbonen",
+            "Fullbody",
+            "Jango",
+            "Koda",
+            "Kyuji",
+            "Makko",
+            "Marine Headquarters Court",
+            "Mashikaku",
+            "Pike",
+            "Rika",
+            "Rokkaku",
+            "Shine",
+            "Tensei"
+          ]
+        },
+        {
+          "label": "Special Branch — SSG",
+          "priority": 55,
+          "members": [
+            "Vegapunk/Edison",
+            "Vegapunk/Shaka"
+          ]
+        },
+        {
+          "label": "Special Branch — SWORD",
+          "priority": 56,
+          "members": [
+            "X Drake"
+          ]
+        }
+      ]
+    },
+    "Red Hair Pirates": {
+      "tiers": [
+        {
+          "label": "Captain",
+          "priority": 0,
+          "members": [
+            "Shanks"
+          ]
+        },
+        {
+          "label": "First Mate / Vice",
+          "priority": 10,
+          "members": [
+            "Benn Beckman"
+          ]
+        },
+        {
+          "label": "Officers",
+          "priority": 20,
+          "members": [
+            "Lucky Roux",
+            "Yasopp",
+            "Rockstar",
+            "Limejuice",
+            "Bonk Punch",
+            "Monster",
+            "Hongo",
+            "Building Snake",
+            "Howling Gab"
+          ]
+        }
+      ]
+    },
+    "Roger Pirates": {
+      "tiers": [
+        {
+          "label": "Captain (Pirate King)",
+          "priority": 0,
+          "members": [
+            "Gol D. Roger"
+          ]
+        },
+        {
+          "label": "First Mate",
+          "priority": 10,
+          "members": [
+            "Silvers Rayleigh"
+          ]
+        },
+        {
+          "label": "Officers",
+          "priority": 20,
+          "members": [
+            "Scopper Gaban",
+            "Crocus",
+            "Shanks",
+            "Buggy",
+            "Seagull Guns Nozdon",
+            "Sunbell",
+            "Doringo",
+            "Gin Beagle",
+            "Petermoo"
+          ]
+        },
+        {
+          "label": "Apprentices",
+          "priority": 40,
+          "members": [
+            "Shanks",
+            "Buggy"
+          ]
+        }
+      ]
+    },
+    "Straw Hat Pirates": {
+      "tiers": [
+        {
+          "label": "Captain",
+          "priority": 0,
+          "members": [
+            "Monkey D. Luffy"
+          ]
+        },
+        {
+          "label": "Combat Officers",
+          "priority": 10,
+          "members": [
+            "Roronoa Zoro",
+            "Vinsmoke Sanji",
+            "Sanji",
+            "Jinbe"
+          ]
+        },
+        {
+          "label": "Specialist Officers",
+          "priority": 20,
+          "members": [
+            "Nami",
+            "Usopp",
+            "Tony Tony Chopper",
+            "Nico Robin",
+            "Franky",
+            "Brook"
+          ]
+        },
+        {
+          "label": "Allies / Honorary",
+          "priority": 50,
+          "members": [
+            "Nefertari Vivi",
+            "Carrot",
+            "Pirate Bear"
+          ]
+        }
+      ]
+    },
+    "Whitebeard Pirates": {
+      "tiers": [
+        {
+          "label": "Captain",
+          "priority": 0,
+          "members": [
+            "Edward Newgate"
+          ]
+        },
+        {
+          "label": "1st Division Commander",
+          "priority": 10,
+          "members": [
+            "Marco"
+          ]
+        },
+        {
+          "label": "2nd Division Commander",
+          "priority": 11,
+          "members": [
+            "Portgas D. Ace"
+          ]
+        },
+        {
+          "label": "Other Division Commanders",
+          "priority": 12,
+          "members": [
+            "Jozu",
+            "Thatch",
+            "Vista",
+            "Blamenco",
+            "Rakuyo",
+            "Namur",
+            "Blenheim",
+            "Curiel",
+            "Kingdew",
+            "Haruta",
+            "Atmos",
+            "Speed Jiru",
+            "Fossa",
+            "Izou"
+          ]
+        },
+        {
+          "label": "Allied / Subordinate Captains",
+          "priority": 30,
+          "members": [
+            "A O",
+            "Bizarre",
+            "Blondie",
+            "Delacuaji",
+            "Doma",
+            "Elmy",
+            "Little Oars Jr.",
+            "McGuy",
+            "Ramba"
+          ]
+        },
+        {
+          "label": "Defected (Blackbeard)",
+          "priority": 88,
+          "members": [
+            "Marshall D. Teach"
+          ]
+        }
+      ]
+    }
+  }
+}

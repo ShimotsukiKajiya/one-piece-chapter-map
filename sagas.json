@@ -1,0 +1,76 @@
+{
+  "_doc": "The 10 canonical sagas grouping the 33 arcs of One Piece. Each saga has a chapter range, the arcs it contains, and a brief description.",
+  "generated_on": "2026-04-27",
+  "sagas": [
+    {
+      "name": "East Blue",
+      "ch_start": 1, "ch_end": 100,
+      "arcs": ["Romance Dawn", "Orange Town", "Syrup Village", "Baratie", "Arlong Park", "Loguetown"],
+      "summary": "Luffy assembles his crew (Zoro, Nami, Usopp, Sanji) and they conquer the East Blue's most notorious pirates. Ends with the Strawhats setting sail for the Grand Line.",
+      "icon": "🌊"
+    },
+    {
+      "name": "Alabasta",
+      "ch_start": 101, "ch_end": 217,
+      "arcs": ["Reverse Mountain", "Whisky Peak", "Little Garden", "Drum Island", "Alabasta"],
+      "summary": "Crew enters the Grand Line, gains Chopper and Vivi as a temporary member, defeats Sir Crocodile and Baroque Works, saves Alabasta from civil war.",
+      "icon": "🏜"
+    },
+    {
+      "name": "Sky Island",
+      "ch_start": 218, "ch_end": 302,
+      "arcs": ["Jaya", "Skypiea"],
+      "summary": "Strawhats sail to the sky on the Knock-Up Stream, discover Skypiea, defeat Enel and ring the Golden Bell of Shandora.",
+      "icon": "☁"
+    },
+    {
+      "name": "Water 7",
+      "ch_start": 303, "ch_end": 441,
+      "arcs": ["Long Ring Long Land", "Water 7", "Enies Lobby", "Post-Enies Lobby"],
+      "summary": "Foxy Pirates · CP9 attacks Water 7 · the Strawhats burn the World Government flag at Enies Lobby for Robin · Going Merry's farewell · Robin officially joins · Franky joins · the Thousand Sunny is born.",
+      "icon": "🌊"
+    },
+    {
+      "name": "Thriller Bark",
+      "ch_start": 442, "ch_end": 489,
+      "arcs": ["Thriller Bark"],
+      "summary": "Spooky Warlord arc — Gecko Moria, the Mysterious Four, the Ghost Ship. Brook joins the crew.",
+      "icon": "👻"
+    },
+    {
+      "name": "Summit War",
+      "ch_start": 490, "ch_end": 597,
+      "arcs": ["Sabaody Archipelago", "Amazon Lily", "Impel Down", "Marineford", "Post-War"],
+      "summary": "Kuma scatters the Strawhats. Luffy crashes Impel Down, then Marineford to save Ace. Ace dies. Whitebeard dies declaring 'One Piece is real.' The 2-year timeskip begins. The crew trains.",
+      "icon": "⚔"
+    },
+    {
+      "name": "Fish-Man Island",
+      "ch_start": 598, "ch_end": 653,
+      "arcs": ["Return to Sabaody", "Fish-Man Island"],
+      "summary": "Reunion after the timeskip. Crew descends to the bottom of the sea, defeats Hody Jones, meets Shirahoshi (a Poseidon weapon), enters the New World.",
+      "icon": "🐠"
+    },
+    {
+      "name": "Dressrosa",
+      "ch_start": 654, "ch_end": 801,
+      "arcs": ["Punk Hazard", "Dressrosa"],
+      "summary": "Punk Hazard alliance with Law and Smoker against Caesar Clown and Vergo. Dressrosa: defeat Doflamingo, free the country, the Strawhat Grand Fleet is formed.",
+      "icon": "🌹"
+    },
+    {
+      "name": "Yonko",
+      "ch_start": 802, "ch_end": 1057,
+      "arcs": ["Zou", "Whole Cake Island", "Levely", "Wano Country"],
+      "summary": "Mink alliance · Strawhats split — Sanji rescue from Big Mom · Reverie reveals Imu · Wano: Kaidou and Big Mom defeated · Luffy awakens Gear 5 · Buggy joins the Yonko · the Worst Generation reshape the world.",
+      "icon": "👑"
+    },
+    {
+      "name": "Final Saga",
+      "ch_start": 1058, "ch_end": 9999,
+      "arcs": ["Egghead", "Elbaph", "Endgame (TBA)"],
+      "summary": "Cross Guild forms · Vegapunk's broadcast reveals Void Century truths · Five Elders attack Egghead · Strawhats race for Laugh Tale and the truth of the world. Currently ongoing.",
+      "icon": "🎯"
+    }
+  ]
+}

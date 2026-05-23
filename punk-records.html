@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punk Records · The Shimotsuki Codex</title>
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<meta name="description" content="Vegapunk's encyclopedia — every character, crew, fruit, race, weapon, location, and artefact in canon. The Shimotsuki Codex's reference hub.">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;--green:#7ac290;--violet:#b388ff;--rose:#e07faa}
+  body{
+    background:
+      radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),
+      radial-gradient(circle at 75% 85%,rgba(106,158,200,.04) 0%,transparent 50%),
+      var(--bg);
+    color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px
+  }
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+
+  header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+
+  main{max-width:1200px;margin:0 auto;padding:36px 24px;position:relative;z-index:1}
+  .hero{text-align:center;margin-bottom:48px}
+  .hero h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    font-weight:900;letter-spacing:5px;text-transform:uppercase;
+    background:linear-gradient(180deg,var(--gold-bright) 0%,var(--gold) 60%,#a07020 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    margin-bottom:8px;
+  }
+  .hero .sub{color:var(--ink-blue);font-size:1rem;letter-spacing:3px;text-transform:uppercase;font-style:italic;margin-bottom:18px}
+  .hero .blurb{font-size:1.05rem;line-height:1.75;color:var(--text);max-width:700px;margin:0 auto}
+  .hero .blurb em{color:var(--gold-bright);font-style:normal;font-weight:700}
+  .gold-rule{width:240px;height:2px;margin:30px auto 0;background:linear-gradient(to right,transparent,var(--gold),transparent);position:relative}
+  .gold-rule::before,.gold-rule::after{content:'✦';position:absolute;top:-10px;color:var(--gold);font-size:.85rem}
+  .gold-rule::before{left:-2px}.gold-rule::after{right:-2px}
+
+  /* Group sections */
+  .group{margin-bottom:48px}
+  .group-head{display:flex;align-items:baseline;gap:18px;margin-bottom:18px;padding:0 6px}
+  .group-head .icon{font-size:1.8rem}
+  .group-head h3{font-size:1.5rem;color:var(--gold-bright);font-weight:800;letter-spacing:2px}
+  .group-head .desc{color:var(--muted);font-style:italic;font-size:.92rem;flex:1;margin-left:6px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .card{
+    background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+    border:1px solid var(--border);
+    border-radius:12px;padding:18px 20px;
+    text-decoration:none;color:inherit;
+    transition:all .15s;
+    display:flex;flex-direction:column;gap:8px;
+    position:relative;overflow:hidden;
+  }
+  .card::before{
+    content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:var(--gold);
+    transition:width .15s;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    border-color:var(--gold);
+    box-shadow:0 6px 20px rgba(0,0,0,.5);
+  }
+  .card:hover::before{width:6px}
+  .card .ic{font-size:1.6rem}
+  .card .name{font-weight:800;color:var(--gold-bright);font-size:1.05rem;letter-spacing:.5px}
+  .card .summary{color:var(--text);font-size:.85rem;line-height:1.5;flex:1}
+  .card .stat{color:var(--muted);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;padding-top:6px;border-top:1px dashed rgba(212,164,74,.2);font-weight:700}
+  .card .stat strong{color:var(--gold-bright)}
+
+  /* Group-specific accent colours on the left rail */
+  .group.people .card::before  { background:var(--gold) }
+  .group.powers .card::before  { background:var(--rose) }
+  .group.setting .card::before { background:var(--ink-blue) }
+  .group.gear .card::before    { background:var(--green) }
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1200px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/punk-records.html">
+  <meta property="og:title" content="Punk Records · The Shimotsuki Codex">
+  <meta property="og:description" content="Vegapunk">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/punk-records.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Punk Records · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Vegapunk">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Punk Records</span></a>
+</header>
+<main>
+  <section class="hero">
+    <h2>Punk Records</h2>
+    <div class="sub">Vegapunk's Encyclopedia</div>
+    <p class="blurb">In canon, <em>Punk Records</em> is Vegapunk's database — every fact about every person, fruit, weapon, and place in the world, indexed and cross-referenced. This is our version: every reference page in the Codex, organised by what you're looking for. Pick a card to dive in.</p>
+    <div class="gold-rule"></div>
+  </section>
+
+  <!-- ── PEOPLE ── -->
+  <section class="group people">
+    <div class="group-head">
+      <span class="icon">👥</span>
+      <h3>People</h3>
+      <span class="desc">Characters, crews, families, voices — everyone in the world</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="characters.html">
+        <span class="ic">👤</span>
+        <span class="name">Characters</span>
+        <span class="summary">Every named character in the Codex with their canon stats, portraits, and cross-references.</span>
+        <span class="stat" id="s-chars"><strong>1,545</strong> characters</span>
+      </a>
+      <a class="card" href="bounties.html">
+        <span class="ic">💰</span>
+        <span class="name">Bounty Wall</span>
+        <span class="summary">Every Marine-issued bounty as a printable wanted poster. Sortable, includes bounty history.</span>
+        <span class="stat" id="s-bounties"><strong>246</strong> bounties</span>
+      </a>
+      <a class="card" href="voices.html">
+        <span class="ic">🎙️</span>
+        <span class="name">Voice Cast</span>
+        <span class="summary">Every JP and EN voice actor. Multi-role workhorses tagged — some VAs play 40+ roles.</span>
+        <span class="stat" id="s-voices"><strong>649</strong> JP / <strong>677</strong> EN</span>
+      </a>
+      <a class="card" href="compare.html">
+        <span class="ic">⚖</span>
+        <span class="name">Compare Stats</span>
+        <span class="summary">Stack 2-6 characters side-by-side across every recorded stat.</span>
+        <span class="stat">Quick-pick crews, Yonko, Admirals, D-Clan</span>
+      </a>
+      <a class="card" href="heights.html">
+        <span class="ic">📏</span>
+        <span class="name">Compare Heights</span>
+        <span class="summary">Visual silhouette comparison at true canon scale. Adjustable px/cm ruler.</span>
+        <span class="stat"><strong>429</strong> characters with height</span>
+      </a>
+      <a class="card" href="families.html">
+        <span class="ic">🌳</span>
+        <span class="name">Family Trees</span>
+        <span class="summary">Hand-curated bloodlines and adoptive families. Each edge cites its confirming chapter.</span>
+        <span class="stat"><strong>52</strong> relationships</span>
+      </a>
+      <a class="card" href="will-of-d.html">
+        <span class="ic">🇩</span>
+        <span class="name">Will of D.</span>
+        <span class="summary">Every confirmed D. carrier with canon hints + speculation about what the letter signifies.</span>
+        <span class="stat">The central mystery</span>
+      </a>
+      <a class="card" href="crews.html">
+        <span class="ic">⚓</span>
+        <span class="name">Crews & Orgs</span>
+        <span class="summary">Every pirate crew, marine unit, revolutionary cell, faction with hierarchical rosters.</span>
+        <span class="stat"><strong>358</strong> crews + orgs</span>
+      </a>
+      <a class="card" href="marines-wg.html">
+        <span class="ic">🪽</span>
+        <span class="name">Marines &amp; World Govt</span>
+        <span class="summary">Five Elders → Fleet Admiral → Admirals → Vice Admirals → CP0 → CP9 → SWORD. Full hierarchy.</span>
+        <span class="stat"><strong>8</strong> tiers · <strong>40+</strong> officers</span>
+      </a>
+      <a class="card" href="jolly-rogers.html">
+        <span class="ic">🏴‍☠️</span>
+        <span class="name">Jolly Rogers</span>
+        <span class="summary">Every crew flag in one grid. Filter by Yonko Era / Worst Generation. Click → crew profile.</span>
+        <span class="stat"><strong>171</strong> flags scraped</span>
+      </a>
+      <a class="card" href="races.html">
+        <span class="ic">🦊</span>
+        <span class="name">Races &amp; Tribes</span>
+        <span class="summary">Lunarians, Minks, Giants, Dwarves, Buccaneers, the mentioned Dosundada. Every named people.</span>
+        <span class="stat"><strong>21</strong> races</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── POWERS ── -->
+  <section class="group powers">
+    <div class="group-head">
+      <span class="icon">💥</span>
+      <h3>Powers</h3>
+      <span class="desc">Devil Fruits, Haki, combat styles, racial abilities</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="fruits.html">
+        <span class="ic">🍎</span>
+        <span class="name">Devil Fruit Codex</span>
+        <span class="summary">Every named fruit — Paramecia, Logia, Zoan, Mythical, Ancient. Type-coded with debut chapter.</span>
+        <span class="stat"><strong>155</strong> fruits</span>
+      </a>
+      <a class="card" href="awakenings.html">
+        <span class="ic">⚡</span>
+        <span class="name">Awakenings</span>
+        <span class="summary">Every canonically-confirmed Devil Fruit awakening, chronologically ordered.</span>
+        <span class="stat"><strong>29</strong> awakenings tracked</span>
+      </a>
+      <a class="card" href="haki.html">
+        <span class="ic">✦</span>
+        <span class="name">Haki Codex</span>
+        <span class="summary">Observation · Armament · Conqueror's + advanced variants (Future Sight, Ryuou, Coating).</span>
+        <span class="stat">3 core types · advanced forms</span>
+      </a>
+      <a class="card" href="combat-styles.html">
+        <span class="ic">🥋</span>
+        <span class="name">Combat Styles</span>
+        <span class="summary">Santoryu, Black Leg, Rokushiki, Fishman Karate, Electro, Sulong — every named martial art and racial ability.</span>
+        <span class="stat"><strong>16</strong> styles curated</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── SETTING ── -->
+  <section class="group setting">
+    <div class="group-head">
+      <span class="icon">🏛</span>
+      <h3>Setting</h3>
+      <span class="desc">The world — locations and ships</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="locations.html">
+        <span class="ic">🗺</span>
+        <span class="name">Locations</span>
+        <span class="summary">Major canonical islands, kingdoms, cities. Region-coded by sea (East Blue, Grand Line, New World, Sky).</span>
+        <span class="stat"><strong>115</strong> locations</span>
+      </a>
+      <a class="card" href="ships.html">
+        <span class="ic">⛵</span>
+        <span class="name">Ships</span>
+        <span class="summary">Named canon ships — Going Merry, Sunny, Moby Dick, Polar Tang, Onigashima, the Yonko fleet.</span>
+        <span class="stat"><strong>30+</strong> named ships</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── GEAR ── -->
+  <section class="group gear">
+    <div class="group-head">
+      <span class="icon">⚔</span>
+      <h3>Gear</h3>
+      <span class="desc">Weapons, items, materials, technology, ancient artefacts</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="weapons.html">
+        <span class="ic">⚔</span>
+        <span class="name">Weapons & Meito</span>
+        <span class="summary">Every named blade — Yoru, Wado, Enma, Murakumogiri + the cursed Kitetsu trio + non-sword weapons.</span>
+        <span class="stat"><strong>30+</strong> weapons</span>
+      </a>
+      <a class="card" href="items.html">
+        <span class="ic">🧪</span>
+        <span class="name">Items & Consumables</span>
+        <span class="summary">Energy Steroids, SMILE fruits, Rumble Balls, Pop Greens, Tone Dials, Vivre Cards.</span>
+        <span class="stat"><strong>21</strong> items</span>
+      </a>
+      <a class="card" href="materials.html">
+        <span class="ic">⚙</span>
+        <span class="name">Materials</span>
+        <span class="summary">Sea Prism Stone, Adam Wood, Wapametal, Pyrobloin, Dyna Stones — the raw substances of canon.</span>
+        <span class="stat"><strong>11</strong> materials</span>
+      </a>
+      <a class="card" href="tech.html">
+        <span class="ic">🤖</span>
+        <span class="name">Tech & Artefacts</span>
+        <span class="summary">Pacifista, Seraphim, Vegaforce-01, Den Den Mushi types, Mother Flame, Empty Throne.</span>
+        <span class="stat"><strong>16</strong> artefacts</span>
+      </a>
+      <a class="card" href="ancient-weapons.html">
+        <span class="ic">🏛</span>
+        <span class="name">Ancient Weapons</span>
+        <span class="summary">Pluton (warship), Poseidon (the mermaid princess), Uranus (the unrevealed third).</span>
+        <span class="stat"><strong>3</strong> world-enders</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>The Shimotsuki Codex · Punk Records — Vegapunk's database, our index &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrections Inbox · The Shimotsuki Codex</title>
+<meta name="description" content="Corrections Inbox — live feed of reader-submitted fixes for SBS Q&As, character data, and theory verdicts via GitHub Issues.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --bg:#0c0a14; --surface:#1a1610; --surface2:#251f15;
+      --border:#4a3820; --text:#e8d8b0; --muted:#8a7548;
+      --gold:#d4a44a; --gold-bright:#f5c95e; --ink-blue:#6a9ec8;
+      --green:#7ac290; --red:#e07070; --orange:#FF6B1A; --violet:#b388ff;
+    }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family:'Segoe UI', system-ui, sans-serif;
+      min-height:100vh; padding-bottom:80px;
+    }
+    a { color: var(--ink-blue); text-decoration:none; }
+    a:hover { color: var(--gold-bright); }
+
+    .topbar {
+      max-width:1100px; margin:0 auto; padding:24px 24px 0;
+      display:flex; align-items:center; gap:16px;
+    }
+    .logo {
+      width:46px; height:46px;
+      background:url('logo/shimotsuki-codex-mark-primary.png') center/contain no-repeat;
+      cursor:pointer;
+    }
+    .topbar h1 {
+      font-size:1.6rem; color:var(--gold-bright);
+      letter-spacing:3px; text-transform:uppercase; font-weight:800;
+    }
+    .topbar .sub { color:var(--muted); font-size:0.78rem; letter-spacing:2px; text-transform:uppercase; }
+
+    .intro {
+      max-width:1100px; margin:24px auto 12px; padding:0 24px;
+      color:var(--text); line-height:1.7; font-size:1rem;
+    }
+    .intro p { margin-bottom:10px; }
+
+    .actions {
+      max-width:1100px; margin:14px auto 0; padding:0 24px;
+      display:flex; flex-wrap:wrap; gap:12px;
+    }
+    .actions a.btn {
+      background:linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+      border:1px solid var(--border); border-left:4px solid var(--gold);
+      color:var(--text); padding:11px 18px; border-radius:10px;
+      font-size:0.88rem; letter-spacing:1px;
+    }
+    .actions a.btn:hover { border-color:var(--gold-bright); color:var(--gold-bright); }
+    .actions a.btn .ic { font-size:1.1rem; margin-right:6px; }
+
+    .filters {
+      max-width:1100px; margin:24px auto 0; padding:0 24px;
+      display:flex; flex-wrap:wrap; gap:8px;
+    }
+    .pill {
+      background:var(--surface); border:1px solid var(--border);
+      color:var(--muted); padding:7px 14px; border-radius:20px;
+      cursor:pointer; font-size:0.78rem; letter-spacing:1px;
+      transition:all 0.15s;
+    }
+    .pill.active, .pill:hover { color:var(--gold); border-color:var(--gold); }
+    .pill .count {
+      background:var(--surface2); color:var(--gold-bright);
+      padding:1px 7px; border-radius:9px; font-size:0.72rem;
+      margin-left:6px;
+    }
+
+    .grid {
+      max-width:1100px; margin:22px auto 0; padding:0 24px;
+      display:grid; grid-template-columns:1fr; gap:14px;
+    }
+
+    .issue {
+      background:var(--surface); border:1px solid var(--border);
+      border-left:4px solid var(--ink-blue);
+      border-radius:12px; padding:18px 22px;
+      transition:transform 0.15s, border-color 0.15s;
+    }
+    .issue:hover { transform:translateX(2px); border-left-color:var(--gold); }
+    .issue.closed { border-left-color:var(--green); opacity:0.85; }
+    .issue.theory { border-left-color:var(--violet); }
+    .issue.sbs    { border-left-color:var(--orange); }
+    .issue.fact   { border-left-color:var(--gold); }
+
+    .issue-row1 {
+      display:flex; align-items:center; gap:10px;
+      flex-wrap:wrap; margin-bottom:6px;
+    }
+    .issue-num { color:var(--muted); font-size:0.8rem; font-family:'Consolas',monospace; }
+    .issue-state {
+      font-size:0.68rem; padding:2px 8px; border-radius:9px;
+      letter-spacing:1px; text-transform:uppercase; font-weight:700;
+    }
+    .state-open   { background:rgba(122,194,144,0.15); color:var(--green);  border:1px solid var(--green); }
+    .state-closed { background:rgba(138,117,72,0.15);  color:var(--muted);  border:1px solid var(--muted); }
+    .badge {
+      font-size:0.66rem; padding:2px 7px; border-radius:9px;
+      letter-spacing:1px; text-transform:uppercase; font-weight:700;
+      background:var(--surface2); color:var(--gold);
+    }
+    .badge.theory { color:var(--violet); }
+    .badge.sbs    { color:var(--orange); }
+    .badge.fact   { color:var(--gold); }
+    .badge.other  { color:var(--ink-blue); }
+
+    .issue-title {
+      font-size:1.05rem; color:var(--text); font-weight:600;
+      line-height:1.4; margin-bottom:6px;
+    }
+    .issue-title a { color:var(--text); }
+    .issue-title a:hover { color:var(--gold-bright); }
+
+    .issue-meta {
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:0.78rem; color:var(--muted);
+    }
+    .issue-meta span { display:inline-flex; gap:4px; align-items:center; }
+
+    #status {
+      max-width:1100px; margin:30px auto; padding:24px;
+      text-align:center; color:var(--muted);
+      background:var(--surface); border:1px dashed var(--border);
+      border-radius:12px;
+    }
+    #status .err { color:var(--red); }
+
+    footer {
+      max-width:1100px; margin:60px auto 0; padding:24px;
+      border-top:1px solid var(--border);
+      text-align:center; color:var(--muted); font-size:0.75rem; letter-spacing:1px;
+    }
+  </style>
+  <link rel="stylesheet" href="cite-styles.css">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header, .topbar { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header, .topbar { padding-right: 185px !important; } } @media (max-width: 480px) { header, .topbar { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/corrections.html">
+  <meta property="og:title" content="Corrections Inbox · The Shimotsuki Codex">
+  <meta property="og:description" content="Corrections Inbox — live feed of reader-submitted fixes for SBS Q&As, character data, and theory verdicts via GitHub Issues.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/corrections.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Corrections Inbox · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Corrections Inbox — live feed of reader-submitted fixes for SBS Q&As, character data, and theory verdicts via GitHub Issues.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+
+<div class="topbar">
+  <a class="logo" href="home.html" title="Home" aria-label="The Shimotsuki Codex — Home"></a>
+  <div>
+    <h1>📥 Corrections Inbox</h1>
+    <div class="sub">Public submission queue · transparent curation</div>
+  </div>
+</div>
+
+<div class="intro">
+  <p>Every fix, theory submission, and SBS correction sent to the Codex lives here as a GitHub Issue. Open ones are in the queue; closed ones have been merged or addressed.</p>
+  <p>This page is read-only — to submit something new, use a button below or the templates on GitHub directly.</p>
+</div>
+
+<div class="actions">
+  <a class="btn" href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/issues/new?template=submit-correction.yml" target="_blank" rel="noopener"><span class="ic">✏️</span>Submit a fact correction</a>
+  <a class="btn" href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/issues/new?template=sbs-correction.yml" target="_blank" rel="noopener"><span class="ic">📜</span>Fix an SBS entry</a>
+  <a class="btn" href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/issues/new?template=suggest-theory.yml" target="_blank" rel="noopener"><span class="ic">🔥</span>Suggest a theory</a>
+</div>
+
+<p style="text-align:center;font-size:0.82rem;color:var(--muted);margin:14px 0 0;line-height:1.6">
+  No GitHub account? Reach out via Bluesky, X, or Reddit — links on the <a href="about.html">about page</a>. We'll add your contribution to the queue manually.
+</p>
+
+<div class="filters" id="filters" style="display:none">
+  <span class="pill active" data-filter="all">All <span class="count" id="c-all">0</span></span>
+  <span class="pill" data-filter="open">Open <span class="count" id="c-open">0</span></span>
+  <span class="pill" data-filter="closed">Closed <span class="count" id="c-closed">0</span></span>
+  <span class="pill" data-filter="theory">Theories <span class="count" id="c-theory">0</span></span>
+  <span class="pill" data-filter="sbs">SBS Fixes <span class="count" id="c-sbs">0</span></span>
+  <span class="pill" data-filter="fact">Fact Fixes <span class="count" id="c-fact">0</span></span>
+</div>
+
+<section id="grid" class="grid"></section>
+
+<div id="status">Loading inbox from GitHub…</div>
+
+<footer>
+  Live data from <a href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/issues" target="_blank" rel="noopener">github.com/ShimotsukiKajiya/one-piece-chapter-map/issues</a> · The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+
+<script>
+const REPO = 'ShimotsukiKajiya/one-piece-chapter-map';
+let ALL = [];
+let activeFilter = 'all';
+
+function classifyIssue(it) {
+  // Look at labels first, then template hint, then title
+  const labels = (it.labels || []).map(l => (l.name || '').toLowerCase());
+  const title  = (it.title || '').toLowerCase();
+  const body   = (it.body  || '').toLowerCase();
+  const hay    = labels.join(' ') + ' ' + title + ' ' + body.slice(0, 200);
+  if (/theory|theories|workbench|hunch|prediction/.test(hay))      return 'theory';
+  if (/sbs|q&a|qa|question corner|volume \d+/.test(hay))           return 'sbs';
+  if (/fact|correction|fix|wrong|error|mistake|typo|update/.test(hay)) return 'fact';
+  return 'other';
+}
+
+function badgeText(kind) {
+  return { theory: '🔥 Theory', sbs: '📜 SBS', fact: '✏️ Fact', other: '📌 Other' }[kind] || kind;
+}
+
+function timeAgo(iso) {
+  const then = new Date(iso).getTime();
+  const diff = (Date.now() - then) / 1000;
+  if (diff < 60)        return Math.floor(diff) + 's ago';
+  if (diff < 3600)      return Math.floor(diff/60) + 'm ago';
+  if (diff < 86400)     return Math.floor(diff/3600) + 'h ago';
+  if (diff < 86400*30)  return Math.floor(diff/86400) + 'd ago';
+  if (diff < 86400*365) return Math.floor(diff/(86400*30)) + 'mo ago';
+  return Math.floor(diff/(86400*365)) + 'y ago';
+}
+
+function render() {
+  const grid = document.getElementById('grid');
+  const list = ALL.filter(it => {
+    if (activeFilter === 'all')    return true;
+    if (activeFilter === 'open')   return it.state === 'open';
+    if (activeFilter === 'closed') return it.state === 'closed';
+    return it._kind === activeFilter;
+  });
+  if (!list.length) {
+    grid.innerHTML = '<div style="color:var(--muted);text-align:center;padding:30px">Nothing matches this filter.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(it => {
+    const stateCls   = it.state === 'closed' ? 'closed' : '';
+    const stateLabel = it.state === 'closed' ? 'state-closed' : 'state-open';
+    const author     = it.user && it.user.login ? '@' + it.user.login : 'unknown';
+    return `
+      <article class="issue ${it._kind} ${stateCls}">
+        <div class="issue-row1">
+          <span class="issue-num">#${it.number}</span>
+          <span class="issue-state ${stateLabel}">${it.state}</span>
+          <span class="badge ${it._kind}">${badgeText(it._kind)}</span>
+        </div>
+        <div class="issue-title"><a href="${it.html_url}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a></div>
+        <div class="issue-meta">
+          <span>👤 ${escapeHtml(author)}</span>
+          <span>📅 opened ${timeAgo(it.created_at)}</span>
+          ${it.comments ? `<span>💬 ${it.comments} comment${it.comments===1?'':'s'}</span>` : ''}
+          ${it.state==='closed' && it.closed_at ? `<span>✓ closed ${timeAgo(it.closed_at)}</span>` : ''}
+        </div>
+      </article>`;
+  }).join('');
+}
+
+function escapeHtml(s) {
+  return String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+function updateCounts() {
+  const open   = ALL.filter(i => i.state === 'open').length;
+  const closed = ALL.filter(i => i.state === 'closed').length;
+  const theory = ALL.filter(i => i._kind === 'theory').length;
+  const sbs    = ALL.filter(i => i._kind === 'sbs').length;
+  const fact   = ALL.filter(i => i._kind === 'fact').length;
+  document.getElementById('c-all').textContent    = ALL.length;
+  document.getElementById('c-open').textContent   = open;
+  document.getElementById('c-closed').textContent = closed;
+  document.getElementById('c-theory').textContent = theory;
+  document.getElementById('c-sbs').textContent    = sbs;
+  document.getElementById('c-fact').textContent   = fact;
+}
+
+document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => {
+  document.querySelectorAll('.pill').forEach(x => x.classList.remove('active'));
+  p.classList.add('active');
+  activeFilter = p.dataset.filter;
+  render();
+}));
+
+(async function load() {
+  const status = document.getElementById('status');
+  try {
+    // Pull both open and closed (last 50 closed) so the inbox shows resolution.
+    const [openRes, closedRes] = await Promise.all([
+      fetch(`https://api.github.com/repos/${REPO}/issues?state=open&per_page=100`,
+            { headers: { 'Accept': 'application/vnd.github+json' }}),
+      fetch(`https://api.github.com/repos/${REPO}/issues?state=closed&per_page=50&sort=updated`,
+            { headers: { 'Accept': 'application/vnd.github+json' }}),
+    ]);
+    if (!openRes.ok || !closedRes.ok) {
+      const code = !openRes.ok ? openRes.status : closedRes.status;
+      throw new Error(`GitHub API returned ${code}` + (code === 403 ? ' (rate limited — try again in an hour)' : ''));
+    }
+    const open   = await openRes.json();
+    const closed = await closedRes.json();
+    // Drop pull requests (the issues endpoint returns PRs too)
+    ALL = [...open, ...closed].filter(i => !i.pull_request);
+    ALL.forEach(i => i._kind = classifyIssue(i));
+    // Sort: open first, then by recency
+    ALL.sort((a, b) => {
+      if (a.state !== b.state) return a.state === 'open' ? -1 : 1;
+      return new Date(b.updated_at) - new Date(a.updated_at);
+    });
+    if (!ALL.length) {
+      status.innerHTML = '✨ Inbox is empty — no submissions yet. Use a button above to send the first one.';
+      return;
+    }
+    status.style.display = 'none';
+    document.getElementById('filters').style.display = 'flex';
+    updateCounts();
+    render();
+  } catch (e) {
+    status.innerHTML = `<span class="err">Couldn't reach GitHub: ${escapeHtml(e.message)}</span><br><br>` +
+      `<a href="https://github.com/${REPO}/issues" target="_blank" rel="noopener">View issues directly on GitHub →</a>`;
+  }
+})();
+</script>
+<script src="settings.js"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+"""Aggregate per-linker conflict logs into a single triage surface.
+
+Per docs/convergence-plan.md §"Conflict-tracking discipline" — the
+aggregator was promised when we had a 2nd linker; we now have 4. This
+script walks docs/canon_link_conflicts_*.json and produces:
+
+  docs/conflict_log.json  — merged machine-readable
+  docs/conflict_log.md    — unified markdown view, grouped by cause
+
+The grouping in the markdown is heuristic, intended to reduce 32
+scattered conflicts to ~5 distinct underlying issues:
+  * alias-collapse (huge count or chapter deltas)
+  * LRM-tainted duplicates (subject contains ‎ LRM character)
+  * small chapter discrepancies (likely real source-data drift)
+  * genuine value-mismatches (different fruit, different relation, etc.)
+
+Run:
+    python scripts/aggregate_conflicts.py
+"""
+from __future__ import annotations
+
+import json
+import re
+import sys
+from collections import Counter, defaultdict
+from datetime import datetime
+from pathlib import Path
+
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+ROOT = Path(__file__).resolve().parent.parent
+DOCS_DIR = ROOT / "docs"
+LOG_PATTERN = "canon_link_conflicts_*.json"
+OUT_JSON = DOCS_DIR / "conflict_log.json"
+OUT_MD   = DOCS_DIR / "conflict_log.md"
+
+# Heuristic threshold for "alias-collapse" classification on count-mismatch
+# conflicts: if the delta is large (>10), the shard probably unifies multiple
+# wiki aliases for the same chr_id while canon_facts has separate stale facts.
+ALIAS_COLLAPSE_DELTA_THRESHOLD = 10
+
+LRM_RE = re.compile(r"[​‌‍‎‏⁠﻿]")
+
+
+def classify(c: dict) -> str:
+    """Heuristic class for a conflict. Returns one of:
+       'alias-collapse', 'lrm-duplicate', 'small-chapter-drift',
+       'value-mismatch', 'unclassified'."""
+    kind = c.get("kind", "")
+    name = c.get("subject_name") or ""
+
+    # LRM-tainted subject — appears in canon_fact subject string but not in shard
+    if LRM_RE.search(name):
+        return "lrm-duplicate"
+
+    if kind == "count-mismatch":
+        delta = abs(c.get("delta", 0))
+        if delta > ALIAS_COLLAPSE_DELTA_THRESHOLD:
+            return "alias-collapse"
+        return "small-chapter-drift"
+
+    if kind == "chapter-mismatch":
+        # debuts-in chapter-mismatch with very different chapters often
+        # indicates alias-collapse (chr:01592's "Aokiji" appearance =
+        # ch:303 silhouette, but canon's first_app:Aokiji = ch:569 full)
+        sc = c.get("shard_chapter") or 0
+        fc = c.get("fact_chapter")  or 0
+        if isinstance(sc, int) and isinstance(fc, int) and abs(sc - fc) > 30:
+            return "alias-collapse"
+        return "small-chapter-drift"
+
+    if kind in ("type-mismatch", "fruit-mismatch", "value-mismatch"):
+        return "value-mismatch"
+
+    return "unclassified"
+
+
+def main() -> None:
+    log_files = sorted(DOCS_DIR.glob(LOG_PATTERN))
+    if not log_files:
+        print(f"No conflict logs found at {DOCS_DIR}/{LOG_PATTERN}")
+        return
+
+    print(f"Aggregating {len(log_files)} conflict log(s):")
+    for p in log_files:
+        print(f"  · {p.name}")
+
+    merged_conflicts: list[dict] = []
+    by_shard_stats: dict[str, dict] = {}
+    sources: list[str] = []
+
+    for path in log_files:
+        with open(path, encoding="utf-8") as f:
+            doc = json.load(f)
+        sources.append(path.name)
+        shard = doc.get("shard") or path.stem.replace("canon_link_conflicts_", "")
+        by_shard_stats[shard] = doc.get("stats", {})
+        for c in doc.get("conflicts", []):
+            # Tag each conflict with its source log + heuristic class.
+            c2 = dict(c)
+            c2.setdefault("shard", shard)
+            c2["heuristic_class"] = classify(c2)
+            merged_conflicts.append(c2)
+
+    # Group by heuristic class, then by chr_id (so alias-collapse cases
+    # involving the same character cluster together).
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for c in merged_conflicts:
+        groups[c["heuristic_class"]].append(c)
+
+    # Counts
+    by_shard_count = Counter(c["shard"] for c in merged_conflicts)
+    by_kind_count  = Counter(c.get("kind", "unknown") for c in merged_conflicts)
+    by_class_count = Counter(c["heuristic_class"] for c in merged_conflicts)
+
+    # Distinct chr_ids touched
+    chr_ids_touched = {c.get("chr_id") for c in merged_conflicts if c.get("chr_id")}
+
+    print(f"\n  Total conflicts:    {len(merged_conflicts)}")
+    print(f"  Distinct chr_ids:   {len(chr_ids_touched)}")
+    print(f"\n  By heuristic class:")
+    for cls, n in by_class_count.most_common():
+        print(f"    {n:>3}  {cls}")
+    print(f"\n  By shard:")
+    for s, n in by_shard_count.most_common():
+        print(f"    {n:>3}  {s}")
+
+    # Write merged JSON
+    out_json = {
+        "_doc": (
+            "Aggregated conflict log across all canon-link cross-references. "
+            "Generated by scripts/aggregate_conflicts.py — see "
+            "docs/convergence-plan.md §Conflict-tracking discipline."
+        ),
+        "generated_on":     datetime.now().isoformat(timespec="seconds"),
+        "source_logs":      sources,
+        "by_shard_stats":   by_shard_stats,
+        "summary": {
+            "total":            len(merged_conflicts),
+            "distinct_chr_ids": len(chr_ids_touched),
+            "by_shard":         dict(by_shard_count),
+            "by_kind":          dict(by_kind_count),
+            "by_class":         dict(by_class_count),
+        },
+        "conflicts": merged_conflicts,
+    }
+    with open(OUT_JSON, "w", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps(out_json, ensure_ascii=False, indent=2))
+        f.write("\n")
+    print(f"\n  Wrote {OUT_JSON.relative_to(ROOT)}")
+
+    # Markdown view, grouped by class
+    md = []
+    md.append("# Unified Conflict Log\n\n")
+    md.append(f"_Generated {datetime.now().isoformat(timespec='seconds')}_\n\n")
+    md.append(f"Aggregated across {len(log_files)} per-linker conflict log(s) per ")
+    md.append("[`convergence-plan.md`](convergence-plan.md) §Conflict-tracking discipline.\n\n")
+
+    md.append(f"## Summary\n\n")
+    md.append(f"- **Total conflicts:** {len(merged_conflicts)}\n")
+    md.append(f"- **Distinct chr_ids touched:** {len(chr_ids_touched)} (true unique data issues are likely ~half this number due to alias-collapse pairs)\n")
+    md.append(f"- **Heuristic classes:**\n")
+    for cls, n in by_class_count.most_common():
+        md.append(f"  - `{cls}`: {n}\n")
+    md.append(f"- **By shard:**\n")
+    for s, n in by_shard_count.most_common():
+        md.append(f"  - `{s}`: {n}\n")
+    md.append("\n")
+
+    # Class explanations
+    class_blurbs = {
+        "alias-collapse": (
+            "Multiple wiki aliases (e.g. Aokiji/Kuzan, Akainu/Sakazuki) collapse "
+            "to one chr_id in the shard, but canon_facts has separate stale "
+            "entries per alias. **Auto-resolvable**: dedupe canon_facts by "
+            "chr_id, keeping the canonical-name entry."
+        ),
+        "lrm-duplicate": (
+            "Canon_fact subject contains an invisible LRM character (`\\u200e`). "
+            "We cleaned LRM from `appearances.csv`, `crews.json`, "
+            "`punk_records.json` (commits earlier today), but `canon_facts.json` "
+            "still has stale LRM-tainted entries. **Auto-resolvable**: re-run "
+            "`extract_manga_facts.py` to regenerate."
+        ),
+        "small-chapter-drift": (
+            "Shard and canon_fact agree on the character but disagree on "
+            "exact chapter or appearance type by a small margin. Often real "
+            "scraping discrepancies — e.g. Macro at ch:437 vs ch:197. **Needs "
+            "human triage**: read the manga to decide."
+        ),
+        "value-mismatch": (
+            "Shard and canon_fact disagree on the related entity (different "
+            "fruit assigned, different family relation, etc.). **Needs human "
+            "triage**: investigate which source is wrong."
+        ),
+        "unclassified": (
+            "Heuristic couldn't classify. Look at individual conflicts."
+        ),
+    }
+
+    for cls in ["alias-collapse", "lrm-duplicate", "small-chapter-drift", "value-mismatch", "unclassified"]:
+        if not groups.get(cls):
+            continue
+        md.append(f"## {cls} ({len(groups[cls])})\n\n")
+        md.append(class_blurbs.get(cls, "") + "\n\n")
+        # Sort by chr_id for stable ordering, group identical chr_ids together
+        sorted_g = sorted(groups[cls], key=lambda c: (c.get("chr_id") or "", c.get("shard", "")))
+        for c in sorted_g[:60]:
+            shard = c.get("shard", "?")
+            name  = c.get("subject_name", "?")
+            chr_id = c.get("chr_id", "?")
+            kind = c.get("kind", "?")
+            # Per-kind detail line
+            if kind == "count-mismatch":
+                detail = f"{c.get('predicate')}: shard={c.get('shard_count')}, canon={c.get('canon_count')}, Δ={c.get('delta'):+}"
+            elif kind == "chapter-mismatch":
+                detail = (f"shard ch{c.get('shard_chapter')}/{c.get('shard_appearance_type')}, "
+                          f"canon ch{c.get('fact_chapter')}/{c.get('fact_appearance_type')}")
+            elif kind == "type-mismatch":
+                detail = (f"chapter {c.get('shard_chapter') or c.get('fact_chapter')}, "
+                          f"shard type={c.get('shard_appearance_type')}, "
+                          f"canon type={c.get('fact_appearance_type')}")
+            elif kind == "fruit-mismatch":
+                sv = c.get("shard_value", {})
+                fv = c.get("fact_value", {})
+                detail = f"shard={sv.get('fruit_name')}, canon={fv.get('raw')}"
+            elif kind == "value-mismatch":
+                sv = c.get("shard_value", {})
+                detail = f"relation={c.get('relation')}, shard_to={sv.get('to_name')}"
+            else:
+                detail = "(no detail)"
+            md.append(f"- `[{shard}]` **{name}** ({chr_id}) — {detail}\n")
+        if len(sorted_g) > 60:
+            md.append(f"\n_…and {len(sorted_g) - 60} more in this class._\n")
+        md.append("\n")
+
+    md.append("---\n\n*Re-run via `python scripts/aggregate_conflicts.py`. Idempotent — overwrites previous unified log.*\n")
+    with open(OUT_MD, "w", encoding="utf-8", newline="\n") as f:
+        f.writelines(md)
+    print(f"  Wrote {OUT_MD.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()

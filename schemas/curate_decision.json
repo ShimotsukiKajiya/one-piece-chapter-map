@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/curate_decision.json",
+  "title": "Curate decision row",
+  "description": "A single decision in docs/curate_decisions.json. Suppresses re-surfacing of an ambiguous claim in curate_queue.json.",
+  "type": "object",
+  "required": ["claim_id", "evidence_id", "decision", "decided_by", "decided_on"],
+  "properties": {
+    "claim_id":    {"type": "string", "pattern": "^[a-z]+:.+$"},
+    "evidence_id": {"$ref": "_common.json#/$defs/sbs_id"},
+    "decision":    {"type": "string", "enum": ["approve", "reject", "defer"]},
+    "decided_by":  {"type": "string", "minLength": 1},
+    "decided_on":  {"$ref": "_common.json#/$defs/iso_date"},
+    "note":        {"type": "string"}
+  },
+  "additionalProperties": false
+}

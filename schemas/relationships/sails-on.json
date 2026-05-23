@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/sails-on.json",
+  "title": "sails-on relationship",
+  "description": "character → ship. A character who sails (or sailed) on this ship.",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from":     {"$ref": "../_common.json#/$defs/character_id"},
+    "to":       {"$ref": "../_common.json#/$defs/ship_id"},
+    "src":      {"$ref": "../_common.json#/$defs/src"},
+    "current":  {"type": "boolean", "description": "True if this is still their active ship"},
+    "since":    {"$ref": "../_common.json#/$defs/chapter_id"},
+    "until":    {"$ref": "../_common.json#/$defs/chapter_id"},
+    "note":     {"type": "string"},
+    "tier":     {"$ref": "../_common.json#/$defs/tier"},
+    "evidence": {
+      "type": "array",
+      "items": {"$ref": "../_common.json#/$defs/evidence_ref"}
+    }
+  },
+  "additionalProperties": false
+}

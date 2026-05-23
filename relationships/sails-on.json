@@ -1,0 +1,3564 @@
+[
+  {
+    "from": "chr:01562",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01562",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01562",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01562",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01594",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01594",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01594",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01594",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01599",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01599",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01599",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01599",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01632",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01632",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01632",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01632",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01642",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01642",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01642",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01642",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01656",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01656",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01656",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01656",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01676",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01676",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01676",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01676",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01686",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01686",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01686",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01686",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01688",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01688",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01688",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01688",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01694",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01694",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01694",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01694",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01696",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01696",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01696",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01696",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01724",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01724",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01724",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01724",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01728",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01728",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01728",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01728",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01729",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01729",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01729",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01729",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01740",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01740",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01740",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01740",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01863",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01863",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01863",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01863",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01886",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01886",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01886",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01886",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01890",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01890",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01890",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01890",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01909",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01909",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01909",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01909",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01915",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01915",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01915",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01915",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01921",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01921",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01921",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01921",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01931",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01931",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01931",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01931",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01982",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01982",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01982",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01982",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01999",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01999",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01999",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01999",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02049",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02049",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02049",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02049",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02055",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02055",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02055",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02055",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02068",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02068",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02068",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02068",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02077",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02077",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02077",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02077",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02126",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02126",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02126",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02126",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02134",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02134",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02134",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02134",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02159",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02159",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02159",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02159",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02160",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02160",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02160",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02160",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02197",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02197",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02197",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02197",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02207",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02207",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02207",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02207",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02210",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02210",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02210",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02210",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02232",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02232",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02232",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02232",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02288",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02288",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02288",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02288",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02312",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02312",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02312",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02312",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02320",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02320",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02320",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02320",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02332",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02332",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02332",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02332",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01592",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01592",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01592",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01592",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02356",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02356",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02356",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02356",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02406",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02406",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02406",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02406",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02423",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02423",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02423",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02423",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02429",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02429",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02429",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02429",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02439",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02439",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02439",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02439",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02497",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02497",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02497",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02497",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02498",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02498",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02498",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02498",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02524",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02524",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02524",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02524",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02571",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02571",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02571",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02571",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02609",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02609",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02609",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02609",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02649",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02649",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02649",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02649",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02659",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02659",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02659",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02659",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02671",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02671",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02671",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02671",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02698",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02698",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02698",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02698",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02701",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02701",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02701",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02701",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02706",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02706",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02706",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02706",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02712",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02712",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02712",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02712",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02725",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02725",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02725",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02725",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01564",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:01564",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:01564",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:01564",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02797",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02797",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02797",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02797",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02800",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02800",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02800",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02800",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02810",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02810",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02810",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02810",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02825",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02825",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02825",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02825",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02833",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02833",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02833",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02833",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02836",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02836",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02836",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02836",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02844",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02844",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02844",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02844",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02868",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02868",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02868",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02868",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02873",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02873",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02873",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02873",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02894",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02894",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02894",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02894",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02914",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02914",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02914",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02914",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02920",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02920",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02920",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02920",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02930",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02930",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02930",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02930",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02943",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02943",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02943",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02943",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02958",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02958",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02958",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02958",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02980",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02980",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02980",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02980",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:02998",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:02998",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:02998",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:02998",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:03001",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:03001",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:03001",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:03001",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:03003",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:03003",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:03003",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:03003",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:03004",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:03004",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:03004",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:03004",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:03041",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:03041",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:03041",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:03041",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:03043",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:03043",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:03043",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:03043",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:03049",
+    "to": "ship:00001",
+    "src": "inferred",
+    "note": "Fleet ship (Alexandra)"
+  },
+  {
+    "from": "chr:03049",
+    "to": "ship:00017",
+    "src": "inferred",
+    "note": "Fleet ship (Marine Ships)"
+  },
+  {
+    "from": "chr:03049",
+    "to": "ship:00026",
+    "src": "inferred",
+    "note": "Fleet ship (Pine Peak)"
+  },
+  {
+    "from": "chr:03049",
+    "to": "ship:00033",
+    "src": "inferred",
+    "note": "Fleet ship (Stan Maley)"
+  },
+  {
+    "from": "chr:01707",
+    "to": "ship:00003",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02210",
+    "to": "ship:00003",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02342",
+    "to": "ship:00003",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02591",
+    "to": "ship:00003",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02806",
+    "to": "ship:00003",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02719",
+    "to": "ship:00005",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:03026",
+    "to": "ship:00005",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01611",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01611",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01618",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01618",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01649",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01649",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01649",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01649",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01876",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01876",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01895",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01895",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01945",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:01945",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02008",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02008",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02028",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02028",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02176",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02176",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02366",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02366",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02419",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02419",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02454",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02454",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02471",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02471",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02472",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02472",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02473",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02473",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02473",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02473",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02474",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02474",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02475",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02475",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02476",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02476",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02477",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02477",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02526",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02526",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02527",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02527",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02528",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02528",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02529",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02529",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02530",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02530",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02531",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02531",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02532",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02532",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02532",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02532",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02560",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02560",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:02573",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:02573",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:03069",
+    "to": "ship:00007",
+    "src": "inferred",
+    "note": "Fleet ship (Chiryaku Ten'nen Maru)"
+  },
+  {
+    "from": "chr:03069",
+    "to": "ship:00028",
+    "src": "inferred",
+    "note": "Fleet ship (Pop Rock Candy)"
+  },
+  {
+    "from": "chr:01653",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01734",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01850",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01926",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01989",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02032",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02043",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02092",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02198",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02287",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02493",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02519",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02573",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02646",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02662",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02851",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02938",
+    "to": "ship:00008",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02379",
+    "to": "ship:00015",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01574",
+    "to": "ship:00019",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02120",
+    "to": "ship:00019",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02311",
+    "to": "ship:00019",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02641",
+    "to": "ship:00019",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02660",
+    "to": "ship:00019",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01644",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01949",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02125",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02371",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02408",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02544",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02716",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02731",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02771",
+    "to": "ship:00021",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01735",
+    "to": "ship:00023",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01869",
+    "to": "ship:00023",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02492",
+    "to": "ship:00023",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01593",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01615",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01672",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01680",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01681",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01682",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01873",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01889",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02054",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02416",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02695",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02709",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02758",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02804",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02893",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02951",
+    "to": "ship:00025",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01608",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01726",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:01741",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01917",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02220",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02290",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01592",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02362",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02403",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02426",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02426",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02632",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02765",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02830",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02876",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01657",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02993",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02995",
+    "to": "ship:00029",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01713",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01744",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02020",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02026",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02040",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02131",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02138",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02149",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02225",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02231",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02336",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02382",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02485",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02596",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02642",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02715",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02744",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02911",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02976",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:03005",
+    "to": "ship:00037",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01703",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:01703",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:01991",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:01991",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02227",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02227",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02499",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02499",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02548",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02548",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02560",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02560",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02573",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02573",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02652",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02652",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02653",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02653",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02729",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02729",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02764",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02764",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02938",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02938",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:02985",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:02985",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:03076",
+    "to": "ship:00041",
+    "src": "inferred",
+    "current": false,
+    "note": "Pre-Enies Lobby flagship (Ch.41–430)"
+  },
+  {
+    "from": "chr:03076",
+    "to": "ship:00042",
+    "src": "inferred",
+    "current": true,
+    "note": "Current flagship (Ch.435+)"
+  },
+  {
+    "from": "chr:01580",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01597",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01605",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01616",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01669",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01670",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01697",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01699",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01861",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01878",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01950",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01962",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01987",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02104",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02110",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02185",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02195",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02201",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02239",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02244",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02271",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02283",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02299",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02301",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02326",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02328",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02333",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02413",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02431",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02549",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02563",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:02631",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02665",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02691",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02703",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02862",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02867",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02915",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02925",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:03014",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:03015",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:03032",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:03077",
+    "to": "ship:00043",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01647",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01690",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01714",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01993",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02004",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02034",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02153",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02373",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02374",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02387",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02500",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02607",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02676",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02722",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02809",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02987",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": false
+  },
+  {
+    "from": "chr:03050",
+    "to": "ship:00044",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01650",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:01853",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02090",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02178",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02214",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02640",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02803",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02947",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  },
+  {
+    "from": "chr:02975",
+    "to": "ship:00045",
+    "src": "inferred",
+    "current": true
+  }
+]

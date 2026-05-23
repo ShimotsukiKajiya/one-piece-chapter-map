@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awakenings · The Shimotsuki Codex</title>
+<meta name="description" content="Awakened Devil Fruit users in One Piece — every confirmed awakening, the user, the fruit type, and the chapter it was revealed.">
+<link rel="stylesheet" href="cite-styles.css">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;
+    --paramecia:#c8649c;--logia:#e85c3c;--zoan:#7cb35f;--mythical:#b07cd1}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  nav a{color:var(--text);text-decoration:none;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px;border-radius:6px}
+  nav a:hover,nav a.active{color:var(--gold-bright);background:var(--surface2)}
+
+  main{max-width:1100px;margin:0 auto;padding:32px 24px 80px;position:relative;z-index:1}
+  .page-title{font-size:2rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold-bright);font-weight:900;margin-bottom:6px}
+  .page-sub{color:var(--muted);font-size:.9rem;margin-bottom:24px;max-width:700px}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .pill{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 14px;border-radius:999px;font-size:.78rem;letter-spacing:1px;cursor:pointer;text-transform:uppercase}
+  .pill.active{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+  .pill:hover:not(.active){border-color:var(--gold);color:var(--gold-bright)}
+
+  .timeline{position:relative;padding-left:30px}
+  .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold) 0%,var(--mythical) 100%)}
+
+  .awak{position:relative;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px;margin-bottom:14px}
+  .awak::before{content:'';position:absolute;left:-26px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--bg);box-shadow:0 0 0 1px var(--gold)}
+  .awak.paramecia{border-left-color:var(--paramecia)}.awak.paramecia::before{background:var(--paramecia);box-shadow:0 0 0 1px var(--paramecia)}
+  .awak.logia{border-left-color:var(--logia)}.awak.logia::before{background:var(--logia);box-shadow:0 0 0 1px var(--logia)}
+  .awak.zoan{border-left-color:var(--zoan)}.awak.zoan::before{background:var(--zoan);box-shadow:0 0 0 1px var(--zoan)}
+  .awak.mythical{border-left-color:var(--mythical)}.awak.mythical::before{background:var(--mythical);box-shadow:0 0 0 1px var(--mythical)}
+
+  .awak-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .awak-fruit{color:var(--gold-bright);font-weight:700;font-size:1.05rem}
+  .awak-fruit a{color:inherit;text-decoration:none}
+  .awak-fruit a:hover{color:var(--gold);text-decoration:underline}
+  .awak-chapter{color:var(--muted);font-size:.78rem;font-family:ui-monospace,monospace}
+  .awak-chapter a{color:var(--ink-blue);text-decoration:none;border-bottom:1px dotted var(--ink-blue)}
+  .awak-meta{color:var(--ink-blue);font-size:.85rem;margin-bottom:6px}
+  .awak-meta a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--ink-blue)}
+  .awak-meta a:hover{color:var(--gold-bright)}
+  .awak-status{display:inline-block;padding:1px 8px;border-radius:4px;font-size:.65rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-left:8px;font-family:ui-monospace,monospace}
+  .awak-status.confirmed{background:rgba(95,179,95,.15);color:#5fb35f;border:1px solid rgba(95,179,95,.4)}
+  .awak-status.implied{background:rgba(106,158,200,.15);color:#6a9ec8;border:1px solid rgba(106,158,200,.4)}
+  .awak-status.speculation{background:rgba(176,124,209,.15);color:#b07cd1;border:1px solid rgba(176,124,209,.4)}
+  .awak-notes{color:var(--text);font-size:.88rem;line-height:1.55}
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:0 auto}
+</style>
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/awakenings.html">
+  <meta property="og:title" content="Awakenings · The Shimotsuki Codex">
+  <meta property="og:description" content="Awakened Devil Fruit users in One Piece — every confirmed awakening, the user, the fruit type, and the chapter it was revealed.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/awakenings.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Awakenings · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Awakened Devil Fruit users in One Piece — every confirmed awakening, the user, the fruit type, and the chapter it was revealed.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Awakenings</span></a>
+
+</header>
+<main id="awakenings-main">
+<div class="page-hero">
+  <h2 class="page-title">Devil Fruit Awakenings</h2>
+  <p class="page-sub">Confirmed, implied, and speculated Devil Fruit awakenings across canon. Hand-curated from manga panels with chapter citations. Each entry tier-tagged: 🟢 confirmed (Oda explicit), 🔵 implied (showings consistent with awakening but no formal statement), 🟣 speculation.</p>
+  <div class="gold-rule"></div>
+</div>
+
+  <div class="controls">
+    <button class="pill active" data-filter="all">All</button>
+    <button class="pill" data-filter="confirmed">🟢 Confirmed only</button>
+    <button class="pill" data-filter="implied">🔵 Implied</button>
+    <button class="pill" data-filter="speculation">🟣 Speculation</button>
+    <button class="pill" data-filter="paramecia">Paramecia</button>
+    <button class="pill" data-filter="zoan">Zoan</button>
+    <button class="pill" data-filter="mythical">Mythical Zoan</button>
+    <button class="pill" data-filter="logia">Logia</button>
+  </div>
+
+  <div class="timeline" id="root">Loading…</div>
+</main>
+<script>
+// L21 fix: refuse-render the entire awakenings page when cutoff < 783
+// (Doflamingo's Ito Ito awakening is the FIRST formal awakening reveal —
+// the CONCEPT of "Devil Fruit awakening" was introduced by him in Ch.783).
+// Pre-cutoff readers shouldn't even know awakenings exist as a mechanic.
+(function () {
+  const AWAKENING_REVEAL_CH = 783;
+  function _awBootCutoff() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.effectiveCutoff)
+      return CodexSpoiler.effectiveCutoff('public');
+    try {
+      const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+      if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0)
+        return Math.min(raw.cutoff_chapter, 1181);
+      const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
+      if (legacy > 0) return Math.min(legacy, 1181);
+    } catch (_) {}
+    return 597;
+  }
+  function _gateAwakenings() {
+    if (_awBootCutoff() >= AWAKENING_REVEAL_CH) return;
+    const main = document.getElementById('awakenings-main');
+    if (!main) return;
+    document.title = 'Hidden by Spoiler Guard · The Shimotsuki Codex';
+    // Defensive: also strip the baked data block so DevTools / view-source
+    // doesn't expose the awakening list. Casual visitors are protected by
+    // the visible-text gate; this closes the power-user surface too.
+    const dataBlock = document.getElementById('awakenings-data');
+    if (dataBlock) dataBlock.textContent = '{"_redacted":"Hidden by Spoiler Guard"}';
+    main.innerHTML = '<section style="padding:40px 28px;border-radius:14px;border:1px solid var(--border);border-left:4px solid #6a9ec8;background:linear-gradient(135deg,#1a1610 0%,#251f15 100%);margin:18px 0;max-width:780px">'
+      + '<h2 style="color:#f5c95e;letter-spacing:2px;font-size:1.05rem;margin-bottom:12px;text-transform:uppercase">🛡 Hidden by Spoiler Guard</h2>'
+      + '<p style="line-height:1.7;color:#e8d8b0;margin-bottom:16px">Devil Fruit awakenings as a concept are introduced in <strong>Chapter ' + AWAKENING_REVEAL_CH + '</strong>. Your reading window (Ch.&nbsp;<strong>' + _awBootCutoff() + '</strong>) is before that. The awakenings list would reveal both the mechanic itself and which characters wield awakened fruits past your point.</p>'
+      + '<div style="display:flex;gap:10px;flex-wrap:wrap">'
+      + '<button onclick="window.codexSettings && window.codexSettings.open()" style="background:var(--surface2);color:var(--gold);border:1px solid var(--border);padding:9px 18px;border-radius:6px;cursor:pointer;font:inherit">⚙ Adjust shield</button>'
+      + '<a href="home.html" style="background:var(--surface2);color:var(--muted);border:1px solid var(--border);padding:9px 18px;border-radius:6px;text-decoration:none;display:inline-flex;align-items:center">← Back to home</a>'
+      + '</div></section>';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', _gateAwakenings);
+  } else { _gateAwakenings(); }
+  // Re-gate on cutoff change
+  function _wireOnChange() {
+    if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.onChange) {
+      CodexSpoiler.onChange(function () {
+        if (_awBootCutoff() < AWAKENING_REVEAL_CH) _gateAwakenings();
+        else location.reload();
+      });
+    } else { setTimeout(_wireOnChange, 100); }
+  }
+  _wireOnChange();
+})();
+</script>
+<footer>Hand-curated. Add new awakenings via PR with chapter citation. Source: <a href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/blob/master/awakenings.json" style="color:var(--ink-blue)">awakenings.json</a>. &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+
+<script id="awakenings-data" type="application/json">
+{
+  "_doc": "Hand-curated list of canonically confirmed Devil Fruit awakenings. Source: manga panels showing the awakened ability with Oda's narration. Each entry: fruit, user, type, debut chapter, notes. Add via PR with chapter citation.",
+  "generated_on": "2026-04-28",
+  "awakenings": [
+    {
+      "fruit": "Ito Ito no Mi",
+      "user": "Donquixote Doflamingo",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 783,
+      "status": "confirmed",
+      "notes": "First on-page Paramecia awakening — turns environment into strings. Doflamingo explains the concept of awakening to Law."
+    },
+    {
+      "fruit": "Pero Pero no Mi",
+      "user": "Charlotte Perospero",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 875,
+      "status": "implied",
+      "notes": "Perospero's island-scale candy conversion during Whole Cake matches the awakening pattern, but Oda doesn't name it as awakening on-page. Implied, not stated."
+    },
+    {
+      "fruit": "Mochi Mochi no Mi",
+      "user": "Charlotte Katakuri",
+      "fruit_type": "Special Paramecia",
+      "awakening_chapter": 879,
+      "status": "confirmed",
+      "notes": "Awakened mochi armament — transforms surroundings into mochi during the Luffy mirror-world fight. Confirmed canon awakening, alongside Doflamingo as one of the textbook Paramecia examples."
+    },
+    {
+      "fruit": "Bisu Bisu no Mi",
+      "user": "Charlotte Cracker",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 838,
+      "status": "implied",
+      "notes": "Cracker's biscuit creation showed traits consistent with awakening."
+    },
+    {
+      "fruit": "Bara Bara no Mi",
+      "user": "Buggy",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 561,
+      "status": "implied",
+      "notes": "Impel Down feat — splitting into infinite pieces. Some readers consider this an awakening; not confirmed by Oda."
+    },
+    {
+      "fruit": "Uo Uo no Mi, Model: Seiryu",
+      "user": "Kaidou",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": 1037,
+      "status": "implied",
+      "notes": "Kaidou's Mythical Zoan feats during Onigashima — extreme regeneration, fire/water/wind dragon attacks. Awakening implied by his power level."
+    },
+    {
+      "fruit": "Tori Tori no Mi, Model: Phoenix",
+      "user": "Marco",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": 1003,
+      "status": "implied",
+      "notes": "Marco's regeneration during Onigashima far exceeds prior showings; awakening-adjacent ability."
+    },
+    {
+      "fruit": "Hito Hito no Mi, Model: Nika",
+      "user": "Monkey D. Luffy",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": 1043,
+      "status": "confirmed",
+      "notes": "The Nika reveal — Luffy's awakening transforms his body into rubber-cartoon physics, environment included. Possibly the most lore-shaking Wano moment."
+    },
+    {
+      "fruit": "Wara Wara no Mi",
+      "user": "Basil Hawkins",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": null,
+      "status": "implied",
+      "notes": "Hawkins' straw constructs and fortune-telling extensions hint at awakening but aren't explicitly confirmed."
+    },
+    {
+      "fruit": "Inu Inu no Mi, Model: Okuchi no Makami",
+      "user": "Yamato",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": null,
+      "status": "implied",
+      "notes": "Yamato's wolf-deity form during Onigashima shows awakening-tier ice manipulation."
+    },
+    {
+      "fruit": "Hebi Hebi no Mi, Model: Yamata-no-Orochi",
+      "user": "Kurozumi Orochi",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": 1052,
+      "status": "implied",
+      "notes": "Orochi's regenerative resilience is awakening-tier."
+    },
+    {
+      "fruit": "Jiki Jiki no Mi",
+      "user": "Eustass Kid",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 1078,
+      "status": "confirmed",
+      "notes": "Awakened against Big Mom — Punk Vise + Damned Punk."
+    },
+    {
+      "fruit": "Magu Magu no Mi",
+      "user": "Sakazuki (Akainu)",
+      "fruit_type": "Logia",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Egghead-era hints at Admiral awakening; not explicitly confirmed."
+    },
+    {
+      "fruit": "Hie Hie no Mi",
+      "user": "Kuzan (Aokiji)",
+      "fruit_type": "Logia",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Hinted via Blackbeard arc events; not explicitly confirmed."
+    },
+    {
+      "fruit": "Pika Pika no Mi",
+      "user": "Borsalino (Kizaru)",
+      "fruit_type": "Logia",
+      "awakening_chapter": 1092,
+      "status": "implied",
+      "notes": "Kizaru's Egghead feats hint at awakened-tier light manipulation."
+    },
+    {
+      "fruit": "Hito Hito no Mi, Model: Daibutsu",
+      "user": "Sengoku",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": null,
+      "status": "implied",
+      "notes": "Sengoku's golden Buddha shockwaves at Marineford; awakening status not formally confirmed."
+    },
+    {
+      "fruit": "Mera Mera no Mi",
+      "user": "Sabo",
+      "fruit_type": "Logia",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Reverie-era feats may hint at progress but not awakening-confirmed."
+    },
+    {
+      "fruit": "Inu Inu no Mi, Model: Kyubi no Kitsune",
+      "user": "Catarina Devon",
+      "fruit_type": "Mythical Zoan",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Future Blackbeard arc development."
+    },
+    {
+      "fruit": "Bari Bari no Mi",
+      "user": "Bartolomeo",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": null,
+      "status": "implied",
+      "notes": "Bartolomeo's barrier feats during Dressrosa show traits hinting at awakening, though not formally confirmed."
+    },
+    {
+      "fruit": "Ishi Ishi no Mi",
+      "user": "Pica",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 758,
+      "status": "implied",
+      "notes": "Pica's stone manipulation across the entire mountain of Dressrosa fits the textbook description of awakening (environmental conversion as Doflamingo described it), but the manga never explicitly names it as such. Strong implication, not stated canon."
+    },
+    {
+      "fruit": "Hobi Hobi no Mi",
+      "user": "Sugar",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Sugar's mass toy conversions cover the whole kingdom; some readers consider this consistent with awakening."
+    },
+    {
+      "fruit": "Soru Soru no Mi",
+      "user": "Charlotte Linlin",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 845,
+      "status": "implied",
+      "notes": "Big Mom's homie creation at Whole Cake scale (entire island, weather, sea) implies awakening-level reach."
+    },
+    {
+      "fruit": "Gura Gura no Mi",
+      "user": "Edward Newgate",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": null,
+      "status": "implied",
+      "notes": "Whitebeard's world-shaking quakes at Marineford were referred to as capable of destroying the world; awakening-tier by reputation."
+    },
+    {
+      "fruit": "Goro Goro no Mi",
+      "user": "Enel",
+      "fruit_type": "Logia",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Enel's 200,000,000-volt Amaru and Mantra-fused output remain among the strongest Logia feats; awakening status unconfirmed."
+    },
+    {
+      "fruit": "Yami Yami no Mi",
+      "user": "Marshall D. Teach",
+      "fruit_type": "Logia",
+      "awakening_chapter": 1063,
+      "status": "implied",
+      "notes": "(Updated) Egghead-arc Blackbeard feats vs Law deepen the awakening case — Liberation Punk shockwaves and Black Hole control reach awakening-tier."
+    },
+    {
+      "fruit": "Ope Ope no Mi",
+      "user": "Trafalgar D. Water Law",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 1081,
+      "status": "confirmed",
+      "notes": "(Augmented) Awakened against Blackbeard. Uses K-Room (knowledge of room interior) and powerful R Room — temporary godlike control over a small zone."
+    },
+    {
+      "fruit": "Suke Suke no Mi",
+      "user": "Shiryu",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": null,
+      "status": "speculation",
+      "notes": "Shiryu's mastery + Haki coverage during Egghead suggests progress beyond Absalom-tier transparency."
+    },
+    {
+      "fruit": "Mori Mori no Mi",
+      "user": "Aramaki (Ryokugyu)",
+      "fruit_type": "Logia",
+      "awakening_chapter": 1054,
+      "status": "implied",
+      "notes": "Ryokugyu's nutrient-draining grass mass that pacified the entire Onigashima debris field is awakening-tier scale; not formally named."
+    },
+    {
+      "fruit": "Mero Mero no Mi (Seraphim variant)",
+      "user": "S-Snake",
+      "fruit_type": "Paramecia",
+      "awakening_chapter": 1071,
+      "status": "implied",
+      "notes": "S-Snake (Seraphim clone derived from Boa Hancock's lineage factor) shows wide-area petrification on Egghead — broader scale than Boa's own use."
+    }
+  ]
+}
+
+</script>
+<script>
+const RAW=JSON.parse(document.getElementById("awakenings-data").textContent||"{}");
+const ALL=(RAW.awakenings||[]).slice();
+let filter="all";
+function escapeHTML(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function typeClass(t){t=(t||"").toLowerCase();if(t.includes("mythical"))return"mythical";if(t.includes("ancient"))return"mythical";if(t.includes("logia"))return"logia";if(t.includes("zoan"))return"zoan";if(t.includes("paramecia"))return"paramecia";return""}
+function passes(a){
+  if(filter==="all")return true;
+  if(["confirmed","implied","speculation"].includes(filter))return a.status===filter;
+  return typeClass(a.fruit_type)===filter;
+}
+function render(){
+  const filtered=ALL.filter(passes).sort((a,b)=>(a.awakening_chapter??99999)-(b.awakening_chapter??99999));
+  const root=document.getElementById("root");
+  if(!filtered.length){root.innerHTML=`<div style="color:var(--muted);text-align:center;padding:60px">No awakenings match.</div>`;return}
+  root.innerHTML=filtered.map(a=>{
+    const cls=typeClass(a.fruit_type);
+    const ch=a.awakening_chapter;
+    return `<div class="awak ${cls}">
+      <div class="awak-head">
+        <span class="awak-fruit"><a href="fruit.html?name=${encodeURIComponent(a.fruit)}">${escapeHTML(a.fruit)}</a><span class="awak-status ${a.status}">${escapeHTML(a.status)}</span></span>
+        <span class="awak-chapter">${ch?`<a href="atlas.html?chapter=${ch}">Ch.${ch}</a>`:'chapter unknown'}</span>
+      </div>
+      <div class="awak-meta">User: <a href="character.html?name=${encodeURIComponent(a.user)}">${escapeHTML(a.user)}</a> · ${escapeHTML(a.fruit_type)}</div>
+      <div class="awak-notes">${escapeHTML(a.notes||"")}</div>
+    </div>`;
+  }).join("");
+}
+document.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
+  document.querySelectorAll(".pill").forEach(x=>x.classList.remove("active"));
+  p.classList.add("active");filter=p.dataset.filter;render();
+}));
+render();
+</script>
+<script id="chr-id-map" type="application/json">
+{"Marco":"chr:02413","Basil Hawkins":"chr:01629","Charlotte Cracker":"chr:01774","Sengoku":"chr:02797","Donquixote Doflamingo":"chr:01928","Yamato":"chr:03045","Pica":"chr:02645","Shiryu":"chr:02830","Kurozumi Orochi":"chr:02349","Bartolomeo":"chr:01628","Charlotte Katakuri":"chr:01790","Sabo":"chr:02751","S-Snake":"chr:02749","Monkey D. Luffy":"chr:02499","Buggy":"chr:01711","Edward Newgate":"chr:01950","Trafalgar D. Water Law":"chr:02947","Enel":"chr:01960","Catarina Devon":"chr:01741","Marshall D. Teach":"chr:02426","Charlotte Perospero":"chr:01815","Charlotte Linlin":"chr:01793","Eustass Kid":"chr:01970","Sugar":"chr:02880","Kaidou":"chr:02252"}
+</script>
+<script src="chr-link-upgrader.js?v=2"></script>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

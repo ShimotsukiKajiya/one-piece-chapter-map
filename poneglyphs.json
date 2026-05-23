@@ -1,0 +1,86 @@
+{
+  "_doc": "Every named Poneglyph in canon. The poneglyphs are indestructible cubes inscribed with ancient text — Robin is one of the few alive who can read them.",
+  "generated_on": "2026-04-27",
+  "_lore": "There are believed to be ~30 Poneglyphs total. The Road Poneglyphs (4) point to Laugh Tale when triangulated. The Rio Poneglyph at Laugh Tale tells the truth of the Void Century. Other Poneglyphs hold information, history, or directions.",
+  "poneglyphs": [
+    {
+      "name": "Road Poneglyph (Zou)",
+      "kind": "road",
+      "location": "Whale Tree, Zou — held by the Mink Tribe rulers Inuarashi & Nekomamushi",
+      "debut_chapter": 818,
+      "summary": "One of the four Road Poneglyphs. When triangulated with the others, points to Laugh Tale.",
+      "status": "intact"
+    },
+    {
+      "name": "Road Poneglyph (Whole Cake Island)",
+      "kind": "road",
+      "location": "Charlotte Linlin's library — Big Mom's collection",
+      "debut_chapter": 866,
+      "summary": "Stolen by Big Mom from Fish-Man Island. Now in Strawhat hands after Wano (rubbing was made by Robin and Brook).",
+      "status": "intact"
+    },
+    {
+      "name": "Road Poneglyph (Wano)",
+      "kind": "road",
+      "location": "Onigashima — held by Kaidou, now passed to the Strawhats post-Wano",
+      "debut_chapter": 1055,
+      "summary": "The third Road Poneglyph found by the Strawhats. Robin made a rubbing during the raid.",
+      "status": "intact"
+    },
+    {
+      "name": "Road Poneglyph (Final)",
+      "kind": "road",
+      "location": "Unknown — believed to be held by Blackbeard or hidden in Elbaph",
+      "debut_chapter": 1058,
+      "summary": "The fourth and final Road Poneglyph. Its location is the major remaining quest hook for the endgame.",
+      "status": "unknown"
+    },
+    {
+      "name": "Rio Poneglyph (Laugh Tale)",
+      "kind": "rio",
+      "location": "Laugh Tale — the final island",
+      "debut_chapter": 967,
+      "summary": "The TRUE history. Reading it reveals what really happened in the Void Century. Roger and his crew read it and laughed. Only Robin (current) and Roger Pirates have ever read it.",
+      "status": "intact"
+    },
+    {
+      "name": "Tree of Knowledge Poneglyphs (Ohara)",
+      "kind": "informational",
+      "location": "Ohara — destroyed in the Buster Call",
+      "debut_chapter": 392,
+      "summary": "Ohara's Tree of Knowledge held a vast collection of Poneglyph rubbings. The Buster Call destroyed everything. Robin (then 8) and Professor Clover died for trying to read them.",
+      "status": "destroyed"
+    },
+    {
+      "name": "Alabasta Poneglyph",
+      "kind": "informational",
+      "location": "Tomb of the Kings, Alabasta",
+      "debut_chapter": 218,
+      "summary": "Refers to Pluton — explicitly says the ancient weapon's blueprint is preserved there. Read by Robin during the Alabasta arc; she chose not to reveal its location to Crocodile.",
+      "status": "intact"
+    },
+    {
+      "name": "Skypiea Poneglyph (Shandora)",
+      "kind": "informational",
+      "location": "Shandora ruins, Skypiea",
+      "debut_chapter": 301,
+      "summary": "Refers to Poseidon — Shirahoshi (the current Poseidon, then unborn). Robin read it during the Skypiea arc. Roger inscribed his message on it before continuing to Laugh Tale.",
+      "status": "intact"
+    },
+    {
+      "name": "Fish-Man Island Poneglyph",
+      "kind": "informational",
+      "location": "Sea Forest, Fish-Man Island",
+      "debut_chapter": 649,
+      "summary": "Read by Robin and translated for King Neptune. Refers to the location of an ancient weapon."
+    },
+    {
+      "name": "Roger's Message (Skypiea)",
+      "kind": "message",
+      "location": "Inscribed on the Skypiea Poneglyph by Roger himself",
+      "debut_chapter": 301,
+      "summary": "Roger left a message saying 'I will lead you to the great treasure' — left for whoever followed him to Laugh Tale.",
+      "status": "intact"
+    }
+  ]
+}

@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cover Compendium · The Shimotsuki Codex</title>
+<meta name="description" content="Cover Compendium — Oda's mini-arcs that run on chapter title pages, ordered chronologically with chapter ranges.">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #0c0a14;
+      --surface:   #1a1610;
+      --surface2:  #251f15;
+      --border:    #4a3820;
+      --text:      #e8d8b0;
+      --muted:     #8a7548;
+      --orange:    #FF6B1A;
+      --gold:      #d4a44a;
+      --gold-bright:#f5c95e;
+      --ink-blue:  #6a9ec8;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(212,164,74,0.04) 0%, transparent 50%),
+        var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.012) 1px, transparent 1px);
+      background-size: 14px 14px; pointer-events: none;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: rgba(26,22,16,.85); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: baseline; gap: 12px; text-decoration: none; color: inherit; transition: opacity 0.15s; }
+    .logo:hover { opacity: 0.8; }
+    .logo h1 {
+      font-size: 1.4rem; font-weight: 900;
+      letter-spacing: 3px; text-transform: uppercase;
+      background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .logo-sub { font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; }
+    nav { display: flex; gap: 8px; }
+    nav a {
+      padding: 5px 14px; border: 1px solid var(--border); border-radius: 6px;
+      color: var(--muted); text-decoration: none;
+      font-size: 0.8rem; font-weight: 600; transition: all 0.15s;
+    }
+    nav a:hover, nav a.active { color: var(--text); border-color: var(--gold); background: #1a0f08; }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 1100px; margin: 0 auto;
+      padding: 50px 24px 80px;
+      position: relative; z-index: 1;
+    }
+
+    h1.page-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 60%, #a07020 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px; text-align: center;
+    }
+    .subtitle {
+      text-align: center; color: var(--muted);
+      font-size: 0.95rem; letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .blurb {
+      max-width: 720px; margin: 0 auto 36px;
+      text-align: center;
+      color: var(--text); font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .gold-rule {
+      width: 200px; height: 2px;
+      margin: 18px auto 32px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+
+    /* ── COVER STORY CARD ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 22px 18px 22px;
+      position: relative;
+      transition: all 0.2s ease;
+      display: flex; gap: 16px;
+      align-items: stretch;
+    }
+    .card-thumb {
+      width: 90px; height: 138px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.55), 0 0 0 1px var(--border);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .card:hover .card-thumb { transform: scale(1.04) rotate(-1deg); }
+    .card-body {
+      flex: 1; display: flex; flex-direction: column;
+      min-width: 0;
+    }
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    .card-stripe {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      border-radius: 14px 14px 0 0;
+    }
+    .card-title {
+      font-size: 1.1rem; font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 8px; line-height: 1.3;
+      padding-right: 60px;
+    }
+    .card-range {
+      position: absolute;
+      top: 18px; right: 18px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.78rem; font-weight: 700;
+      color: var(--muted);
+      background: rgba(0,0,0,0.35);
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .card-summary {
+      flex: 1;
+      font-size: 0.88rem;
+      color: var(--text);
+      margin-bottom: 14px;
+      max-height: 8em; overflow: hidden;
+      position: relative;
+    }
+    .card-summary::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 2em;
+      background: linear-gradient(to bottom, transparent, var(--surface));
+      pointer-events: none;
+    }
+    .card-meta {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(212,164,74,0.25);
+      font-size: 0.75rem;
+    }
+    .meta-pill {
+      padding: 3px 10px;
+      background: rgba(212,164,74,0.1);
+      border: 1px solid rgba(212,164,74,0.3);
+      color: var(--text);
+      border-radius: 12px;
+    }
+    .meta-pill.chap-link {
+      cursor: pointer; transition: all 0.15s;
+      text-decoration: none;
+    }
+    .meta-pill.chap-link:hover {
+      background: var(--gold); color: #1a1410;
+      border-color: var(--gold);
+    }
+
+    /* Loading state */
+    .loading {
+      text-align: center; padding: 80px 20px;
+      color: var(--muted);
+    }
+    .loading::before {
+      content: '';
+      display: inline-block;
+      width: 22px; height: 22px;
+      border: 2px solid rgba(212,164,74,0.2);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin-load 0.7s linear infinite;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    @keyframes spin-load { to { transform: rotate(360deg); } }
+
+    footer {
+      max-width: 1100px; margin: 0 auto;
+      padding: 40px 24px 60px;
+      text-align: center;
+      font-size: 0.78rem; color: var(--muted);
+      letter-spacing: 1px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── MOBILE — Cover Compendium ── */
+    @media (max-width: 760px) {
+      header { padding: 10px 14px; flex-wrap: wrap; gap: 8px; }
+      .logo h1 { font-size: 1.05rem; letter-spacing: 2px; }
+      nav { gap: 4px; flex-wrap: wrap; }
+      nav a { padding: 4px 9px; font-size: 0.72rem; }
+      main { padding: 30px 14px 40px; }
+      .grid { gap: 14px; }
+      .card { padding: 18px 16px 14px; }
+      .card-title { padding-right: 75px; font-size: 1rem; }
+    }
+  </style>
+<link rel="stylesheet" href="cite-styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/covers.html">
+  <meta property="og:title" content="Cover Compendium · The Shimotsuki Codex">
+  <meta property="og:description" content="Cover Compendium — Oda">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/covers.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Cover Compendium · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Cover Compendium — Oda">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="home.html" title="Back to home">
+    <h1>The Shimotsuki Codex</h1>
+    <span class="logo-sub">Cover Compendium</span>
+  </a>
+  
+</header>
+
+<main>
+  <h1 class="page-title">Cover Compendium</h1>
+  <div class="subtitle">The mini-arcs Oda runs on chapter title pages</div>
+  <div class="gold-rule"></div>
+
+  <p class="blurb">
+    While the main story marches on, Oda runs <strong>secondary mini-arcs</strong> on
+    the colored title pages of each chapter. Buggy and Alvida hunting Luffy. Coby and
+    Helmeppo rising through the Marines. Enel touring the moon. CP9 in hiding after
+    Enies Lobby. These aren't filler — they're canon, often reveal major characters'
+    fates between arcs, and frequently set up future plot points.
+  </p>
+
+  <!-- Baked cover-stories data -->
+  <script id="cover-stories-data" type="application/json">
+[
+  {
+    "name": "Buggy's Crew Adventure Chronicles",
+    "slug": "Buggy's Crew Adventure Chronicles",
+    "color": "#ff6b1a",
+    "chapters": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75
+    ],
+    "chapter_range": "35–75",
+    "summary": "Adventures of Ritchie’s Pirate Crew! | vol = -, volumes | chapter = -, installments + 2 bonus installments | episode = -, episodes | date = 1998-1999 (Manga),2000 (Anime) | next anime = Loguetown Arc | prev anime = Arlong Park Arc | prev = | next = Diary of Koby-Meppo }} '''Buggy's Crew Adventure Chronicles''' is the first of the Short-Term Focused Cover Page Serials, and depicts the Buggy Pirates"
+  },
+  {
+    "name": "Diary of Koby-Meppo",
+    "slug": "Diary of Koby-Meppo",
+    "color": "#4dbbff",
+    "chapters": [
+      83,
+      84,
+      85,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      104,
+      105,
+      106,
+      108,
+      109,
+      110,
+      112,
+      113,
+      114,
+      115,
+      116,
+      118,
+      119
+    ],
+    "chapter_range": "83–119",
+    "summary": "Diary of Koby-Meppo is the second of the Short-Term Focused Cover Page Serials, and depicts Koby and Helmeppo's arduous training as Marine cadets. The story may be set anywhere between the Romance Dawn Arc and Jango's Dance Paradise."
+  },
+  {
+    "name": "Jango's Dance Paradise",
+    "slug": "Jango's Dance Paradise",
+    "color": "#ffd700",
+    "chapters": [
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "chapter_range": "126–172",
+    "summary": "Django’s Dance Heaven | vol = -, volumes | chapter = -, installments | episode = | date = 2000-2001 | prev = Diary of Koby-Meppo | next = Hatchan's Sea-Floor Stroll }} '''Jango's Dance Paradise''' is the third Cover Story created as a side story on the title pages of each One Piece chapter. The story can be set between the events of Baratie Arc and the events of Arabasta Arc."
+  },
+  {
+    "name": "Hatchan's Sea-Floor Stroll",
+    "slug": "Hatchan's Sea-Floor Stroll",
+    "color": "#ff66cc",
+    "chapters": [
+      182,
+      183,
+      184,
+      185,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      195,
+      196,
+      197,
+      199,
+      200,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      222,
+      223,
+      224,
+      225,
+      227,
+      228
+    ],
+    "chapter_range": "182–228",
+    "summary": "-, volumes | chapter = -, installments | episode = | date = 2001-2002 | prev = Jango's Dance Paradise | next = Wapol's Omnivorous Hurrah }} '''Hatchan's Sea-Floor Stroll''' is the fourth Cover Story created as a side story on the title pages of each One Piece chapter. The story can be set between the events of Arlong Park Arc and the events of Sabaody Archipelago Arc."
+  },
+  {
+    "name": "Wapol's Omnivorous Hurrah",
+    "slug": "Wapol's Omnivorous Hurrah",
+    "color": "#88ddff",
+    "chapters": [
+      236,
+      237,
+      238,
+      239,
+      240,
+      242,
+      243,
+      244,
+      245,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      255,
+      256,
+      257,
+      258,
+      259,
+      261,
+      262
+    ],
+    "chapter_range": "236–262",
+    "summary": "-, volumes | chapter = -, installments | episode = 778 | date = 2002-2003 (Manga)2017 (Anime) | prev = Hatchan's Sea-Floor Stroll | next = Ace's Great Blackbeard Search }} '''Wapol's Omnivorous Hurrah''' is the fifth cover story created as a side story on the title pages of each One Piece chapter. The story can be set between the events of Drum Island Arc and the timeskip."
+  },
+  {
+    "name": "Ace's Great Blackbeard Search",
+    "slug": "Ace's Great Blackbeard Search",
+    "color": "#ff8855",
+    "chapters": [
+      272,
+      273,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      285,
+      286,
+      288,
+      289,
+      290,
+      291,
+      292,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      305
+    ],
+    "chapter_range": "272–305",
+    "summary": "-, volumes | chapter = -, installments | episode = | date = 2003-2004 | prev = Wapol's Omnivorous Hurrah | next = Gedatsu's Accidental Blue-Sea Life }} '''Ace's Great Blackbeard Search''' is the sixth Cover Story created as a side story on the title pages of each One Piece chapter. The story can be set between the events of Jaya Arc and the events of Post-Enies Lobby Arc."
+  },
+  {
+    "name": "Gedatsu's Accidental Blue-Sea Life",
+    "slug": "Gedatsu's Accidental Blue-Sea Life",
+    "color": "#aa44ff",
+    "chapters": [
+      314,
+      315,
+      316,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "chapter_range": "314–348",
+    "summary": "-, volumes | chapter = -, installments | episode = | date = 2004 | prev = Ace's Great Blackbeard Search | next = Miss Goldenweek's \"Operation: Meet Baroque Works\" }} '''Gedatsu's Accidental Blue-Sea Life''' is the seventh Cover Story created as a side story on the title pages of each One Piece chapter. The story is set between the events of Skypiea Arc and the timeskip."
+  },
+  {
+    "name": "Miss Goldenweek's \"Operation: Meet Baroque Works\"",
+    "slug": "Miss Goldenweek's \"Operation: Meet Baroque Works\"",
+    "color": "#44dd88",
+    "chapters": [
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413
+    ],
+    "chapter_range": "359–413",
+    "summary": "Ms. Golden Week's Plan, a Baroque Reunion | vol = -, volumes | chapter = -, installments + 1 extra installment | episode = | date = 2005-2006 | prev = Gedatsu's Accidental Blue-Sea Life | next = Enel's Great Space Operations }} '''Miss Goldenweek's \"Operation: Meet Baroque Works\" '''is the eighth Cover Story created as a side story on the title pages of each One Piece chapter."
+  },
+  {
+    "name": "Enel's Great Space Operations",
+    "slug": "Enel's Great Space Operations",
+    "color": "#ff4466",
+    "chapters": [
+      428,
+      429,
+      430,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      447,
+      448,
+      450,
+      451,
+      452,
+      453,
+      455,
+      456,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      472,
+      473,
+      474
+    ],
+    "chapter_range": "428–474",
+    "summary": "-, volumes | chapter = -, installments | episode = | date = 2006-2007 | prev = Miss Goldenweek's \"Operation: Meet Baroque Works\" | next = CP9's Independent Report }} '''Enel's Great Space Operations''' is the ninth Cover Story created as a side story on the title pages of each One Piece chapter. The story is set after the events of the Skypiea Arc."
+  },
+  {
+    "name": "CP9's Independent Report",
+    "slug": "CP9's Independent Report",
+    "color": "#66ddaa",
+    "chapters": [
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      504,
+      505,
+      506,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      517,
+      518,
+      519,
+      521,
+      522,
+      523,
+      524,
+      525,
+      527,
+      528
+    ],
+    "chapter_range": "491–528",
+    "summary": "の任務外報告 | rname = Shī-Pī-Nain no Ninmu-gai Hōkoku | ename = CP9's Independent Report | vol = -, volumes | chapter = -, installments | episode = | date = 2008-2009 | prev = Enel's Great Space Operations | next = Straw Hat's Separation Serial }} '''CP9's Independent Report''' is the tenth Cover Story created as a side story on the title pages of each One Piece chapter. The story is set after the even"
+  },
+  {
+    "name": "Straw Hat's Separation Serial",
+    "slug": "Straw Hat's Separation Serial",
+    "color": "#bb88ff",
+    "chapters": [
+      543,
+      544,
+      545,
+      546,
+      548,
+      549,
+      550,
+      551,
+      552,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560
+    ],
+    "chapter_range": "543–560",
+    "summary": "| rname = Ryokō suru nara... Mugiwara no Ichimi Sorezore no Bōken | ename = N/A | vol = -, volumes | chapter = -, installments | episode = 418-421, 453-456, 8 episodes | date = 2009 (Manga),2009-2010 (Anime) | prev = CP9's Independent Report | next = From the Decks of the World | prev anime = Impel Down Arc | next anime = Marineford Arc }} The '''Straw Hat's Separation Serial''' is a set of Cover "
+  },
+  {
+    "name": "From the Decks of the World",
+    "slug": "From the Decks of the World",
+    "color": "#ffcc44",
+    "chapters": [
+      613,
+      614,
+      615,
+      616,
+      617,
+      619,
+      620,
+      621,
+      623,
+      624,
+      625,
+      626,
+      627,
+      629,
+      630,
+      631,
+      632,
+      633,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650,
+      652,
+      653,
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      661,
+      662,
+      663,
+      665,
+      666,
+      667,
+      668,
+      731
+    ],
+    "chapter_range": "613–731",
+    "summary": "-, volumes | chapter = -, installments | date = 2011-2012 | episode = | prev = Straw Hat's Separation Serial | next = Caribou's Kehihihihi in the New World }} From the Decks of the World is the ninteenth Cover Story created as a side story on the title pages of each One Piece chapter, and the first to take place post-timeskip. The story can be set after the Return to Sabaody Arc."
+  },
+  {
+    "name": "Caribou's Kehihihihi in the New World",
+    "slug": "Caribou's Kehihihihi in the New World",
+    "color": "#ff5588",
+    "chapters": [
+      674,
+      675,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      686,
+      687,
+      688,
+      689,
+      690,
+      694,
+      695,
+      696,
+      697,
+      698,
+      700,
+      701,
+      702,
+      704,
+      705,
+      706,
+      708,
+      709,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      725,
+      727,
+      728,
+      729,
+      730,
+      731
+    ],
+    "chapter_range": "674–731",
+    "summary": "-, volumes | chapter = -, installments | date = 2012-2013 | episode = 921, 1 episode | prev = From the Decks of the World | next = Solo Journey of Jinbe, Knight of the Sea }} '''Caribou's Kehihihihi in the New World''' is the twentieth Cover Story created as a side story on the title pages of each One Piece chapter. The story is set after the Fish-Man Island Arc and before the Wano Country Arc."
+  },
+  {
+    "name": "Solo Journey of Jinbe, Knight of the Sea",
+    "slug": "Solo Journey of Jinbe, Knight of the Sea",
+    "color": "#5588ff",
+    "chapters": [
+      751,
+      752,
+      753,
+      754,
+      755,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      765,
+      767,
+      768,
+      769,
+      770,
+      772,
+      773,
+      774,
+      776,
+      777,
+      778,
+      780,
+      781,
+      782,
+      783,
+      785
+    ],
+    "chapter_range": "751–785",
+    "summary": "-, volumes | chapter = -, installments | episode = | date = 2014-2015 | prev = Caribou's Kehihihihi in the New World | next = From the Decks of the World: The 500,000,000 Man Arc }} Solo Journey of Jinbe, Knight of the Sea is the twenty-first Cover Story created as a side story on the title page of each One Piece chapter. The story can be set between the Fish-Man Island Arc and Whole Cake Island A"
+  },
+  {
+    "name": "From the Decks of the World: The 500,000,000 Man Arc",
+    "slug": "From the Decks of the World: The 500,000,000 Man Arc",
+    "color": "#ddaa44",
+    "chapters": [
+      653,
+      805,
+      806,
+      807,
+      808,
+      810,
+      812,
+      813,
+      814,
+      815,
+      816,
+      818,
+      819,
+      820,
+      822,
+      823,
+      825,
+      826,
+      827,
+      828,
+      830,
+      831,
+      834,
+      836,
+      837,
+      838
+    ],
+    "chapter_range": "653–838",
+    "summary": "From the Decks of the World: The 500,000,000 Man Arc is the twenty-second Cover Story created as a side story on the title pages of each One Piece chapter."
+  },
+  {
+    "name": "The Stories of the Self-Proclaimed Straw Hat Grand Fleet",
+    "slug": "The Stories of the Self-Proclaimed Straw Hat Grand Fleet",
+    "color": "#44aabb",
+    "chapters": [
+      864,
+      865,
+      866,
+      867,
+      868,
+      869,
+      870,
+      871,
+      872,
+      873,
+      874,
+      875,
+      876,
+      877,
+      878,
+      879,
+      880,
+      881,
+      882,
+      883,
+      884,
+      885,
+      886,
+      887,
+      888,
+      889,
+      890,
+      891,
+      892,
+      893,
+      894,
+      895,
+      896,
+      897,
+      898,
+      899,
+      900,
+      901,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919
+    ],
+    "chapter_range": "864–919",
+    "summary": "The Stories of the Self-Proclaimed Straw Hat Grand Fleet is the twenty-third Cover Story created as a side story on the title pages of each One Piece chapter. The story is set after the Dressrosa Arc, and after the Barto Club dropped off the Straw Hats at Zou, and before the Levely Arc where the Tontatta Pirates accompanied the Riku Family to the Levely."
+  },
+  {
+    "name": "\"Gang\" Bege's Oh My Family",
+    "slug": "\"Gang\" Bege's Oh My Family",
+    "color": "#cc66ff",
+    "chapters": [
+      948,
+      950,
+      952,
+      953,
+      954,
+      955,
+      956,
+      958,
+      959,
+      960,
+      961,
+      962,
+      963,
+      964,
+      965,
+      966,
+      968,
+      969,
+      970,
+      971,
+      973,
+      974,
+      975,
+      977,
+      978,
+      979,
+      980,
+      982,
+      983,
+      984,
+      986,
+      988,
+      989,
+      990,
+      991,
+      993,
+      994
+    ],
+    "chapter_range": "948–994",
+    "summary": "'''\"Gang\" Bege's Oh My Family''' is the twenty-fourth Cover Story created as a side story on the title pages of each One Piece chapter. The story is set after the Whole Cake Island Arc, as the Fire Tank Pirates were seen sailing safely on the open seas, and during the Levely Arc, as it was stated to still be ongoing."
+  },
+  {
+    "name": "Germa 66's Ahh... An Emotionless Excursion",
+    "slug": "Germa 66's Ahh... An Emotionless Excursion",
+    "color": "#ffaa66",
+    "chapters": [
+      1035,
+      1037,
+      1038,
+      1040,
+      1041,
+      1042,
+      1043,
+      1044,
+      1046,
+      1048,
+      1049,
+      1050,
+      1051,
+      1052,
+      1056,
+      1057,
+      1058,
+      1059,
+      1061,
+      1062,
+      1063,
+      1064,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      1072,
+      1073,
+      1074,
+      1075,
+      1077,
+      1078
+    ],
+    "chapter_range": "1035–1078",
+    "summary": "のあゝ無感情海遊記 | rname = Jeruma Daburu Shikkusu no Ā Mukanjō Kaiyūki | ename = Germa 66's Ahh... An Emotionless Excursion | vol = auto | chapter = auto | episode = 1093 & 1114, 2 episodes | date = 2021-2023 (Manga)2024 (Anime) | prev = \"Gang\" Bege's Oh My Family | next = Oni Child Yamato's Golden Harvest Surrogate Pilgrimage }} '''Germa 66's Ahh..."
+  },
+  {
+    "name": "Oni Child Yamato's Golden Harvest Surrogate Pilgrimage",
+    "slug": "Oni Child Yamato's Golden Harvest Surrogate Pilgrimage",
+    "color": "#88ff66",
+    "chapters": [
+      1109,
+      1110,
+      1112,
+      1114,
+      1115,
+      1116,
+      1117,
+      1118,
+      1119,
+      1120,
+      1123,
+      1124,
+      1125,
+      1126,
+      1127,
+      1129,
+      1130,
+      1131,
+      1132,
+      1133,
+      1135,
+      1136,
+      1137,
+      1138,
+      1139,
+      1140,
+      1141,
+      1142,
+      1144,
+      1145,
+      1146,
+      1147,
+      1148,
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1157,
+      1158,
+      1159,
+      1160,
+      1161,
+      1162
+    ],
+    "chapter_range": "1109–1162",
+    "summary": "'''Oni Child Yamato's Golden Harvest Surrogate Pilgrimage''' is the twenty-sixth Cover Story created as a side story on the title pages of each One Piece chapter. The story is set after the events of the Wano Country Arc."
+  },
+  {
+    "name": "Where They Are Now",
+    "slug": "Where They Are Now",
+    "color": "#66ffaa",
+    "chapters": [
+      424,
+      425,
+      427,
+      486,
+      487,
+      488,
+      490
+    ],
+    "chapter_range": "424–490",
+    "summary": "Where They Are Now is a supplemental series told through the cover pages of select chapters, depicting the day-to-day lives of the Straw Hat Pirates' friends and allies. (It should be noted that, despite similar—sometimes identical—construction, this series is in fact distinct from the cover arcs, which follow a different numbering.)"
+  },
+  {
+    "name": "Vivi's Adventure",
+    "slug": "Vivi's Adventure",
+    "color": "#ff7799",
+    "chapters": [
+      215,
+      216,
+      1023
+    ],
+    "chapter_range": "215–1023",
+    "summary": "'''Vivi's Adventure is a one-shot spinoff created by ' author . It is the second installment of the One Piece Cover Comic Project."
+  }
+]
+</script>
+
+  <!-- Baked volume covers — used for representative thumbnails per arc -->
+  <script id="covers-data" type="application/json">
+{"1":"https://static.wikia.nocookie.net/onepiece/images/0/0e/Volume_1.png/revision/latest?cb=20220426144844","2":"https://static.wikia.nocookie.net/onepiece/images/2/2f/Volume_2.png/revision/latest?cb=20240219150533","3":"https://static.wikia.nocookie.net/onepiece/images/7/75/Volume_3.png/revision/latest?cb=20240129062627","4":"https://static.wikia.nocookie.net/onepiece/images/3/31/Volume_4.png/revision/latest?cb=20240219145353","5":"https://static.wikia.nocookie.net/onepiece/images/8/8a/Volume_5.png/revision/latest?cb=20240129063611","6":"https://static.wikia.nocookie.net/onepiece/images/f/fb/Volume_6.png/revision/latest?cb=20240219152558","7":"https://static.wikia.nocookie.net/onepiece/images/2/24/Volume_7.png/revision/latest?cb=20240219153038","8":"https://static.wikia.nocookie.net/onepiece/images/8/82/Volume_8.png/revision/latest?cb=20240219153151","9":"https://static.wikia.nocookie.net/onepiece/images/7/79/Volume_9.png/revision/latest?cb=20240219152311","10":"https://static.wikia.nocookie.net/onepiece/images/6/6b/Volume_10.png/revision/latest?cb=20260301124614","11":"https://static.wikia.nocookie.net/onepiece/images/1/1b/Volume_11.png/revision/latest?cb=20240219153451","12":"https://static.wikia.nocookie.net/onepiece/images/4/4e/Volume_12.png/revision/latest?cb=20240219154213","13":"https://static.wikia.nocookie.net/onepiece/images/b/b6/Volume_13.png/revision/latest?cb=20240219153730","14":"https://static.wikia.nocookie.net/onepiece/images/1/17/Volume_14.png/revision/latest?cb=20240219154009","15":"https://static.wikia.nocookie.net/onepiece/images/4/4e/Volume_15.png/revision/latest?cb=20240219150735","16":"https://static.wikia.nocookie.net/onepiece/images/4/45/Volume_16.png/revision/latest?cb=20240128181920","17":"https://static.wikia.nocookie.net/onepiece/images/6/64/Volume_17.png/revision/latest?cb=20240219154617","18":"https://static.wikia.nocookie.net/onepiece/images/a/a2/Volume_18.png/revision/latest?cb=20240219150929","19":"https://static.wikia.nocookie.net/onepiece/images/c/c9/Volume_19.png/revision/latest?cb=20240219151058","20":"https://static.wikia.nocookie.net/onepiece/images/3/32/Volume_20.png/revision/latest?cb=20240219165047","21":"https://static.wikia.nocookie.net/onepiece/images/a/a6/Volume_21.png/revision/latest?cb=20240219165058","22":"https://static.wikia.nocookie.net/onepiece/images/5/5e/Volume_22.png/revision/latest?cb=20240219154801","23":"https://static.wikia.nocookie.net/onepiece/images/5/5d/Volume_23.png/revision/latest?cb=20240219151243","24":"https://static.wikia.nocookie.net/onepiece/images/6/6a/Volume_24.png/revision/latest?cb=20240219151904","25":"https://static.wikia.nocookie.net/onepiece/images/e/ef/Volume_25.png/revision/latest?cb=20240219155015","26":"https://static.wikia.nocookie.net/onepiece/images/0/00/Volume_26.png/revision/latest?cb=20240221073352","27":"https://static.wikia.nocookie.net/onepiece/images/1/1d/Volume_27.png/revision/latest?cb=20240221080023","28":"https://static.wikia.nocookie.net/onepiece/images/a/a5/Volume_28.png/revision/latest?cb=20240221080812","29":"https://static.wikia.nocookie.net/onepiece/images/1/1a/Volume_29.png/revision/latest?cb=20240219165540","30":"https://static.wikia.nocookie.net/onepiece/images/5/52/Volume_30.png/revision/latest?cb=20240219145816","31":"https://static.wikia.nocookie.net/onepiece/images/f/f7/Volume_31.png/revision/latest?cb=20240219155154","32":"https://static.wikia.nocookie.net/onepiece/images/2/2b/Volume_32.png/revision/latest?cb=20240219155502","33":"https://static.wikia.nocookie.net/onepiece/images/e/e6/Volume_33.png/revision/latest?cb=20130115023232","34":"https://static.wikia.nocookie.net/onepiece/images/6/6c/Volume_34.png/revision/latest?cb=20240221075331","35":"https://static.wikia.nocookie.net/onepiece/images/6/65/Volume_35.png/revision/latest?cb=20130115023232","36":"https://static.wikia.nocookie.net/onepiece/images/6/63/Volume_36.png/revision/latest?cb=20240220121807","37":"https://static.wikia.nocookie.net/onepiece/images/b/bd/Volume_37.png/revision/latest?cb=20130115023233","38":"https://static.wikia.nocookie.net/onepiece/images/b/b6/Volume_38.png/revision/latest?cb=20240221081649","39":"https://static.wikia.nocookie.net/onepiece/images/4/47/Volume_39.png/revision/latest?cb=20130115023234","40":"https://static.wikia.nocookie.net/onepiece/images/2/2c/Volume_40.png/revision/latest?cb=20130115023345","41":"https://static.wikia.nocookie.net/onepiece/images/3/3a/Volume_41.png/revision/latest?cb=20240219181416","42":"https://static.wikia.nocookie.net/onepiece/images/1/16/Volume_42.png/revision/latest?cb=20130115023346","43":"https://static.wikia.nocookie.net/onepiece/images/1/15/Volume_43.png/revision/latest?cb=20240219181837","44":"https://static.wikia.nocookie.net/onepiece/images/d/d2/Volume_44.png/revision/latest?cb=20221230202513","45":"https://static.wikia.nocookie.net/onepiece/images/f/f4/Volume_45.png/revision/latest?cb=20130115023346","46":"https://static.wikia.nocookie.net/onepiece/images/c/cc/Volume_46.png/revision/latest?cb=20240219151646","47":"https://static.wikia.nocookie.net/onepiece/images/3/35/Volume_47.png/revision/latest?cb=20240219182305","48":"https://static.wikia.nocookie.net/onepiece/images/c/cd/Volume_48.png/revision/latest?cb=20240220123013","49":"https://static.wikia.nocookie.net/onepiece/images/d/d6/Volume_49.png/revision/latest?cb=20240219182821","50":"https://static.wikia.nocookie.net/onepiece/images/c/c7/Volume_50.png/revision/latest?cb=20130115024523","51":"https://static.wikia.nocookie.net/onepiece/images/4/43/Volume_51.png/revision/latest?cb=20240219183317","52":"https://static.wikia.nocookie.net/onepiece/images/6/6e/Volume_52.png/revision/latest?cb=20150704032519","53":"https://static.wikia.nocookie.net/onepiece/images/8/84/Volume_53.png/revision/latest?cb=20130115024524","54":"https://static.wikia.nocookie.net/onepiece/images/4/40/Volume_54.png/revision/latest?cb=20240221082453","55":"https://static.wikia.nocookie.net/onepiece/images/a/a0/Volume_55.png/revision/latest?cb=20240219202557","56":"https://static.wikia.nocookie.net/onepiece/images/a/af/Volume_56.png/revision/latest?cb=20240219184125","57":"https://static.wikia.nocookie.net/onepiece/images/0/04/Volume_57.png/revision/latest?cb=20240221082703","58":"https://static.wikia.nocookie.net/onepiece/images/5/5b/Volume_58.png/revision/latest?cb=20130115024526","59":"https://static.wikia.nocookie.net/onepiece/images/f/fd/Volume_59.png/revision/latest?cb=20240220124430","60":"https://static.wikia.nocookie.net/onepiece/images/d/d8/Volume_60.png/revision/latest?cb=20240221082916","61":"https://static.wikia.nocookie.net/onepiece/images/e/e8/Volume_61.png/revision/latest?cb=20240219203354","62":"https://static.wikia.nocookie.net/onepiece/images/d/df/Volume_62.png/revision/latest?cb=20240221083153","63":"https://static.wikia.nocookie.net/onepiece/images/7/71/Volume_63.png/revision/latest?cb=20240221084628","64":"https://static.wikia.nocookie.net/onepiece/images/8/8c/Volume_64.png/revision/latest?cb=20131108225027","65":"https://static.wikia.nocookie.net/onepiece/images/f/f0/Volume_65.png/revision/latest?cb=20240221083416","66":"https://static.wikia.nocookie.net/onepiece/images/f/f8/Volume_66.png/revision/latest?cb=20201201122207","67":"https://static.wikia.nocookie.net/onepiece/images/3/3b/Volume_67.png/revision/latest?cb=20190521073314","68":"https://static.wikia.nocookie.net/onepiece/images/e/ee/Volume_68.png/revision/latest?cb=20190521073425","69":"https://static.wikia.nocookie.net/onepiece/images/5/57/Volume_69.png/revision/latest?cb=20201201123338","70":"https://static.wikia.nocookie.net/onepiece/images/3/34/Volume_70.png/revision/latest?cb=20130605012318","71":"https://static.wikia.nocookie.net/onepiece/images/9/90/Volume_71.png/revision/latest?cb=20160414112827","72":"https://static.wikia.nocookie.net/onepiece/images/9/92/Volume_72.png/revision/latest?cb=20240221083904","73":"https://static.wikia.nocookie.net/onepiece/images/2/24/Volume_73.png/revision/latest?cb=20240219203939","74":"https://static.wikia.nocookie.net/onepiece/images/1/1c/Volume_74.png/revision/latest?cb=20240221084011","75":"https://static.wikia.nocookie.net/onepiece/images/1/1b/Volume_75.png/revision/latest?cb=20240221084142","76":"https://static.wikia.nocookie.net/onepiece/images/e/e6/Volume_76.png/revision/latest?cb=20240219204947","77":"https://static.wikia.nocookie.net/onepiece/images/a/aa/Volume_77.png/revision/latest?cb=20150408171434","78":"https://static.wikia.nocookie.net/onepiece/images/a/a5/Volume_78.png/revision/latest?cb=20201201123845","79":"https://static.wikia.nocookie.net/onepiece/images/0/07/Volume_79.png/revision/latest?cb=20160414111420","80":"https://static.wikia.nocookie.net/onepiece/images/d/d6/Volume_80.png/revision/latest?cb=20240219205446","81":"https://static.wikia.nocookie.net/onepiece/images/8/86/Volume_81.png/revision/latest?cb=20160617155054","82":"https://static.wikia.nocookie.net/onepiece/images/5/53/Volume_82.png/revision/latest?cb=20240219205714","83":"https://static.wikia.nocookie.net/onepiece/images/8/8a/Volume_83.png/revision/latest?cb=20161031165032","84":"https://static.wikia.nocookie.net/onepiece/images/d/d0/Volume_84.png/revision/latest?cb=20240219210128","85":"https://static.wikia.nocookie.net/onepiece/images/f/fe/Volume_85.png/revision/latest?cb=20201201124126","86":"https://static.wikia.nocookie.net/onepiece/images/a/ad/Volume_86.png/revision/latest?cb=20201201124338","87":"https://static.wikia.nocookie.net/onepiece/images/f/f1/Volume_87.png/revision/latest?cb=20240219210507","88":"https://static.wikia.nocookie.net/onepiece/images/c/c7/Volume_88.png/revision/latest?cb=20190521075647","89":"https://static.wikia.nocookie.net/onepiece/images/e/e9/Volume_89.png/revision/latest?cb=20201201125115","90":"https://static.wikia.nocookie.net/onepiece/images/3/3b/Volume_90.png/revision/latest?cb=20190521080720","91":"https://static.wikia.nocookie.net/onepiece/images/7/74/Volume_91.png/revision/latest?cb=20190508125729","92":"https://static.wikia.nocookie.net/onepiece/images/1/1f/Volume_92.png/revision/latest?cb=20190508130046","93":"https://static.wikia.nocookie.net/onepiece/images/4/4c/Volume_93.png/revision/latest?cb=20190704122018","94":"https://static.wikia.nocookie.net/onepiece/images/8/8a/Volume_94.png/revision/latest?cb=20191004134522","95":"https://static.wikia.nocookie.net/onepiece/images/0/0c/Volume_95.png/revision/latest?cb=20191228075843","96":"https://static.wikia.nocookie.net/onepiece/images/8/8a/Volume_96.png/revision/latest?cb=20201201125750","97":"https://static.wikia.nocookie.net/onepiece/images/5/57/Volume_97.png/revision/latest?cb=20200916165359","98":"https://static.wikia.nocookie.net/onepiece/images/b/b9/Volume_98.png/revision/latest?cb=20210204123114","100":"https://static.wikia.nocookie.net/onepiece/images/c/c6/Volume_100.png/revision/latest?cb=20210903160940","101":"https://static.wikia.nocookie.net/onepiece/images/b/b3/Volume_101.png/revision/latest?cb=20211122095619","102":"https://static.wikia.nocookie.net/onepiece/images/5/5e/Volume_102.png/revision/latest?cb=20220321092801","103":"https://static.wikia.nocookie.net/onepiece/images/6/69/Volume_103.png/revision/latest?cb=20220724115337","105":"https://static.wikia.nocookie.net/onepiece/images/e/e4/Volume_105.png/revision/latest?cb=20230227145359","106":"https://static.wikia.nocookie.net/onepiece/images/9/9d/Volume_106.png/revision/latest?cb=20230621031238","107":"https://static.wikia.nocookie.net/onepiece/images/0/00/Volume_107.png/revision/latest?cb=20231022084700","108":"https://static.wikia.nocookie.net/onepiece/images/3/32/Volume_108.png/revision/latest?cb=20240219030223","109":"https://static.wikia.nocookie.net/onepiece/images/f/fa/Volume_109.png/revision/latest?cb=20240728095050","110":"https://static.wikia.nocookie.net/onepiece/images/2/28/Volume_110.png/revision/latest?cb=20241021032630","111":"https://static.wikia.nocookie.net/onepiece/images/f/fb/Volume_111.png/revision/latest?cb=20250217030811","112":"https://static.wikia.nocookie.net/onepiece/images/d/d8/Volume_112.png/revision/latest?cb=20250726131401","99":"https://static.wikia.nocookie.net/onepiece/images/8/86/Volume_99.png/revision/latest?cb=20210604092155","104":"https://static.wikia.nocookie.net/onepiece/images/a/a9/Volume_104.png/revision/latest?cb=20221027151810","113":"https://static.wikia.nocookie.net/onepiece/images/8/80/Volume_113.png/revision/latest?cb=20251228004541","114":"https://static.wikia.nocookie.net/onepiece/images/5/52/Volume_114.png/revision/latest?cb=20260222041324"}
+</script>
+
+  <div id="grid" class="grid">
+    <div class="loading">Loading cover stories…</div>
+  </div>
+</main>
+
+<footer>
+  Cover-story metadata sourced from the One Piece Fandom wiki · One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial
+</footer>
+
+<script src="spoiler.js?v=1"></script>
+<script>
+let coverStories = [];
+try {
+  coverStories = JSON.parse(document.getElementById('cover-stories-data').textContent || '[]');
+} catch (_) { coverStories = []; }
+
+// Spoiler Shield: filter cover-stories whose max chapter > effective cutoff
+(function _gateCovers() {
+  if (typeof CodexSpoiler === 'undefined') return;
+  const cutoff = CodexSpoiler.effectiveCutoff('public');
+  if (cutoff === Infinity) return;
+  coverStories = coverStories.filter(cs => {
+    const chs = cs.chapters || [];
+    if (!chs.length) return false;
+    const maxCh = Math.max.apply(null, chs);
+    return maxCh <= cutoff;
+  });
+})();
+
+let volumeCovers = {};
+try {
+  volumeCovers = JSON.parse(document.getElementById('covers-data').textContent || '{}');
+} catch (_) { volumeCovers = {}; }
+
+// Map a chapter number to a volume number (~10 chapters per volume).
+// Real volumes vary, but for picking a representative cover this is fine.
+function chToVol(ch) {
+  return Math.max(1, Math.ceil(ch / 10));
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function render() {
+  const grid = document.getElementById('grid');
+  if (!coverStories.length) {
+    grid.innerHTML = `<div class="loading">No cover-story data yet — run <code>py cover_stories_scraper.py</code> then <code>py bake.py</code>.</div>`;
+    return;
+  }
+  grid.innerHTML = coverStories.map(cs => {
+    const firstCh = (cs.chapters && cs.chapters[0]) || null;
+    const repVol  = firstCh ? chToVol(firstCh) : null;
+    const thumb   = repVol ? volumeCovers[String(repVol)] : null;
+    const thumbHtml = thumb
+      ? `<img class="card-thumb" src="${thumb}" alt="Volume ${repVol} cover" loading="lazy">`
+      : '';
+    return `
+    <article class="card">
+      <div class="card-stripe" style="background:${cs.color}"></div>
+      ${thumbHtml}
+      <div class="card-body">
+        <h2 class="card-title">${escHtml(cs.name)}</h2>
+        <div class="card-range">${escHtml(cs.chapter_range || '?')}</div>
+        <p class="card-summary">${escHtml(cs.summary || 'No summary available yet.')}</p>
+        <div class="card-meta">
+          <span class="meta-pill">${(cs.chapters || []).length} chapters</span>
+          ${repVol ? `<span class="meta-pill">starts vol ${repVol}</span>` : ''}
+          <a class="meta-pill chap-link" href="https://onepiece.fandom.com/wiki/${encodeURIComponent(cs.slug || cs.name)}" target="_blank" rel="noopener">Wiki →</a>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+render();
+</script>
+
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+</body>
+</html>

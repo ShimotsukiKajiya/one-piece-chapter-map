@@ -1,0 +1,590 @@
+[
+  {
+    "from": "chr:02499",
+    "to": "chr:02497",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 432,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Monkey_D_Luffy:father:Monkey_D_Dragon",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:02498",
+    "src": "manual",
+    "relation": "grandfather",
+    "chapter": 431,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Monkey_D_Luffy:grandfather:Monkey_D_Garp",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:02665",
+    "src": "manual",
+    "relation": "sworn-brother",
+    "chapter": 525,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Monkey_D_Luffy:sworn-brother:Portgas_D_Ace",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:02751",
+    "src": "manual",
+    "relation": "sworn-brother",
+    "chapter": 583,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Monkey_D_Luffy:sworn-brother:Sabo",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02499",
+    "to": "chr:01879",
+    "src": "manual",
+    "relation": "guardian",
+    "chapter": 583,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Monkey_D_Luffy:guardian:Curly_Dadan",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02497",
+    "to": "chr:02498",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 432,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Monkey_D_Dragon:father:Monkey_D_Garp",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02665",
+    "to": "chr:02061",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 551,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Portgas_D_Ace:father:Gol_D_Roger",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02665",
+    "to": "chr:02666",
+    "src": "manual",
+    "relation": "mother",
+    "chapter": 551,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Portgas_D_Ace:mother:Portgas_D_Rouge",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02665",
+    "to": "chr:01950",
+    "src": "manual",
+    "relation": "adoptive-father",
+    "chapter": 552,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Portgas_D_Ace:adoptive-father:Edward_Newgate",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02751",
+    "to": "chr:02616",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 583,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Sabo:father:Outlook_III",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02751",
+    "to": "chr:02871",
+    "src": "manual",
+    "relation": "adoptive-brother",
+    "chapter": 587,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Sabo:adoptive-brother:Stelly",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03008",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 832,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:father:Vinsmoke_Judge",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:02852",
+    "src": "manual",
+    "relation": "mother",
+    "chapter": 840,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:mother:Sora",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03010",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 832,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:sister:Vinsmoke_Reiju",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03007",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 832,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:brother:Vinsmoke_Ichiji",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03009",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 832,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:brother:Vinsmoke_Niji",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03012",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 832,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:brother:Vinsmoke_Yonji",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02764",
+    "to": "chr:03073",
+    "src": "manual",
+    "relation": "guardian",
+    "chapter": 57,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Vinsmoke_Sanji:guardian:Zeff",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02548",
+    "to": "chr:02582",
+    "src": "manual",
+    "relation": "adoptive-sister",
+    "chapter": 78,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Nami:adoptive-sister:Nojiko",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02548",
+    "to": "chr:01642",
+    "src": "manual",
+    "relation": "adoptive-mother",
+    "chapter": 78,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Nami:adoptive-mother:Bell_mère",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02729",
+    "to": "chr:02821",
+    "src": "manual",
+    "relation": "ancestor",
+    "chapter": 952,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Roronoa_Zoro:ancestor:Shimotsuki_Ushimaru",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02573",
+    "to": "chr:02572",
+    "src": "manual",
+    "relation": "mother",
+    "chapter": 391,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Nico_Robin:mother:Nico_Olvia",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02938",
+    "to": "chr:02140",
+    "src": "manual",
+    "relation": "guardian",
+    "chapter": 142,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Tony_Tony_Chopper:guardian:Hiriluk",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01794",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 651,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Charlotte_Linlin:daughter:Charlotte_Lola",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01819",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 825,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Charlotte_Linlin:daughter:Charlotte_Pudding",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01790",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 834,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Charlotte_Linlin:son:Charlotte_Katakuri",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01774",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 836,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Charlotte_Linlin:son:Charlotte_Cracker",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01822",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 834,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Charlotte_Linlin:daughter:Charlotte_Smoothie",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01793",
+    "to": "chr:01815",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 834,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Charlotte_Linlin:son:Charlotte_Perospero",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01928",
+    "to": "chr:01931",
+    "src": "manual",
+    "relation": "brother",
+    "chapter": 762,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Donquixote_Doflamingo:brother:Donquixote_Rosinante",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01928",
+    "to": "chr:01929",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 762,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Donquixote_Doflamingo:father:Donquixote_Homing",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02947",
+    "to": "chr:02363",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 762,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Trafalgar_D_Water_Law:sister:Lami",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02947",
+    "to": "chr:01931",
+    "src": "manual",
+    "relation": "adoptive-father",
+    "chapter": 763,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Trafalgar_D_Water_Law:adoptive-father:Donquixote_Rosinante",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01680",
+    "to": "chr:01682",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 514,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Boa_Hancock:sister:Boa_Sandersonia",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01680",
+    "to": "chr:01681",
+    "src": "manual",
+    "relation": "sister",
+    "chapter": 514,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Boa_Hancock:sister:Boa_Marigold",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02252",
+    "to": "chr:03045",
+    "src": "manual",
+    "relation": "child",
+    "chapter": 984,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Kaidou:child:Yamato",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02327",
+    "src": "manual",
+    "relation": "father",
+    "chapter": 962,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Kouzuki_Oden:father:Kouzuki_Sukiyaki",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02328",
+    "src": "manual",
+    "relation": "wife",
+    "chapter": 965,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Kouzuki_Oden:wife:Kouzuki_Toki",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02325",
+    "src": "manual",
+    "relation": "son",
+    "chapter": 966,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Kouzuki_Oden:son:Kouzuki_Momonosuke",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02326",
+    "to": "chr:02324",
+    "src": "manual",
+    "relation": "daughter",
+    "chapter": 966,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Kouzuki_Oden:daughter:Kouzuki_Hiyori",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02809",
+    "to": "chr:02987",
+    "src": "manual",
+    "relation": "adoptive-daughter",
+    "note": "Film: Red",
+    "tier": "likely",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Shanks:adoptive-daughter:Uta",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02061",
+    "to": "chr:02666",
+    "src": "manual",
+    "relation": "partner",
+    "chapter": 551,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "family:Gol_D_Roger:partner:Portgas_D_Rouge",
+        "match_type": "exact"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/forged-by.json",
+  "title": "forged-by relationship",
+  "description": "weapon → character. Smith attribution for named blades (the Meito).",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from": {"$ref": "../_common.json#/$defs/weapon_id"},
+    "to":   {"$ref": "../_common.json#/$defs/character_id"},
+    "src":  {"$ref": "../_common.json#/$defs/src"},
+    "era":  {"type": "string"}
+  },
+  "additionalProperties": false
+}

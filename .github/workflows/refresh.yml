@@ -1,0 +1,81 @@
+name: Refresh Codex data
+
+# Manual button only by default — visit the Actions tab and click "Run workflow".
+# To enable a weekly auto-run, uncomment the `schedule` block below.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Pipeline mode"
+        type: choice
+        default: "quick"
+        options:
+          - quick      # fast: skips Punk Records + SBS images
+          - full       # everything (~25 min)
+          - audit-only # just sanity-check existing data, no scraping
+  schedule:
+    - cron: "0 6 * * 0"   # every Sunday 06:00 UTC
+
+# Only the GITHUB_TOKEN that this workflow auto-receives is used. No secrets
+# are required for the default flow. ANTHROPIC_API_KEY is optional — set it
+# as a repo secret if you want sbs_categorizer.py / theory_analyzer.py to
+# run in CI; otherwise refresh.py skips them gracefully.
+permissions:
+  contents: write     # needed so the workflow can commit + push refreshed data
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          # full history so we can push back
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          # Optional — only used if you've added it as a repo secret.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          case "${{ inputs.mode }}" in
+            audit-only) python audit.py ;;
+            full)       python refresh.py ;;
+            quick|*)    python refresh.py --quick ;;
+          esac
+
+      - name: Commit + push refreshed data
+        if: ${{ inputs.mode != 'audit-only' }}
+        run: |
+          git config user.name  "shimotsuki-codex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # Only stage data files — never code or caches
+          git add -- \
+            appearances.csv sbs_archive.json theories_import.json \
+            volume_covers.json cover_stories.json punk_records.json \
+            docs/audit_report.md baked 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No data changes — nothing to commit."
+          else
+            git commit -m "chore(data): scheduled refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report
+          path: docs/audit_report.md
+          if-no-files-found: ignore

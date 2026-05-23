@@ -1,0 +1,39 @@
+{
+  "_doc": "Curated list of films, key One Piece events, and milestones for the Chapter Release Map. Films are sourced from Wikipedia 'List of One Piece films'. Events are project-curated based on widely-documented dates. Each entry has: kind, name, date (YYYY-MM-DD), optional chapter, optional summary.",
+  "generated_on": "2026-05-02",
+  "kinds": {
+    "film":     {"label": "Theatrical Film",        "color": "#ff6b1a"},
+    "milestone":{"label": "Story Milestone",        "color": "#d4a44a"},
+    "hiatus":   {"label": "Hiatus / Production Break", "color": "#9966ff"},
+    "media":    {"label": "Media Launch",           "color": "#00cc66"},
+    "saga":     {"label": "Saga Boundary",          "color": "#5599ff"}
+  },
+  "events": [
+    {"kind": "media",     "name": "Manga begins (WSJ Issue #34)", "date": "1997-07-22", "chapter": 1, "summary": "Romance Dawn — One Piece launches in Weekly Shonen Jump."},
+    {"kind": "film",      "name": "Film 1: One Piece",                              "date": "2000-03-04"},
+    {"kind": "film",      "name": "Film 2: Clockwork Island Adventure",             "date": "2001-03-03"},
+    {"kind": "film",      "name": "Film 3: Chopper's Kingdom on the Island of Strange Animals", "date": "2002-03-02"},
+    {"kind": "film",      "name": "Film 4: Dead End Adventure",                     "date": "2003-03-01"},
+    {"kind": "film",      "name": "Film 5: The Cursed Holy Sword",                  "date": "2004-03-06"},
+    {"kind": "film",      "name": "Film 6: Baron Omatsuri and the Secret Island",   "date": "2005-03-05"},
+    {"kind": "media",     "name": "Anime begins (Fuji TV)",                          "date": "1999-10-20", "summary": "Episode 1 airs on Fuji TV."},
+    {"kind": "film",      "name": "Film 7: Giant Mecha Soldier of Karakuri Castle", "date": "2006-03-04"},
+    {"kind": "film",      "name": "Film 8: Episode of Alabasta",                    "date": "2007-03-03"},
+    {"kind": "film",      "name": "Film 9: Episode of Chopper Plus",                "date": "2008-03-01"},
+    {"kind": "film",      "name": "Film 10: Strong World",                          "date": "2009-12-12", "summary": "Chapter 0 of the Strong World special — Roger-era backstory."},
+    {"kind": "milestone", "name": "Marineford concludes · Ace dies",            "date": "2010-04-26", "chapter": 574, "summary": "The most quoted death in modern shonen."},
+    {"kind": "milestone", "name": "Two-year timeskip",                              "date": "2010-09-27", "chapter": 597, "summary": "3D2Y — the crew separates and trains for two years."},
+    {"kind": "film",      "name": "Film 11: Straw Hat Chase (3D)",                  "date": "2011-03-19"},
+    {"kind": "film",      "name": "Film 12: Z",                                     "date": "2012-12-15"},
+    {"kind": "film",      "name": "Film 13: Gold",                                  "date": "2016-07-23"},
+    {"kind": "film",      "name": "Film 14: Stampede",                              "date": "2019-08-09", "summary": "20th anniversary film."},
+    {"kind": "milestone", "name": "Wano Country arc begins",                        "date": "2018-07-16", "chapter": 909},
+    {"kind": "saga",      "name": "Final Saga begins",                              "date": "2022-07-25", "chapter": 1058, "summary": "Egghead arc begins; the final stretch."},
+    {"kind": "hiatus",    "name": "Oda eye surgery break (manga)",                  "date": "2022-08-15", "summary": "1-month break announced for Oda's astigmatism surgery."},
+    {"kind": "film",      "name": "Film 15: Red",                                   "date": "2022-08-06", "summary": "Uta arc — Shanks's daughter."},
+    {"kind": "media",     "name": "One Piece (Netflix live-action) S1",             "date": "2023-08-31", "summary": "8-episode East Blue adaptation."},
+    {"kind": "hiatus",    "name": "Anime hiatus begins",                            "date": "2024-04-07", "summary": "Anime pauses after Episode 1088 for production reset and remake."},
+    {"kind": "milestone", "name": "Anime resumes — Egghead arc",                "date": "2024-10-01", "summary": "Episode 1089 airs after the production break (rough estimate)."},
+    {"kind": "saga",      "name": "Elbaph arc begins",                              "date": "2024-12-30", "chapter": 1127, "summary": "The Final Saga moves to the Land of Giants."}
+  ]
+}

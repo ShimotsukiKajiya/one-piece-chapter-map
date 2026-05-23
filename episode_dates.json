@@ -1,0 +1,5959 @@
+{
+  "_doc": "Per-episode air date estimates. Season boundaries (seasons[].start_date and end_date) are EXACT — first/last episode of each season are anchored to those dates. Within-season episodes are linearly distributed and flagged approximate=true. Season 1 episode 1 = 1999-10-20 (TX broadcast). Anime took a long break between Season 21 (end 2025-12-28) and Season 22 (start 2026-04-05) which is reflected as a gap in the timeline.",
+  "generated_on": "2026-05-02",
+  "anchor_episode1": "1999-10-20",
+  "max_episode": 1159,
+  "seasons": [
+    {
+      "season": 1,
+      "first_ep": 1,
+      "last_ep": 61,
+      "start_date": "1999-10-20",
+      "end_date": "2001-03-07"
+    },
+    {
+      "season": 2,
+      "first_ep": 62,
+      "last_ep": 77,
+      "start_date": "2001-03-21",
+      "end_date": "2001-08-19"
+    },
+    {
+      "season": 3,
+      "first_ep": 78,
+      "last_ep": 92,
+      "start_date": "2001-08-26",
+      "end_date": "2001-12-09"
+    },
+    {
+      "season": 4,
+      "first_ep": 93,
+      "last_ep": 130,
+      "start_date": "2001-12-16",
+      "end_date": "2002-10-27"
+    },
+    {
+      "season": 5,
+      "first_ep": 131,
+      "last_ep": 143,
+      "start_date": "2002-11-03",
+      "end_date": "2003-02-02"
+    },
+    {
+      "season": 6,
+      "first_ep": 144,
+      "last_ep": 195,
+      "start_date": "2003-02-09",
+      "end_date": "2004-06-13"
+    },
+    {
+      "season": 7,
+      "first_ep": 196,
+      "last_ep": 228,
+      "start_date": "2004-06-20",
+      "end_date": "2005-03-27"
+    },
+    {
+      "season": 8,
+      "first_ep": 229,
+      "last_ep": 263,
+      "start_date": "2005-04-17",
+      "end_date": "2006-04-30"
+    },
+    {
+      "season": 9,
+      "first_ep": 264,
+      "last_ep": 336,
+      "start_date": "2006-05-21",
+      "end_date": "2007-12-23"
+    },
+    {
+      "season": 10,
+      "first_ep": 337,
+      "last_ep": 381,
+      "start_date": "2008-01-06",
+      "end_date": "2008-12-14"
+    },
+    {
+      "season": 11,
+      "first_ep": 382,
+      "last_ep": 407,
+      "start_date": "2008-12-21",
+      "end_date": "2009-06-28"
+    },
+    {
+      "season": 12,
+      "first_ep": 408,
+      "last_ep": 421,
+      "start_date": "2009-07-05",
+      "end_date": "2009-10-11"
+    },
+    {
+      "season": 13,
+      "first_ep": 422,
+      "last_ep": 456,
+      "start_date": "2009-10-18",
+      "end_date": "2010-06-20"
+    },
+    {
+      "season": 14,
+      "first_ep": 457,
+      "last_ep": 516,
+      "start_date": "2010-06-27",
+      "end_date": "2011-09-25"
+    },
+    {
+      "season": 15,
+      "first_ep": 517,
+      "last_ep": 578,
+      "start_date": "2011-10-02",
+      "end_date": "2012-12-23"
+    },
+    {
+      "season": 16,
+      "first_ep": 579,
+      "last_ep": 628,
+      "start_date": "2013-01-06",
+      "end_date": "2014-01-12"
+    },
+    {
+      "season": 17,
+      "first_ep": 629,
+      "last_ep": 746,
+      "start_date": "2014-01-19",
+      "end_date": "2016-06-19"
+    },
+    {
+      "season": 18,
+      "first_ep": 747,
+      "last_ep": 782,
+      "start_date": "2016-06-26",
+      "end_date": "2017-04-02"
+    },
+    {
+      "season": 19,
+      "first_ep": 783,
+      "last_ep": 891,
+      "start_date": "2017-04-09",
+      "end_date": "2019-06-30"
+    },
+    {
+      "season": 20,
+      "first_ep": 892,
+      "last_ep": 1088,
+      "start_date": "2019-07-07",
+      "end_date": "2023-12-17"
+    },
+    {
+      "season": 21,
+      "first_ep": 1089,
+      "last_ep": 1155,
+      "start_date": "2024-01-07",
+      "end_date": "2025-12-28"
+    },
+    {
+      "season": 22,
+      "first_ep": 1156,
+      "last_ep": 1159,
+      "start_date": "2026-04-05",
+      "end_date": "2026-04-26"
+    }
+  ],
+  "episodes": {
+    "1": {
+      "date": "1999-10-20",
+      "season": 1,
+      "approximate": false
+    },
+    "2": {
+      "date": "1999-10-28",
+      "season": 1,
+      "approximate": true
+    },
+    "3": {
+      "date": "1999-11-06",
+      "season": 1,
+      "approximate": true
+    },
+    "4": {
+      "date": "1999-11-14",
+      "season": 1,
+      "approximate": true
+    },
+    "5": {
+      "date": "1999-11-23",
+      "season": 1,
+      "approximate": true
+    },
+    "6": {
+      "date": "1999-12-01",
+      "season": 1,
+      "approximate": true
+    },
+    "7": {
+      "date": "1999-12-09",
+      "season": 1,
+      "approximate": true
+    },
+    "8": {
+      "date": "1999-12-18",
+      "season": 1,
+      "approximate": true
+    },
+    "9": {
+      "date": "1999-12-26",
+      "season": 1,
+      "approximate": true
+    },
+    "10": {
+      "date": "2000-01-04",
+      "season": 1,
+      "approximate": true
+    },
+    "11": {
+      "date": "2000-01-12",
+      "season": 1,
+      "approximate": true
+    },
+    "12": {
+      "date": "2000-01-20",
+      "season": 1,
+      "approximate": true
+    },
+    "13": {
+      "date": "2000-01-29",
+      "season": 1,
+      "approximate": true
+    },
+    "14": {
+      "date": "2000-02-06",
+      "season": 1,
+      "approximate": true
+    },
+    "15": {
+      "date": "2000-02-15",
+      "season": 1,
+      "approximate": true
+    },
+    "16": {
+      "date": "2000-02-23",
+      "season": 1,
+      "approximate": true
+    },
+    "17": {
+      "date": "2000-03-02",
+      "season": 1,
+      "approximate": true
+    },
+    "18": {
+      "date": "2000-03-11",
+      "season": 1,
+      "approximate": true
+    },
+    "19": {
+      "date": "2000-03-19",
+      "season": 1,
+      "approximate": true
+    },
+    "20": {
+      "date": "2000-03-28",
+      "season": 1,
+      "approximate": true
+    },
+    "21": {
+      "date": "2000-04-05",
+      "season": 1,
+      "approximate": true
+    },
+    "22": {
+      "date": "2000-04-13",
+      "season": 1,
+      "approximate": true
+    },
+    "23": {
+      "date": "2000-04-22",
+      "season": 1,
+      "approximate": true
+    },
+    "24": {
+      "date": "2000-04-30",
+      "season": 1,
+      "approximate": true
+    },
+    "25": {
+      "date": "2000-05-09",
+      "season": 1,
+      "approximate": true
+    },
+    "26": {
+      "date": "2000-05-17",
+      "season": 1,
+      "approximate": true
+    },
+    "27": {
+      "date": "2000-05-25",
+      "season": 1,
+      "approximate": true
+    },
+    "28": {
+      "date": "2000-06-03",
+      "season": 1,
+      "approximate": true
+    },
+    "29": {
+      "date": "2000-06-11",
+      "season": 1,
+      "approximate": true
+    },
+    "30": {
+      "date": "2000-06-20",
+      "season": 1,
+      "approximate": true
+    },
+    "31": {
+      "date": "2000-06-28",
+      "season": 1,
+      "approximate": true
+    },
+    "32": {
+      "date": "2000-07-06",
+      "season": 1,
+      "approximate": true
+    },
+    "33": {
+      "date": "2000-07-15",
+      "season": 1,
+      "approximate": true
+    },
+    "34": {
+      "date": "2000-07-23",
+      "season": 1,
+      "approximate": true
+    },
+    "35": {
+      "date": "2000-08-01",
+      "season": 1,
+      "approximate": true
+    },
+    "36": {
+      "date": "2000-08-09",
+      "season": 1,
+      "approximate": true
+    },
+    "37": {
+      "date": "2000-08-17",
+      "season": 1,
+      "approximate": true
+    },
+    "38": {
+      "date": "2000-08-26",
+      "season": 1,
+      "approximate": true
+    },
+    "39": {
+      "date": "2000-09-03",
+      "season": 1,
+      "approximate": true
+    },
+    "40": {
+      "date": "2000-09-12",
+      "season": 1,
+      "approximate": true
+    },
+    "41": {
+      "date": "2000-09-20",
+      "season": 1,
+      "approximate": true
+    },
+    "42": {
+      "date": "2000-09-28",
+      "season": 1,
+      "approximate": true
+    },
+    "43": {
+      "date": "2000-10-07",
+      "season": 1,
+      "approximate": true
+    },
+    "44": {
+      "date": "2000-10-15",
+      "season": 1,
+      "approximate": true
+    },
+    "45": {
+      "date": "2000-10-24",
+      "season": 1,
+      "approximate": true
+    },
+    "46": {
+      "date": "2000-11-01",
+      "season": 1,
+      "approximate": true
+    },
+    "47": {
+      "date": "2000-11-09",
+      "season": 1,
+      "approximate": true
+    },
+    "48": {
+      "date": "2000-11-18",
+      "season": 1,
+      "approximate": true
+    },
+    "49": {
+      "date": "2000-11-26",
+      "season": 1,
+      "approximate": true
+    },
+    "50": {
+      "date": "2000-12-05",
+      "season": 1,
+      "approximate": true
+    },
+    "51": {
+      "date": "2000-12-13",
+      "season": 1,
+      "approximate": true
+    },
+    "52": {
+      "date": "2000-12-21",
+      "season": 1,
+      "approximate": true
+    },
+    "53": {
+      "date": "2000-12-30",
+      "season": 1,
+      "approximate": true
+    },
+    "54": {
+      "date": "2001-01-07",
+      "season": 1,
+      "approximate": true
+    },
+    "55": {
+      "date": "2001-01-16",
+      "season": 1,
+      "approximate": true
+    },
+    "56": {
+      "date": "2001-01-24",
+      "season": 1,
+      "approximate": true
+    },
+    "57": {
+      "date": "2001-02-01",
+      "season": 1,
+      "approximate": true
+    },
+    "58": {
+      "date": "2001-02-10",
+      "season": 1,
+      "approximate": true
+    },
+    "59": {
+      "date": "2001-02-18",
+      "season": 1,
+      "approximate": true
+    },
+    "60": {
+      "date": "2001-02-27",
+      "season": 1,
+      "approximate": true
+    },
+    "61": {
+      "date": "2001-03-07",
+      "season": 1,
+      "approximate": false
+    },
+    "62": {
+      "date": "2001-03-21",
+      "season": 2,
+      "approximate": false
+    },
+    "63": {
+      "date": "2001-03-31",
+      "season": 2,
+      "approximate": true
+    },
+    "64": {
+      "date": "2001-04-10",
+      "season": 2,
+      "approximate": true
+    },
+    "65": {
+      "date": "2001-04-20",
+      "season": 2,
+      "approximate": true
+    },
+    "66": {
+      "date": "2001-04-30",
+      "season": 2,
+      "approximate": true
+    },
+    "67": {
+      "date": "2001-05-10",
+      "season": 2,
+      "approximate": true
+    },
+    "68": {
+      "date": "2001-05-20",
+      "season": 2,
+      "approximate": true
+    },
+    "69": {
+      "date": "2001-05-30",
+      "season": 2,
+      "approximate": true
+    },
+    "70": {
+      "date": "2001-06-10",
+      "season": 2,
+      "approximate": true
+    },
+    "71": {
+      "date": "2001-06-20",
+      "season": 2,
+      "approximate": true
+    },
+    "72": {
+      "date": "2001-06-30",
+      "season": 2,
+      "approximate": true
+    },
+    "73": {
+      "date": "2001-07-10",
+      "season": 2,
+      "approximate": true
+    },
+    "74": {
+      "date": "2001-07-20",
+      "season": 2,
+      "approximate": true
+    },
+    "75": {
+      "date": "2001-07-30",
+      "season": 2,
+      "approximate": true
+    },
+    "76": {
+      "date": "2001-08-09",
+      "season": 2,
+      "approximate": true
+    },
+    "77": {
+      "date": "2001-08-19",
+      "season": 2,
+      "approximate": false
+    },
+    "78": {
+      "date": "2001-08-26",
+      "season": 3,
+      "approximate": false
+    },
+    "79": {
+      "date": "2001-09-03",
+      "season": 3,
+      "approximate": true
+    },
+    "80": {
+      "date": "2001-09-10",
+      "season": 3,
+      "approximate": true
+    },
+    "81": {
+      "date": "2001-09-17",
+      "season": 3,
+      "approximate": true
+    },
+    "82": {
+      "date": "2001-09-25",
+      "season": 3,
+      "approximate": true
+    },
+    "83": {
+      "date": "2001-10-03",
+      "season": 3,
+      "approximate": true
+    },
+    "84": {
+      "date": "2001-10-10",
+      "season": 3,
+      "approximate": true
+    },
+    "85": {
+      "date": "2001-10-17",
+      "season": 3,
+      "approximate": true
+    },
+    "86": {
+      "date": "2001-10-25",
+      "season": 3,
+      "approximate": true
+    },
+    "87": {
+      "date": "2001-11-02",
+      "season": 3,
+      "approximate": true
+    },
+    "88": {
+      "date": "2001-11-09",
+      "season": 3,
+      "approximate": true
+    },
+    "89": {
+      "date": "2001-11-16",
+      "season": 3,
+      "approximate": true
+    },
+    "90": {
+      "date": "2001-11-24",
+      "season": 3,
+      "approximate": true
+    },
+    "91": {
+      "date": "2001-12-02",
+      "season": 3,
+      "approximate": true
+    },
+    "92": {
+      "date": "2001-12-09",
+      "season": 3,
+      "approximate": false
+    },
+    "93": {
+      "date": "2001-12-16",
+      "season": 4,
+      "approximate": false
+    },
+    "94": {
+      "date": "2001-12-25",
+      "season": 4,
+      "approximate": true
+    },
+    "95": {
+      "date": "2002-01-02",
+      "season": 4,
+      "approximate": true
+    },
+    "96": {
+      "date": "2002-01-11",
+      "season": 4,
+      "approximate": true
+    },
+    "97": {
+      "date": "2002-01-19",
+      "season": 4,
+      "approximate": true
+    },
+    "98": {
+      "date": "2002-01-28",
+      "season": 4,
+      "approximate": true
+    },
+    "99": {
+      "date": "2002-02-05",
+      "season": 4,
+      "approximate": true
+    },
+    "100": {
+      "date": "2002-02-14",
+      "season": 4,
+      "approximate": true
+    },
+    "101": {
+      "date": "2002-02-22",
+      "season": 4,
+      "approximate": true
+    },
+    "102": {
+      "date": "2002-03-03",
+      "season": 4,
+      "approximate": true
+    },
+    "103": {
+      "date": "2002-03-11",
+      "season": 4,
+      "approximate": true
+    },
+    "104": {
+      "date": "2002-03-20",
+      "season": 4,
+      "approximate": true
+    },
+    "105": {
+      "date": "2002-03-28",
+      "season": 4,
+      "approximate": true
+    },
+    "106": {
+      "date": "2002-04-06",
+      "season": 4,
+      "approximate": true
+    },
+    "107": {
+      "date": "2002-04-14",
+      "season": 4,
+      "approximate": true
+    },
+    "108": {
+      "date": "2002-04-23",
+      "season": 4,
+      "approximate": true
+    },
+    "109": {
+      "date": "2002-05-01",
+      "season": 4,
+      "approximate": true
+    },
+    "110": {
+      "date": "2002-05-10",
+      "season": 4,
+      "approximate": true
+    },
+    "111": {
+      "date": "2002-05-18",
+      "season": 4,
+      "approximate": true
+    },
+    "112": {
+      "date": "2002-05-27",
+      "season": 4,
+      "approximate": true
+    },
+    "113": {
+      "date": "2002-06-04",
+      "season": 4,
+      "approximate": true
+    },
+    "114": {
+      "date": "2002-06-13",
+      "season": 4,
+      "approximate": true
+    },
+    "115": {
+      "date": "2002-06-21",
+      "season": 4,
+      "approximate": true
+    },
+    "116": {
+      "date": "2002-06-30",
+      "season": 4,
+      "approximate": true
+    },
+    "117": {
+      "date": "2002-07-08",
+      "season": 4,
+      "approximate": true
+    },
+    "118": {
+      "date": "2002-07-17",
+      "season": 4,
+      "approximate": true
+    },
+    "119": {
+      "date": "2002-07-25",
+      "season": 4,
+      "approximate": true
+    },
+    "120": {
+      "date": "2002-08-03",
+      "season": 4,
+      "approximate": true
+    },
+    "121": {
+      "date": "2002-08-11",
+      "season": 4,
+      "approximate": true
+    },
+    "122": {
+      "date": "2002-08-20",
+      "season": 4,
+      "approximate": true
+    },
+    "123": {
+      "date": "2002-08-28",
+      "season": 4,
+      "approximate": true
+    },
+    "124": {
+      "date": "2002-09-06",
+      "season": 4,
+      "approximate": true
+    },
+    "125": {
+      "date": "2002-09-14",
+      "season": 4,
+      "approximate": true
+    },
+    "126": {
+      "date": "2002-09-23",
+      "season": 4,
+      "approximate": true
+    },
+    "127": {
+      "date": "2002-10-01",
+      "season": 4,
+      "approximate": true
+    },
+    "128": {
+      "date": "2002-10-10",
+      "season": 4,
+      "approximate": true
+    },
+    "129": {
+      "date": "2002-10-18",
+      "season": 4,
+      "approximate": true
+    },
+    "130": {
+      "date": "2002-10-27",
+      "season": 4,
+      "approximate": false
+    },
+    "131": {
+      "date": "2002-11-03",
+      "season": 5,
+      "approximate": false
+    },
+    "132": {
+      "date": "2002-11-11",
+      "season": 5,
+      "approximate": true
+    },
+    "133": {
+      "date": "2002-11-18",
+      "season": 5,
+      "approximate": true
+    },
+    "134": {
+      "date": "2002-11-26",
+      "season": 5,
+      "approximate": true
+    },
+    "135": {
+      "date": "2002-12-03",
+      "season": 5,
+      "approximate": true
+    },
+    "136": {
+      "date": "2002-12-11",
+      "season": 5,
+      "approximate": true
+    },
+    "137": {
+      "date": "2002-12-19",
+      "season": 5,
+      "approximate": true
+    },
+    "138": {
+      "date": "2002-12-26",
+      "season": 5,
+      "approximate": true
+    },
+    "139": {
+      "date": "2003-01-03",
+      "season": 5,
+      "approximate": true
+    },
+    "140": {
+      "date": "2003-01-10",
+      "season": 5,
+      "approximate": true
+    },
+    "141": {
+      "date": "2003-01-18",
+      "season": 5,
+      "approximate": true
+    },
+    "142": {
+      "date": "2003-01-25",
+      "season": 5,
+      "approximate": true
+    },
+    "143": {
+      "date": "2003-02-02",
+      "season": 5,
+      "approximate": false
+    },
+    "144": {
+      "date": "2003-02-09",
+      "season": 6,
+      "approximate": false
+    },
+    "145": {
+      "date": "2003-02-19",
+      "season": 6,
+      "approximate": true
+    },
+    "146": {
+      "date": "2003-02-28",
+      "season": 6,
+      "approximate": true
+    },
+    "147": {
+      "date": "2003-03-10",
+      "season": 6,
+      "approximate": true
+    },
+    "148": {
+      "date": "2003-03-19",
+      "season": 6,
+      "approximate": true
+    },
+    "149": {
+      "date": "2003-03-29",
+      "season": 6,
+      "approximate": true
+    },
+    "150": {
+      "date": "2003-04-08",
+      "season": 6,
+      "approximate": true
+    },
+    "151": {
+      "date": "2003-04-17",
+      "season": 6,
+      "approximate": true
+    },
+    "152": {
+      "date": "2003-04-27",
+      "season": 6,
+      "approximate": true
+    },
+    "153": {
+      "date": "2003-05-06",
+      "season": 6,
+      "approximate": true
+    },
+    "154": {
+      "date": "2003-05-16",
+      "season": 6,
+      "approximate": true
+    },
+    "155": {
+      "date": "2003-05-26",
+      "season": 6,
+      "approximate": true
+    },
+    "156": {
+      "date": "2003-06-04",
+      "season": 6,
+      "approximate": true
+    },
+    "157": {
+      "date": "2003-06-14",
+      "season": 6,
+      "approximate": true
+    },
+    "158": {
+      "date": "2003-06-24",
+      "season": 6,
+      "approximate": true
+    },
+    "159": {
+      "date": "2003-07-03",
+      "season": 6,
+      "approximate": true
+    },
+    "160": {
+      "date": "2003-07-13",
+      "season": 6,
+      "approximate": true
+    },
+    "161": {
+      "date": "2003-07-22",
+      "season": 6,
+      "approximate": true
+    },
+    "162": {
+      "date": "2003-08-01",
+      "season": 6,
+      "approximate": true
+    },
+    "163": {
+      "date": "2003-08-11",
+      "season": 6,
+      "approximate": true
+    },
+    "164": {
+      "date": "2003-08-20",
+      "season": 6,
+      "approximate": true
+    },
+    "165": {
+      "date": "2003-08-30",
+      "season": 6,
+      "approximate": true
+    },
+    "166": {
+      "date": "2003-09-08",
+      "season": 6,
+      "approximate": true
+    },
+    "167": {
+      "date": "2003-09-18",
+      "season": 6,
+      "approximate": true
+    },
+    "168": {
+      "date": "2003-09-28",
+      "season": 6,
+      "approximate": true
+    },
+    "169": {
+      "date": "2003-10-07",
+      "season": 6,
+      "approximate": true
+    },
+    "170": {
+      "date": "2003-10-17",
+      "season": 6,
+      "approximate": true
+    },
+    "171": {
+      "date": "2003-10-26",
+      "season": 6,
+      "approximate": true
+    },
+    "172": {
+      "date": "2003-11-05",
+      "season": 6,
+      "approximate": true
+    },
+    "173": {
+      "date": "2003-11-15",
+      "season": 6,
+      "approximate": true
+    },
+    "174": {
+      "date": "2003-11-24",
+      "season": 6,
+      "approximate": true
+    },
+    "175": {
+      "date": "2003-12-04",
+      "season": 6,
+      "approximate": true
+    },
+    "176": {
+      "date": "2003-12-13",
+      "season": 6,
+      "approximate": true
+    },
+    "177": {
+      "date": "2003-12-23",
+      "season": 6,
+      "approximate": true
+    },
+    "178": {
+      "date": "2004-01-02",
+      "season": 6,
+      "approximate": true
+    },
+    "179": {
+      "date": "2004-01-11",
+      "season": 6,
+      "approximate": true
+    },
+    "180": {
+      "date": "2004-01-21",
+      "season": 6,
+      "approximate": true
+    },
+    "181": {
+      "date": "2004-01-30",
+      "season": 6,
+      "approximate": true
+    },
+    "182": {
+      "date": "2004-02-09",
+      "season": 6,
+      "approximate": true
+    },
+    "183": {
+      "date": "2004-02-19",
+      "season": 6,
+      "approximate": true
+    },
+    "184": {
+      "date": "2004-02-28",
+      "season": 6,
+      "approximate": true
+    },
+    "185": {
+      "date": "2004-03-09",
+      "season": 6,
+      "approximate": true
+    },
+    "186": {
+      "date": "2004-03-19",
+      "season": 6,
+      "approximate": true
+    },
+    "187": {
+      "date": "2004-03-28",
+      "season": 6,
+      "approximate": true
+    },
+    "188": {
+      "date": "2004-04-07",
+      "season": 6,
+      "approximate": true
+    },
+    "189": {
+      "date": "2004-04-16",
+      "season": 6,
+      "approximate": true
+    },
+    "190": {
+      "date": "2004-04-26",
+      "season": 6,
+      "approximate": true
+    },
+    "191": {
+      "date": "2004-05-06",
+      "season": 6,
+      "approximate": true
+    },
+    "192": {
+      "date": "2004-05-15",
+      "season": 6,
+      "approximate": true
+    },
+    "193": {
+      "date": "2004-05-25",
+      "season": 6,
+      "approximate": true
+    },
+    "194": {
+      "date": "2004-06-03",
+      "season": 6,
+      "approximate": true
+    },
+    "195": {
+      "date": "2004-06-13",
+      "season": 6,
+      "approximate": false
+    },
+    "196": {
+      "date": "2004-06-20",
+      "season": 7,
+      "approximate": false
+    },
+    "197": {
+      "date": "2004-06-29",
+      "season": 7,
+      "approximate": true
+    },
+    "198": {
+      "date": "2004-07-08",
+      "season": 7,
+      "approximate": true
+    },
+    "199": {
+      "date": "2004-07-16",
+      "season": 7,
+      "approximate": true
+    },
+    "200": {
+      "date": "2004-07-25",
+      "season": 7,
+      "approximate": true
+    },
+    "201": {
+      "date": "2004-08-03",
+      "season": 7,
+      "approximate": true
+    },
+    "202": {
+      "date": "2004-08-11",
+      "season": 7,
+      "approximate": true
+    },
+    "203": {
+      "date": "2004-08-20",
+      "season": 7,
+      "approximate": true
+    },
+    "204": {
+      "date": "2004-08-29",
+      "season": 7,
+      "approximate": true
+    },
+    "205": {
+      "date": "2004-09-07",
+      "season": 7,
+      "approximate": true
+    },
+    "206": {
+      "date": "2004-09-16",
+      "season": 7,
+      "approximate": true
+    },
+    "207": {
+      "date": "2004-09-24",
+      "season": 7,
+      "approximate": true
+    },
+    "208": {
+      "date": "2004-10-03",
+      "season": 7,
+      "approximate": true
+    },
+    "209": {
+      "date": "2004-10-12",
+      "season": 7,
+      "approximate": true
+    },
+    "210": {
+      "date": "2004-10-20",
+      "season": 7,
+      "approximate": true
+    },
+    "211": {
+      "date": "2004-10-29",
+      "season": 7,
+      "approximate": true
+    },
+    "212": {
+      "date": "2004-11-07",
+      "season": 7,
+      "approximate": true
+    },
+    "213": {
+      "date": "2004-11-16",
+      "season": 7,
+      "approximate": true
+    },
+    "214": {
+      "date": "2004-11-25",
+      "season": 7,
+      "approximate": true
+    },
+    "215": {
+      "date": "2004-12-03",
+      "season": 7,
+      "approximate": true
+    },
+    "216": {
+      "date": "2004-12-12",
+      "season": 7,
+      "approximate": true
+    },
+    "217": {
+      "date": "2004-12-21",
+      "season": 7,
+      "approximate": true
+    },
+    "218": {
+      "date": "2004-12-29",
+      "season": 7,
+      "approximate": true
+    },
+    "219": {
+      "date": "2005-01-07",
+      "season": 7,
+      "approximate": true
+    },
+    "220": {
+      "date": "2005-01-16",
+      "season": 7,
+      "approximate": true
+    },
+    "221": {
+      "date": "2005-01-25",
+      "season": 7,
+      "approximate": true
+    },
+    "222": {
+      "date": "2005-02-03",
+      "season": 7,
+      "approximate": true
+    },
+    "223": {
+      "date": "2005-02-11",
+      "season": 7,
+      "approximate": true
+    },
+    "224": {
+      "date": "2005-02-20",
+      "season": 7,
+      "approximate": true
+    },
+    "225": {
+      "date": "2005-03-01",
+      "season": 7,
+      "approximate": true
+    },
+    "226": {
+      "date": "2005-03-09",
+      "season": 7,
+      "approximate": true
+    },
+    "227": {
+      "date": "2005-03-18",
+      "season": 7,
+      "approximate": true
+    },
+    "228": {
+      "date": "2005-03-27",
+      "season": 7,
+      "approximate": false
+    },
+    "229": {
+      "date": "2005-04-17",
+      "season": 8,
+      "approximate": false
+    },
+    "230": {
+      "date": "2005-04-28",
+      "season": 8,
+      "approximate": true
+    },
+    "231": {
+      "date": "2005-05-09",
+      "season": 8,
+      "approximate": true
+    },
+    "232": {
+      "date": "2005-05-20",
+      "season": 8,
+      "approximate": true
+    },
+    "233": {
+      "date": "2005-05-31",
+      "season": 8,
+      "approximate": true
+    },
+    "234": {
+      "date": "2005-06-12",
+      "season": 8,
+      "approximate": true
+    },
+    "235": {
+      "date": "2005-06-23",
+      "season": 8,
+      "approximate": true
+    },
+    "236": {
+      "date": "2005-07-04",
+      "season": 8,
+      "approximate": true
+    },
+    "237": {
+      "date": "2005-07-15",
+      "season": 8,
+      "approximate": true
+    },
+    "238": {
+      "date": "2005-07-26",
+      "season": 8,
+      "approximate": true
+    },
+    "239": {
+      "date": "2005-08-06",
+      "season": 8,
+      "approximate": true
+    },
+    "240": {
+      "date": "2005-08-17",
+      "season": 8,
+      "approximate": true
+    },
+    "241": {
+      "date": "2005-08-28",
+      "season": 8,
+      "approximate": true
+    },
+    "242": {
+      "date": "2005-09-09",
+      "season": 8,
+      "approximate": true
+    },
+    "243": {
+      "date": "2005-09-20",
+      "season": 8,
+      "approximate": true
+    },
+    "244": {
+      "date": "2005-10-01",
+      "season": 8,
+      "approximate": true
+    },
+    "245": {
+      "date": "2005-10-12",
+      "season": 8,
+      "approximate": true
+    },
+    "246": {
+      "date": "2005-10-23",
+      "season": 8,
+      "approximate": true
+    },
+    "247": {
+      "date": "2005-11-03",
+      "season": 8,
+      "approximate": true
+    },
+    "248": {
+      "date": "2005-11-14",
+      "season": 8,
+      "approximate": true
+    },
+    "249": {
+      "date": "2005-11-25",
+      "season": 8,
+      "approximate": true
+    },
+    "250": {
+      "date": "2005-12-06",
+      "season": 8,
+      "approximate": true
+    },
+    "251": {
+      "date": "2005-12-18",
+      "season": 8,
+      "approximate": true
+    },
+    "252": {
+      "date": "2005-12-29",
+      "season": 8,
+      "approximate": true
+    },
+    "253": {
+      "date": "2006-01-09",
+      "season": 8,
+      "approximate": true
+    },
+    "254": {
+      "date": "2006-01-20",
+      "season": 8,
+      "approximate": true
+    },
+    "255": {
+      "date": "2006-01-31",
+      "season": 8,
+      "approximate": true
+    },
+    "256": {
+      "date": "2006-02-11",
+      "season": 8,
+      "approximate": true
+    },
+    "257": {
+      "date": "2006-02-22",
+      "season": 8,
+      "approximate": true
+    },
+    "258": {
+      "date": "2006-03-05",
+      "season": 8,
+      "approximate": true
+    },
+    "259": {
+      "date": "2006-03-17",
+      "season": 8,
+      "approximate": true
+    },
+    "260": {
+      "date": "2006-03-28",
+      "season": 8,
+      "approximate": true
+    },
+    "261": {
+      "date": "2006-04-08",
+      "season": 8,
+      "approximate": true
+    },
+    "262": {
+      "date": "2006-04-19",
+      "season": 8,
+      "approximate": true
+    },
+    "263": {
+      "date": "2006-04-30",
+      "season": 8,
+      "approximate": false
+    },
+    "264": {
+      "date": "2006-05-21",
+      "season": 9,
+      "approximate": false
+    },
+    "265": {
+      "date": "2006-05-29",
+      "season": 9,
+      "approximate": true
+    },
+    "266": {
+      "date": "2006-06-06",
+      "season": 9,
+      "approximate": true
+    },
+    "267": {
+      "date": "2006-06-14",
+      "season": 9,
+      "approximate": true
+    },
+    "268": {
+      "date": "2006-06-22",
+      "season": 9,
+      "approximate": true
+    },
+    "269": {
+      "date": "2006-06-30",
+      "season": 9,
+      "approximate": true
+    },
+    "270": {
+      "date": "2006-07-08",
+      "season": 9,
+      "approximate": true
+    },
+    "271": {
+      "date": "2006-07-16",
+      "season": 9,
+      "approximate": true
+    },
+    "272": {
+      "date": "2006-07-25",
+      "season": 9,
+      "approximate": true
+    },
+    "273": {
+      "date": "2006-08-02",
+      "season": 9,
+      "approximate": true
+    },
+    "274": {
+      "date": "2006-08-10",
+      "season": 9,
+      "approximate": true
+    },
+    "275": {
+      "date": "2006-08-18",
+      "season": 9,
+      "approximate": true
+    },
+    "276": {
+      "date": "2006-08-26",
+      "season": 9,
+      "approximate": true
+    },
+    "277": {
+      "date": "2006-09-03",
+      "season": 9,
+      "approximate": true
+    },
+    "278": {
+      "date": "2006-09-11",
+      "season": 9,
+      "approximate": true
+    },
+    "279": {
+      "date": "2006-09-19",
+      "season": 9,
+      "approximate": true
+    },
+    "280": {
+      "date": "2006-09-27",
+      "season": 9,
+      "approximate": true
+    },
+    "281": {
+      "date": "2006-10-05",
+      "season": 9,
+      "approximate": true
+    },
+    "282": {
+      "date": "2006-10-13",
+      "season": 9,
+      "approximate": true
+    },
+    "283": {
+      "date": "2006-10-21",
+      "season": 9,
+      "approximate": true
+    },
+    "284": {
+      "date": "2006-10-29",
+      "season": 9,
+      "approximate": true
+    },
+    "285": {
+      "date": "2006-11-06",
+      "season": 9,
+      "approximate": true
+    },
+    "286": {
+      "date": "2006-11-15",
+      "season": 9,
+      "approximate": true
+    },
+    "287": {
+      "date": "2006-11-23",
+      "season": 9,
+      "approximate": true
+    },
+    "288": {
+      "date": "2006-12-01",
+      "season": 9,
+      "approximate": true
+    },
+    "289": {
+      "date": "2006-12-09",
+      "season": 9,
+      "approximate": true
+    },
+    "290": {
+      "date": "2006-12-17",
+      "season": 9,
+      "approximate": true
+    },
+    "291": {
+      "date": "2006-12-25",
+      "season": 9,
+      "approximate": true
+    },
+    "292": {
+      "date": "2007-01-02",
+      "season": 9,
+      "approximate": true
+    },
+    "293": {
+      "date": "2007-01-10",
+      "season": 9,
+      "approximate": true
+    },
+    "294": {
+      "date": "2007-01-18",
+      "season": 9,
+      "approximate": true
+    },
+    "295": {
+      "date": "2007-01-26",
+      "season": 9,
+      "approximate": true
+    },
+    "296": {
+      "date": "2007-02-03",
+      "season": 9,
+      "approximate": true
+    },
+    "297": {
+      "date": "2007-02-11",
+      "season": 9,
+      "approximate": true
+    },
+    "298": {
+      "date": "2007-02-19",
+      "season": 9,
+      "approximate": true
+    },
+    "299": {
+      "date": "2007-02-27",
+      "season": 9,
+      "approximate": true
+    },
+    "300": {
+      "date": "2007-03-07",
+      "season": 9,
+      "approximate": true
+    },
+    "301": {
+      "date": "2007-03-16",
+      "season": 9,
+      "approximate": true
+    },
+    "302": {
+      "date": "2007-03-24",
+      "season": 9,
+      "approximate": true
+    },
+    "303": {
+      "date": "2007-04-01",
+      "season": 9,
+      "approximate": true
+    },
+    "304": {
+      "date": "2007-04-09",
+      "season": 9,
+      "approximate": true
+    },
+    "305": {
+      "date": "2007-04-17",
+      "season": 9,
+      "approximate": true
+    },
+    "306": {
+      "date": "2007-04-25",
+      "season": 9,
+      "approximate": true
+    },
+    "307": {
+      "date": "2007-05-03",
+      "season": 9,
+      "approximate": true
+    },
+    "308": {
+      "date": "2007-05-11",
+      "season": 9,
+      "approximate": true
+    },
+    "309": {
+      "date": "2007-05-19",
+      "season": 9,
+      "approximate": true
+    },
+    "310": {
+      "date": "2007-05-27",
+      "season": 9,
+      "approximate": true
+    },
+    "311": {
+      "date": "2007-06-04",
+      "season": 9,
+      "approximate": true
+    },
+    "312": {
+      "date": "2007-06-12",
+      "season": 9,
+      "approximate": true
+    },
+    "313": {
+      "date": "2007-06-20",
+      "season": 9,
+      "approximate": true
+    },
+    "314": {
+      "date": "2007-06-28",
+      "season": 9,
+      "approximate": true
+    },
+    "315": {
+      "date": "2007-07-07",
+      "season": 9,
+      "approximate": true
+    },
+    "316": {
+      "date": "2007-07-15",
+      "season": 9,
+      "approximate": true
+    },
+    "317": {
+      "date": "2007-07-23",
+      "season": 9,
+      "approximate": true
+    },
+    "318": {
+      "date": "2007-07-31",
+      "season": 9,
+      "approximate": true
+    },
+    "319": {
+      "date": "2007-08-08",
+      "season": 9,
+      "approximate": true
+    },
+    "320": {
+      "date": "2007-08-16",
+      "season": 9,
+      "approximate": true
+    },
+    "321": {
+      "date": "2007-08-24",
+      "season": 9,
+      "approximate": true
+    },
+    "322": {
+      "date": "2007-09-01",
+      "season": 9,
+      "approximate": true
+    },
+    "323": {
+      "date": "2007-09-09",
+      "season": 9,
+      "approximate": true
+    },
+    "324": {
+      "date": "2007-09-17",
+      "season": 9,
+      "approximate": true
+    },
+    "325": {
+      "date": "2007-09-25",
+      "season": 9,
+      "approximate": true
+    },
+    "326": {
+      "date": "2007-10-03",
+      "season": 9,
+      "approximate": true
+    },
+    "327": {
+      "date": "2007-10-11",
+      "season": 9,
+      "approximate": true
+    },
+    "328": {
+      "date": "2007-10-19",
+      "season": 9,
+      "approximate": true
+    },
+    "329": {
+      "date": "2007-10-28",
+      "season": 9,
+      "approximate": true
+    },
+    "330": {
+      "date": "2007-11-05",
+      "season": 9,
+      "approximate": true
+    },
+    "331": {
+      "date": "2007-11-13",
+      "season": 9,
+      "approximate": true
+    },
+    "332": {
+      "date": "2007-11-21",
+      "season": 9,
+      "approximate": true
+    },
+    "333": {
+      "date": "2007-11-29",
+      "season": 9,
+      "approximate": true
+    },
+    "334": {
+      "date": "2007-12-07",
+      "season": 9,
+      "approximate": true
+    },
+    "335": {
+      "date": "2007-12-15",
+      "season": 9,
+      "approximate": true
+    },
+    "336": {
+      "date": "2007-12-23",
+      "season": 9,
+      "approximate": false
+    },
+    "337": {
+      "date": "2008-01-06",
+      "season": 10,
+      "approximate": false
+    },
+    "338": {
+      "date": "2008-01-14",
+      "season": 10,
+      "approximate": true
+    },
+    "339": {
+      "date": "2008-01-22",
+      "season": 10,
+      "approximate": true
+    },
+    "340": {
+      "date": "2008-01-29",
+      "season": 10,
+      "approximate": true
+    },
+    "341": {
+      "date": "2008-02-06",
+      "season": 10,
+      "approximate": true
+    },
+    "342": {
+      "date": "2008-02-14",
+      "season": 10,
+      "approximate": true
+    },
+    "343": {
+      "date": "2008-02-22",
+      "season": 10,
+      "approximate": true
+    },
+    "344": {
+      "date": "2008-03-01",
+      "season": 10,
+      "approximate": true
+    },
+    "345": {
+      "date": "2008-03-08",
+      "season": 10,
+      "approximate": true
+    },
+    "346": {
+      "date": "2008-03-16",
+      "season": 10,
+      "approximate": true
+    },
+    "347": {
+      "date": "2008-03-24",
+      "season": 10,
+      "approximate": true
+    },
+    "348": {
+      "date": "2008-04-01",
+      "season": 10,
+      "approximate": true
+    },
+    "349": {
+      "date": "2008-04-09",
+      "season": 10,
+      "approximate": true
+    },
+    "350": {
+      "date": "2008-04-16",
+      "season": 10,
+      "approximate": true
+    },
+    "351": {
+      "date": "2008-04-24",
+      "season": 10,
+      "approximate": true
+    },
+    "352": {
+      "date": "2008-05-02",
+      "season": 10,
+      "approximate": true
+    },
+    "353": {
+      "date": "2008-05-10",
+      "season": 10,
+      "approximate": true
+    },
+    "354": {
+      "date": "2008-05-18",
+      "season": 10,
+      "approximate": true
+    },
+    "355": {
+      "date": "2008-05-25",
+      "season": 10,
+      "approximate": true
+    },
+    "356": {
+      "date": "2008-06-02",
+      "season": 10,
+      "approximate": true
+    },
+    "357": {
+      "date": "2008-06-10",
+      "season": 10,
+      "approximate": true
+    },
+    "358": {
+      "date": "2008-06-18",
+      "season": 10,
+      "approximate": true
+    },
+    "359": {
+      "date": "2008-06-26",
+      "season": 10,
+      "approximate": true
+    },
+    "360": {
+      "date": "2008-07-03",
+      "season": 10,
+      "approximate": true
+    },
+    "361": {
+      "date": "2008-07-11",
+      "season": 10,
+      "approximate": true
+    },
+    "362": {
+      "date": "2008-07-19",
+      "season": 10,
+      "approximate": true
+    },
+    "363": {
+      "date": "2008-07-27",
+      "season": 10,
+      "approximate": true
+    },
+    "364": {
+      "date": "2008-08-03",
+      "season": 10,
+      "approximate": true
+    },
+    "365": {
+      "date": "2008-08-11",
+      "season": 10,
+      "approximate": true
+    },
+    "366": {
+      "date": "2008-08-19",
+      "season": 10,
+      "approximate": true
+    },
+    "367": {
+      "date": "2008-08-27",
+      "season": 10,
+      "approximate": true
+    },
+    "368": {
+      "date": "2008-09-04",
+      "season": 10,
+      "approximate": true
+    },
+    "369": {
+      "date": "2008-09-11",
+      "season": 10,
+      "approximate": true
+    },
+    "370": {
+      "date": "2008-09-19",
+      "season": 10,
+      "approximate": true
+    },
+    "371": {
+      "date": "2008-09-27",
+      "season": 10,
+      "approximate": true
+    },
+    "372": {
+      "date": "2008-10-05",
+      "season": 10,
+      "approximate": true
+    },
+    "373": {
+      "date": "2008-10-13",
+      "season": 10,
+      "approximate": true
+    },
+    "374": {
+      "date": "2008-10-20",
+      "season": 10,
+      "approximate": true
+    },
+    "375": {
+      "date": "2008-10-28",
+      "season": 10,
+      "approximate": true
+    },
+    "376": {
+      "date": "2008-11-05",
+      "season": 10,
+      "approximate": true
+    },
+    "377": {
+      "date": "2008-11-13",
+      "season": 10,
+      "approximate": true
+    },
+    "378": {
+      "date": "2008-11-21",
+      "season": 10,
+      "approximate": true
+    },
+    "379": {
+      "date": "2008-11-28",
+      "season": 10,
+      "approximate": true
+    },
+    "380": {
+      "date": "2008-12-06",
+      "season": 10,
+      "approximate": true
+    },
+    "381": {
+      "date": "2008-12-14",
+      "season": 10,
+      "approximate": false
+    },
+    "382": {
+      "date": "2008-12-21",
+      "season": 11,
+      "approximate": false
+    },
+    "383": {
+      "date": "2008-12-29",
+      "season": 11,
+      "approximate": true
+    },
+    "384": {
+      "date": "2009-01-05",
+      "season": 11,
+      "approximate": true
+    },
+    "385": {
+      "date": "2009-01-13",
+      "season": 11,
+      "approximate": true
+    },
+    "386": {
+      "date": "2009-01-20",
+      "season": 11,
+      "approximate": true
+    },
+    "387": {
+      "date": "2009-01-28",
+      "season": 11,
+      "approximate": true
+    },
+    "388": {
+      "date": "2009-02-04",
+      "season": 11,
+      "approximate": true
+    },
+    "389": {
+      "date": "2009-02-12",
+      "season": 11,
+      "approximate": true
+    },
+    "390": {
+      "date": "2009-02-19",
+      "season": 11,
+      "approximate": true
+    },
+    "391": {
+      "date": "2009-02-27",
+      "season": 11,
+      "approximate": true
+    },
+    "392": {
+      "date": "2009-03-07",
+      "season": 11,
+      "approximate": true
+    },
+    "393": {
+      "date": "2009-03-14",
+      "season": 11,
+      "approximate": true
+    },
+    "394": {
+      "date": "2009-03-22",
+      "season": 11,
+      "approximate": true
+    },
+    "395": {
+      "date": "2009-03-29",
+      "season": 11,
+      "approximate": true
+    },
+    "396": {
+      "date": "2009-04-06",
+      "season": 11,
+      "approximate": true
+    },
+    "397": {
+      "date": "2009-04-13",
+      "season": 11,
+      "approximate": true
+    },
+    "398": {
+      "date": "2009-04-21",
+      "season": 11,
+      "approximate": true
+    },
+    "399": {
+      "date": "2009-04-29",
+      "season": 11,
+      "approximate": true
+    },
+    "400": {
+      "date": "2009-05-06",
+      "season": 11,
+      "approximate": true
+    },
+    "401": {
+      "date": "2009-05-14",
+      "season": 11,
+      "approximate": true
+    },
+    "402": {
+      "date": "2009-05-21",
+      "season": 11,
+      "approximate": true
+    },
+    "403": {
+      "date": "2009-05-29",
+      "season": 11,
+      "approximate": true
+    },
+    "404": {
+      "date": "2009-06-05",
+      "season": 11,
+      "approximate": true
+    },
+    "405": {
+      "date": "2009-06-13",
+      "season": 11,
+      "approximate": true
+    },
+    "406": {
+      "date": "2009-06-20",
+      "season": 11,
+      "approximate": true
+    },
+    "407": {
+      "date": "2009-06-28",
+      "season": 11,
+      "approximate": false
+    },
+    "408": {
+      "date": "2009-07-05",
+      "season": 12,
+      "approximate": false
+    },
+    "409": {
+      "date": "2009-07-13",
+      "season": 12,
+      "approximate": true
+    },
+    "410": {
+      "date": "2009-07-20",
+      "season": 12,
+      "approximate": true
+    },
+    "411": {
+      "date": "2009-07-28",
+      "season": 12,
+      "approximate": true
+    },
+    "412": {
+      "date": "2009-08-04",
+      "season": 12,
+      "approximate": true
+    },
+    "413": {
+      "date": "2009-08-12",
+      "season": 12,
+      "approximate": true
+    },
+    "414": {
+      "date": "2009-08-19",
+      "season": 12,
+      "approximate": true
+    },
+    "415": {
+      "date": "2009-08-27",
+      "season": 12,
+      "approximate": true
+    },
+    "416": {
+      "date": "2009-09-03",
+      "season": 12,
+      "approximate": true
+    },
+    "417": {
+      "date": "2009-09-11",
+      "season": 12,
+      "approximate": true
+    },
+    "418": {
+      "date": "2009-09-18",
+      "season": 12,
+      "approximate": true
+    },
+    "419": {
+      "date": "2009-09-26",
+      "season": 12,
+      "approximate": true
+    },
+    "420": {
+      "date": "2009-10-03",
+      "season": 12,
+      "approximate": true
+    },
+    "421": {
+      "date": "2009-10-11",
+      "season": 12,
+      "approximate": false
+    },
+    "422": {
+      "date": "2009-10-18",
+      "season": 13,
+      "approximate": false
+    },
+    "423": {
+      "date": "2009-10-25",
+      "season": 13,
+      "approximate": true
+    },
+    "424": {
+      "date": "2009-11-01",
+      "season": 13,
+      "approximate": true
+    },
+    "425": {
+      "date": "2009-11-09",
+      "season": 13,
+      "approximate": true
+    },
+    "426": {
+      "date": "2009-11-16",
+      "season": 13,
+      "approximate": true
+    },
+    "427": {
+      "date": "2009-11-23",
+      "season": 13,
+      "approximate": true
+    },
+    "428": {
+      "date": "2009-11-30",
+      "season": 13,
+      "approximate": true
+    },
+    "429": {
+      "date": "2009-12-07",
+      "season": 13,
+      "approximate": true
+    },
+    "430": {
+      "date": "2009-12-15",
+      "season": 13,
+      "approximate": true
+    },
+    "431": {
+      "date": "2009-12-22",
+      "season": 13,
+      "approximate": true
+    },
+    "432": {
+      "date": "2009-12-29",
+      "season": 13,
+      "approximate": true
+    },
+    "433": {
+      "date": "2010-01-05",
+      "season": 13,
+      "approximate": true
+    },
+    "434": {
+      "date": "2010-01-12",
+      "season": 13,
+      "approximate": true
+    },
+    "435": {
+      "date": "2010-01-20",
+      "season": 13,
+      "approximate": true
+    },
+    "436": {
+      "date": "2010-01-27",
+      "season": 13,
+      "approximate": true
+    },
+    "437": {
+      "date": "2010-02-03",
+      "season": 13,
+      "approximate": true
+    },
+    "438": {
+      "date": "2010-02-10",
+      "season": 13,
+      "approximate": true
+    },
+    "439": {
+      "date": "2010-02-17",
+      "season": 13,
+      "approximate": true
+    },
+    "440": {
+      "date": "2010-02-25",
+      "season": 13,
+      "approximate": true
+    },
+    "441": {
+      "date": "2010-03-04",
+      "season": 13,
+      "approximate": true
+    },
+    "442": {
+      "date": "2010-03-11",
+      "season": 13,
+      "approximate": true
+    },
+    "443": {
+      "date": "2010-03-18",
+      "season": 13,
+      "approximate": true
+    },
+    "444": {
+      "date": "2010-03-26",
+      "season": 13,
+      "approximate": true
+    },
+    "445": {
+      "date": "2010-04-02",
+      "season": 13,
+      "approximate": true
+    },
+    "446": {
+      "date": "2010-04-09",
+      "season": 13,
+      "approximate": true
+    },
+    "447": {
+      "date": "2010-04-16",
+      "season": 13,
+      "approximate": true
+    },
+    "448": {
+      "date": "2010-04-23",
+      "season": 13,
+      "approximate": true
+    },
+    "449": {
+      "date": "2010-05-01",
+      "season": 13,
+      "approximate": true
+    },
+    "450": {
+      "date": "2010-05-08",
+      "season": 13,
+      "approximate": true
+    },
+    "451": {
+      "date": "2010-05-15",
+      "season": 13,
+      "approximate": true
+    },
+    "452": {
+      "date": "2010-05-22",
+      "season": 13,
+      "approximate": true
+    },
+    "453": {
+      "date": "2010-05-29",
+      "season": 13,
+      "approximate": true
+    },
+    "454": {
+      "date": "2010-06-06",
+      "season": 13,
+      "approximate": true
+    },
+    "455": {
+      "date": "2010-06-13",
+      "season": 13,
+      "approximate": true
+    },
+    "456": {
+      "date": "2010-06-20",
+      "season": 13,
+      "approximate": false
+    },
+    "457": {
+      "date": "2010-06-27",
+      "season": 14,
+      "approximate": false
+    },
+    "458": {
+      "date": "2010-07-05",
+      "season": 14,
+      "approximate": true
+    },
+    "459": {
+      "date": "2010-07-12",
+      "season": 14,
+      "approximate": true
+    },
+    "460": {
+      "date": "2010-07-20",
+      "season": 14,
+      "approximate": true
+    },
+    "461": {
+      "date": "2010-07-28",
+      "season": 14,
+      "approximate": true
+    },
+    "462": {
+      "date": "2010-08-05",
+      "season": 14,
+      "approximate": true
+    },
+    "463": {
+      "date": "2010-08-12",
+      "season": 14,
+      "approximate": true
+    },
+    "464": {
+      "date": "2010-08-20",
+      "season": 14,
+      "approximate": true
+    },
+    "465": {
+      "date": "2010-08-28",
+      "season": 14,
+      "approximate": true
+    },
+    "466": {
+      "date": "2010-09-04",
+      "season": 14,
+      "approximate": true
+    },
+    "467": {
+      "date": "2010-09-12",
+      "season": 14,
+      "approximate": true
+    },
+    "468": {
+      "date": "2010-09-20",
+      "season": 14,
+      "approximate": true
+    },
+    "469": {
+      "date": "2010-09-28",
+      "season": 14,
+      "approximate": true
+    },
+    "470": {
+      "date": "2010-10-05",
+      "season": 14,
+      "approximate": true
+    },
+    "471": {
+      "date": "2010-10-13",
+      "season": 14,
+      "approximate": true
+    },
+    "472": {
+      "date": "2010-10-21",
+      "season": 14,
+      "approximate": true
+    },
+    "473": {
+      "date": "2010-10-28",
+      "season": 14,
+      "approximate": true
+    },
+    "474": {
+      "date": "2010-11-05",
+      "season": 14,
+      "approximate": true
+    },
+    "475": {
+      "date": "2010-11-13",
+      "season": 14,
+      "approximate": true
+    },
+    "476": {
+      "date": "2010-11-21",
+      "season": 14,
+      "approximate": true
+    },
+    "477": {
+      "date": "2010-11-28",
+      "season": 14,
+      "approximate": true
+    },
+    "478": {
+      "date": "2010-12-06",
+      "season": 14,
+      "approximate": true
+    },
+    "479": {
+      "date": "2010-12-14",
+      "season": 14,
+      "approximate": true
+    },
+    "480": {
+      "date": "2010-12-21",
+      "season": 14,
+      "approximate": true
+    },
+    "481": {
+      "date": "2010-12-29",
+      "season": 14,
+      "approximate": true
+    },
+    "482": {
+      "date": "2011-01-06",
+      "season": 14,
+      "approximate": true
+    },
+    "483": {
+      "date": "2011-01-14",
+      "season": 14,
+      "approximate": true
+    },
+    "484": {
+      "date": "2011-01-21",
+      "season": 14,
+      "approximate": true
+    },
+    "485": {
+      "date": "2011-01-29",
+      "season": 14,
+      "approximate": true
+    },
+    "486": {
+      "date": "2011-02-06",
+      "season": 14,
+      "approximate": true
+    },
+    "487": {
+      "date": "2011-02-13",
+      "season": 14,
+      "approximate": true
+    },
+    "488": {
+      "date": "2011-02-21",
+      "season": 14,
+      "approximate": true
+    },
+    "489": {
+      "date": "2011-03-01",
+      "season": 14,
+      "approximate": true
+    },
+    "490": {
+      "date": "2011-03-08",
+      "season": 14,
+      "approximate": true
+    },
+    "491": {
+      "date": "2011-03-16",
+      "season": 14,
+      "approximate": true
+    },
+    "492": {
+      "date": "2011-03-24",
+      "season": 14,
+      "approximate": true
+    },
+    "493": {
+      "date": "2011-04-01",
+      "season": 14,
+      "approximate": true
+    },
+    "494": {
+      "date": "2011-04-08",
+      "season": 14,
+      "approximate": true
+    },
+    "495": {
+      "date": "2011-04-16",
+      "season": 14,
+      "approximate": true
+    },
+    "496": {
+      "date": "2011-04-24",
+      "season": 14,
+      "approximate": true
+    },
+    "497": {
+      "date": "2011-05-01",
+      "season": 14,
+      "approximate": true
+    },
+    "498": {
+      "date": "2011-05-09",
+      "season": 14,
+      "approximate": true
+    },
+    "499": {
+      "date": "2011-05-17",
+      "season": 14,
+      "approximate": true
+    },
+    "500": {
+      "date": "2011-05-25",
+      "season": 14,
+      "approximate": true
+    },
+    "501": {
+      "date": "2011-06-01",
+      "season": 14,
+      "approximate": true
+    },
+    "502": {
+      "date": "2011-06-09",
+      "season": 14,
+      "approximate": true
+    },
+    "503": {
+      "date": "2011-06-17",
+      "season": 14,
+      "approximate": true
+    },
+    "504": {
+      "date": "2011-06-24",
+      "season": 14,
+      "approximate": true
+    },
+    "505": {
+      "date": "2011-07-02",
+      "season": 14,
+      "approximate": true
+    },
+    "506": {
+      "date": "2011-07-10",
+      "season": 14,
+      "approximate": true
+    },
+    "507": {
+      "date": "2011-07-18",
+      "season": 14,
+      "approximate": true
+    },
+    "508": {
+      "date": "2011-07-25",
+      "season": 14,
+      "approximate": true
+    },
+    "509": {
+      "date": "2011-08-02",
+      "season": 14,
+      "approximate": true
+    },
+    "510": {
+      "date": "2011-08-10",
+      "season": 14,
+      "approximate": true
+    },
+    "511": {
+      "date": "2011-08-17",
+      "season": 14,
+      "approximate": true
+    },
+    "512": {
+      "date": "2011-08-25",
+      "season": 14,
+      "approximate": true
+    },
+    "513": {
+      "date": "2011-09-02",
+      "season": 14,
+      "approximate": true
+    },
+    "514": {
+      "date": "2011-09-10",
+      "season": 14,
+      "approximate": true
+    },
+    "515": {
+      "date": "2011-09-17",
+      "season": 14,
+      "approximate": true
+    },
+    "516": {
+      "date": "2011-09-25",
+      "season": 14,
+      "approximate": false
+    },
+    "517": {
+      "date": "2011-10-02",
+      "season": 15,
+      "approximate": false
+    },
+    "518": {
+      "date": "2011-10-09",
+      "season": 15,
+      "approximate": true
+    },
+    "519": {
+      "date": "2011-10-17",
+      "season": 15,
+      "approximate": true
+    },
+    "520": {
+      "date": "2011-10-24",
+      "season": 15,
+      "approximate": true
+    },
+    "521": {
+      "date": "2011-10-31",
+      "season": 15,
+      "approximate": true
+    },
+    "522": {
+      "date": "2011-11-08",
+      "season": 15,
+      "approximate": true
+    },
+    "523": {
+      "date": "2011-11-15",
+      "season": 15,
+      "approximate": true
+    },
+    "524": {
+      "date": "2011-11-22",
+      "season": 15,
+      "approximate": true
+    },
+    "525": {
+      "date": "2011-11-30",
+      "season": 15,
+      "approximate": true
+    },
+    "526": {
+      "date": "2011-12-07",
+      "season": 15,
+      "approximate": true
+    },
+    "527": {
+      "date": "2011-12-14",
+      "season": 15,
+      "approximate": true
+    },
+    "528": {
+      "date": "2011-12-22",
+      "season": 15,
+      "approximate": true
+    },
+    "529": {
+      "date": "2011-12-29",
+      "season": 15,
+      "approximate": true
+    },
+    "530": {
+      "date": "2012-01-05",
+      "season": 15,
+      "approximate": true
+    },
+    "531": {
+      "date": "2012-01-13",
+      "season": 15,
+      "approximate": true
+    },
+    "532": {
+      "date": "2012-01-20",
+      "season": 15,
+      "approximate": true
+    },
+    "533": {
+      "date": "2012-01-28",
+      "season": 15,
+      "approximate": true
+    },
+    "534": {
+      "date": "2012-02-04",
+      "season": 15,
+      "approximate": true
+    },
+    "535": {
+      "date": "2012-02-11",
+      "season": 15,
+      "approximate": true
+    },
+    "536": {
+      "date": "2012-02-19",
+      "season": 15,
+      "approximate": true
+    },
+    "537": {
+      "date": "2012-02-26",
+      "season": 15,
+      "approximate": true
+    },
+    "538": {
+      "date": "2012-03-04",
+      "season": 15,
+      "approximate": true
+    },
+    "539": {
+      "date": "2012-03-12",
+      "season": 15,
+      "approximate": true
+    },
+    "540": {
+      "date": "2012-03-19",
+      "season": 15,
+      "approximate": true
+    },
+    "541": {
+      "date": "2012-03-26",
+      "season": 15,
+      "approximate": true
+    },
+    "542": {
+      "date": "2012-04-03",
+      "season": 15,
+      "approximate": true
+    },
+    "543": {
+      "date": "2012-04-10",
+      "season": 15,
+      "approximate": true
+    },
+    "544": {
+      "date": "2012-04-17",
+      "season": 15,
+      "approximate": true
+    },
+    "545": {
+      "date": "2012-04-25",
+      "season": 15,
+      "approximate": true
+    },
+    "546": {
+      "date": "2012-05-02",
+      "season": 15,
+      "approximate": true
+    },
+    "547": {
+      "date": "2012-05-09",
+      "season": 15,
+      "approximate": true
+    },
+    "548": {
+      "date": "2012-05-17",
+      "season": 15,
+      "approximate": true
+    },
+    "549": {
+      "date": "2012-05-24",
+      "season": 15,
+      "approximate": true
+    },
+    "550": {
+      "date": "2012-05-31",
+      "season": 15,
+      "approximate": true
+    },
+    "551": {
+      "date": "2012-06-08",
+      "season": 15,
+      "approximate": true
+    },
+    "552": {
+      "date": "2012-06-15",
+      "season": 15,
+      "approximate": true
+    },
+    "553": {
+      "date": "2012-06-22",
+      "season": 15,
+      "approximate": true
+    },
+    "554": {
+      "date": "2012-06-30",
+      "season": 15,
+      "approximate": true
+    },
+    "555": {
+      "date": "2012-07-07",
+      "season": 15,
+      "approximate": true
+    },
+    "556": {
+      "date": "2012-07-14",
+      "season": 15,
+      "approximate": true
+    },
+    "557": {
+      "date": "2012-07-22",
+      "season": 15,
+      "approximate": true
+    },
+    "558": {
+      "date": "2012-07-29",
+      "season": 15,
+      "approximate": true
+    },
+    "559": {
+      "date": "2012-08-05",
+      "season": 15,
+      "approximate": true
+    },
+    "560": {
+      "date": "2012-08-13",
+      "season": 15,
+      "approximate": true
+    },
+    "561": {
+      "date": "2012-08-20",
+      "season": 15,
+      "approximate": true
+    },
+    "562": {
+      "date": "2012-08-27",
+      "season": 15,
+      "approximate": true
+    },
+    "563": {
+      "date": "2012-09-04",
+      "season": 15,
+      "approximate": true
+    },
+    "564": {
+      "date": "2012-09-11",
+      "season": 15,
+      "approximate": true
+    },
+    "565": {
+      "date": "2012-09-19",
+      "season": 15,
+      "approximate": true
+    },
+    "566": {
+      "date": "2012-09-26",
+      "season": 15,
+      "approximate": true
+    },
+    "567": {
+      "date": "2012-10-03",
+      "season": 15,
+      "approximate": true
+    },
+    "568": {
+      "date": "2012-10-11",
+      "season": 15,
+      "approximate": true
+    },
+    "569": {
+      "date": "2012-10-18",
+      "season": 15,
+      "approximate": true
+    },
+    "570": {
+      "date": "2012-10-25",
+      "season": 15,
+      "approximate": true
+    },
+    "571": {
+      "date": "2012-11-02",
+      "season": 15,
+      "approximate": true
+    },
+    "572": {
+      "date": "2012-11-09",
+      "season": 15,
+      "approximate": true
+    },
+    "573": {
+      "date": "2012-11-16",
+      "season": 15,
+      "approximate": true
+    },
+    "574": {
+      "date": "2012-11-24",
+      "season": 15,
+      "approximate": true
+    },
+    "575": {
+      "date": "2012-12-01",
+      "season": 15,
+      "approximate": true
+    },
+    "576": {
+      "date": "2012-12-08",
+      "season": 15,
+      "approximate": true
+    },
+    "577": {
+      "date": "2012-12-16",
+      "season": 15,
+      "approximate": true
+    },
+    "578": {
+      "date": "2012-12-23",
+      "season": 15,
+      "approximate": false
+    },
+    "579": {
+      "date": "2013-01-06",
+      "season": 16,
+      "approximate": false
+    },
+    "580": {
+      "date": "2013-01-14",
+      "season": 16,
+      "approximate": true
+    },
+    "581": {
+      "date": "2013-01-21",
+      "season": 16,
+      "approximate": true
+    },
+    "582": {
+      "date": "2013-01-29",
+      "season": 16,
+      "approximate": true
+    },
+    "583": {
+      "date": "2013-02-05",
+      "season": 16,
+      "approximate": true
+    },
+    "584": {
+      "date": "2013-02-13",
+      "season": 16,
+      "approximate": true
+    },
+    "585": {
+      "date": "2013-02-20",
+      "season": 16,
+      "approximate": true
+    },
+    "586": {
+      "date": "2013-02-28",
+      "season": 16,
+      "approximate": true
+    },
+    "587": {
+      "date": "2013-03-08",
+      "season": 16,
+      "approximate": true
+    },
+    "588": {
+      "date": "2013-03-15",
+      "season": 16,
+      "approximate": true
+    },
+    "589": {
+      "date": "2013-03-23",
+      "season": 16,
+      "approximate": true
+    },
+    "590": {
+      "date": "2013-03-30",
+      "season": 16,
+      "approximate": true
+    },
+    "591": {
+      "date": "2013-04-07",
+      "season": 16,
+      "approximate": true
+    },
+    "592": {
+      "date": "2013-04-14",
+      "season": 16,
+      "approximate": true
+    },
+    "593": {
+      "date": "2013-04-22",
+      "season": 16,
+      "approximate": true
+    },
+    "594": {
+      "date": "2013-04-30",
+      "season": 16,
+      "approximate": true
+    },
+    "595": {
+      "date": "2013-05-07",
+      "season": 16,
+      "approximate": true
+    },
+    "596": {
+      "date": "2013-05-15",
+      "season": 16,
+      "approximate": true
+    },
+    "597": {
+      "date": "2013-05-22",
+      "season": 16,
+      "approximate": true
+    },
+    "598": {
+      "date": "2013-05-30",
+      "season": 16,
+      "approximate": true
+    },
+    "599": {
+      "date": "2013-06-06",
+      "season": 16,
+      "approximate": true
+    },
+    "600": {
+      "date": "2013-06-14",
+      "season": 16,
+      "approximate": true
+    },
+    "601": {
+      "date": "2013-06-22",
+      "season": 16,
+      "approximate": true
+    },
+    "602": {
+      "date": "2013-06-29",
+      "season": 16,
+      "approximate": true
+    },
+    "603": {
+      "date": "2013-07-07",
+      "season": 16,
+      "approximate": true
+    },
+    "604": {
+      "date": "2013-07-14",
+      "season": 16,
+      "approximate": true
+    },
+    "605": {
+      "date": "2013-07-22",
+      "season": 16,
+      "approximate": true
+    },
+    "606": {
+      "date": "2013-07-29",
+      "season": 16,
+      "approximate": true
+    },
+    "607": {
+      "date": "2013-08-06",
+      "season": 16,
+      "approximate": true
+    },
+    "608": {
+      "date": "2013-08-14",
+      "season": 16,
+      "approximate": true
+    },
+    "609": {
+      "date": "2013-08-21",
+      "season": 16,
+      "approximate": true
+    },
+    "610": {
+      "date": "2013-08-29",
+      "season": 16,
+      "approximate": true
+    },
+    "611": {
+      "date": "2013-09-05",
+      "season": 16,
+      "approximate": true
+    },
+    "612": {
+      "date": "2013-09-13",
+      "season": 16,
+      "approximate": true
+    },
+    "613": {
+      "date": "2013-09-20",
+      "season": 16,
+      "approximate": true
+    },
+    "614": {
+      "date": "2013-09-28",
+      "season": 16,
+      "approximate": true
+    },
+    "615": {
+      "date": "2013-10-06",
+      "season": 16,
+      "approximate": true
+    },
+    "616": {
+      "date": "2013-10-13",
+      "season": 16,
+      "approximate": true
+    },
+    "617": {
+      "date": "2013-10-21",
+      "season": 16,
+      "approximate": true
+    },
+    "618": {
+      "date": "2013-10-28",
+      "season": 16,
+      "approximate": true
+    },
+    "619": {
+      "date": "2013-11-05",
+      "season": 16,
+      "approximate": true
+    },
+    "620": {
+      "date": "2013-11-12",
+      "season": 16,
+      "approximate": true
+    },
+    "621": {
+      "date": "2013-11-20",
+      "season": 16,
+      "approximate": true
+    },
+    "622": {
+      "date": "2013-11-28",
+      "season": 16,
+      "approximate": true
+    },
+    "623": {
+      "date": "2013-12-05",
+      "season": 16,
+      "approximate": true
+    },
+    "624": {
+      "date": "2013-12-13",
+      "season": 16,
+      "approximate": true
+    },
+    "625": {
+      "date": "2013-12-20",
+      "season": 16,
+      "approximate": true
+    },
+    "626": {
+      "date": "2013-12-28",
+      "season": 16,
+      "approximate": true
+    },
+    "627": {
+      "date": "2014-01-04",
+      "season": 16,
+      "approximate": true
+    },
+    "628": {
+      "date": "2014-01-12",
+      "season": 16,
+      "approximate": false
+    },
+    "629": {
+      "date": "2014-01-19",
+      "season": 17,
+      "approximate": false
+    },
+    "630": {
+      "date": "2014-01-27",
+      "season": 17,
+      "approximate": true
+    },
+    "631": {
+      "date": "2014-02-03",
+      "season": 17,
+      "approximate": true
+    },
+    "632": {
+      "date": "2014-02-11",
+      "season": 17,
+      "approximate": true
+    },
+    "633": {
+      "date": "2014-02-18",
+      "season": 17,
+      "approximate": true
+    },
+    "634": {
+      "date": "2014-02-26",
+      "season": 17,
+      "approximate": true
+    },
+    "635": {
+      "date": "2014-03-05",
+      "season": 17,
+      "approximate": true
+    },
+    "636": {
+      "date": "2014-03-13",
+      "season": 17,
+      "approximate": true
+    },
+    "637": {
+      "date": "2014-03-20",
+      "season": 17,
+      "approximate": true
+    },
+    "638": {
+      "date": "2014-03-28",
+      "season": 17,
+      "approximate": true
+    },
+    "639": {
+      "date": "2014-04-04",
+      "season": 17,
+      "approximate": true
+    },
+    "640": {
+      "date": "2014-04-12",
+      "season": 17,
+      "approximate": true
+    },
+    "641": {
+      "date": "2014-04-19",
+      "season": 17,
+      "approximate": true
+    },
+    "642": {
+      "date": "2014-04-27",
+      "season": 17,
+      "approximate": true
+    },
+    "643": {
+      "date": "2014-05-05",
+      "season": 17,
+      "approximate": true
+    },
+    "644": {
+      "date": "2014-05-12",
+      "season": 17,
+      "approximate": true
+    },
+    "645": {
+      "date": "2014-05-20",
+      "season": 17,
+      "approximate": true
+    },
+    "646": {
+      "date": "2014-05-27",
+      "season": 17,
+      "approximate": true
+    },
+    "647": {
+      "date": "2014-06-04",
+      "season": 17,
+      "approximate": true
+    },
+    "648": {
+      "date": "2014-06-11",
+      "season": 17,
+      "approximate": true
+    },
+    "649": {
+      "date": "2014-06-19",
+      "season": 17,
+      "approximate": true
+    },
+    "650": {
+      "date": "2014-06-26",
+      "season": 17,
+      "approximate": true
+    },
+    "651": {
+      "date": "2014-07-04",
+      "season": 17,
+      "approximate": true
+    },
+    "652": {
+      "date": "2014-07-11",
+      "season": 17,
+      "approximate": true
+    },
+    "653": {
+      "date": "2014-07-19",
+      "season": 17,
+      "approximate": true
+    },
+    "654": {
+      "date": "2014-07-26",
+      "season": 17,
+      "approximate": true
+    },
+    "655": {
+      "date": "2014-08-03",
+      "season": 17,
+      "approximate": true
+    },
+    "656": {
+      "date": "2014-08-11",
+      "season": 17,
+      "approximate": true
+    },
+    "657": {
+      "date": "2014-08-18",
+      "season": 17,
+      "approximate": true
+    },
+    "658": {
+      "date": "2014-08-26",
+      "season": 17,
+      "approximate": true
+    },
+    "659": {
+      "date": "2014-09-02",
+      "season": 17,
+      "approximate": true
+    },
+    "660": {
+      "date": "2014-09-10",
+      "season": 17,
+      "approximate": true
+    },
+    "661": {
+      "date": "2014-09-17",
+      "season": 17,
+      "approximate": true
+    },
+    "662": {
+      "date": "2014-09-25",
+      "season": 17,
+      "approximate": true
+    },
+    "663": {
+      "date": "2014-10-02",
+      "season": 17,
+      "approximate": true
+    },
+    "664": {
+      "date": "2014-10-10",
+      "season": 17,
+      "approximate": true
+    },
+    "665": {
+      "date": "2014-10-17",
+      "season": 17,
+      "approximate": true
+    },
+    "666": {
+      "date": "2014-10-25",
+      "season": 17,
+      "approximate": true
+    },
+    "667": {
+      "date": "2014-11-01",
+      "season": 17,
+      "approximate": true
+    },
+    "668": {
+      "date": "2014-11-09",
+      "season": 17,
+      "approximate": true
+    },
+    "669": {
+      "date": "2014-11-17",
+      "season": 17,
+      "approximate": true
+    },
+    "670": {
+      "date": "2014-11-24",
+      "season": 17,
+      "approximate": true
+    },
+    "671": {
+      "date": "2014-12-02",
+      "season": 17,
+      "approximate": true
+    },
+    "672": {
+      "date": "2014-12-09",
+      "season": 17,
+      "approximate": true
+    },
+    "673": {
+      "date": "2014-12-17",
+      "season": 17,
+      "approximate": true
+    },
+    "674": {
+      "date": "2014-12-24",
+      "season": 17,
+      "approximate": true
+    },
+    "675": {
+      "date": "2015-01-01",
+      "season": 17,
+      "approximate": true
+    },
+    "676": {
+      "date": "2015-01-08",
+      "season": 17,
+      "approximate": true
+    },
+    "677": {
+      "date": "2015-01-16",
+      "season": 17,
+      "approximate": true
+    },
+    "678": {
+      "date": "2015-01-23",
+      "season": 17,
+      "approximate": true
+    },
+    "679": {
+      "date": "2015-01-31",
+      "season": 17,
+      "approximate": true
+    },
+    "680": {
+      "date": "2015-02-07",
+      "season": 17,
+      "approximate": true
+    },
+    "681": {
+      "date": "2015-02-15",
+      "season": 17,
+      "approximate": true
+    },
+    "682": {
+      "date": "2015-02-23",
+      "season": 17,
+      "approximate": true
+    },
+    "683": {
+      "date": "2015-03-02",
+      "season": 17,
+      "approximate": true
+    },
+    "684": {
+      "date": "2015-03-10",
+      "season": 17,
+      "approximate": true
+    },
+    "685": {
+      "date": "2015-03-17",
+      "season": 17,
+      "approximate": true
+    },
+    "686": {
+      "date": "2015-03-25",
+      "season": 17,
+      "approximate": true
+    },
+    "687": {
+      "date": "2015-04-01",
+      "season": 17,
+      "approximate": true
+    },
+    "688": {
+      "date": "2015-04-09",
+      "season": 17,
+      "approximate": true
+    },
+    "689": {
+      "date": "2015-04-16",
+      "season": 17,
+      "approximate": true
+    },
+    "690": {
+      "date": "2015-04-24",
+      "season": 17,
+      "approximate": true
+    },
+    "691": {
+      "date": "2015-05-01",
+      "season": 17,
+      "approximate": true
+    },
+    "692": {
+      "date": "2015-05-09",
+      "season": 17,
+      "approximate": true
+    },
+    "693": {
+      "date": "2015-05-16",
+      "season": 17,
+      "approximate": true
+    },
+    "694": {
+      "date": "2015-05-24",
+      "season": 17,
+      "approximate": true
+    },
+    "695": {
+      "date": "2015-06-01",
+      "season": 17,
+      "approximate": true
+    },
+    "696": {
+      "date": "2015-06-08",
+      "season": 17,
+      "approximate": true
+    },
+    "697": {
+      "date": "2015-06-16",
+      "season": 17,
+      "approximate": true
+    },
+    "698": {
+      "date": "2015-06-23",
+      "season": 17,
+      "approximate": true
+    },
+    "699": {
+      "date": "2015-07-01",
+      "season": 17,
+      "approximate": true
+    },
+    "700": {
+      "date": "2015-07-08",
+      "season": 17,
+      "approximate": true
+    },
+    "701": {
+      "date": "2015-07-16",
+      "season": 17,
+      "approximate": true
+    },
+    "702": {
+      "date": "2015-07-23",
+      "season": 17,
+      "approximate": true
+    },
+    "703": {
+      "date": "2015-07-31",
+      "season": 17,
+      "approximate": true
+    },
+    "704": {
+      "date": "2015-08-07",
+      "season": 17,
+      "approximate": true
+    },
+    "705": {
+      "date": "2015-08-15",
+      "season": 17,
+      "approximate": true
+    },
+    "706": {
+      "date": "2015-08-22",
+      "season": 17,
+      "approximate": true
+    },
+    "707": {
+      "date": "2015-08-30",
+      "season": 17,
+      "approximate": true
+    },
+    "708": {
+      "date": "2015-09-07",
+      "season": 17,
+      "approximate": true
+    },
+    "709": {
+      "date": "2015-09-14",
+      "season": 17,
+      "approximate": true
+    },
+    "710": {
+      "date": "2015-09-22",
+      "season": 17,
+      "approximate": true
+    },
+    "711": {
+      "date": "2015-09-29",
+      "season": 17,
+      "approximate": true
+    },
+    "712": {
+      "date": "2015-10-07",
+      "season": 17,
+      "approximate": true
+    },
+    "713": {
+      "date": "2015-10-14",
+      "season": 17,
+      "approximate": true
+    },
+    "714": {
+      "date": "2015-10-22",
+      "season": 17,
+      "approximate": true
+    },
+    "715": {
+      "date": "2015-10-29",
+      "season": 17,
+      "approximate": true
+    },
+    "716": {
+      "date": "2015-11-06",
+      "season": 17,
+      "approximate": true
+    },
+    "717": {
+      "date": "2015-11-13",
+      "season": 17,
+      "approximate": true
+    },
+    "718": {
+      "date": "2015-11-21",
+      "season": 17,
+      "approximate": true
+    },
+    "719": {
+      "date": "2015-11-28",
+      "season": 17,
+      "approximate": true
+    },
+    "720": {
+      "date": "2015-12-06",
+      "season": 17,
+      "approximate": true
+    },
+    "721": {
+      "date": "2015-12-14",
+      "season": 17,
+      "approximate": true
+    },
+    "722": {
+      "date": "2015-12-21",
+      "season": 17,
+      "approximate": true
+    },
+    "723": {
+      "date": "2015-12-29",
+      "season": 17,
+      "approximate": true
+    },
+    "724": {
+      "date": "2016-01-05",
+      "season": 17,
+      "approximate": true
+    },
+    "725": {
+      "date": "2016-01-13",
+      "season": 17,
+      "approximate": true
+    },
+    "726": {
+      "date": "2016-01-20",
+      "season": 17,
+      "approximate": true
+    },
+    "727": {
+      "date": "2016-01-28",
+      "season": 17,
+      "approximate": true
+    },
+    "728": {
+      "date": "2016-02-04",
+      "season": 17,
+      "approximate": true
+    },
+    "729": {
+      "date": "2016-02-12",
+      "season": 17,
+      "approximate": true
+    },
+    "730": {
+      "date": "2016-02-19",
+      "season": 17,
+      "approximate": true
+    },
+    "731": {
+      "date": "2016-02-27",
+      "season": 17,
+      "approximate": true
+    },
+    "732": {
+      "date": "2016-03-05",
+      "season": 17,
+      "approximate": true
+    },
+    "733": {
+      "date": "2016-03-13",
+      "season": 17,
+      "approximate": true
+    },
+    "734": {
+      "date": "2016-03-21",
+      "season": 17,
+      "approximate": true
+    },
+    "735": {
+      "date": "2016-03-28",
+      "season": 17,
+      "approximate": true
+    },
+    "736": {
+      "date": "2016-04-05",
+      "season": 17,
+      "approximate": true
+    },
+    "737": {
+      "date": "2016-04-12",
+      "season": 17,
+      "approximate": true
+    },
+    "738": {
+      "date": "2016-04-20",
+      "season": 17,
+      "approximate": true
+    },
+    "739": {
+      "date": "2016-04-27",
+      "season": 17,
+      "approximate": true
+    },
+    "740": {
+      "date": "2016-05-05",
+      "season": 17,
+      "approximate": true
+    },
+    "741": {
+      "date": "2016-05-12",
+      "season": 17,
+      "approximate": true
+    },
+    "742": {
+      "date": "2016-05-20",
+      "season": 17,
+      "approximate": true
+    },
+    "743": {
+      "date": "2016-05-27",
+      "season": 17,
+      "approximate": true
+    },
+    "744": {
+      "date": "2016-06-04",
+      "season": 17,
+      "approximate": true
+    },
+    "745": {
+      "date": "2016-06-11",
+      "season": 17,
+      "approximate": true
+    },
+    "746": {
+      "date": "2016-06-19",
+      "season": 17,
+      "approximate": false
+    },
+    "747": {
+      "date": "2016-06-26",
+      "season": 18,
+      "approximate": false
+    },
+    "748": {
+      "date": "2016-07-04",
+      "season": 18,
+      "approximate": true
+    },
+    "749": {
+      "date": "2016-07-12",
+      "season": 18,
+      "approximate": true
+    },
+    "750": {
+      "date": "2016-07-20",
+      "season": 18,
+      "approximate": true
+    },
+    "751": {
+      "date": "2016-07-28",
+      "season": 18,
+      "approximate": true
+    },
+    "752": {
+      "date": "2016-08-05",
+      "season": 18,
+      "approximate": true
+    },
+    "753": {
+      "date": "2016-08-13",
+      "season": 18,
+      "approximate": true
+    },
+    "754": {
+      "date": "2016-08-21",
+      "season": 18,
+      "approximate": true
+    },
+    "755": {
+      "date": "2016-08-29",
+      "season": 18,
+      "approximate": true
+    },
+    "756": {
+      "date": "2016-09-06",
+      "season": 18,
+      "approximate": true
+    },
+    "757": {
+      "date": "2016-09-14",
+      "season": 18,
+      "approximate": true
+    },
+    "758": {
+      "date": "2016-09-22",
+      "season": 18,
+      "approximate": true
+    },
+    "759": {
+      "date": "2016-09-30",
+      "season": 18,
+      "approximate": true
+    },
+    "760": {
+      "date": "2016-10-08",
+      "season": 18,
+      "approximate": true
+    },
+    "761": {
+      "date": "2016-10-16",
+      "season": 18,
+      "approximate": true
+    },
+    "762": {
+      "date": "2016-10-24",
+      "season": 18,
+      "approximate": true
+    },
+    "763": {
+      "date": "2016-11-01",
+      "season": 18,
+      "approximate": true
+    },
+    "764": {
+      "date": "2016-11-09",
+      "season": 18,
+      "approximate": true
+    },
+    "765": {
+      "date": "2016-11-17",
+      "season": 18,
+      "approximate": true
+    },
+    "766": {
+      "date": "2016-11-25",
+      "season": 18,
+      "approximate": true
+    },
+    "767": {
+      "date": "2016-12-03",
+      "season": 18,
+      "approximate": true
+    },
+    "768": {
+      "date": "2016-12-11",
+      "season": 18,
+      "approximate": true
+    },
+    "769": {
+      "date": "2016-12-19",
+      "season": 18,
+      "approximate": true
+    },
+    "770": {
+      "date": "2016-12-27",
+      "season": 18,
+      "approximate": true
+    },
+    "771": {
+      "date": "2017-01-04",
+      "season": 18,
+      "approximate": true
+    },
+    "772": {
+      "date": "2017-01-12",
+      "season": 18,
+      "approximate": true
+    },
+    "773": {
+      "date": "2017-01-20",
+      "season": 18,
+      "approximate": true
+    },
+    "774": {
+      "date": "2017-01-28",
+      "season": 18,
+      "approximate": true
+    },
+    "775": {
+      "date": "2017-02-05",
+      "season": 18,
+      "approximate": true
+    },
+    "776": {
+      "date": "2017-02-13",
+      "season": 18,
+      "approximate": true
+    },
+    "777": {
+      "date": "2017-02-21",
+      "season": 18,
+      "approximate": true
+    },
+    "778": {
+      "date": "2017-03-01",
+      "season": 18,
+      "approximate": true
+    },
+    "779": {
+      "date": "2017-03-09",
+      "season": 18,
+      "approximate": true
+    },
+    "780": {
+      "date": "2017-03-17",
+      "season": 18,
+      "approximate": true
+    },
+    "781": {
+      "date": "2017-03-25",
+      "season": 18,
+      "approximate": true
+    },
+    "782": {
+      "date": "2017-04-02",
+      "season": 18,
+      "approximate": false
+    },
+    "783": {
+      "date": "2017-04-09",
+      "season": 19,
+      "approximate": false
+    },
+    "784": {
+      "date": "2017-04-17",
+      "season": 19,
+      "approximate": true
+    },
+    "785": {
+      "date": "2017-04-24",
+      "season": 19,
+      "approximate": true
+    },
+    "786": {
+      "date": "2017-05-02",
+      "season": 19,
+      "approximate": true
+    },
+    "787": {
+      "date": "2017-05-09",
+      "season": 19,
+      "approximate": true
+    },
+    "788": {
+      "date": "2017-05-17",
+      "season": 19,
+      "approximate": true
+    },
+    "789": {
+      "date": "2017-05-24",
+      "season": 19,
+      "approximate": true
+    },
+    "790": {
+      "date": "2017-06-01",
+      "season": 19,
+      "approximate": true
+    },
+    "791": {
+      "date": "2017-06-08",
+      "season": 19,
+      "approximate": true
+    },
+    "792": {
+      "date": "2017-06-16",
+      "season": 19,
+      "approximate": true
+    },
+    "793": {
+      "date": "2017-06-23",
+      "season": 19,
+      "approximate": true
+    },
+    "794": {
+      "date": "2017-07-01",
+      "season": 19,
+      "approximate": true
+    },
+    "795": {
+      "date": "2017-07-08",
+      "season": 19,
+      "approximate": true
+    },
+    "796": {
+      "date": "2017-07-16",
+      "season": 19,
+      "approximate": true
+    },
+    "797": {
+      "date": "2017-07-23",
+      "season": 19,
+      "approximate": true
+    },
+    "798": {
+      "date": "2017-07-31",
+      "season": 19,
+      "approximate": true
+    },
+    "799": {
+      "date": "2017-08-07",
+      "season": 19,
+      "approximate": true
+    },
+    "800": {
+      "date": "2017-08-15",
+      "season": 19,
+      "approximate": true
+    },
+    "801": {
+      "date": "2017-08-22",
+      "season": 19,
+      "approximate": true
+    },
+    "802": {
+      "date": "2017-08-30",
+      "season": 19,
+      "approximate": true
+    },
+    "803": {
+      "date": "2017-09-06",
+      "season": 19,
+      "approximate": true
+    },
+    "804": {
+      "date": "2017-09-14",
+      "season": 19,
+      "approximate": true
+    },
+    "805": {
+      "date": "2017-09-21",
+      "season": 19,
+      "approximate": true
+    },
+    "806": {
+      "date": "2017-09-29",
+      "season": 19,
+      "approximate": true
+    },
+    "807": {
+      "date": "2017-10-06",
+      "season": 19,
+      "approximate": true
+    },
+    "808": {
+      "date": "2017-10-14",
+      "season": 19,
+      "approximate": true
+    },
+    "809": {
+      "date": "2017-10-21",
+      "season": 19,
+      "approximate": true
+    },
+    "810": {
+      "date": "2017-10-29",
+      "season": 19,
+      "approximate": true
+    },
+    "811": {
+      "date": "2017-11-06",
+      "season": 19,
+      "approximate": true
+    },
+    "812": {
+      "date": "2017-11-13",
+      "season": 19,
+      "approximate": true
+    },
+    "813": {
+      "date": "2017-11-21",
+      "season": 19,
+      "approximate": true
+    },
+    "814": {
+      "date": "2017-11-28",
+      "season": 19,
+      "approximate": true
+    },
+    "815": {
+      "date": "2017-12-06",
+      "season": 19,
+      "approximate": true
+    },
+    "816": {
+      "date": "2017-12-13",
+      "season": 19,
+      "approximate": true
+    },
+    "817": {
+      "date": "2017-12-21",
+      "season": 19,
+      "approximate": true
+    },
+    "818": {
+      "date": "2017-12-28",
+      "season": 19,
+      "approximate": true
+    },
+    "819": {
+      "date": "2018-01-05",
+      "season": 19,
+      "approximate": true
+    },
+    "820": {
+      "date": "2018-01-12",
+      "season": 19,
+      "approximate": true
+    },
+    "821": {
+      "date": "2018-01-20",
+      "season": 19,
+      "approximate": true
+    },
+    "822": {
+      "date": "2018-01-27",
+      "season": 19,
+      "approximate": true
+    },
+    "823": {
+      "date": "2018-02-04",
+      "season": 19,
+      "approximate": true
+    },
+    "824": {
+      "date": "2018-02-11",
+      "season": 19,
+      "approximate": true
+    },
+    "825": {
+      "date": "2018-02-19",
+      "season": 19,
+      "approximate": true
+    },
+    "826": {
+      "date": "2018-02-26",
+      "season": 19,
+      "approximate": true
+    },
+    "827": {
+      "date": "2018-03-06",
+      "season": 19,
+      "approximate": true
+    },
+    "828": {
+      "date": "2018-03-13",
+      "season": 19,
+      "approximate": true
+    },
+    "829": {
+      "date": "2018-03-21",
+      "season": 19,
+      "approximate": true
+    },
+    "830": {
+      "date": "2018-03-28",
+      "season": 19,
+      "approximate": true
+    },
+    "831": {
+      "date": "2018-04-05",
+      "season": 19,
+      "approximate": true
+    },
+    "832": {
+      "date": "2018-04-12",
+      "season": 19,
+      "approximate": true
+    },
+    "833": {
+      "date": "2018-04-20",
+      "season": 19,
+      "approximate": true
+    },
+    "834": {
+      "date": "2018-04-27",
+      "season": 19,
+      "approximate": true
+    },
+    "835": {
+      "date": "2018-05-05",
+      "season": 19,
+      "approximate": true
+    },
+    "836": {
+      "date": "2018-05-12",
+      "season": 19,
+      "approximate": true
+    },
+    "837": {
+      "date": "2018-05-20",
+      "season": 19,
+      "approximate": true
+    },
+    "838": {
+      "date": "2018-05-28",
+      "season": 19,
+      "approximate": true
+    },
+    "839": {
+      "date": "2018-06-04",
+      "season": 19,
+      "approximate": true
+    },
+    "840": {
+      "date": "2018-06-12",
+      "season": 19,
+      "approximate": true
+    },
+    "841": {
+      "date": "2018-06-19",
+      "season": 19,
+      "approximate": true
+    },
+    "842": {
+      "date": "2018-06-27",
+      "season": 19,
+      "approximate": true
+    },
+    "843": {
+      "date": "2018-07-04",
+      "season": 19,
+      "approximate": true
+    },
+    "844": {
+      "date": "2018-07-12",
+      "season": 19,
+      "approximate": true
+    },
+    "845": {
+      "date": "2018-07-19",
+      "season": 19,
+      "approximate": true
+    },
+    "846": {
+      "date": "2018-07-27",
+      "season": 19,
+      "approximate": true
+    },
+    "847": {
+      "date": "2018-08-03",
+      "season": 19,
+      "approximate": true
+    },
+    "848": {
+      "date": "2018-08-11",
+      "season": 19,
+      "approximate": true
+    },
+    "849": {
+      "date": "2018-08-18",
+      "season": 19,
+      "approximate": true
+    },
+    "850": {
+      "date": "2018-08-26",
+      "season": 19,
+      "approximate": true
+    },
+    "851": {
+      "date": "2018-09-02",
+      "season": 19,
+      "approximate": true
+    },
+    "852": {
+      "date": "2018-09-10",
+      "season": 19,
+      "approximate": true
+    },
+    "853": {
+      "date": "2018-09-17",
+      "season": 19,
+      "approximate": true
+    },
+    "854": {
+      "date": "2018-09-25",
+      "season": 19,
+      "approximate": true
+    },
+    "855": {
+      "date": "2018-10-02",
+      "season": 19,
+      "approximate": true
+    },
+    "856": {
+      "date": "2018-10-10",
+      "season": 19,
+      "approximate": true
+    },
+    "857": {
+      "date": "2018-10-17",
+      "season": 19,
+      "approximate": true
+    },
+    "858": {
+      "date": "2018-10-25",
+      "season": 19,
+      "approximate": true
+    },
+    "859": {
+      "date": "2018-11-01",
+      "season": 19,
+      "approximate": true
+    },
+    "860": {
+      "date": "2018-11-09",
+      "season": 19,
+      "approximate": true
+    },
+    "861": {
+      "date": "2018-11-16",
+      "season": 19,
+      "approximate": true
+    },
+    "862": {
+      "date": "2018-11-24",
+      "season": 19,
+      "approximate": true
+    },
+    "863": {
+      "date": "2018-12-01",
+      "season": 19,
+      "approximate": true
+    },
+    "864": {
+      "date": "2018-12-09",
+      "season": 19,
+      "approximate": true
+    },
+    "865": {
+      "date": "2018-12-17",
+      "season": 19,
+      "approximate": true
+    },
+    "866": {
+      "date": "2018-12-24",
+      "season": 19,
+      "approximate": true
+    },
+    "867": {
+      "date": "2019-01-01",
+      "season": 19,
+      "approximate": true
+    },
+    "868": {
+      "date": "2019-01-08",
+      "season": 19,
+      "approximate": true
+    },
+    "869": {
+      "date": "2019-01-16",
+      "season": 19,
+      "approximate": true
+    },
+    "870": {
+      "date": "2019-01-23",
+      "season": 19,
+      "approximate": true
+    },
+    "871": {
+      "date": "2019-01-31",
+      "season": 19,
+      "approximate": true
+    },
+    "872": {
+      "date": "2019-02-07",
+      "season": 19,
+      "approximate": true
+    },
+    "873": {
+      "date": "2019-02-15",
+      "season": 19,
+      "approximate": true
+    },
+    "874": {
+      "date": "2019-02-22",
+      "season": 19,
+      "approximate": true
+    },
+    "875": {
+      "date": "2019-03-02",
+      "season": 19,
+      "approximate": true
+    },
+    "876": {
+      "date": "2019-03-09",
+      "season": 19,
+      "approximate": true
+    },
+    "877": {
+      "date": "2019-03-17",
+      "season": 19,
+      "approximate": true
+    },
+    "878": {
+      "date": "2019-03-24",
+      "season": 19,
+      "approximate": true
+    },
+    "879": {
+      "date": "2019-04-01",
+      "season": 19,
+      "approximate": true
+    },
+    "880": {
+      "date": "2019-04-08",
+      "season": 19,
+      "approximate": true
+    },
+    "881": {
+      "date": "2019-04-16",
+      "season": 19,
+      "approximate": true
+    },
+    "882": {
+      "date": "2019-04-23",
+      "season": 19,
+      "approximate": true
+    },
+    "883": {
+      "date": "2019-05-01",
+      "season": 19,
+      "approximate": true
+    },
+    "884": {
+      "date": "2019-05-08",
+      "season": 19,
+      "approximate": true
+    },
+    "885": {
+      "date": "2019-05-16",
+      "season": 19,
+      "approximate": true
+    },
+    "886": {
+      "date": "2019-05-23",
+      "season": 19,
+      "approximate": true
+    },
+    "887": {
+      "date": "2019-05-31",
+      "season": 19,
+      "approximate": true
+    },
+    "888": {
+      "date": "2019-06-07",
+      "season": 19,
+      "approximate": true
+    },
+    "889": {
+      "date": "2019-06-15",
+      "season": 19,
+      "approximate": true
+    },
+    "890": {
+      "date": "2019-06-22",
+      "season": 19,
+      "approximate": true
+    },
+    "891": {
+      "date": "2019-06-30",
+      "season": 19,
+      "approximate": false
+    },
+    "892": {
+      "date": "2019-07-07",
+      "season": 20,
+      "approximate": false
+    },
+    "893": {
+      "date": "2019-07-15",
+      "season": 20,
+      "approximate": true
+    },
+    "894": {
+      "date": "2019-07-24",
+      "season": 20,
+      "approximate": true
+    },
+    "895": {
+      "date": "2019-08-01",
+      "season": 20,
+      "approximate": true
+    },
+    "896": {
+      "date": "2019-08-09",
+      "season": 20,
+      "approximate": true
+    },
+    "897": {
+      "date": "2019-08-17",
+      "season": 20,
+      "approximate": true
+    },
+    "898": {
+      "date": "2019-08-26",
+      "season": 20,
+      "approximate": true
+    },
+    "899": {
+      "date": "2019-09-03",
+      "season": 20,
+      "approximate": true
+    },
+    "900": {
+      "date": "2019-09-11",
+      "season": 20,
+      "approximate": true
+    },
+    "901": {
+      "date": "2019-09-20",
+      "season": 20,
+      "approximate": true
+    },
+    "902": {
+      "date": "2019-09-28",
+      "season": 20,
+      "approximate": true
+    },
+    "903": {
+      "date": "2019-10-06",
+      "season": 20,
+      "approximate": true
+    },
+    "904": {
+      "date": "2019-10-14",
+      "season": 20,
+      "approximate": true
+    },
+    "905": {
+      "date": "2019-10-23",
+      "season": 20,
+      "approximate": true
+    },
+    "906": {
+      "date": "2019-10-31",
+      "season": 20,
+      "approximate": true
+    },
+    "907": {
+      "date": "2019-11-08",
+      "season": 20,
+      "approximate": true
+    },
+    "908": {
+      "date": "2019-11-17",
+      "season": 20,
+      "approximate": true
+    },
+    "909": {
+      "date": "2019-11-25",
+      "season": 20,
+      "approximate": true
+    },
+    "910": {
+      "date": "2019-12-03",
+      "season": 20,
+      "approximate": true
+    },
+    "911": {
+      "date": "2019-12-11",
+      "season": 20,
+      "approximate": true
+    },
+    "912": {
+      "date": "2019-12-20",
+      "season": 20,
+      "approximate": true
+    },
+    "913": {
+      "date": "2019-12-28",
+      "season": 20,
+      "approximate": true
+    },
+    "914": {
+      "date": "2020-01-05",
+      "season": 20,
+      "approximate": true
+    },
+    "915": {
+      "date": "2020-01-14",
+      "season": 20,
+      "approximate": true
+    },
+    "916": {
+      "date": "2020-01-22",
+      "season": 20,
+      "approximate": true
+    },
+    "917": {
+      "date": "2020-01-30",
+      "season": 20,
+      "approximate": true
+    },
+    "918": {
+      "date": "2020-02-07",
+      "season": 20,
+      "approximate": true
+    },
+    "919": {
+      "date": "2020-02-16",
+      "season": 20,
+      "approximate": true
+    },
+    "920": {
+      "date": "2020-02-24",
+      "season": 20,
+      "approximate": true
+    },
+    "921": {
+      "date": "2020-03-03",
+      "season": 20,
+      "approximate": true
+    },
+    "922": {
+      "date": "2020-03-12",
+      "season": 20,
+      "approximate": true
+    },
+    "923": {
+      "date": "2020-03-20",
+      "season": 20,
+      "approximate": true
+    },
+    "924": {
+      "date": "2020-03-28",
+      "season": 20,
+      "approximate": true
+    },
+    "925": {
+      "date": "2020-04-05",
+      "season": 20,
+      "approximate": true
+    },
+    "926": {
+      "date": "2020-04-14",
+      "season": 20,
+      "approximate": true
+    },
+    "927": {
+      "date": "2020-04-22",
+      "season": 20,
+      "approximate": true
+    },
+    "928": {
+      "date": "2020-04-30",
+      "season": 20,
+      "approximate": true
+    },
+    "929": {
+      "date": "2020-05-09",
+      "season": 20,
+      "approximate": true
+    },
+    "930": {
+      "date": "2020-05-17",
+      "season": 20,
+      "approximate": true
+    },
+    "931": {
+      "date": "2020-05-25",
+      "season": 20,
+      "approximate": true
+    },
+    "932": {
+      "date": "2020-06-02",
+      "season": 20,
+      "approximate": true
+    },
+    "933": {
+      "date": "2020-06-11",
+      "season": 20,
+      "approximate": true
+    },
+    "934": {
+      "date": "2020-06-19",
+      "season": 20,
+      "approximate": true
+    },
+    "935": {
+      "date": "2020-06-27",
+      "season": 20,
+      "approximate": true
+    },
+    "936": {
+      "date": "2020-07-06",
+      "season": 20,
+      "approximate": true
+    },
+    "937": {
+      "date": "2020-07-14",
+      "season": 20,
+      "approximate": true
+    },
+    "938": {
+      "date": "2020-07-22",
+      "season": 20,
+      "approximate": true
+    },
+    "939": {
+      "date": "2020-07-30",
+      "season": 20,
+      "approximate": true
+    },
+    "940": {
+      "date": "2020-08-08",
+      "season": 20,
+      "approximate": true
+    },
+    "941": {
+      "date": "2020-08-16",
+      "season": 20,
+      "approximate": true
+    },
+    "942": {
+      "date": "2020-08-24",
+      "season": 20,
+      "approximate": true
+    },
+    "943": {
+      "date": "2020-09-02",
+      "season": 20,
+      "approximate": true
+    },
+    "944": {
+      "date": "2020-09-10",
+      "season": 20,
+      "approximate": true
+    },
+    "945": {
+      "date": "2020-09-18",
+      "season": 20,
+      "approximate": true
+    },
+    "946": {
+      "date": "2020-09-26",
+      "season": 20,
+      "approximate": true
+    },
+    "947": {
+      "date": "2020-10-05",
+      "season": 20,
+      "approximate": true
+    },
+    "948": {
+      "date": "2020-10-13",
+      "season": 20,
+      "approximate": true
+    },
+    "949": {
+      "date": "2020-10-21",
+      "season": 20,
+      "approximate": true
+    },
+    "950": {
+      "date": "2020-10-30",
+      "season": 20,
+      "approximate": true
+    },
+    "951": {
+      "date": "2020-11-07",
+      "season": 20,
+      "approximate": true
+    },
+    "952": {
+      "date": "2020-11-15",
+      "season": 20,
+      "approximate": true
+    },
+    "953": {
+      "date": "2020-11-23",
+      "season": 20,
+      "approximate": true
+    },
+    "954": {
+      "date": "2020-12-02",
+      "season": 20,
+      "approximate": true
+    },
+    "955": {
+      "date": "2020-12-10",
+      "season": 20,
+      "approximate": true
+    },
+    "956": {
+      "date": "2020-12-18",
+      "season": 20,
+      "approximate": true
+    },
+    "957": {
+      "date": "2020-12-27",
+      "season": 20,
+      "approximate": true
+    },
+    "958": {
+      "date": "2021-01-04",
+      "season": 20,
+      "approximate": true
+    },
+    "959": {
+      "date": "2021-01-12",
+      "season": 20,
+      "approximate": true
+    },
+    "960": {
+      "date": "2021-01-20",
+      "season": 20,
+      "approximate": true
+    },
+    "961": {
+      "date": "2021-01-29",
+      "season": 20,
+      "approximate": true
+    },
+    "962": {
+      "date": "2021-02-06",
+      "season": 20,
+      "approximate": true
+    },
+    "963": {
+      "date": "2021-02-14",
+      "season": 20,
+      "approximate": true
+    },
+    "964": {
+      "date": "2021-02-23",
+      "season": 20,
+      "approximate": true
+    },
+    "965": {
+      "date": "2021-03-03",
+      "season": 20,
+      "approximate": true
+    },
+    "966": {
+      "date": "2021-03-11",
+      "season": 20,
+      "approximate": true
+    },
+    "967": {
+      "date": "2021-03-19",
+      "season": 20,
+      "approximate": true
+    },
+    "968": {
+      "date": "2021-03-28",
+      "season": 20,
+      "approximate": true
+    },
+    "969": {
+      "date": "2021-04-05",
+      "season": 20,
+      "approximate": true
+    },
+    "970": {
+      "date": "2021-04-13",
+      "season": 20,
+      "approximate": true
+    },
+    "971": {
+      "date": "2021-04-22",
+      "season": 20,
+      "approximate": true
+    },
+    "972": {
+      "date": "2021-04-30",
+      "season": 20,
+      "approximate": true
+    },
+    "973": {
+      "date": "2021-05-08",
+      "season": 20,
+      "approximate": true
+    },
+    "974": {
+      "date": "2021-05-16",
+      "season": 20,
+      "approximate": true
+    },
+    "975": {
+      "date": "2021-05-25",
+      "season": 20,
+      "approximate": true
+    },
+    "976": {
+      "date": "2021-06-02",
+      "season": 20,
+      "approximate": true
+    },
+    "977": {
+      "date": "2021-06-10",
+      "season": 20,
+      "approximate": true
+    },
+    "978": {
+      "date": "2021-06-19",
+      "season": 20,
+      "approximate": true
+    },
+    "979": {
+      "date": "2021-06-27",
+      "season": 20,
+      "approximate": true
+    },
+    "980": {
+      "date": "2021-07-05",
+      "season": 20,
+      "approximate": true
+    },
+    "981": {
+      "date": "2021-07-13",
+      "season": 20,
+      "approximate": true
+    },
+    "982": {
+      "date": "2021-07-22",
+      "season": 20,
+      "approximate": true
+    },
+    "983": {
+      "date": "2021-07-30",
+      "season": 20,
+      "approximate": true
+    },
+    "984": {
+      "date": "2021-08-07",
+      "season": 20,
+      "approximate": true
+    },
+    "985": {
+      "date": "2021-08-16",
+      "season": 20,
+      "approximate": true
+    },
+    "986": {
+      "date": "2021-08-24",
+      "season": 20,
+      "approximate": true
+    },
+    "987": {
+      "date": "2021-09-01",
+      "season": 20,
+      "approximate": true
+    },
+    "988": {
+      "date": "2021-09-09",
+      "season": 20,
+      "approximate": true
+    },
+    "989": {
+      "date": "2021-09-18",
+      "season": 20,
+      "approximate": true
+    },
+    "990": {
+      "date": "2021-09-26",
+      "season": 20,
+      "approximate": true
+    },
+    "991": {
+      "date": "2021-10-04",
+      "season": 20,
+      "approximate": true
+    },
+    "992": {
+      "date": "2021-10-13",
+      "season": 20,
+      "approximate": true
+    },
+    "993": {
+      "date": "2021-10-21",
+      "season": 20,
+      "approximate": true
+    },
+    "994": {
+      "date": "2021-10-29",
+      "season": 20,
+      "approximate": true
+    },
+    "995": {
+      "date": "2021-11-06",
+      "season": 20,
+      "approximate": true
+    },
+    "996": {
+      "date": "2021-11-15",
+      "season": 20,
+      "approximate": true
+    },
+    "997": {
+      "date": "2021-11-23",
+      "season": 20,
+      "approximate": true
+    },
+    "998": {
+      "date": "2021-12-01",
+      "season": 20,
+      "approximate": true
+    },
+    "999": {
+      "date": "2021-12-10",
+      "season": 20,
+      "approximate": true
+    },
+    "1000": {
+      "date": "2021-12-18",
+      "season": 20,
+      "approximate": true
+    },
+    "1001": {
+      "date": "2021-12-26",
+      "season": 20,
+      "approximate": true
+    },
+    "1002": {
+      "date": "2022-01-03",
+      "season": 20,
+      "approximate": true
+    },
+    "1003": {
+      "date": "2022-01-12",
+      "season": 20,
+      "approximate": true
+    },
+    "1004": {
+      "date": "2022-01-20",
+      "season": 20,
+      "approximate": true
+    },
+    "1005": {
+      "date": "2022-01-28",
+      "season": 20,
+      "approximate": true
+    },
+    "1006": {
+      "date": "2022-02-06",
+      "season": 20,
+      "approximate": true
+    },
+    "1007": {
+      "date": "2022-02-14",
+      "season": 20,
+      "approximate": true
+    },
+    "1008": {
+      "date": "2022-02-22",
+      "season": 20,
+      "approximate": true
+    },
+    "1009": {
+      "date": "2022-03-02",
+      "season": 20,
+      "approximate": true
+    },
+    "1010": {
+      "date": "2022-03-11",
+      "season": 20,
+      "approximate": true
+    },
+    "1011": {
+      "date": "2022-03-19",
+      "season": 20,
+      "approximate": true
+    },
+    "1012": {
+      "date": "2022-03-27",
+      "season": 20,
+      "approximate": true
+    },
+    "1013": {
+      "date": "2022-04-05",
+      "season": 20,
+      "approximate": true
+    },
+    "1014": {
+      "date": "2022-04-13",
+      "season": 20,
+      "approximate": true
+    },
+    "1015": {
+      "date": "2022-04-21",
+      "season": 20,
+      "approximate": true
+    },
+    "1016": {
+      "date": "2022-04-29",
+      "season": 20,
+      "approximate": true
+    },
+    "1017": {
+      "date": "2022-05-08",
+      "season": 20,
+      "approximate": true
+    },
+    "1018": {
+      "date": "2022-05-16",
+      "season": 20,
+      "approximate": true
+    },
+    "1019": {
+      "date": "2022-05-24",
+      "season": 20,
+      "approximate": true
+    },
+    "1020": {
+      "date": "2022-06-02",
+      "season": 20,
+      "approximate": true
+    },
+    "1021": {
+      "date": "2022-06-10",
+      "season": 20,
+      "approximate": true
+    },
+    "1022": {
+      "date": "2022-06-18",
+      "season": 20,
+      "approximate": true
+    },
+    "1023": {
+      "date": "2022-06-26",
+      "season": 20,
+      "approximate": true
+    },
+    "1024": {
+      "date": "2022-07-05",
+      "season": 20,
+      "approximate": true
+    },
+    "1025": {
+      "date": "2022-07-13",
+      "season": 20,
+      "approximate": true
+    },
+    "1026": {
+      "date": "2022-07-21",
+      "season": 20,
+      "approximate": true
+    },
+    "1027": {
+      "date": "2022-07-30",
+      "season": 20,
+      "approximate": true
+    },
+    "1028": {
+      "date": "2022-08-07",
+      "season": 20,
+      "approximate": true
+    },
+    "1029": {
+      "date": "2022-08-15",
+      "season": 20,
+      "approximate": true
+    },
+    "1030": {
+      "date": "2022-08-23",
+      "season": 20,
+      "approximate": true
+    },
+    "1031": {
+      "date": "2022-09-01",
+      "season": 20,
+      "approximate": true
+    },
+    "1032": {
+      "date": "2022-09-09",
+      "season": 20,
+      "approximate": true
+    },
+    "1033": {
+      "date": "2022-09-17",
+      "season": 20,
+      "approximate": true
+    },
+    "1034": {
+      "date": "2022-09-26",
+      "season": 20,
+      "approximate": true
+    },
+    "1035": {
+      "date": "2022-10-04",
+      "season": 20,
+      "approximate": true
+    },
+    "1036": {
+      "date": "2022-10-12",
+      "season": 20,
+      "approximate": true
+    },
+    "1037": {
+      "date": "2022-10-20",
+      "season": 20,
+      "approximate": true
+    },
+    "1038": {
+      "date": "2022-10-29",
+      "season": 20,
+      "approximate": true
+    },
+    "1039": {
+      "date": "2022-11-06",
+      "season": 20,
+      "approximate": true
+    },
+    "1040": {
+      "date": "2022-11-14",
+      "season": 20,
+      "approximate": true
+    },
+    "1041": {
+      "date": "2022-11-23",
+      "season": 20,
+      "approximate": true
+    },
+    "1042": {
+      "date": "2022-12-01",
+      "season": 20,
+      "approximate": true
+    },
+    "1043": {
+      "date": "2022-12-09",
+      "season": 20,
+      "approximate": true
+    },
+    "1044": {
+      "date": "2022-12-17",
+      "season": 20,
+      "approximate": true
+    },
+    "1045": {
+      "date": "2022-12-26",
+      "season": 20,
+      "approximate": true
+    },
+    "1046": {
+      "date": "2023-01-03",
+      "season": 20,
+      "approximate": true
+    },
+    "1047": {
+      "date": "2023-01-11",
+      "season": 20,
+      "approximate": true
+    },
+    "1048": {
+      "date": "2023-01-20",
+      "season": 20,
+      "approximate": true
+    },
+    "1049": {
+      "date": "2023-01-28",
+      "season": 20,
+      "approximate": true
+    },
+    "1050": {
+      "date": "2023-02-05",
+      "season": 20,
+      "approximate": true
+    },
+    "1051": {
+      "date": "2023-02-13",
+      "season": 20,
+      "approximate": true
+    },
+    "1052": {
+      "date": "2023-02-22",
+      "season": 20,
+      "approximate": true
+    },
+    "1053": {
+      "date": "2023-03-02",
+      "season": 20,
+      "approximate": true
+    },
+    "1054": {
+      "date": "2023-03-10",
+      "season": 20,
+      "approximate": true
+    },
+    "1055": {
+      "date": "2023-03-19",
+      "season": 20,
+      "approximate": true
+    },
+    "1056": {
+      "date": "2023-03-27",
+      "season": 20,
+      "approximate": true
+    },
+    "1057": {
+      "date": "2023-04-04",
+      "season": 20,
+      "approximate": true
+    },
+    "1058": {
+      "date": "2023-04-12",
+      "season": 20,
+      "approximate": true
+    },
+    "1059": {
+      "date": "2023-04-21",
+      "season": 20,
+      "approximate": true
+    },
+    "1060": {
+      "date": "2023-04-29",
+      "season": 20,
+      "approximate": true
+    },
+    "1061": {
+      "date": "2023-05-07",
+      "season": 20,
+      "approximate": true
+    },
+    "1062": {
+      "date": "2023-05-16",
+      "season": 20,
+      "approximate": true
+    },
+    "1063": {
+      "date": "2023-05-24",
+      "season": 20,
+      "approximate": true
+    },
+    "1064": {
+      "date": "2023-06-01",
+      "season": 20,
+      "approximate": true
+    },
+    "1065": {
+      "date": "2023-06-09",
+      "season": 20,
+      "approximate": true
+    },
+    "1066": {
+      "date": "2023-06-18",
+      "season": 20,
+      "approximate": true
+    },
+    "1067": {
+      "date": "2023-06-26",
+      "season": 20,
+      "approximate": true
+    },
+    "1068": {
+      "date": "2023-07-04",
+      "season": 20,
+      "approximate": true
+    },
+    "1069": {
+      "date": "2023-07-13",
+      "season": 20,
+      "approximate": true
+    },
+    "1070": {
+      "date": "2023-07-21",
+      "season": 20,
+      "approximate": true
+    },
+    "1071": {
+      "date": "2023-07-29",
+      "season": 20,
+      "approximate": true
+    },
+    "1072": {
+      "date": "2023-08-06",
+      "season": 20,
+      "approximate": true
+    },
+    "1073": {
+      "date": "2023-08-15",
+      "season": 20,
+      "approximate": true
+    },
+    "1074": {
+      "date": "2023-08-23",
+      "season": 20,
+      "approximate": true
+    },
+    "1075": {
+      "date": "2023-08-31",
+      "season": 20,
+      "approximate": true
+    },
+    "1076": {
+      "date": "2023-09-09",
+      "season": 20,
+      "approximate": true
+    },
+    "1077": {
+      "date": "2023-09-17",
+      "season": 20,
+      "approximate": true
+    },
+    "1078": {
+      "date": "2023-09-25",
+      "season": 20,
+      "approximate": true
+    },
+    "1079": {
+      "date": "2023-10-03",
+      "season": 20,
+      "approximate": true
+    },
+    "1080": {
+      "date": "2023-10-12",
+      "season": 20,
+      "approximate": true
+    },
+    "1081": {
+      "date": "2023-10-20",
+      "season": 20,
+      "approximate": true
+    },
+    "1082": {
+      "date": "2023-10-28",
+      "season": 20,
+      "approximate": true
+    },
+    "1083": {
+      "date": "2023-11-06",
+      "season": 20,
+      "approximate": true
+    },
+    "1084": {
+      "date": "2023-11-14",
+      "season": 20,
+      "approximate": true
+    },
+    "1085": {
+      "date": "2023-11-22",
+      "season": 20,
+      "approximate": true
+    },
+    "1086": {
+      "date": "2023-11-30",
+      "season": 20,
+      "approximate": true
+    },
+    "1087": {
+      "date": "2023-12-09",
+      "season": 20,
+      "approximate": true
+    },
+    "1088": {
+      "date": "2023-12-17",
+      "season": 20,
+      "approximate": false
+    },
+    "1089": {
+      "date": "2024-01-07",
+      "season": 21,
+      "approximate": false
+    },
+    "1090": {
+      "date": "2024-01-18",
+      "season": 21,
+      "approximate": true
+    },
+    "1091": {
+      "date": "2024-01-29",
+      "season": 21,
+      "approximate": true
+    },
+    "1092": {
+      "date": "2024-02-09",
+      "season": 21,
+      "approximate": true
+    },
+    "1093": {
+      "date": "2024-02-20",
+      "season": 21,
+      "approximate": true
+    },
+    "1094": {
+      "date": "2024-03-02",
+      "season": 21,
+      "approximate": true
+    },
+    "1095": {
+      "date": "2024-03-13",
+      "season": 21,
+      "approximate": true
+    },
+    "1096": {
+      "date": "2024-03-23",
+      "season": 21,
+      "approximate": true
+    },
+    "1097": {
+      "date": "2024-04-03",
+      "season": 21,
+      "approximate": true
+    },
+    "1098": {
+      "date": "2024-04-14",
+      "season": 21,
+      "approximate": true
+    },
+    "1099": {
+      "date": "2024-04-25",
+      "season": 21,
+      "approximate": true
+    },
+    "1100": {
+      "date": "2024-05-06",
+      "season": 21,
+      "approximate": true
+    },
+    "1101": {
+      "date": "2024-05-17",
+      "season": 21,
+      "approximate": true
+    },
+    "1102": {
+      "date": "2024-05-28",
+      "season": 21,
+      "approximate": true
+    },
+    "1103": {
+      "date": "2024-06-08",
+      "season": 21,
+      "approximate": true
+    },
+    "1104": {
+      "date": "2024-06-19",
+      "season": 21,
+      "approximate": true
+    },
+    "1105": {
+      "date": "2024-06-30",
+      "season": 21,
+      "approximate": true
+    },
+    "1106": {
+      "date": "2024-07-11",
+      "season": 21,
+      "approximate": true
+    },
+    "1107": {
+      "date": "2024-07-22",
+      "season": 21,
+      "approximate": true
+    },
+    "1108": {
+      "date": "2024-08-02",
+      "season": 21,
+      "approximate": true
+    },
+    "1109": {
+      "date": "2024-08-12",
+      "season": 21,
+      "approximate": true
+    },
+    "1110": {
+      "date": "2024-08-23",
+      "season": 21,
+      "approximate": true
+    },
+    "1111": {
+      "date": "2024-09-03",
+      "season": 21,
+      "approximate": true
+    },
+    "1112": {
+      "date": "2024-09-14",
+      "season": 21,
+      "approximate": true
+    },
+    "1113": {
+      "date": "2024-09-25",
+      "season": 21,
+      "approximate": true
+    },
+    "1114": {
+      "date": "2024-10-06",
+      "season": 21,
+      "approximate": true
+    },
+    "1115": {
+      "date": "2024-10-17",
+      "season": 21,
+      "approximate": true
+    },
+    "1116": {
+      "date": "2024-10-28",
+      "season": 21,
+      "approximate": true
+    },
+    "1117": {
+      "date": "2024-11-08",
+      "season": 21,
+      "approximate": true
+    },
+    "1118": {
+      "date": "2024-11-19",
+      "season": 21,
+      "approximate": true
+    },
+    "1119": {
+      "date": "2024-11-30",
+      "season": 21,
+      "approximate": true
+    },
+    "1120": {
+      "date": "2024-12-11",
+      "season": 21,
+      "approximate": true
+    },
+    "1121": {
+      "date": "2024-12-22",
+      "season": 21,
+      "approximate": true
+    },
+    "1122": {
+      "date": "2025-01-01",
+      "season": 21,
+      "approximate": true
+    },
+    "1123": {
+      "date": "2025-01-12",
+      "season": 21,
+      "approximate": true
+    },
+    "1124": {
+      "date": "2025-01-23",
+      "season": 21,
+      "approximate": true
+    },
+    "1125": {
+      "date": "2025-02-03",
+      "season": 21,
+      "approximate": true
+    },
+    "1126": {
+      "date": "2025-02-14",
+      "season": 21,
+      "approximate": true
+    },
+    "1127": {
+      "date": "2025-02-25",
+      "season": 21,
+      "approximate": true
+    },
+    "1128": {
+      "date": "2025-03-08",
+      "season": 21,
+      "approximate": true
+    },
+    "1129": {
+      "date": "2025-03-19",
+      "season": 21,
+      "approximate": true
+    },
+    "1130": {
+      "date": "2025-03-30",
+      "season": 21,
+      "approximate": true
+    },
+    "1131": {
+      "date": "2025-04-10",
+      "season": 21,
+      "approximate": true
+    },
+    "1132": {
+      "date": "2025-04-21",
+      "season": 21,
+      "approximate": true
+    },
+    "1133": {
+      "date": "2025-05-02",
+      "season": 21,
+      "approximate": true
+    },
+    "1134": {
+      "date": "2025-05-13",
+      "season": 21,
+      "approximate": true
+    },
+    "1135": {
+      "date": "2025-05-24",
+      "season": 21,
+      "approximate": true
+    },
+    "1136": {
+      "date": "2025-06-03",
+      "season": 21,
+      "approximate": true
+    },
+    "1137": {
+      "date": "2025-06-14",
+      "season": 21,
+      "approximate": true
+    },
+    "1138": {
+      "date": "2025-06-25",
+      "season": 21,
+      "approximate": true
+    },
+    "1139": {
+      "date": "2025-07-06",
+      "season": 21,
+      "approximate": true
+    },
+    "1140": {
+      "date": "2025-07-17",
+      "season": 21,
+      "approximate": true
+    },
+    "1141": {
+      "date": "2025-07-28",
+      "season": 21,
+      "approximate": true
+    },
+    "1142": {
+      "date": "2025-08-08",
+      "season": 21,
+      "approximate": true
+    },
+    "1143": {
+      "date": "2025-08-19",
+      "season": 21,
+      "approximate": true
+    },
+    "1144": {
+      "date": "2025-08-30",
+      "season": 21,
+      "approximate": true
+    },
+    "1145": {
+      "date": "2025-09-10",
+      "season": 21,
+      "approximate": true
+    },
+    "1146": {
+      "date": "2025-09-21",
+      "season": 21,
+      "approximate": true
+    },
+    "1147": {
+      "date": "2025-10-02",
+      "season": 21,
+      "approximate": true
+    },
+    "1148": {
+      "date": "2025-10-13",
+      "season": 21,
+      "approximate": true
+    },
+    "1149": {
+      "date": "2025-10-23",
+      "season": 21,
+      "approximate": true
+    },
+    "1150": {
+      "date": "2025-11-03",
+      "season": 21,
+      "approximate": true
+    },
+    "1151": {
+      "date": "2025-11-14",
+      "season": 21,
+      "approximate": true
+    },
+    "1152": {
+      "date": "2025-11-25",
+      "season": 21,
+      "approximate": true
+    },
+    "1153": {
+      "date": "2025-12-06",
+      "season": 21,
+      "approximate": true
+    },
+    "1154": {
+      "date": "2025-12-17",
+      "season": 21,
+      "approximate": true
+    },
+    "1155": {
+      "date": "2025-12-28",
+      "season": 21,
+      "approximate": false
+    },
+    "1156": {
+      "date": "2026-04-05",
+      "season": 22,
+      "approximate": false
+    },
+    "1157": {
+      "date": "2026-04-12",
+      "season": 22,
+      "approximate": true
+    },
+    "1158": {
+      "date": "2026-04-19",
+      "season": 22,
+      "approximate": true
+    },
+    "1159": {
+      "date": "2026-04-26",
+      "season": 22,
+      "approximate": false
+    }
+  }
+}

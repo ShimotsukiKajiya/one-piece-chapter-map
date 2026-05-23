@@ -1,0 +1,128 @@
+[
+  {
+    "from": "theory:0002",
+    "to": "ch:427",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0002",
+    "to": "ch:428",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0007",
+    "to": "ch:154",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0007",
+    "to": "ch:825",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0007",
+    "to": "ch:856",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0010",
+    "to": "ch:1054",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0014",
+    "to": "ch:1054",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0024",
+    "to": "ch:1069",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0025",
+    "to": "ch:1072",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0032",
+    "to": "ch:1085",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0041",
+    "to": "ch:1095",
+    "src": "inferred",
+    "stance": "supports"
+  },
+  {
+    "from": "theory:0044",
+    "to": "ch:1096",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0046",
+    "to": "ch:297",
+    "src": "inferred",
+    "stance": "supports"
+  },
+  {
+    "from": "theory:0051",
+    "to": "ch:1105",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0051",
+    "to": "ch:800",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0053",
+    "to": "ch:1107",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0061",
+    "to": "ch:1113",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0066",
+    "to": "ch:1121",
+    "src": "inferred",
+    "stance": "mentions"
+  },
+  {
+    "from": "theory:0073",
+    "to": "ch:1124",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0073",
+    "to": "ch:1126",
+    "src": "inferred",
+    "stance": "refutes"
+  },
+  {
+    "from": "theory:0079",
+    "to": "ch:1138",
+    "src": "inferred",
+    "stance": "mentions"
+  }
+]

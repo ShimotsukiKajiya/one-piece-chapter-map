@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <mask id="crescent-mask-o">
+      <rect width="200" height="200" fill="white"/>
+      <circle cx="100" cy="106" r="35" fill="black"/>
+    </mask>
+  </defs>
+
+  <circle cx="100" cy="100" r="100" fill="#0C0C14"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#FF6B1A" stroke-width="3"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#FF6B1A" stroke-width="0.75"/>
+
+  <path d="M 100,22 Q 85,72 88,138 L 112,138 Q 115,72 100,22 Z" fill="#FF6B1A"/>
+  <line x1="100" y1="22" x2="100" y2="138" stroke="#0C0C14" stroke-width="1.25" opacity="0.35"/>
+
+  <circle cx="100" cy="130" r="42" fill="#FF6B1A" mask="url(#crescent-mask-o)"/>
+</svg>

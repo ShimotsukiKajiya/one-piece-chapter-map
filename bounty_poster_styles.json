@@ -1,0 +1,37 @@
+{
+  "_doc": "Hand-curated overrides for canonical special-case bounty posters. Standard Marine 'WANTED — Dead or Alive' posters with the cream paper + Marine HQ stamp are the default; this file lists characters whose canon poster differs in design, language, or issuing body. Add via PR with chapter citation.",
+  "_verification_needed": [
+    "Cross Guild bounty design — the references currently in the codebase may be older sketch versions rather than the final canonical poster look. Re-check against the Egghead-onward chapters for proper Cross Guild aesthetic + which Marines have actually had Cross Guild bounties confirmed on-page. Update once verified.",
+    "Brook 'Soul King' poster — visual based on a stylised Whole Cake Island era reference. Confirm current canonical design after the Egghead/Elbaph chapters.",
+    "Sanji ONLY ALIVE — confirm whether his current bounty is still ONLY ALIVE post-Wano or if it reverted to standard 'Dead or Alive'.",
+    "Should the special-style flagging extend to other characters (e.g. Edward Newgate's giant battlefield bounty placard, Charlotte Linlin's Big Mom Pirates branding)?"
+  ],
+  "generated_on": "2026-04-27",
+  "_styles": {
+    "only-alive":  "Standard Marine paper, but says 'ONLY ALIVE' in red instead of 'Dead or Alive'. Used when a target is wanted unharmed (Sanji during the Whole Cake Island wedding setup).",
+    "soul-king":   "Brook's iconic post-timeskip poster — dark theatrical background with his skull illustration instead of a photo, 'THE SOUL KING' as the title, ornate borders.",
+    "cross-guild": "Cross Guild bounty (issued by Buggy/Mihawk/Crocodile) — black & red palette, 'BOUNTY' banner with crossed-bones logo. Posted on Marine targets after Wano."
+  },
+  "overrides": {
+    "Sanji":            { "style": "only-alive", "issuer": "marine",
+                          "note": "Wedding-period bounty issued by Big Mom's faction." },
+    "Vinsmoke Sanji":   { "style": "only-alive", "issuer": "marine" },
+    "Brook":            { "style": "soul-king",  "issuer": "marine",
+                          "title_override": "The Soul King",
+                          "note": "Post-timeskip Soul King fame poster, no photo — just his skull silhouette in top hat." },
+    "Sakazuki":         { "style": "cross-guild", "issuer": "cross-guild",
+                          "note": "Marines' Fleet Admiral, top Cross Guild target." },
+    "Borsalino":        { "style": "cross-guild", "issuer": "cross-guild" },
+    "Issho":            { "style": "cross-guild", "issuer": "cross-guild" },
+    "Aramaki":          { "style": "cross-guild", "issuer": "cross-guild" },
+    "Kuzan":            { "style": "cross-guild", "issuer": "cross-guild",
+                          "note": "Defected to Blackbeard but still on the Cross Guild slate as a former Admiral." },
+    "Sengoku":          { "style": "cross-guild", "issuer": "cross-guild" },
+    "Monkey D. Garp":   { "style": "cross-guild", "issuer": "cross-guild",
+                          "note": "Vice Admiral / Hero of the Marines — top Cross Guild target." },
+    "Smoker":           { "style": "cross-guild", "issuer": "cross-guild" },
+    "Tashigi":          { "style": "cross-guild", "issuer": "cross-guild" },
+    "Tsuru":            { "style": "cross-guild", "issuer": "cross-guild" },
+    "Coby":             { "style": "cross-guild", "issuer": "cross-guild" }
+  }
+}

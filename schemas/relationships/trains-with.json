@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/trains-with.json",
+  "title": "trains-with relationship",
+  "description": "character → character. Mentor / training relationships (e.g. Zoro trained with Mihawk during the timeskip).",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from":  {"$ref": "../_common.json#/$defs/character_id"},
+    "to":    {"$ref": "../_common.json#/$defs/character_id"},
+    "src":   {"$ref": "../_common.json#/$defs/src"},
+    "since": {"$ref": "../_common.json#/$defs/chapter_id"},
+    "until": {"oneOf": [{"$ref": "../_common.json#/$defs/chapter_id"}, {"type": "null"}]},
+    "note":  {"type": "string", "description": "Human-readable annotation with manga citation context"}
+  },
+  "additionalProperties": false
+}

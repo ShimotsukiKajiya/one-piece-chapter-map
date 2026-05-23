@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- The Shimotsuki Codex compass-rose mon. Replaces the older
+       crescent design which read awkwardly at small sizes.
+       Classic 8-point compass with cardinal arrows + diagonals,
+       gold + dark-warm palette, "N" pip at top. -->
+
+  <!-- Outer disc -->
+  <circle cx="100" cy="100" r="94" fill="#0c0a14" stroke="#d4a44a" stroke-width="6"/>
+
+  <!-- Inner decorative ring -->
+  <circle cx="100" cy="100" r="72" fill="none" stroke="#d4a44a" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- Faint star backdrop dots -->
+  <g fill="#d4a44a" opacity="0.35">
+    <circle cx="100" cy="22"  r="1.6"/>
+    <circle cx="100" cy="178" r="1.6"/>
+    <circle cx="22"  cy="100" r="1.6"/>
+    <circle cx="178" cy="100" r="1.6"/>
+    <circle cx="44"  cy="44"  r="1.2"/>
+    <circle cx="156" cy="44"  r="1.2"/>
+    <circle cx="44"  cy="156" r="1.2"/>
+    <circle cx="156" cy="156" r="1.2"/>
+  </g>
+
+  <!-- Cardinal arrows: long, alternating bright / half tones -->
+  <g stroke="#7a4515" stroke-width="0.8" stroke-linejoin="round">
+    <!-- North (bright gold) -->
+    <polygon points="100,16 106,100 100,104 94,100" fill="#f5c95e"/>
+    <!-- South -->
+    <polygon points="100,184 106,100 100,96 94,100" fill="#a87530"/>
+    <!-- East -->
+    <polygon points="184,100 100,106 96,100 100,94" fill="#a87530"/>
+    <!-- West -->
+    <polygon points="16,100 100,106 104,100 100,94" fill="#a87530"/>
+  </g>
+
+  <!-- Diagonal arrows: shorter, dark gold -->
+  <g fill="#7a4515" stroke="#3a2010" stroke-width="0.4" stroke-linejoin="round">
+    <polygon points="148,52  102,98  100,100 98,102"/> <!-- NE -->
+    <polygon points="148,148 102,102 100,100 98,98"/>  <!-- SE -->
+    <polygon points="52,148  98,102  100,100 102,98"/> <!-- SW -->
+    <polygon points="52,52   98,98   100,100 102,102"/><!-- NW -->
+  </g>
+
+  <!-- Center hub -->
+  <circle cx="100" cy="100" r="7" fill="#1a1610" stroke="#d4a44a" stroke-width="2"/>
+  <circle cx="100" cy="100" r="2.4" fill="#d4a44a"/>
+
+  <!-- "N" pip at the top, inside the inner ring -->
+  <text x="100" y="42" text-anchor="middle"
+        fill="#d4a44a" font-family="Georgia, 'Times New Roman', serif"
+        font-size="14" font-weight="bold" letter-spacing="1">N</text>
+</svg>

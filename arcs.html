@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcs · The Shimotsuki Codex</title>
+<meta name="description" content="Every One Piece story arc grouped by saga. Click any arc to filter the Chapter Atlas to its chapters.">
+<link rel="stylesheet" href="cite-styles.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg:#0c0a14; --surface:#1a1610; --surface2:#251f15;
+    --border:#4a3820; --text:#e8d8b0; --muted:#8a7548;
+    --gold:#d4a44a; --gold-bright:#f5c95e; --ink-blue:#6a9ec8;
+  }
+  body {
+    background: radial-gradient(circle at 25% 15%, rgba(212,164,74,0.05) 0%, transparent 50%), var(--bg);
+    color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; min-height:100vh;
+  }
+  body::before {
+    content:''; position:fixed; inset:0;
+    background-image: radial-gradient(rgba(255,255,255,0.012) 1px, transparent 1px);
+    background-size:14px 14px; pointer-events:none; z-index:0;
+  }
+  header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px; border-bottom:1px solid var(--border);
+    background:rgba(26,22,16,0.7); backdrop-filter:blur(6px);
+    position:sticky; top:0; z-index:50;
+  }
+  .logo { text-decoration:none; color:inherit; }
+  .logo h1 {
+    font-size:1.4rem; font-weight:900; letter-spacing:3px;
+    background:linear-gradient(180deg, var(--gold-bright), var(--gold));
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .logo-sub { font-size:0.7rem; color:var(--muted); letter-spacing:2px; text-transform:uppercase; }
+  nav { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+  nav a { color:var(--text); text-decoration:none; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase; padding:6px 10px; border-radius:6px; }
+  nav a:hover, nav a.active { color:var(--gold-bright); background:var(--surface2); }
+
+  main { max-width:1200px; margin:0 auto; padding:32px 24px 80px; position:relative; z-index:1; }
+  .page-title { font-size:2rem; letter-spacing:4px; text-transform:uppercase; color:var(--gold-bright); font-weight:900; margin-bottom:6px; }
+  .page-sub { color:var(--muted); font-size:0.9rem; margin-bottom:28px; max-width:700px; }
+
+  .saga {
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:14px; padding:18px 22px; margin-bottom:18px;
+  }
+  .saga-head {
+    display:flex; align-items:baseline; justify-content:space-between;
+    margin-bottom:14px; flex-wrap:wrap;
+  }
+  .saga-name { color:var(--gold-bright); font-size:1.4rem; font-weight:900; letter-spacing:2px; text-transform:uppercase; }
+  .saga-range { color:var(--muted); font-size:0.85rem; letter-spacing:1px; }
+
+  .arcs { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:10px; }
+  .arc {
+    background:var(--surface2); border:1px solid var(--border);
+    border-left:4px solid var(--gold);
+    border-radius:8px; padding:12px 14px;
+    text-decoration:none; color:inherit;
+    transition:transform .15s, border-color .15s;
+  }
+  .arc:hover { transform:translateY(-2px); }
+  .arc-name { font-weight:700; color:var(--text); margin-bottom:4px; }
+  .arc-meta { color:var(--muted); font-size:0.78rem; }
+
+  footer {
+    padding:30px 24px 50px; text-align:center;
+    font-size:0.75rem; color:var(--muted); letter-spacing:1px;
+    border-top:1px solid var(--border); max-width:1200px; margin:0 auto;
+  }
+</style>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/arcs.html">
+  <meta property="og:title" content="Arcs · The Shimotsuki Codex">
+  <meta property="og:description" content="Every One Piece story arc grouped by saga. Click any arc to filter the Chapter Atlas to its chapters.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/arcs.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Arcs · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Every One Piece story arc grouped by saga. Click any arc to filter the Chapter Atlas to its chapters.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Arcs</span></a>
+  
+</header>
+
+<main>
+<div class="page-hero">
+  <h2 class="page-title">Story Arcs</h2>
+  <p class="page-sub">The 1,181 chapters grouped by saga and arc, the way fans actually navigate canon. Click any arc to open the Atlas filtered to that range.</p>
+  <div class="gold-rule"></div>
+</div>
+
+  <div id="root">Loading…</div>
+</main>
+
+<footer>
+  Arc boundaries follow the community-consensus structure used on the Fandom wiki and r/OnePiece. &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+
+<script id="arcs-data" type="application/json">
+[
+  {
+    "saga": "East Blue",
+    "arc": "Romance Dawn",
+    "start": 1,
+    "end": 7,
+    "color": "#FF6B6B",
+    "id": "arc:romance-dawn",
+    "slug": "romance-dawn",
+    "saga_id": "saga:east-blue",
+    "type": "arc",
+    "name": "Romance Dawn",
+    "aliases": []
+  },
+  {
+    "saga": "East Blue",
+    "arc": "Orange Town",
+    "start": 8,
+    "end": 21,
+    "color": "#FF8C42",
+    "id": "arc:orange-town",
+    "slug": "orange-town",
+    "saga_id": "saga:east-blue",
+    "type": "arc",
+    "name": "Orange Town",
+    "aliases": []
+  },
+  {
+    "saga": "East Blue",
+    "arc": "Syrup Village",
+    "start": 22,
+    "end": 41,
+    "color": "#FFC93C",
+    "id": "arc:syrup-village",
+    "slug": "syrup-village",
+    "saga_id": "saga:east-blue",
+    "type": "arc",
+    "name": "Syrup Village",
+    "aliases": []
+  },
+  {
+    "saga": "East Blue",
+    "arc": "Baratie",
+    "start": 42,
+    "end": 68,
+    "color": "#FFD662",
+    "id": "arc:baratie",
+    "slug": "baratie",
+    "saga_id": "saga:east-blue",
+    "type": "arc",
+    "name": "Baratie",
+    "aliases": []
+  },
+  {
+    "saga": "East Blue",
+    "arc": "Arlong Park",
+    "start": 69,
+    "end": 95,
+    "color": "#9DD9D2",
+    "id": "arc:arlong-park",
+    "slug": "arlong-park",
+    "saga_id": "saga:east-blue",
+    "type": "arc",
+    "name": "Arlong Park",
+    "aliases": []
+  },
+  {
+    "saga": "East Blue",
+    "arc": "Loguetown",
+    "start": 96,
+    "end": 100,
+    "color": "#7CB35F",
+    "id": "arc:loguetown",
+    "slug": "loguetown",
+    "saga_id": "saga:east-blue",
+    "type": "arc",
+    "name": "Loguetown",
+    "aliases": []
+  },
+  {
+    "saga": "Alabasta",
+    "arc": "Reverse Mountain",
+    "start": 101,
+    "end": 105,
+    "color": "#5FB35F",
+    "id": "arc:reverse-mountain",
+    "slug": "reverse-mountain",
+    "saga_id": "saga:alabasta",
+    "type": "arc",
+    "name": "Reverse Mountain",
+    "aliases": []
+  },
+  {
+    "saga": "Alabasta",
+    "arc": "Whiskey Peak",
+    "start": 106,
+    "end": 114,
+    "color": "#5FA5B3",
+    "id": "arc:whiskey-peak",
+    "slug": "whiskey-peak",
+    "saga_id": "saga:alabasta",
+    "type": "arc",
+    "name": "Whiskey Peak",
+    "aliases": []
+  },
+  {
+    "saga": "Alabasta",
+    "arc": "Little Garden",
+    "start": 115,
+    "end": 129,
+    "color": "#5F87B3",
+    "id": "arc:little-garden",
+    "slug": "little-garden",
+    "saga_id": "saga:alabasta",
+    "type": "arc",
+    "name": "Little Garden",
+    "aliases": []
+  },
+  {
+    "saga": "Alabasta",
+    "arc": "Drum Island",
+    "start": 130,
+    "end": 154,
+    "color": "#6A9ec8",
+    "id": "arc:drum-island",
+    "slug": "drum-island",
+    "saga_id": "saga:alabasta",
+    "type": "arc",
+    "name": "Drum Island",
+    "aliases": []
+  },
+  {
+    "saga": "Alabasta",
+    "arc": "Alabasta",
+    "start": 155,
+    "end": 217,
+    "color": "#D4A44A",
+    "id": "arc:alabasta",
+    "slug": "alabasta",
+    "saga_id": "saga:alabasta",
+    "type": "arc",
+    "name": "Alabasta",
+    "aliases": []
+  },
+  {
+    "saga": "Sky Island",
+    "arc": "Jaya",
+    "start": 218,
+    "end": 236,
+    "color": "#88AADD",
+    "id": "arc:jaya",
+    "slug": "jaya",
+    "saga_id": "saga:sky-island",
+    "type": "arc",
+    "name": "Jaya",
+    "aliases": []
+  },
+  {
+    "saga": "Sky Island",
+    "arc": "Skypiea",
+    "start": 237,
+    "end": 302,
+    "color": "#A0CCEE",
+    "id": "arc:skypiea",
+    "slug": "skypiea",
+    "saga_id": "saga:sky-island",
+    "type": "arc",
+    "name": "Skypiea",
+    "aliases": []
+  },
+  {
+    "saga": "Water 7",
+    "arc": "Long Ring Long Land",
+    "start": 303,
+    "end": 321,
+    "color": "#C8649C",
+    "id": "arc:long-ring-long-land",
+    "slug": "long-ring-long-land",
+    "saga_id": "saga:water-7",
+    "type": "arc",
+    "name": "Long Ring Long Land",
+    "aliases": []
+  },
+  {
+    "saga": "Water 7",
+    "arc": "Water 7",
+    "start": 322,
+    "end": 374,
+    "color": "#5588FF",
+    "id": "arc:water-7",
+    "slug": "water-7",
+    "saga_id": "saga:water-7",
+    "type": "arc",
+    "name": "Water 7",
+    "aliases": []
+  },
+  {
+    "saga": "Water 7",
+    "arc": "Enies Lobby",
+    "start": 375,
+    "end": 430,
+    "color": "#FF4455",
+    "id": "arc:enies-lobby",
+    "slug": "enies-lobby",
+    "saga_id": "saga:water-7",
+    "type": "arc",
+    "name": "Enies Lobby",
+    "aliases": []
+  },
+  {
+    "saga": "Water 7",
+    "arc": "Post-Enies Lobby",
+    "start": 431,
+    "end": 441,
+    "color": "#FFA07A",
+    "id": "arc:post-enies-lobby",
+    "slug": "post-enies-lobby",
+    "saga_id": "saga:water-7",
+    "type": "arc",
+    "name": "Post-Enies Lobby",
+    "aliases": []
+  },
+  {
+    "saga": "Thriller Bark",
+    "arc": "Thriller Bark",
+    "start": 442,
+    "end": 489,
+    "color": "#9C66B0",
+    "id": "arc:thriller-bark",
+    "slug": "thriller-bark",
+    "saga_id": "saga:thriller-bark",
+    "type": "arc",
+    "name": "Thriller Bark",
+    "aliases": []
+  },
+  {
+    "saga": "Summit War",
+    "arc": "Sabaody Archipelago",
+    "start": 490,
+    "end": 513,
+    "color": "#FFB347",
+    "id": "arc:sabaody-archipelago",
+    "slug": "sabaody-archipelago",
+    "saga_id": "saga:summit-war",
+    "type": "arc",
+    "name": "Sabaody Archipelago",
+    "aliases": []
+  },
+  {
+    "saga": "Summit War",
+    "arc": "Amazon Lily",
+    "start": 514,
+    "end": 524,
+    "color": "#FF69B4",
+    "id": "arc:amazon-lily",
+    "slug": "amazon-lily",
+    "saga_id": "saga:summit-war",
+    "type": "arc",
+    "name": "Amazon Lily",
+    "aliases": []
+  },
+  {
+    "saga": "Summit War",
+    "arc": "Impel Down",
+    "start": 525,
+    "end": 549,
+    "color": "#777777",
+    "id": "arc:impel-down",
+    "slug": "impel-down",
+    "saga_id": "saga:summit-war",
+    "type": "arc",
+    "name": "Impel Down",
+    "aliases": []
+  },
+  {
+    "saga": "Summit War",
+    "arc": "Marineford",
+    "start": 550,
+    "end": 580,
+    "color": "#E85C3C",
+    "id": "arc:marineford",
+    "slug": "marineford",
+    "saga_id": "saga:summit-war",
+    "type": "arc",
+    "name": "Marineford",
+    "aliases": []
+  },
+  {
+    "saga": "Summit War",
+    "arc": "Post-War",
+    "start": 581,
+    "end": 597,
+    "color": "#B8B8B8",
+    "id": "arc:post-war",
+    "slug": "post-war",
+    "saga_id": "saga:summit-war",
+    "type": "arc",
+    "name": "Post-War",
+    "aliases": []
+  },
+  {
+    "saga": "Fishman Island",
+    "arc": "Return to Sabaody",
+    "start": 598,
+    "end": 602,
+    "color": "#FFCC66",
+    "id": "arc:return-to-sabaody",
+    "slug": "return-to-sabaody",
+    "saga_id": "saga:fishman-island",
+    "type": "arc",
+    "name": "Return to Sabaody",
+    "aliases": []
+  },
+  {
+    "saga": "Fishman Island",
+    "arc": "Fishman Island",
+    "start": 603,
+    "end": 653,
+    "color": "#66CCFF",
+    "id": "arc:fishman-island",
+    "slug": "fishman-island",
+    "saga_id": "saga:fishman-island",
+    "type": "arc",
+    "name": "Fishman Island",
+    "aliases": []
+  },
+  {
+    "saga": "Dressrosa",
+    "arc": "Punk Hazard",
+    "start": 654,
+    "end": 699,
+    "color": "#FF7700",
+    "id": "arc:punk-hazard",
+    "slug": "punk-hazard",
+    "saga_id": "saga:dressrosa",
+    "type": "arc",
+    "name": "Punk Hazard",
+    "aliases": []
+  },
+  {
+    "saga": "Dressrosa",
+    "arc": "Dressrosa",
+    "start": 700,
+    "end": 801,
+    "color": "#FF3366",
+    "id": "arc:dressrosa",
+    "slug": "dressrosa",
+    "saga_id": "saga:dressrosa",
+    "type": "arc",
+    "name": "Dressrosa",
+    "aliases": []
+  },
+  {
+    "saga": "Yonko",
+    "arc": "Zou",
+    "start": 802,
+    "end": 824,
+    "color": "#9966CC",
+    "id": "arc:zou",
+    "slug": "zou",
+    "saga_id": "saga:yonko",
+    "type": "arc",
+    "name": "Zou",
+    "aliases": []
+  },
+  {
+    "saga": "Yonko",
+    "arc": "Whole Cake Island",
+    "start": 825,
+    "end": 902,
+    "color": "#FF99CC",
+    "id": "arc:whole-cake-island",
+    "slug": "whole-cake-island",
+    "saga_id": "saga:yonko",
+    "type": "arc",
+    "name": "Whole Cake Island",
+    "aliases": []
+  },
+  {
+    "saga": "Yonko",
+    "arc": "Reverie",
+    "start": 903,
+    "end": 908,
+    "color": "#CC9966",
+    "id": "arc:reverie",
+    "slug": "reverie",
+    "saga_id": "saga:yonko",
+    "type": "arc",
+    "name": "Reverie",
+    "aliases": []
+  },
+  {
+    "saga": "Yonko",
+    "arc": "Wano Country",
+    "start": 909,
+    "end": 1057,
+    "color": "#FF1A1A",
+    "id": "arc:wano-country",
+    "slug": "wano-country",
+    "saga_id": "saga:yonko",
+    "type": "arc",
+    "name": "Wano Country",
+    "aliases": []
+  },
+  {
+    "saga": "Final",
+    "arc": "Egghead",
+    "start": 1058,
+    "end": 1126,
+    "color": "#00CC88",
+    "id": "arc:egghead",
+    "slug": "egghead",
+    "saga_id": "saga:final",
+    "type": "arc",
+    "name": "Egghead",
+    "aliases": []
+  },
+  {
+    "saga": "Final",
+    "arc": "Elbaph",
+    "start": 1127,
+    "end": 9999,
+    "color": "#3366FF",
+    "id": "arc:elbaph",
+    "slug": "elbaph",
+    "saga_id": "saga:final",
+    "type": "arc",
+    "name": "Elbaph",
+    "aliases": []
+  }
+]
+
+</script>
+<script src="spoiler.js?v=1"></script>
+<script>
+const _arcCutoff = (typeof CodexSpoiler !== 'undefined') ? CodexSpoiler.effectiveCutoff('public') : Infinity;
+const ARCS = JSON.parse(document.getElementById("arcs-data").textContent || "[]").filter(a => {
+  const start = typeof a.start === 'number' ? a.start : null;
+  if (_arcCutoff !== Infinity && start == null) return false;
+  if (start != null && start > _arcCutoff) return false;
+  return true;
+});
+
+function escapeHTML(s) {
+  if (s == null) return "";
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+const bySaga = {};
+for (const a of ARCS) (bySaga[a.saga] = bySaga[a.saga] || []).push(a);
+
+const root = document.getElementById("root");
+root.innerHTML = Object.entries(bySaga).map(([saga, arcs]) => {
+  const start = Math.min(...arcs.map(a => a.start));
+  const end = Math.max(...arcs.map(a => a.end));
+  const endStr = end >= 9999 ? "ongoing" : end;
+  return `<div class="saga">
+    <div class="saga-head">
+      <span class="saga-name">${escapeHTML(saga)}</span>
+      <span class="saga-range">Chapters ${start}–${endStr}</span>
+    </div>
+    <div class="arcs">
+      ${arcs.map(a => {
+        const endA = a.end >= 9999 ? "ongoing" : a.end;
+        const url = `index.html?from=${a.start}&to=${a.end}`;
+        return `<a class="arc" href="${url}" style="border-left-color:${a.color}">
+          <div class="arc-name">${escapeHTML(a.arc)}</div>
+          <div class="arc-meta">Ch. ${a.start}–${endA}</div>
+        </a>`;
+      }).join("")}
+    </div>
+  </div>`;
+}).join("");
+</script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+</body>
+</html>

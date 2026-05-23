@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manga ↔ Anime · The Shimotsuki Codex</title>
+<meta name="description" content="Manga ↔ Anime cross-reference — every One Piece arc with its chapter range, episode range, and any filler interruptions.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="stylesheet" href="tags.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+
+  main{max-width:1200px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:22px;max-width:780px}
+
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;align-items:center}
+  .pill{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:7px 14px;border-radius:20px;cursor:pointer;font-size:.78rem;letter-spacing:1px;transition:all .15s}
+  .pill.active,.pill:hover{color:var(--gold);border-color:var(--gold)}
+  #search{flex:1;min-width:240px;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-family:inherit;font-size:.92rem}
+  #search:focus{outline:none;border-color:var(--gold)}
+
+  /* Lookup helpers */
+  .lookup{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:11px;padding:14px 18px}
+  .lookup label{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.78rem;letter-spacing:1px;text-transform:uppercase;font-weight:700}
+  .lookup input{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;width:90px;font-family:inherit;font-size:.92rem}
+  .lookup input:focus{outline:none;border-color:var(--gold)}
+  .lookup-result{font-size:.92rem;color:var(--gold-bright);margin-left:auto}
+  .lookup-result strong{color:var(--gold-bright)}
+  .lookup-result .miss{color:var(--muted);font-style:italic}
+
+  /* Table */
+  table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:11px;overflow:hidden}
+  th{background:var(--surface2);color:var(--gold-bright);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;padding:11px 14px;text-align:left;font-weight:800;border-bottom:1px solid var(--border)}
+  td{padding:11px 14px;border-bottom:1px solid var(--surface2);font-size:.9rem}
+  tr:last-child td{border-bottom:none}
+  tr.arc-row{cursor:pointer;transition:background .12s}
+  tr.arc-row:hover{background:rgba(212,164,74,.06)}
+  tr.arc-row.filler{opacity:.78}
+  tr.arc-row.filler td{color:var(--muted);font-style:italic}
+  tr.arc-row td.arc{font-weight:700;color:var(--gold-bright)}
+  tr.arc-row td.range{font-family:'Consolas',monospace;color:var(--text);white-space:nowrap}
+  tr.arc-row td.note{color:var(--muted);font-size:.82rem;font-style:italic}
+  tr.arc-row td.chev{width:1px;color:var(--muted);font-size:1.1rem;transition:transform .2s;line-height:1}
+  tr.arc-row.open td.chev{color:var(--gold-bright)}
+  tr.arc-row.open td.chev span{display:inline-block;transform:rotate(90deg)}
+  tr.detail-row{display:none;background:#100d08}
+  tr.detail-row.open{display:table-row}
+  tr.detail-row td{padding:0;border-bottom:1px solid var(--surface2)}
+  .ep-list{padding:10px 14px 14px 30px;background:#100d08}
+  .ep-list-head{font-size:.7rem;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;padding:6px 0 8px;border-bottom:1px solid var(--surface2);margin-bottom:8px;display:grid;grid-template-columns:60px 1fr 130px 80px;gap:10px}
+  .ep-row{display:grid;grid-template-columns:60px 1fr 130px 80px;gap:10px;padding:6px 0;font-size:.84rem;border-bottom:1px dashed transparent;align-items:baseline}
+  .ep-row:hover{background:rgba(212,164,74,.04)}
+  .ep-row .ep-num{font-family:'Consolas',monospace;color:var(--gold);font-weight:700}
+  .ep-row .ep-title{color:var(--text)}
+  .ep-row .ep-chap{font-family:'Consolas',monospace;color:var(--ink-blue);white-space:nowrap}
+  .ep-row .ep-chap.none{color:var(--muted);font-style:italic}
+  .ep-row .ep-tag{font-size:.65rem;letter-spacing:1.2px;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:10px;text-align:center;align-self:start}
+  .ep-tag.manga{background:rgba(212,164,74,.15);color:var(--gold-bright);border:1px solid rgba(212,164,74,.4)}
+  .ep-tag.mixed{background:rgba(106,158,200,.15);color:var(--ink-blue);border:1px solid rgba(106,158,200,.4)}
+  .ep-tag.filler{background:rgba(138,117,72,.15);color:var(--muted);border:1px solid rgba(138,117,72,.4)}
+  .ep-tag.anime{background:rgba(156,102,176,.18);color:#c7a3df;border:1px solid rgba(156,102,176,.4)}
+  .ep-loading{padding:14px;color:var(--muted);font-style:italic;font-size:.85rem;text-align:center}
+  @media(max-width:600px){
+    .ep-list{padding:8px 10px 12px 14px}
+    .ep-list-head{display:none}
+    .ep-row{grid-template-columns:42px 1fr;grid-template-rows:auto auto;gap:2px 8px;padding:8px 0;border-bottom:1px dashed var(--surface2)}
+    .ep-row .ep-num{grid-row:1 / 3;align-self:start;padding-top:2px}
+    .ep-row .ep-title{grid-column:2;font-size:.82rem;line-height:1.35}
+    .ep-row .ep-chap{grid-column:2;font-size:.75rem}
+    .ep-row .ep-tag{display:none}
+  }
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1200px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/episodes.html">
+  <meta property="og:title" content="Manga ↔ Anime · The Shimotsuki Codex">
+  <meta property="og:description" content="Manga ↔ Anime cross-reference — every One Piece arc with its chapter range, episode range, and any filler interruptions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/episodes.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Manga ↔ Anime · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Manga ↔ Anime cross-reference — every One Piece arc with its chapter range, episode range, and any filler interruptions.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Manga ↔ Anime</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">📺 Manga ↔ Anime Map</h2>
+  <p class="blurb">Cross-reference for every canon arc plus the named filler arcs that interrupt the adaptation. <strong>Click any arc</strong> to expand its full per-episode breakdown — every episode, the chapters it adapts, and a canon/filler/mixed tag. Use the lookups below to jump straight from a chapter to its episodes (or the other way round).</p>
+  <div class="gold-rule"></div>
+</div>
+
+  <div class="lookup">
+    <label>Chapter → Episode <input id="ch-input" type="number" min="1" max="1200" placeholder="e.g. 1"></label>
+    <label>Episode → Chapter <input id="ep-input" type="number" min="1" max="1200" placeholder="e.g. 1"></label>
+    <span class="lookup-result" id="lookup-result"></span>
+  </div>
+
+  <div class="controls">
+    <span class="pill active" data-filter="all">All</span>
+    <span class="pill" data-filter="canon">Canon arcs</span>
+    <span class="pill" data-filter="filler">Filler arcs</span>
+    <input id="search" type="search" placeholder="Search arc or saga…">
+  </div>
+
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:11px">
+  <table>
+    <thead>
+      <tr><th>Arc</th><th>Saga</th><th>Chapters</th><th>Episodes</th><th>Tag</th><th>Note</th><th></th></tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  </div>
+</main>
+<script id="episodes-data" type="application/json">
+{
+  "_doc": "Arc-level manga ↔ anime cross-reference. Each arc lists chapter range, episode range, and any filler episodes that interrupt the arc adaptation. For per-episode mapping, see the One Piece wiki — this codex stays at arc-level granularity for usability.",
+  "generated_on": "2026-04-27",
+  "arcs": [
+    { "name": "Romance Dawn",       "saga": "East Blue",       "ch_start": 1,    "ch_end": 7,    "ep_start": 1,    "ep_end": 3,    "tag": "canon" },
+    { "name": "Orange Town",        "saga": "East Blue",       "ch_start": 8,    "ch_end": 21,   "ep_start": 4,    "ep_end": 8,    "tag": "canon" },
+    { "name": "Syrup Village",      "saga": "East Blue",       "ch_start": 22,   "ch_end": 41,   "ep_start": 9,    "ep_end": 18,   "tag": "canon", "note": "Episode 18 includes brief filler (Goat Island)." },
+    { "name": "Baratie",            "saga": "East Blue",       "ch_start": 42,   "ch_end": 68,   "ep_start": 19,   "ep_end": 30,   "tag": "canon" },
+    { "name": "Arlong Park",        "saga": "East Blue",       "ch_start": 69,   "ch_end": 95,   "ep_start": 31,   "ep_end": 44,   "tag": "canon" },
+    { "name": "Loguetown",          "saga": "East Blue",       "ch_start": 96,   "ch_end": 100,  "ep_start": 45,   "ep_end": 53,   "tag": "canon", "note": "Eps 50-53 include filler (Buggy & Alvida)." },
+
+    { "name": "Warship Island",     "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 54,   "ep_end": 61,   "tag": "filler", "note": "Anime-only — Apis and the Lost Island." },
+    { "name": "Reverse Mountain",   "saga": "Alabasta",        "ch_start": 101,  "ch_end": 105,  "ep_start": 62,   "ep_end": 63,   "tag": "canon" },
+    { "name": "Whisky Peak",        "saga": "Alabasta",        "ch_start": 106,  "ch_end": 114,  "ep_start": 64,   "ep_end": 67,   "tag": "canon" },
+    { "name": "Diary of Koby-Meppo","saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 68,   "ep_end": 69,   "tag": "filler", "note": "SBS-canonised cover-story adaptation." },
+    { "name": "Little Garden",      "saga": "Alabasta",        "ch_start": 115,  "ch_end": 129,  "ep_start": 70,   "ep_end": 77,   "tag": "canon" },
+    { "name": "Drum Island",        "saga": "Alabasta",        "ch_start": 130,  "ch_end": 154,  "ep_start": 78,   "ep_end": 91,   "tag": "canon" },
+    { "name": "Alabasta",           "saga": "Alabasta",        "ch_start": 155,  "ch_end": 217,  "ep_start": 92,   "ep_end": 130,  "tag": "canon" },
+    { "name": "Post-Alabasta",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 131,  "ep_end": 135,  "tag": "filler" },
+    { "name": "Goat Island",        "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 136,  "ep_end": 138,  "tag": "filler" },
+    { "name": "Ruluka Island",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 139,  "ep_end": 143,  "tag": "filler" },
+
+    { "name": "Jaya",               "saga": "Sky Island",      "ch_start": 218,  "ch_end": 236,  "ep_start": 144,  "ep_end": 152,  "tag": "canon" },
+    { "name": "Skypiea",            "saga": "Sky Island",      "ch_start": 237,  "ch_end": 302,  "ep_start": 153,  "ep_end": 195,  "tag": "canon" },
+
+    { "name": "G-8",                "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 196,  "ep_end": 206,  "tag": "filler", "note": "Considered the best filler arc by fans." },
+
+    { "name": "Long Ring Long Land","saga": "Water 7",         "ch_start": 303,  "ch_end": 321,  "ep_start": 207,  "ep_end": 219,  "tag": "canon" },
+    { "name": "Ocean's Dream",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 220,  "ep_end": 224,  "tag": "filler" },
+    { "name": "Foxy's Return",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 225,  "ep_end": 226,  "tag": "filler" },
+    { "name": "Water 7",            "saga": "Water 7",         "ch_start": 322,  "ch_end": 374,  "ep_start": 227,  "ep_end": 263,  "tag": "canon" },
+    { "name": "Enies Lobby",        "saga": "Water 7",         "ch_start": 375,  "ch_end": 430,  "ep_start": 264,  "ep_end": 312,  "tag": "canon" },
+    { "name": "Post-Enies Lobby",   "saga": "Water 7",         "ch_start": 431,  "ch_end": 441,  "ep_start": 313,  "ep_end": 325,  "tag": "canon" },
+    { "name": "Ice Hunter",         "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 326,  "ep_end": 336,  "tag": "filler" },
+    { "name": "Thriller Bark",      "saga": "Thriller Bark",   "ch_start": 442,  "ch_end": 489,  "ep_start": 337,  "ep_end": 381,  "tag": "canon" },
+    { "name": "Spa Island",         "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 382,  "ep_end": 384,  "tag": "filler" },
+    { "name": "Sabaody Archipelago","saga": "Summit War",      "ch_start": 490,  "ch_end": 513,  "ep_start": 385,  "ep_end": 405,  "tag": "canon" },
+    { "name": "Amazon Lily",        "saga": "Summit War",      "ch_start": 514,  "ch_end": 524,  "ep_start": 406,  "ep_end": 421,  "tag": "canon" },
+    { "name": "Impel Down",         "saga": "Summit War",      "ch_start": 525,  "ch_end": 549,  "ep_start": 422,  "ep_end": 456,  "tag": "canon", "note": "Eps 426-429 include 'Little East Blue' filler." },
+    { "name": "Marineford",         "saga": "Summit War",      "ch_start": 550,  "ch_end": 580,  "ep_start": 457,  "ep_end": 489,  "tag": "canon" },
+    { "name": "Post-War",           "saga": "Summit War",      "ch_start": 581,  "ch_end": 597,  "ep_start": 490,  "ep_end": 516,  "tag": "canon" },
+
+    { "name": "Return to Sabaody",  "saga": "Fish-Man Island", "ch_start": 598,  "ch_end": 602,  "ep_start": 517,  "ep_end": 522,  "tag": "canon" },
+    { "name": "Fish-Man Island",    "saga": "Fish-Man Island", "ch_start": 603,  "ch_end": 653,  "ep_start": 523,  "ep_end": 574,  "tag": "canon" },
+    { "name": "Z's Ambition",       "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 575,  "ep_end": 578,  "tag": "filler", "note": "Lead-in to the Film: Z movie." },
+
+    { "name": "Punk Hazard",        "saga": "Dressrosa",       "ch_start": 654,  "ch_end": 699,  "ep_start": 579,  "ep_end": 625,  "tag": "canon" },
+    { "name": "Caesar Retrieval",   "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 626,  "ep_end": 628,  "tag": "filler" },
+    { "name": "Dressrosa",          "saga": "Dressrosa",       "ch_start": 700,  "ch_end": 801,  "ep_start": 629,  "ep_end": 746,  "tag": "canon" },
+    { "name": "Silver Mine",        "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 747,  "ep_end": 750,  "tag": "filler", "note": "Lead-in to Film: Gold." },
+
+    { "name": "Zou",                "saga": "Yonko",           "ch_start": 802,  "ch_end": 824,  "ep_start": 751,  "ep_end": 779,  "tag": "canon" },
+    { "name": "Marine Rookie",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 780,  "ep_end": 782,  "tag": "filler" },
+    { "name": "Whole Cake Island",  "saga": "Yonko",           "ch_start": 825,  "ch_end": 902,  "ep_start": 783,  "ep_end": 877,  "tag": "canon" },
+    { "name": "Levely (Reverie)",   "saga": "Yonko",           "ch_start": 903,  "ch_end": 908,  "ep_start": 878,  "ep_end": 889,  "tag": "canon" },
+    { "name": "Cidre Guild",        "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 895,  "ep_end": 896,  "tag": "filler", "note": "Lead-in to Film: Stampede." },
+    { "name": "Wano Country",       "saga": "Yonko",           "ch_start": 909,  "ch_end": 1057, "ep_start": 890,  "ep_end": 1085, "tag": "canon" },
+
+    { "name": "Egghead",            "saga": "Final Saga",      "ch_start": 1058, "ch_end": 1126, "ep_start": 1086, "ep_end": null, "tag": "canon", "note": "Anime adaptation in progress as of last refresh." },
+    { "name": "Elbaph",             "saga": "Final Saga",      "ch_start": 1127, "ch_end": null, "ep_start": null, "ep_end": null, "tag": "canon", "note": "Manga ongoing — anime not yet adapted." }
+  ]
+}
+</script>
+<script>
+const RAW = JSON.parse(document.getElementById('episodes-data').textContent || '{}');
+const arcs = RAW.arcs || [];
+function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let activeFilter='all', query='';
+let EP_MAP = null; // loaded async
+
+function fmtRange(a,b){
+  if(a==null && b==null) return '—';
+  if(b==null) return `${a}+`;
+  if(a===b) return `${a}`;
+  return `${a} – ${b}`;
+}
+function fmtChapters(arr){
+  if(!arr || !arr.length) return '<span class="ep-chap none">— filler —</span>';
+  if(arr.length===1) return `Ch. ${arr[0]}`;
+  // collapse consecutive runs
+  const sorted=[...arr].sort((a,b)=>a-b);
+  const runs=[]; let s=sorted[0], p=sorted[0];
+  for(let i=1;i<sorted.length;i++){
+    if(sorted[i]===p+1){p=sorted[i];}
+    else{runs.push(s===p?`${s}`:`${s}–${p}`); s=p=sorted[i];}
+  }
+  runs.push(s===p?`${s}`:`${s}–${p}`);
+  return `Ch. ${runs.join(', ')}`;
+}
+function render(){
+  let list = arcs;
+  if(activeFilter==='canon')  list = list.filter(a => a.tag==='canon');
+  if(activeFilter==='filler') list = list.filter(a => a.tag==='filler');
+  if(query){
+    const q=query.toLowerCase();
+    list = list.filter(a => a.name.toLowerCase().includes(q) || (a.saga||'').toLowerCase().includes(q));
+  }
+  document.getElementById('tbody').innerHTML = list.map((a,i)=>`
+    <tr class="arc-row ${a.tag==='filler'?'filler':''}" data-arc-idx="${arcs.indexOf(a)}">
+      <td class="arc">${escapeHtml(a.name)}</td>
+      <td>${escapeHtml(a.saga||'')}</td>
+      <td class="range">${a.tag==='filler'?'—':`Ch. ${fmtRange(a.ch_start, a.ch_end)}`}</td>
+      <td class="range">Ep. ${fmtRange(a.ep_start, a.ep_end)}</td>
+      <td><span class="codex-tag ${escapeHtml(a.tag)}">${escapeHtml(a.tag.toUpperCase())}</span></td>
+      <td class="note">${escapeHtml(a.note||'')}</td>
+      <td class="chev"><span>›</span></td>
+    </tr>
+    <tr class="detail-row" data-detail-for="${arcs.indexOf(a)}"><td colspan="7"></td></tr>
+  `).join('');
+}
+
+function buildEpisodeList(arc){
+  if(!EP_MAP) return '<div class="ep-loading">Loading per-episode data…</div>';
+  const start = arc.ep_start, end = arc.ep_end || EP_MAP.max_episode;
+  if(start==null) return '<div class="ep-loading">No episode range for this entry.</div>';
+  const eps = EP_MAP.episodes.filter(e => e.ep>=start && e.ep<=end);
+  if(!eps.length) return '<div class="ep-loading">No episodes found in this range yet.</div>';
+  return `
+    <div class="ep-list">
+      <div class="ep-list-head">
+        <div>EP</div><div>TITLE</div><div>CHAPTERS</div><div class="col-tag">TAG</div>
+      </div>
+      ${eps.map(e=>`
+        <div class="ep-row">
+          <div class="ep-num">${e.ep}</div>
+          <div class="ep-title">${escapeHtml(e.title)}</div>
+          <div class="ep-chap ${e.chapters.length?'':'none'}">${e.chapters.length?fmtChapters(e.chapters):'— anime-only —'}</div>
+          <div class="ep-tag ${e.tag}">${e.tag}</div>
+        </div>
+      `).join('')}
+    </div>`;
+}
+
+document.getElementById('tbody').addEventListener('click', evt=>{
+  const row = evt.target.closest('tr.arc-row');
+  if(!row) return;
+  const idx = row.dataset.arcIdx;
+  const detail = document.querySelector(`tr.detail-row[data-detail-for="${idx}"]`);
+  if(!detail) return;
+  const isOpen = row.classList.toggle('open');
+  detail.classList.toggle('open', isOpen);
+  if(isOpen){
+    detail.querySelector('td').innerHTML = buildEpisodeList(arcs[idx]);
+  }
+});
+
+document.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{
+  document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  activeFilter=p.dataset.filter;
+  render();
+}));
+document.getElementById('search').addEventListener('input',e=>{query=e.target.value.trim();render();});
+
+// Precision lookup using EP_MAP (falls back to arc range if map not loaded yet)
+function lookupChapterArc(ch){
+  for(const a of arcs){
+    if(a.ch_start==null) continue;
+    const end = a.ch_end || 99999;
+    if(ch >= a.ch_start && ch <= end) return a;
+  }
+  return null;
+}
+function lookupEpisodeArc(ep){
+  for(const a of arcs){
+    if(a.ep_start==null) continue;
+    const end = a.ep_end || 99999;
+    if(ep >= a.ep_start && ep <= end) return a;
+  }
+  return null;
+}
+function showLookup(html){ document.getElementById('lookup-result').innerHTML = html; }
+
+document.getElementById('ch-input').addEventListener('input',e=>{
+  const ch = parseInt(e.target.value);
+  if(isNaN(ch)){showLookup('');return;}
+  if(EP_MAP && EP_MAP.chapter_to_episodes[String(ch)]){
+    const eps = EP_MAP.chapter_to_episodes[String(ch)];
+    const a = lookupChapterArc(ch);
+    const arcLabel = a ? ` · <em>${escapeHtml(a.name)}</em>` : '';
+    return showLookup(`Ch. ${ch} → <strong>Ep. ${eps.join(', ')}</strong>${arcLabel}`);
+  }
+  const a = lookupChapterArc(ch);
+  if(!a) return showLookup(`<span class="miss">Chapter ${ch} not found</span>`);
+  showLookup(`Ch. ${ch} → <strong>${escapeHtml(a.name)}</strong> · Ep. ${fmtRange(a.ep_start, a.ep_end)}`);
+});
+document.getElementById('ep-input').addEventListener('input',e=>{
+  const ep = parseInt(e.target.value);
+  if(isNaN(ep)){showLookup('');return;}
+  if(EP_MAP){
+    const e2 = EP_MAP.episodes.find(x=>x.ep===ep);
+    if(e2){
+      const a = lookupEpisodeArc(ep);
+      const arcLabel = a ? ` · <em>${escapeHtml(a.name)}</em>` : '';
+      const tagPill = `<span class="ep-tag ${e2.tag}" style="font-size:.6rem;padding:1px 6px;border-radius:8px;margin-left:4px">${e2.tag}</span>`;
+      if(!e2.chapters.length){
+        return showLookup(`Ep. ${ep} → <strong>${escapeHtml(e2.title)}</strong>${tagPill}${arcLabel}`);
+      }
+      return showLookup(`Ep. ${ep} → <strong>${fmtChapters(e2.chapters)}</strong>${tagPill}${arcLabel}`);
+    }
+  }
+  const a = lookupEpisodeArc(ep);
+  if(!a) return showLookup(`<span class="miss">Episode ${ep} not found</span>`);
+  if(a.tag==='filler')
+    return showLookup(`Ep. ${ep} → <strong>${escapeHtml(a.name)}</strong> · <span class="codex-tag filler">FILLER</span> (no manga equivalent)`);
+  showLookup(`Ep. ${ep} → <strong>${escapeHtml(a.name)}</strong> · Ch. ${fmtRange(a.ch_start, a.ch_end)}`);
+});
+
+render();
+
+// Async-load the per-episode map; the page is fully usable before it lands.
+fetch('episode_map.json').then(r=>r.ok?r.json():null).then(d=>{
+  if(d){
+    EP_MAP = d;
+    // re-render any open detail rows
+    document.querySelectorAll('tr.detail-row.open').forEach(dr=>{
+      const idx = dr.dataset.detailFor;
+      dr.querySelector('td').innerHTML = buildEpisodeList(arcs[idx]);
+    });
+  }
+}).catch(()=>{});
+</script>
+<footer>The Shimotsuki Codex · Manga ↔ Anime arc-level cross-reference &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="spoiler.js?v=1"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script>
+  // Soft gate: read effective cutoff so any future per-page filter logic can
+  // hook in. Currently a no-op that sets data-spoiler-cutoff on the root
+  // element. (L12 Batch 4 — wired the library; deeper gating TBD per-page.)
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

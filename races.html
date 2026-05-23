@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Races & Tribes · The Shimotsuki Codex</title>
+<meta name="description" content="Races and tribes in One Piece — Fishmen, Mink, Giants, Skypieans, Lunarians, Buccaneers, and every other race with notable members.">
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;--green:#7ac290;--red:#e07070;--violet:#b388ff}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  main{max-width:1100px;margin:0 auto;padding:32px 24px;position:relative;z-index:1}
+  h2.title{font-size:1.9rem;color:var(--gold-bright);letter-spacing:2px;margin-bottom:8px}
+  .blurb{color:var(--text);font-size:.95rem;line-height:1.7;margin-bottom:30px;max-width:780px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .pill{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:7px 14px;border-radius:20px;cursor:pointer;font-size:.78rem;letter-spacing:1px;transition:all .15s}
+  .pill.active,.pill:hover{color:var(--gold);border-color:var(--gold)}
+  .race{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;margin-bottom:14px;transition:transform .15s,border-color .15s}
+  .race:hover{transform:translateX(3px);border-left-color:var(--gold-bright)}
+  .race.near-extinct{border-left-color:var(--red)}
+  .race.engineered{border-left-color:var(--violet)}
+  .race.unknown{border-left-color:var(--muted);opacity:.85}
+  .race-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .race-name{font-size:1.2rem;font-weight:800;color:var(--gold-bright)}
+  .race-status{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:8px;font-weight:700;background:var(--surface2)}
+  .race-status.extant       {color:var(--green);    border:1px solid var(--green)}
+  .race-status.near-extinct {color:var(--red);      border:1px solid var(--red)}
+  .race-status.engineered   {color:var(--violet);   border:1px solid var(--violet)}
+  .race-status.unknown      {color:var(--muted);    border:1px solid var(--muted)}
+  .race-debut{color:var(--muted);font-size:.75rem;font-family:'Consolas',monospace;margin-left:auto}
+  .race-traits{color:var(--text);font-size:.92rem;line-height:1.6;margin:8px 0 12px}
+  .members{display:flex;flex-wrap:wrap;gap:5px}
+  .members-label{color:var(--muted);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;display:block;font-weight:700}
+  .member-chip{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:3px 9px;border-radius:12px;font-size:.78rem;text-decoration:none}
+  .member-chip:hover{border-color:var(--gold);color:var(--gold-bright)}
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/races.html">
+  <meta property="og:title" content="Races & Tribes · The Shimotsuki Codex">
+  <meta property="og:description" content="Races and tribes in One Piece — Fishmen, Mink, Giants, Skypieans, Lunarians, Buccaneers, and every other race with notable members.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/races.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Races & Tribes · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Races and tribes in One Piece — Fishmen, Mink, Giants, Skypieans, Lunarians, Buccaneers, and every other race with notable members.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Races & Tribes</span></a>
+</header>
+<main>
+<div class="page-hero">
+  <h2 class="title">🦊 Races &amp; Tribes</h2>
+  <p class="blurb">The peoples of the One Piece world — from the dominant Humans and Fishmen to the near-extinct Lunarians and Buccaneers, and the mythologised Dosundada barely glimpsed in canon. Every named race with traits, status, and notable members.</p>
+  <div class="gold-rule"></div>
+</div>
+  <div class="filters">
+    <span class="pill active" data-filter="all">All</span>
+    <span class="pill" data-filter="extant">Extant</span>
+    <span class="pill" data-filter="near-extinct">Near-Extinct</span>
+    <span class="pill" data-filter="engineered">Engineered</span>
+    <span class="pill" data-filter="unknown">Unknown</span>
+  </div>
+  <div id="races"></div>
+</main>
+<script id="races-data" type="application/json">
+{
+  "_doc": "Hand-curated list of canon races and tribes. Includes major civilisations (Humans, Fishmen, Giants), subspecies (Long-Arms, Long-Legs, Snakeneck), the legendary (Lunarians, Buccaneers), and mentioned-but-unseen (Dosundada). Each entry: name, traits, notable members, status, debut.",
+  "generated_on": "2026-04-27",
+  "races": [
+    { "name": "Humans",        "status": "extant", "debut": "Ch. 1",   "traits": "The default sentient species — most of the world's population.", "members": ["Most of the named cast"] },
+    { "name": "Fishmen",       "status": "extant", "debut": "Ch. 69",  "traits": "Aquatic humanoids — superhuman strength on land, ten times stronger underwater. Sub-types: shark, octopus, ray, eel, etc.", "members": ["Jinbe (whale shark)","Arlong (saw shark)","Hody Jones (great white)","Hammond (eel)","Aladine (whale shark)","Hatchan (octopus)"] },
+    { "name": "Merfolk",       "status": "extant", "debut": "Ch. 65",  "traits": "Half-human, half-fish — single tail (mermaids) splits into two legs at age 30.", "members": ["Shirahoshi","Camie","Otohime","Mero (Three-Tail)"] },
+    { "name": "Giants",        "status": "extant", "debut": "Ch. 116", "traits": "From Elbaph — average height ~12 metres. Lifespan 300+ years. Renowned warriors with strict honour code.", "members": ["Dorry","Brogy","Hajrudin","Kashii","Loki","Harald","Linlin's stepfather Stoussen"] },
+    { "name": "Dwarves",       "status": "extant", "debut": "Ch. 706", "traits": "Tontatta tribe of Green Bit / Dressrosa. Tiny but lift huge weights. Childlike and trusting.", "members": ["Mansherry","Leo","Inhel","Kabu","Bian","Wicca","Bobomba","Rampo","Daikon","Gancho"] },
+    { "name": "Mink Tribe",    "status": "extant", "debut": "Ch. 802", "traits": "Furred humanoids of Zou. Born with Electro. Transform into Sulong form under a full moon. Many sub-species: dog, cat, wolf, monkey, etc.", "members": ["Inuarashi","Nekomamushi","Carrot","Pedro","Wanda","Pekoms","Shishilian","Bepo"] },
+    { "name": "Skypieans",     "status": "extant", "debut": "Ch. 238", "traits": "Sky-dwellers with small wings on their backs. Live on cloud islands above the Blue Sea.", "members": ["Conis","Pagaya","Gan Fall","Mc Kinley"] },
+    { "name": "Shandians",     "status": "extant", "debut": "Ch. 246", "traits": "Sky tribe descended from the original inhabitants of the lost city of Shandora. Have small wings and use distinctive Burn-Bazooka tech.", "members": ["Wyper","Aisa","Laki","Kamakiri","Genbo"] },
+    { "name": "Birkans",       "status": "extant", "debut": "Ch. 253", "traits": "Sky tribe from Birka. Members include God Enel. Have small wings.", "members": ["Enel","Holy","Gedatsu","Satori","Shura"] },
+    { "name": "Long-Arm Tribe","status": "extant", "debut": "Ch. 313", "traits": "Two elbow joints per arm — extreme reach. Forms a competitive subculture with the Long-Leg tribe.", "members": ["Scratchmen Apoo","Tom","Ideo"] },
+    { "name": "Long-Leg Tribe","status": "extant", "debut": "Ch. 651", "traits": "Two knee joints per leg — extreme height and reach. Charlotte family is partly Long-Leg through Linlin's heritage.", "members": ["Blue Gilly","Tamago","Charlotte Brulee (partial)","Pomson"] },
+    { "name": "Snakeneck Tribe","status": "extant","debut": "Ch. 700","traits": "Long-necked humanoids of Dressrosa-region origin.", "members": ["Viola","Gyro","Hyena Three"] },
+    { "name": "Three-Eyed Tribe","status":"extant","debut":"Ch. 86","traits": "Possess a true third eye. Said to be able to read All-Blue / Poneglyph script when fully awakened. Extremely rare.", "members": ["Nico Olvia (mother of Robin)","Pudding (latent)","Tot Musica narrator","Goldenweek (?)"] },
+    { "name": "Lunarians",     "status": "near-extinct", "debut": "Ch. 1035", "traits": "Wing-bearing race of fire-warriors. Inborn flame on the back, fire-breath, and an integument harder than steel. Once worshipped as gods. Hunted near to extinction by the World Government.", "members": ["King (last known full-blood)","Seraphim (artificial Lunarian-templated bodies)"] },
+    { "name": "Buccaneers",    "status": "near-extinct", "debut": "Ch. 1102", "traits": "Race of giants known as the strongest of their kind. Said to have tremendous physical strength and innate connection to Joy Boy.", "members": ["Bartholomew Kuma","Ginny (Kuma's wife)","Bonney (half-Buccaneer)","Stoussen (mentioned)"] },
+    { "name": "Cyborgs",       "status": "engineered","debut":"Ch. 322","traits": "Humans modified by science (originally Vegapunk's research). Pacifista, Seraphim, and individual modifications like Franky.", "members": ["Franky","Bartholomew Kuma (modified)","Pacifista series","Vegapunk Stella"] },
+    { "name": "Klabautermann", "status": "rare-extant","debut":"Ch. 351","traits": "Spirit of a well-loved ship. Visible only to those with deep nautical sense. The Going Merry's Klabautermann was the last to appear on-page.", "members": ["Going Merry's Klabautermann (deceased with the ship)"] },
+    { "name": "Tenryubito (Celestial Dragons)","status":"extant","debut":"Ch. 233","traits":"Genetically pure 'Holy' descendants of the founding 19 kings of the World Government. Wear Tenryubito helmets to keep the 'commoner air' out. Above the law.","members":["Saint Charloss","Saint Shalulia","Saint Mjosgard","Donquixote Doflamingo (former)","Donquixote Homing (former)"] },
+    { "name": "Dosundada (Mentioned)","status":"unknown","debut":"Ch. 1106","traits":"Race mentioned by Saint Saturn during the Egghead arc — referenced as one of the ancient peoples. Almost no canon detail yet; theorised to be precursors of giants.","members":["No on-page members yet — name only"] },
+    { "name": "Numbers",       "status": "engineered","debut":"Ch. 991","traits": "Failed ancient-giant clones produced by Vegapunk via the Mother Flame, sold to Kaidou. Intelligence varies; physical strength is monstrous.","members":["Hatcha","Inbi","Nangi","Fuga","Goki","Jaki","Kunyun","Juki","Zanki"] },
+    { "name": "Homies",        "status": "extant","debut":"Ch. 833","traits": "Inanimate objects given a fragment of soul by Charlotte Linlin's Soru Soru no Mi. Range from clouds to weapons to entire islands.","members":["Zeus (homie cloud, now Nami's)","Prometheus","Napoleon","Hera","Mont-d'Or's books"] }
+  ]
+}
+</script>
+<script>
+const RAW = JSON.parse(document.getElementById('races-data').textContent || '{}');
+const items = RAW.races || [];
+function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let activeFilter = 'all';
+function render(){
+  const list = activeFilter==='all' ? items : items.filter(i => (i.status||'').includes(activeFilter));
+  document.getElementById('races').innerHTML = list.map(i=>{
+    const statusKey = (i.status||'extant').replace(/[^a-z\-]/g,'');
+    return `<article class="race ${statusKey}">
+      <div class="race-head">
+        <span class="race-name">${escapeHtml(i.name)}</span>
+        <span class="race-status ${statusKey}">${escapeHtml(i.status||'extant')}</span>
+        ${i.debut?`<span class="race-debut">debut ${escapeHtml(i.debut)}</span>`:''}
+      </div>
+      <p class="race-traits">${escapeHtml(i.traits||'')}</p>
+      ${(i.members||[]).length?`<span class="members-label">Notable members</span><div class="members">${i.members.map(u=>`<a class="member-chip" href="character.html?name=${encodeURIComponent(u)}">${escapeHtml(u)}</a>`).join('')}</div>`:''}
+    </article>`;
+  }).join('');
+}
+document.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{
+  document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  activeFilter = p.dataset.filter;
+  render();
+}));
+render();
+</script>
+<footer>The Shimotsuki Codex · Races & tribes curated from canon &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+<script id="chr-id-map" type="application/json">
+{"Mansherry":"chr:02411","Wanda":"chr:03022","Kashii":"chr:02276","Bepo":"chr:01650","Inbi":"chr:02182","Pagaya":"chr:02618","Nangi":"chr:02551","Bartholomew Kuma":"chr:01627","Camie":"chr:01727","Inuarashi":"chr:02185","Viola":"chr:03013","Conis":"chr:01866","Aisa":"chr:01563","Holy":"chr:02152","Fuga":"chr:01992","Goki":"chr:02060","Napoleon":"chr:02552","Ideo":"chr:02175","Gancho":"chr:02015","Nekomamushi":"chr:02563","Tamago":"chr:02903","Wyper":"chr:03040","Juki":"chr:02243","Kunyun":"chr:02340","Pedro":"chr:02634","Bian":"chr:01651","Shirahoshi":"chr:02829","Dorry":"chr:01935","Inhel":"chr:02183","Daikon":"chr:01888","Rampo":"chr:02694","Hera":"chr:02121","Bobomba":"chr:01685","Prometheus":"chr:02672","Scratchmen Apoo":"chr:02785","Harald":"chr:02106","Shishilian":"chr:02831","Genbo":"chr:02029","Enel":"chr:01960","Hatcha":"chr:02112","Tom":"chr:02932","Numbers":"chr:02592","Satori":"chr:02776","Hajrudin":"chr:02088","Gedatsu":"chr:02027","Zanki":"chr:03072","Wicca":"chr:03034","Gan Fall":"chr:02014","Loki":"chr:02380","Carrot":"chr:01739","Leo":"chr:02368","Brogy":"chr:01701","Jaki":"chr:02208","Franky":"chr:01991","Blue Gilly":"chr:01673","Shura":"chr:02834","Otohime":"chr:02614","Kamakiri":"chr:02262","Gyro":"chr:02084","Kabu":"chr:02248","Pekoms":"chr:02637"}
+</script>
+<script src="chr-link-upgrader.js?v=2"></script>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

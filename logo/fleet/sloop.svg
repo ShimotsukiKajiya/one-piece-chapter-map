@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 170" fill="none"
+     stroke="#0a0a14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- Hull — wobbly hand-drawn banana, slightly asymmetric -->
+  <path d="M 28 122
+           C 50 158, 90 162, 108 161
+           C 132 161, 168 156, 192 124"/>
+  <!-- Deck line (slight imperfection — doesn't quite touch the hull ends) -->
+  <path d="M 38 124 C 70 138, 130 142, 184 126" stroke-width="1.8" opacity="0.75"/>
+
+  <!-- Bow smile, slightly off-center to feel hand-drawn -->
+  <path d="M 33 122 Q 38 128, 44 121" stroke-width="1.5"/>
+
+  <!-- Porthole — a tiny imperfect circle (two arcs that don't quite close) -->
+  <path d="M 75 134 a 4 4 0 1 0 0.1 0" stroke-width="1.8"/>
+
+  <!-- Mast — slightly wonky vertical, not pixel-straight -->
+  <path d="M 107 130 Q 105 80, 106 32" stroke-width="2.6"/>
+
+  <!-- Mainsail — a hand-drawn billowing shape (looser curves, doesn't perfectly close) -->
+  <path d="M 108 52
+           C 142 60, 156 88, 152 118
+           C 138 124, 118 126, 109 124"
+        fill="#0a0a14" fill-opacity="0.06"/>
+
+  <!-- One sail-seam line for breath -->
+  <path d="M 118 60 C 132 82, 134 102, 124 120" stroke-width="1.2" opacity="0.55"/>
+
+  <!-- Small jib sail at front — looser triangle -->
+  <path d="M 106 70
+           C 88 90, 78 108, 102 122
+           Z"
+        fill="#0a0a14" fill-opacity="0.05"/>
+
+  <!-- Flag — wobbly black banner, tapered tail -->
+  <path d="M 106 26
+           C 118 22, 130 24, 138 25
+           C 132 32, 134 38, 138 44
+           C 128 43, 116 41, 106 42 Z"
+        fill="#0a0a14" stroke-width="1.4"/>
+
+  <!-- Skull — two dot eyes + curved smile (white) -->
+  <circle cx="116" cy="32" r="1.2" fill="#fff" stroke="none"/>
+  <circle cx="124" cy="32" r="1.2" fill="#fff" stroke="none"/>
+  <path d="M 115 37 Q 120 40, 125 37" stroke="#fff" stroke-width="1.1"/>
+
+  <!-- Tiny pennant streamer at very tip -->
+  <path d="M 107 25 L 106 14 Q 110 18, 113 17" stroke-width="1.8"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/mentions.json",
+  "title": "mentions relationship",
+  "description": "sbs / theory / canon-fact → entity. Powers 'where else is this mentioned?' sidebars. Hardest extraction (text mining).",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from": {
+      "description": "An sbs:, theory:, or canon-fact: ID.",
+      "type": "string",
+      "pattern": "^(sbs:vol\\d{3}-q\\d{4}|theory:\\d+|canon-fact:.+)$"
+    },
+    "to":      {"$ref": "../_common.json#/$defs/entity_id"},
+    "src":     {"$ref": "../_common.json#/$defs/src"},
+    "context": {"type": "string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/born-in.json",
+  "title": "born-in relationship",
+  "description": "character → location. Where the character was born or originates from.",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from":          {"$ref": "../_common.json#/$defs/character_id"},
+    "to":            {"$ref": "../_common.json#/$defs/location_id"},
+    "src":           {"$ref": "../_common.json#/$defs/src"},
+    "origin_raw":    {"type": "string", "description": "Original origin string from source data before resolution"},
+    "resolved_via":  {"type": "string", "enum": ["exact", "sub-location", "sea-region"], "description": "How the location was matched"},
+    "tier":          {"$ref": "../_common.json#/$defs/tier"},
+    "evidence":      {
+      "type": "array",
+      "items": {"$ref": "../_common.json#/$defs/evidence_ref"}
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mystery jolly roger placeholder. Original Codex art (CC BY-NC 4.0). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Hidden by Spoiler Guard">
+  <!-- Crossbones (behind skull) -->
+  <g stroke="#1a1610" stroke-width="7" stroke-linecap="round">
+    <line x1="22" y1="78" x2="78" y2="22"/>
+    <line x1="22" y1="22" x2="78" y2="78"/>
+  </g>
+  <!-- Bone tip knobs -->
+  <g fill="#1a1610">
+    <circle cx="20" cy="78" r="6"/>
+    <circle cx="80" cy="78" r="6"/>
+    <circle cx="20" cy="22" r="6"/>
+    <circle cx="80" cy="22" r="6"/>
+  </g>
+  <!-- Skull cranium + jaw -->
+  <path d="M 50 18 Q 26 18 24 38 Q 23 52 32 60 L 32 71 Q 38 75 44 73 L 44 68 L 56 68 L 56 73 Q 62 75 68 71 L 68 60 Q 77 52 76 38 Q 74 18 50 18 Z" fill="#1a1610"/>
+  <!-- Eye sockets (hollow) -->
+  <ellipse cx="40" cy="42" rx="7.5" ry="9.5" fill="#0a0808"/>
+  <ellipse cx="60" cy="42" rx="7.5" ry="9.5" fill="#0a0808"/>
+  <!-- "?" marks in eye sockets -->
+  <text x="40" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#e8d8b0">?</text>
+  <text x="60" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#e8d8b0">?</text>
+  <!-- Nose triangle (downward) -->
+  <path d="M 47 50 L 53 50 L 50 56 Z" fill="#0a0808"/>
+  <!-- Teeth slots -->
+  <g fill="#0a0808">
+    <rect x="42" y="68" width="2" height="5"/>
+    <rect x="48" y="68" width="2" height="5"/>
+    <rect x="54" y="68" width="2" height="5"/>
+  </g>
+</svg>

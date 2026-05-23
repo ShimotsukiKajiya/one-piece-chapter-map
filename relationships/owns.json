@@ -1,0 +1,318 @@
+[
+  {
+    "from": "chr:01940",
+    "to": "weap:00001",
+    "src": "wiki",
+    "current": true,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Dracule_Mihawk:Yoru",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02326",
+    "to": "weap:00002",
+    "src": "wiki",
+    "current": false,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Kouzuki_Oden:Ame_no_Habakiri",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02325",
+    "to": "weap:00002",
+    "src": "wiki",
+    "current": true,
+    "from_owner": "chr:02326",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Kouzuki_Momonosuke:Ame_no_Habakiri",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02326",
+    "to": "weap:00003",
+    "src": "wiki",
+    "current": false,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Kouzuki_Oden:Enma",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02729",
+    "to": "weap:00003",
+    "src": "wiki",
+    "current": true,
+    "from_owner": "chr:02326",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Roronoa_Zoro:Enma",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02729",
+    "to": "weap:00004",
+    "src": "wiki",
+    "current": true,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Roronoa_Zoro:Wado_Ichimonji",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02729",
+    "to": "weap:00005",
+    "src": "wiki",
+    "current": true,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Roronoa_Zoro:Sandai_Kitetsu",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02744",
+    "to": "weap:00006",
+    "src": "wiki",
+    "current": false,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02729",
+    "to": "weap:00006",
+    "src": "wiki",
+    "current": false,
+    "from_owner": "chr:02744",
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Roronoa_Zoro:Shusui",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:01950",
+    "to": "weap:00007",
+    "src": "wiki",
+    "current": true,
+    "tier": "canon",
+    "evidence": [
+      {
+        "canon_fact_id": "owns:Edward_Newgate:Murakumogiri",
+        "match_type": "exact"
+      }
+    ]
+  },
+  {
+    "from": "chr:02729",
+    "to": "weap:00008",
+    "src": "wiki",
+    "current": false,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02914",
+    "to": "weap:00009",
+    "src": "wiki",
+    "current": false,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01703",
+    "to": "weap:00012",
+    "src": "wiki",
+    "current": false,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01703",
+    "to": "weap:00013",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02857",
+    "to": "weap:00014",
+    "src": "wiki",
+    "current": false,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02985",
+    "to": "weap:00015",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02985",
+    "to": "weap:00016",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02985",
+    "to": "weap:00018",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02997",
+    "to": "weap:00022",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02548",
+    "to": "weap:00023",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02548",
+    "to": "weap:00024",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02764",
+    "to": "weap:00025",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02800",
+    "to": "weap:00026",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02800",
+    "to": "weap:00027",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02774",
+    "to": "weap:00028",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01629",
+    "to": "weap:00029",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02147",
+    "to": "item:00001",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02938",
+    "to": "item:00004",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02985",
+    "to": "item:00005",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01991",
+    "to": "item:00006",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02573",
+    "to": "item:00007",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01644",
+    "to": "item:00007",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01644",
+    "to": "item:00008",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:02985",
+    "to": "item:00008",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01790",
+    "to": "item:00019",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01793",
+    "to": "item:00020",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  },
+  {
+    "from": "chr:01703",
+    "to": "item:00021",
+    "src": "wiki",
+    "current": true,
+    "tier": "speculation"
+  }
+]

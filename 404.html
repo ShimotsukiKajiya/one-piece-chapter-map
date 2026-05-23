@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost at Sea · The Shimotsuki Codex</title>
+<meta name="description" content="This page wandered off the chart. Try the Codex home or the menu to get back on course.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<meta name="robots" content="noindex">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{
+    background:radial-gradient(circle at 50% 40%,rgba(106,158,200,0.08) 0%,transparent 60%),var(--bg);
+    color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;
+    min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+    overflow:hidden;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);
+    background-size:14px 14px;pointer-events:none;
+  }
+  /* Drifting waves at the bottom */
+  body::after{
+    content:'~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
+    position:fixed;bottom:24px;left:0;right:0;
+    text-align:center;color:rgba(106,158,200,0.25);
+    font-size:1.6rem;letter-spacing:8px;
+    animation: drift 12s linear infinite;
+    pointer-events:none;
+  }
+  @keyframes drift {
+    0%{transform:translateX(-30px)} 50%{transform:translateX(30px)} 100%{transform:translateX(-30px)}
+  }
+  .lost{
+    max-width:600px;text-align:center;position:relative;z-index:1;
+  }
+  .compass{
+    font-size:5rem;color:var(--gold);
+    animation: spin 6s ease-in-out infinite;
+    margin-bottom:24px;
+    filter: drop-shadow(0 0 20px rgba(212,164,74,.3));
+  }
+  @keyframes spin {
+    0%,100%{transform:rotate(-15deg)} 50%{transform:rotate(15deg)}
+  }
+  h1{
+    font-size:clamp(2rem,5vw,3rem);
+    font-weight:900;letter-spacing:4px;text-transform:uppercase;
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    margin-bottom:16px;
+  }
+  .num{font-size:6rem;color:var(--ink-blue);font-weight:900;letter-spacing:6px;line-height:1;margin-bottom:12px;opacity:.6;font-family:'Georgia',serif}
+  p{font-size:1.05rem;line-height:1.7;color:var(--text);margin-bottom:30px}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .btn{
+    background:linear-gradient(135deg,var(--surface),var(--surface2));
+    border:1px solid var(--border);border-left:3px solid var(--gold);
+    color:var(--text);padding:11px 22px;border-radius:10px;
+    text-decoration:none;letter-spacing:1.5px;font-size:.88rem;
+    transition:all .15s;
+  }
+  .btn:hover{border-color:var(--gold);color:var(--gold-bright);transform:translateY(-1px)}
+  .quote{margin-top:30px;color:var(--muted);font-style:italic;font-size:.85rem}
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/404.html">
+</head>
+<body>
+<div class="lost">
+  <div class="compass">🧭</div>
+  <div class="num">404</div>
+  <h1>Lost at Sea</h1>
+  <p>This island isn't on any chart we've found yet. The Log Pose can't lock onto it.<br>Maybe it's part of the Void Century? Or maybe just a typo.</p>
+  <div class="actions">
+    <a class="btn" href="home.html">⚓ Back to Home</a>
+    <a class="btn" href="atlas.html">🗺 Chapter Atlas</a>
+    <a class="btn" href="characters.html">👤 Punk Records</a>
+  </div>
+  <p class="quote">"The seas of the Grand Line are full of mysteries…"</p>
+</div>
+<footer style="padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted,#8a7548);letter-spacing:1px;border-top:1px solid var(--border,#4a3820);max-width:1100px;margin:60px auto 0">The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+</body>
+</html>

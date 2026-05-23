@@ -1,0 +1,123 @@
+/* tags.css — shared classification chips for canon / filler / movie /
+ * fan-theory / SBS / novel / special / non-canon. Drop into any page:
+ *
+ *   <link rel="stylesheet" href="tags.css">
+ *   <span class="codex-tag canon">CANON</span>
+ *   <span class="codex-tag filler">FILLER</span>
+ *   <span class="codex-tag movie">MOVIE</span>
+ *   <span class="codex-tag fan-theory">FAN THEORY</span>
+ *
+ * All tags share the same visual structure (small pill, bordered, uppercase),
+ * differing only by colour. Each colour is themed via the existing CSS
+ * variables so crew themes inherit correctly.
+ */
+
+.codex-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: 1px solid;
+  white-space: nowrap;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+/* ── Canon-tier classification ── */
+.codex-tag.canon {
+  color: #7ac290;
+  border-color: #7ac290;
+  background: rgba(122,194,144,0.10);
+}
+.codex-tag.likely {
+  color: #6a9ec8;
+  border-color: #6a9ec8;
+  background: rgba(106,158,200,0.10);
+}
+.codex-tag.speculation, .codex-tag.fan-theory {
+  color: #b388ff;
+  border-color: #b388ff;
+  background: rgba(179,136,255,0.10);
+}
+.codex-tag.rumour {
+  color: #ff8030;
+  border-color: #ff8030;
+  background: rgba(255,128,48,0.10);
+}
+.codex-tag.disproven, .codex-tag.non-canon {
+  color: #e07070;
+  border-color: #e07070;
+  background: rgba(224,112,112,0.10);
+}
+
+/* ── Media-source classification ── */
+.codex-tag.manga {
+  color: #f5c95e;
+  border-color: #f5c95e;
+  background: rgba(245,201,94,0.10);
+}
+.codex-tag.anime {
+  color: #80c0ff;
+  border-color: #80c0ff;
+  background: rgba(128,192,255,0.10);
+}
+.codex-tag.filler {
+  color: #8a7548;
+  border-color: #8a7548;
+  background: rgba(138,117,72,0.12);
+}
+.codex-tag.movie {
+  color: #c878e8;
+  border-color: #c878e8;
+  background: rgba(200,120,232,0.10);
+}
+.codex-tag.special {
+  color: #ff80a8;
+  border-color: #ff80a8;
+  background: rgba(255,128,168,0.10);
+}
+.codex-tag.sbs {
+  color: #f5c95e;
+  border-color: #f5c95e;
+  background: rgba(245,201,94,0.10);
+}
+.codex-tag.cover-story {
+  color: #d4a44a;
+  border-color: #d4a44a;
+  background: rgba(212,164,74,0.10);
+}
+.codex-tag.novel {
+  color: #c8a060;
+  border-color: #c8a060;
+  background: rgba(200,160,96,0.10);
+}
+.codex-tag.databook {
+  color: #a08060;
+  border-color: #a08060;
+  background: rgba(160,128,96,0.10);
+}
+.codex-tag.vivre-card {
+  color: #80b890;
+  border-color: #80b890;
+  background: rgba(128,184,144,0.10);
+}
+
+/* ── Status / state ── */
+.codex-tag.active        { color: #7ac290; border-color: #7ac290; background: rgba(122,194,144,0.10); }
+.codex-tag.deceased      { color: #8a7548; border-color: #8a7548; background: rgba(138,117,72,0.10); }
+.codex-tag.confirmed     { color: #7ac290; border-color: #7ac290; background: rgba(122,194,144,0.10); }
+.codex-tag.debunked      { color: #e07070; border-color: #e07070; background: rgba(224,112,112,0.10); }
+.codex-tag.partial       { color: #ff8030; border-color: #ff8030; background: rgba(255,128,48,0.10); }
+
+/* Optional small dot prefix for extra visual punch */
+.codex-tag.dot::before {
+  content: '●';
+  font-size: 0.5em;
+  margin-right: 1px;
+}

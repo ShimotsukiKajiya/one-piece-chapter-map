@@ -1,0 +1,16 @@
+{
+  "_doc": "Monotonic ID counter per entity type. Never decrement. Never reuse.",
+  "next": {
+    "chr": 3083,
+    "fruit": 313,
+    "crew": 717,
+    "loc": 297,
+    "ship": 46,
+    "weap": 30,
+    "item": 22,
+    "mat": 1,
+    "race": 1,
+    "tech": 1,
+    "va": 1124
+  }
+}

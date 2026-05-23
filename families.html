@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Families · The Shimotsuki Codex</title>
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<meta name="description" content="Canon bloodlines and adoptive bonds — One Piece family trees with portraits and collapsible branches.">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;
+  --border:#4a3820;--text:#e8d8b0;--muted:#8a7548;
+  --gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;
+  --line:#5a4530;--line-adopt:#4a3820;
+}
+body{
+  background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);
+  color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px
+}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+a{color:var(--ink-blue);text-decoration:none}
+a:hover{color:var(--gold-bright)}
+
+header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+.logo{text-decoration:none;color:inherit}
+.logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+
+main{max-width:1400px;margin:0 auto;padding:36px 24px;position:relative;z-index:1}
+
+.hero{text-align:center;margin-bottom:48px}
+.hero h2{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:5px;text-transform:uppercase;background:linear-gradient(180deg,var(--gold-bright) 0%,var(--gold) 60%,#a07020 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.hero .sub{color:var(--ink-blue);font-size:1rem;letter-spacing:3px;text-transform:uppercase;font-style:italic;margin-bottom:14px}
+.hero .blurb{font-size:.95rem;line-height:1.7;color:var(--text);max-width:680px;margin:0 auto}
+.gold-rule{width:200px;height:2px;margin:28px auto 0;background:linear-gradient(to right,transparent,var(--gold),transparent);position:relative}
+.gold-rule::before,.gold-rule::after{content:'✦';position:absolute;top:-10px;color:var(--gold);font-size:.85rem}
+.gold-rule::before{left:-2px}.gold-rule::after{right:-2px}
+
+/* ── family section ── */
+.family-section{margin-bottom:18px;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.family-summary{
+  display:flex;align-items:center;gap:14px;padding:16px 22px;
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  cursor:pointer;list-style:none;user-select:none;
+}
+.family-summary::-webkit-details-marker{display:none}
+.family-summary:hover{background:var(--surface2)}
+.family-icon{font-size:1.5rem;flex-shrink:0}
+.family-name{font-size:1.1rem;font-weight:800;color:var(--gold-bright);flex:1;letter-spacing:1px}
+.family-desc{color:var(--muted);font-size:.8rem;font-style:italic;margin-right:12px}
+.family-chevron{color:var(--muted);font-size:.85rem;transition:transform .25s;flex-shrink:0}
+details[open] > .family-summary .family-chevron{transform:rotate(180deg)}
+
+.tree-wrap{padding:36px 28px 28px;overflow-x:auto;background:var(--surface)}
+
+/* ── tree nodes & connectors ── */
+.tc{display:flex;flex-direction:column;align-items:center}
+
+/* stem going DOWN from a parent node to the horizontal bar */
+.stem{width:2px;height:28px;background:var(--line);flex-shrink:0}
+.stem.dashed{background:repeating-linear-gradient(to bottom,var(--line-adopt) 0,var(--line-adopt) 5px,transparent 5px,transparent 9px)}
+
+/* row of children */
+.children{display:flex;justify-content:center;position:relative}
+.cw{display:flex;flex-direction:column;align-items:center;flex:1;min-width:110px;position:relative}
+
+/* horizontal bar segments */
+.cw::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--line);
+}
+.cw:first-child::before{left:50%}
+.cw:last-child::before{right:50%}
+.cw:only-child::before{display:none}
+
+/* adopted: dashed bar */
+.cw.adopted::before{
+  background:repeating-linear-gradient(to right,var(--line-adopt) 0,var(--line-adopt) 6px,transparent 6px,transparent 11px);
+}
+
+/* stem from horizontal bar down to node */
+.cw-stem{width:2px;height:28px;background:var(--line);flex-shrink:0}
+.cw.adopted .cw-stem{background:repeating-linear-gradient(to bottom,var(--line-adopt) 0,var(--line-adopt) 5px,transparent 5px,transparent 9px)}
+
+/* padding above the horizontal bar (where the bar sits) */
+.cw-inner{padding-top:2px;display:flex;flex-direction:column;align-items:center}
+
+/* ── avatar circle ── */
+.av{
+  width:60px;height:60px;border-radius:50%;
+  border:2px solid var(--border);
+  background:var(--surface2);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;font-weight:900;color:var(--muted);
+  transition:border-color .15s,transform .1s;
+  flex-shrink:0;
+}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+a:hover .av{border-color:var(--gold);transform:scale(1.06)}
+
+/* couple: two circles side by side */
+.couple-row{display:flex;align-items:flex-start;gap:6px}
+.couple-sep{color:var(--muted);font-size:.85rem;margin-top:18px;flex-shrink:0}
+
+/* node label */
+.node-label{margin-top:5px;text-align:center;max-width:100px}
+.node-name{
+  display:block;font-size:.7rem;font-weight:700;color:var(--gold-bright);
+  line-height:1.3;text-align:center;
+}
+.node-name:hover{text-decoration:underline;text-underline-offset:2px}
+.node-role{font-size:.58rem;color:var(--muted);line-height:1.3;margin-top:2px}
+.node-note{font-size:.56rem;color:var(--ink-blue);font-style:italic;margin-top:2px}
+.couple-labels{display:flex;gap:4px;justify-content:center;margin-top:5px}
+.couple-labels .sep{color:var(--muted);font-size:.6rem;margin-top:2px}
+
+/* collapse toggle */
+.col-btn{
+  background:none;border:1px solid var(--border);border-radius:4px;
+  color:var(--muted);font-size:.56rem;padding:1px 5px;cursor:pointer;
+  margin-top:4px;transition:all .15s;line-height:1.4;
+}
+.col-btn:hover{border-color:var(--gold);color:var(--gold-bright)}
+/* Touch devices: bump tap target — original .56rem/1px button is ~13×20px, too small to hit reliably */
+@media (hover: none) and (pointer: coarse) {
+  .col-btn{font-size:.78rem;padding:6px 10px;min-width:32px;min-height:28px}
+}
+.tc.collapsed > .stem,
+.tc.collapsed > .children{display:none}
+
+/* legend */
+.legend{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;padding:14px 18px;border:1px solid var(--border);border-radius:10px;background:var(--surface);font-size:.75rem;color:var(--muted)}
+.leg{display:flex;align-items:center;gap:8px}
+.leg-line{width:26px;height:2px;background:var(--line)}
+.leg-dash{width:26px;height:2px;background:repeating-linear-gradient(to right,var(--line-adopt) 0,var(--line-adopt) 6px,transparent 6px,transparent 11px)}
+.leg-dot{width:10px;height:10px;border-radius:50%;border:2px solid var(--border);background:var(--surface2)}
+
+footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1400px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header{padding-right:240px!important;padding-left:24px!important}
+  @media(max-width:600px){header{padding-right:200px!important}}
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/families.html">
+  <meta property="og:title" content="Families · The Shimotsuki Codex">
+  <meta property="og:description" content="Canon bloodlines and adoptive bonds — One Piece family trees with portraits and collapsible branches.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/families.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Families · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Canon bloodlines and adoptive bonds — One Piece family trees with portraits and collapsible branches.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Families</span></a>
+</header>
+<main>
+  <section class="hero">
+    <h2>Family Trees</h2>
+    <div class="sub">Blood · Bond · Legacy</div>
+    <p class="blurb">Canon bloodlines and adoptive bonds across the Grand Line. Each family can be expanded or collapsed — click a section header to show or hide it, or click any portrait with children to collapse that branch.</p>
+    <div class="gold-rule"></div>
+  </section>
+
+  <div id="trees"></div>
+
+  <div class="legend">
+    <div class="leg"><div class="leg-line"></div> Blood relation</div>
+    <div class="leg"><div class="leg-dash"></div> Adoptive relation</div>
+    <div class="leg"><div class="leg-dot"></div> Circle = portrait — click to open character page</div>
+    <div class="leg">♡ Union / partnership</div>
+    <div class="leg">▾ Click a node to collapse its branch</div>
+  </div>
+</main>
+
+<script id="families-data" type="application/json">
+{
+  "_doc": "Hand-curated canonical family relationships. Wiki Char Box doesn't carry a `family` field, so this is sourced manually from manga + SBS confirmations. Each edge: from -> to via relation. Add new edges via PR; cite the chapter or SBS that confirms it in the `source` field.",
+  "generated_on": "2026-04-26",
+  "edges": [
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Monkey D. Dragon",
+      "relation": "father",
+      "source": "Chapter 432"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Monkey D. Garp",
+      "relation": "grandfather",
+      "source": "Chapter 431"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Portgas D. Ace",
+      "relation": "sworn brother",
+      "source": "Chapter 525"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Sabo",
+      "relation": "sworn brother",
+      "source": "Chapter 583"
+    },
+    {
+      "from": "Monkey D. Luffy",
+      "to": "Curly Dadan",
+      "relation": "guardian (childhood)",
+      "source": "Chapter 583"
+    },
+    {
+      "from": "Monkey D. Dragon",
+      "to": "Monkey D. Garp",
+      "relation": "father",
+      "source": "Chapter 432"
+    },
+    {
+      "from": "Portgas D. Ace",
+      "to": "Gol D. Roger",
+      "relation": "father",
+      "source": "Chapter 551"
+    },
+    {
+      "from": "Portgas D. Ace",
+      "to": "Portgas D. Rouge",
+      "relation": "mother",
+      "source": "Chapter 551"
+    },
+    {
+      "from": "Portgas D. Ace",
+      "to": "Edward Newgate",
+      "relation": "adoptive father",
+      "source": "Chapter 552"
+    },
+    {
+      "from": "Sabo",
+      "to": "Outlook III",
+      "relation": "father",
+      "source": "Chapter 583"
+    },
+    {
+      "from": "Sabo",
+      "to": "Stelly",
+      "relation": "adoptive brother",
+      "source": "Chapter 587"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Judge",
+      "relation": "father",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Sora",
+      "relation": "mother",
+      "source": "Chapter 840"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Reiju",
+      "relation": "sister",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Ichiji",
+      "relation": "brother",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Niji",
+      "relation": "brother",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Vinsmoke Yonji",
+      "relation": "brother",
+      "source": "Chapter 832"
+    },
+    {
+      "from": "Vinsmoke Sanji",
+      "to": "Zeff",
+      "relation": "guardian",
+      "source": "Chapter 57"
+    },
+    {
+      "from": "Nami",
+      "to": "Nojiko",
+      "relation": "adoptive sister",
+      "source": "Chapter 78"
+    },
+    {
+      "from": "Nami",
+      "to": "Bell-mère",
+      "relation": "adoptive mother",
+      "source": "Chapter 78"
+    },
+    {
+      "from": "Roronoa Zoro",
+      "to": "Shimotsuki Ushimaru",
+      "relation": "ancestor",
+      "source": "Chapter 952"
+    },
+    {
+      "from": "Roronoa Zoro",
+      "to": "Kuina",
+      "relation": "rival (childhood)",
+      "source": "Chapter 5"
+    },
+    {
+      "from": "Nico Robin",
+      "to": "Nico Olvia",
+      "relation": "mother",
+      "source": "Chapter 391"
+    },
+    {
+      "from": "Tony Tony Chopper",
+      "to": "Hiriluk",
+      "relation": "guardian",
+      "source": "Chapter 142"
+    },
+    {
+      "from": "Tony Tony Chopper",
+      "to": "Kureha",
+      "relation": "mentor",
+      "source": "Chapter 153"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Lola",
+      "relation": "daughter",
+      "source": "Chapter 651"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Pudding",
+      "relation": "daughter",
+      "source": "Chapter 825"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Katakuri",
+      "relation": "son",
+      "source": "Chapter 834"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Cracker",
+      "relation": "son",
+      "source": "Chapter 836"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Smoothie",
+      "relation": "daughter",
+      "source": "Chapter 834"
+    },
+    {
+      "from": "Charlotte Linlin",
+      "to": "Charlotte Perospero",
+      "relation": "son",
+      "source": "Chapter 834"
+    },
+    {
+      "from": "Donquixote Doflamingo",
+      "to": "Donquixote Rosinante",
+      "relation": "brother",
+      "source": "Chapter 762"
+    },
+    {
+      "from": "Donquixote Doflamingo",
+      "to": "Donquixote Homing",
+      "relation": "father",
+      "source": "Chapter 762"
+    },
+    {
+      "from": "Trafalgar D. Water Law",
+      "to": "Lami",
+      "relation": "sister",
+      "source": "Chapter 762"
+    },
+    {
+      "from": "Trafalgar D. Water Law",
+      "to": "Donquixote Rosinante",
+      "relation": "adoptive father",
+      "source": "Chapter 763"
+    },
+    {
+      "from": "Boa Hancock",
+      "to": "Boa Sandersonia",
+      "relation": "sister",
+      "source": "Chapter 514"
+    },
+    {
+      "from": "Boa Hancock",
+      "to": "Boa Marigold",
+      "relation": "sister",
+      "source": "Chapter 514"
+    },
+    {
+      "from": "Edward Newgate",
+      "to": "Edward Weevil",
+      "relation": "alleged son",
+      "source": "Chapter 802"
+    },
+    {
+      "from": "Kaidou",
+      "to": "Yamato",
+      "relation": "child",
+      "source": "Chapter 984"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Sukiyaki",
+      "relation": "father",
+      "source": "Chapter 962"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Toki",
+      "relation": "wife",
+      "source": "Chapter 965"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Momonosuke",
+      "relation": "son",
+      "source": "Chapter 966"
+    },
+    {
+      "from": "Kouzuki Oden",
+      "to": "Kouzuki Hiyori",
+      "relation": "daughter",
+      "source": "Chapter 966"
+    },
+    {
+      "from": "Shanks",
+      "to": "Uta",
+      "relation": "adoptive daughter",
+      "source": "Film: Red"
+    },
+    {
+      "from": "Gol D. Roger",
+      "to": "Portgas D. Rouge",
+      "relation": "lover",
+      "source": "Chapter 551"
+    },
+    {
+      "from": "Imu",
+      "to": "Five Elders",
+      "relation": "sovereign of",
+      "source": "Chapter 906"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Lilith",
+      "relation": "satellite",
+      "source": "Chapter 1062"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Edison",
+      "relation": "satellite",
+      "source": "Chapter 1067"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Pythagoras",
+      "relation": "satellite",
+      "source": "Chapter 1067"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Atlas",
+      "relation": "satellite",
+      "source": "Chapter 1064"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk Shaka",
+      "relation": "satellite",
+      "source": "Chapter 1067"
+    },
+    {
+      "from": "Vegapunk",
+      "to": "Vegapunk York",
+      "relation": "satellite",
+      "source": "Chapter 1062"
+    }
+  ]
+}
+
+</script>
+
+<script>
+const FAMILIES = JSON.parse(document.getElementById('families-data').textContent);
+
+function esc(s){ if(!s)return''; return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function enc(s){ return encodeURIComponent(s||''); }
+function imgSrc(fn){ if(!fn)return null; return 'https://onepiece.fandom.com/wiki/Special:FilePath/'+enc(fn); }
+
+function avatar(name, imgFile) {
+  const src = imgSrc(imgFile);
+  const ini = esc((name||'?')[0]);
+  return `<div class="av">${ini}${src?`<img src="${src}" alt="${esc(name)}" loading="lazy" onerror="this.remove()">`:''}` + `</div>`;
+}
+
+function personLink(p) {
+  return `<a href="character.html?name=${enc(p.name)}" title="${esc(p.name)}">${avatar(p.name, p.img)}</a>`;
+}
+
+function renderTree(node) {
+  const hasKids = node.children && node.children.length > 0;
+
+  if (node.couple) {
+    const [a, b] = node.couple;
+    const childrenHtml = hasKids
+      ? `<div class="stem"></div><div class="children">${node.children.map(c => wrapChild(c)).join('')}</div>`
+      : '';
+    return `<div class="tc">
+      <div class="couple-row">
+        ${personLink(a)}
+        <span class="couple-sep">♡</span>
+        ${personLink(b)}
+      </div>
+      <div class="couple-labels">
+        <a class="node-name" href="character.html?name=${enc(a.name)}">${esc(shortName(a.name))}</a>
+        <span class="sep">+</span>
+        <a class="node-name" href="character.html?name=${enc(b.name)}">${esc(shortName(b.name))}</a>
+      </div>
+      ${hasKids ? `<button class="col-btn" onclick="collapseToggle(this)" title="Collapse branch">▾</button>` : ''}
+      ${childrenHtml}
+    </div>`;
+  }
+
+  const childrenHtml = hasKids
+    ? `<div class="stem"></div><div class="children">${node.children.map(c => wrapChild(c)).join('')}</div>`
+    : '';
+
+  return `<div class="tc">
+    <a href="character.html?name=${enc(node.name)}" title="${esc(node.name)}">${avatar(node.name, node.img)}</a>
+    <div class="node-label">
+      <a class="node-name" href="character.html?name=${enc(node.name)}">${esc(node.name)}</a>
+      ${node.role ? `<div class="node-role">${esc(node.role)}</div>` : ''}
+      ${node.note ? `<div class="node-note">${esc(node.note)}</div>` : ''}
+    </div>
+    ${hasKids ? `<button class="col-btn" onclick="collapseToggle(this)" title="Collapse branch">▾</button>` : ''}
+    ${childrenHtml}
+  </div>`;
+}
+
+function shortName(n) {
+  const parts = (n || '').split(' ');
+  return parts[parts.length - 1];
+}
+
+function wrapChild(child) {
+  const adopted = child.adopted ? ' adopted' : '';
+  const inner = renderTree(child);
+  return `<div class="cw${adopted}"><div class="cw-stem"></div><div class="cw-inner">${inner}</div></div>`;
+}
+
+function collapseToggle(btn) {
+  const tc = btn.closest('.tc');
+  tc.classList.toggle('collapsed');
+  btn.textContent = tc.classList.contains('collapsed') ? '▸' : '▾';
+}
+
+document.getElementById('trees').innerHTML = FAMILIES.map(fam => {
+  const treeHtml = renderTree(fam.root);
+  return `<details class="family-section"${fam.open ? ' open' : ''}>
+    <summary class="family-summary">
+      <span class="family-icon">${fam.icon}</span>
+      <span class="family-name">${esc(fam.name)}</span>
+      <span class="family-desc">${esc(fam.desc)}</span>
+      <span class="family-chevron">▾</span>
+    </summary>
+    <div class="tree-wrap">${treeHtml}</div>
+  </details>`;
+}).join('');
+</script>
+
+<footer>The Shimotsuki Codex · Family Trees · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial</footer>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

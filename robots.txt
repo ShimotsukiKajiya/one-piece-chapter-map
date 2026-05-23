@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# L19 — entity-detail URLs (anything with ?name= or ?id=) are blocked
+# from indexing. Search engines can still index the index pages
+# (characters.html, fruits.html, etc.) and the lore essays. They cannot
+# index direct entity-detail URLs that would otherwise let
+# "site:shimotsukicodex.com Imu" return Imu's profile and bypass the
+# client-side spoiler shield. The shield is a client-side render gate;
+# search engines don't run JS, so without this they'd index the raw
+# embedded data blocks. Together with per-page <meta name="robots"
+# content="noindex"> on entity-detail pages this keeps spoilers from
+# leaking via external SEO.
+Disallow: /character.html?
+Disallow: /crew.html?
+Disallow: /ship.html?
+Disallow: /fruit.html?
+Disallow: /location.html?
+
+Sitemap: https://shimotsukicodex.com/sitemap.xml

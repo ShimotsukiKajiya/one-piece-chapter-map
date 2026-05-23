@@ -1,0 +1,39 @@
+{
+  "_doc": "The three Ancient Weapons — pre-Void Century devices powerful enough to destroy the world. Their existence is the World Government's deepest fear.",
+  "generated_on": "2026-04-27",
+  "weapons": [
+    {
+      "name": "Pluton",
+      "japanese": "プルトン",
+      "kind": "warship",
+      "debut": "Ch. 357",
+      "summary": "An ancient battleship of devastating power. Capable of destroying an entire island in a single salvo. Its blueprints were entrusted to the shipwrights of Water 7 (the Galley-La family) and to Iceburg specifically. Tom is said to have inherited the original blueprint and passed it through Franky's master-line.",
+      "current_holder": "Plans destroyed by Iceburg + Franky; whereabouts of any actual Pluton weapon: legendary, possibly hidden in Wano under Onigashima, or never built.",
+      "key_chapters": [357, 430, 1043, 1052]
+    },
+    {
+      "name": "Poseidon",
+      "japanese": "ポセイドン",
+      "kind": "person",
+      "debut": "Ch. 649",
+      "summary": "Not a weapon but a PERSON — a Mermaid Princess born once in centuries with the ability to command the Sea Kings (the colossal sea creatures). Considered an Ancient Weapon because the Sea Kings she can summon are themselves world-destroying. Shirahoshi is the current Poseidon.",
+      "current_holder": "Shirahoshi (Princess of Fish-Man Island).",
+      "key_chapters": [649, 906, 1064]
+    },
+    {
+      "name": "Uranus",
+      "japanese": "ウラヌス",
+      "kind": "unknown",
+      "debut": "Ch. 906",
+      "summary": "The mysterious third Ancient Weapon. Its nature is the most heavily speculated. Theories range from a sun-based superweapon (Mother Flame) to a person (Imu themselves) to a meteorological device. Mentioned by name only at the Reverie.",
+      "current_holder": "Unrevealed — possibly held by Imu or the Five Elders themselves.",
+      "key_chapters": [906, 1085, 1115]
+    }
+  ],
+  "_lore": [
+    "The Ancient Weapons are remnants of the Void Century kingdom destroyed by the Twenty Kingdoms (the proto-World Government) 800 years ago.",
+    "Their names alone — preserved on Poneglyphs — are enough that the World Government bans the reading of Poneglyphs by death.",
+    "Roger crew read the Rio Poneglyph at Laugh Tale and learned the truth. They laughed.",
+    "Imu has been shown holding the silhouettes of all three Ancient Weapons in their throne room — implying personal control or knowledge of all three."
+  ]
+}

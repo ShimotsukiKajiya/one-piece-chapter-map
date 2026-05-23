@@ -1,0 +1,51 @@
+{
+  "_doc": "Hand-curated major canon events per saga, with chapter citations. Used by timeline.html as the meaty layer alongside arc structure + character debuts. Add via PR with chapter citation. Each event: chapter, title, summary, type (debut/death/battle/reveal/alliance/transformation/political).",
+  "generated_on": "2026-04-26",
+  "events": [
+    {"chapter": 1,    "title": "Luffy departs Foosha Village", "summary": "The journey begins. Shanks gives Luffy his straw hat as a promise.", "type": "debut"},
+    {"chapter": 7,    "title": "Luffy meets Coby", "summary": "First encounter with the boy who'll become a Marine Captain.", "type": "alliance"},
+    {"chapter": 24,   "title": "Strawhat name origin", "summary": "Crew identity forms around Luffy's iconic hat.", "type": "alliance"},
+    {"chapter": 50,   "title": "Mihawk vs Zoro", "summary": "Zoro's first defeat; he vows never to lose again.", "type": "battle"},
+    {"chapter": 95,   "title": "Arlong Park falls", "summary": "Nami officially joins; Luffy destroys Arlong Park.", "type": "battle"},
+    {"chapter": 100,  "title": "Roger's execution remembered", "summary": "Loguetown — Buggy nearly executes Luffy. Origin of Roger's last words established.", "type": "reveal"},
+
+    {"chapter": 105,  "title": "Crew enters Grand Line", "summary": "Reverse Mountain — the Grand Line begins.", "type": "alliance"},
+    {"chapter": 217,  "title": "Crocodile defeated", "summary": "Alabasta saved. Vivi farewell. First Warlord falls to Luffy.", "type": "battle"},
+
+    {"chapter": 297,  "title": "Enel defeated", "summary": "Sky Island arc climax. Going Merry's golden bell of Shandora rung.", "type": "battle"},
+
+    {"chapter": 374,  "title": "Robin says 'I want to live!'", "summary": "Water 7 → Enies Lobby. Strawhats burn the World Government flag.", "type": "alliance"},
+    {"chapter": 398,  "title": "Lucci defeated", "summary": "Luffy's first taste of Gear Second/Third on this scale. CP9 falls.", "type": "battle"},
+    {"chapter": 430,  "title": "Going Merry's farewell", "summary": "The first ship's funeral. Strawhats weep on the open sea.", "type": "death"},
+
+    {"chapter": 489,  "title": "Brook joins", "summary": "Thriller Bark concludes. The crew gains its musician.", "type": "alliance"},
+
+    {"chapter": 504,  "title": "Kuma scatters the Strawhats", "summary": "Each crew member sent across the world. The 2-year separation begins.", "type": "transformation"},
+    {"chapter": 574,  "title": "Ace dies", "summary": "Marineford. Akainu's magma fist through Ace's chest. Luffy's worst hour.", "type": "death"},
+    {"chapter": 576,  "title": "Whitebeard dies standing", "summary": "Edward Newgate's final declaration: 'One Piece is real.'", "type": "death"},
+    {"chapter": 597,  "title": "2-year timeskip begins", "summary": "Luffy's '3D2Y' message. The crew trains.", "type": "transformation"},
+
+    {"chapter": 653,  "title": "Strawhats reach the New World", "summary": "Fishman Island concludes. Hody Jones defeated. Crew enters the second half of the Grand Line.", "type": "alliance"},
+
+    {"chapter": 791,  "title": "Doflamingo defeated", "summary": "King Punch / Gear Fourth / Conqueror's Haki. Dressrosa freed.", "type": "battle"},
+    {"chapter": 794,  "title": "Sabo eats the Mera Mera no Mi", "summary": "Ace's flame-flame fruit lives on through his sworn brother.", "type": "transformation"},
+
+    {"chapter": 824,  "title": "Pedro/Carrot reveal Zou tribe", "summary": "Zou arc concludes. Mink-Strawhat alliance formed. Road poneglyphs in motion.", "type": "alliance"},
+    {"chapter": 902,  "title": "Whole Cake escape", "summary": "Strawhats narrowly escape Big Mom Pirates. Sanji rescued.", "type": "battle"},
+    {"chapter": 906,  "title": "Imu revealed", "summary": "Reverie. The hidden sovereign of the Five Elders sits the Empty Throne. Lore-shaking.", "type": "reveal"},
+
+    {"chapter": 1000, "title": "Strawhat & Heart & Kid Alliance vs Yonko", "summary": "Three Worst Generation captains face Big Mom and Kaidou simultaneously. Onigashima rooftop.", "type": "battle"},
+    {"chapter": 1037, "title": "Kaidou defeated", "summary": "Luffy's awakened Hito Hito Nika fells the strongest creature. Wano free.", "type": "battle"},
+    {"chapter": 1043, "title": "Hito Hito no Mi, Model: Nika revealed", "summary": "Luffy's Devil Fruit was always a Mythical Zoan — Sun God Nika. The Gomu Gomu name was a 'lie' by the World Government for 800 years.", "type": "reveal"},
+    {"chapter": 1057, "title": "Buggy becomes Yonko", "summary": "The Cross Guild reshapes the Yonko balance. Mihawk + Crocodile + Buggy as figurehead.", "type": "political"},
+
+    {"chapter": 1062, "title": "Egghead arc opens", "summary": "Vegapunk's island unveiled. Lilith first appears.", "type": "debut"},
+    {"chapter": 1067, "title": "All six Vegapunk satellites revealed", "summary": "Edison, Pythagoras, Atlas, Shaka, Lilith, York — the six brain-bodies of Dr. Vegapunk.", "type": "reveal"},
+    {"chapter": 1080, "title": "Law vs Blackbeard", "summary": "Awakened Ope Ope no Mi. Law captured.", "type": "battle"},
+    {"chapter": 1086, "title": "Imu's silhouette in colour", "summary": "The Empty Throne's occupant gets a clearer reveal. World Government lore breaks open.", "type": "reveal"},
+    {"chapter": 1092, "title": "Five Elders attack Vegapunk", "summary": "Saint Saturn arrives on Egghead. Vegapunk's broadcast begins.", "type": "battle"},
+    {"chapter": 1115, "title": "Vegapunk's broadcast", "summary": "The truth about the Void Century begins to leak. World shakes.", "type": "reveal"},
+    {"chapter": 1153, "title": "Bunt Kingdom revealed", "summary": "New World political development.", "type": "political"},
+    {"chapter": 1181, "title": "Most recent canon", "summary": "Latest official chapter as of vault generation. Codex updates weekly.", "type": "reveal"}
+  ]
+}

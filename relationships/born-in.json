@@ -1,0 +1,4076 @@
+[
+  {
+    "from": "chr:01548",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01551",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01552",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01563",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01567",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01568",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01574",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01576",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01578",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01589",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01593",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01594",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Taya Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01596",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01598",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01601",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01605",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01608",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01611",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01612",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01613",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01615",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01617",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01618",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01619",
+    "to": "loc:00192",
+    "src": "wiki",
+    "origin_raw": "East Blue (Syrup Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01627",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Sorbet Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01628",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01629",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01630",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01631",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01632",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01633",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01642",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01643",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01644",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01646",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01647",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01649",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01650",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01658",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01665",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01668",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01669",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01670",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01672",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01673",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01677",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01678",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01680",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01681",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01682",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01684",
+    "to": "loc:00172",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mogaro Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01692",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Organ Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01694",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01695",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01696",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01700",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01701",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01702",
+    "to": "loc:00274",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Little Garden)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01703",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01707",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01709",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01710",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01711",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01721",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01723",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01724",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01727",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01731",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01732",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01735",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01736",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01737",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01738",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01739",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01741",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01743",
+    "to": "loc:00146",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Bourgeois Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01747",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01748",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01749",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01756",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01762",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (At a random port)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01763",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (At a random port)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01767",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01768",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01769",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01774",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01775",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01777",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01783",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01790",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01793",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01794",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01803",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01813",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (On a boat)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01815",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (At a random port)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01817",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01818",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01819",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01822",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01829",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01832",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01834",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01838",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01839",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue (Kano Country)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01840",
+    "to": "loc:00277",
+    "src": "wiki",
+    "origin_raw": "Jaya",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01845",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01848",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01849",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Organ Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01852",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Sorbet Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01854",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue (Ohara)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01856",
+    "to": "loc:00277",
+    "src": "wiki",
+    "origin_raw": "Jaya",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01857",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01858",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Island of Rare Animals)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01865",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01866",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01867",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Sorbet Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01869",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01873",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01876",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01877",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01878",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01879",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01881",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01884",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01886",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01887",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01889",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01891",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01893",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01895",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01899",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01900",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01902",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01903",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01905",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01912",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01917",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01923",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01928",
+    "to": "loc:00296",
+    "src": "wiki",
+    "origin_raw": "Red Line (Mary Geoise)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01931",
+    "to": "loc:00296",
+    "src": "wiki",
+    "origin_raw": "Red Line (Mary Geoise)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01935",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01936",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01944",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01945",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01948",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01949",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01950",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Sphinx)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01951",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01955",
+    "to": "loc:00182",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Prodence Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01959",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Kamabakka Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01960",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01961",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01967",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01970",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Kutsukku Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:01973",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01977",
+    "to": "loc:00226",
+    "src": "wiki",
+    "origin_raw": "West Blue (God Valley)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01980",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01983",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01987",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01989",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01991",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01992",
+    "to": "loc:00286",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Punk Hazard)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01994",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01995",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01996",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01997",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:01998",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:01999",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02006",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02008",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02014",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02026",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02027",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02028",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02029",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02031",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02033",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02042",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02046",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Porco Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02048",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02050",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02053",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02054",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02061",
+    "to": "loc:00167",
+    "src": "wiki",
+    "origin_raw": "East Blue (Loguetown)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02062",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02072",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02076",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02080",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02081",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02083",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02085",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02088",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02090",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Welbems Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02094",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02098",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02101",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02102",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02106",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02107",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02110",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02112",
+    "to": "loc:00286",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Punk Hazard)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02118",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Kutsukku Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02120",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02121",
+    "to": "loc:00242",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Onigashima)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02123",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02125",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02126",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02128",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02134",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02139",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02140",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02146",
+    "to": "loc:00179",
+    "src": "wiki",
+    "origin_raw": "East Blue (Orange Town)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02147",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02149",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02151",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02154",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Lvneel Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02158",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02166",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02167",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02169",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02172",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02173",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Samuwanai Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02174",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02175",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02176",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02177",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02181",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02185",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02188",
+    "to": "loc:00167",
+    "src": "wiki",
+    "origin_raw": "East Blue (Loguetown)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02189",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02193",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02194",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02197",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Aoi Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02201",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02203",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02204",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02207",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02210",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02211",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02215",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02216",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02219",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Karate Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02220",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02221",
+    "to": "loc:00296",
+    "src": "wiki",
+    "origin_raw": "Red Line (Mary Geoise)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02223",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02225",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02227",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02232",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02233",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02235",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02239",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02240",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02246",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02251",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02252",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02253",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02256",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02260",
+    "to": "loc:00277",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Jaya)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02261",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02262",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02266",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02269",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02272",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02274",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02276",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02278",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02279",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Gecko Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02280",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02281",
+    "to": "loc:00242",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Onigashima)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02285",
+    "to": "loc:00172",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mogaro Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02291",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02292",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02293",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Kutsukku Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02295",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02298",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02300",
+    "to": "loc:00197",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Totto Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02301",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02311",
+    "to": "loc:00185",
+    "src": "wiki",
+    "origin_raw": "East Blue (Satsuruzo Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02316",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02324",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Moby Dick)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02325",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Moby Dick)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02326",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02327",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02329",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02330",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Packy: Loguetown)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02331",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02332",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02333",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Wano Country",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02334",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02341",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02342",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02343",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02344",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02347",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02348",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02349",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02350",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02351",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02352",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Vespa Kingdom territory)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02354",
+    "to": "loc:00287",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Dressrosa)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02358",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02360",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02362",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02364",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02368",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Green Bit)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02370",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02371",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02372",
+    "to": "loc:00199",
+    "src": "wiki",
+    "origin_raw": "New World (Waford)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02376",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02379",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02380",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02384",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02387",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02388",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02392",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02393",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02397",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02404",
+    "to": "loc:00153",
+    "src": "wiki",
+    "origin_raw": "East Blue (Foosha Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02405",
+    "to": "loc:00153",
+    "src": "wiki",
+    "origin_raw": "East Blue (Foosha Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02407",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02408",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02409",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02411",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Green Bit)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02413",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02416",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02418",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02419",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02420",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02422",
+    "to": "loc:00282",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Sabaody Archipelago)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02425",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02426",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Shade Port)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02429",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02430",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02437",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02445",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02447",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02448",
+    "to": "loc:00192",
+    "src": "wiki",
+    "origin_raw": "East Blue (Syrup Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02453",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02454",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02455",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02460",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02461",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02468",
+    "to": "loc:00242",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Onigashima)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02470",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02472",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02473",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02486",
+    "to": "loc:00294",
+    "src": "wiki",
+    "origin_raw": "Grand Line (New World)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02489",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02491",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02492",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02494",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02497",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02498",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02499",
+    "to": "loc:00153",
+    "src": "wiki",
+    "origin_raw": "East Blue (Foosha Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02500",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02501",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02502",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Lvneel Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02503",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02507",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02509",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02510",
+    "to": "loc:00192",
+    "src": "wiki",
+    "origin_raw": "East Blue (Syrup Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02514",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Rural Village)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02516",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02517",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02525",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7, Slums)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02527",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02529",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02532",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02533",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02537",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02543",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02544",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02547",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02548",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02549",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02550",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Cactus Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02552",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02557",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02558",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02560",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02562",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02563",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02566",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02567",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02568",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02571",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02572",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue (Ohara)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02573",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02577",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Gecko Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02582",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02586",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02591",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02596",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02598",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02600",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02602",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02610",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02612",
+    "to": "loc:00191",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Standing Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02614",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02618",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02619",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02622",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02623",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02624",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02626",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02627",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02628",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02629",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02630",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02633",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02634",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02635",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02638",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Arabasta Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02640",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02641",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02642",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02645",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02648",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Gecko Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02650",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02654",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02660",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02661",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02663",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02664",
+    "to": "loc:00179",
+    "src": "wiki",
+    "origin_raw": "East Blue (Orange Town)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02665",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Baterilla)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02667",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02670",
+    "to": "loc:00294",
+    "src": "wiki",
+    "origin_raw": "Grand Line (New World)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02671",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02672",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02673",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02678",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02685",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02687",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02688",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02691",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02695",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02699",
+    "to": "loc:00287",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Dressrosa)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02706",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02707",
+    "to": "loc:00287",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Dressrosa)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02709",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02712",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02713",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02716",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02717",
+    "to": "loc:00152",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Elbaph)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02718",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Guanhao)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02721",
+    "to": "loc:00226",
+    "src": "wiki",
+    "origin_raw": "West Blue (God Valley)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02725",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02729",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02731",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02733",
+    "to": "loc:00296",
+    "src": "wiki",
+    "origin_raw": "Red Line (Mary Geoise)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02734",
+    "to": "loc:00296",
+    "src": "wiki",
+    "origin_raw": "Red Line (Mary Geoise)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02735",
+    "to": "loc:00296",
+    "src": "wiki",
+    "origin_raw": "Red Line (Mary Geoise)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02738",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02743",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02746",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02747",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02748",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02749",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02751",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02752",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02753",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue (Kano Country)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02756",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02757",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02759",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Conomi Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02761",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02764",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02765",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02766",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02771",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (Notice)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02773",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02774",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02776",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02785",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02795",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02797",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02799",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02800",
+    "to": "loc:00176",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mt. Kintoki)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02803",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02806",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02808",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02809",
+    "to": "loc:00226",
+    "src": "wiki",
+    "origin_raw": "West Blue (God Valley)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02811",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02817",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02818",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02819",
+    "to": "loc:00188",
+    "src": "wiki",
+    "origin_raw": "East Blue (Shimotsuki Village)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02820",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Wano Country",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02821",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02822",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02826",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02828",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02829",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02830",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02831",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02832",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02834",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02835",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02836",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02844",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02852",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02853",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02857",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02858",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02861",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02862",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02867",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02869",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02870",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02871",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Dawn Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02874",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02880",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02886",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02890",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue (North Pole)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02893",
+    "to": "loc:00283",
+    "src": "wiki",
+    "origin_raw": "Calm Belt (Amazon Lily)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02894",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02899",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom, Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02902",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02903",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02905",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Gecko Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02909",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02914",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02925",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02928",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02931",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02932",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02935",
+    "to": "loc:00278",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Long Ring Long Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02936",
+    "to": "loc:00278",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Long Ring Long Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02937",
+    "to": "loc:00278",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Long Ring Long Land)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02938",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02945",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02947",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02948",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02958",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02962",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02963",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02966",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02971",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02981",
+    "to": "loc:00189",
+    "src": "wiki",
+    "origin_raw": "Sky Island",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02985",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Gecko Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02992",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02993",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02994",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02995",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:02996",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Karakuri Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:02997",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02998",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:02999",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03000",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03001",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03002",
+    "to": "loc:00288",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Egghead)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03003",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03005",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03007",
+    "to": "loc:00158",
+    "src": "wiki",
+    "origin_raw": "North Blue (Germa Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03008",
+    "to": "loc:00158",
+    "src": "wiki",
+    "origin_raw": "North Blue (Germa Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03009",
+    "to": "loc:00158",
+    "src": "wiki",
+    "origin_raw": "North Blue (Germa Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03010",
+    "to": "loc:00158",
+    "src": "wiki",
+    "origin_raw": "North Blue (Germa Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03012",
+    "to": "loc:00158",
+    "src": "wiki",
+    "origin_raw": "North Blue (Germa Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03013",
+    "to": "loc:00287",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Dressrosa)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03014",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03016",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03018",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03022",
+    "to": "loc:00173",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Mokomo Dukedom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03025",
+    "to": "loc:00290",
+    "src": "wiki",
+    "origin_raw": "West Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03026",
+    "to": "loc:00275",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Drum Kingdom)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03033",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03035",
+    "to": "loc:00292",
+    "src": "wiki",
+    "origin_raw": "South Blue (Kutsukku Island)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:03039",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Goa Kingdom)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:03040",
+    "to": "loc:00190",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Skypiea)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03041",
+    "to": "loc:00291",
+    "src": "wiki",
+    "origin_raw": "North Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03042",
+    "to": "loc:00143",
+    "src": "wiki",
+    "origin_raw": "Sky Islands (Birka)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03050",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue (Gecko Islands)",
+    "resolved_via": "sea-region"
+  },
+  {
+    "from": "chr:03052",
+    "to": "loc:00200",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Wano Country)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03053",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03059",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03062",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03065",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03069",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03070",
+    "to": "loc:00279",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Water 7)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03073",
+    "to": "loc:00289",
+    "src": "wiki",
+    "origin_raw": "East Blue",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03074",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  },
+  {
+    "from": "chr:03076",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03080",
+    "to": "loc:00293",
+    "src": "wiki",
+    "origin_raw": "Grand Line",
+    "resolved_via": "exact"
+  },
+  {
+    "from": "chr:03081",
+    "to": "loc:00252",
+    "src": "wiki",
+    "origin_raw": "Grand Line (Ryugu Kingdom; Fish-Man Island)",
+    "resolved_via": "sub-location"
+  }
+]

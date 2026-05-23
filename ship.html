@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+<title>Ship · The Shimotsuki Codex</title>
+<meta name="description" content="Ship profile in the Shimotsuki Codex — class, captain, crew, debut chapter, and current status.">
+<link rel="stylesheet" href="cite-styles.css">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8}
+  body{background:radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  nav a{color:var(--text);text-decoration:none;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px;border-radius:6px}
+  nav a:hover,nav a.active{color:var(--gold-bright);background:var(--surface2)}
+  main{max-width:900px;margin:0 auto;padding:32px 24px 80px;position:relative;z-index:1}
+  .crumbs{color:var(--muted);font-size:.8rem;margin-bottom:16px}
+  .crumbs a{color:var(--ink-blue);text-decoration:none}
+  .head{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:14px;padding:24px 28px;margin-bottom:22px}
+  .name{font-size:2rem;font-weight:900;color:var(--gold-bright)}
+  .name-jp{color:var(--muted);font-size:1rem;margin-top:4px}
+  .name-en{font-style:italic;color:var(--ink-blue);margin-top:6px}
+  .quick{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;color:var(--muted);font-size:.9rem}
+  .quick strong{color:var(--text)}
+  .quick a{color:var(--ink-blue);text-decoration:none;border-bottom:1px dotted var(--ink-blue)}
+  .quick a:hover{color:var(--gold-bright)}
+  .sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 22px}
+  .section h3{color:var(--gold);font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .field{display:flex;gap:12px;margin-bottom:10px}
+  .field-label{color:var(--muted);font-size:.78rem;letter-spacing:1px;text-transform:uppercase;min-width:100px;flex-shrink:0}
+  .field-value{color:var(--text);font-size:.95rem;line-height:1.5}
+  .field-value a{color:var(--ink-blue);text-decoration:none;border-bottom:1px dotted var(--ink-blue)}
+  .field-value a:hover{color:var(--gold-bright)}
+  .not-found{text-align:center;padding:60px 24px;border:1px dashed var(--border);border-radius:12px}
+  .not-found h2{color:var(--gold);margin-bottom:12px}
+  .not-found a{display:inline-block;margin-top:18px;background:var(--gold);color:var(--bg);padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700}
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:900px;margin:0 auto}
+</style>
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/ship.html">
+  <meta property="og:title" content="Ship · The Shimotsuki Codex">
+  <meta property="og:description" content="Ship profile in the Shimotsuki Codex — class, captain, crew, debut chapter, and current status.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/ship.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Ship · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Ship profile in the Shimotsuki Codex — class, captain, crew, debut chapter, and current status.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Ship</span></a>
+  
+</header>
+<main id="root">Loading…</main>
+<footer>The Shimotsuki Codex · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial</footer>
+
+<script id="ship-sails-data" type="application/json">
+{"ship:00001":[{"from":"chr:01562","current":null,"_display":"Ain","note":"Fleet ship (Alexandra)"},{"from":"chr:01594","current":null,"_display":"Aramaki","note":"Fleet ship (Alexandra)"},{"from":"chr:01599","current":null,"_display":"Asahija","note":"Fleet ship (Alexandra)"},{"from":"chr:01632","current":null,"_display":"Bastille","note":"Fleet ship (Alexandra)"},{"from":"chr:01642","current":null,"_display":"Bell-mère","note":"Fleet ship (Alexandra)"},{"from":"chr:01656","current":null,"_display":"Binz","note":"Fleet ship (Alexandra)"},{"from":"chr:01676","current":null,"_display":"Bluegrass","note":"Fleet ship (Alexandra)"},{"from":"chr:01686","current":null,"_display":"Bogard","note":"Fleet ship (Alexandra)"},{"from":"chr:01688","current":null,"_display":"Bomba","note":"Fleet ship (Alexandra)"},{"from":"chr:01694","current":null,"_display":"Borsalino","note":"Fleet ship (Alexandra)"},{"from":"chr:01696","current":null,"_display":"Brannew","note":"Fleet ship (Alexandra)"},{"from":"chr:01724","current":null,"_display":"Caesar Clown","note":"Fleet ship (Alexandra)"},{"from":"chr:01728","current":null,"_display":"Cancer","note":"Fleet ship (Alexandra)"},{"from":"chr:01729","current":null,"_display":"Candre","note":"Fleet ship (Alexandra)"},{"from":"chr:01740","current":null,"_display":"Catacombo","note":"Fleet ship (Alexandra)"},{"from":"chr:01863","current":null,"_display":"Comil","note":"Fleet ship (Alexandra)"},{"from":"chr:01886","current":null,"_display":"Daigin","note":"Fleet ship (Alexandra)"},{"from":"chr:01890","current":null,"_display":"Dalmatian","note":"Fleet ship (Alexandra)"},{"from":"chr:01909","current":null,"_display":"Diez Barrels","note":"Fleet ship (Alexandra)"},{"from":"chr:01915","current":null,"_display":"Doberman","note":"Fleet ship (Alexandra)"},{"from":"chr:01921","current":null,"_display":"Doll","note":"Fleet ship (Alexandra)"},{"from":"chr:01931","current":null,"_display":"Donquixote Rosinante","note":"Fleet ship (Alexandra)"},{"from":"chr:01982","current":null,"_display":"Fishbonen","note":"Fleet ship (Alexandra)"},{"from":"chr:01999","current":null,"_display":"Fullbody","note":"Fleet ship (Alexandra)"},{"from":"chr:02049","current":null,"_display":"Gion","note":"Fleet ship (Alexandra)"},{"from":"chr:02055","current":null,"_display":"Glove","note":"Fleet ship (Alexandra)"},{"from":"chr:02068","current":null,"_display":"Gorilla","note":"Fleet ship (Alexandra)"},{"from":"chr:02077","current":null,"_display":"Guillotine","note":"Fleet ship (Alexandra)"},{"from":"chr:02126","current":null,"_display":"Hibari","note":"Fleet ship (Alexandra)"},{"from":"chr:02134","current":null,"_display":"Hina","note":"Fleet ship (Alexandra)"},{"from":"chr:02159","current":null,"_display":"Hototogisu","note":"Fleet ship (Alexandra)"},{"from":"chr:02160","current":null,"_display":"Hound","note":"Fleet ship (Alexandra)"},{"from":"chr:02197","current":null,"_display":"Issho","note":"Fleet ship (Alexandra)"},{"from":"chr:02207","current":null,"_display":"Jaguar D. Saul","note":"Fleet ship (Alexandra)"},{"from":"chr:02210","current":null,"_display":"Jango","note":"Fleet ship (Alexandra)"},{"from":"chr:02232","current":null,"_display":"John Giant","note":"Fleet ship (Alexandra)"},{"from":"chr:02288","current":null,"_display":"Kibin","note":"Fleet ship (Alexandra)"},{"from":"chr:02312","current":null,"_display":"Koda","note":"Fleet ship (Alexandra)"},{"from":"chr:02320","current":null,"_display":"Kong","note":"Fleet ship (Alexandra)"},{"from":"chr:02332","current":null,"_display":"Kujaku","note":"Fleet ship (Alexandra)"},{"from":"chr:01592","current":null,"_display":null,"note":"Fleet ship (Alexandra)"},{"from":"chr:02356","current":null,"_display":"Kyuji","note":"Fleet ship (Alexandra)"},{"from":"chr:02406","current":null,"_display":"Makko","note":"Fleet ship (Alexandra)"},{"from":"chr:02423","current":null,"_display":"Marine Headquarters Court","note":"Fleet ship (Alexandra)"},{"from":"chr:02429","current":null,"_display":"Mashikaku","note":"Fleet ship (Alexandra)"},{"from":"chr:02439","current":null,"_display":"Maynard","note":"Fleet ship (Alexandra)"},{"from":"chr:02497","current":null,"_display":"Monkey D. Dragon","note":"Fleet ship (Alexandra)"},{"from":"chr:02498","current":null,"_display":"Monkey D. Garp","note":"Fleet ship (Alexandra)"},{"from":"chr:02524","current":null,"_display":"Mozambia","note":"Fleet ship (Alexandra)"},{"from":"chr:02571","current":null,"_display":"Nezumi","note":"Fleet ship (Alexandra)"},{"from":"chr:02609","current":null,"_display":"Onigumo","note":"Fleet ship (Alexandra)"},{"from":"chr:02649","current":null,"_display":"Pike","note":"Fleet ship (Alexandra)"},{"from":"chr:02659","current":null,"_display":"Pomsky","note":"Fleet ship (Alexandra)"},{"from":"chr:02671","current":null,"_display":"Prince Grus","note":"Fleet ship (Alexandra)"},{"from":"chr:02698","current":null,"_display":"Ratel","note":"Fleet ship (Alexandra)"},{"from":"chr:02701","current":null,"_display":"Red King","note":"Fleet ship (Alexandra)"},{"from":"chr:02706","current":null,"_display":"Rika","note":"Fleet ship (Alexandra)"},{"from":"chr:02712","current":null,"_display":"Ripper","note":"Fleet ship (Alexandra)"},{"from":"chr:02725","current":null,"_display":"Rokkaku","note":"Fleet ship (Alexandra)"},{"from":"chr:01564","current":null,"_display":null,"note":"Fleet ship (Alexandra)"},{"from":"chr:02797","current":null,"_display":"Sengoku","note":"Fleet ship (Alexandra)"},{"from":"chr:02800","current":null,"_display":"Sentomaru","note":"Fleet ship (Alexandra)"},{"from":"chr:02810","current":null,"_display":"Sharinguru","note":"Fleet ship (Alexandra)"},{"from":"chr:02825","current":null,"_display":"Shine","note":"Fleet ship (Alexandra)"},{"from":"chr:02833","current":null,"_display":"Shu","note":"Fleet ship (Alexandra)"},{"from":"chr:02836","current":null,"_display":"Sicily","note":"Fleet ship (Alexandra)"},{"from":"chr:02844","current":null,"_display":"Smoker","note":"Fleet ship (Alexandra)"},{"from":"chr:02868","current":null,"_display":"Stainless","note":"Fleet ship (Alexandra)"},{"from":"chr:02873","current":null,"_display":"Strawberry","note":"Fleet ship (Alexandra)"},{"from":"chr:02894","current":null,"_display":"T Bone","note":"Fleet ship (Alexandra)"},{"from":"chr:02914","current":null,"_display":"Tashigi","note":"Fleet ship (Alexandra)"},{"from":"chr:02920","current":null,"_display":"Tensei","note":"Fleet ship (Alexandra)"},{"from":"chr:02930","current":null,"_display":"Tokikake","note":"Fleet ship (Alexandra)"},{"from":"chr:02943","current":null,"_display":"Tosa","note":"Fleet ship (Alexandra)"},{"from":"chr:02958","current":null,"_display":"Tsuru","note":"Fleet ship (Alexandra)"},{"from":"chr:02980","current":null,"_display":"Urban","note":"Fleet ship (Alexandra)"},{"from":"chr:02998","current":null,"_display":"Edison","note":"Fleet ship (Alexandra)"},{"from":"chr:03001","current":null,"_display":"Shaka","note":"Fleet ship (Alexandra)"},{"from":"chr:03003","current":null,"_display":"Vergo","note":"Fleet ship (Alexandra)"},{"from":"chr:03004","current":null,"_display":"Very Good","note":"Fleet ship (Alexandra)"},{"from":"chr:03041","current":null,"_display":"X Drake","note":"Fleet ship (Alexandra)"},{"from":"chr:03043","current":null,"_display":"Yamakaji","note":"Fleet ship (Alexandra)"},{"from":"chr:03049","current":null,"_display":"Yarisugi","note":"Fleet ship (Alexandra)"}],"ship:00017":[{"from":"chr:01562","current":null,"_display":"Ain","note":"Fleet ship (Marine Ships)"},{"from":"chr:01594","current":null,"_display":"Aramaki","note":"Fleet ship (Marine Ships)"},{"from":"chr:01599","current":null,"_display":"Asahija","note":"Fleet ship (Marine Ships)"},{"from":"chr:01632","current":null,"_display":"Bastille","note":"Fleet ship (Marine Ships)"},{"from":"chr:01642","current":null,"_display":"Bell-mère","note":"Fleet ship (Marine Ships)"},{"from":"chr:01656","current":null,"_display":"Binz","note":"Fleet ship (Marine Ships)"},{"from":"chr:01676","current":null,"_display":"Bluegrass","note":"Fleet ship (Marine Ships)"},{"from":"chr:01686","current":null,"_display":"Bogard","note":"Fleet ship (Marine Ships)"},{"from":"chr:01688","current":null,"_display":"Bomba","note":"Fleet ship (Marine Ships)"},{"from":"chr:01694","current":null,"_display":"Borsalino","note":"Fleet ship (Marine Ships)"},{"from":"chr:01696","current":null,"_display":"Brannew","note":"Fleet ship (Marine Ships)"},{"from":"chr:01724","current":null,"_display":"Caesar Clown","note":"Fleet ship (Marine Ships)"},{"from":"chr:01728","current":null,"_display":"Cancer","note":"Fleet ship (Marine Ships)"},{"from":"chr:01729","current":null,"_display":"Candre","note":"Fleet ship (Marine Ships)"},{"from":"chr:01740","current":null,"_display":"Catacombo","note":"Fleet ship (Marine Ships)"},{"from":"chr:01863","current":null,"_display":"Comil","note":"Fleet ship (Marine Ships)"},{"from":"chr:01886","current":null,"_display":"Daigin","note":"Fleet ship (Marine Ships)"},{"from":"chr:01890","current":null,"_display":"Dalmatian","note":"Fleet ship (Marine Ships)"},{"from":"chr:01909","current":null,"_display":"Diez Barrels","note":"Fleet ship (Marine Ships)"},{"from":"chr:01915","current":null,"_display":"Doberman","note":"Fleet ship (Marine Ships)"},{"from":"chr:01921","current":null,"_display":"Doll","note":"Fleet ship (Marine Ships)"},{"from":"chr:01931","current":null,"_display":"Donquixote Rosinante","note":"Fleet ship (Marine Ships)"},{"from":"chr:01982","current":null,"_display":"Fishbonen","note":"Fleet ship (Marine Ships)"},{"from":"chr:01999","current":null,"_display":"Fullbody","note":"Fleet ship (Marine Ships)"},{"from":"chr:02049","current":null,"_display":"Gion","note":"Fleet ship (Marine Ships)"},{"from":"chr:02055","current":null,"_display":"Glove","note":"Fleet ship (Marine Ships)"},{"from":"chr:02068","current":null,"_display":"Gorilla","note":"Fleet ship (Marine Ships)"},{"from":"chr:02077","current":null,"_display":"Guillotine","note":"Fleet ship (Marine Ships)"},{"from":"chr:02126","current":null,"_display":"Hibari","note":"Fleet ship (Marine Ships)"},{"from":"chr:02134","current":null,"_display":"Hina","note":"Fleet ship (Marine Ships)"},{"from":"chr:02159","current":null,"_display":"Hototogisu","note":"Fleet ship (Marine Ships)"},{"from":"chr:02160","current":null,"_display":"Hound","note":"Fleet ship (Marine Ships)"},{"from":"chr:02197","current":null,"_display":"Issho","note":"Fleet ship (Marine Ships)"},{"from":"chr:02207","current":null,"_display":"Jaguar D. Saul","note":"Fleet ship (Marine Ships)"},{"from":"chr:02210","current":null,"_display":"Jango","note":"Fleet ship (Marine Ships)"},{"from":"chr:02232","current":null,"_display":"John Giant","note":"Fleet ship (Marine Ships)"},{"from":"chr:02288","current":null,"_display":"Kibin","note":"Fleet ship (Marine Ships)"},{"from":"chr:02312","current":null,"_display":"Koda","note":"Fleet ship (Marine Ships)"},{"from":"chr:02320","current":null,"_display":"Kong","note":"Fleet ship (Marine Ships)"},{"from":"chr:02332","current":null,"_display":"Kujaku","note":"Fleet ship (Marine Ships)"},{"from":"chr:01592","current":null,"_display":null,"note":"Fleet ship (Marine Ships)"},{"from":"chr:02356","current":null,"_display":"Kyuji","note":"Fleet ship (Marine Ships)"},{"from":"chr:02406","current":null,"_display":"Makko","note":"Fleet ship (Marine Ships)"},{"from":"chr:02423","current":null,"_display":"Marine Headquarters Court","note":"Fleet ship (Marine Ships)"},{"from":"chr:02429","current":null,"_display":"Mashikaku","note":"Fleet ship (Marine Ships)"},{"from":"chr:02439","current":null,"_display":"Maynard","note":"Fleet ship (Marine Ships)"},{"from":"chr:02497","current":null,"_display":"Monkey D. Dragon","note":"Fleet ship (Marine Ships)"},{"from":"chr:02498","current":null,"_display":"Monkey D. Garp","note":"Fleet ship (Marine Ships)"},{"from":"chr:02524","current":null,"_display":"Mozambia","note":"Fleet ship (Marine Ships)"},{"from":"chr:02571","current":null,"_display":"Nezumi","note":"Fleet ship (Marine Ships)"},{"from":"chr:02609","current":null,"_display":"Onigumo","note":"Fleet ship (Marine Ships)"},{"from":"chr:02649","current":null,"_display":"Pike","note":"Fleet ship (Marine Ships)"},{"from":"chr:02659","current":null,"_display":"Pomsky","note":"Fleet ship (Marine Ships)"},{"from":"chr:02671","current":null,"_display":"Prince Grus","note":"Fleet ship (Marine Ships)"},{"from":"chr:02698","current":null,"_display":"Ratel","note":"Fleet ship (Marine Ships)"},{"from":"chr:02701","current":null,"_display":"Red King","note":"Fleet ship (Marine Ships)"},{"from":"chr:02706","current":null,"_display":"Rika","note":"Fleet ship (Marine Ships)"},{"from":"chr:02712","current":null,"_display":"Ripper","note":"Fleet ship (Marine Ships)"},{"from":"chr:02725","current":null,"_display":"Rokkaku","note":"Fleet ship (Marine Ships)"},{"from":"chr:01564","current":null,"_display":null,"note":"Fleet ship (Marine Ships)"},{"from":"chr:02797","current":null,"_display":"Sengoku","note":"Fleet ship (Marine Ships)"},{"from":"chr:02800","current":null,"_display":"Sentomaru","note":"Fleet ship (Marine Ships)"},{"from":"chr:02810","current":null,"_display":"Sharinguru","note":"Fleet ship (Marine Ships)"},{"from":"chr:02825","current":null,"_display":"Shine","note":"Fleet ship (Marine Ships)"},{"from":"chr:02833","current":null,"_display":"Shu","note":"Fleet ship (Marine Ships)"},{"from":"chr:02836","current":null,"_display":"Sicily","note":"Fleet ship (Marine Ships)"},{"from":"chr:02844","current":null,"_display":"Smoker","note":"Fleet ship (Marine Ships)"},{"from":"chr:02868","current":null,"_display":"Stainless","note":"Fleet ship (Marine Ships)"},{"from":"chr:02873","current":null,"_display":"Strawberry","note":"Fleet ship (Marine Ships)"},{"from":"chr:02894","current":null,"_display":"T Bone","note":"Fleet ship (Marine Ships)"},{"from":"chr:02914","current":null,"_display":"Tashigi","note":"Fleet ship (Marine Ships)"},{"from":"chr:02920","current":null,"_display":"Tensei","note":"Fleet ship (Marine Ships)"},{"from":"chr:02930","current":null,"_display":"Tokikake","note":"Fleet ship (Marine Ships)"},{"from":"chr:02943","current":null,"_display":"Tosa","note":"Fleet ship (Marine Ships)"},{"from":"chr:02958","current":null,"_display":"Tsuru","note":"Fleet ship (Marine Ships)"},{"from":"chr:02980","current":null,"_display":"Urban","note":"Fleet ship (Marine Ships)"},{"from":"chr:02998","current":null,"_display":"Edison","note":"Fleet ship (Marine Ships)"},{"from":"chr:03001","current":null,"_display":"Shaka","note":"Fleet ship (Marine Ships)"},{"from":"chr:03003","current":null,"_display":"Vergo","note":"Fleet ship (Marine Ships)"},{"from":"chr:03004","current":null,"_display":"Very Good","note":"Fleet ship (Marine Ships)"},{"from":"chr:03041","current":null,"_display":"X Drake","note":"Fleet ship (Marine Ships)"},{"from":"chr:03043","current":null,"_display":"Yamakaji","note":"Fleet ship (Marine Ships)"},{"from":"chr:03049","current":null,"_display":"Yarisugi","note":"Fleet ship (Marine Ships)"}],"ship:00026":[{"from":"chr:01562","current":null,"_display":"Ain","note":"Fleet ship (Pine Peak)"},{"from":"chr:01594","current":null,"_display":"Aramaki","note":"Fleet ship (Pine Peak)"},{"from":"chr:01599","current":null,"_display":"Asahija","note":"Fleet ship (Pine Peak)"},{"from":"chr:01632","current":null,"_display":"Bastille","note":"Fleet ship (Pine Peak)"},{"from":"chr:01642","current":null,"_display":"Bell-mère","note":"Fleet ship (Pine Peak)"},{"from":"chr:01656","current":null,"_display":"Binz","note":"Fleet ship (Pine Peak)"},{"from":"chr:01676","current":null,"_display":"Bluegrass","note":"Fleet ship (Pine Peak)"},{"from":"chr:01686","current":null,"_display":"Bogard","note":"Fleet ship (Pine Peak)"},{"from":"chr:01688","current":null,"_display":"Bomba","note":"Fleet ship (Pine Peak)"},{"from":"chr:01694","current":null,"_display":"Borsalino","note":"Fleet ship (Pine Peak)"},{"from":"chr:01696","current":null,"_display":"Brannew","note":"Fleet ship (Pine Peak)"},{"from":"chr:01724","current":null,"_display":"Caesar Clown","note":"Fleet ship (Pine Peak)"},{"from":"chr:01728","current":null,"_display":"Cancer","note":"Fleet ship (Pine Peak)"},{"from":"chr:01729","current":null,"_display":"Candre","note":"Fleet ship (Pine Peak)"},{"from":"chr:01740","current":null,"_display":"Catacombo","note":"Fleet ship (Pine Peak)"},{"from":"chr:01863","current":null,"_display":"Comil","note":"Fleet ship (Pine Peak)"},{"from":"chr:01886","current":null,"_display":"Daigin","note":"Fleet ship (Pine Peak)"},{"from":"chr:01890","current":null,"_display":"Dalmatian","note":"Fleet ship (Pine Peak)"},{"from":"chr:01909","current":null,"_display":"Diez Barrels","note":"Fleet ship (Pine Peak)"},{"from":"chr:01915","current":null,"_display":"Doberman","note":"Fleet ship (Pine Peak)"},{"from":"chr:01921","current":null,"_display":"Doll","note":"Fleet ship (Pine Peak)"},{"from":"chr:01931","current":null,"_display":"Donquixote Rosinante","note":"Fleet ship (Pine Peak)"},{"from":"chr:01982","current":null,"_display":"Fishbonen","note":"Fleet ship (Pine Peak)"},{"from":"chr:01999","current":null,"_display":"Fullbody","note":"Fleet ship (Pine Peak)"},{"from":"chr:02049","current":null,"_display":"Gion","note":"Fleet ship (Pine Peak)"},{"from":"chr:02055","current":null,"_display":"Glove","note":"Fleet ship (Pine Peak)"},{"from":"chr:02068","current":null,"_display":"Gorilla","note":"Fleet ship (Pine Peak)"},{"from":"chr:02077","current":null,"_display":"Guillotine","note":"Fleet ship (Pine Peak)"},{"from":"chr:02126","current":null,"_display":"Hibari","note":"Fleet ship (Pine Peak)"},{"from":"chr:02134","current":null,"_display":"Hina","note":"Fleet ship (Pine Peak)"},{"from":"chr:02159","current":null,"_display":"Hototogisu","note":"Fleet ship (Pine Peak)"},{"from":"chr:02160","current":null,"_display":"Hound","note":"Fleet ship (Pine Peak)"},{"from":"chr:02197","current":null,"_display":"Issho","note":"Fleet ship (Pine Peak)"},{"from":"chr:02207","current":null,"_display":"Jaguar D. Saul","note":"Fleet ship (Pine Peak)"},{"from":"chr:02210","current":null,"_display":"Jango","note":"Fleet ship (Pine Peak)"},{"from":"chr:02232","current":null,"_display":"John Giant","note":"Fleet ship (Pine Peak)"},{"from":"chr:02288","current":null,"_display":"Kibin","note":"Fleet ship (Pine Peak)"},{"from":"chr:02312","current":null,"_display":"Koda","note":"Fleet ship (Pine Peak)"},{"from":"chr:02320","current":null,"_display":"Kong","note":"Fleet ship (Pine Peak)"},{"from":"chr:02332","current":null,"_display":"Kujaku","note":"Fleet ship (Pine Peak)"},{"from":"chr:01592","current":null,"_display":null,"note":"Fleet ship (Pine Peak)"},{"from":"chr:02356","current":null,"_display":"Kyuji","note":"Fleet ship (Pine Peak)"},{"from":"chr:02406","current":null,"_display":"Makko","note":"Fleet ship (Pine Peak)"},{"from":"chr:02423","current":null,"_display":"Marine Headquarters Court","note":"Fleet ship (Pine Peak)"},{"from":"chr:02429","current":null,"_display":"Mashikaku","note":"Fleet ship (Pine Peak)"},{"from":"chr:02439","current":null,"_display":"Maynard","note":"Fleet ship (Pine Peak)"},{"from":"chr:02497","current":null,"_display":"Monkey D. Dragon","note":"Fleet ship (Pine Peak)"},{"from":"chr:02498","current":null,"_display":"Monkey D. Garp","note":"Fleet ship (Pine Peak)"},{"from":"chr:02524","current":null,"_display":"Mozambia","note":"Fleet ship (Pine Peak)"},{"from":"chr:02571","current":null,"_display":"Nezumi","note":"Fleet ship (Pine Peak)"},{"from":"chr:02609","current":null,"_display":"Onigumo","note":"Fleet ship (Pine Peak)"},{"from":"chr:02649","current":null,"_display":"Pike","note":"Fleet ship (Pine Peak)"},{"from":"chr:02659","current":null,"_display":"Pomsky","note":"Fleet ship (Pine Peak)"},{"from":"chr:02671","current":null,"_display":"Prince Grus","note":"Fleet ship (Pine Peak)"},{"from":"chr:02698","current":null,"_display":"Ratel","note":"Fleet ship (Pine Peak)"},{"from":"chr:02701","current":null,"_display":"Red King","note":"Fleet ship (Pine Peak)"},{"from":"chr:02706","current":null,"_display":"Rika","note":"Fleet ship (Pine Peak)"},{"from":"chr:02712","current":null,"_display":"Ripper","note":"Fleet ship (Pine Peak)"},{"from":"chr:02725","current":null,"_display":"Rokkaku","note":"Fleet ship (Pine Peak)"},{"from":"chr:01564","current":null,"_display":null,"note":"Fleet ship (Pine Peak)"},{"from":"chr:02797","current":null,"_display":"Sengoku","note":"Fleet ship (Pine Peak)"},{"from":"chr:02800","current":null,"_display":"Sentomaru","note":"Fleet ship (Pine Peak)"},{"from":"chr:02810","current":null,"_display":"Sharinguru","note":"Fleet ship (Pine Peak)"},{"from":"chr:02825","current":null,"_display":"Shine","note":"Fleet ship (Pine Peak)"},{"from":"chr:02833","current":null,"_display":"Shu","note":"Fleet ship (Pine Peak)"},{"from":"chr:02836","current":null,"_display":"Sicily","note":"Fleet ship (Pine Peak)"},{"from":"chr:02844","current":null,"_display":"Smoker","note":"Fleet ship (Pine Peak)"},{"from":"chr:02868","current":null,"_display":"Stainless","note":"Fleet ship (Pine Peak)"},{"from":"chr:02873","current":null,"_display":"Strawberry","note":"Fleet ship (Pine Peak)"},{"from":"chr:02894","current":null,"_display":"T Bone","note":"Fleet ship (Pine Peak)"},{"from":"chr:02914","current":null,"_display":"Tashigi","note":"Fleet ship (Pine Peak)"},{"from":"chr:02920","current":null,"_display":"Tensei","note":"Fleet ship (Pine Peak)"},{"from":"chr:02930","current":null,"_display":"Tokikake","note":"Fleet ship (Pine Peak)"},{"from":"chr:02943","current":null,"_display":"Tosa","note":"Fleet ship (Pine Peak)"},{"from":"chr:02958","current":null,"_display":"Tsuru","note":"Fleet ship (Pine Peak)"},{"from":"chr:02980","current":null,"_display":"Urban","note":"Fleet ship (Pine Peak)"},{"from":"chr:02998","current":null,"_display":"Edison","note":"Fleet ship (Pine Peak)"},{"from":"chr:03001","current":null,"_display":"Shaka","note":"Fleet ship (Pine Peak)"},{"from":"chr:03003","current":null,"_display":"Vergo","note":"Fleet ship (Pine Peak)"},{"from":"chr:03004","current":null,"_display":"Very Good","note":"Fleet ship (Pine Peak)"},{"from":"chr:03041","current":null,"_display":"X Drake","note":"Fleet ship (Pine Peak)"},{"from":"chr:03043","current":null,"_display":"Yamakaji","note":"Fleet ship (Pine Peak)"},{"from":"chr:03049","current":null,"_display":"Yarisugi","note":"Fleet ship (Pine Peak)"}],"ship:00033":[{"from":"chr:01562","current":null,"_display":"Ain","note":"Fleet ship (Stan Maley)"},{"from":"chr:01594","current":null,"_display":"Aramaki","note":"Fleet ship (Stan Maley)"},{"from":"chr:01599","current":null,"_display":"Asahija","note":"Fleet ship (Stan Maley)"},{"from":"chr:01632","current":null,"_display":"Bastille","note":"Fleet ship (Stan Maley)"},{"from":"chr:01642","current":null,"_display":"Bell-mère","note":"Fleet ship (Stan Maley)"},{"from":"chr:01656","current":null,"_display":"Binz","note":"Fleet ship (Stan Maley)"},{"from":"chr:01676","current":null,"_display":"Bluegrass","note":"Fleet ship (Stan Maley)"},{"from":"chr:01686","current":null,"_display":"Bogard","note":"Fleet ship (Stan Maley)"},{"from":"chr:01688","current":null,"_display":"Bomba","note":"Fleet ship (Stan Maley)"},{"from":"chr:01694","current":null,"_display":"Borsalino","note":"Fleet ship (Stan Maley)"},{"from":"chr:01696","current":null,"_display":"Brannew","note":"Fleet ship (Stan Maley)"},{"from":"chr:01724","current":null,"_display":"Caesar Clown","note":"Fleet ship (Stan Maley)"},{"from":"chr:01728","current":null,"_display":"Cancer","note":"Fleet ship (Stan Maley)"},{"from":"chr:01729","current":null,"_display":"Candre","note":"Fleet ship (Stan Maley)"},{"from":"chr:01740","current":null,"_display":"Catacombo","note":"Fleet ship (Stan Maley)"},{"from":"chr:01863","current":null,"_display":"Comil","note":"Fleet ship (Stan Maley)"},{"from":"chr:01886","current":null,"_display":"Daigin","note":"Fleet ship (Stan Maley)"},{"from":"chr:01890","current":null,"_display":"Dalmatian","note":"Fleet ship (Stan Maley)"},{"from":"chr:01909","current":null,"_display":"Diez Barrels","note":"Fleet ship (Stan Maley)"},{"from":"chr:01915","current":null,"_display":"Doberman","note":"Fleet ship (Stan Maley)"},{"from":"chr:01921","current":null,"_display":"Doll","note":"Fleet ship (Stan Maley)"},{"from":"chr:01931","current":null,"_display":"Donquixote Rosinante","note":"Fleet ship (Stan Maley)"},{"from":"chr:01982","current":null,"_display":"Fishbonen","note":"Fleet ship (Stan Maley)"},{"from":"chr:01999","current":null,"_display":"Fullbody","note":"Fleet ship (Stan Maley)"},{"from":"chr:02049","current":null,"_display":"Gion","note":"Fleet ship (Stan Maley)"},{"from":"chr:02055","current":null,"_display":"Glove","note":"Fleet ship (Stan Maley)"},{"from":"chr:02068","current":null,"_display":"Gorilla","note":"Fleet ship (Stan Maley)"},{"from":"chr:02077","current":null,"_display":"Guillotine","note":"Fleet ship (Stan Maley)"},{"from":"chr:02126","current":null,"_display":"Hibari","note":"Fleet ship (Stan Maley)"},{"from":"chr:02134","current":null,"_display":"Hina","note":"Fleet ship (Stan Maley)"},{"from":"chr:02159","current":null,"_display":"Hototogisu","note":"Fleet ship (Stan Maley)"},{"from":"chr:02160","current":null,"_display":"Hound","note":"Fleet ship (Stan Maley)"},{"from":"chr:02197","current":null,"_display":"Issho","note":"Fleet ship (Stan Maley)"},{"from":"chr:02207","current":null,"_display":"Jaguar D. Saul","note":"Fleet ship (Stan Maley)"},{"from":"chr:02210","current":null,"_display":"Jango","note":"Fleet ship (Stan Maley)"},{"from":"chr:02232","current":null,"_display":"John Giant","note":"Fleet ship (Stan Maley)"},{"from":"chr:02288","current":null,"_display":"Kibin","note":"Fleet ship (Stan Maley)"},{"from":"chr:02312","current":null,"_display":"Koda","note":"Fleet ship (Stan Maley)"},{"from":"chr:02320","current":null,"_display":"Kong","note":"Fleet ship (Stan Maley)"},{"from":"chr:02332","current":null,"_display":"Kujaku","note":"Fleet ship (Stan Maley)"},{"from":"chr:01592","current":null,"_display":null,"note":"Fleet ship (Stan Maley)"},{"from":"chr:02356","current":null,"_display":"Kyuji","note":"Fleet ship (Stan Maley)"},{"from":"chr:02406","current":null,"_display":"Makko","note":"Fleet ship (Stan Maley)"},{"from":"chr:02423","current":null,"_display":"Marine Headquarters Court","note":"Fleet ship (Stan Maley)"},{"from":"chr:02429","current":null,"_display":"Mashikaku","note":"Fleet ship (Stan Maley)"},{"from":"chr:02439","current":null,"_display":"Maynard","note":"Fleet ship (Stan Maley)"},{"from":"chr:02497","current":null,"_display":"Monkey D. Dragon","note":"Fleet ship (Stan Maley)"},{"from":"chr:02498","current":null,"_display":"Monkey D. Garp","note":"Fleet ship (Stan Maley)"},{"from":"chr:02524","current":null,"_display":"Mozambia","note":"Fleet ship (Stan Maley)"},{"from":"chr:02571","current":null,"_display":"Nezumi","note":"Fleet ship (Stan Maley)"},{"from":"chr:02609","current":null,"_display":"Onigumo","note":"Fleet ship (Stan Maley)"},{"from":"chr:02649","current":null,"_display":"Pike","note":"Fleet ship (Stan Maley)"},{"from":"chr:02659","current":null,"_display":"Pomsky","note":"Fleet ship (Stan Maley)"},{"from":"chr:02671","current":null,"_display":"Prince Grus","note":"Fleet ship (Stan Maley)"},{"from":"chr:02698","current":null,"_display":"Ratel","note":"Fleet ship (Stan Maley)"},{"from":"chr:02701","current":null,"_display":"Red King","note":"Fleet ship (Stan Maley)"},{"from":"chr:02706","current":null,"_display":"Rika","note":"Fleet ship (Stan Maley)"},{"from":"chr:02712","current":null,"_display":"Ripper","note":"Fleet ship (Stan Maley)"},{"from":"chr:02725","current":null,"_display":"Rokkaku","note":"Fleet ship (Stan Maley)"},{"from":"chr:01564","current":null,"_display":null,"note":"Fleet ship (Stan Maley)"},{"from":"chr:02797","current":null,"_display":"Sengoku","note":"Fleet ship (Stan Maley)"},{"from":"chr:02800","current":null,"_display":"Sentomaru","note":"Fleet ship (Stan Maley)"},{"from":"chr:02810","current":null,"_display":"Sharinguru","note":"Fleet ship (Stan Maley)"},{"from":"chr:02825","current":null,"_display":"Shine","note":"Fleet ship (Stan Maley)"},{"from":"chr:02833","current":null,"_display":"Shu","note":"Fleet ship (Stan Maley)"},{"from":"chr:02836","current":null,"_display":"Sicily","note":"Fleet ship (Stan Maley)"},{"from":"chr:02844","current":null,"_display":"Smoker","note":"Fleet ship (Stan Maley)"},{"from":"chr:02868","current":null,"_display":"Stainless","note":"Fleet ship (Stan Maley)"},{"from":"chr:02873","current":null,"_display":"Strawberry","note":"Fleet ship (Stan Maley)"},{"from":"chr:02894","current":null,"_display":"T Bone","note":"Fleet ship (Stan Maley)"},{"from":"chr:02914","current":null,"_display":"Tashigi","note":"Fleet ship (Stan Maley)"},{"from":"chr:02920","current":null,"_display":"Tensei","note":"Fleet ship (Stan Maley)"},{"from":"chr:02930","current":null,"_display":"Tokikake","note":"Fleet ship (Stan Maley)"},{"from":"chr:02943","current":null,"_display":"Tosa","note":"Fleet ship (Stan Maley)"},{"from":"chr:02958","current":null,"_display":"Tsuru","note":"Fleet ship (Stan Maley)"},{"from":"chr:02980","current":null,"_display":"Urban","note":"Fleet ship (Stan Maley)"},{"from":"chr:02998","current":null,"_display":"Edison","note":"Fleet ship (Stan Maley)"},{"from":"chr:03001","current":null,"_display":"Shaka","note":"Fleet ship (Stan Maley)"},{"from":"chr:03003","current":null,"_display":"Vergo","note":"Fleet ship (Stan Maley)"},{"from":"chr:03004","current":null,"_display":"Very Good","note":"Fleet ship (Stan Maley)"},{"from":"chr:03041","current":null,"_display":"X Drake","note":"Fleet ship (Stan Maley)"},{"from":"chr:03043","current":null,"_display":"Yamakaji","note":"Fleet ship (Stan Maley)"},{"from":"chr:03049","current":null,"_display":"Yarisugi","note":"Fleet ship (Stan Maley)"}],"ship:00003":[{"from":"chr:01707","current":true,"_display":"Buchi"},{"from":"chr:02210","current":false,"_display":"Jango"},{"from":"chr:02342","current":true,"_display":"Kuro"},{"from":"chr:02591","current":true,"_display":"Nugire Yainu"},{"from":"chr:02806","current":true,"_display":"Sham"}],"ship:00005":[{"from":"chr:02719","current":false,"_display":"Robson"},{"from":"chr:03026","current":false,"_display":"Wapol"}],"ship:00007":[{"from":"chr:01611","current":null,"_display":"Babe","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:01618","current":null,"_display":"Banchi","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:01649","current":null,"_display":"Bentham","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:01649","current":null,"_display":"Bentham","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:01876","current":null,"_display":"Crocodile","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:01895","current":null,"_display":"Daz Bonez","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:01945","current":null,"_display":"Drophy","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02008","current":null,"_display":"Galdino","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02028","current":null,"_display":"Gem","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02176","current":null,"_display":"Igaram","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02366","current":null,"_display":"Lassoo","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02419","current":null,"_display":"Marianne","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02454","current":null,"_display":"Mikita","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02471","current":null,"_display":"Miss Father's Day","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02472","current":null,"_display":"Miss Friday","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02473","current":null,"_display":"Miss Monday","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02473","current":null,"_display":"Miss Monday","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02474","current":null,"_display":"Miss Mother's Day","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02475","current":null,"_display":"Miss Saturday","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02476","current":null,"_display":"Miss Thursday","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02477","current":null,"_display":"Miss Tuesday","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02526","current":null,"_display":"Mr. 10","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02527","current":null,"_display":"Mr. 11","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02528","current":null,"_display":"Mr. 12","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02529","current":null,"_display":"Mr. 13","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02530","current":null,"_display":"Mr. 6","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02531","current":null,"_display":"Mr. 7","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02532","current":null,"_display":"Mr. 9","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02532","current":null,"_display":"Mr. 9","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02560","current":null,"_display":"Nefertari Vivi","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:02573","current":null,"_display":"Nico Robin","note":"Fleet ship (Chiryaku Ten'nen Maru)"},{"from":"chr:03069","current":null,"_display":"Zala","note":"Fleet ship (Chiryaku Ten'nen Maru)"}],"ship:00028":[{"from":"chr:01611","current":null,"_display":"Babe","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:01618","current":null,"_display":"Banchi","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:01649","current":null,"_display":"Bentham","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:01649","current":null,"_display":"Bentham","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:01876","current":null,"_display":"Crocodile","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:01895","current":null,"_display":"Daz Bonez","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:01945","current":null,"_display":"Drophy","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02008","current":null,"_display":"Galdino","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02028","current":null,"_display":"Gem","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02176","current":null,"_display":"Igaram","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02366","current":null,"_display":"Lassoo","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02419","current":null,"_display":"Marianne","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02454","current":null,"_display":"Mikita","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02471","current":null,"_display":"Miss Father's Day","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02472","current":null,"_display":"Miss Friday","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02473","current":null,"_display":"Miss Monday","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02473","current":null,"_display":"Miss Monday","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02474","current":null,"_display":"Miss Mother's Day","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02475","current":null,"_display":"Miss Saturday","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02476","current":null,"_display":"Miss Thursday","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02477","current":null,"_display":"Miss Tuesday","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02526","current":null,"_display":"Mr. 10","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02527","current":null,"_display":"Mr. 11","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02528","current":null,"_display":"Mr. 12","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02529","current":null,"_display":"Mr. 13","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02530","current":null,"_display":"Mr. 6","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02531","current":null,"_display":"Mr. 7","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02532","current":null,"_display":"Mr. 9","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02532","current":null,"_display":"Mr. 9","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02560","current":null,"_display":"Nefertari Vivi","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:02573","current":null,"_display":"Nico Robin","note":"Fleet ship (Pop Rock Candy)"},{"from":"chr:03069","current":null,"_display":"Zala","note":"Fleet ship (Pop Rock Candy)"}],"ship:00008":[{"from":"chr:01653","current":false,"_display":"Big Pan"},{"from":"chr:01734","current":false,"_display":"Capote"},{"from":"chr:01850","current":false,"_display":"Chuchun"},{"from":"chr:01926","current":false,"_display":"Donovan"},{"from":"chr:01989","current":true,"_display":"Foxy"},{"from":"chr:02032","current":false,"_display":"George Mach"},{"from":"chr:02043","current":false,"_display":"Gina"},{"from":"chr:02092","current":true,"_display":"Hamburg"},{"from":"chr:02198","current":false,"_display":"Itomimizu"},{"from":"chr:02287","current":false,"_display":"Kibagaeru"},{"from":"chr:02493","current":false,"_display":"Monda"},{"from":"chr:02519","current":false,"_display":"Mountain Ricky"},{"from":"chr:02573","current":true,"_display":"Nico Robin"},{"from":"chr:02646","current":false,"_display":"Pickles"},{"from":"chr:02662","current":true,"_display":"Porche"},{"from":"chr:02851","current":false,"_display":"Sonieh"},{"from":"chr:02938","current":false,"_display":"Tony Tony Chopper"}],"ship:00015":[{"from":"chr:02379","current":true,"_display":"Little Oars Jr."}],"ship:00019":[{"from":"chr:01574","current":false,"_display":"Alvida"},{"from":"chr:02120","current":false,"_display":"Heppoko"},{"from":"chr:02311","current":false,"_display":"Koby"},{"from":"chr:02641","current":false,"_display":"Peppoko"},{"from":"chr:02660","current":false,"_display":"Poppoko"}],"ship:00021":[{"from":"chr:01644","current":false,"_display":"Bellamy"},{"from":"chr:01949","current":true,"_display":"Eddy"},{"from":"chr:02125","current":true,"_display":"Hewitt"},{"from":"chr:02371","current":true,"_display":"Lily"},{"from":"chr:02408","current":true,"_display":"Mani"},{"from":"chr:02544","current":false,"_display":"Muret"},{"from":"chr:02716","current":true,"_display":"Rivers"},{"from":"chr:02731","current":true,"_display":"Ross"},{"from":"chr:02771","current":true,"_display":"Sarquiss"}],"ship:00023":[{"from":"chr:01735","current":true,"_display":"Caribou"},{"from":"chr:01869","current":true,"_display":"Coribou"},{"from":"chr:02492","current":false,"_display":"Momoo"}],"ship:00025":[{"from":"chr:01593","current":true,"_display":"Aphelandra"},{"from":"chr:01615","current":true,"_display":"Bacura"},{"from":"chr:01672","current":true,"_display":"Blue Fan"},{"from":"chr:01680","current":true,"_display":"Boa Hancock"},{"from":"chr:01681","current":true,"_display":"Boa Marigold"},{"from":"chr:01682","current":true,"_display":"Boa Sandersonia"},{"from":"chr:01873","current":true,"_display":"Cosmos"},{"from":"chr:01889","current":true,"_display":"Daisy"},{"from":"chr:02054","current":false,"_display":"Gloriosa"},{"from":"chr:02416","current":true,"_display":"Marguerite"},{"from":"chr:02695","current":true,"_display":"Ran"},{"from":"chr:02709","current":true,"_display":"Rindo"},{"from":"chr:02758","current":true,"_display":"Salome"},{"from":"chr:02804","current":false,"_display":"Shakuyaku"},{"from":"chr:02893","current":true,"_display":"Sweet Pea"},{"from":"chr:02951","current":true,"_display":"Tritoma"}],"ship:00029":[{"from":"chr:01608","current":true,"_display":"Avalo Pizarro"},{"from":"chr:01726","current":false,"_display":"Camel"},{"from":"chr:01741","current":true,"_display":"Catarina Devon"},{"from":"chr:01917","current":true,"_display":"Doc Q"},{"from":"chr:02220","current":true,"_display":"Jesus Burgess"},{"from":"chr:02290","current":true,"_display":"Kikipatsu"},{"from":"chr:01592","current":true,"_display":null},{"from":"chr:02362","current":true,"_display":"Laffitte"},{"from":"chr:02403","current":true,"_display":"Maki"},{"from":"chr:02426","current":true,"_display":"Marshall D. Teach"},{"from":"chr:02426","current":true,"_display":"Marshall D. Teach"},{"from":"chr:02632","current":true,"_display":"Peachbeard"},{"from":"chr:02765","current":true,"_display":"Sanjuan Wolf"},{"from":"chr:02830","current":true,"_display":"Shiryu"},{"from":"chr:02876","current":true,"_display":"Stronger"},{"from":"chr:01657","current":true,"_display":"Birdy"},{"from":"chr:02993","current":true,"_display":"Van Augur"},{"from":"chr:02995","current":true,"_display":"Vasco Shot"}],"ship:00037":[{"from":"chr:01713","current":true,"_display":"Buhichuck"},{"from":"chr:01744","current":true,"_display":"Cerberus"},{"from":"chr:02020","current":true,"_display":"Ganzui"},{"from":"chr:02026","current":true,"_display":"Gecko Moria"},{"from":"chr:02040","current":true,"_display":"Gill Bastar"},{"from":"chr:02131","current":true,"_display":"Hildon"},{"from":"chr:02138","current":true,"_display":"Hippo Gentleman"},{"from":"chr:02149","current":true,"_display":"Hogback"},{"from":"chr:02225","current":true,"_display":"Jigoro"},{"from":"chr:02231","current":false,"_display":"John"},{"from":"chr:02336","current":true,"_display":"Kumashi"},{"from":"chr:02382","current":true,"_display":"Lola"},{"from":"chr:02485","current":true,"_display":"MocDonald"},{"from":"chr:02596","current":true,"_display":"Oars"},{"from":"chr:02642","current":true,"_display":"Perona"},{"from":"chr:02715","current":true,"_display":"Risky Brothers"},{"from":"chr:02744","current":true,"_display":"Ryuma"},{"from":"chr:02911","current":true,"_display":"Tararan"},{"from":"chr:02976","current":true,"_display":"Unigaro"},{"from":"chr:03005","current":true,"_display":"Victoria Cindry"}],"ship:00041":[{"from":"chr:01703","current":false,"_display":"Brook","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:01991","current":false,"_display":"Franky","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02227","current":false,"_display":"Jinbe","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02499","current":false,"_display":"Monkey D. Luffy","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02548","current":false,"_display":"Nami","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02560","current":false,"_display":"Nefertari Vivi","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02573","current":false,"_display":"Nico Robin","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02652","current":false,"_display":"Pirate Bear","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02653","current":false,"_display":"Pirate Penguin","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02729","current":false,"_display":"Roronoa Zoro","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02764","current":false,"_display":"Sanji","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02938","current":false,"_display":"Tony Tony Chopper","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:02985","current":false,"_display":"Usopp","note":"Pre-Enies Lobby flagship (Ch.41–430)"},{"from":"chr:03076","current":false,"_display":"Zeus","note":"Pre-Enies Lobby flagship (Ch.41–430)"}],"ship:00042":[{"from":"chr:01703","current":true,"_display":"Brook","note":"Current flagship (Ch.435+)"},{"from":"chr:01991","current":true,"_display":"Franky","note":"Current flagship (Ch.435+)"},{"from":"chr:02227","current":true,"_display":"Jinbe","note":"Current flagship (Ch.435+)"},{"from":"chr:02499","current":true,"_display":"Monkey D. Luffy","note":"Current flagship (Ch.435+)"},{"from":"chr:02548","current":true,"_display":"Nami","note":"Current flagship (Ch.435+)"},{"from":"chr:02560","current":true,"_display":"Nefertari Vivi","note":"Current flagship (Ch.435+)"},{"from":"chr:02573","current":true,"_display":"Nico Robin","note":"Current flagship (Ch.435+)"},{"from":"chr:02652","current":true,"_display":"Pirate Bear","note":"Current flagship (Ch.435+)"},{"from":"chr:02653","current":true,"_display":"Pirate Penguin","note":"Current flagship (Ch.435+)"},{"from":"chr:02729","current":true,"_display":"Roronoa Zoro","note":"Current flagship (Ch.435+)"},{"from":"chr:02764","current":true,"_display":"Sanji","note":"Current flagship (Ch.435+)"},{"from":"chr:02938","current":true,"_display":"Tony Tony Chopper","note":"Current flagship (Ch.435+)"},{"from":"chr:02985","current":true,"_display":"Usopp","note":"Current flagship (Ch.435+)"},{"from":"chr:03076","current":true,"_display":"Zeus","note":"Current flagship (Ch.435+)"}],"ship:00043":[{"from":"chr:01580","current":true,"_display":"Andre"},{"from":"chr:01597","current":true,"_display":"Arthur"},{"from":"chr:01605","current":true,"_display":"Atmos"},{"from":"chr:01616","current":true,"_display":"Baggaley"},{"from":"chr:01669","current":true,"_display":"Blamenco"},{"from":"chr:01670","current":true,"_display":"Blenheim"},{"from":"chr:01697","current":true,"_display":"Brew"},{"from":"chr:01699","current":true,"_display":"Brocca"},{"from":"chr:01861","current":true,"_display":"Colscon"},{"from":"chr:01878","current":true,"_display":"Curiel"},{"from":"chr:01950","current":true,"_display":"Edward Newgate"},{"from":"chr:01962","current":true,"_display":"Epoida"},{"from":"chr:01987","current":true,"_display":"Fossa"},{"from":"chr:02104","current":true,"_display":"Happygun"},{"from":"chr:02110","current":true,"_display":"Haruta"},{"from":"chr:02185","current":false,"_display":"Inuarashi"},{"from":"chr:02195","current":true,"_display":"Islewan"},{"from":"chr:02201","current":false,"_display":"Izou"},{"from":"chr:02239","current":true,"_display":"Jozu"},{"from":"chr:02244","current":true,"_display":"Julius"},{"from":"chr:02271","current":true,"_display":"Karma"},{"from":"chr:02283","current":true,"_display":"Kechatch"},{"from":"chr:02299","current":true,"_display":"Kinga"},{"from":"chr:02301","current":true,"_display":"Kingdew"},{"from":"chr:02326","current":false,"_display":"Kouzuki Oden"},{"from":"chr:02328","current":false,"_display":"Kouzuki Toki"},{"from":"chr:02333","current":true,"_display":"Kukai"},{"from":"chr:02413","current":false,"_display":"Marco"},{"from":"chr:02431","current":true,"_display":"Masked Deuce"},{"from":"chr:02549","current":true,"_display":"Namur"},{"from":"chr:02563","current":false,"_display":"Nekomamushi"},{"from":"chr:02631","current":true,"_display":"Pavlik"},{"from":"chr:02665","current":true,"_display":"Portgas D. Ace"},{"from":"chr:02691","current":true,"_display":"Rakuyo"},{"from":"chr:02703","current":true,"_display":"Reforte"},{"from":"chr:02862","current":true,"_display":"Speed Jiru"},{"from":"chr:02867","current":true,"_display":"Squard"},{"from":"chr:02915","current":true,"_display":"Tate"},{"from":"chr:02925","current":true,"_display":"Thatch"},{"from":"chr:03014","current":false,"_display":"Vista"},{"from":"chr:03015","current":true,"_display":"Vitan"},{"from":"chr:03032","current":true,"_display":"Whitey Bay"},{"from":"chr:03077","current":true,"_display":"Zodia"}],"ship:00044":[{"from":"chr:01647","current":true,"_display":"Benn Beckman"},{"from":"chr:01690","current":true,"_display":"Bonk Punch"},{"from":"chr:01714","current":true,"_display":"Building Snake"},{"from":"chr:01993","current":true,"_display":"Fugar"},{"from":"chr:02004","current":true,"_display":"Gab"},{"from":"chr:02034","current":true,"_display":"Gerotini"},{"from":"chr:02153","current":true,"_display":"Hongo"},{"from":"chr:02373","current":true,"_display":"Limejuice"},{"from":"chr:02374","current":true,"_display":"Linaria"},{"from":"chr:02387","current":true,"_display":"Lucky Roux"},{"from":"chr:02500","current":true,"_display":"Monster"},{"from":"chr:02607","current":true,"_display":"Oli"},{"from":"chr:02676","current":true,"_display":"Pururu"},{"from":"chr:02722","current":true,"_display":"Rockstar"},{"from":"chr:02809","current":true,"_display":"Shanks"},{"from":"chr:02987","current":false,"_display":"Uta"},{"from":"chr:03050","current":true,"_display":"Yasopp"}],"ship:00045":[{"from":"chr:01650","current":true,"_display":"Bepo"},{"from":"chr:01853","current":true,"_display":"Clione"},{"from":"chr:02090","current":true,"_display":"Hakugan"},{"from":"chr:02178","current":true,"_display":"Ikkaku"},{"from":"chr:02214","current":true,"_display":"Jean Bart"},{"from":"chr:02640","current":true,"_display":"Penguin"},{"from":"chr:02803","current":true,"_display":"Shachi"},{"from":"chr:02947","current":true,"_display":"Trafalgar D. Water Law"},{"from":"chr:02975","current":true,"_display":"Uni"}]}
+</script>
+<script id="ships-data" type="application/json">
+{
+  "Alexandra": {
+    "id": "ship:00001",
+    "name": "Alexandra",
+    "slug": "alexandra",
+    "aliases": [
+      "アレクサンドラ号",
+      "Arekusandora-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "アレクサンドラ号",
+    "name_romaji": "Arekusandora-gō",
+    "name_en": "N/A",
+    "affiliation": "Marines",
+    "first_appearance": "Movie 4"
+  },
+  "Baratie": {
+    "id": "ship:00002",
+    "name": "Baratie",
+    "slug": "baratie",
+    "aliases": [
+      "バラティエ"
+    ],
+    "type": "ship",
+    "found": true,
+    "infobox_image": "\nBaratie Infobox.png",
+    "name_jp": "バラティエ",
+    "name_romaji": "Baratie",
+    "name_en": "Baratie",
+    "first_appearance": "Chapter 43; Episode 20",
+    "debut_chapter": 43
+  },
+  "Bezan Black": {
+    "id": "ship:00003",
+    "name": "Bezan Black",
+    "slug": "bezan-black",
+    "aliases": [
+      "ベザン・ブラック号",
+      "Bezan Burakku-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ベザン・ブラック号",
+    "name_romaji": "Bezan Burakku-gō",
+    "name_en": "Bezan Black",
+    "affiliation": "Black Cat Pirates",
+    "first_appearance": "Chapter 26; Episode 10",
+    "debut_chapter": 26
+  },
+  "Big Top": {
+    "id": "ship:00004",
+    "name": "Big Top",
+    "slug": "big-top",
+    "aliases": [
+      "ビッグトップ号",
+      "Biggu Toppu-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ビッグトップ号",
+    "name_romaji": "Biggu Toppu-gō",
+    "name_en": "Big Top",
+    "affiliation": "Buggy Pirates",
+    "first_appearance": "Chapter 8; Episode 4",
+    "debut_chapter": 8
+  },
+  "Bliking": {
+    "id": "ship:00005",
+    "name": "Bliking",
+    "slug": "bliking",
+    "aliases": [
+      "ブリキング号",
+      "Burikingu-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ブリキング号",
+    "name_romaji": "Burikingu-gō",
+    "name_en": "Bliking (VIZ),Tin Tyrant (Funimation)",
+    "affiliation": "Bliking Pirates",
+    "first_appearance": "Chapter 131; Episode 79",
+    "status": "1",
+    "debut_chapter": 131
+  },
+  "Bounty Maru": {
+    "id": "ship:00006",
+    "name": "Bounty Maru",
+    "slug": "bounty-maru",
+    "aliases": [
+      "バウンティ丸",
+      "Baunti Maru"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "バウンティ丸",
+    "name_romaji": "Baunti Maru",
+    "name_en": "Bounty Maru",
+    "affiliation": "Yosaku and Johnny",
+    "first_appearance": "Chapter 624 (cover)",
+    "debut_chapter": 624
+  },
+  "Chiryaku Ten'nen Maru": {
+    "id": "ship:00007",
+    "name": "Chiryaku Ten'nen Maru",
+    "slug": "chiryaku-ten-nen-maru",
+    "aliases": [
+      "智略天然丸",
+      "''Chiryaku Ten'nen Maru''"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "智略天然丸",
+    "name_romaji": "''Chiryaku Ten'nen Maru''",
+    "name_en": "N/A",
+    "affiliation": "Baroque Works",
+    "first_appearance": "Chapter 158; Episode 93",
+    "debut_chapter": 158
+  },
+  "Cutie Wagon": {
+    "id": "ship:00008",
+    "name": "Cutie Wagon",
+    "slug": "cutie-wagon",
+    "aliases": [
+      "キューティワゴン号",
+      "Kyūti Wagon-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "キューティワゴン号",
+    "name_romaji": "Kyūti Wagon-gō",
+    "name_en": "Cutie Wagon",
+    "affiliation": "Foxy Pirates",
+    "first_appearance": "Chapter 306; Episode 209",
+    "debut_chapter": 306
+  },
+  "Dial Boat": {
+    "id": "ship:00009",
+    "name": "Dial Boat",
+    "slug": "dial-boat",
+    "aliases": [
+      "船",
+      "Daiaru Sen"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "船",
+    "name_romaji": "Daiaru Sen",
+    "name_en": "Dial Ship",
+    "affiliation": "Skypiea",
+    "first_appearance": "Chapter 244; Episode 158",
+    "debut_chapter": 244
+  },
+  "Fleet": {
+    "id": "ship:00010",
+    "name": "Fleet",
+    "slug": "fleet",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Flying Dutchman": {
+    "id": "ship:00011",
+    "name": "Flying Dutchman",
+    "slug": "flying-dutchman",
+    "aliases": [
+      "フライング・ダッチマン号",
+      "Furaingu Datchiman-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "フライング・ダッチマン号",
+    "name_romaji": "Furaingu Datchiman-gō",
+    "name_en": "Flying Dutchman",
+    "affiliation": "Vander Decken and descendants; Flying Pirates (current)",
+    "first_appearance": "Chapter 606; Episode 525",
+    "debut_chapter": 606
+  },
+  "Flying Gas Balloon": {
+    "id": "ship:00012",
+    "name": "Flying Gas Balloon",
+    "slug": "flying-gas-balloon",
+    "aliases": [
+      "空飛ぶガス風船",
+      "Soratobu Gasu Fūsen"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "空飛ぶガス風船",
+    "name_romaji": "Soratobu Gasu Fūsen",
+    "name_en": "Flying Gas Balloon",
+    "affiliation": "Caesar Clown",
+    "first_appearance": "Chapter 674; Episode 600",
+    "debut_chapter": 674
+  },
+  "Hitsugibune": {
+    "id": "ship:00013",
+    "name": "Hitsugibune",
+    "slug": "hitsugibune",
+    "aliases": [
+      "棺船"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "棺船",
+    "name_romaji": "Hitsugibune",
+    "name_en": "Coffin Boat",
+    "affiliation": "Dracule Mihawk",
+    "first_appearance": "Chapter 49; Episode 23",
+    "debut_chapter": 49
+  },
+  "Karasumaru": {
+    "id": "ship:00014",
+    "name": "Karasumaru",
+    "slug": "karasumaru",
+    "aliases": [
+      "カラス丸"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "カラス丸",
+    "name_romaji": "Karasumaru",
+    "name_en": "Karasumaru (Viz);The Crow (Funimation)",
+    "affiliation": "Straw Hat Pirates; Conis",
+    "first_appearance": "Chapter 244; Episode 158",
+    "status": "1",
+    "debut_chapter": 244
+  },
+  "Little Gerais": {
+    "id": "ship:00015",
+    "name": "Little Gerais",
+    "slug": "little-gerais",
+    "aliases": [
+      "リトルジェライス号",
+      "Ritoru Jeraisu-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "リトルジェライス号",
+    "name_romaji": "Ritoru Jeraisu-gō",
+    "name_en": "N/A",
+    "affiliation": "Little Pirates",
+    "first_appearance": "Chapter 551; Episode 460",
+    "debut_chapter": 551
+  },
+  "MADS Research Ship": {
+    "id": "ship:00016",
+    "name": "MADS Research Ship",
+    "slug": "mads-research-ship",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Marine Ships": {
+    "id": "ship:00017",
+    "name": "Marine Ships",
+    "slug": "marine-ships",
+    "aliases": [
+      "海軍船",
+      "Kaigun-sen"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "海軍船",
+    "name_romaji": "Kaigun-sen",
+    "name_en": "Marine ships",
+    "affiliation": "Marines",
+    "first_appearance": "Chapter 43; Episode 1",
+    "debut_chapter": 43
+  },
+  "Maxim": {
+    "id": "ship:00018",
+    "name": "Maxim",
+    "slug": "maxim",
+    "aliases": [
+      "マクシム",
+      "Makushimu"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "マクシム",
+    "name_romaji": "Makushimu",
+    "name_en": "Maxim",
+    "affiliation": "Enel",
+    "first_appearance": "Chapter 277; Episode 181",
+    "debut_chapter": 277
+  },
+  "Miss Love Duck": {
+    "id": "ship:00019",
+    "name": "Miss Love Duck",
+    "slug": "miss-love-duck",
+    "aliases": [
+      "・ラブ・ダック号",
+      "Misu Rabu Dakku-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "・ラブ・ダック号",
+    "name_romaji": "Misu Rabu Dakku-gō",
+    "name_en": "Miss Love Duck",
+    "affiliation": "Alvida Pirates",
+    "first_appearance": "Chapter 2; Episode 1",
+    "status": "1",
+    "debut_chapter": 2
+  },
+  "Nasugasira": {
+    "id": "ship:00020",
+    "name": "Nasugasira",
+    "slug": "nasugasira",
+    "aliases": [
+      "ナスガシラ号",
+      "Nasugashira-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ナスガシラ号",
+    "name_romaji": "Nasugashira-gō",
+    "name_en": "Nasugashira",
+    "affiliation": "Baratie",
+    "first_appearance": "Chapter 627 (cover)",
+    "debut_chapter": 627
+  },
+  "New Witch's Tongue": {
+    "id": "ship:00021",
+    "name": "New Witch's Tongue",
+    "slug": "new-witch-s-tongue",
+    "aliases": [
+      "ニュー・ウィッチ・ベロ号",
+      "Nyū Wicchi Bero-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ニュー・ウィッチ・ベロ号",
+    "name_romaji": "Nyū Wicchi Bero-gō",
+    "name_en": "N/A",
+    "affiliation": "Bellamy Pirates",
+    "first_appearance": "Chapter 229; Episode 149",
+    "status": "unknown",
+    "debut_chapter": 229
+  },
+  "Noah": {
+    "id": "ship:00022",
+    "name": "Noah",
+    "slug": "noah",
+    "aliases": [
+      "ノア",
+      "Noa"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ノア",
+    "name_romaji": "Noa",
+    "name_en": "Noah",
+    "affiliation": "Fish-Man Island",
+    "first_appearance": "Chapter 608; Episode 527",
+    "debut_chapter": 608
+  },
+  "Numabou": {
+    "id": "ship:00023",
+    "name": "Numabou",
+    "slug": "numabou",
+    "aliases": [
+      "ヌマブー号",
+      "Numabū-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ヌマブー号",
+    "name_romaji": "Numabū-gō",
+    "name_en": "N/A",
+    "affiliation": "Caribou Pirates",
+    "first_appearance": "Chapter 604; Episode 524",
+    "status": "1",
+    "debut_chapter": 604
+  },
+  "Ox Lloyd's": {
+    "id": "ship:00024",
+    "name": "Ox Lloyd's",
+    "slug": "ox-lloyd-s",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Perfume Yuda": {
+    "id": "ship:00025",
+    "name": "Perfume Yuda",
+    "slug": "perfume-yuda",
+    "aliases": [
+      "パフューム号",
+      "Pafyūmu Yuda-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "パフューム号",
+    "name_romaji": "Pafyūmu Yuda-gō",
+    "name_en": "N/A",
+    "affiliation": "Kuja Pirates",
+    "first_appearance": "Chapter 516; Episode 410",
+    "debut_chapter": 516
+  },
+  "Pine Peak": {
+    "id": "ship:00026",
+    "name": "Pine Peak",
+    "slug": "pine-peak",
+    "aliases": [
+      "パインピーク号",
+      "Pain Pīku-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "パインピーク号",
+    "name_romaji": "Pain Pīku-gō",
+    "name_en": "Pinepeak",
+    "affiliation": "Marines",
+    "first_appearance": "Episode 205"
+  },
+  "Pluton": {
+    "id": "ship:00027",
+    "name": "Pluton",
+    "slug": "pluton",
+    "aliases": [
+      "プルトン",
+      "Puruton"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "プルトン",
+    "name_romaji": "Puruton",
+    "name_en": "Pluton",
+    "first_appearance": "Chapter 192; Episode 117 (mentioned)",
+    "status": "1",
+    "debut_chapter": 192
+  },
+  "Pop Rock Candy": {
+    "id": "ship:00028",
+    "name": "Pop Rock Candy",
+    "slug": "pop-rock-candy",
+    "aliases": [
+      "ポップロックキャンディ号",
+      "Poppu Rokku Kyandi-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ポップロックキャンディ号",
+    "name_romaji": "Poppu Rokku Kyandi-gō",
+    "name_en": "N/A",
+    "affiliation": "Baroque Works",
+    "first_appearance": "Big Trouble in Little Garden"
+  },
+  "Rocky Port": {
+    "id": "ship:00029",
+    "name": "Rocky Port",
+    "slug": "rocky-port",
+    "aliases": [
+      "ロッキーポート号",
+      "Rokkī Pōto-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ロッキーポート号",
+    "name_romaji": "Rokkī Pōto-gō",
+    "name_en": "Rocky Port",
+    "affiliation": "Blackbeard Pirates",
+    "first_appearance": "Chapter 1080; Episode 1113 (mentioned)",
+    "debut_chapter": 1080
+  },
+  "Ryugu": {
+    "id": "ship:00030",
+    "name": "Ryugu",
+    "slug": "ryugu",
+    "aliases": [
+      "リュウグウ号",
+      "Ryūgū-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "infobox_image": "250px",
+    "name_jp": "リュウグウ号",
+    "name_romaji": "Ryūgū-gō",
+    "name_en": "Ryugu",
+    "affiliation": "Ryugu Kingdom",
+    "first_appearance": "Chapter 609; Episode 528",
+    "debut_chapter": 609
+  },
+  "Sabagashira I": {
+    "id": "ship:00031",
+    "name": "Sabagashira I",
+    "slug": "sabagashira-i",
+    "aliases": [
+      "サバガシラ1号",
+      "Sabagashira Ichi-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "サバガシラ1号",
+    "name_romaji": "Sabagashira Ichi-gō",
+    "name_en": "Mackerel Head I;Mackerel Head (Odex)",
+    "affiliation": "Baratie",
+    "first_appearance": "Chapter 43; Episode 20 (idle)Chapter 53; Episode 25 (active)",
+    "debut_chapter": 43
+  },
+  "Saint Germain": {
+    "id": "ship:00032",
+    "name": "Saint Germain",
+    "slug": "saint-germain",
+    "aliases": [],
+    "type": "ship",
+    "found": false
+  },
+  "Stan Maley": {
+    "id": "ship:00033",
+    "name": "Stan Maley",
+    "slug": "stan-maley",
+    "aliases": [
+      "スタンマレー号",
+      "Sutan Marē-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "スタンマレー号",
+    "name_romaji": "Sutan Marē-gō",
+    "name_en": "Stan Marey",
+    "affiliation": "Marines",
+    "first_appearance": "Episode 197"
+  },
+  "Striker": {
+    "id": "ship:00034",
+    "name": "Striker",
+    "slug": "striker",
+    "aliases": [
+      "ストライカー",
+      "Sutoraikā"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ストライカー",
+    "name_romaji": "Sutoraikā",
+    "name_en": "Striker",
+    "affiliation": "Portgas D. Ace and Masked DeuceWhitebeard Pirates",
+    "first_appearance": "Chapter 159; Episode 95",
+    "debut_chapter": 159
+  },
+  "Svarr": {
+    "id": "ship:00035",
+    "name": "Svarr",
+    "slug": "svarr",
+    "aliases": [
+      "Suvaru"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_romaji": "Suvaru",
+    "name_en": "Svarr",
+    "affiliation": "Elbaph",
+    "first_appearance": "Chapter 1133",
+    "debut_chapter": 1133
+  },
+  "Takoyaki 8": {
+    "id": "ship:00036",
+    "name": "Takoyaki 8",
+    "slug": "takoyaki-8",
+    "aliases": [
+      "タコヤキ",
+      "Takoyaki Eito"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "タコヤキ",
+    "name_romaji": "Takoyaki Eito",
+    "name_en": "Takoyaki 8",
+    "affiliation": "Hatchan",
+    "first_appearance": "Chapter 227 (cover); Episode 390",
+    "debut_chapter": 227
+  },
+  "Thriller Bark": {
+    "id": "ship:00037",
+    "name": "Thriller Bark",
+    "slug": "thriller-bark",
+    "aliases": [
+      "スリラーバーク",
+      "Surirā Bāku"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "スリラーバーク",
+    "name_romaji": "Surirā Bāku",
+    "name_en": "Thriller Bark",
+    "affiliation": "Thriller Bark Pirates",
+    "first_appearance": "Chapter 443; Episode 338",
+    "debut_chapter": 443
+  },
+  "Utan Sonar": {
+    "id": "ship:00038",
+    "name": "Utan Sonar",
+    "slug": "utan-sonar",
+    "aliases": [
+      "ウータン・ソナー号",
+      "Ūtan Sonā-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ウータン・ソナー号",
+    "name_romaji": "Ūtan Sonā-gō",
+    "name_en": "N/A",
+    "affiliation": "Saruyama Alliance (Shoujou Pirates)",
+    "first_appearance": "Chapter 226; Episode 147",
+    "debut_chapter": 226
+  },
+  "Victory Hunter": {
+    "id": "ship:00039",
+    "name": "Victory Hunter",
+    "slug": "victory-hunter",
+    "aliases": [
+      "ビクトリー・ハンター号",
+      "Bikutorī Hantā-gō"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ビクトリー・ハンター号",
+    "name_romaji": "Bikutorī Hantā-gō",
+    "name_en": "N/A",
+    "affiliation": "Saruyama Alliance (Masira Pirates)",
+    "first_appearance": "Chapter 219; Episode 144",
+    "debut_chapter": 219
+  },
+  "Waver": {
+    "id": "ship:00040",
+    "name": "Waver",
+    "slug": "waver",
+    "aliases": [
+      "ウェイバー",
+      "Weibā"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ウェイバー",
+    "name_romaji": "Weibā",
+    "name_en": "Waver",
+    "affiliation": "Skypiea",
+    "first_appearance": "Chapter 220; Episode 144",
+    "debut_chapter": 220
+  },
+  "Going Merry": {
+    "id": "ship:00041",
+    "name": "Going Merry",
+    "slug": "going-merry",
+    "aliases": [
+      "ゴーイング・メリー号",
+      "Goingu Merri-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ゴーイング・メリー号",
+    "name_romaji": "Goingu Merri-go",
+    "name_en": "Going Merry",
+    "affiliation": "Straw Hat Pirates",
+    "first_appearance": "Chapter 41; Episode 17",
+    "debut_chapter": 41,
+    "status": "Destroyed (Sea Burial, Chapter 430)"
+  },
+  "Thousand Sunny": {
+    "id": "ship:00042",
+    "name": "Thousand Sunny",
+    "slug": "thousand-sunny",
+    "aliases": [
+      "千陽号",
+      "Sauzando Sani-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "千陽号",
+    "name_romaji": "Sauzando Sani-go",
+    "name_en": "Thousand Sunny",
+    "affiliation": "Straw Hat Pirates",
+    "first_appearance": "Chapter 436; Episode 321",
+    "debut_chapter": 436
+  },
+  "Moby Dick": {
+    "id": "ship:00043",
+    "name": "Moby Dick",
+    "slug": "moby-dick",
+    "aliases": [
+      "白ひげの船",
+      "Mobi Dikku"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "白ひげの船",
+    "name_romaji": "Mobi Dikku",
+    "name_en": "Moby Dick",
+    "affiliation": "Whitebeard Pirates",
+    "first_appearance": "Chapter 550; Episode 459",
+    "debut_chapter": 550,
+    "status": "Destroyed (Marineford War)"
+  },
+  "Red Force": {
+    "id": "ship:00044",
+    "name": "Red Force",
+    "slug": "red-force",
+    "aliases": [
+      "レッド・フォース号",
+      "Reddo Fosu-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "レッド・フォース号",
+    "name_romaji": "Reddo Fosu-go",
+    "name_en": "Red Force",
+    "affiliation": "Red Hair Pirates",
+    "first_appearance": "Chapter 1; Episode 4",
+    "debut_chapter": 1
+  },
+  "Polar Tang": {
+    "id": "ship:00045",
+    "name": "Polar Tang",
+    "slug": "polar-tang",
+    "aliases": [
+      "ポーラータン号",
+      "Pora Tan-go"
+    ],
+    "type": "ship",
+    "found": true,
+    "name_jp": "ポーラータン号",
+    "name_romaji": "Pora Tan-go",
+    "name_en": "Polar Tang",
+    "affiliation": "Heart Pirates",
+    "first_appearance": "Chapter 655; Episode 579",
+    "debut_chapter": 655
+  }
+}
+
+</script>
+<script>
+const RAW=JSON.parse(document.getElementById("ships-data").textContent||"{}");
+const SAILS=JSON.parse(document.getElementById("ship-sails-data").textContent||"{}");
+// Build a ship:NNNNN → record index for ?id= routing
+const BY_ID={};
+for(const s of Object.values(RAW)){if(s&&s.id)BY_ID[s.id]=s;}
+const params=new URLSearchParams(location.search);
+const root=document.getElementById("root");
+// Support ?id=ship:NNNNN (new) or ?name=ShipName (legacy)
+let ship=null;
+const reqId=params.get("id"),reqName=params.get("name");
+if(reqId) ship=BY_ID[reqId]||null;
+else if(reqName) ship=RAW[reqName]||null;
+
+function escapeHTML(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function chrLink(id,name){if(!id)return escapeHTML(name||"");return`<a class="entity-link" href="character.html?id=${encodeURIComponent(id)}">${escapeHTML(name||id)}</a>`}
+function linkChars(s){if(!s)return"";return s.split(/[·;]/).map(p=>{const t=p.trim();if(!t)return"";return`<a href="character.html?name=${encodeURIComponent(t)}">${escapeHTML(t)}</a>`}).filter(Boolean).join(" · ")}
+
+function renderCrewSection(shipId){
+  const rows=SAILS[shipId];
+  if(!rows||!rows.length) return"";
+  const current=rows.filter(r=>r.current!==false);
+  const former=rows.filter(r=>r.current===false);
+  let html="";
+  if(current.length){
+    html+=`<div class="section"><h3>Crew (${current.length})</h3>`;
+    html+=current.map(r=>`<div class="field"><div class="field-value">${chrLink(r.from,r._display)}</div></div>`).join("");
+    html+="</div>";
+  }
+  if(former.length){
+    html+=`<div class="section"><h3>Former Crew (${former.length})</h3>`;
+    html+=former.map(r=>`<div class="field"><div class="field-value" style="opacity:0.7">${chrLink(r.from,r._display)}</div></div>`).join("");
+    html+="</div>";
+  }
+  return html;
+}
+
+// L8 fix: refuse-render gate. Parse ship's first_appearance chapter
+// and shield the page if the ship debuts past the user's cutoff. Reads
+// localStorage directly so it fires before spoiler.js loads.
+function _shipDebutCh(s){
+  if(typeof s.first_appearance==="string"){
+    const m=s.first_appearance.match(/Chapter\s*(\d+)/i);
+    if(m)return parseInt(m[1],10);
+  }
+  return null;
+}
+function _shipBootCutoff(){
+  try{
+    const raw=JSON.parse(localStorage.getItem("codex-spoiler-state")||"null");
+    if(raw&&typeof raw.cutoff_chapter==="number"&&raw.cutoff_chapter>0)return Math.min(raw.cutoff_chapter,1181);
+    const legacy=parseInt(localStorage.getItem("spoilerCutoff")||"0",10);
+    if(legacy>0)return Math.min(legacy,1181);
+  }catch(_){}
+  return 597;
+}
+function _shipUnlocked(name){
+  try{const raw=JSON.parse(localStorage.getItem("codex-spoiler-state")||"null");return!!(raw&&raw.unlocked&&raw.unlocked[name]===true)}catch(_){return false}
+}
+function _shipShield(s,debut,eff){
+  document.title="Hidden by Spoiler Guard · Ships";
+  return`<div class="crumbs"><a href="home.html">Home</a> › <a href="ships.html">Ships</a> › <span style="color:var(--muted);font-style:italic">Hidden ship</span></div>
+    <section class="spoiler-banner" style="padding:24px 28px;border-radius:14px;border:1px solid var(--border);border-left:4px solid #6a9ec8;background:linear-gradient(135deg,#1a1610 0%,#251f15 100%);margin:18px 0">
+      <h2 style="color:#f5c95e;letter-spacing:2px;font-size:1.05rem;margin-bottom:10px;text-transform:uppercase">🛡 Hidden by Spoiler Guard</h2>
+      <p style="line-height:1.6;color:#e8d8b0;margin-bottom:14px">This ship debuts in <strong>Chapter ${debut}</strong>, past your reading point (Ch.&nbsp;<strong>${eff}</strong>). The full profile would spoil its existence.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button onclick="window.codexSettings && window.codexSettings.open()" style="background:var(--surface2);color:var(--gold);border:1px solid var(--border);padding:9px 18px;border-radius:6px;cursor:pointer;font:inherit">⚙ Adjust shield</button>
+        <button onclick="(function(){try{var st=JSON.parse(localStorage.getItem('codex-spoiler-state')||'{}');st.unlocked=st.unlocked||{};st.unlocked[${JSON.stringify(s.name)}]=true;localStorage.setItem('codex-spoiler-state',JSON.stringify(st))}catch(_){};location.reload()})()" style="background:var(--surface2);color:var(--ink-blue);border:1px solid var(--border);padding:9px 18px;border-radius:6px;cursor:pointer;font:inherit">👁 Reveal anyway (this ship only)</button>
+        <a href="ships.html" style="background:var(--surface2);color:var(--muted);border:1px solid var(--border);padding:9px 18px;border-radius:6px;text-decoration:none;display:inline-flex;align-items:center">← Back to all ships</a>
+      </div>
+    </section>`;
+}
+
+if(!ship){
+  const label=reqId||reqName;
+  root.innerHTML=label
+    ?`<div class="not-found"><h2>No record for "${escapeHTML(label)}"</h2><a href="ships.html">← Browse all ships</a></div>`
+    :`<div class="not-found"><h2>No ship requested</h2><a href="ships.html">← Browse all ships</a></div>`;
+}else{
+  const s=ship;
+  // L8 gate
+  const _shipDebut=_shipDebutCh(s);
+  const _shipEff=_shipBootCutoff();
+  if(_shipDebut&&_shipDebut>_shipEff&&!_shipUnlocked(s.name)){
+    root.innerHTML=_shipShield(s,_shipDebut,_shipEff);
+  }else{
+  document.title=`${s.name} · Ship · The Shimotsuki Codex`;
+  const quick=[];
+  if(s.captain)quick.push(`<span><strong>Captain:</strong> ${linkChars(s.captain)}</span>`);
+  if(s.affiliation)quick.push(`<span><strong>Crew:</strong> ${escapeHTML(s.affiliation)}</span>`);
+  if(s.first_appearance)quick.push(`<span><strong>Debut:</strong> ${escapeHTML(s.first_appearance)}</span>`);
+  const ident=[["English",s.name_en],["Japanese",s.name_jp],["Romanised",s.name_romaji],["Type",s.type],["Classification",s.classification],["Status",s.status]]
+    .filter(([,v])=>v&&v!=="N/A").map(([k,v])=>`<div class="field"><div class="field-label">${k}</div><div class="field-value">${escapeHTML(v)}</div></div>`).join("");
+  const crewMeta=[["Captain",linkChars(s.captain),true],["Affiliation",s.affiliation,false],["Shipwright",linkChars(s.shipwright),true]]
+    .filter(([,v])=>v).map(([k,v,raw])=>`<div class="field"><div class="field-label">${k}</div><div class="field-value">${raw?v:escapeHTML(v)}</div></div>`).join("");
+  root.innerHTML=`
+    <div class="crumbs"><a href="home.html">Home</a> › <a href="ships.html">Ships</a> › <span>${escapeHTML(s.name)}</span></div>
+    <div class="head">
+      <div class="name">${escapeHTML(s.name)}</div>
+      ${s.name_jp?`<div class="name-jp">${escapeHTML(s.name_jp)}</div>`:""}
+      ${s.name_en&&s.name_en!==s.name&&s.name_en!=="N/A"?`<div class="name-en">"${escapeHTML(s.name_en)}"</div>`:""}
+      ${quick.length?`<div class="quick">${quick.join("")}</div>`:""}
+    </div>
+    <div class="sections">
+      ${ident?`<div class="section"><h3>Identity</h3>${ident}</div>`:""}
+      ${crewMeta?`<div class="section"><h3>Affiliation</h3>${crewMeta}</div>`:""}
+      ${renderCrewSection(s.id)}
+    </div>`;
+  }  // close L8 gate else
+}
+</script>
+<script src="spoiler.js?v=1"></script>
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

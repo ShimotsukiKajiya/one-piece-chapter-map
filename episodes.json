@@ -1,0 +1,62 @@
+{
+  "_doc": "Arc-level manga ↔ anime cross-reference. Each arc lists chapter range, episode range, and any filler episodes that interrupt the arc adaptation. For per-episode mapping, see the One Piece wiki — this codex stays at arc-level granularity for usability.",
+  "generated_on": "2026-04-27",
+  "arcs": [
+    { "name": "Romance Dawn",       "saga": "East Blue",       "ch_start": 1,    "ch_end": 7,    "ep_start": 1,    "ep_end": 3,    "tag": "canon" },
+    { "name": "Orange Town",        "saga": "East Blue",       "ch_start": 8,    "ch_end": 21,   "ep_start": 4,    "ep_end": 8,    "tag": "canon" },
+    { "name": "Syrup Village",      "saga": "East Blue",       "ch_start": 22,   "ch_end": 41,   "ep_start": 9,    "ep_end": 18,   "tag": "canon", "note": "Episode 18 includes brief filler (Goat Island)." },
+    { "name": "Baratie",            "saga": "East Blue",       "ch_start": 42,   "ch_end": 68,   "ep_start": 19,   "ep_end": 30,   "tag": "canon" },
+    { "name": "Arlong Park",        "saga": "East Blue",       "ch_start": 69,   "ch_end": 95,   "ep_start": 31,   "ep_end": 44,   "tag": "canon" },
+    { "name": "Loguetown",          "saga": "East Blue",       "ch_start": 96,   "ch_end": 100,  "ep_start": 45,   "ep_end": 53,   "tag": "canon", "note": "Eps 50-53 include filler (Buggy & Alvida)." },
+
+    { "name": "Warship Island",     "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 54,   "ep_end": 61,   "tag": "filler", "note": "Anime-only — Apis and the Lost Island." },
+    { "name": "Reverse Mountain",   "saga": "Alabasta",        "ch_start": 101,  "ch_end": 105,  "ep_start": 62,   "ep_end": 63,   "tag": "canon" },
+    { "name": "Whisky Peak",        "saga": "Alabasta",        "ch_start": 106,  "ch_end": 114,  "ep_start": 64,   "ep_end": 67,   "tag": "canon" },
+    { "name": "Diary of Koby-Meppo","saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 68,   "ep_end": 69,   "tag": "filler", "note": "SBS-canonised cover-story adaptation." },
+    { "name": "Little Garden",      "saga": "Alabasta",        "ch_start": 115,  "ch_end": 129,  "ep_start": 70,   "ep_end": 77,   "tag": "canon" },
+    { "name": "Drum Island",        "saga": "Alabasta",        "ch_start": 130,  "ch_end": 154,  "ep_start": 78,   "ep_end": 91,   "tag": "canon" },
+    { "name": "Alabasta",           "saga": "Alabasta",        "ch_start": 155,  "ch_end": 217,  "ep_start": 92,   "ep_end": 130,  "tag": "canon" },
+    { "name": "Post-Alabasta",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 131,  "ep_end": 135,  "tag": "filler" },
+    { "name": "Goat Island",        "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 136,  "ep_end": 138,  "tag": "filler" },
+    { "name": "Ruluka Island",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 139,  "ep_end": 143,  "tag": "filler" },
+
+    { "name": "Jaya",               "saga": "Sky Island",      "ch_start": 218,  "ch_end": 236,  "ep_start": 144,  "ep_end": 152,  "tag": "canon" },
+    { "name": "Skypiea",            "saga": "Sky Island",      "ch_start": 237,  "ch_end": 302,  "ep_start": 153,  "ep_end": 195,  "tag": "canon" },
+
+    { "name": "G-8",                "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 196,  "ep_end": 206,  "tag": "filler", "note": "Considered the best filler arc by fans." },
+
+    { "name": "Long Ring Long Land","saga": "Water 7",         "ch_start": 303,  "ch_end": 321,  "ep_start": 207,  "ep_end": 219,  "tag": "canon" },
+    { "name": "Ocean's Dream",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 220,  "ep_end": 224,  "tag": "filler" },
+    { "name": "Foxy's Return",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 225,  "ep_end": 226,  "tag": "filler" },
+    { "name": "Water 7",            "saga": "Water 7",         "ch_start": 322,  "ch_end": 374,  "ep_start": 227,  "ep_end": 263,  "tag": "canon" },
+    { "name": "Enies Lobby",        "saga": "Water 7",         "ch_start": 375,  "ch_end": 430,  "ep_start": 264,  "ep_end": 312,  "tag": "canon" },
+    { "name": "Post-Enies Lobby",   "saga": "Water 7",         "ch_start": 431,  "ch_end": 441,  "ep_start": 313,  "ep_end": 325,  "tag": "canon" },
+    { "name": "Ice Hunter",         "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 326,  "ep_end": 336,  "tag": "filler" },
+    { "name": "Thriller Bark",      "saga": "Thriller Bark",   "ch_start": 442,  "ch_end": 489,  "ep_start": 337,  "ep_end": 381,  "tag": "canon" },
+    { "name": "Spa Island",         "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 382,  "ep_end": 384,  "tag": "filler" },
+    { "name": "Sabaody Archipelago","saga": "Summit War",      "ch_start": 490,  "ch_end": 513,  "ep_start": 385,  "ep_end": 405,  "tag": "canon" },
+    { "name": "Amazon Lily",        "saga": "Summit War",      "ch_start": 514,  "ch_end": 524,  "ep_start": 406,  "ep_end": 421,  "tag": "canon" },
+    { "name": "Impel Down",         "saga": "Summit War",      "ch_start": 525,  "ch_end": 549,  "ep_start": 422,  "ep_end": 456,  "tag": "canon", "note": "Eps 426-429 include 'Little East Blue' filler." },
+    { "name": "Marineford",         "saga": "Summit War",      "ch_start": 550,  "ch_end": 580,  "ep_start": 457,  "ep_end": 489,  "tag": "canon" },
+    { "name": "Post-War",           "saga": "Summit War",      "ch_start": 581,  "ch_end": 597,  "ep_start": 490,  "ep_end": 516,  "tag": "canon" },
+
+    { "name": "Return to Sabaody",  "saga": "Fish-Man Island", "ch_start": 598,  "ch_end": 602,  "ep_start": 517,  "ep_end": 522,  "tag": "canon" },
+    { "name": "Fish-Man Island",    "saga": "Fish-Man Island", "ch_start": 603,  "ch_end": 653,  "ep_start": 523,  "ep_end": 574,  "tag": "canon" },
+    { "name": "Z's Ambition",       "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 575,  "ep_end": 578,  "tag": "filler", "note": "Lead-in to the Film: Z movie." },
+
+    { "name": "Punk Hazard",        "saga": "Dressrosa",       "ch_start": 654,  "ch_end": 699,  "ep_start": 579,  "ep_end": 625,  "tag": "canon" },
+    { "name": "Caesar Retrieval",   "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 626,  "ep_end": 628,  "tag": "filler" },
+    { "name": "Dressrosa",          "saga": "Dressrosa",       "ch_start": 700,  "ch_end": 801,  "ep_start": 629,  "ep_end": 746,  "tag": "canon" },
+    { "name": "Silver Mine",        "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 747,  "ep_end": 750,  "tag": "filler", "note": "Lead-in to Film: Gold." },
+
+    { "name": "Zou",                "saga": "Yonko",           "ch_start": 802,  "ch_end": 824,  "ep_start": 751,  "ep_end": 779,  "tag": "canon" },
+    { "name": "Marine Rookie",      "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 780,  "ep_end": 782,  "tag": "filler" },
+    { "name": "Whole Cake Island",  "saga": "Yonko",           "ch_start": 825,  "ch_end": 902,  "ep_start": 783,  "ep_end": 877,  "tag": "canon" },
+    { "name": "Levely (Reverie)",   "saga": "Yonko",           "ch_start": 903,  "ch_end": 908,  "ep_start": 878,  "ep_end": 889,  "tag": "canon" },
+    { "name": "Cidre Guild",        "saga": "Filler",          "ch_start": null, "ch_end": null, "ep_start": 895,  "ep_end": 896,  "tag": "filler", "note": "Lead-in to Film: Stampede." },
+    { "name": "Wano Country",       "saga": "Yonko",           "ch_start": 909,  "ch_end": 1057, "ep_start": 890,  "ep_end": 1085, "tag": "canon" },
+
+    { "name": "Egghead",            "saga": "Final Saga",      "ch_start": 1058, "ch_end": 1126, "ep_start": 1086, "ep_end": null, "tag": "canon", "note": "Anime adaptation in progress as of last refresh." },
+    { "name": "Elbaph",             "saga": "Final Saga",      "ch_start": 1127, "ch_end": null, "ep_start": null, "ep_end": null, "tag": "canon", "note": "Manga ongoing — anime not yet adapted." }
+  ]
+}

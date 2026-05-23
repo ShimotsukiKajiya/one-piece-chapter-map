@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conflicts · The Shimotsuki Codex</title>
+<meta name="description" content="Major conflicts in One Piece — wars, raids, and arc-defining battles with chapter ranges and outcomes.">
+<link rel="stylesheet" href="cite-styles.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0c0a14; --surface: #1a1610; --surface2: #251f15;
+    --border: #4a3820; --text: #e8d8b0; --muted: #8a7548;
+    --gold: #d4a44a; --gold-bright: #f5c95e; --ink-blue: #6a9ec8;
+    --green: #5fb35f; --red: #c84b4b; --violet: #b07cd1;
+  }
+  body {
+    background: radial-gradient(circle at 25% 15%, rgba(212,164,74,0.05) 0%, transparent 50%), var(--bg);
+    color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh; padding-bottom: 40px;
+  }
+  header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 28px; border-bottom: 1px solid var(--border);
+    background: rgba(26,22,16,0.7); backdrop-filter: blur(6px);
+    position: sticky; top:0; z-index: 50;
+  }
+  .logo { text-decoration:none; color:inherit; }
+  .logo h1 {
+    font-size: 1.4rem; font-weight: 900; letter-spacing: 3px;
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-sub { font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  nav { display:flex; gap: 18px; align-items:center; flex-wrap: wrap; }
+  nav a { color: var(--text); text-decoration:none; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 10px; border-radius: 6px; }
+  nav a:hover, nav a.active { color: var(--gold-bright); background: var(--surface2); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 30px 24px; }
+  h2 { color: var(--gold-bright); font-size: 1.6rem; margin-bottom: 6px; letter-spacing: 1px; }
+  .subhead { color: var(--muted); font-size: 0.92rem; margin-bottom: 22px; line-height: 1.6; }
+  .subhead a { color: var(--ink-blue); text-decoration: none; border-bottom: 1px dotted var(--ink-blue); }
+
+  .summary {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 22px; margin-bottom: 22px;
+    display: flex; gap: 28px; flex-wrap: wrap;
+  }
+  .summary-item { text-align: center; }
+  .summary-num { color: var(--gold-bright); font-size: 1.8rem; font-weight: 900; line-height: 1; }
+  .summary-label { color: var(--muted); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+
+  .empty {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--green); border-radius: 12px;
+    padding: 40px 28px; text-align: center;
+  }
+  .empty .icon { font-size: 2.4rem; margin-bottom: 12px; }
+  .empty h3 { color: var(--gold-bright); margin-bottom: 8px; }
+  .empty p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+  .conflict {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--red); border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 16px;
+  }
+  .conflict-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+  }
+  .conflict-title { color: var(--gold-bright); font-weight: 700; font-size: 1.05rem; }
+  .conflict-type {
+    color: var(--muted); font-size: 0.75rem; letter-spacing: 1px;
+    text-transform: uppercase; font-family: ui-monospace, monospace;
+  }
+  .conflict-side {
+    background: var(--surface2); border-radius: 8px;
+    padding: 12px 16px; margin-bottom: 8px;
+    border-left: 3px solid var(--border);
+  }
+  .conflict-side.canon  { border-left-color: var(--gold); }
+  .conflict-side.likely { border-left-color: var(--ink-blue); }
+  .conflict-side.wiki   { border-left-color: var(--violet); }
+  .side-tier {
+    font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 4px;
+  }
+  .side-value {
+    color: var(--text); font-size: 1rem; font-weight: 600;
+  }
+  .side-source {
+    color: var(--muted); font-size: 0.78rem; margin-top: 4px;
+  }
+  .side-source a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+
+  .submit-cta {
+    margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .btn {
+    padding: 8px 16px; border-radius: 8px; font-size: 0.85rem;
+    font-weight: 600; cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--border); background: var(--surface2); color: var(--text);
+  }
+  .btn:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .btn.primary { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+  .btn.primary:hover { background: var(--gold-bright); color: var(--bg); border-color: var(--gold-bright); }
+
+  footer {
+    padding: 30px 24px 50px; text-align: center;
+    font-size: 0.75rem; color: var(--muted); letter-spacing: 1px;
+    border-top: 1px solid var(--border); max-width: 920px; margin: 0 auto;
+  }
+</style>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/conflicts.html">
+  <meta property="og:title" content="Conflicts · The Shimotsuki Codex">
+  <meta property="og:description" content="Major conflicts in One Piece — wars, raids, and arc-defining battles with chapter ranges and outcomes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/conflicts.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Conflicts · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Major conflicts in One Piece — wars, raids, and arc-defining battles with chapter ranges and outcomes.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Conflicts</span></a>
+  
+</header>
+
+<main>
+  <h2>Conflicts</h2>
+  <p class="subhead">
+    Where two canon sources disagree on the same fact, the disagreement
+    surfaces here. Per <a href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/blob/master/docs/canon-policy.md">canon-policy.md</a>,
+    a higher-tier source beats a lower one — but the maintainer has the final
+    say. Use the buttons on each conflict to file a correction PR or open
+    the relevant SBS entry to investigate.
+  </p>
+
+  <div class="summary" id="summary">
+    <div class="summary-item">
+      <div class="summary-num" id="num-total">0</div>
+      <div class="summary-label">Conflicts</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num" id="num-multi">0</div>
+      <div class="summary-label">Multi-fact</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num" id="num-wiki">0</div>
+      <div class="summary-label">Wiki vs verified</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num" id="num-on">—</div>
+      <div class="summary-label">Detected on</div>
+    </div>
+  </div>
+
+  <div id="conflict-slot"></div>
+</main>
+
+<footer>
+  Detected by <code>find_conflicts.py</code> · re-runs every refresh.
+  See <a href="https://github.com/ShimotsukiKajiya/one-piece-chapter-map/blob/master/docs/canon-engine-roadmap.md" style="color:var(--ink-blue)">canon-engine-roadmap.md</a> for how conflicts get resolved. &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
+
+<!-- Conflicts payload baked by bake.py -->
+<script id="conflicts-data" type="application/json">
+{
+  "generated_on": "2026-05-01",
+  "total": 19,
+  "conflicts": [
+    {
+      "type": "multi_fact",
+      "subject": "Monkey D. Luffy",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Monkey_D_Luffy:height",
+          "value": "91 cm (3') (debut, child) · 172 cm (5'8\") (pre-timeskip) · 174 cm (5'9\") (post-timeskip)",
+          "tier": "likely",
+          "intent": "jocular",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 10,
+              "qa_id": "0117",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Monkey_D._Luffy",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (jocular) — matched via 'digit-proximity' in SBS Vol 10 #117. Snippet: \"kidding. I'll start from the shortest. *Nami's height is 169&nbsp;cm *Luffy is 172&nbsp;cm *Usopp is 174&nbsp;cm *Sanji is 177&nbsp;cm *Zoro is 178&nbsp;cm. So …\""
+        },
+        {
+          "id": "manual:vivre:Monkey_D_Luffy:height:visual_dictionary_2018",
+          "value": "174 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Post-timeskip standing height per Vivre Card Visual Dictionary. Pre-timeskip was 172cm in earlier SBS material."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Nami",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Nami:height",
+          "value": "169 cm (5'7\") (debut) · 170 cm (5'7\") (after timeskip)",
+          "tier": "likely",
+          "intent": "jocular",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 10,
+              "qa_id": "0117",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Nami",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (jocular) — matched via 'digit-proximity' in SBS Vol 10 #117. Snippet: \"Gaimon's height is... kidding. I'll start from the shortest. *Nami's height is 169&nbsp;cm *Luffy is 172&nbsp;cm *Usopp is 174&nbsp;cm *Sanji is 177&nbsp;cm *Zo…\""
+        },
+        {
+          "id": "manual:vivre:Nami:height:visual_dictionary_2018",
+          "value": "170 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height post-timeskip."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Roronoa Zoro",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Roronoa_Zoro:height",
+          "value": "178 cm (5'10\") (debut) · 181 cm (5'11\") (after timeskip)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 4,
+              "qa_id": "0001",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Roronoa_Zoro",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 4 #1. Snippet: \"s 18. As for Shanks, since I don't know where he is now, I'll give his age from 10 years ago. He was 27 when he was in Luffy's village. Oh, and Usopp is also 17…\""
+        },
+        {
+          "id": "manual:vivre:Roronoa_Zoro:height:visual_dictionary_2018",
+          "value": "181 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height; consistent with SBS Vol 60 that paired height with the timeskip art."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Sanji",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Sanji:height",
+          "value": "177 cm (5'10\") (debut) · 180 cm (5'11\") (after timeskip)",
+          "tier": "likely",
+          "intent": "jocular",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 10,
+              "qa_id": "0117",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Sanji",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (jocular) — matched via 'digit-proximity' in SBS Vol 10 #117. Snippet: \"i's height is 169&nbsp;cm *Luffy is 172&nbsp;cm *Usopp is 174&nbsp;cm *Sanji is 177&nbsp;cm *Zoro is 178&nbsp;cm. So they're all pretty much the same height.…\""
+        },
+        {
+          "id": "manual:vivre:Sanji:height:visual_dictionary_2018",
+          "value": "180 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height post-timeskip."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Usopp",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Usopp:height",
+          "value": "174 cm (5'9\") (debut) · 176 cm (5'9\") (after timeskip)",
+          "tier": "likely",
+          "intent": "jocular",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 10,
+              "qa_id": "0117",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Usopp",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (jocular) — matched via 'digit-proximity' in SBS Vol 10 #117. Snippet: \"rom the shortest. *Nami's height is 169&nbsp;cm *Luffy is 172&nbsp;cm *Usopp is 174&nbsp;cm *Sanji is 177&nbsp;cm *Zoro is 178&nbsp;cm. So they're all pretty mu…\""
+        },
+        {
+          "id": "manual:vivre:Usopp:height:visual_dictionary_2018",
+          "value": "176 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height post-timeskip."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Tony Tony Chopper",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Tony_Tony_Chopper:height",
+          "value": "90 cm (2'11\") (hybrid form)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 69,
+              "qa_id": "0906",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Tony_Tony_Chopper",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 69 #906. Snippet: \"e: North Blue | | Tony Tony Chopper * Birthday: December 24 * Age: 17 * Height: 90&nbsp;cm (Hybrid form) * DF: Hito Hito no Mi * First Appearance: Vol. 15 * Bir…\""
+        },
+        {
+          "id": "manual:vivre:Tony_Tony_Chopper:height:visual_dictionary_2018",
+          "value": "90 cm (Brain Point)",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height in default Brain Point form."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Nico Robin",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Nico_Robin:height",
+          "value": "188 cm (6'2\") (debut, after timeskip)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 69,
+              "qa_id": "0906",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Nico_Robin",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 69 #906. Snippet: \"rthplace: Grand Line  ||  Nico Robin * Birthday: February 6 * Age: 30 * Height: 188&nbsp;cm * DF: Hana Hana no Mi * First Appearance: Vol. 13 * Birthplace: West…\""
+        },
+        {
+          "id": "manual:vivre:Nico_Robin:height:visual_dictionary_2018",
+          "value": "188 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height post-timeskip."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Franky",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Franky:height",
+          "value": "225 cm (7'5\") (debut) · 240 cm (7'10\") (after timeskip)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 44,
+              "qa_id": "0549",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Franky",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 44 #549. Snippet: \"Umm, I have a little question about Franky-san. He was adopted at age 10, began building the sea train at age 12, finished the Express 10 years later, a…\""
+        },
+        {
+          "id": "manual:vivre:Franky:height:visual_dictionary_2018",
+          "value": "240 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height post-timeskip — counts the Iron Pirate-modified frame."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Brook",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Brook:height",
+          "value": "266 cm (8'9\") (debut) · 277 cm (9'1\") (after timeskip)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 69,
+              "qa_id": "0906",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Brook",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 69 #906. Snippet: \"35 * Birthplace: South Blue  ||  Brook * Birthday: April 3 * Age: 90 * Height: 277&nbsp;cm * DF: Yomi Yomi no Mi * First Appearance: Vol. 46 * Birthplace: West …\""
+        },
+        {
+          "id": "manual:vivre:Brook:height:visual_dictionary_2018",
+          "value": "277 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height — Brook's tall skeletal frame."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Portgas D. Ace",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Portgas_D_Ace:height",
+          "value": "185 cm (6'1\") (age 20) · 103 cm (3'5\") (age 10)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 48,
+              "qa_id": "0590",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Portgas_D._Ace",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 48 #590. Snippet: \"BY. AI ❤ ║ Yeah, since an ace is worth one in cards. That works. He'd be about 185&nbsp;cm tall.…\""
+        },
+        {
+          "id": "manual:vivre:Portgas_D_Ace:height:visual_dictionary_2018",
+          "value": "185 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height — pre-Marineford figure."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Sabo",
+      "predicate": "height",
+      "entries": [
+        {
+          "id": "verified:Sabo:height",
+          "value": "100 cm (3'3\") (flashback, debut) · 187 cm (6'2\") (After timeskip)",
+          "tier": "likely",
+          "intent": "ambiguous",
+          "sources": [
+            {
+              "type": "sbs",
+              "volume": 77,
+              "qa_id": "1012",
+              "match_type": "digit-proximity",
+              "matched_form": "digit-group"
+            },
+            {
+              "type": "wiki",
+              "page": "Sabo",
+              "field": "height"
+            }
+          ],
+          "evidence_notes": "LIKELY (ambiguous) — matched via 'digit-proximity' in SBS Vol 77 #1012. Snippet: \"s birthday be 8(Ha)/9(KKu)? ║ Yes. And that's gotta be his birthday, for sure. [187&nbsp;cm age 22 · 160&nbsp;cm age 23 · 280&nbsp;cm age 38 (Brocade Perch Fish…\""
+        },
+        {
+          "id": "manual:vivre:Sabo:height:visual_dictionary_2018",
+          "value": "187 cm",
+          "tier": "likely",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "vivre_card",
+              "edition": "visual_dictionary_2018"
+            }
+          ],
+          "evidence_notes": "Vivre Card height — Revolutionary Chief of Staff figure."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Monkey D. Luffy",
+      "predicate": "sworn-brother",
+      "entries": [
+        {
+          "id": "family:Monkey_D_Luffy:sworn-brother:Portgas_D_Ace",
+          "value": "Portgas D. Ace",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 525
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 525'. Subject's sworn brother is Portgas D. Ace."
+        },
+        {
+          "id": "family:Monkey_D_Luffy:sworn-brother:Sabo",
+          "value": "Sabo",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 583
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 583'. Subject's sworn brother is Sabo."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Vinsmoke Sanji",
+      "predicate": "brother",
+      "entries": [
+        {
+          "id": "family:Vinsmoke_Sanji:brother:Vinsmoke_Ichiji",
+          "value": "Vinsmoke Ichiji",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 832
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 832'. Subject's brother is Vinsmoke Ichiji."
+        },
+        {
+          "id": "family:Vinsmoke_Sanji:brother:Vinsmoke_Niji",
+          "value": "Vinsmoke Niji",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 832
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 832'. Subject's brother is Vinsmoke Niji."
+        },
+        {
+          "id": "family:Vinsmoke_Sanji:brother:Vinsmoke_Yonji",
+          "value": "Vinsmoke Yonji",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 832
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 832'. Subject's brother is Vinsmoke Yonji."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Charlotte Linlin",
+      "predicate": "daughter",
+      "entries": [
+        {
+          "id": "family:Charlotte_Linlin:daughter:Charlotte_Lola",
+          "value": "Charlotte Lola",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 651
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 651'. Subject's daughter is Charlotte Lola."
+        },
+        {
+          "id": "family:Charlotte_Linlin:daughter:Charlotte_Pudding",
+          "value": "Charlotte Pudding",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 825
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 825'. Subject's daughter is Charlotte Pudding."
+        },
+        {
+          "id": "family:Charlotte_Linlin:daughter:Charlotte_Smoothie",
+          "value": "Charlotte Smoothie",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 834
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 834'. Subject's daughter is Charlotte Smoothie."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Charlotte Linlin",
+      "predicate": "son",
+      "entries": [
+        {
+          "id": "family:Charlotte_Linlin:son:Charlotte_Katakuri",
+          "value": "Charlotte Katakuri",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 834
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 834'. Subject's son is Charlotte Katakuri."
+        },
+        {
+          "id": "family:Charlotte_Linlin:son:Charlotte_Cracker",
+          "value": "Charlotte Cracker",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 836
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 836'. Subject's son is Charlotte Cracker."
+        },
+        {
+          "id": "family:Charlotte_Linlin:son:Charlotte_Perospero",
+          "value": "Charlotte Perospero",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 834
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 834'. Subject's son is Charlotte Perospero."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Boa Hancock",
+      "predicate": "sister",
+      "entries": [
+        {
+          "id": "family:Boa_Hancock:sister:Boa_Sandersonia",
+          "value": "Boa Sandersonia",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 514
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 514'. Subject's sister is Boa Sandersonia."
+        },
+        {
+          "id": "family:Boa_Hancock:sister:Boa_Marigold",
+          "value": "Boa Marigold",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 514
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 514'. Subject's sister is Boa Marigold."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Vegapunk",
+      "predicate": "satellite",
+      "entries": [
+        {
+          "id": "family:Vegapunk:satellite:Vegapunk_Lilith",
+          "value": "Vegapunk Lilith",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 1062
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 1062'. Subject's satellite is Vegapunk Lilith."
+        },
+        {
+          "id": "family:Vegapunk:satellite:Vegapunk_Edison",
+          "value": "Vegapunk Edison",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 1067
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 1067'. Subject's satellite is Vegapunk Edison."
+        },
+        {
+          "id": "family:Vegapunk:satellite:Vegapunk_Pythagoras",
+          "value": "Vegapunk Pythagoras",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 1067
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 1067'. Subject's satellite is Vegapunk Pythagoras."
+        },
+        {
+          "id": "family:Vegapunk:satellite:Vegapunk_Atlas",
+          "value": "Vegapunk Atlas",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 1064
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 1064'. Subject's satellite is Vegapunk Atlas."
+        },
+        {
+          "id": "family:Vegapunk:satellite:Vegapunk_Shaka",
+          "value": "Vegapunk Shaka",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 1067
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 1067'. Subject's satellite is Vegapunk Shaka."
+        },
+        {
+          "id": "family:Vegapunk:satellite:Vegapunk_York",
+          "value": "Vegapunk York",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 1062
+            }
+          ],
+          "evidence_notes": "Hand-curated in families.json with citation 'Chapter 1062'. Subject's satellite is Vegapunk York."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Roronoa Zoro",
+      "predicate": "owns",
+      "entries": [
+        {
+          "id": "owns:Roronoa_Zoro:Wado_Ichimonji",
+          "value": "Wado Ichimonji",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 5
+            }
+          ],
+          "evidence_notes": "Zoro carries Wado from his first appearance — inherited from Kuina."
+        },
+        {
+          "id": "owns:Roronoa_Zoro:Sandai_Kitetsu",
+          "value": "Sandai Kitetsu",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 98
+            }
+          ],
+          "evidence_notes": "Acquired in Loguetown — Zoro takes the third cursed blade by daring its curse."
+        },
+        {
+          "id": "owns:Roronoa_Zoro:Shusui",
+          "value": "Shusui",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 469
+            }
+          ],
+          "evidence_notes": "Taken from the corpse of Ryuma at Thriller Bark; later returned to Wano."
+        },
+        {
+          "id": "owns:Roronoa_Zoro:Enma",
+          "value": "Enma",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 954
+            }
+          ],
+          "evidence_notes": "Hiyori gives Zoro Enma during Wano arc, replacing Shusui."
+        }
+      ]
+    },
+    {
+      "type": "multi_fact",
+      "subject": "Kouzuki Oden",
+      "predicate": "owns",
+      "entries": [
+        {
+          "id": "owns:Kouzuki_Oden:Ame_no_Habakiri",
+          "value": "Ame no Habakiri",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 819
+            }
+          ],
+          "evidence_notes": "One of Oden's twin meito, used to cut Kaidou."
+        },
+        {
+          "id": "owns:Kouzuki_Oden:Enma",
+          "value": "Enma",
+          "tier": "canon",
+          "intent": "serious",
+          "sources": [
+            {
+              "type": "manga",
+              "chapter": 819
+            }
+          ],
+          "evidence_notes": "Oden's other twin meito, the only blade besides Ame no Habakiri to wound Kaidou."
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="spoiler.js?v=1"></script>
+<script>
+const REPO = "https://github.com/ShimotsukiKajiya/one-piece-chapter-map";
+const DATA = JSON.parse(document.getElementById("conflicts-data").textContent);
+
+function escapeHTML(s) {
+  if (s == null) return "";
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+  }[c]));
+}
+
+function correctionUrl(c) {
+  const params = new URLSearchParams({
+    template:        "submit-correction.yml",
+    title:           `[Correction] ${c.subject} · ${c.predicate}`,
+    subject:         c.subject || "",
+    field:           c.predicate || "",
+    current_value:   c.wiki_value != null ? String(c.wiki_value) : (c.entries?.[0]?.value || ""),
+    proposed_value:  c.verified_value != null ? String(c.verified_value) : (c.entries?.[1]?.value || ""),
+    evidence_notes:  "Surfaced by conflicts.html on " + DATA.generated_on,
+  });
+  return `${REPO}/issues/new?` + params.toString();
+}
+
+function sourceLink(src) {
+  if (!src) return "(no source)";
+  if (src.type === "sbs") {
+    const num = String(src.qa_id || "").padStart(4, "0");
+    return `<a href="sbs.html#${num}">SBS Vol ${src.volume} #${num}</a>`;
+  }
+  if (src.type === "manga") {
+    return `Manga · Ch.${src.chapter || src.chapter_range || "?"}`;
+  }
+  if (src.type === "wiki") {
+    return `<a href="https://onepiece.fandom.com/wiki/${encodeURIComponent(src.page || '')}">Wiki: ${src.page || '?'}</a>`;
+  }
+  return src.type;
+}
+
+function render() {
+  document.getElementById("num-total").textContent = DATA.total || 0;
+  document.getElementById("num-on").textContent    = DATA.generated_on || "—";
+
+  const byType = {};
+  (DATA.conflicts || []).forEach(c => byType[c.type] = (byType[c.type] || 0) + 1);
+  document.getElementById("num-multi").textContent = byType.multi_fact || 0;
+  document.getElementById("num-wiki").textContent  = byType.wiki_vs_verified || 0;
+
+  const slot = document.getElementById("conflict-slot");
+  if (!DATA.total) {
+    slot.innerHTML = `<div class="empty">
+      <div class="icon">✓</div>
+      <h3>No conflicts</h3>
+      <p>Every claim in the canon ledger agrees with every other claim that touches it. The Codex is internally consistent.<br><br>
+      As we ingest new sources (Vivre Cards, Color Walks, OP Magazine) and re-verify on each refresh, this page will start surfacing genuine disagreements for adjudication.</p>
+    </div>`;
+    return;
+  }
+  slot.innerHTML = (DATA.conflicts || []).map(c => {
+    if (c.type === "multi_fact") {
+      return `<div class="conflict">
+        <div class="conflict-head">
+          <div class="conflict-title">${escapeHTML(c.subject)} · ${escapeHTML(c.predicate)}</div>
+          <div class="conflict-type">multi-fact disagreement</div>
+        </div>
+        ${c.entries.map(e => `
+          <div class="conflict-side ${e.tier || ''}">
+            <div class="side-tier"><span class="tier-badge ${e.tier || 'speculation'}">${(e.tier||'?').toUpperCase()}</span>
+              ${e.intent ? `· intent: ${escapeHTML(e.intent)}` : ''}</div>
+            <div class="side-value">${escapeHTML(String(e.value))}</div>
+            <div class="side-source">${(e.sources||[]).slice(0,2).map(sourceLink).join(' · ')}</div>
+          </div>
+        `).join('')}
+        <div class="submit-cta">
+          <a class="btn primary" href="${correctionUrl(c)}" target="_blank" rel="noopener">📝 File correction</a>
+          <a class="btn" href="character.html?name=${encodeURIComponent(c.subject)}">Open profile</a>
+        </div>
+      </div>`;
+    }
+    if (c.type === "wiki_vs_verified") {
+      return `<div class="conflict">
+        <div class="conflict-head">
+          <div class="conflict-title">${escapeHTML(c.subject)} · ${escapeHTML(c.predicate)}</div>
+          <div class="conflict-type">wiki vs verified</div>
+        </div>
+        <div class="conflict-side wiki">
+          <div class="side-tier"><span class="tier-badge speculation">WIKI</span></div>
+          <div class="side-value">${escapeHTML(String(c.wiki_value))}</div>
+        </div>
+        <div class="conflict-side ${c.verified_tier || ''}">
+          <div class="side-tier"><span class="tier-badge ${c.verified_tier || 'likely'}">${(c.verified_tier||'?').toUpperCase()}</span> verified</div>
+          <div class="side-value">${escapeHTML(String(c.verified_value))}</div>
+          <div class="side-source">${(c.verified_sources||[]).slice(0,2).map(sourceLink).join(' · ')}</div>
+        </div>
+        <div class="submit-cta">
+          <a class="btn primary" href="${correctionUrl(c)}" target="_blank" rel="noopener">📝 File correction</a>
+          <a class="btn" href="character.html?name=${encodeURIComponent(c.subject)}">Open profile</a>
+        </div>
+      </div>`;
+    }
+    return "";
+  }).join("");
+}
+
+render();
+</script>
+
+<script src="settings.js"></script>
+<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+<script>
+  // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
+  // page can later add filter logic via this hook. Currently a no-op for
+  // pages whose data shape needs more work to gate (LORE essays mostly
+  // pass through but character link lists are filtered by chr-link-upgrader).
+  if (typeof CodexSpoiler !== "undefined") {
+    var _pageCutoff = CodexSpoiler.effectiveCutoff("public");
+    document.documentElement.dataset.spoilerCutoff = _pageCutoff;
+  }
+</script>
+</body>
+</html>

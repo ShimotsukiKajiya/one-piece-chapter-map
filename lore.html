@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lore · The Shimotsuki Codex</title>
+<link rel="stylesheet" href="cite-styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a44a">
+<meta name="description" content="Every story page in the Shimotsuki Codex — the Chapter Atlas, arcs, timeline, SBS Vault, Poneglyphs, and more.">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;--green:#7ac290;--violet:#b388ff;--rose:#e07faa}
+  body{
+    background:
+      radial-gradient(circle at 25% 15%,rgba(212,164,74,.05) 0%,transparent 50%),
+      radial-gradient(circle at 75% 85%,rgba(106,158,200,.04) 0%,transparent 50%),
+      var(--bg);
+    color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;padding-bottom:80px
+  }
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
+  a{color:var(--ink-blue);text-decoration:none}
+  a:hover{color:var(--gold-bright)}
+
+  header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
+  .logo{text-decoration:none;color:inherit}
+  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+
+  main{max-width:1200px;margin:0 auto;padding:36px 24px;position:relative;z-index:1}
+  .hero{text-align:center;margin-bottom:48px}
+  .hero h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    font-weight:900;letter-spacing:5px;text-transform:uppercase;
+    background:linear-gradient(180deg,var(--gold-bright) 0%,var(--gold) 60%,#a07020 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    margin-bottom:8px;
+  }
+  .hero .sub{color:var(--ink-blue);font-size:1rem;letter-spacing:3px;text-transform:uppercase;font-style:italic;margin-bottom:18px}
+  .hero .blurb{font-size:1.05rem;line-height:1.75;color:var(--text);max-width:700px;margin:0 auto}
+  .hero .blurb em{color:var(--gold-bright);font-style:normal;font-weight:700}
+  .gold-rule{width:240px;height:2px;margin:30px auto 0;background:linear-gradient(to right,transparent,var(--gold),transparent);position:relative}
+  .gold-rule::before,.gold-rule::after{content:'✦';position:absolute;top:-10px;color:var(--gold);font-size:.85rem}
+  .gold-rule::before{left:-2px}.gold-rule::after{right:-2px}
+
+  .group{margin-bottom:48px}
+  .group-head{display:flex;align-items:baseline;gap:18px;margin-bottom:18px;padding:0 6px}
+  .group-head .icon{font-size:1.8rem}
+  .group-head h3{font-size:1.5rem;color:var(--gold-bright);font-weight:800;letter-spacing:2px}
+  .group-head .desc{color:var(--muted);font-style:italic;font-size:.92rem;flex:1;margin-left:6px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .card{
+    background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+    border:1px solid var(--border);
+    border-radius:12px;padding:18px 20px;
+    text-decoration:none;color:inherit;
+    transition:all .15s;
+    display:flex;flex-direction:column;gap:8px;
+    position:relative;overflow:hidden;
+  }
+  .card::before{
+    content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:var(--gold);
+    transition:width .15s;
+  }
+  .card:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 6px 20px rgba(0,0,0,.5)}
+  .card:hover::before{width:6px}
+  .card .ic{font-size:1.6rem}
+  .card .name{font-weight:800;color:var(--gold-bright);font-size:1.05rem;letter-spacing:.5px}
+  .card .summary{color:var(--text);font-size:.85rem;line-height:1.5;flex:1}
+  .card .stat{color:var(--muted);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;padding-top:6px;border-top:1px dashed rgba(212,164,74,.2);font-weight:700}
+  .card .stat strong{color:var(--gold-bright)}
+
+  .group.story   .card::before { background:var(--gold) }
+  .group.text    .card::before { background:var(--ink-blue) }
+  .group.deep    .card::before { background:var(--violet) }
+
+  footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1200px;margin:60px auto 0}
+</style>
+<style id="nav-burger-critical">
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+  <link rel="canonical" href="https://shimotsukicodex.com/lore.html">
+  <meta property="og:title" content="Lore · The Shimotsuki Codex">
+  <meta property="og:description" content="Every story page in the Shimotsuki Codex — the Chapter Atlas, arcs, timeline, SBS Vault, Poneglyphs, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/lore.html">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="Lore · The Shimotsuki Codex">
+  <meta name="twitter:description" content="Every story page in the Shimotsuki Codex — the Chapter Atlas, arcs, timeline, SBS Vault, Poneglyphs, and more.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+</head>
+<body>
+<header>
+  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Lore</span></a>
+</header>
+<main>
+  <section class="hero">
+    <h2>The Lore Vault</h2>
+    <div class="sub">Story · Canon · Publication</div>
+    <p class="blurb">Every page that maps the <em>story itself</em> — where characters appear, how arcs connect, what Oda said in the Question Corner, and what the Poneglyphs reveal. Pick a surface to dive in.</p>
+    <div class="gold-rule"></div>
+  </section>
+
+  <!-- ── THE STORY ── -->
+  <section class="group story">
+    <div class="group-head">
+      <span class="icon">📖</span>
+      <h3>The Story</h3>
+      <span class="desc">Narrative maps, arcs, and chronology</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="atlas.html">
+        <span class="ic">🗺️</span>
+        <span class="name">Chapter Atlas</span>
+        <span class="summary">Visualize where every character appears across all 1,181 chapters. Click a character to highlight every chapter they're in — full appearance, flashback, silhouette, or cover story.</span>
+        <span class="stat"><strong>1,181</strong> chapters mapped</span>
+      </a>
+      <a class="card" href="world-map.html">
+        <span class="ic">🗺</span>
+        <span class="name">World Map</span>
+        <span class="summary">Every island, sea, and territory plotted to scale. Click a location to open its profile with canon facts and chapter debut.</span>
+        <span class="stat">Blue Sea · Calm Belt · Grand Line · New World</span>
+      </a>
+      <a class="card" href="sagas.html">
+        <span class="ic">📖</span>
+        <span class="name">Sagas</span>
+        <span class="summary">The 10 sagas of One Piece, each with its arcs, key events, and chapter range. The shape of the whole story at a glance.</span>
+        <span class="stat"><strong>10</strong> sagas · <strong>33</strong> arcs</span>
+      </a>
+      <a class="card" href="arcs.html">
+        <span class="ic">📚</span>
+        <span class="name">Story Arcs</span>
+        <span class="summary">All 33 arcs grouped by saga with chapter ranges. Click an arc to filter the Chapter Atlas to just those chapters.</span>
+        <span class="stat"><strong>33</strong> arcs · <strong>1,181</strong> chapters</span>
+      </a>
+      <a class="card" href="timeline.html">
+        <span class="ic">📜</span>
+        <span class="name">Timeline</span>
+        <span class="summary">Vertical scroll through every saga with key canon events anchored to chapters. The narrative in order from East Blue to Elbaph.</span>
+        <span class="stat"><strong>35</strong> events tracked</span>
+      </a>
+      <a class="card" href="moments.html">
+        <span class="ic">🪙</span>
+        <span class="name">Iconic Moments</span>
+        <span class="summary">The panels and scenes that defined the series — compiled with the chapter they appear in and what makes each one significant.</span>
+        <span class="stat">The series' defining beats</span>
+      </a>
+      <a class="card" href="reverie.html">
+        <span class="ic">⏰</span>
+        <span class="name">Reverie &amp; World Events</span>
+        <span class="summary">The world-stage events — Marineford, Reverie, Levely, the Rocks incident — that ripple through the whole timeline beyond a single arc.</span>
+        <span class="stat">World-scale canon events</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── THE TEXT ── -->
+  <section class="group text">
+    <div class="group-head">
+      <span class="icon">📜</span>
+      <h3>The Text</h3>
+      <span class="desc">Publication, Q&amp;A, adaptation, and media</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="sbs.html">
+        <span class="ic">📜</span>
+        <span class="name">SBS Vault</span>
+        <span class="summary">Every "Question Corner" entry from every volume Oda has published — searchable and categorised. The primary source for canon character facts.</span>
+        <span class="stat"><strong>1,659</strong> Q&amp;As · <strong>106</strong> volumes</span>
+      </a>
+      <a class="card" href="sbs-topics.html">
+        <span class="ic">🗂</span>
+        <span class="name">SBS by Topic</span>
+        <span class="summary">The same Q&amp;As reorganised by subject — characters, fruits, world, ages, jokes, and behind-the-scenes. Browse by what you want to know.</span>
+        <span class="stat">Categorised vault browse</span>
+      </a>
+      <a class="card" href="covers.html">
+        <span class="ic">🏴‍☠️</span>
+        <span class="name">Cover Compendium</span>
+        <span class="summary">The mini-arcs Oda runs on chapter title pages. Often canon, often foreshadowing — each one archived with its chapter range.</span>
+        <span class="stat"><strong>22</strong> mini-arcs</span>
+      </a>
+      <a class="card" href="episodes.html">
+        <span class="ic">📺</span>
+        <span class="name">Manga ↔ Anime</span>
+        <span class="summary">Map every manga chapter to its anime episode(s) and back. Find exactly where the anime diverges, adds filler, or rearranges scenes.</span>
+        <span class="stat">Full chapter-episode index</span>
+      </a>
+      <a class="card" href="music.html">
+        <span class="ic">🎵</span>
+        <span class="name">Music &amp; Songs</span>
+        <span class="summary">Every named track, insert song, and opening theme in the One Piece discography. Composer-tagged and arc-indexed.</span>
+        <span class="stat">Openings · endings · OST</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── DEEP CANON ── -->
+  <section class="group deep">
+    <div class="group-head">
+      <span class="icon">🕯</span>
+      <h3>Deep Canon</h3>
+      <span class="desc">Analysis, mysteries, and the unanswered questions</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="heatmap.html">
+        <span class="ic">🔥</span>
+        <span class="name">Canon Density</span>
+        <span class="summary">Every chapter as a coloured cell — brighter means more canon-verified facts attached. See at a glance which arcs are the most data-rich.</span>
+        <span class="stat"><strong>1,181</strong> cells · live-coloured</span>
+      </a>
+      <a class="card" href="poneglyphs.html">
+        <span class="ic">🪨</span>
+        <span class="name">Poneglyphs</span>
+        <span class="summary">Every known Poneglyph — location, type, Road / Ancient / Historical, and what translated text has been revealed in canon.</span>
+        <span class="stat">Road · Ancient · Historical</span>
+      </a>
+      <a class="card" href="void-century.html">
+        <span class="ic">🕯</span>
+        <span class="name">Void Century</span>
+        <span class="summary">Everything the series has revealed about the 100-year gap the World Government erased — organised as a thread with canon citations.</span>
+        <span class="stat">The central mystery of One Piece</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  The Shimotsuki Codex · Built with calm and Claude · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial
+</footer>
+
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+</body>
+</html>

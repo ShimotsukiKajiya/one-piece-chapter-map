@@ -1,0 +1,107 @@
+{
+  "_doc": "Marines + World Government structural hierarchy. Six tiers from the Five Elders down to common soldiers. Each tier lists current + notable historical members with brief notes.",
+  "generated_on": "2026-04-27",
+  "tiers": [
+    {
+      "label": "Government Apex",
+      "rank": 0,
+      "summary": "Beyond the Marines — the true rulers of the world.",
+      "members": [
+        { "name": "Nerona Imu",                       "role": "Sovereign of the Empty Throne", "note": "Hidden ruler, occupies the Empty Throne. Family name Nerona revealed; D. status confirmed." },
+        { "name": "Saint Jaygarcia Saturn",           "role": "Five Elder · Defence",          "note": "Spider-Ox true form. Known for immortality." },
+        { "name": "Saint Marcus Mars",                "role": "Five Elder · Environment",      "note": "Itsumade Bird true form." },
+        { "name": "Saint Topman Warcury",             "role": "Five Elder · Justice",          "note": "Boar Demon true form." },
+        { "name": "Saint Ethanbaron V. Nusjuro",      "role": "Five Elder · Finance",          "note": "Sabre-Toothed Cat true form. Wields the legendary blade Shimotsuki." },
+        { "name": "Saint Shepherd Ju Peter",          "role": "Five Elder · Agriculture",      "note": "Snake-Plant true form." }
+      ]
+    },
+    {
+      "label": "Fleet Admiral",
+      "rank": 1,
+      "summary": "Supreme commander of the Marines, answers only to the Five Elders.",
+      "members": [
+        { "name": "Sakazuki",                         "role": "Fleet Admiral (current)",        "note": "Magu Magu no Mi (magma). Hard-line Absolute Justice." },
+        { "name": "Sengoku",                          "role": "Fleet Admiral (former)",         "note": "Hito Hito no Mi, Model: Daibutsu. Now an Inspector General." },
+        { "name": "Kong",                             "role": "Fleet Admiral (former)",         "note": "Stepped up to World Government Commander-in-Chief." }
+      ]
+    },
+    {
+      "label": "Admirals",
+      "rank": 2,
+      "summary": "The Marines' top-tier combatants — three serving plus reserves.",
+      "members": [
+        { "name": "Borsalino",                        "role": "Admiral Kizaru (current)",       "note": "Pika Pika no Mi (light)." },
+        { "name": "Issho",                            "role": "Admiral Fujitora (current)",     "note": "Gravity-gravity (Zushi Zushi). Voluntarily blinded." },
+        { "name": "Aramaki",                          "role": "Admiral Ryokugyu (current)",     "note": "Mori Mori no Mi (forest)." },
+        { "name": "Kuzan",                            "role": "Admiral Aokiji (former)",        "note": "Hie Hie no Mi (ice). Defected to Blackbeard Pirates." },
+        { "name": "Sakazuki",                         "role": "Admiral Akainu (former)",        "note": "Promoted to Fleet Admiral after defeating Aokiji." }
+      ]
+    },
+    {
+      "label": "Vice Admirals",
+      "rank": 3,
+      "summary": "Senior Marine officers — most have powerful Devil Fruits or proven Haki.",
+      "members": [
+        { "name": "Monkey D. Garp",                   "role": "Vice Admiral / Hero of the Marines", "note": "Roger's lifelong rival. Trained Coby and others. D. carrier." },
+        { "name": "Tsuru",                            "role": "Vice Admiral / Great Staff Officer", "note": "Wash Wash no Mi (laundry)." },
+        { "name": "Smoker",                           "role": "Vice Admiral",                   "note": "Moku Moku no Mi (smoke). Wano-veteran." },
+        { "name": "Doll",                             "role": "Vice Admiral",                   "note": "Egghead-era Vice Admiral, leads SWORD." },
+        { "name": "Momonga",                          "role": "Vice Admiral",                   "note": "Marineford veteran." },
+        { "name": "Onigumo",                          "role": "Vice Admiral",                   "note": "Six arms (Kumo Kumo no Mi: Rosamygale Grauvogeli, posthumous-revived Ancient Zoan)." },
+        { "name": "Strawberry",                       "role": "Vice Admiral",                   "note": "Tall, distinctive helmet." },
+        { "name": "Bastille",                         "role": "Vice Admiral",                   "note": "Sword and shield." },
+        { "name": "Vergo",                            "role": "Vice Admiral / G-5 (corrupt)",   "note": "Doflamingo's mole. Killed by Law on Punk Hazard." }
+      ]
+    },
+    {
+      "label": "Cipher Pol Aigis Zero (CP0)",
+      "rank": 4,
+      "summary": "World Government's most secret intelligence + assassination unit. Operates above Marine command. Wears white, faceless masks.",
+      "members": [
+        { "name": "Rob Lucci",                        "role": "CP0 agent",                      "note": "Awakened Neko Neko no Mi: Leopard. Egghead arc." },
+        { "name": "Stussy",                           "role": "CP0 agent / MADS clone",         "note": "Vegapunk-era engineered seductress, defected." },
+        { "name": "Kaku",                             "role": "CP0 agent",                      "note": "Ushi Ushi no Mi: Giraffe." },
+        { "name": "Spandam",                          "role": "CP0 chief (former CP9)",         "note": "Yoru sword sheath wielder; villain of Enies Lobby." }
+      ]
+    },
+    {
+      "label": "Cipher Pol 9 (CP9)",
+      "rank": 5,
+      "summary": "Predecessor to CP0 — the unit Lucci, Kaku, Jabra, Kalifa, Blueno, Fukurō, Kumadori served in. Disbanded after Enies Lobby; survivors moved to CP0.",
+      "members": [
+        { "name": "Rob Lucci",        "role": "CP9 strongest", "note": "Now CP0." },
+        { "name": "Kaku",             "role": "CP9 swordsman", "note": "Now CP0." },
+        { "name": "Jabra",            "role": "CP9",           "note": "Inu Inu no Mi: Wolf." },
+        { "name": "Kalifa",           "role": "CP9",           "note": "Awa Awa no Mi (bubbles)." },
+        { "name": "Blueno",           "role": "CP9 bartender", "note": "Doa Doa no Mi (door)." },
+        { "name": "Fukurō",           "role": "CP9 zipper-man","note": "Iron Body specialist." },
+        { "name": "Kumadori",         "role": "CP9 actor",     "note": "Hair-extension melodrama." }
+      ]
+    },
+    {
+      "label": "SWORD",
+      "rank": 4,
+      "summary": "Secret Marine cell — operates outside the formal chain of command. Members can resign on paper while staying active. Egghead-era reveal.",
+      "members": [
+        { "name": "Coby",             "role": "SWORD captain", "note": "Promoted from Marineford rookie. Hostage on Hachinosu." },
+        { "name": "Helmeppo",         "role": "SWORD",         "note": "Garp's protégé. Coby's partner." },
+        { "name": "X Drake",          "role": "SWORD captain", "note": "Tobi Roppo defector — actually a SWORD plant." },
+        { "name": "Hibari",           "role": "SWORD",         "note": "Egghead Coby-rescue mission." },
+        { "name": "Prince Grus",      "role": "SWORD",         "note": "Eddhead member." },
+        { "name": "Doll",             "role": "SWORD commander", "note": "Vice Admiral leading the unit." }
+      ]
+    },
+    {
+      "label": "Marine Branch Captains & Special",
+      "rank": 6,
+      "summary": "Captains, instructors, base commanders, and special-operations leads.",
+      "members": [
+        { "name": "Tashigi",          "role": "Captain (G-5)",     "note": "Smoker's right hand. Sword collector." },
+        { "name": "Hina",             "role": "Captain → Vice Adm","note": "Ori Ori no Mi (cage)." },
+        { "name": "Coby",             "role": "Captain (SWORD)",   "note": "See SWORD above." },
+        { "name": "T-Bone",           "role": "Captain",           "note": "Giant skeleton swordsman." },
+        { "name": "Sentomaru",        "role": "Captain / Vegapunk bodyguard", "note": "Awa-style martial artist." }
+      ]
+    }
+  ]
+}

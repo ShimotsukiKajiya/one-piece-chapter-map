@@ -1,0 +1,72 @@
+{
+  "_doc": "The Void Century — the 100-year period 800 years ago that the World Government has erased from history. The mystery at the heart of One Piece. Compiled from canon reveals through Egghead.",
+  "generated_on": "2026-04-27",
+  "topics": [
+    {
+      "name": "The Ancient Kingdom",
+      "kind": "people",
+      "summary": "A great kingdom that existed during the Void Century. Allied with Joy Boy. Possessed the Ancient Weapons. Defeated and erased by the Twenty Kingdoms — the proto-World Government. Its name and territory are forbidden knowledge — Professor Clover died for speaking it.",
+      "key_chapters": [395, 906, 1115]
+    },
+    {
+      "name": "Joy Boy",
+      "kind": "person",
+      "summary": "Apologised in writing on the Sea Forest Poneglyph for failing to keep a promise to Shirahoshi's ancestor (the previous Poseidon). Now revealed: Joy Boy was the original wielder of the Hito Hito no Mi Model: Nika — the Sun God Devil Fruit. Luffy is the second Joy Boy.",
+      "key_chapters": [628, 906, 1043, 1116]
+    },
+    {
+      "name": "The Twenty Kingdoms / The World Government's founding",
+      "kind": "politics",
+      "summary": "20 kingdoms allied 800 years ago to destroy the Ancient Kingdom and form the World Government. Their royal descendants became the Tenryubito (Celestial Dragons), with one exception — the Nefertari family of Alabasta refused to relocate to Mariejois.",
+      "key_chapters": [395, 906]
+    },
+    {
+      "name": "Imu and the Empty Throne",
+      "kind": "person",
+      "summary": "The Empty Throne at the centre of the World Government Council was always shown as 'a symbol that none shall sit above the kings.' Reveal at the Reverie: it's actually occupied by Imu, the hidden true ruler. Imu has shown control over Mother Flame and personal hatred of the D. clan.",
+      "key_chapters": [906, 1085, 1115]
+    },
+    {
+      "name": "Mother Flame & Lulusia",
+      "kind": "event",
+      "summary": "During the Egghead arc, Imu and the Five Elders used a Vegapunk-developed superweapon — the Mother Flame — to vaporise the Lulusia Kingdom from above. The same weapon scared Vegapunk into broadcasting the truth. Demonstrated the World Government still has Ancient-Weapon-tier capability.",
+      "key_chapters": [1060, 1115]
+    },
+    {
+      "name": "God Valley Incident",
+      "kind": "event",
+      "summary": "38 years ago — Garp + Roger jointly destroyed the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki) on God Valley. The island then disappeared from maps. Recent reveals: Kuma was a child slave there; the Nephilim experiments and Buccaneer race connection happened here.",
+      "key_chapters": [957, 1095, 1102]
+    },
+    {
+      "name": "Vegapunk's Broadcast",
+      "kind": "event",
+      "summary": "Egghead climax — Stella Vegapunk uses a global Visual Den Den Mushi to deliver a posthumous message: humanity is sinking, the past will be revealed, and the Ancient Kingdom's truth must out. He was killed mid-broadcast by Saint Saturn but the recording survives.",
+      "key_chapters": [1112, 1115]
+    },
+    {
+      "name": "Sun God Nika myth",
+      "kind": "myth",
+      "summary": "An ancient warrior-deity who 'made slaves laugh and freed them.' Worshipped in secret by the descendants of the people the World Government enslaved. Joy Boy's true name. Luffy embodies Nika via the Hito Hito no Mi Model: Nika (deliberately mislabeled as Gomu Gomu by the World Government for 800 years).",
+      "key_chapters": [1018, 1043, 1044]
+    },
+    {
+      "name": "Buster Call doctrine",
+      "kind": "politics",
+      "summary": "The World Government's response to anyone reading or transcribing Poneglyphs: total annihilation. Famously used on Ohara, the West Blue island where Robin's mother Olvia worked, after they were caught studying the Poneglyphs.",
+      "key_chapters": [392, 397]
+    },
+    {
+      "name": "The Ancient Weapons",
+      "kind": "weapons",
+      "summary": "Pluton (warship), Poseidon (the mermaid princess line), and the unrevealed Uranus. Each is an Ancient-Kingdom relic powerful enough to destroy the world. The Strawhats now influence Pluton plans (Franky), Poseidon is their ally (Shirahoshi), and Uranus remains the last great unknown.",
+      "key_chapters": [357, 649, 906, 1085]
+    },
+    {
+      "name": "The Truth Roger Found",
+      "kind": "event",
+      "summary": "At Laugh Tale, Roger and his crew read the Rio Poneglyph and learned what really happened during the Void Century. They laughed — not at the answer, but because Roger felt he was 'too early.' He left messages for the next pirate king (Luffy) to find his own way.",
+      "key_chapters": [967, 968]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/_common.json",
+  "title": "Shared definitions",
+  "description": "Reusable type definitions for Codex schemas. Loaded into the validator's Registry; referenced by other schema files via $ref.",
+  "$defs": {
+    "entity_id": {
+      "description": "Any entity ID. Either a natural-key form (ch:N, sbs:volNNN-qNNNN, theory:NNN, arc:slug, etc.) or a numeric form (<prefix>:NNNNN).",
+      "type": "string",
+      "pattern": "^(ch:\\d+|ep:\\d+|vol:\\d+|sbs:vol\\d{3}-q\\d{4}|theory:\\d+|saga:[a-z0-9-]+|arc:[a-z0-9-]+|(chr|fruit|crew|loc|ship|weap|item|mat|race|tech|va):\\d{5})$"
+    },
+    "chapter_id": {
+      "description": "A chapter natural-key ID, e.g. ch:1037",
+      "type": "string",
+      "pattern": "^ch:\\d+$"
+    },
+    "episode_id": {
+      "type": "string",
+      "pattern": "^ep:\\d+$"
+    },
+    "volume_id": {
+      "type": "string",
+      "pattern": "^vol:\\d+$"
+    },
+    "sbs_id": {
+      "description": "An SBS Q&A ID. Volume zero-padded to 3 digits, qa_id zero-padded to 4 digits.",
+      "type": "string",
+      "pattern": "^sbs:vol\\d{3}-q\\d{4}$"
+    },
+    "theory_id": {
+      "type": "string",
+      "pattern": "^theory:\\d+$"
+    },
+    "arc_id": {
+      "type": "string",
+      "pattern": "^arc:[a-z0-9-]+$"
+    },
+    "saga_id": {
+      "type": "string",
+      "pattern": "^saga:[a-z0-9-]+$"
+    },
+    "character_id": {
+      "type": "string",
+      "pattern": "^chr:\\d{5}$"
+    },
+    "fruit_id": {
+      "type": "string",
+      "pattern": "^fruit:\\d{5}$"
+    },
+    "crew_id": {
+      "type": "string",
+      "pattern": "^crew:\\d{5}$"
+    },
+    "location_id": {
+      "type": "string",
+      "pattern": "^loc:\\d{5}$"
+    },
+    "ship_id": {
+      "type": "string",
+      "pattern": "^ship:\\d{5}$"
+    },
+    "weapon_id": {
+      "type": "string",
+      "pattern": "^weap:\\d{5}$"
+    },
+    "item_id": {
+      "type": "string",
+      "pattern": "^item:\\d{5}$"
+    },
+    "voice_actor_id": {
+      "type": "string",
+      "pattern": "^va:\\d{5}$"
+    },
+    "slug": {
+      "description": "Lowercase ASCII, hyphen-separated, no diacritics, no leading/trailing/double hyphens.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "iso_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "src": {
+      "description": "Where a relationship row's data came from.",
+      "type": "string",
+      "enum": ["wiki", "sbs", "manual", "inferred", "auto-extract"]
+    },
+    "tier": {
+      "description": "Trust tier for a claim. See docs/canon-policy.md.",
+      "type": "string",
+      "enum": ["canon", "likely", "speculation", "rumour", "disproven"]
+    },
+    "evidence_ref": {
+      "description": "Pointer from a relationship-shard row back to a canon_facts.json entry that confirms (or contradicts) it. See docs/convergence-plan.md.",
+      "type": "object",
+      "required": ["canon_fact_id"],
+      "properties": {
+        "canon_fact_id": {
+          "description": "The id of the canon_fact (e.g. 'first_app:Monkey_D_Luffy').",
+          "type": "string"
+        },
+        "match_type": {
+          "description": "How well the shard row matches the canon fact.",
+          "type": "string",
+          "enum": ["exact", "partial", "inferred"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "intent": {
+      "description": "How an SBS-derived claim should be read. See docs/canon-policy.md.",
+      "type": "string",
+      "enum": ["serious", "confirmation", "jocular", "ambiguous"]
+    },
+    "appearance_type": {
+      "type": "string",
+      "enum": ["full", "flashback", "silhouette", "cover", "mention-only"]
+    },
+    "family_relation": {
+      "description": "Edge convention: `from` HAS this relation = `to`. Example: {from: Luffy, to: Dragon, relation: father} reads as 'Luffy's father is Dragon'. Gendered variants are preferred when source data specifies; neutral fallbacks (parent/child/sibling/etc.) remain valid for ambiguous cases.",
+      "type": "string",
+      "enum": [
+        "parent", "father", "mother",
+        "child", "son", "daughter",
+        "sibling", "brother", "sister",
+        "half-sibling", "foster-sibling",
+        "grandparent", "grandfather", "grandmother",
+        "grandchild", "grandson", "granddaughter",
+        "spouse", "husband", "wife", "partner",
+        "uncle-aunt", "uncle", "aunt",
+        "niece-nephew", "nephew", "niece",
+        "cousin", "in-law",
+        "adopted-by", "adoptive-father", "adoptive-mother",
+        "adopted-child", "adoptive-son", "adoptive-daughter",
+        "adoptive-brother", "adoptive-sister",
+        "ancestor", "descendant",
+        "sworn-sibling", "sworn-brother", "sworn-sister",
+        "guardian"
+      ]
+    },
+    "stance": {
+      "description": "How a citing source relates to the cited evidence.",
+      "type": "string",
+      "enum": ["supports", "refutes", "mentions"]
+    },
+    "source_citation": {
+      "description": "A citation entry on a canon_fact's sources array.",
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": {"const": "sbs"},
+            "volume": {"type": ["integer", "string"]},
+            "qa_id": {"type": ["string", "null"]},
+            "match_type": {"type": "string"},
+            "matched_form": {"type": "string"}
+          },
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type", "page", "field"],
+          "properties": {
+            "type": {"const": "wiki"},
+            "page": {"type": "string"},
+            "field": {"type": "string"},
+            "value_at_verify": {"type": ["string", "number", "null"]}
+          },
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": {"const": "manga"},
+            "chapter":  {"type": ["integer", "string"]},
+            "chapters": {"type": "array", "items": {"type": ["integer", "string"]}},
+            "summary":  {"type": "string"},
+            "appearance_type": {"$ref": "_common.json#/$defs/appearance_type"}
+          },
+          "anyOf": [
+            {"required": ["chapter"]},
+            {"required": ["chapters"]}
+          ],
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": {"const": "manual"},
+            "ref":  {"type": "string", "description": "Free-text source label (e.g. 'Film: Red', 'fan transcription, ch:1063')"}
+          },
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {"type": {"const": "vivre_card"}},
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {"type": {"const": "color_walk"}},
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {"type": {"const": "op_magazine"}},
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {"type": {"const": "reddit"}},
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {"type": {"const": "user_submission"}},
+          "additionalProperties": true
+        }
+      ]
+    },
+    "relationship_row_base": {
+      "description": "Common required fields for every relationship row.",
+      "type": "object",
+      "required": ["from", "to", "src"],
+      "properties": {
+        "from": {"$ref": "_common.json#/$defs/entity_id"},
+        "to":   {"$ref": "_common.json#/$defs/entity_id"},
+        "src":  {"$ref": "_common.json#/$defs/src"}
+      }
+    },
+    "relationship_shard": {
+      "description": "Wrapper file shape for a relationships/<type>.json shard.",
+      "type": "object",
+      "required": ["rows"],
+      "properties": {
+        "rows": {"type": "array"},
+        "_doc": {"type": "string"},
+        "_schema_version": {"type": "integer"}
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_doc": "Hand-curated Haki codex — the three core types + advanced variants. Each entry: name, kind, debut chapter, key practitioners, what it does, advanced form notes.",
+  "generated_on": "2026-04-27",
+  "haki": [
+    {
+      "name": "Observation Haki",
+      "japanese": "見聞色 (Kenbunshoku)",
+      "kind": "core",
+      "debut_chapter": 597,
+      "summary": "Sense the presence, intent, and emotion of others. Allows brief future-sight at advanced levels.",
+      "users": ["Monkey D. Luffy","Otohime","Aisa","Enel (Mantra)","Charlotte Katakuri","Boa Hancock"],
+      "advanced": "Future Sight — see seconds ahead. Mastered by Katakuri, awakened by Luffy in Whole Cake."
+    },
+    {
+      "name": "Armament Haki",
+      "japanese": "武装色 (Busoshoku)",
+      "kind": "core",
+      "debut_chapter": 597,
+      "summary": "Coat the body or weapon in invisible armour. Hardens flesh, bypasses Logia intangibility, increases striking power.",
+      "users": ["Monkey D. Luffy","Roronoa Zoro","Vinsmoke Sanji","Silvers Rayleigh","Garp","Marco","Vista"],
+      "advanced": "Internal Destruction (Ryuou Flow) — emit Haki without contact, attack the inside of enemies. Used by Luffy from Wano onward, taught by the Mink tribe."
+    },
+    {
+      "name": "Conqueror's Haki",
+      "japanese": "覇王色 (Haoshoku)",
+      "kind": "rare",
+      "debut_chapter": 234,
+      "summary": "The will to dominate. Knocks weak-willed opponents unconscious. Possessed by ~1 in a million.",
+      "users": ["Monkey D. Luffy","Shanks","Whitebeard","Kaidou","Charlotte Linlin","Roger","Boa Hancock","Eustass Kid","Trafalgar Law","Yamato","Silvers Rayleigh","Sengoku","Garp","Donquixote Doflamingo","Charlotte Katakuri","Don Chinjao"],
+      "advanced": "Coating (Haoshoku Imbue) — coat weapon/limbs in Conqueror's, dealing damage at a distance via shockwave-like crackling black lightning. Luffy and Kaidou used this on Onigashima."
+    },
+    {
+      "name": "Future Sight",
+      "japanese": "見聞色の覇気 (Kenbunshoku no Haki)",
+      "kind": "advanced",
+      "debut_chapter": 866,
+      "summary": "Awakened Observation. See a few seconds into the future — useful for dodging the impossible.",
+      "users": ["Charlotte Katakuri","Monkey D. Luffy"],
+      "advanced": "Limited duration; mental strain. Luffy unlocked it during the Katakuri fight."
+    },
+    {
+      "name": "Ryuou (Flow)",
+      "japanese": "流桜",
+      "kind": "advanced",
+      "debut_chapter": 938,
+      "summary": "Wano-style Armament — emit Haki without physical contact. Bypasses defences by attacking through them.",
+      "users": ["Monkey D. Luffy","Hyogoro","Kawamatsu","Mink Tribe practitioners"],
+      "advanced": "Mastered version: Luffy's Internal Destruction-class strikes during the Onigashima rooftop fight."
+    },
+    {
+      "name": "Conqueror's Coating",
+      "japanese": "覇王色の覇気 / 武器に纏わせる",
+      "kind": "advanced",
+      "debut_chapter": 1010,
+      "summary": "Coat strikes in Conqueror's — black-lightning crackle, ranged damage. Said to be wielded by only the highest-tier emperors and the Pirate King's class.",
+      "users": ["Monkey D. Luffy","Kaidou","Shanks","Whitebeard (implied)","Roger (implied)"],
+      "advanced": "First clearly named in the rooftop showdown. Distinctive black-and-red lightning effect."
+    },
+    {
+      "name": "Mantra",
+      "japanese": "心綱",
+      "kind": "regional",
+      "debut_chapter": 254,
+      "summary": "Skypiea's name for Observation Haki. Aisa is born with it; Enel uses it to monitor an entire sky island.",
+      "users": ["Aisa","Enel","Gan Fall"],
+      "advanced": "Same as Observation Haki — Skypiea simply names it differently, as the rest of the world hadn't yet revealed Haki to readers."
+    }
+  ]
+}

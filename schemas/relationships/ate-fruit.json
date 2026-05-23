@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://shimotsukicodex.com/schemas/relationships/ate-fruit.json",
+  "title": "ate-fruit relationship",
+  "description": "character → fruit. Tracks who ate which fruit, when, awakening status, current possession.",
+  "type": "object",
+  "required": ["from", "to", "src"],
+  "properties": {
+    "from":             {"$ref": "../_common.json#/$defs/character_id"},
+    "to":               {"$ref": "../_common.json#/$defs/fruit_id"},
+    "src":              {"$ref": "../_common.json#/$defs/src"},
+    "chapter":          {"$ref": "../_common.json#/$defs/chapter_id"},
+    "awakened":         {"type": "boolean"},
+    "awakened_chapter": {"$ref": "../_common.json#/$defs/chapter_id"},
+    "current":          {"type": "boolean"},
+    "tier":             {"$ref": "../_common.json#/$defs/tier"},
+    "evidence":         {
+      "type": "array",
+      "items": {"$ref": "../_common.json#/$defs/evidence_ref"}
+    }
+  },
+  "additionalProperties": false
+}

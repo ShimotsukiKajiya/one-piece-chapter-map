@@ -1,0 +1,91 @@
+{
+  "source_type": "vivre_card",
+  "default_tier": "likely",
+  "_doc": "Hand-entered seed batch from the Vivre Card ~ One Piece Visual Dictionary ~ booster sets (initial 2018 release + Volume X expansions). Tier defaults to 'likely' per canon-sources.md — extended-media height/profile data has historically been revised between editions, so it stays sub-canon unless an SBS or manga panel corroborates. Edition string follows the pattern 'visual_dictionary_<year>' for Vivre Card facts. Expand this file or add data_manual/vivre_card_<set>.json siblings.",
+  "entries": [
+    {
+      "subject":   "Monkey D. Luffy",
+      "predicate": "height",
+      "value":     "174 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Post-timeskip standing height per Vivre Card Visual Dictionary. Pre-timeskip was 172cm in earlier SBS material."
+    },
+    {
+      "subject":   "Roronoa Zoro",
+      "predicate": "height",
+      "value":     "181 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height; consistent with SBS Vol 60 that paired height with the timeskip art."
+    },
+    {
+      "subject":   "Nami",
+      "predicate": "height",
+      "value":     "170 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height post-timeskip."
+    },
+    {
+      "subject":   "Usopp",
+      "predicate": "height",
+      "value":     "176 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height post-timeskip."
+    },
+    {
+      "subject":   "Sanji",
+      "predicate": "height",
+      "value":     "180 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height post-timeskip."
+    },
+    {
+      "subject":   "Tony Tony Chopper",
+      "predicate": "height",
+      "value":     "90 cm (Brain Point)",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height in default Brain Point form."
+    },
+    {
+      "subject":   "Nico Robin",
+      "predicate": "height",
+      "value":     "188 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height post-timeskip."
+    },
+    {
+      "subject":   "Franky",
+      "predicate": "height",
+      "value":     "240 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height post-timeskip — counts the Iron Pirate-modified frame."
+    },
+    {
+      "subject":   "Brook",
+      "predicate": "height",
+      "value":     "277 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height — Brook's tall skeletal frame."
+    },
+    {
+      "subject":   "Jinbe",
+      "predicate": "height",
+      "value":     "301 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height — fishman scale."
+    },
+    {
+      "subject":   "Portgas D. Ace",
+      "predicate": "height",
+      "value":     "185 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height — pre-Marineford figure."
+    },
+    {
+      "subject":   "Sabo",
+      "predicate": "height",
+      "value":     "187 cm",
+      "source_ref": { "edition": "visual_dictionary_2018" },
+      "notes":     "Vivre Card height — Revolutionary Chief of Staff figure."
+    }
+  ]
+}

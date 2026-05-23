@@ -1,0 +1,130 @@
+[
+  {
+    "from": "chr:01940",
+    "to":   "chr:02729",
+    "src":  "manual",
+    "since": "ch:560",
+    "note": "Zoro asks Mihawk to train him; 2-year timeskip on Kuraigana Island"
+  },
+  {
+    "from": "chr:02838",
+    "to":   "chr:02499",
+    "src":  "manual",
+    "since": "ch:560",
+    "note": "Rayleigh trains Luffy in Haki for 2 years on Rusukaina Island"
+  },
+  {
+    "from": "chr:02498",
+    "to":   "chr:02499",
+    "src":  "manual",
+    "since": "ch:1",
+    "note": "Garp throws young Luffy into ravines, ties him to balloons — childhood conditioning"
+  },
+  {
+    "from": "chr:02498",
+    "to":   "chr:02665",
+    "src":  "manual",
+    "since": "ch:1",
+    "note": "Garp raises and trains Ace alongside Luffy in Foosha Village area"
+  },
+  {
+    "from": "chr:02498",
+    "to":   "chr:02311",
+    "src":  "manual",
+    "since": "ch:434",
+    "note": "Garp takes Koby and Helmeppo under his wing at Marine HQ"
+  },
+  {
+    "from": "chr:02498",
+    "to":   "chr:02119",
+    "src":  "manual",
+    "since": "ch:434",
+    "note": "Garp mentors Helmeppo alongside Koby at Marine HQ"
+  },
+  {
+    "from": "chr:02819",
+    "to":   "chr:02729",
+    "src":  "manual",
+    "since": "ch:5",
+    "until": "ch:5",
+    "note": "Kuina spars with young Zoro daily at Isshin Dojo — 2000 fights before her death"
+  },
+  {
+    "from": "chr:02817",
+    "to":   "chr:02729",
+    "src":  "manual",
+    "since": "ch:5",
+    "note": "Koshiro runs the Isshin Dojo where Zoro trains from childhood"
+  },
+  {
+    "from": "chr:02167",
+    "to":   "chr:02499",
+    "src":  "manual",
+    "since": "ch:944",
+    "note": "Hyogoro teaches Luffy the fundamentals of Ryou (advanced Haki flow) in Udon Prison"
+  },
+  {
+    "from": "chr:03073",
+    "to":   "chr:02764",
+    "src":  "manual",
+    "since": "ch:56",
+    "note": "Zeff runs the Baratie and teaches Sanji both cooking and Black Leg fighting style"
+  },
+  {
+    "from": "chr:02140",
+    "to":   "chr:02938",
+    "src":  "manual",
+    "since": "ch:134",
+    "note": "Hiriluk takes in young Chopper and inspires his medical philosophy (Drum Island)"
+  },
+  {
+    "from": "chr:02341",
+    "to":   "chr:02938",
+    "src":  "manual",
+    "since": "ch:140",
+    "note": "Kureha formally trains Chopper in medicine after Hiriluk's death"
+  },
+  {
+    "from": "chr:02107",
+    "to":   "chr:02548",
+    "src":  "manual",
+    "since": "ch:560",
+    "note": "Haredas and the Weatheria scientists teach Nami advanced weather-based navigation during the timeskip"
+  },
+  {
+    "from": "chr:02932",
+    "to":   "chr:01991",
+    "src":  "manual",
+    "since": "ch:355",
+    "note": "Tom teaches Franky (then Cutty Flam) shipbuilding at Dock 1 in Water Seven"
+  },
+  {
+    "from": "chr:02932",
+    "to":   "chr:02172",
+    "src":  "manual",
+    "since": "ch:355",
+    "note": "Tom teaches Iceburg shipbuilding alongside Franky in Water Seven"
+  },
+  {
+    "from": "chr:02497",
+    "to":   "chr:02751",
+    "src":  "manual",
+    "since": "ch:589",
+    "note": "Dragon leads the Revolutionary Army where Sabo trains and rises to Chief of Staff"
+  },
+  {
+    "from": "chr:02497",
+    "to":   "chr:02308",
+    "src":  "manual",
+    "since": "ch:589",
+    "note": "Koala trains under the Revolutionary Army (Dragon's forces); becomes Assistant Instructor"
+  },
+  {
+    "from": "chr:02809",
+    "to":   "chr:02499",
+    "src":  "manual",
+    "since": "ch:1",
+    "until": "ch:1",
+    "note": "Shanks mentors young Luffy in Foosha Village and inspires his pirate dream"
+  }
+]

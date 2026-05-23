@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Shimotsuki Codex — canon updates</title>
+    <link>https://shimotsukicodex.com/</link>
+    <description>What got scraped, verified, or curated this week. Auto-generated from git history.</description>
+    <lastBuildDate>Thu, 30 Apr 2026 14:39:35 +0000</lastBuildDate>
+    <language>en</language>
+    <item>
+      <title>Cleanup pass: crew rank ordering, bounty fixes, Vivre Card canon name</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/b6a4b5c107a7c87759d272cfe5bf8b64979d94ba</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/b6a4b5c107a7c87759d272cfe5bf8b64979d94ba</guid>
+      <pubDate>Mon, 27 Apr 2026 06:56:48 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Cleanup pass: crew rank ordering, bounty fixes, Vivre Card canon name (commit b6a4b5c1)</description>
+    </item>
+    <item>
+      <title>Sprint 4: home tier split + Corrections Inbox + awakenings/Vivre Card seeds</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/445fc161a2e3cdc39f7f8e486bdc439e044c4c95</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/445fc161a2e3cdc39f7f8e486bdc439e044c4c95</guid>
+      <pubDate>Mon, 27 Apr 2026 06:42:34 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Sprint 4: home tier split + Corrections Inbox + awakenings/Vivre Card seeds (commit 445fc161)</description>
+    </item>
+    <item>
+      <title>Sprint 1: alias expansion + Random + Compare + PWA shell</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/98beb5a348d718c599cd311fdc6400cb12634581</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/98beb5a348d718c599cd311fdc6400cb12634581</guid>
+      <pubDate>Sun, 26 Apr 2026 21:17:01 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Sprint 1: alias expansion + Random + Compare + PWA shell (commit 98beb5a3)</description>
+    </item>
+    <item>
+      <title>Six new surfaces + JSON API + RSS feed — Codex coverage push</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/a6cda4e35549e88bb21db5d38e2c74f597a5e519</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/a6cda4e35549e88bb21db5d38e2c74f597a5e519</guid>
+      <pubDate>Sun, 26 Apr 2026 19:38:00 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Six new surfaces + JSON API + RSS feed — Codex coverage push (commit a6cda4e3)</description>
+    </item>
+    <item>
+      <title>Arc Atlas: arcs.json + arcs.html — 33 arcs across 9 sagas</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/c62b02f20de9eda30a68cee20a1c0026390f405a</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/c62b02f20de9eda30a68cee20a1c0026390f405a</guid>
+      <pubDate>Sun, 26 Apr 2026 19:18:20 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Arc Atlas: arcs.json + arcs.html — 33 arcs across 9 sagas (commit c62b02f2)</description>
+    </item>
+    <item>
+      <title>data: Chapter 1181 official refresh + assign_sbs_ids.py for stable Q&amp;A IDs</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/4045aceb834f90e397e765cb637c3b941c537e47</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/4045aceb834f90e397e765cb637c3b941c537e47</guid>
+      <pubDate>Sun, 26 Apr 2026 19:09:00 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>data: Chapter 1181 official refresh + assign_sbs_ids.py for stable Q&amp;A IDs (commit 4045aceb)</description>
+    </item>
+    <item>
+      <title>Devil Fruit Codex + Bounty Wall + sort dropdowns across all browse pages</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/1de70f0e0f081dbb927af92e5632393b873fd0b1</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/1de70f0e0f081dbb927af92e5632393b873fd0b1</guid>
+      <pubDate>Sun, 26 Apr 2026 19:01:10 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Devil Fruit Codex + Bounty Wall + sort dropdowns across all browse pages (commit 1de70f0e)</description>
+    </item>
+    <item>
+      <title>verify v3 + curate.html + canon-policy nuance — Oda&#x27;s style as data</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/516a46737cfddf15985aaa1bb66251efe1f7aec7</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/516a46737cfddf15985aaa1bb66251efe1f7aec7</guid>
+      <pubDate>Sun, 26 Apr 2026 15:00:31 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>verify v3 + curate.html + canon-policy nuance — Oda&#x27;s style as data (commit 516a4673)</description>
+    </item>
+    <item>
+      <title>verify.py v2 — kill the manual review bottleneck (3x more verified facts)</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/e367562e88958f54218117c4f431ad4721dff3c3</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/e367562e88958f54218117c4f431ad4721dff3c3</guid>
+      <pubDate>Sun, 26 Apr 2026 14:35:43 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>verify.py v2 — kill the manual review bottleneck (3x more verified facts) (commit e367562e)</description>
+    </item>
+    <item>
+      <title>Phase C — verify.py: free-path SBS cross-check promotes wiki -&gt; canon</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/c50332b9b93d323212bd7282d46c25219003bb55</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/c50332b9b93d323212bd7282d46c25219003bb55</guid>
+      <pubDate>Sun, 26 Apr 2026 14:27:56 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Phase C — verify.py: free-path SBS cross-check promotes wiki -&gt; canon (commit c50332b9)</description>
+    </item>
+    <item>
+      <title>Canon Engine: free-first roadmap + source registry + manga facts</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/15048733a134e1ae9cf299e0a9e652e595de81bf</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/15048733a134e1ae9cf299e0a9e652e595de81bf</guid>
+      <pubDate>Sun, 26 Apr 2026 13:14:32 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Canon Engine: free-first roadmap + source registry + manga facts (commit 15048733)</description>
+    </item>
+    <item>
+      <title>Character pages: portraits + lazy-load + tighter cross-links + nav fix</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/03e0ac5574d10e62d8b0c6718135b8550b1ea110</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/03e0ac5574d10e62d8b0c6718135b8550b1ea110</guid>
+      <pubDate>Sun, 26 Apr 2026 12:08:59 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Character pages: portraits + lazy-load + tighter cross-links + nav fix (commit 03e0ac55)</description>
+    </item>
+    <item>
+      <title>Phase 1 — Workbench plumbing: stable theory IDs + unified card index</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/635e2f5014aa64b4ed23da4dfc13e18304493298</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/635e2f5014aa64b4ed23da4dfc13e18304493298</guid>
+      <pubDate>Sun, 26 Apr 2026 11:39:23 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Phase 1 — Workbench plumbing: stable theory IDs + unified card index (commit 635e2f50)</description>
+    </item>
+    <item>
+      <title>Codex pipeline: auditor, refresher, freshener + scraper optimisations</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/5fc96f0a7616fd19215cb7b12791135a03f0ce26</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/5fc96f0a7616fd19215cb7b12791135a03f0ce26</guid>
+      <pubDate>Sun, 26 Apr 2026 10:35:51 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Codex pipeline: auditor, refresher, freshener + scraper optimisations (commit 5fc96f0a)</description>
+    </item>
+    <item>
+      <title>Polish pass: P3 + P4 + P6 + P7</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/35a72634b499001af535707df65ff39b3529491f</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/35a72634b499001af535707df65ff39b3529491f</guid>
+      <pubDate>Sun, 26 Apr 2026 08:56:17 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Polish pass: P3 + P4 + P6 + P7 (commit 35a72634)</description>
+    </item>
+    <item>
+      <title>Cover stories: fix 9 failed scrapes, total now 22 (was 15)</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/edc66d88c50008628ec981b8b73689b90922414f</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/edc66d88c50008628ec981b8b73689b90922414f</guid>
+      <pubDate>Sun, 26 Apr 2026 01:27:17 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Cover stories: fix 9 failed scrapes, total now 22 (was 15) (commit edc66d88)</description>
+    </item>
+    <item>
+      <title>Fact-check pass: corrected stats + rebranded all page titles</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/8f27aa9b009bf532e9c0e766ca14d3189997a87d</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/8f27aa9b009bf532e9c0e766ca14d3189997a87d</guid>
+      <pubDate>Sun, 26 Apr 2026 01:17:48 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Fact-check pass: corrected stats + rebranded all page titles (commit 8f27aa9b)</description>
+    </item>
+    <item>
+      <title>Strip wiki cruft from answers + show translator credits as separator bubble</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/d319fcd6810dc04ae2cc6201c71b59df33fbe557</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/d319fcd6810dc04ae2cc6201c71b59df33fbe557</guid>
+      <pubDate>Sun, 26 Apr 2026 00:35:06 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Strip wiki cruft from answers + show translator credits as separator bubble (commit d319fcd6)</description>
+    </item>
+    <item>
+      <title>Add stable global #NNNN ID badge to each SBS Q&amp;A card</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/6033844ae6a79fd62192ad4d6e73a9a13b14e136</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/6033844ae6a79fd62192ad4d6e73a9a13b14e136</guid>
+      <pubDate>Sun, 26 Apr 2026 00:24:03 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Add stable global #NNNN ID badge to each SBS Q&amp;A card (commit 6033844a)</description>
+    </item>
+    <item>
+      <title>Clean wikitable syntax leaks from 24 SBS answer texts</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/d948af456a853dce7548aa11b09274cdc17a7714</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/d948af456a853dce7548aa11b09274cdc17a7714</guid>
+      <pubDate>Sun, 26 Apr 2026 00:21:49 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Clean wikitable syntax leaks from 24 SBS answer texts (commit d948af45)</description>
+    </item>
+    <item>
+      <title>Position-based SBS image attribution (replaces fuzzy matching)</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/f0086acbe01bfddcb97f55df13d35eb3a2bd7521</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/f0086acbe01bfddcb97f55df13d35eb3a2bd7521</guid>
+      <pubDate>Sun, 26 Apr 2026 00:18:18 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Position-based SBS image attribution (replaces fuzzy matching) (commit f0086acb)</description>
+    </item>
+    <item>
+      <title>Major content drop: SBS inline images, pen names, treasure-map theme, landing page, big-cards mode, sidebar collapse, back-to-top</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/58e3ed592c689c445ffe12c3e08a61cf6c6274db</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/58e3ed592c689c445ffe12c3e08a61cf6c6274db</guid>
+      <pubDate>Sat, 25 Apr 2026 23:22:56 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Major content drop: SBS inline images, pen names, treasure-map theme, landing page, big-cards mode, sidebar collapse, back-to-top (commit 58e3ed59)</description>
+    </item>
+    <item>
+      <title>SBS polish: favorites, stats, keyboard shortcuts + theory re-analysis</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/9b3516bb62a62586c594fc5738403a0dc1ac7204</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/9b3516bb62a62586c594fc5738403a0dc1ac7204</guid>
+      <pubDate>Sat, 25 Apr 2026 19:54:10 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>SBS polish: favorites, stats, keyboard shortcuts + theory re-analysis (commit 9b3516bb)</description>
+    </item>
+    <item>
+      <title>Big upgrade: SBS categorization + covers + silver-bullet matcher</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/9fed886039743a5bf5680cf097be0e137031855b</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/9fed886039743a5bf5680cf097be0e137031855b</guid>
+      <pubDate>Sat, 25 Apr 2026 19:43:59 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Big upgrade: SBS categorization + covers + silver-bullet matcher (commit 9fed8860)</description>
+    </item>
+    <item>
+      <title>SBS scraper: handle plain &#x27;O:&#x27; format + add gap-fill mode</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/96c1798d50f137f1e117c9d8240176dac83bb163</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/96c1798d50f137f1e117c9d8240176dac83bb163</guid>
+      <pubDate>Sat, 25 Apr 2026 16:14:56 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>SBS scraper: handle plain &#x27;O:&#x27; format + add gap-fill mode (commit 96c1798d)</description>
+    </item>
+    <item>
+      <title>Add SBS archive + theory analyzer pipeline</title>
+      <link>https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/b9b5ec278772a23e30be347ff6054fa6432069f2</link>
+      <guid isPermaLink="true">https://github.com/ShimotsukiKajiya/one-piece-chapter-map/commit/b9b5ec278772a23e30be347ff6054fa6432069f2</guid>
+      <pubDate>Sat, 25 Apr 2026 15:59:15 +0200</pubDate>
+      <author>Shimotsuki Kajiya</author>
+      <description>Add SBS archive + theory analyzer pipeline (commit b9b5ec27)</description>
+    </item>
+  </channel>
+</rss>

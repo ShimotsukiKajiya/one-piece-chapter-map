@@ -1,0 +1,6600 @@
+{
+  "_doc": "Per-chapter publication date estimates. Volume release dates (volumes[].release_date) are EXACT — sourced from Wikipedia 'List of One Piece chapters'. Per-chapter dates are interpolated weekly between volume anchors with a ~6-week tankōbon lead-time, so the LAST chapter of each volume is dated to its WSJ issue (also exact) and earlier chapters in the volume are linearly distributed back. Chapter 1's anchor is 1997-07-22 (WSJ Issue #34, 1997). Chapters past the latest tankōbon use simple +7-day weekly cadence and are flagged approximate=true. Real WSJ issue dates may differ by ±1 week due to skip-weeks and irregular hiatuses not modelled here.",
+  "generated_on": "2026-05-02",
+  "anchor_chapter1": "1997-07-22",
+  "tankobon_lead_days": 42,
+  "latest_chapter": 1181,
+  "volumes": [
+    {
+      "volume": 1,
+      "release_date": "1997-12-24",
+      "first_ch": 1,
+      "last_ch": 8
+    },
+    {
+      "volume": 2,
+      "release_date": "1998-04-03",
+      "first_ch": 9,
+      "last_ch": 17
+    },
+    {
+      "volume": 3,
+      "release_date": "1998-06-04",
+      "first_ch": 18,
+      "last_ch": 26
+    },
+    {
+      "volume": 4,
+      "release_date": "1998-08-04",
+      "first_ch": 27,
+      "last_ch": 35
+    },
+    {
+      "volume": 5,
+      "release_date": "1998-10-02",
+      "first_ch": 36,
+      "last_ch": 44
+    },
+    {
+      "volume": 6,
+      "release_date": "1998-12-03",
+      "first_ch": 45,
+      "last_ch": 53
+    },
+    {
+      "volume": 7,
+      "release_date": "1999-03-04",
+      "first_ch": 54,
+      "last_ch": 62
+    },
+    {
+      "volume": 8,
+      "release_date": "1999-04-30",
+      "first_ch": 63,
+      "last_ch": 71
+    },
+    {
+      "volume": 9,
+      "release_date": "1999-07-02",
+      "first_ch": 72,
+      "last_ch": 81
+    },
+    {
+      "volume": 10,
+      "release_date": "1999-10-04",
+      "first_ch": 82,
+      "last_ch": 90
+    },
+    {
+      "volume": 11,
+      "release_date": "1999-12-02",
+      "first_ch": 91,
+      "last_ch": 99
+    },
+    {
+      "volume": 12,
+      "release_date": "2000-02-02",
+      "first_ch": 100,
+      "last_ch": 108
+    },
+    {
+      "volume": 13,
+      "release_date": "2000-04-28",
+      "first_ch": 109,
+      "last_ch": 117
+    },
+    {
+      "volume": 14,
+      "release_date": "2000-07-04",
+      "first_ch": 118,
+      "last_ch": 126
+    },
+    {
+      "volume": 15,
+      "release_date": "2000-09-04",
+      "first_ch": 127,
+      "last_ch": 136
+    },
+    {
+      "volume": 16,
+      "release_date": "2000-12-04",
+      "first_ch": 137,
+      "last_ch": 145
+    },
+    {
+      "volume": 17,
+      "release_date": "2001-02-02",
+      "first_ch": 146,
+      "last_ch": 155
+    },
+    {
+      "volume": 18,
+      "release_date": "2001-04-04",
+      "first_ch": 156,
+      "last_ch": 166
+    },
+    {
+      "volume": 19,
+      "release_date": "2001-07-04",
+      "first_ch": 167,
+      "last_ch": 176
+    },
+    {
+      "volume": 20,
+      "release_date": "2001-09-04",
+      "first_ch": 177,
+      "last_ch": 186
+    },
+    {
+      "volume": 21,
+      "release_date": "2001-12-04",
+      "first_ch": 187,
+      "last_ch": 195
+    },
+    {
+      "volume": 22,
+      "release_date": "2002-02-04",
+      "first_ch": 196,
+      "last_ch": 205
+    },
+    {
+      "volume": 23,
+      "release_date": "2002-04-04",
+      "first_ch": 206,
+      "last_ch": 216
+    },
+    {
+      "volume": 24,
+      "release_date": "2002-07-04",
+      "first_ch": 217,
+      "last_ch": 226
+    },
+    {
+      "volume": 25,
+      "release_date": "2002-09-04",
+      "first_ch": 227,
+      "last_ch": 236
+    },
+    {
+      "volume": 26,
+      "release_date": "2002-12-04",
+      "first_ch": 237,
+      "last_ch": 246
+    },
+    {
+      "volume": 27,
+      "release_date": "2003-02-04",
+      "first_ch": 247,
+      "last_ch": 255
+    },
+    {
+      "volume": 28,
+      "release_date": "2003-05-01",
+      "first_ch": 256,
+      "last_ch": 264
+    },
+    {
+      "volume": 29,
+      "release_date": "2003-07-04",
+      "first_ch": 265,
+      "last_ch": 275
+    },
+    {
+      "volume": 30,
+      "release_date": "2003-10-03",
+      "first_ch": 276,
+      "last_ch": 285
+    },
+    {
+      "volume": 31,
+      "release_date": "2003-12-19",
+      "first_ch": 286,
+      "last_ch": 295
+    },
+    {
+      "volume": 32,
+      "release_date": "2004-03-04",
+      "first_ch": 296,
+      "last_ch": 305
+    },
+    {
+      "volume": 33,
+      "release_date": "2004-06-04",
+      "first_ch": 306,
+      "last_ch": 316
+    },
+    {
+      "volume": 34,
+      "release_date": "2004-08-04",
+      "first_ch": 317,
+      "last_ch": 327
+    },
+    {
+      "volume": 35,
+      "release_date": "2004-11-04",
+      "first_ch": 328,
+      "last_ch": 337
+    },
+    {
+      "volume": 36,
+      "release_date": "2005-02-04",
+      "first_ch": 338,
+      "last_ch": 346
+    },
+    {
+      "volume": 37,
+      "release_date": "2005-04-28",
+      "first_ch": 347,
+      "last_ch": 357
+    },
+    {
+      "volume": 38,
+      "release_date": "2005-07-04",
+      "first_ch": 358,
+      "last_ch": 367
+    },
+    {
+      "volume": 39,
+      "release_date": "2005-11-04",
+      "first_ch": 368,
+      "last_ch": 377
+    },
+    {
+      "volume": 40,
+      "release_date": "2005-12-26",
+      "first_ch": 378,
+      "last_ch": 388
+    },
+    {
+      "volume": 41,
+      "release_date": "2006-04-04",
+      "first_ch": 389,
+      "last_ch": 399
+    },
+    {
+      "volume": 42,
+      "release_date": "2006-07-04",
+      "first_ch": 400,
+      "last_ch": 409
+    },
+    {
+      "volume": 43,
+      "release_date": "2006-09-04",
+      "first_ch": 410,
+      "last_ch": 419
+    },
+    {
+      "volume": 44,
+      "release_date": "2006-12-04",
+      "first_ch": 420,
+      "last_ch": 430
+    },
+    {
+      "volume": 45,
+      "release_date": "2007-03-02",
+      "first_ch": 431,
+      "last_ch": 440
+    },
+    {
+      "volume": 46,
+      "release_date": "2007-07-04",
+      "first_ch": 441,
+      "last_ch": 449
+    },
+    {
+      "volume": 47,
+      "release_date": "2007-09-04",
+      "first_ch": 450,
+      "last_ch": 459
+    },
+    {
+      "volume": 48,
+      "release_date": "2007-12-04",
+      "first_ch": 460,
+      "last_ch": 470
+    },
+    {
+      "volume": 49,
+      "release_date": "2008-03-04",
+      "first_ch": 471,
+      "last_ch": 481
+    },
+    {
+      "volume": 50,
+      "release_date": "2008-06-04",
+      "first_ch": 482,
+      "last_ch": 491
+    },
+    {
+      "volume": 51,
+      "release_date": "2008-09-04",
+      "first_ch": 492,
+      "last_ch": 502
+    },
+    {
+      "volume": 52,
+      "release_date": "2008-12-04",
+      "first_ch": 503,
+      "last_ch": 512
+    },
+    {
+      "volume": 53,
+      "release_date": "2009-03-04",
+      "first_ch": 513,
+      "last_ch": 522
+    },
+    {
+      "volume": 54,
+      "release_date": "2009-06-04",
+      "first_ch": 523,
+      "last_ch": 532
+    },
+    {
+      "volume": 55,
+      "release_date": "2009-09-04",
+      "first_ch": 533,
+      "last_ch": 541
+    },
+    {
+      "volume": 56,
+      "release_date": "2009-12-04",
+      "first_ch": 542,
+      "last_ch": 551
+    },
+    {
+      "volume": 57,
+      "release_date": "2010-03-04",
+      "first_ch": 552,
+      "last_ch": 562
+    },
+    {
+      "volume": 58,
+      "release_date": "2010-06-04",
+      "first_ch": 563,
+      "last_ch": 573
+    },
+    {
+      "volume": 59,
+      "release_date": "2010-08-04",
+      "first_ch": 574,
+      "last_ch": 584
+    },
+    {
+      "volume": 60,
+      "release_date": "2010-11-04",
+      "first_ch": 585,
+      "last_ch": 594
+    },
+    {
+      "volume": 61,
+      "release_date": "2011-02-04",
+      "first_ch": 595,
+      "last_ch": 603
+    },
+    {
+      "volume": 62,
+      "release_date": "2011-05-02",
+      "first_ch": 604,
+      "last_ch": 614
+    },
+    {
+      "volume": 63,
+      "release_date": "2011-08-04",
+      "first_ch": 615,
+      "last_ch": 626
+    },
+    {
+      "volume": 64,
+      "release_date": "2011-11-04",
+      "first_ch": 627,
+      "last_ch": 636
+    },
+    {
+      "volume": 65,
+      "release_date": "2012-02-03",
+      "first_ch": 637,
+      "last_ch": 646
+    },
+    {
+      "volume": 66,
+      "release_date": "2012-05-02",
+      "first_ch": 647,
+      "last_ch": 656
+    },
+    {
+      "volume": 67,
+      "release_date": "2012-08-03",
+      "first_ch": 657,
+      "last_ch": 667
+    },
+    {
+      "volume": 68,
+      "release_date": "2012-11-02",
+      "first_ch": 668,
+      "last_ch": 678
+    },
+    {
+      "volume": 69,
+      "release_date": "2013-03-04",
+      "first_ch": 679,
+      "last_ch": 690
+    },
+    {
+      "volume": 70,
+      "release_date": "2013-06-04",
+      "first_ch": 691,
+      "last_ch": 700
+    },
+    {
+      "volume": 71,
+      "release_date": "2013-08-02",
+      "first_ch": 701,
+      "last_ch": 711
+    },
+    {
+      "volume": 72,
+      "release_date": "2013-11-01",
+      "first_ch": 712,
+      "last_ch": 721
+    },
+    {
+      "volume": 73,
+      "release_date": "2014-03-04",
+      "first_ch": 722,
+      "last_ch": 731
+    },
+    {
+      "volume": 74,
+      "release_date": "2014-06-04",
+      "first_ch": 732,
+      "last_ch": 742
+    },
+    {
+      "volume": 75,
+      "release_date": "2014-09-04",
+      "first_ch": 743,
+      "last_ch": 752
+    },
+    {
+      "volume": 76,
+      "release_date": "2014-12-27",
+      "first_ch": 753,
+      "last_ch": 763
+    },
+    {
+      "volume": 77,
+      "release_date": "2015-04-03",
+      "first_ch": 764,
+      "last_ch": 775
+    },
+    {
+      "volume": 78,
+      "release_date": "2015-07-03",
+      "first_ch": 776,
+      "last_ch": 785
+    },
+    {
+      "volume": 79,
+      "release_date": "2015-10-03",
+      "first_ch": 786,
+      "last_ch": 795
+    },
+    {
+      "volume": 80,
+      "release_date": "2015-12-28",
+      "first_ch": 796,
+      "last_ch": 806
+    },
+    {
+      "volume": 81,
+      "release_date": "2016-04-04",
+      "first_ch": 807,
+      "last_ch": 816
+    },
+    {
+      "volume": 82,
+      "release_date": "2016-07-04",
+      "first_ch": 817,
+      "last_ch": 827
+    },
+    {
+      "volume": 83,
+      "release_date": "2016-11-04",
+      "first_ch": 828,
+      "last_ch": 838
+    },
+    {
+      "volume": 84,
+      "release_date": "2017-02-03",
+      "first_ch": 839,
+      "last_ch": 848
+    },
+    {
+      "volume": 85,
+      "release_date": "2017-05-02",
+      "first_ch": 849,
+      "last_ch": 858
+    },
+    {
+      "volume": 86,
+      "release_date": "2017-08-04",
+      "first_ch": 859,
+      "last_ch": 869
+    },
+    {
+      "volume": 87,
+      "release_date": "2017-11-02",
+      "first_ch": 870,
+      "last_ch": 879
+    },
+    {
+      "volume": 88,
+      "release_date": "2018-03-02",
+      "first_ch": 880,
+      "last_ch": 889
+    },
+    {
+      "volume": 89,
+      "release_date": "2018-06-04",
+      "first_ch": 890,
+      "last_ch": 900
+    },
+    {
+      "volume": 90,
+      "release_date": "2018-09-04",
+      "first_ch": 901,
+      "last_ch": 910
+    },
+    {
+      "volume": 91,
+      "release_date": "2018-12-04",
+      "first_ch": 911,
+      "last_ch": 921
+    },
+    {
+      "volume": 92,
+      "release_date": "2019-03-04",
+      "first_ch": 922,
+      "last_ch": 931
+    },
+    {
+      "volume": 93,
+      "release_date": "2019-07-04",
+      "first_ch": 932,
+      "last_ch": 942
+    },
+    {
+      "volume": 94,
+      "release_date": "2019-10-04",
+      "first_ch": 943,
+      "last_ch": 953
+    },
+    {
+      "volume": 95,
+      "release_date": "2019-12-28",
+      "first_ch": 954,
+      "last_ch": 964
+    },
+    {
+      "volume": 96,
+      "release_date": "2020-04-03",
+      "first_ch": 965,
+      "last_ch": 974
+    },
+    {
+      "volume": 97,
+      "release_date": "2020-09-16",
+      "first_ch": 975,
+      "last_ch": 984
+    },
+    {
+      "volume": 98,
+      "release_date": "2021-02-04",
+      "first_ch": 985,
+      "last_ch": 994
+    },
+    {
+      "volume": 99,
+      "release_date": "2021-06-04",
+      "first_ch": 995,
+      "last_ch": 1004
+    },
+    {
+      "volume": 100,
+      "release_date": "2021-09-03",
+      "first_ch": 1005,
+      "last_ch": 1015
+    },
+    {
+      "volume": 101,
+      "release_date": "2021-12-03",
+      "first_ch": 1016,
+      "last_ch": 1025
+    },
+    {
+      "volume": 102,
+      "release_date": "2022-04-04",
+      "first_ch": 1026,
+      "last_ch": 1035
+    },
+    {
+      "volume": 103,
+      "release_date": "2022-08-04",
+      "first_ch": 1036,
+      "last_ch": 1046
+    },
+    {
+      "volume": 104,
+      "release_date": "2022-11-04",
+      "first_ch": 1047,
+      "last_ch": 1055
+    },
+    {
+      "volume": 105,
+      "release_date": "2023-03-03",
+      "first_ch": 1056,
+      "last_ch": 1065
+    },
+    {
+      "volume": 106,
+      "release_date": "2023-07-04",
+      "first_ch": 1066,
+      "last_ch": 1076
+    },
+    {
+      "volume": 107,
+      "release_date": "2023-11-02",
+      "first_ch": 1077,
+      "last_ch": 1088
+    },
+    {
+      "volume": 108,
+      "release_date": "2024-03-04",
+      "first_ch": 1089,
+      "last_ch": 1100
+    },
+    {
+      "volume": 109,
+      "release_date": "2024-07-04",
+      "first_ch": 1101,
+      "last_ch": 1110
+    },
+    {
+      "volume": 110,
+      "release_date": "2024-11-01",
+      "first_ch": 1111,
+      "last_ch": 1121
+    },
+    {
+      "volume": 111,
+      "release_date": "2025-03-04",
+      "first_ch": 1122,
+      "last_ch": 1133
+    },
+    {
+      "volume": 112,
+      "release_date": "2025-07-04",
+      "first_ch": 1134,
+      "last_ch": 1144
+    },
+    {
+      "volume": 113,
+      "release_date": "2025-11-04",
+      "first_ch": 1145,
+      "last_ch": 1155
+    },
+    {
+      "volume": 114,
+      "release_date": "2026-03-04",
+      "first_ch": 1156,
+      "last_ch": 1166
+    }
+  ],
+  "chapters": {
+    "1": {
+      "date": "1997-07-22",
+      "volume": 1,
+      "approximate": false
+    },
+    "2": {
+      "date": "1997-08-07",
+      "volume": 1,
+      "approximate": true
+    },
+    "3": {
+      "date": "1997-08-23",
+      "volume": 1,
+      "approximate": true
+    },
+    "4": {
+      "date": "1997-09-08",
+      "volume": 1,
+      "approximate": true
+    },
+    "5": {
+      "date": "1997-09-25",
+      "volume": 1,
+      "approximate": true
+    },
+    "6": {
+      "date": "1997-10-11",
+      "volume": 1,
+      "approximate": true
+    },
+    "7": {
+      "date": "1997-10-27",
+      "volume": 1,
+      "approximate": true
+    },
+    "8": {
+      "date": "1997-11-12",
+      "volume": 1,
+      "approximate": false
+    },
+    "9": {
+      "date": "1997-11-19",
+      "volume": 2,
+      "approximate": true
+    },
+    "10": {
+      "date": "1997-12-01",
+      "volume": 2,
+      "approximate": true
+    },
+    "11": {
+      "date": "1997-12-12",
+      "volume": 2,
+      "approximate": true
+    },
+    "12": {
+      "date": "1997-12-24",
+      "volume": 2,
+      "approximate": true
+    },
+    "13": {
+      "date": "1998-01-04",
+      "volume": 2,
+      "approximate": true
+    },
+    "14": {
+      "date": "1998-01-16",
+      "volume": 2,
+      "approximate": true
+    },
+    "15": {
+      "date": "1998-01-28",
+      "volume": 2,
+      "approximate": true
+    },
+    "16": {
+      "date": "1998-02-08",
+      "volume": 2,
+      "approximate": true
+    },
+    "17": {
+      "date": "1998-02-20",
+      "volume": 2,
+      "approximate": false
+    },
+    "18": {
+      "date": "1998-02-27",
+      "volume": 3,
+      "approximate": true
+    },
+    "19": {
+      "date": "1998-03-06",
+      "volume": 3,
+      "approximate": true
+    },
+    "20": {
+      "date": "1998-03-13",
+      "volume": 3,
+      "approximate": true
+    },
+    "21": {
+      "date": "1998-03-20",
+      "volume": 3,
+      "approximate": true
+    },
+    "22": {
+      "date": "1998-03-27",
+      "volume": 3,
+      "approximate": true
+    },
+    "23": {
+      "date": "1998-04-02",
+      "volume": 3,
+      "approximate": true
+    },
+    "24": {
+      "date": "1998-04-09",
+      "volume": 3,
+      "approximate": true
+    },
+    "25": {
+      "date": "1998-04-16",
+      "volume": 3,
+      "approximate": true
+    },
+    "26": {
+      "date": "1998-04-23",
+      "volume": 3,
+      "approximate": false
+    },
+    "27": {
+      "date": "1998-04-30",
+      "volume": 4,
+      "approximate": true
+    },
+    "28": {
+      "date": "1998-05-07",
+      "volume": 4,
+      "approximate": true
+    },
+    "29": {
+      "date": "1998-05-14",
+      "volume": 4,
+      "approximate": true
+    },
+    "30": {
+      "date": "1998-05-20",
+      "volume": 4,
+      "approximate": true
+    },
+    "31": {
+      "date": "1998-05-27",
+      "volume": 4,
+      "approximate": true
+    },
+    "32": {
+      "date": "1998-06-03",
+      "volume": 4,
+      "approximate": true
+    },
+    "33": {
+      "date": "1998-06-09",
+      "volume": 4,
+      "approximate": true
+    },
+    "34": {
+      "date": "1998-06-16",
+      "volume": 4,
+      "approximate": true
+    },
+    "35": {
+      "date": "1998-06-23",
+      "volume": 4,
+      "approximate": false
+    },
+    "36": {
+      "date": "1998-06-30",
+      "volume": 5,
+      "approximate": true
+    },
+    "37": {
+      "date": "1998-07-06",
+      "volume": 5,
+      "approximate": true
+    },
+    "38": {
+      "date": "1998-07-13",
+      "volume": 5,
+      "approximate": true
+    },
+    "39": {
+      "date": "1998-07-20",
+      "volume": 5,
+      "approximate": true
+    },
+    "40": {
+      "date": "1998-07-26",
+      "volume": 5,
+      "approximate": true
+    },
+    "41": {
+      "date": "1998-08-01",
+      "volume": 5,
+      "approximate": true
+    },
+    "42": {
+      "date": "1998-08-08",
+      "volume": 5,
+      "approximate": true
+    },
+    "43": {
+      "date": "1998-08-15",
+      "volume": 5,
+      "approximate": true
+    },
+    "44": {
+      "date": "1998-08-21",
+      "volume": 5,
+      "approximate": false
+    },
+    "45": {
+      "date": "1998-08-28",
+      "volume": 6,
+      "approximate": true
+    },
+    "46": {
+      "date": "1998-09-04",
+      "volume": 6,
+      "approximate": true
+    },
+    "47": {
+      "date": "1998-09-11",
+      "volume": 6,
+      "approximate": true
+    },
+    "48": {
+      "date": "1998-09-18",
+      "volume": 6,
+      "approximate": true
+    },
+    "49": {
+      "date": "1998-09-25",
+      "volume": 6,
+      "approximate": true
+    },
+    "50": {
+      "date": "1998-10-01",
+      "volume": 6,
+      "approximate": true
+    },
+    "51": {
+      "date": "1998-10-08",
+      "volume": 6,
+      "approximate": true
+    },
+    "52": {
+      "date": "1998-10-15",
+      "volume": 6,
+      "approximate": true
+    },
+    "53": {
+      "date": "1998-10-22",
+      "volume": 6,
+      "approximate": false
+    },
+    "54": {
+      "date": "1998-10-29",
+      "volume": 7,
+      "approximate": true
+    },
+    "55": {
+      "date": "1998-11-08",
+      "volume": 7,
+      "approximate": true
+    },
+    "56": {
+      "date": "1998-11-19",
+      "volume": 7,
+      "approximate": true
+    },
+    "57": {
+      "date": "1998-11-30",
+      "volume": 7,
+      "approximate": true
+    },
+    "58": {
+      "date": "1998-12-10",
+      "volume": 7,
+      "approximate": true
+    },
+    "59": {
+      "date": "1998-12-20",
+      "volume": 7,
+      "approximate": true
+    },
+    "60": {
+      "date": "1998-12-31",
+      "volume": 7,
+      "approximate": true
+    },
+    "61": {
+      "date": "1999-01-11",
+      "volume": 7,
+      "approximate": true
+    },
+    "62": {
+      "date": "1999-01-21",
+      "volume": 7,
+      "approximate": false
+    },
+    "63": {
+      "date": "1999-01-28",
+      "volume": 8,
+      "approximate": true
+    },
+    "64": {
+      "date": "1999-02-03",
+      "volume": 8,
+      "approximate": true
+    },
+    "65": {
+      "date": "1999-02-09",
+      "volume": 8,
+      "approximate": true
+    },
+    "66": {
+      "date": "1999-02-16",
+      "volume": 8,
+      "approximate": true
+    },
+    "67": {
+      "date": "1999-02-22",
+      "volume": 8,
+      "approximate": true
+    },
+    "68": {
+      "date": "1999-02-28",
+      "volume": 8,
+      "approximate": true
+    },
+    "69": {
+      "date": "1999-03-07",
+      "volume": 8,
+      "approximate": true
+    },
+    "70": {
+      "date": "1999-03-13",
+      "volume": 8,
+      "approximate": true
+    },
+    "71": {
+      "date": "1999-03-19",
+      "volume": 8,
+      "approximate": false
+    },
+    "72": {
+      "date": "1999-03-26",
+      "volume": 9,
+      "approximate": true
+    },
+    "73": {
+      "date": "1999-04-01",
+      "volume": 9,
+      "approximate": true
+    },
+    "74": {
+      "date": "1999-04-07",
+      "volume": 9,
+      "approximate": true
+    },
+    "75": {
+      "date": "1999-04-14",
+      "volume": 9,
+      "approximate": true
+    },
+    "76": {
+      "date": "1999-04-20",
+      "volume": 9,
+      "approximate": true
+    },
+    "77": {
+      "date": "1999-04-26",
+      "volume": 9,
+      "approximate": true
+    },
+    "78": {
+      "date": "1999-05-02",
+      "volume": 9,
+      "approximate": true
+    },
+    "79": {
+      "date": "1999-05-09",
+      "volume": 9,
+      "approximate": true
+    },
+    "80": {
+      "date": "1999-05-15",
+      "volume": 9,
+      "approximate": true
+    },
+    "81": {
+      "date": "1999-05-21",
+      "volume": 9,
+      "approximate": false
+    },
+    "82": {
+      "date": "1999-05-28",
+      "volume": 10,
+      "approximate": true
+    },
+    "83": {
+      "date": "1999-06-08",
+      "volume": 10,
+      "approximate": true
+    },
+    "84": {
+      "date": "1999-06-19",
+      "volume": 10,
+      "approximate": true
+    },
+    "85": {
+      "date": "1999-06-30",
+      "volume": 10,
+      "approximate": true
+    },
+    "86": {
+      "date": "1999-07-11",
+      "volume": 10,
+      "approximate": true
+    },
+    "87": {
+      "date": "1999-07-21",
+      "volume": 10,
+      "approximate": true
+    },
+    "88": {
+      "date": "1999-08-01",
+      "volume": 10,
+      "approximate": true
+    },
+    "89": {
+      "date": "1999-08-12",
+      "volume": 10,
+      "approximate": true
+    },
+    "90": {
+      "date": "1999-08-23",
+      "volume": 10,
+      "approximate": false
+    },
+    "91": {
+      "date": "1999-08-30",
+      "volume": 11,
+      "approximate": true
+    },
+    "92": {
+      "date": "1999-09-05",
+      "volume": 11,
+      "approximate": true
+    },
+    "93": {
+      "date": "1999-09-12",
+      "volume": 11,
+      "approximate": true
+    },
+    "94": {
+      "date": "1999-09-19",
+      "volume": 11,
+      "approximate": true
+    },
+    "95": {
+      "date": "1999-09-25",
+      "volume": 11,
+      "approximate": true
+    },
+    "96": {
+      "date": "1999-10-01",
+      "volume": 11,
+      "approximate": true
+    },
+    "97": {
+      "date": "1999-10-08",
+      "volume": 11,
+      "approximate": true
+    },
+    "98": {
+      "date": "1999-10-15",
+      "volume": 11,
+      "approximate": true
+    },
+    "99": {
+      "date": "1999-10-21",
+      "volume": 11,
+      "approximate": false
+    },
+    "100": {
+      "date": "1999-10-28",
+      "volume": 12,
+      "approximate": true
+    },
+    "101": {
+      "date": "1999-11-04",
+      "volume": 12,
+      "approximate": true
+    },
+    "102": {
+      "date": "1999-11-11",
+      "volume": 12,
+      "approximate": true
+    },
+    "103": {
+      "date": "1999-11-18",
+      "volume": 12,
+      "approximate": true
+    },
+    "104": {
+      "date": "1999-11-25",
+      "volume": 12,
+      "approximate": true
+    },
+    "105": {
+      "date": "1999-12-01",
+      "volume": 12,
+      "approximate": true
+    },
+    "106": {
+      "date": "1999-12-08",
+      "volume": 12,
+      "approximate": true
+    },
+    "107": {
+      "date": "1999-12-15",
+      "volume": 12,
+      "approximate": true
+    },
+    "108": {
+      "date": "1999-12-22",
+      "volume": 12,
+      "approximate": false
+    },
+    "109": {
+      "date": "1999-12-29",
+      "volume": 13,
+      "approximate": true
+    },
+    "110": {
+      "date": "2000-01-08",
+      "volume": 13,
+      "approximate": true
+    },
+    "111": {
+      "date": "2000-01-18",
+      "volume": 13,
+      "approximate": true
+    },
+    "112": {
+      "date": "2000-01-28",
+      "volume": 13,
+      "approximate": true
+    },
+    "113": {
+      "date": "2000-02-07",
+      "volume": 13,
+      "approximate": true
+    },
+    "114": {
+      "date": "2000-02-16",
+      "volume": 13,
+      "approximate": true
+    },
+    "115": {
+      "date": "2000-02-26",
+      "volume": 13,
+      "approximate": true
+    },
+    "116": {
+      "date": "2000-03-07",
+      "volume": 13,
+      "approximate": true
+    },
+    "117": {
+      "date": "2000-03-17",
+      "volume": 13,
+      "approximate": false
+    },
+    "118": {
+      "date": "2000-03-24",
+      "volume": 14,
+      "approximate": true
+    },
+    "119": {
+      "date": "2000-04-01",
+      "volume": 14,
+      "approximate": true
+    },
+    "120": {
+      "date": "2000-04-08",
+      "volume": 14,
+      "approximate": true
+    },
+    "121": {
+      "date": "2000-04-15",
+      "volume": 14,
+      "approximate": true
+    },
+    "122": {
+      "date": "2000-04-23",
+      "volume": 14,
+      "approximate": true
+    },
+    "123": {
+      "date": "2000-05-01",
+      "volume": 14,
+      "approximate": true
+    },
+    "124": {
+      "date": "2000-05-08",
+      "volume": 14,
+      "approximate": true
+    },
+    "125": {
+      "date": "2000-05-15",
+      "volume": 14,
+      "approximate": true
+    },
+    "126": {
+      "date": "2000-05-23",
+      "volume": 14,
+      "approximate": false
+    },
+    "127": {
+      "date": "2000-05-30",
+      "volume": 15,
+      "approximate": true
+    },
+    "128": {
+      "date": "2000-06-05",
+      "volume": 15,
+      "approximate": true
+    },
+    "129": {
+      "date": "2000-06-11",
+      "volume": 15,
+      "approximate": true
+    },
+    "130": {
+      "date": "2000-06-17",
+      "volume": 15,
+      "approximate": true
+    },
+    "131": {
+      "date": "2000-06-23",
+      "volume": 15,
+      "approximate": true
+    },
+    "132": {
+      "date": "2000-06-30",
+      "volume": 15,
+      "approximate": true
+    },
+    "133": {
+      "date": "2000-07-06",
+      "volume": 15,
+      "approximate": true
+    },
+    "134": {
+      "date": "2000-07-12",
+      "volume": 15,
+      "approximate": true
+    },
+    "135": {
+      "date": "2000-07-18",
+      "volume": 15,
+      "approximate": true
+    },
+    "136": {
+      "date": "2000-07-24",
+      "volume": 15,
+      "approximate": false
+    },
+    "137": {
+      "date": "2000-07-31",
+      "volume": 16,
+      "approximate": true
+    },
+    "138": {
+      "date": "2000-08-10",
+      "volume": 16,
+      "approximate": true
+    },
+    "139": {
+      "date": "2000-08-21",
+      "volume": 16,
+      "approximate": true
+    },
+    "140": {
+      "date": "2000-09-01",
+      "volume": 16,
+      "approximate": true
+    },
+    "141": {
+      "date": "2000-09-11",
+      "volume": 16,
+      "approximate": true
+    },
+    "142": {
+      "date": "2000-09-21",
+      "volume": 16,
+      "approximate": true
+    },
+    "143": {
+      "date": "2000-10-02",
+      "volume": 16,
+      "approximate": true
+    },
+    "144": {
+      "date": "2000-10-13",
+      "volume": 16,
+      "approximate": true
+    },
+    "145": {
+      "date": "2000-10-23",
+      "volume": 16,
+      "approximate": false
+    },
+    "146": {
+      "date": "2000-10-30",
+      "volume": 17,
+      "approximate": true
+    },
+    "147": {
+      "date": "2000-11-05",
+      "volume": 17,
+      "approximate": true
+    },
+    "148": {
+      "date": "2000-11-11",
+      "volume": 17,
+      "approximate": true
+    },
+    "149": {
+      "date": "2000-11-17",
+      "volume": 17,
+      "approximate": true
+    },
+    "150": {
+      "date": "2000-11-23",
+      "volume": 17,
+      "approximate": true
+    },
+    "151": {
+      "date": "2000-11-28",
+      "volume": 17,
+      "approximate": true
+    },
+    "152": {
+      "date": "2000-12-04",
+      "volume": 17,
+      "approximate": true
+    },
+    "153": {
+      "date": "2000-12-10",
+      "volume": 17,
+      "approximate": true
+    },
+    "154": {
+      "date": "2000-12-16",
+      "volume": 17,
+      "approximate": true
+    },
+    "155": {
+      "date": "2000-12-22",
+      "volume": 17,
+      "approximate": false
+    },
+    "156": {
+      "date": "2000-12-29",
+      "volume": 18,
+      "approximate": true
+    },
+    "157": {
+      "date": "2001-01-03",
+      "volume": 18,
+      "approximate": true
+    },
+    "158": {
+      "date": "2001-01-09",
+      "volume": 18,
+      "approximate": true
+    },
+    "159": {
+      "date": "2001-01-14",
+      "volume": 18,
+      "approximate": true
+    },
+    "160": {
+      "date": "2001-01-20",
+      "volume": 18,
+      "approximate": true
+    },
+    "161": {
+      "date": "2001-01-25",
+      "volume": 18,
+      "approximate": true
+    },
+    "162": {
+      "date": "2001-01-30",
+      "volume": 18,
+      "approximate": true
+    },
+    "163": {
+      "date": "2001-02-05",
+      "volume": 18,
+      "approximate": true
+    },
+    "164": {
+      "date": "2001-02-10",
+      "volume": 18,
+      "approximate": true
+    },
+    "165": {
+      "date": "2001-02-16",
+      "volume": 18,
+      "approximate": true
+    },
+    "166": {
+      "date": "2001-02-21",
+      "volume": 18,
+      "approximate": false
+    },
+    "167": {
+      "date": "2001-02-28",
+      "volume": 19,
+      "approximate": true
+    },
+    "168": {
+      "date": "2001-03-09",
+      "volume": 19,
+      "approximate": true
+    },
+    "169": {
+      "date": "2001-03-19",
+      "volume": 19,
+      "approximate": true
+    },
+    "170": {
+      "date": "2001-03-28",
+      "volume": 19,
+      "approximate": true
+    },
+    "171": {
+      "date": "2001-04-06",
+      "volume": 19,
+      "approximate": true
+    },
+    "172": {
+      "date": "2001-04-16",
+      "volume": 19,
+      "approximate": true
+    },
+    "173": {
+      "date": "2001-04-25",
+      "volume": 19,
+      "approximate": true
+    },
+    "174": {
+      "date": "2001-05-04",
+      "volume": 19,
+      "approximate": true
+    },
+    "175": {
+      "date": "2001-05-14",
+      "volume": 19,
+      "approximate": true
+    },
+    "176": {
+      "date": "2001-05-23",
+      "volume": 19,
+      "approximate": false
+    },
+    "177": {
+      "date": "2001-05-30",
+      "volume": 20,
+      "approximate": true
+    },
+    "178": {
+      "date": "2001-06-05",
+      "volume": 20,
+      "approximate": true
+    },
+    "179": {
+      "date": "2001-06-11",
+      "volume": 20,
+      "approximate": true
+    },
+    "180": {
+      "date": "2001-06-17",
+      "volume": 20,
+      "approximate": true
+    },
+    "181": {
+      "date": "2001-06-23",
+      "volume": 20,
+      "approximate": true
+    },
+    "182": {
+      "date": "2001-06-30",
+      "volume": 20,
+      "approximate": true
+    },
+    "183": {
+      "date": "2001-07-06",
+      "volume": 20,
+      "approximate": true
+    },
+    "184": {
+      "date": "2001-07-12",
+      "volume": 20,
+      "approximate": true
+    },
+    "185": {
+      "date": "2001-07-18",
+      "volume": 20,
+      "approximate": true
+    },
+    "186": {
+      "date": "2001-07-24",
+      "volume": 20,
+      "approximate": false
+    },
+    "187": {
+      "date": "2001-07-31",
+      "volume": 21,
+      "approximate": true
+    },
+    "188": {
+      "date": "2001-08-10",
+      "volume": 21,
+      "approximate": true
+    },
+    "189": {
+      "date": "2001-08-21",
+      "volume": 21,
+      "approximate": true
+    },
+    "190": {
+      "date": "2001-09-01",
+      "volume": 21,
+      "approximate": true
+    },
+    "191": {
+      "date": "2001-09-11",
+      "volume": 21,
+      "approximate": true
+    },
+    "192": {
+      "date": "2001-09-21",
+      "volume": 21,
+      "approximate": true
+    },
+    "193": {
+      "date": "2001-10-02",
+      "volume": 21,
+      "approximate": true
+    },
+    "194": {
+      "date": "2001-10-13",
+      "volume": 21,
+      "approximate": true
+    },
+    "195": {
+      "date": "2001-10-23",
+      "volume": 21,
+      "approximate": false
+    },
+    "196": {
+      "date": "2001-10-30",
+      "volume": 22,
+      "approximate": true
+    },
+    "197": {
+      "date": "2001-11-05",
+      "volume": 22,
+      "approximate": true
+    },
+    "198": {
+      "date": "2001-11-11",
+      "volume": 22,
+      "approximate": true
+    },
+    "199": {
+      "date": "2001-11-17",
+      "volume": 22,
+      "approximate": true
+    },
+    "200": {
+      "date": "2001-11-23",
+      "volume": 22,
+      "approximate": true
+    },
+    "201": {
+      "date": "2001-11-30",
+      "volume": 22,
+      "approximate": true
+    },
+    "202": {
+      "date": "2001-12-06",
+      "volume": 22,
+      "approximate": true
+    },
+    "203": {
+      "date": "2001-12-12",
+      "volume": 22,
+      "approximate": true
+    },
+    "204": {
+      "date": "2001-12-18",
+      "volume": 22,
+      "approximate": true
+    },
+    "205": {
+      "date": "2001-12-24",
+      "volume": 22,
+      "approximate": false
+    },
+    "206": {
+      "date": "2001-12-31",
+      "volume": 23,
+      "approximate": true
+    },
+    "207": {
+      "date": "2002-01-05",
+      "volume": 23,
+      "approximate": true
+    },
+    "208": {
+      "date": "2002-01-10",
+      "volume": 23,
+      "approximate": true
+    },
+    "209": {
+      "date": "2002-01-16",
+      "volume": 23,
+      "approximate": true
+    },
+    "210": {
+      "date": "2002-01-21",
+      "volume": 23,
+      "approximate": true
+    },
+    "211": {
+      "date": "2002-01-26",
+      "volume": 23,
+      "approximate": true
+    },
+    "212": {
+      "date": "2002-01-31",
+      "volume": 23,
+      "approximate": true
+    },
+    "213": {
+      "date": "2002-02-05",
+      "volume": 23,
+      "approximate": true
+    },
+    "214": {
+      "date": "2002-02-11",
+      "volume": 23,
+      "approximate": true
+    },
+    "215": {
+      "date": "2002-02-16",
+      "volume": 23,
+      "approximate": true
+    },
+    "216": {
+      "date": "2002-02-21",
+      "volume": 23,
+      "approximate": false
+    },
+    "217": {
+      "date": "2002-02-28",
+      "volume": 24,
+      "approximate": true
+    },
+    "218": {
+      "date": "2002-03-09",
+      "volume": 24,
+      "approximate": true
+    },
+    "219": {
+      "date": "2002-03-19",
+      "volume": 24,
+      "approximate": true
+    },
+    "220": {
+      "date": "2002-03-28",
+      "volume": 24,
+      "approximate": true
+    },
+    "221": {
+      "date": "2002-04-06",
+      "volume": 24,
+      "approximate": true
+    },
+    "222": {
+      "date": "2002-04-16",
+      "volume": 24,
+      "approximate": true
+    },
+    "223": {
+      "date": "2002-04-25",
+      "volume": 24,
+      "approximate": true
+    },
+    "224": {
+      "date": "2002-05-04",
+      "volume": 24,
+      "approximate": true
+    },
+    "225": {
+      "date": "2002-05-14",
+      "volume": 24,
+      "approximate": true
+    },
+    "226": {
+      "date": "2002-05-23",
+      "volume": 24,
+      "approximate": false
+    },
+    "227": {
+      "date": "2002-05-30",
+      "volume": 25,
+      "approximate": true
+    },
+    "228": {
+      "date": "2002-06-05",
+      "volume": 25,
+      "approximate": true
+    },
+    "229": {
+      "date": "2002-06-11",
+      "volume": 25,
+      "approximate": true
+    },
+    "230": {
+      "date": "2002-06-17",
+      "volume": 25,
+      "approximate": true
+    },
+    "231": {
+      "date": "2002-06-23",
+      "volume": 25,
+      "approximate": true
+    },
+    "232": {
+      "date": "2002-06-30",
+      "volume": 25,
+      "approximate": true
+    },
+    "233": {
+      "date": "2002-07-06",
+      "volume": 25,
+      "approximate": true
+    },
+    "234": {
+      "date": "2002-07-12",
+      "volume": 25,
+      "approximate": true
+    },
+    "235": {
+      "date": "2002-07-18",
+      "volume": 25,
+      "approximate": true
+    },
+    "236": {
+      "date": "2002-07-24",
+      "volume": 25,
+      "approximate": false
+    },
+    "237": {
+      "date": "2002-07-31",
+      "volume": 26,
+      "approximate": true
+    },
+    "238": {
+      "date": "2002-08-09",
+      "volume": 26,
+      "approximate": true
+    },
+    "239": {
+      "date": "2002-08-19",
+      "volume": 26,
+      "approximate": true
+    },
+    "240": {
+      "date": "2002-08-28",
+      "volume": 26,
+      "approximate": true
+    },
+    "241": {
+      "date": "2002-09-06",
+      "volume": 26,
+      "approximate": true
+    },
+    "242": {
+      "date": "2002-09-16",
+      "volume": 26,
+      "approximate": true
+    },
+    "243": {
+      "date": "2002-09-25",
+      "volume": 26,
+      "approximate": true
+    },
+    "244": {
+      "date": "2002-10-04",
+      "volume": 26,
+      "approximate": true
+    },
+    "245": {
+      "date": "2002-10-14",
+      "volume": 26,
+      "approximate": true
+    },
+    "246": {
+      "date": "2002-10-23",
+      "volume": 26,
+      "approximate": false
+    },
+    "247": {
+      "date": "2002-10-30",
+      "volume": 27,
+      "approximate": true
+    },
+    "248": {
+      "date": "2002-11-06",
+      "volume": 27,
+      "approximate": true
+    },
+    "249": {
+      "date": "2002-11-13",
+      "volume": 27,
+      "approximate": true
+    },
+    "250": {
+      "date": "2002-11-20",
+      "volume": 27,
+      "approximate": true
+    },
+    "251": {
+      "date": "2002-11-27",
+      "volume": 27,
+      "approximate": true
+    },
+    "252": {
+      "date": "2002-12-03",
+      "volume": 27,
+      "approximate": true
+    },
+    "253": {
+      "date": "2002-12-10",
+      "volume": 27,
+      "approximate": true
+    },
+    "254": {
+      "date": "2002-12-17",
+      "volume": 27,
+      "approximate": true
+    },
+    "255": {
+      "date": "2002-12-24",
+      "volume": 27,
+      "approximate": false
+    },
+    "256": {
+      "date": "2002-12-31",
+      "volume": 28,
+      "approximate": true
+    },
+    "257": {
+      "date": "2003-01-10",
+      "volume": 28,
+      "approximate": true
+    },
+    "258": {
+      "date": "2003-01-20",
+      "volume": 28,
+      "approximate": true
+    },
+    "259": {
+      "date": "2003-01-30",
+      "volume": 28,
+      "approximate": true
+    },
+    "260": {
+      "date": "2003-02-09",
+      "volume": 28,
+      "approximate": true
+    },
+    "261": {
+      "date": "2003-02-18",
+      "volume": 28,
+      "approximate": true
+    },
+    "262": {
+      "date": "2003-02-28",
+      "volume": 28,
+      "approximate": true
+    },
+    "263": {
+      "date": "2003-03-10",
+      "volume": 28,
+      "approximate": true
+    },
+    "264": {
+      "date": "2003-03-20",
+      "volume": 28,
+      "approximate": false
+    },
+    "265": {
+      "date": "2003-03-27",
+      "volume": 29,
+      "approximate": true
+    },
+    "266": {
+      "date": "2003-04-02",
+      "volume": 29,
+      "approximate": true
+    },
+    "267": {
+      "date": "2003-04-07",
+      "volume": 29,
+      "approximate": true
+    },
+    "268": {
+      "date": "2003-04-13",
+      "volume": 29,
+      "approximate": true
+    },
+    "269": {
+      "date": "2003-04-19",
+      "volume": 29,
+      "approximate": true
+    },
+    "270": {
+      "date": "2003-04-24",
+      "volume": 29,
+      "approximate": true
+    },
+    "271": {
+      "date": "2003-04-30",
+      "volume": 29,
+      "approximate": true
+    },
+    "272": {
+      "date": "2003-05-06",
+      "volume": 29,
+      "approximate": true
+    },
+    "273": {
+      "date": "2003-05-12",
+      "volume": 29,
+      "approximate": true
+    },
+    "274": {
+      "date": "2003-05-17",
+      "volume": 29,
+      "approximate": true
+    },
+    "275": {
+      "date": "2003-05-23",
+      "volume": 29,
+      "approximate": false
+    },
+    "276": {
+      "date": "2003-05-30",
+      "volume": 30,
+      "approximate": true
+    },
+    "277": {
+      "date": "2003-06-08",
+      "volume": 30,
+      "approximate": true
+    },
+    "278": {
+      "date": "2003-06-18",
+      "volume": 30,
+      "approximate": true
+    },
+    "279": {
+      "date": "2003-06-27",
+      "volume": 30,
+      "approximate": true
+    },
+    "280": {
+      "date": "2003-07-06",
+      "volume": 30,
+      "approximate": true
+    },
+    "281": {
+      "date": "2003-07-16",
+      "volume": 30,
+      "approximate": true
+    },
+    "282": {
+      "date": "2003-07-25",
+      "volume": 30,
+      "approximate": true
+    },
+    "283": {
+      "date": "2003-08-03",
+      "volume": 30,
+      "approximate": true
+    },
+    "284": {
+      "date": "2003-08-13",
+      "volume": 30,
+      "approximate": true
+    },
+    "285": {
+      "date": "2003-08-22",
+      "volume": 30,
+      "approximate": false
+    },
+    "286": {
+      "date": "2003-08-29",
+      "volume": 31,
+      "approximate": true
+    },
+    "287": {
+      "date": "2003-09-06",
+      "volume": 31,
+      "approximate": true
+    },
+    "288": {
+      "date": "2003-09-14",
+      "volume": 31,
+      "approximate": true
+    },
+    "289": {
+      "date": "2003-09-21",
+      "volume": 31,
+      "approximate": true
+    },
+    "290": {
+      "date": "2003-09-29",
+      "volume": 31,
+      "approximate": true
+    },
+    "291": {
+      "date": "2003-10-07",
+      "volume": 31,
+      "approximate": true
+    },
+    "292": {
+      "date": "2003-10-15",
+      "volume": 31,
+      "approximate": true
+    },
+    "293": {
+      "date": "2003-10-22",
+      "volume": 31,
+      "approximate": true
+    },
+    "294": {
+      "date": "2003-10-30",
+      "volume": 31,
+      "approximate": true
+    },
+    "295": {
+      "date": "2003-11-07",
+      "volume": 31,
+      "approximate": false
+    },
+    "296": {
+      "date": "2003-11-14",
+      "volume": 32,
+      "approximate": true
+    },
+    "297": {
+      "date": "2003-11-22",
+      "volume": 32,
+      "approximate": true
+    },
+    "298": {
+      "date": "2003-11-29",
+      "volume": 32,
+      "approximate": true
+    },
+    "299": {
+      "date": "2003-12-07",
+      "volume": 32,
+      "approximate": true
+    },
+    "300": {
+      "date": "2003-12-15",
+      "volume": 32,
+      "approximate": true
+    },
+    "301": {
+      "date": "2003-12-22",
+      "volume": 32,
+      "approximate": true
+    },
+    "302": {
+      "date": "2003-12-30",
+      "volume": 32,
+      "approximate": true
+    },
+    "303": {
+      "date": "2004-01-07",
+      "volume": 32,
+      "approximate": true
+    },
+    "304": {
+      "date": "2004-01-14",
+      "volume": 32,
+      "approximate": true
+    },
+    "305": {
+      "date": "2004-01-22",
+      "volume": 32,
+      "approximate": false
+    },
+    "306": {
+      "date": "2004-01-29",
+      "volume": 33,
+      "approximate": true
+    },
+    "307": {
+      "date": "2004-02-06",
+      "volume": 33,
+      "approximate": true
+    },
+    "308": {
+      "date": "2004-02-15",
+      "volume": 33,
+      "approximate": true
+    },
+    "309": {
+      "date": "2004-02-24",
+      "volume": 33,
+      "approximate": true
+    },
+    "310": {
+      "date": "2004-03-03",
+      "volume": 33,
+      "approximate": true
+    },
+    "311": {
+      "date": "2004-03-11",
+      "volume": 33,
+      "approximate": true
+    },
+    "312": {
+      "date": "2004-03-20",
+      "volume": 33,
+      "approximate": true
+    },
+    "313": {
+      "date": "2004-03-29",
+      "volume": 33,
+      "approximate": true
+    },
+    "314": {
+      "date": "2004-04-06",
+      "volume": 33,
+      "approximate": true
+    },
+    "315": {
+      "date": "2004-04-14",
+      "volume": 33,
+      "approximate": true
+    },
+    "316": {
+      "date": "2004-04-23",
+      "volume": 33,
+      "approximate": false
+    },
+    "317": {
+      "date": "2004-04-30",
+      "volume": 34,
+      "approximate": true
+    },
+    "318": {
+      "date": "2004-05-05",
+      "volume": 34,
+      "approximate": true
+    },
+    "319": {
+      "date": "2004-05-11",
+      "volume": 34,
+      "approximate": true
+    },
+    "320": {
+      "date": "2004-05-16",
+      "volume": 34,
+      "approximate": true
+    },
+    "321": {
+      "date": "2004-05-22",
+      "volume": 34,
+      "approximate": true
+    },
+    "322": {
+      "date": "2004-05-27",
+      "volume": 34,
+      "approximate": true
+    },
+    "323": {
+      "date": "2004-06-01",
+      "volume": 34,
+      "approximate": true
+    },
+    "324": {
+      "date": "2004-06-07",
+      "volume": 34,
+      "approximate": true
+    },
+    "325": {
+      "date": "2004-06-12",
+      "volume": 34,
+      "approximate": true
+    },
+    "326": {
+      "date": "2004-06-18",
+      "volume": 34,
+      "approximate": true
+    },
+    "327": {
+      "date": "2004-06-23",
+      "volume": 34,
+      "approximate": false
+    },
+    "328": {
+      "date": "2004-06-30",
+      "volume": 35,
+      "approximate": true
+    },
+    "329": {
+      "date": "2004-07-09",
+      "volume": 35,
+      "approximate": true
+    },
+    "330": {
+      "date": "2004-07-19",
+      "volume": 35,
+      "approximate": true
+    },
+    "331": {
+      "date": "2004-07-28",
+      "volume": 35,
+      "approximate": true
+    },
+    "332": {
+      "date": "2004-08-07",
+      "volume": 35,
+      "approximate": true
+    },
+    "333": {
+      "date": "2004-08-16",
+      "volume": 35,
+      "approximate": true
+    },
+    "334": {
+      "date": "2004-08-26",
+      "volume": 35,
+      "approximate": true
+    },
+    "335": {
+      "date": "2004-09-04",
+      "volume": 35,
+      "approximate": true
+    },
+    "336": {
+      "date": "2004-09-14",
+      "volume": 35,
+      "approximate": true
+    },
+    "337": {
+      "date": "2004-09-23",
+      "volume": 35,
+      "approximate": false
+    },
+    "338": {
+      "date": "2004-09-30",
+      "volume": 36,
+      "approximate": true
+    },
+    "339": {
+      "date": "2004-10-11",
+      "volume": 36,
+      "approximate": true
+    },
+    "340": {
+      "date": "2004-10-21",
+      "volume": 36,
+      "approximate": true
+    },
+    "341": {
+      "date": "2004-11-01",
+      "volume": 36,
+      "approximate": true
+    },
+    "342": {
+      "date": "2004-11-11",
+      "volume": 36,
+      "approximate": true
+    },
+    "343": {
+      "date": "2004-11-22",
+      "volume": 36,
+      "approximate": true
+    },
+    "344": {
+      "date": "2004-12-03",
+      "volume": 36,
+      "approximate": true
+    },
+    "345": {
+      "date": "2004-12-13",
+      "volume": 36,
+      "approximate": true
+    },
+    "346": {
+      "date": "2004-12-24",
+      "volume": 36,
+      "approximate": false
+    },
+    "347": {
+      "date": "2004-12-31",
+      "volume": 37,
+      "approximate": true
+    },
+    "348": {
+      "date": "2005-01-08",
+      "volume": 37,
+      "approximate": true
+    },
+    "349": {
+      "date": "2005-01-15",
+      "volume": 37,
+      "approximate": true
+    },
+    "350": {
+      "date": "2005-01-23",
+      "volume": 37,
+      "approximate": true
+    },
+    "351": {
+      "date": "2005-01-30",
+      "volume": 37,
+      "approximate": true
+    },
+    "352": {
+      "date": "2005-02-07",
+      "volume": 37,
+      "approximate": true
+    },
+    "353": {
+      "date": "2005-02-15",
+      "volume": 37,
+      "approximate": true
+    },
+    "354": {
+      "date": "2005-02-22",
+      "volume": 37,
+      "approximate": true
+    },
+    "355": {
+      "date": "2005-03-02",
+      "volume": 37,
+      "approximate": true
+    },
+    "356": {
+      "date": "2005-03-09",
+      "volume": 37,
+      "approximate": true
+    },
+    "357": {
+      "date": "2005-03-17",
+      "volume": 37,
+      "approximate": false
+    },
+    "358": {
+      "date": "2005-03-24",
+      "volume": 38,
+      "approximate": true
+    },
+    "359": {
+      "date": "2005-03-31",
+      "volume": 38,
+      "approximate": true
+    },
+    "360": {
+      "date": "2005-04-06",
+      "volume": 38,
+      "approximate": true
+    },
+    "361": {
+      "date": "2005-04-13",
+      "volume": 38,
+      "approximate": true
+    },
+    "362": {
+      "date": "2005-04-20",
+      "volume": 38,
+      "approximate": true
+    },
+    "363": {
+      "date": "2005-04-26",
+      "volume": 38,
+      "approximate": true
+    },
+    "364": {
+      "date": "2005-05-03",
+      "volume": 38,
+      "approximate": true
+    },
+    "365": {
+      "date": "2005-05-10",
+      "volume": 38,
+      "approximate": true
+    },
+    "366": {
+      "date": "2005-05-16",
+      "volume": 38,
+      "approximate": true
+    },
+    "367": {
+      "date": "2005-05-23",
+      "volume": 38,
+      "approximate": false
+    },
+    "368": {
+      "date": "2005-05-30",
+      "volume": 39,
+      "approximate": true
+    },
+    "369": {
+      "date": "2005-06-12",
+      "volume": 39,
+      "approximate": true
+    },
+    "370": {
+      "date": "2005-06-25",
+      "volume": 39,
+      "approximate": true
+    },
+    "371": {
+      "date": "2005-07-08",
+      "volume": 39,
+      "approximate": true
+    },
+    "372": {
+      "date": "2005-07-21",
+      "volume": 39,
+      "approximate": true
+    },
+    "373": {
+      "date": "2005-08-02",
+      "volume": 39,
+      "approximate": true
+    },
+    "374": {
+      "date": "2005-08-15",
+      "volume": 39,
+      "approximate": true
+    },
+    "375": {
+      "date": "2005-08-28",
+      "volume": 39,
+      "approximate": true
+    },
+    "376": {
+      "date": "2005-09-10",
+      "volume": 39,
+      "approximate": true
+    },
+    "377": {
+      "date": "2005-09-23",
+      "volume": 39,
+      "approximate": false
+    },
+    "378": {
+      "date": "2005-09-30",
+      "volume": 40,
+      "approximate": true
+    },
+    "379": {
+      "date": "2005-10-04",
+      "volume": 40,
+      "approximate": true
+    },
+    "380": {
+      "date": "2005-10-09",
+      "volume": 40,
+      "approximate": true
+    },
+    "381": {
+      "date": "2005-10-14",
+      "volume": 40,
+      "approximate": true
+    },
+    "382": {
+      "date": "2005-10-18",
+      "volume": 40,
+      "approximate": true
+    },
+    "383": {
+      "date": "2005-10-22",
+      "volume": 40,
+      "approximate": true
+    },
+    "384": {
+      "date": "2005-10-27",
+      "volume": 40,
+      "approximate": true
+    },
+    "385": {
+      "date": "2005-11-01",
+      "volume": 40,
+      "approximate": true
+    },
+    "386": {
+      "date": "2005-11-05",
+      "volume": 40,
+      "approximate": true
+    },
+    "387": {
+      "date": "2005-11-09",
+      "volume": 40,
+      "approximate": true
+    },
+    "388": {
+      "date": "2005-11-14",
+      "volume": 40,
+      "approximate": false
+    },
+    "389": {
+      "date": "2005-11-21",
+      "volume": 41,
+      "approximate": true
+    },
+    "390": {
+      "date": "2005-11-30",
+      "volume": 41,
+      "approximate": true
+    },
+    "391": {
+      "date": "2005-12-09",
+      "volume": 41,
+      "approximate": true
+    },
+    "392": {
+      "date": "2005-12-19",
+      "volume": 41,
+      "approximate": true
+    },
+    "393": {
+      "date": "2005-12-28",
+      "volume": 41,
+      "approximate": true
+    },
+    "394": {
+      "date": "2006-01-06",
+      "volume": 41,
+      "approximate": true
+    },
+    "395": {
+      "date": "2006-01-15",
+      "volume": 41,
+      "approximate": true
+    },
+    "396": {
+      "date": "2006-01-24",
+      "volume": 41,
+      "approximate": true
+    },
+    "397": {
+      "date": "2006-02-03",
+      "volume": 41,
+      "approximate": true
+    },
+    "398": {
+      "date": "2006-02-12",
+      "volume": 41,
+      "approximate": true
+    },
+    "399": {
+      "date": "2006-02-21",
+      "volume": 41,
+      "approximate": false
+    },
+    "400": {
+      "date": "2006-02-28",
+      "volume": 42,
+      "approximate": true
+    },
+    "401": {
+      "date": "2006-03-09",
+      "volume": 42,
+      "approximate": true
+    },
+    "402": {
+      "date": "2006-03-19",
+      "volume": 42,
+      "approximate": true
+    },
+    "403": {
+      "date": "2006-03-28",
+      "volume": 42,
+      "approximate": true
+    },
+    "404": {
+      "date": "2006-04-06",
+      "volume": 42,
+      "approximate": true
+    },
+    "405": {
+      "date": "2006-04-16",
+      "volume": 42,
+      "approximate": true
+    },
+    "406": {
+      "date": "2006-04-25",
+      "volume": 42,
+      "approximate": true
+    },
+    "407": {
+      "date": "2006-05-04",
+      "volume": 42,
+      "approximate": true
+    },
+    "408": {
+      "date": "2006-05-14",
+      "volume": 42,
+      "approximate": true
+    },
+    "409": {
+      "date": "2006-05-23",
+      "volume": 42,
+      "approximate": false
+    },
+    "410": {
+      "date": "2006-05-30",
+      "volume": 43,
+      "approximate": true
+    },
+    "411": {
+      "date": "2006-06-05",
+      "volume": 43,
+      "approximate": true
+    },
+    "412": {
+      "date": "2006-06-11",
+      "volume": 43,
+      "approximate": true
+    },
+    "413": {
+      "date": "2006-06-17",
+      "volume": 43,
+      "approximate": true
+    },
+    "414": {
+      "date": "2006-06-23",
+      "volume": 43,
+      "approximate": true
+    },
+    "415": {
+      "date": "2006-06-30",
+      "volume": 43,
+      "approximate": true
+    },
+    "416": {
+      "date": "2006-07-06",
+      "volume": 43,
+      "approximate": true
+    },
+    "417": {
+      "date": "2006-07-12",
+      "volume": 43,
+      "approximate": true
+    },
+    "418": {
+      "date": "2006-07-18",
+      "volume": 43,
+      "approximate": true
+    },
+    "419": {
+      "date": "2006-07-24",
+      "volume": 43,
+      "approximate": false
+    },
+    "420": {
+      "date": "2006-07-31",
+      "volume": 44,
+      "approximate": true
+    },
+    "421": {
+      "date": "2006-08-08",
+      "volume": 44,
+      "approximate": true
+    },
+    "422": {
+      "date": "2006-08-17",
+      "volume": 44,
+      "approximate": true
+    },
+    "423": {
+      "date": "2006-08-25",
+      "volume": 44,
+      "approximate": true
+    },
+    "424": {
+      "date": "2006-09-03",
+      "volume": 44,
+      "approximate": true
+    },
+    "425": {
+      "date": "2006-09-11",
+      "volume": 44,
+      "approximate": true
+    },
+    "426": {
+      "date": "2006-09-19",
+      "volume": 44,
+      "approximate": true
+    },
+    "427": {
+      "date": "2006-09-28",
+      "volume": 44,
+      "approximate": true
+    },
+    "428": {
+      "date": "2006-10-06",
+      "volume": 44,
+      "approximate": true
+    },
+    "429": {
+      "date": "2006-10-15",
+      "volume": 44,
+      "approximate": true
+    },
+    "430": {
+      "date": "2006-10-23",
+      "volume": 44,
+      "approximate": false
+    },
+    "431": {
+      "date": "2006-10-30",
+      "volume": 45,
+      "approximate": true
+    },
+    "432": {
+      "date": "2006-11-08",
+      "volume": 45,
+      "approximate": true
+    },
+    "433": {
+      "date": "2006-11-17",
+      "volume": 45,
+      "approximate": true
+    },
+    "434": {
+      "date": "2006-11-26",
+      "volume": 45,
+      "approximate": true
+    },
+    "435": {
+      "date": "2006-12-05",
+      "volume": 45,
+      "approximate": true
+    },
+    "436": {
+      "date": "2006-12-14",
+      "volume": 45,
+      "approximate": true
+    },
+    "437": {
+      "date": "2006-12-23",
+      "volume": 45,
+      "approximate": true
+    },
+    "438": {
+      "date": "2007-01-01",
+      "volume": 45,
+      "approximate": true
+    },
+    "439": {
+      "date": "2007-01-10",
+      "volume": 45,
+      "approximate": true
+    },
+    "440": {
+      "date": "2007-01-19",
+      "volume": 45,
+      "approximate": false
+    },
+    "441": {
+      "date": "2007-01-26",
+      "volume": 46,
+      "approximate": true
+    },
+    "442": {
+      "date": "2007-02-10",
+      "volume": 46,
+      "approximate": true
+    },
+    "443": {
+      "date": "2007-02-24",
+      "volume": 46,
+      "approximate": true
+    },
+    "444": {
+      "date": "2007-03-11",
+      "volume": 46,
+      "approximate": true
+    },
+    "445": {
+      "date": "2007-03-25",
+      "volume": 46,
+      "approximate": true
+    },
+    "446": {
+      "date": "2007-04-09",
+      "volume": 46,
+      "approximate": true
+    },
+    "447": {
+      "date": "2007-04-24",
+      "volume": 46,
+      "approximate": true
+    },
+    "448": {
+      "date": "2007-05-08",
+      "volume": 46,
+      "approximate": true
+    },
+    "449": {
+      "date": "2007-05-23",
+      "volume": 46,
+      "approximate": false
+    },
+    "450": {
+      "date": "2007-05-30",
+      "volume": 47,
+      "approximate": true
+    },
+    "451": {
+      "date": "2007-06-05",
+      "volume": 47,
+      "approximate": true
+    },
+    "452": {
+      "date": "2007-06-11",
+      "volume": 47,
+      "approximate": true
+    },
+    "453": {
+      "date": "2007-06-17",
+      "volume": 47,
+      "approximate": true
+    },
+    "454": {
+      "date": "2007-06-23",
+      "volume": 47,
+      "approximate": true
+    },
+    "455": {
+      "date": "2007-06-30",
+      "volume": 47,
+      "approximate": true
+    },
+    "456": {
+      "date": "2007-07-06",
+      "volume": 47,
+      "approximate": true
+    },
+    "457": {
+      "date": "2007-07-12",
+      "volume": 47,
+      "approximate": true
+    },
+    "458": {
+      "date": "2007-07-18",
+      "volume": 47,
+      "approximate": true
+    },
+    "459": {
+      "date": "2007-07-24",
+      "volume": 47,
+      "approximate": false
+    },
+    "460": {
+      "date": "2007-07-31",
+      "volume": 48,
+      "approximate": true
+    },
+    "461": {
+      "date": "2007-08-08",
+      "volume": 48,
+      "approximate": true
+    },
+    "462": {
+      "date": "2007-08-17",
+      "volume": 48,
+      "approximate": true
+    },
+    "463": {
+      "date": "2007-08-25",
+      "volume": 48,
+      "approximate": true
+    },
+    "464": {
+      "date": "2007-09-03",
+      "volume": 48,
+      "approximate": true
+    },
+    "465": {
+      "date": "2007-09-11",
+      "volume": 48,
+      "approximate": true
+    },
+    "466": {
+      "date": "2007-09-19",
+      "volume": 48,
+      "approximate": true
+    },
+    "467": {
+      "date": "2007-09-28",
+      "volume": 48,
+      "approximate": true
+    },
+    "468": {
+      "date": "2007-10-06",
+      "volume": 48,
+      "approximate": true
+    },
+    "469": {
+      "date": "2007-10-15",
+      "volume": 48,
+      "approximate": true
+    },
+    "470": {
+      "date": "2007-10-23",
+      "volume": 48,
+      "approximate": false
+    },
+    "471": {
+      "date": "2007-10-30",
+      "volume": 49,
+      "approximate": true
+    },
+    "472": {
+      "date": "2007-11-07",
+      "volume": 49,
+      "approximate": true
+    },
+    "473": {
+      "date": "2007-11-16",
+      "volume": 49,
+      "approximate": true
+    },
+    "474": {
+      "date": "2007-11-24",
+      "volume": 49,
+      "approximate": true
+    },
+    "475": {
+      "date": "2007-12-03",
+      "volume": 49,
+      "approximate": true
+    },
+    "476": {
+      "date": "2007-12-11",
+      "volume": 49,
+      "approximate": true
+    },
+    "477": {
+      "date": "2007-12-19",
+      "volume": 49,
+      "approximate": true
+    },
+    "478": {
+      "date": "2007-12-28",
+      "volume": 49,
+      "approximate": true
+    },
+    "479": {
+      "date": "2008-01-05",
+      "volume": 49,
+      "approximate": true
+    },
+    "480": {
+      "date": "2008-01-14",
+      "volume": 49,
+      "approximate": true
+    },
+    "481": {
+      "date": "2008-01-22",
+      "volume": 49,
+      "approximate": false
+    },
+    "482": {
+      "date": "2008-01-29",
+      "volume": 50,
+      "approximate": true
+    },
+    "483": {
+      "date": "2008-02-07",
+      "volume": 50,
+      "approximate": true
+    },
+    "484": {
+      "date": "2008-02-17",
+      "volume": 50,
+      "approximate": true
+    },
+    "485": {
+      "date": "2008-02-26",
+      "volume": 50,
+      "approximate": true
+    },
+    "486": {
+      "date": "2008-03-07",
+      "volume": 50,
+      "approximate": true
+    },
+    "487": {
+      "date": "2008-03-16",
+      "volume": 50,
+      "approximate": true
+    },
+    "488": {
+      "date": "2008-03-26",
+      "volume": 50,
+      "approximate": true
+    },
+    "489": {
+      "date": "2008-04-04",
+      "volume": 50,
+      "approximate": true
+    },
+    "490": {
+      "date": "2008-04-14",
+      "volume": 50,
+      "approximate": true
+    },
+    "491": {
+      "date": "2008-04-23",
+      "volume": 50,
+      "approximate": false
+    },
+    "492": {
+      "date": "2008-04-30",
+      "volume": 51,
+      "approximate": true
+    },
+    "493": {
+      "date": "2008-05-08",
+      "volume": 51,
+      "approximate": true
+    },
+    "494": {
+      "date": "2008-05-17",
+      "volume": 51,
+      "approximate": true
+    },
+    "495": {
+      "date": "2008-05-26",
+      "volume": 51,
+      "approximate": true
+    },
+    "496": {
+      "date": "2008-06-03",
+      "volume": 51,
+      "approximate": true
+    },
+    "497": {
+      "date": "2008-06-11",
+      "volume": 51,
+      "approximate": true
+    },
+    "498": {
+      "date": "2008-06-20",
+      "volume": 51,
+      "approximate": true
+    },
+    "499": {
+      "date": "2008-06-29",
+      "volume": 51,
+      "approximate": true
+    },
+    "500": {
+      "date": "2008-07-07",
+      "volume": 51,
+      "approximate": true
+    },
+    "501": {
+      "date": "2008-07-15",
+      "volume": 51,
+      "approximate": true
+    },
+    "502": {
+      "date": "2008-07-24",
+      "volume": 51,
+      "approximate": false
+    },
+    "503": {
+      "date": "2008-07-31",
+      "volume": 52,
+      "approximate": true
+    },
+    "504": {
+      "date": "2008-08-09",
+      "volume": 52,
+      "approximate": true
+    },
+    "505": {
+      "date": "2008-08-19",
+      "volume": 52,
+      "approximate": true
+    },
+    "506": {
+      "date": "2008-08-28",
+      "volume": 52,
+      "approximate": true
+    },
+    "507": {
+      "date": "2008-09-06",
+      "volume": 52,
+      "approximate": true
+    },
+    "508": {
+      "date": "2008-09-16",
+      "volume": 52,
+      "approximate": true
+    },
+    "509": {
+      "date": "2008-09-25",
+      "volume": 52,
+      "approximate": true
+    },
+    "510": {
+      "date": "2008-10-04",
+      "volume": 52,
+      "approximate": true
+    },
+    "511": {
+      "date": "2008-10-14",
+      "volume": 52,
+      "approximate": true
+    },
+    "512": {
+      "date": "2008-10-23",
+      "volume": 52,
+      "approximate": false
+    },
+    "513": {
+      "date": "2008-10-30",
+      "volume": 53,
+      "approximate": true
+    },
+    "514": {
+      "date": "2008-11-08",
+      "volume": 53,
+      "approximate": true
+    },
+    "515": {
+      "date": "2008-11-17",
+      "volume": 53,
+      "approximate": true
+    },
+    "516": {
+      "date": "2008-11-27",
+      "volume": 53,
+      "approximate": true
+    },
+    "517": {
+      "date": "2008-12-06",
+      "volume": 53,
+      "approximate": true
+    },
+    "518": {
+      "date": "2008-12-15",
+      "volume": 53,
+      "approximate": true
+    },
+    "519": {
+      "date": "2008-12-24",
+      "volume": 53,
+      "approximate": true
+    },
+    "520": {
+      "date": "2009-01-03",
+      "volume": 53,
+      "approximate": true
+    },
+    "521": {
+      "date": "2009-01-12",
+      "volume": 53,
+      "approximate": true
+    },
+    "522": {
+      "date": "2009-01-21",
+      "volume": 53,
+      "approximate": false
+    },
+    "523": {
+      "date": "2009-01-28",
+      "volume": 54,
+      "approximate": true
+    },
+    "524": {
+      "date": "2009-02-06",
+      "volume": 54,
+      "approximate": true
+    },
+    "525": {
+      "date": "2009-02-16",
+      "volume": 54,
+      "approximate": true
+    },
+    "526": {
+      "date": "2009-02-25",
+      "volume": 54,
+      "approximate": true
+    },
+    "527": {
+      "date": "2009-03-07",
+      "volume": 54,
+      "approximate": true
+    },
+    "528": {
+      "date": "2009-03-16",
+      "volume": 54,
+      "approximate": true
+    },
+    "529": {
+      "date": "2009-03-26",
+      "volume": 54,
+      "approximate": true
+    },
+    "530": {
+      "date": "2009-04-04",
+      "volume": 54,
+      "approximate": true
+    },
+    "531": {
+      "date": "2009-04-14",
+      "volume": 54,
+      "approximate": true
+    },
+    "532": {
+      "date": "2009-04-23",
+      "volume": 54,
+      "approximate": false
+    },
+    "533": {
+      "date": "2009-04-30",
+      "volume": 55,
+      "approximate": true
+    },
+    "534": {
+      "date": "2009-05-11",
+      "volume": 55,
+      "approximate": true
+    },
+    "535": {
+      "date": "2009-05-21",
+      "volume": 55,
+      "approximate": true
+    },
+    "536": {
+      "date": "2009-06-01",
+      "volume": 55,
+      "approximate": true
+    },
+    "537": {
+      "date": "2009-06-11",
+      "volume": 55,
+      "approximate": true
+    },
+    "538": {
+      "date": "2009-06-22",
+      "volume": 55,
+      "approximate": true
+    },
+    "539": {
+      "date": "2009-07-03",
+      "volume": 55,
+      "approximate": true
+    },
+    "540": {
+      "date": "2009-07-13",
+      "volume": 55,
+      "approximate": true
+    },
+    "541": {
+      "date": "2009-07-24",
+      "volume": 55,
+      "approximate": false
+    },
+    "542": {
+      "date": "2009-07-31",
+      "volume": 56,
+      "approximate": true
+    },
+    "543": {
+      "date": "2009-08-09",
+      "volume": 56,
+      "approximate": true
+    },
+    "544": {
+      "date": "2009-08-19",
+      "volume": 56,
+      "approximate": true
+    },
+    "545": {
+      "date": "2009-08-28",
+      "volume": 56,
+      "approximate": true
+    },
+    "546": {
+      "date": "2009-09-06",
+      "volume": 56,
+      "approximate": true
+    },
+    "547": {
+      "date": "2009-09-16",
+      "volume": 56,
+      "approximate": true
+    },
+    "548": {
+      "date": "2009-09-25",
+      "volume": 56,
+      "approximate": true
+    },
+    "549": {
+      "date": "2009-10-04",
+      "volume": 56,
+      "approximate": true
+    },
+    "550": {
+      "date": "2009-10-14",
+      "volume": 56,
+      "approximate": true
+    },
+    "551": {
+      "date": "2009-10-23",
+      "volume": 56,
+      "approximate": false
+    },
+    "552": {
+      "date": "2009-10-30",
+      "volume": 57,
+      "approximate": true
+    },
+    "553": {
+      "date": "2009-11-07",
+      "volume": 57,
+      "approximate": true
+    },
+    "554": {
+      "date": "2009-11-16",
+      "volume": 57,
+      "approximate": true
+    },
+    "555": {
+      "date": "2009-11-24",
+      "volume": 57,
+      "approximate": true
+    },
+    "556": {
+      "date": "2009-12-02",
+      "volume": 57,
+      "approximate": true
+    },
+    "557": {
+      "date": "2009-12-11",
+      "volume": 57,
+      "approximate": true
+    },
+    "558": {
+      "date": "2009-12-19",
+      "volume": 57,
+      "approximate": true
+    },
+    "559": {
+      "date": "2009-12-27",
+      "volume": 57,
+      "approximate": true
+    },
+    "560": {
+      "date": "2010-01-04",
+      "volume": 57,
+      "approximate": true
+    },
+    "561": {
+      "date": "2010-01-13",
+      "volume": 57,
+      "approximate": true
+    },
+    "562": {
+      "date": "2010-01-21",
+      "volume": 57,
+      "approximate": false
+    },
+    "563": {
+      "date": "2010-01-28",
+      "volume": 58,
+      "approximate": true
+    },
+    "564": {
+      "date": "2010-02-05",
+      "volume": 58,
+      "approximate": true
+    },
+    "565": {
+      "date": "2010-02-14",
+      "volume": 58,
+      "approximate": true
+    },
+    "566": {
+      "date": "2010-02-23",
+      "volume": 58,
+      "approximate": true
+    },
+    "567": {
+      "date": "2010-03-03",
+      "volume": 58,
+      "approximate": true
+    },
+    "568": {
+      "date": "2010-03-11",
+      "volume": 58,
+      "approximate": true
+    },
+    "569": {
+      "date": "2010-03-20",
+      "volume": 58,
+      "approximate": true
+    },
+    "570": {
+      "date": "2010-03-29",
+      "volume": 58,
+      "approximate": true
+    },
+    "571": {
+      "date": "2010-04-06",
+      "volume": 58,
+      "approximate": true
+    },
+    "572": {
+      "date": "2010-04-14",
+      "volume": 58,
+      "approximate": true
+    },
+    "573": {
+      "date": "2010-04-23",
+      "volume": 58,
+      "approximate": false
+    },
+    "574": {
+      "date": "2010-04-30",
+      "volume": 59,
+      "approximate": true
+    },
+    "575": {
+      "date": "2010-05-05",
+      "volume": 59,
+      "approximate": true
+    },
+    "576": {
+      "date": "2010-05-11",
+      "volume": 59,
+      "approximate": true
+    },
+    "577": {
+      "date": "2010-05-16",
+      "volume": 59,
+      "approximate": true
+    },
+    "578": {
+      "date": "2010-05-22",
+      "volume": 59,
+      "approximate": true
+    },
+    "579": {
+      "date": "2010-05-27",
+      "volume": 59,
+      "approximate": true
+    },
+    "580": {
+      "date": "2010-06-01",
+      "volume": 59,
+      "approximate": true
+    },
+    "581": {
+      "date": "2010-06-07",
+      "volume": 59,
+      "approximate": true
+    },
+    "582": {
+      "date": "2010-06-12",
+      "volume": 59,
+      "approximate": true
+    },
+    "583": {
+      "date": "2010-06-18",
+      "volume": 59,
+      "approximate": true
+    },
+    "584": {
+      "date": "2010-06-23",
+      "volume": 59,
+      "approximate": false
+    },
+    "585": {
+      "date": "2010-06-30",
+      "volume": 60,
+      "approximate": true
+    },
+    "586": {
+      "date": "2010-07-09",
+      "volume": 60,
+      "approximate": true
+    },
+    "587": {
+      "date": "2010-07-19",
+      "volume": 60,
+      "approximate": true
+    },
+    "588": {
+      "date": "2010-07-28",
+      "volume": 60,
+      "approximate": true
+    },
+    "589": {
+      "date": "2010-08-07",
+      "volume": 60,
+      "approximate": true
+    },
+    "590": {
+      "date": "2010-08-16",
+      "volume": 60,
+      "approximate": true
+    },
+    "591": {
+      "date": "2010-08-26",
+      "volume": 60,
+      "approximate": true
+    },
+    "592": {
+      "date": "2010-09-04",
+      "volume": 60,
+      "approximate": true
+    },
+    "593": {
+      "date": "2010-09-14",
+      "volume": 60,
+      "approximate": true
+    },
+    "594": {
+      "date": "2010-09-23",
+      "volume": 60,
+      "approximate": false
+    },
+    "595": {
+      "date": "2010-09-30",
+      "volume": 61,
+      "approximate": true
+    },
+    "596": {
+      "date": "2010-10-11",
+      "volume": 61,
+      "approximate": true
+    },
+    "597": {
+      "date": "2010-10-21",
+      "volume": 61,
+      "approximate": true
+    },
+    "598": {
+      "date": "2010-11-01",
+      "volume": 61,
+      "approximate": true
+    },
+    "599": {
+      "date": "2010-11-11",
+      "volume": 61,
+      "approximate": true
+    },
+    "600": {
+      "date": "2010-11-22",
+      "volume": 61,
+      "approximate": true
+    },
+    "601": {
+      "date": "2010-12-03",
+      "volume": 61,
+      "approximate": true
+    },
+    "602": {
+      "date": "2010-12-13",
+      "volume": 61,
+      "approximate": true
+    },
+    "603": {
+      "date": "2010-12-24",
+      "volume": 61,
+      "approximate": false
+    },
+    "604": {
+      "date": "2010-12-31",
+      "volume": 62,
+      "approximate": true
+    },
+    "605": {
+      "date": "2011-01-08",
+      "volume": 62,
+      "approximate": true
+    },
+    "606": {
+      "date": "2011-01-16",
+      "volume": 62,
+      "approximate": true
+    },
+    "607": {
+      "date": "2011-01-24",
+      "volume": 62,
+      "approximate": true
+    },
+    "608": {
+      "date": "2011-02-01",
+      "volume": 62,
+      "approximate": true
+    },
+    "609": {
+      "date": "2011-02-09",
+      "volume": 62,
+      "approximate": true
+    },
+    "610": {
+      "date": "2011-02-17",
+      "volume": 62,
+      "approximate": true
+    },
+    "611": {
+      "date": "2011-02-25",
+      "volume": 62,
+      "approximate": true
+    },
+    "612": {
+      "date": "2011-03-05",
+      "volume": 62,
+      "approximate": true
+    },
+    "613": {
+      "date": "2011-03-13",
+      "volume": 62,
+      "approximate": true
+    },
+    "614": {
+      "date": "2011-03-21",
+      "volume": 62,
+      "approximate": false
+    },
+    "615": {
+      "date": "2011-03-28",
+      "volume": 63,
+      "approximate": true
+    },
+    "616": {
+      "date": "2011-04-05",
+      "volume": 63,
+      "approximate": true
+    },
+    "617": {
+      "date": "2011-04-13",
+      "volume": 63,
+      "approximate": true
+    },
+    "618": {
+      "date": "2011-04-21",
+      "volume": 63,
+      "approximate": true
+    },
+    "619": {
+      "date": "2011-04-29",
+      "volume": 63,
+      "approximate": true
+    },
+    "620": {
+      "date": "2011-05-07",
+      "volume": 63,
+      "approximate": true
+    },
+    "621": {
+      "date": "2011-05-14",
+      "volume": 63,
+      "approximate": true
+    },
+    "622": {
+      "date": "2011-05-22",
+      "volume": 63,
+      "approximate": true
+    },
+    "623": {
+      "date": "2011-05-30",
+      "volume": 63,
+      "approximate": true
+    },
+    "624": {
+      "date": "2011-06-07",
+      "volume": 63,
+      "approximate": true
+    },
+    "625": {
+      "date": "2011-06-15",
+      "volume": 63,
+      "approximate": true
+    },
+    "626": {
+      "date": "2011-06-23",
+      "volume": 63,
+      "approximate": false
+    },
+    "627": {
+      "date": "2011-06-30",
+      "volume": 64,
+      "approximate": true
+    },
+    "628": {
+      "date": "2011-07-09",
+      "volume": 64,
+      "approximate": true
+    },
+    "629": {
+      "date": "2011-07-19",
+      "volume": 64,
+      "approximate": true
+    },
+    "630": {
+      "date": "2011-07-28",
+      "volume": 64,
+      "approximate": true
+    },
+    "631": {
+      "date": "2011-08-07",
+      "volume": 64,
+      "approximate": true
+    },
+    "632": {
+      "date": "2011-08-16",
+      "volume": 64,
+      "approximate": true
+    },
+    "633": {
+      "date": "2011-08-26",
+      "volume": 64,
+      "approximate": true
+    },
+    "634": {
+      "date": "2011-09-04",
+      "volume": 64,
+      "approximate": true
+    },
+    "635": {
+      "date": "2011-09-14",
+      "volume": 64,
+      "approximate": true
+    },
+    "636": {
+      "date": "2011-09-23",
+      "volume": 64,
+      "approximate": false
+    },
+    "637": {
+      "date": "2011-09-30",
+      "volume": 65,
+      "approximate": true
+    },
+    "638": {
+      "date": "2011-10-09",
+      "volume": 65,
+      "approximate": true
+    },
+    "639": {
+      "date": "2011-10-19",
+      "volume": 65,
+      "approximate": true
+    },
+    "640": {
+      "date": "2011-10-28",
+      "volume": 65,
+      "approximate": true
+    },
+    "641": {
+      "date": "2011-11-06",
+      "volume": 65,
+      "approximate": true
+    },
+    "642": {
+      "date": "2011-11-16",
+      "volume": 65,
+      "approximate": true
+    },
+    "643": {
+      "date": "2011-11-25",
+      "volume": 65,
+      "approximate": true
+    },
+    "644": {
+      "date": "2011-12-04",
+      "volume": 65,
+      "approximate": true
+    },
+    "645": {
+      "date": "2011-12-14",
+      "volume": 65,
+      "approximate": true
+    },
+    "646": {
+      "date": "2011-12-23",
+      "volume": 65,
+      "approximate": false
+    },
+    "647": {
+      "date": "2011-12-30",
+      "volume": 66,
+      "approximate": true
+    },
+    "648": {
+      "date": "2012-01-08",
+      "volume": 66,
+      "approximate": true
+    },
+    "649": {
+      "date": "2012-01-17",
+      "volume": 66,
+      "approximate": true
+    },
+    "650": {
+      "date": "2012-01-26",
+      "volume": 66,
+      "approximate": true
+    },
+    "651": {
+      "date": "2012-02-04",
+      "volume": 66,
+      "approximate": true
+    },
+    "652": {
+      "date": "2012-02-14",
+      "volume": 66,
+      "approximate": true
+    },
+    "653": {
+      "date": "2012-02-23",
+      "volume": 66,
+      "approximate": true
+    },
+    "654": {
+      "date": "2012-03-03",
+      "volume": 66,
+      "approximate": true
+    },
+    "655": {
+      "date": "2012-03-12",
+      "volume": 66,
+      "approximate": true
+    },
+    "656": {
+      "date": "2012-03-21",
+      "volume": 66,
+      "approximate": false
+    },
+    "657": {
+      "date": "2012-03-28",
+      "volume": 67,
+      "approximate": true
+    },
+    "658": {
+      "date": "2012-04-06",
+      "volume": 67,
+      "approximate": true
+    },
+    "659": {
+      "date": "2012-04-14",
+      "volume": 67,
+      "approximate": true
+    },
+    "660": {
+      "date": "2012-04-23",
+      "volume": 67,
+      "approximate": true
+    },
+    "661": {
+      "date": "2012-05-01",
+      "volume": 67,
+      "approximate": true
+    },
+    "662": {
+      "date": "2012-05-10",
+      "volume": 67,
+      "approximate": true
+    },
+    "663": {
+      "date": "2012-05-19",
+      "volume": 67,
+      "approximate": true
+    },
+    "664": {
+      "date": "2012-05-27",
+      "volume": 67,
+      "approximate": true
+    },
+    "665": {
+      "date": "2012-06-05",
+      "volume": 67,
+      "approximate": true
+    },
+    "666": {
+      "date": "2012-06-13",
+      "volume": 67,
+      "approximate": true
+    },
+    "667": {
+      "date": "2012-06-22",
+      "volume": 67,
+      "approximate": false
+    },
+    "668": {
+      "date": "2012-06-29",
+      "volume": 68,
+      "approximate": true
+    },
+    "669": {
+      "date": "2012-07-07",
+      "volume": 68,
+      "approximate": true
+    },
+    "670": {
+      "date": "2012-07-16",
+      "volume": 68,
+      "approximate": true
+    },
+    "671": {
+      "date": "2012-07-24",
+      "volume": 68,
+      "approximate": true
+    },
+    "672": {
+      "date": "2012-08-02",
+      "volume": 68,
+      "approximate": true
+    },
+    "673": {
+      "date": "2012-08-10",
+      "volume": 68,
+      "approximate": true
+    },
+    "674": {
+      "date": "2012-08-18",
+      "volume": 68,
+      "approximate": true
+    },
+    "675": {
+      "date": "2012-08-27",
+      "volume": 68,
+      "approximate": true
+    },
+    "676": {
+      "date": "2012-09-04",
+      "volume": 68,
+      "approximate": true
+    },
+    "677": {
+      "date": "2012-09-13",
+      "volume": 68,
+      "approximate": true
+    },
+    "678": {
+      "date": "2012-09-21",
+      "volume": 68,
+      "approximate": false
+    },
+    "679": {
+      "date": "2012-09-28",
+      "volume": 69,
+      "approximate": true
+    },
+    "680": {
+      "date": "2012-10-08",
+      "volume": 69,
+      "approximate": true
+    },
+    "681": {
+      "date": "2012-10-19",
+      "volume": 69,
+      "approximate": true
+    },
+    "682": {
+      "date": "2012-10-29",
+      "volume": 69,
+      "approximate": true
+    },
+    "683": {
+      "date": "2012-11-09",
+      "volume": 69,
+      "approximate": true
+    },
+    "684": {
+      "date": "2012-11-19",
+      "volume": 69,
+      "approximate": true
+    },
+    "685": {
+      "date": "2012-11-30",
+      "volume": 69,
+      "approximate": true
+    },
+    "686": {
+      "date": "2012-12-10",
+      "volume": 69,
+      "approximate": true
+    },
+    "687": {
+      "date": "2012-12-21",
+      "volume": 69,
+      "approximate": true
+    },
+    "688": {
+      "date": "2012-12-31",
+      "volume": 69,
+      "approximate": true
+    },
+    "689": {
+      "date": "2013-01-11",
+      "volume": 69,
+      "approximate": true
+    },
+    "690": {
+      "date": "2013-01-21",
+      "volume": 69,
+      "approximate": false
+    },
+    "691": {
+      "date": "2013-01-28",
+      "volume": 70,
+      "approximate": true
+    },
+    "692": {
+      "date": "2013-02-06",
+      "volume": 70,
+      "approximate": true
+    },
+    "693": {
+      "date": "2013-02-16",
+      "volume": 70,
+      "approximate": true
+    },
+    "694": {
+      "date": "2013-02-25",
+      "volume": 70,
+      "approximate": true
+    },
+    "695": {
+      "date": "2013-03-07",
+      "volume": 70,
+      "approximate": true
+    },
+    "696": {
+      "date": "2013-03-16",
+      "volume": 70,
+      "approximate": true
+    },
+    "697": {
+      "date": "2013-03-26",
+      "volume": 70,
+      "approximate": true
+    },
+    "698": {
+      "date": "2013-04-04",
+      "volume": 70,
+      "approximate": true
+    },
+    "699": {
+      "date": "2013-04-14",
+      "volume": 70,
+      "approximate": true
+    },
+    "700": {
+      "date": "2013-04-23",
+      "volume": 70,
+      "approximate": false
+    },
+    "701": {
+      "date": "2013-04-30",
+      "volume": 71,
+      "approximate": true
+    },
+    "702": {
+      "date": "2013-05-05",
+      "volume": 71,
+      "approximate": true
+    },
+    "703": {
+      "date": "2013-05-10",
+      "volume": 71,
+      "approximate": true
+    },
+    "704": {
+      "date": "2013-05-16",
+      "volume": 71,
+      "approximate": true
+    },
+    "705": {
+      "date": "2013-05-21",
+      "volume": 71,
+      "approximate": true
+    },
+    "706": {
+      "date": "2013-05-26",
+      "volume": 71,
+      "approximate": true
+    },
+    "707": {
+      "date": "2013-05-31",
+      "volume": 71,
+      "approximate": true
+    },
+    "708": {
+      "date": "2013-06-05",
+      "volume": 71,
+      "approximate": true
+    },
+    "709": {
+      "date": "2013-06-11",
+      "volume": 71,
+      "approximate": true
+    },
+    "710": {
+      "date": "2013-06-16",
+      "volume": 71,
+      "approximate": true
+    },
+    "711": {
+      "date": "2013-06-21",
+      "volume": 71,
+      "approximate": false
+    },
+    "712": {
+      "date": "2013-06-28",
+      "volume": 72,
+      "approximate": true
+    },
+    "713": {
+      "date": "2013-07-07",
+      "volume": 72,
+      "approximate": true
+    },
+    "714": {
+      "date": "2013-07-17",
+      "volume": 72,
+      "approximate": true
+    },
+    "715": {
+      "date": "2013-07-26",
+      "volume": 72,
+      "approximate": true
+    },
+    "716": {
+      "date": "2013-08-04",
+      "volume": 72,
+      "approximate": true
+    },
+    "717": {
+      "date": "2013-08-14",
+      "volume": 72,
+      "approximate": true
+    },
+    "718": {
+      "date": "2013-08-23",
+      "volume": 72,
+      "approximate": true
+    },
+    "719": {
+      "date": "2013-09-01",
+      "volume": 72,
+      "approximate": true
+    },
+    "720": {
+      "date": "2013-09-11",
+      "volume": 72,
+      "approximate": true
+    },
+    "721": {
+      "date": "2013-09-20",
+      "volume": 72,
+      "approximate": false
+    },
+    "722": {
+      "date": "2013-09-27",
+      "volume": 73,
+      "approximate": true
+    },
+    "723": {
+      "date": "2013-10-10",
+      "volume": 73,
+      "approximate": true
+    },
+    "724": {
+      "date": "2013-10-23",
+      "volume": 73,
+      "approximate": true
+    },
+    "725": {
+      "date": "2013-11-05",
+      "volume": 73,
+      "approximate": true
+    },
+    "726": {
+      "date": "2013-11-18",
+      "volume": 73,
+      "approximate": true
+    },
+    "727": {
+      "date": "2013-11-30",
+      "volume": 73,
+      "approximate": true
+    },
+    "728": {
+      "date": "2013-12-13",
+      "volume": 73,
+      "approximate": true
+    },
+    "729": {
+      "date": "2013-12-26",
+      "volume": 73,
+      "approximate": true
+    },
+    "730": {
+      "date": "2014-01-08",
+      "volume": 73,
+      "approximate": true
+    },
+    "731": {
+      "date": "2014-01-21",
+      "volume": 73,
+      "approximate": false
+    },
+    "732": {
+      "date": "2014-01-28",
+      "volume": 74,
+      "approximate": true
+    },
+    "733": {
+      "date": "2014-02-05",
+      "volume": 74,
+      "approximate": true
+    },
+    "734": {
+      "date": "2014-02-14",
+      "volume": 74,
+      "approximate": true
+    },
+    "735": {
+      "date": "2014-02-23",
+      "volume": 74,
+      "approximate": true
+    },
+    "736": {
+      "date": "2014-03-03",
+      "volume": 74,
+      "approximate": true
+    },
+    "737": {
+      "date": "2014-03-11",
+      "volume": 74,
+      "approximate": true
+    },
+    "738": {
+      "date": "2014-03-20",
+      "volume": 74,
+      "approximate": true
+    },
+    "739": {
+      "date": "2014-03-29",
+      "volume": 74,
+      "approximate": true
+    },
+    "740": {
+      "date": "2014-04-06",
+      "volume": 74,
+      "approximate": true
+    },
+    "741": {
+      "date": "2014-04-14",
+      "volume": 74,
+      "approximate": true
+    },
+    "742": {
+      "date": "2014-04-23",
+      "volume": 74,
+      "approximate": false
+    },
+    "743": {
+      "date": "2014-04-30",
+      "volume": 75,
+      "approximate": true
+    },
+    "744": {
+      "date": "2014-05-09",
+      "volume": 75,
+      "approximate": true
+    },
+    "745": {
+      "date": "2014-05-19",
+      "volume": 75,
+      "approximate": true
+    },
+    "746": {
+      "date": "2014-05-28",
+      "volume": 75,
+      "approximate": true
+    },
+    "747": {
+      "date": "2014-06-07",
+      "volume": 75,
+      "approximate": true
+    },
+    "748": {
+      "date": "2014-06-16",
+      "volume": 75,
+      "approximate": true
+    },
+    "749": {
+      "date": "2014-06-26",
+      "volume": 75,
+      "approximate": true
+    },
+    "750": {
+      "date": "2014-07-05",
+      "volume": 75,
+      "approximate": true
+    },
+    "751": {
+      "date": "2014-07-15",
+      "volume": 75,
+      "approximate": true
+    },
+    "752": {
+      "date": "2014-07-24",
+      "volume": 75,
+      "approximate": false
+    },
+    "753": {
+      "date": "2014-07-31",
+      "volume": 76,
+      "approximate": true
+    },
+    "754": {
+      "date": "2014-08-11",
+      "volume": 76,
+      "approximate": true
+    },
+    "755": {
+      "date": "2014-08-21",
+      "volume": 76,
+      "approximate": true
+    },
+    "756": {
+      "date": "2014-09-01",
+      "volume": 76,
+      "approximate": true
+    },
+    "757": {
+      "date": "2014-09-12",
+      "volume": 76,
+      "approximate": true
+    },
+    "758": {
+      "date": "2014-09-23",
+      "volume": 76,
+      "approximate": true
+    },
+    "759": {
+      "date": "2014-10-03",
+      "volume": 76,
+      "approximate": true
+    },
+    "760": {
+      "date": "2014-10-14",
+      "volume": 76,
+      "approximate": true
+    },
+    "761": {
+      "date": "2014-10-25",
+      "volume": 76,
+      "approximate": true
+    },
+    "762": {
+      "date": "2014-11-04",
+      "volume": 76,
+      "approximate": true
+    },
+    "763": {
+      "date": "2014-11-15",
+      "volume": 76,
+      "approximate": false
+    },
+    "764": {
+      "date": "2014-11-22",
+      "volume": 77,
+      "approximate": true
+    },
+    "765": {
+      "date": "2014-11-30",
+      "volume": 77,
+      "approximate": true
+    },
+    "766": {
+      "date": "2014-12-08",
+      "volume": 77,
+      "approximate": true
+    },
+    "767": {
+      "date": "2014-12-17",
+      "volume": 77,
+      "approximate": true
+    },
+    "768": {
+      "date": "2014-12-25",
+      "volume": 77,
+      "approximate": true
+    },
+    "769": {
+      "date": "2015-01-02",
+      "volume": 77,
+      "approximate": true
+    },
+    "770": {
+      "date": "2015-01-10",
+      "volume": 77,
+      "approximate": true
+    },
+    "771": {
+      "date": "2015-01-18",
+      "volume": 77,
+      "approximate": true
+    },
+    "772": {
+      "date": "2015-01-26",
+      "volume": 77,
+      "approximate": true
+    },
+    "773": {
+      "date": "2015-02-04",
+      "volume": 77,
+      "approximate": true
+    },
+    "774": {
+      "date": "2015-02-12",
+      "volume": 77,
+      "approximate": true
+    },
+    "775": {
+      "date": "2015-02-20",
+      "volume": 77,
+      "approximate": false
+    },
+    "776": {
+      "date": "2015-02-27",
+      "volume": 78,
+      "approximate": true
+    },
+    "777": {
+      "date": "2015-03-08",
+      "volume": 78,
+      "approximate": true
+    },
+    "778": {
+      "date": "2015-03-18",
+      "volume": 78,
+      "approximate": true
+    },
+    "779": {
+      "date": "2015-03-27",
+      "volume": 78,
+      "approximate": true
+    },
+    "780": {
+      "date": "2015-04-05",
+      "volume": 78,
+      "approximate": true
+    },
+    "781": {
+      "date": "2015-04-15",
+      "volume": 78,
+      "approximate": true
+    },
+    "782": {
+      "date": "2015-04-24",
+      "volume": 78,
+      "approximate": true
+    },
+    "783": {
+      "date": "2015-05-03",
+      "volume": 78,
+      "approximate": true
+    },
+    "784": {
+      "date": "2015-05-13",
+      "volume": 78,
+      "approximate": true
+    },
+    "785": {
+      "date": "2015-05-22",
+      "volume": 78,
+      "approximate": false
+    },
+    "786": {
+      "date": "2015-05-29",
+      "volume": 79,
+      "approximate": true
+    },
+    "787": {
+      "date": "2015-06-07",
+      "volume": 79,
+      "approximate": true
+    },
+    "788": {
+      "date": "2015-06-17",
+      "volume": 79,
+      "approximate": true
+    },
+    "789": {
+      "date": "2015-06-26",
+      "volume": 79,
+      "approximate": true
+    },
+    "790": {
+      "date": "2015-07-06",
+      "volume": 79,
+      "approximate": true
+    },
+    "791": {
+      "date": "2015-07-15",
+      "volume": 79,
+      "approximate": true
+    },
+    "792": {
+      "date": "2015-07-25",
+      "volume": 79,
+      "approximate": true
+    },
+    "793": {
+      "date": "2015-08-03",
+      "volume": 79,
+      "approximate": true
+    },
+    "794": {
+      "date": "2015-08-13",
+      "volume": 79,
+      "approximate": true
+    },
+    "795": {
+      "date": "2015-08-22",
+      "volume": 79,
+      "approximate": false
+    },
+    "796": {
+      "date": "2015-08-29",
+      "volume": 80,
+      "approximate": true
+    },
+    "797": {
+      "date": "2015-09-06",
+      "volume": 80,
+      "approximate": true
+    },
+    "798": {
+      "date": "2015-09-14",
+      "volume": 80,
+      "approximate": true
+    },
+    "799": {
+      "date": "2015-09-22",
+      "volume": 80,
+      "approximate": true
+    },
+    "800": {
+      "date": "2015-09-30",
+      "volume": 80,
+      "approximate": true
+    },
+    "801": {
+      "date": "2015-10-08",
+      "volume": 80,
+      "approximate": true
+    },
+    "802": {
+      "date": "2015-10-15",
+      "volume": 80,
+      "approximate": true
+    },
+    "803": {
+      "date": "2015-10-23",
+      "volume": 80,
+      "approximate": true
+    },
+    "804": {
+      "date": "2015-10-31",
+      "volume": 80,
+      "approximate": true
+    },
+    "805": {
+      "date": "2015-11-08",
+      "volume": 80,
+      "approximate": true
+    },
+    "806": {
+      "date": "2015-11-16",
+      "volume": 80,
+      "approximate": false
+    },
+    "807": {
+      "date": "2015-11-23",
+      "volume": 81,
+      "approximate": true
+    },
+    "808": {
+      "date": "2015-12-03",
+      "volume": 81,
+      "approximate": true
+    },
+    "809": {
+      "date": "2015-12-13",
+      "volume": 81,
+      "approximate": true
+    },
+    "810": {
+      "date": "2015-12-23",
+      "volume": 81,
+      "approximate": true
+    },
+    "811": {
+      "date": "2016-01-02",
+      "volume": 81,
+      "approximate": true
+    },
+    "812": {
+      "date": "2016-01-13",
+      "volume": 81,
+      "approximate": true
+    },
+    "813": {
+      "date": "2016-01-23",
+      "volume": 81,
+      "approximate": true
+    },
+    "814": {
+      "date": "2016-02-02",
+      "volume": 81,
+      "approximate": true
+    },
+    "815": {
+      "date": "2016-02-12",
+      "volume": 81,
+      "approximate": true
+    },
+    "816": {
+      "date": "2016-02-22",
+      "volume": 81,
+      "approximate": false
+    },
+    "817": {
+      "date": "2016-02-29",
+      "volume": 82,
+      "approximate": true
+    },
+    "818": {
+      "date": "2016-03-08",
+      "volume": 82,
+      "approximate": true
+    },
+    "819": {
+      "date": "2016-03-17",
+      "volume": 82,
+      "approximate": true
+    },
+    "820": {
+      "date": "2016-03-25",
+      "volume": 82,
+      "approximate": true
+    },
+    "821": {
+      "date": "2016-04-03",
+      "volume": 82,
+      "approximate": true
+    },
+    "822": {
+      "date": "2016-04-11",
+      "volume": 82,
+      "approximate": true
+    },
+    "823": {
+      "date": "2016-04-19",
+      "volume": 82,
+      "approximate": true
+    },
+    "824": {
+      "date": "2016-04-28",
+      "volume": 82,
+      "approximate": true
+    },
+    "825": {
+      "date": "2016-05-06",
+      "volume": 82,
+      "approximate": true
+    },
+    "826": {
+      "date": "2016-05-15",
+      "volume": 82,
+      "approximate": true
+    },
+    "827": {
+      "date": "2016-05-23",
+      "volume": 82,
+      "approximate": false
+    },
+    "828": {
+      "date": "2016-05-30",
+      "volume": 83,
+      "approximate": true
+    },
+    "829": {
+      "date": "2016-06-11",
+      "volume": 83,
+      "approximate": true
+    },
+    "830": {
+      "date": "2016-06-22",
+      "volume": 83,
+      "approximate": true
+    },
+    "831": {
+      "date": "2016-07-04",
+      "volume": 83,
+      "approximate": true
+    },
+    "832": {
+      "date": "2016-07-15",
+      "volume": 83,
+      "approximate": true
+    },
+    "833": {
+      "date": "2016-07-27",
+      "volume": 83,
+      "approximate": true
+    },
+    "834": {
+      "date": "2016-08-08",
+      "volume": 83,
+      "approximate": true
+    },
+    "835": {
+      "date": "2016-08-19",
+      "volume": 83,
+      "approximate": true
+    },
+    "836": {
+      "date": "2016-08-31",
+      "volume": 83,
+      "approximate": true
+    },
+    "837": {
+      "date": "2016-09-11",
+      "volume": 83,
+      "approximate": true
+    },
+    "838": {
+      "date": "2016-09-23",
+      "volume": 83,
+      "approximate": false
+    },
+    "839": {
+      "date": "2016-09-30",
+      "volume": 84,
+      "approximate": true
+    },
+    "840": {
+      "date": "2016-10-09",
+      "volume": 84,
+      "approximate": true
+    },
+    "841": {
+      "date": "2016-10-19",
+      "volume": 84,
+      "approximate": true
+    },
+    "842": {
+      "date": "2016-10-28",
+      "volume": 84,
+      "approximate": true
+    },
+    "843": {
+      "date": "2016-11-06",
+      "volume": 84,
+      "approximate": true
+    },
+    "844": {
+      "date": "2016-11-16",
+      "volume": 84,
+      "approximate": true
+    },
+    "845": {
+      "date": "2016-11-25",
+      "volume": 84,
+      "approximate": true
+    },
+    "846": {
+      "date": "2016-12-04",
+      "volume": 84,
+      "approximate": true
+    },
+    "847": {
+      "date": "2016-12-14",
+      "volume": 84,
+      "approximate": true
+    },
+    "848": {
+      "date": "2016-12-23",
+      "volume": 84,
+      "approximate": false
+    },
+    "849": {
+      "date": "2016-12-30",
+      "volume": 85,
+      "approximate": true
+    },
+    "850": {
+      "date": "2017-01-08",
+      "volume": 85,
+      "approximate": true
+    },
+    "851": {
+      "date": "2017-01-17",
+      "volume": 85,
+      "approximate": true
+    },
+    "852": {
+      "date": "2017-01-26",
+      "volume": 85,
+      "approximate": true
+    },
+    "853": {
+      "date": "2017-02-04",
+      "volume": 85,
+      "approximate": true
+    },
+    "854": {
+      "date": "2017-02-13",
+      "volume": 85,
+      "approximate": true
+    },
+    "855": {
+      "date": "2017-02-22",
+      "volume": 85,
+      "approximate": true
+    },
+    "856": {
+      "date": "2017-03-03",
+      "volume": 85,
+      "approximate": true
+    },
+    "857": {
+      "date": "2017-03-12",
+      "volume": 85,
+      "approximate": true
+    },
+    "858": {
+      "date": "2017-03-21",
+      "volume": 85,
+      "approximate": false
+    },
+    "859": {
+      "date": "2017-03-28",
+      "volume": 86,
+      "approximate": true
+    },
+    "860": {
+      "date": "2017-04-06",
+      "volume": 86,
+      "approximate": true
+    },
+    "861": {
+      "date": "2017-04-14",
+      "volume": 86,
+      "approximate": true
+    },
+    "862": {
+      "date": "2017-04-23",
+      "volume": 86,
+      "approximate": true
+    },
+    "863": {
+      "date": "2017-05-02",
+      "volume": 86,
+      "approximate": true
+    },
+    "864": {
+      "date": "2017-05-11",
+      "volume": 86,
+      "approximate": true
+    },
+    "865": {
+      "date": "2017-05-19",
+      "volume": 86,
+      "approximate": true
+    },
+    "866": {
+      "date": "2017-05-28",
+      "volume": 86,
+      "approximate": true
+    },
+    "867": {
+      "date": "2017-06-06",
+      "volume": 86,
+      "approximate": true
+    },
+    "868": {
+      "date": "2017-06-14",
+      "volume": 86,
+      "approximate": true
+    },
+    "869": {
+      "date": "2017-06-23",
+      "volume": 86,
+      "approximate": false
+    },
+    "870": {
+      "date": "2017-06-30",
+      "volume": 87,
+      "approximate": true
+    },
+    "871": {
+      "date": "2017-07-09",
+      "volume": 87,
+      "approximate": true
+    },
+    "872": {
+      "date": "2017-07-18",
+      "volume": 87,
+      "approximate": true
+    },
+    "873": {
+      "date": "2017-07-28",
+      "volume": 87,
+      "approximate": true
+    },
+    "874": {
+      "date": "2017-08-06",
+      "volume": 87,
+      "approximate": true
+    },
+    "875": {
+      "date": "2017-08-15",
+      "volume": 87,
+      "approximate": true
+    },
+    "876": {
+      "date": "2017-08-24",
+      "volume": 87,
+      "approximate": true
+    },
+    "877": {
+      "date": "2017-09-03",
+      "volume": 87,
+      "approximate": true
+    },
+    "878": {
+      "date": "2017-09-12",
+      "volume": 87,
+      "approximate": true
+    },
+    "879": {
+      "date": "2017-09-21",
+      "volume": 87,
+      "approximate": false
+    },
+    "880": {
+      "date": "2017-09-28",
+      "volume": 88,
+      "approximate": true
+    },
+    "881": {
+      "date": "2017-10-11",
+      "volume": 88,
+      "approximate": true
+    },
+    "882": {
+      "date": "2017-10-23",
+      "volume": 88,
+      "approximate": true
+    },
+    "883": {
+      "date": "2017-11-05",
+      "volume": 88,
+      "approximate": true
+    },
+    "884": {
+      "date": "2017-11-17",
+      "volume": 88,
+      "approximate": true
+    },
+    "885": {
+      "date": "2017-11-30",
+      "volume": 88,
+      "approximate": true
+    },
+    "886": {
+      "date": "2017-12-12",
+      "volume": 88,
+      "approximate": true
+    },
+    "887": {
+      "date": "2017-12-25",
+      "volume": 88,
+      "approximate": true
+    },
+    "888": {
+      "date": "2018-01-06",
+      "volume": 88,
+      "approximate": true
+    },
+    "889": {
+      "date": "2018-01-19",
+      "volume": 88,
+      "approximate": false
+    },
+    "890": {
+      "date": "2018-01-26",
+      "volume": 89,
+      "approximate": true
+    },
+    "891": {
+      "date": "2018-02-04",
+      "volume": 89,
+      "approximate": true
+    },
+    "892": {
+      "date": "2018-02-12",
+      "volume": 89,
+      "approximate": true
+    },
+    "893": {
+      "date": "2018-02-21",
+      "volume": 89,
+      "approximate": true
+    },
+    "894": {
+      "date": "2018-03-02",
+      "volume": 89,
+      "approximate": true
+    },
+    "895": {
+      "date": "2018-03-11",
+      "volume": 89,
+      "approximate": true
+    },
+    "896": {
+      "date": "2018-03-19",
+      "volume": 89,
+      "approximate": true
+    },
+    "897": {
+      "date": "2018-03-28",
+      "volume": 89,
+      "approximate": true
+    },
+    "898": {
+      "date": "2018-04-06",
+      "volume": 89,
+      "approximate": true
+    },
+    "899": {
+      "date": "2018-04-14",
+      "volume": 89,
+      "approximate": true
+    },
+    "900": {
+      "date": "2018-04-23",
+      "volume": 89,
+      "approximate": false
+    },
+    "901": {
+      "date": "2018-04-30",
+      "volume": 90,
+      "approximate": true
+    },
+    "902": {
+      "date": "2018-05-09",
+      "volume": 90,
+      "approximate": true
+    },
+    "903": {
+      "date": "2018-05-19",
+      "volume": 90,
+      "approximate": true
+    },
+    "904": {
+      "date": "2018-05-28",
+      "volume": 90,
+      "approximate": true
+    },
+    "905": {
+      "date": "2018-06-07",
+      "volume": 90,
+      "approximate": true
+    },
+    "906": {
+      "date": "2018-06-16",
+      "volume": 90,
+      "approximate": true
+    },
+    "907": {
+      "date": "2018-06-26",
+      "volume": 90,
+      "approximate": true
+    },
+    "908": {
+      "date": "2018-07-05",
+      "volume": 90,
+      "approximate": true
+    },
+    "909": {
+      "date": "2018-07-15",
+      "volume": 90,
+      "approximate": true
+    },
+    "910": {
+      "date": "2018-07-24",
+      "volume": 90,
+      "approximate": false
+    },
+    "911": {
+      "date": "2018-07-31",
+      "volume": 91,
+      "approximate": true
+    },
+    "912": {
+      "date": "2018-08-08",
+      "volume": 91,
+      "approximate": true
+    },
+    "913": {
+      "date": "2018-08-17",
+      "volume": 91,
+      "approximate": true
+    },
+    "914": {
+      "date": "2018-08-25",
+      "volume": 91,
+      "approximate": true
+    },
+    "915": {
+      "date": "2018-09-03",
+      "volume": 91,
+      "approximate": true
+    },
+    "916": {
+      "date": "2018-09-11",
+      "volume": 91,
+      "approximate": true
+    },
+    "917": {
+      "date": "2018-09-19",
+      "volume": 91,
+      "approximate": true
+    },
+    "918": {
+      "date": "2018-09-28",
+      "volume": 91,
+      "approximate": true
+    },
+    "919": {
+      "date": "2018-10-06",
+      "volume": 91,
+      "approximate": true
+    },
+    "920": {
+      "date": "2018-10-15",
+      "volume": 91,
+      "approximate": true
+    },
+    "921": {
+      "date": "2018-10-23",
+      "volume": 91,
+      "approximate": false
+    },
+    "922": {
+      "date": "2018-10-30",
+      "volume": 92,
+      "approximate": true
+    },
+    "923": {
+      "date": "2018-11-08",
+      "volume": 92,
+      "approximate": true
+    },
+    "924": {
+      "date": "2018-11-17",
+      "volume": 92,
+      "approximate": true
+    },
+    "925": {
+      "date": "2018-11-27",
+      "volume": 92,
+      "approximate": true
+    },
+    "926": {
+      "date": "2018-12-06",
+      "volume": 92,
+      "approximate": true
+    },
+    "927": {
+      "date": "2018-12-15",
+      "volume": 92,
+      "approximate": true
+    },
+    "928": {
+      "date": "2018-12-24",
+      "volume": 92,
+      "approximate": true
+    },
+    "929": {
+      "date": "2019-01-03",
+      "volume": 92,
+      "approximate": true
+    },
+    "930": {
+      "date": "2019-01-12",
+      "volume": 92,
+      "approximate": true
+    },
+    "931": {
+      "date": "2019-01-21",
+      "volume": 92,
+      "approximate": false
+    },
+    "932": {
+      "date": "2019-01-28",
+      "volume": 93,
+      "approximate": true
+    },
+    "933": {
+      "date": "2019-02-09",
+      "volume": 93,
+      "approximate": true
+    },
+    "934": {
+      "date": "2019-02-20",
+      "volume": 93,
+      "approximate": true
+    },
+    "935": {
+      "date": "2019-03-03",
+      "volume": 93,
+      "approximate": true
+    },
+    "936": {
+      "date": "2019-03-15",
+      "volume": 93,
+      "approximate": true
+    },
+    "937": {
+      "date": "2019-03-27",
+      "volume": 93,
+      "approximate": true
+    },
+    "938": {
+      "date": "2019-04-07",
+      "volume": 93,
+      "approximate": true
+    },
+    "939": {
+      "date": "2019-04-18",
+      "volume": 93,
+      "approximate": true
+    },
+    "940": {
+      "date": "2019-04-30",
+      "volume": 93,
+      "approximate": true
+    },
+    "941": {
+      "date": "2019-05-12",
+      "volume": 93,
+      "approximate": true
+    },
+    "942": {
+      "date": "2019-05-23",
+      "volume": 93,
+      "approximate": false
+    },
+    "943": {
+      "date": "2019-05-30",
+      "volume": 94,
+      "approximate": true
+    },
+    "944": {
+      "date": "2019-06-07",
+      "volume": 94,
+      "approximate": true
+    },
+    "945": {
+      "date": "2019-06-16",
+      "volume": 94,
+      "approximate": true
+    },
+    "946": {
+      "date": "2019-06-25",
+      "volume": 94,
+      "approximate": true
+    },
+    "947": {
+      "date": "2019-07-03",
+      "volume": 94,
+      "approximate": true
+    },
+    "948": {
+      "date": "2019-07-11",
+      "volume": 94,
+      "approximate": true
+    },
+    "949": {
+      "date": "2019-07-20",
+      "volume": 94,
+      "approximate": true
+    },
+    "950": {
+      "date": "2019-07-29",
+      "volume": 94,
+      "approximate": true
+    },
+    "951": {
+      "date": "2019-08-06",
+      "volume": 94,
+      "approximate": true
+    },
+    "952": {
+      "date": "2019-08-14",
+      "volume": 94,
+      "approximate": true
+    },
+    "953": {
+      "date": "2019-08-23",
+      "volume": 94,
+      "approximate": false
+    },
+    "954": {
+      "date": "2019-08-30",
+      "volume": 95,
+      "approximate": true
+    },
+    "955": {
+      "date": "2019-09-07",
+      "volume": 95,
+      "approximate": true
+    },
+    "956": {
+      "date": "2019-09-15",
+      "volume": 95,
+      "approximate": true
+    },
+    "957": {
+      "date": "2019-09-22",
+      "volume": 95,
+      "approximate": true
+    },
+    "958": {
+      "date": "2019-09-30",
+      "volume": 95,
+      "approximate": true
+    },
+    "959": {
+      "date": "2019-10-08",
+      "volume": 95,
+      "approximate": true
+    },
+    "960": {
+      "date": "2019-10-16",
+      "volume": 95,
+      "approximate": true
+    },
+    "961": {
+      "date": "2019-10-24",
+      "volume": 95,
+      "approximate": true
+    },
+    "962": {
+      "date": "2019-10-31",
+      "volume": 95,
+      "approximate": true
+    },
+    "963": {
+      "date": "2019-11-08",
+      "volume": 95,
+      "approximate": true
+    },
+    "964": {
+      "date": "2019-11-16",
+      "volume": 95,
+      "approximate": false
+    },
+    "965": {
+      "date": "2019-11-23",
+      "volume": 96,
+      "approximate": true
+    },
+    "966": {
+      "date": "2019-12-03",
+      "volume": 96,
+      "approximate": true
+    },
+    "967": {
+      "date": "2019-12-13",
+      "volume": 96,
+      "approximate": true
+    },
+    "968": {
+      "date": "2019-12-23",
+      "volume": 96,
+      "approximate": true
+    },
+    "969": {
+      "date": "2020-01-02",
+      "volume": 96,
+      "approximate": true
+    },
+    "970": {
+      "date": "2020-01-12",
+      "volume": 96,
+      "approximate": true
+    },
+    "971": {
+      "date": "2020-01-22",
+      "volume": 96,
+      "approximate": true
+    },
+    "972": {
+      "date": "2020-02-01",
+      "volume": 96,
+      "approximate": true
+    },
+    "973": {
+      "date": "2020-02-11",
+      "volume": 96,
+      "approximate": true
+    },
+    "974": {
+      "date": "2020-02-21",
+      "volume": 96,
+      "approximate": false
+    },
+    "975": {
+      "date": "2020-02-28",
+      "volume": 97,
+      "approximate": true
+    },
+    "976": {
+      "date": "2020-03-17",
+      "volume": 97,
+      "approximate": true
+    },
+    "977": {
+      "date": "2020-04-03",
+      "volume": 97,
+      "approximate": true
+    },
+    "978": {
+      "date": "2020-04-21",
+      "volume": 97,
+      "approximate": true
+    },
+    "979": {
+      "date": "2020-05-09",
+      "volume": 97,
+      "approximate": true
+    },
+    "980": {
+      "date": "2020-05-26",
+      "volume": 97,
+      "approximate": true
+    },
+    "981": {
+      "date": "2020-06-13",
+      "volume": 97,
+      "approximate": true
+    },
+    "982": {
+      "date": "2020-07-01",
+      "volume": 97,
+      "approximate": true
+    },
+    "983": {
+      "date": "2020-07-18",
+      "volume": 97,
+      "approximate": true
+    },
+    "984": {
+      "date": "2020-08-05",
+      "volume": 97,
+      "approximate": false
+    },
+    "985": {
+      "date": "2020-08-12",
+      "volume": 98,
+      "approximate": true
+    },
+    "986": {
+      "date": "2020-08-27",
+      "volume": 98,
+      "approximate": true
+    },
+    "987": {
+      "date": "2020-09-11",
+      "volume": 98,
+      "approximate": true
+    },
+    "988": {
+      "date": "2020-09-26",
+      "volume": 98,
+      "approximate": true
+    },
+    "989": {
+      "date": "2020-10-11",
+      "volume": 98,
+      "approximate": true
+    },
+    "990": {
+      "date": "2020-10-25",
+      "volume": 98,
+      "approximate": true
+    },
+    "991": {
+      "date": "2020-11-09",
+      "volume": 98,
+      "approximate": true
+    },
+    "992": {
+      "date": "2020-11-24",
+      "volume": 98,
+      "approximate": true
+    },
+    "993": {
+      "date": "2020-12-09",
+      "volume": 98,
+      "approximate": true
+    },
+    "994": {
+      "date": "2020-12-24",
+      "volume": 98,
+      "approximate": false
+    },
+    "995": {
+      "date": "2020-12-31",
+      "volume": 99,
+      "approximate": true
+    },
+    "996": {
+      "date": "2021-01-13",
+      "volume": 99,
+      "approximate": true
+    },
+    "997": {
+      "date": "2021-01-25",
+      "volume": 99,
+      "approximate": true
+    },
+    "998": {
+      "date": "2021-02-07",
+      "volume": 99,
+      "approximate": true
+    },
+    "999": {
+      "date": "2021-02-19",
+      "volume": 99,
+      "approximate": true
+    },
+    "1000": {
+      "date": "2021-03-04",
+      "volume": 99,
+      "approximate": true
+    },
+    "1001": {
+      "date": "2021-03-16",
+      "volume": 99,
+      "approximate": true
+    },
+    "1002": {
+      "date": "2021-03-29",
+      "volume": 99,
+      "approximate": true
+    },
+    "1003": {
+      "date": "2021-04-10",
+      "volume": 99,
+      "approximate": true
+    },
+    "1004": {
+      "date": "2021-04-23",
+      "volume": 99,
+      "approximate": false
+    },
+    "1005": {
+      "date": "2021-04-30",
+      "volume": 100,
+      "approximate": true
+    },
+    "1006": {
+      "date": "2021-05-08",
+      "volume": 100,
+      "approximate": true
+    },
+    "1007": {
+      "date": "2021-05-17",
+      "volume": 100,
+      "approximate": true
+    },
+    "1008": {
+      "date": "2021-05-25",
+      "volume": 100,
+      "approximate": true
+    },
+    "1009": {
+      "date": "2021-06-03",
+      "volume": 100,
+      "approximate": true
+    },
+    "1010": {
+      "date": "2021-06-11",
+      "volume": 100,
+      "approximate": true
+    },
+    "1011": {
+      "date": "2021-06-19",
+      "volume": 100,
+      "approximate": true
+    },
+    "1012": {
+      "date": "2021-06-28",
+      "volume": 100,
+      "approximate": true
+    },
+    "1013": {
+      "date": "2021-07-06",
+      "volume": 100,
+      "approximate": true
+    },
+    "1014": {
+      "date": "2021-07-15",
+      "volume": 100,
+      "approximate": true
+    },
+    "1015": {
+      "date": "2021-07-23",
+      "volume": 100,
+      "approximate": false
+    },
+    "1016": {
+      "date": "2021-07-30",
+      "volume": 101,
+      "approximate": true
+    },
+    "1017": {
+      "date": "2021-08-08",
+      "volume": 101,
+      "approximate": true
+    },
+    "1018": {
+      "date": "2021-08-18",
+      "volume": 101,
+      "approximate": true
+    },
+    "1019": {
+      "date": "2021-08-27",
+      "volume": 101,
+      "approximate": true
+    },
+    "1020": {
+      "date": "2021-09-05",
+      "volume": 101,
+      "approximate": true
+    },
+    "1021": {
+      "date": "2021-09-15",
+      "volume": 101,
+      "approximate": true
+    },
+    "1022": {
+      "date": "2021-09-24",
+      "volume": 101,
+      "approximate": true
+    },
+    "1023": {
+      "date": "2021-10-03",
+      "volume": 101,
+      "approximate": true
+    },
+    "1024": {
+      "date": "2021-10-13",
+      "volume": 101,
+      "approximate": true
+    },
+    "1025": {
+      "date": "2021-10-22",
+      "volume": 101,
+      "approximate": false
+    },
+    "1026": {
+      "date": "2021-10-29",
+      "volume": 102,
+      "approximate": true
+    },
+    "1027": {
+      "date": "2021-11-11",
+      "volume": 102,
+      "approximate": true
+    },
+    "1028": {
+      "date": "2021-11-24",
+      "volume": 102,
+      "approximate": true
+    },
+    "1029": {
+      "date": "2021-12-06",
+      "volume": 102,
+      "approximate": true
+    },
+    "1030": {
+      "date": "2021-12-19",
+      "volume": 102,
+      "approximate": true
+    },
+    "1031": {
+      "date": "2022-01-01",
+      "volume": 102,
+      "approximate": true
+    },
+    "1032": {
+      "date": "2022-01-14",
+      "volume": 102,
+      "approximate": true
+    },
+    "1033": {
+      "date": "2022-01-26",
+      "volume": 102,
+      "approximate": true
+    },
+    "1034": {
+      "date": "2022-02-08",
+      "volume": 102,
+      "approximate": true
+    },
+    "1035": {
+      "date": "2022-02-21",
+      "volume": 102,
+      "approximate": false
+    },
+    "1036": {
+      "date": "2022-02-28",
+      "volume": 103,
+      "approximate": true
+    },
+    "1037": {
+      "date": "2022-03-12",
+      "volume": 103,
+      "approximate": true
+    },
+    "1038": {
+      "date": "2022-03-23",
+      "volume": 103,
+      "approximate": true
+    },
+    "1039": {
+      "date": "2022-04-03",
+      "volume": 103,
+      "approximate": true
+    },
+    "1040": {
+      "date": "2022-04-15",
+      "volume": 103,
+      "approximate": true
+    },
+    "1041": {
+      "date": "2022-04-27",
+      "volume": 103,
+      "approximate": true
+    },
+    "1042": {
+      "date": "2022-05-08",
+      "volume": 103,
+      "approximate": true
+    },
+    "1043": {
+      "date": "2022-05-19",
+      "volume": 103,
+      "approximate": true
+    },
+    "1044": {
+      "date": "2022-05-31",
+      "volume": 103,
+      "approximate": true
+    },
+    "1045": {
+      "date": "2022-06-12",
+      "volume": 103,
+      "approximate": true
+    },
+    "1046": {
+      "date": "2022-06-23",
+      "volume": 103,
+      "approximate": false
+    },
+    "1047": {
+      "date": "2022-06-30",
+      "volume": 104,
+      "approximate": true
+    },
+    "1048": {
+      "date": "2022-07-11",
+      "volume": 104,
+      "approximate": true
+    },
+    "1049": {
+      "date": "2022-07-21",
+      "volume": 104,
+      "approximate": true
+    },
+    "1050": {
+      "date": "2022-08-01",
+      "volume": 104,
+      "approximate": true
+    },
+    "1051": {
+      "date": "2022-08-11",
+      "volume": 104,
+      "approximate": true
+    },
+    "1052": {
+      "date": "2022-08-22",
+      "volume": 104,
+      "approximate": true
+    },
+    "1053": {
+      "date": "2022-09-02",
+      "volume": 104,
+      "approximate": true
+    },
+    "1054": {
+      "date": "2022-09-12",
+      "volume": 104,
+      "approximate": true
+    },
+    "1055": {
+      "date": "2022-09-23",
+      "volume": 104,
+      "approximate": false
+    },
+    "1056": {
+      "date": "2022-09-30",
+      "volume": 105,
+      "approximate": true
+    },
+    "1057": {
+      "date": "2022-10-12",
+      "volume": 105,
+      "approximate": true
+    },
+    "1058": {
+      "date": "2022-10-25",
+      "volume": 105,
+      "approximate": true
+    },
+    "1059": {
+      "date": "2022-11-06",
+      "volume": 105,
+      "approximate": true
+    },
+    "1060": {
+      "date": "2022-11-19",
+      "volume": 105,
+      "approximate": true
+    },
+    "1061": {
+      "date": "2022-12-01",
+      "volume": 105,
+      "approximate": true
+    },
+    "1062": {
+      "date": "2022-12-14",
+      "volume": 105,
+      "approximate": true
+    },
+    "1063": {
+      "date": "2022-12-26",
+      "volume": 105,
+      "approximate": true
+    },
+    "1064": {
+      "date": "2023-01-08",
+      "volume": 105,
+      "approximate": true
+    },
+    "1065": {
+      "date": "2023-01-20",
+      "volume": 105,
+      "approximate": false
+    },
+    "1066": {
+      "date": "2023-01-27",
+      "volume": 106,
+      "approximate": true
+    },
+    "1067": {
+      "date": "2023-02-08",
+      "volume": 106,
+      "approximate": true
+    },
+    "1068": {
+      "date": "2023-02-19",
+      "volume": 106,
+      "approximate": true
+    },
+    "1069": {
+      "date": "2023-03-03",
+      "volume": 106,
+      "approximate": true
+    },
+    "1070": {
+      "date": "2023-03-14",
+      "volume": 106,
+      "approximate": true
+    },
+    "1071": {
+      "date": "2023-03-26",
+      "volume": 106,
+      "approximate": true
+    },
+    "1072": {
+      "date": "2023-04-07",
+      "volume": 106,
+      "approximate": true
+    },
+    "1073": {
+      "date": "2023-04-18",
+      "volume": 106,
+      "approximate": true
+    },
+    "1074": {
+      "date": "2023-04-30",
+      "volume": 106,
+      "approximate": true
+    },
+    "1075": {
+      "date": "2023-05-11",
+      "volume": 106,
+      "approximate": true
+    },
+    "1076": {
+      "date": "2023-05-23",
+      "volume": 106,
+      "approximate": false
+    },
+    "1077": {
+      "date": "2023-05-30",
+      "volume": 107,
+      "approximate": true
+    },
+    "1078": {
+      "date": "2023-06-09",
+      "volume": 107,
+      "approximate": true
+    },
+    "1079": {
+      "date": "2023-06-20",
+      "volume": 107,
+      "approximate": true
+    },
+    "1080": {
+      "date": "2023-06-30",
+      "volume": 107,
+      "approximate": true
+    },
+    "1081": {
+      "date": "2023-07-10",
+      "volume": 107,
+      "approximate": true
+    },
+    "1082": {
+      "date": "2023-07-21",
+      "volume": 107,
+      "approximate": true
+    },
+    "1083": {
+      "date": "2023-07-31",
+      "volume": 107,
+      "approximate": true
+    },
+    "1084": {
+      "date": "2023-08-11",
+      "volume": 107,
+      "approximate": true
+    },
+    "1085": {
+      "date": "2023-08-21",
+      "volume": 107,
+      "approximate": true
+    },
+    "1086": {
+      "date": "2023-08-31",
+      "volume": 107,
+      "approximate": true
+    },
+    "1087": {
+      "date": "2023-09-11",
+      "volume": 107,
+      "approximate": true
+    },
+    "1088": {
+      "date": "2023-09-21",
+      "volume": 107,
+      "approximate": false
+    },
+    "1089": {
+      "date": "2023-09-28",
+      "volume": 108,
+      "approximate": true
+    },
+    "1090": {
+      "date": "2023-10-09",
+      "volume": 108,
+      "approximate": true
+    },
+    "1091": {
+      "date": "2023-10-19",
+      "volume": 108,
+      "approximate": true
+    },
+    "1092": {
+      "date": "2023-10-30",
+      "volume": 108,
+      "approximate": true
+    },
+    "1093": {
+      "date": "2023-11-09",
+      "volume": 108,
+      "approximate": true
+    },
+    "1094": {
+      "date": "2023-11-20",
+      "volume": 108,
+      "approximate": true
+    },
+    "1095": {
+      "date": "2023-11-30",
+      "volume": 108,
+      "approximate": true
+    },
+    "1096": {
+      "date": "2023-12-11",
+      "volume": 108,
+      "approximate": true
+    },
+    "1097": {
+      "date": "2023-12-21",
+      "volume": 108,
+      "approximate": true
+    },
+    "1098": {
+      "date": "2024-01-01",
+      "volume": 108,
+      "approximate": true
+    },
+    "1099": {
+      "date": "2024-01-11",
+      "volume": 108,
+      "approximate": true
+    },
+    "1100": {
+      "date": "2024-01-22",
+      "volume": 108,
+      "approximate": false
+    },
+    "1101": {
+      "date": "2024-01-29",
+      "volume": 109,
+      "approximate": true
+    },
+    "1102": {
+      "date": "2024-02-11",
+      "volume": 109,
+      "approximate": true
+    },
+    "1103": {
+      "date": "2024-02-24",
+      "volume": 109,
+      "approximate": true
+    },
+    "1104": {
+      "date": "2024-03-07",
+      "volume": 109,
+      "approximate": true
+    },
+    "1105": {
+      "date": "2024-03-20",
+      "volume": 109,
+      "approximate": true
+    },
+    "1106": {
+      "date": "2024-04-02",
+      "volume": 109,
+      "approximate": true
+    },
+    "1107": {
+      "date": "2024-04-15",
+      "volume": 109,
+      "approximate": true
+    },
+    "1108": {
+      "date": "2024-04-27",
+      "volume": 109,
+      "approximate": true
+    },
+    "1109": {
+      "date": "2024-05-10",
+      "volume": 109,
+      "approximate": true
+    },
+    "1110": {
+      "date": "2024-05-23",
+      "volume": 109,
+      "approximate": false
+    },
+    "1111": {
+      "date": "2024-05-30",
+      "volume": 110,
+      "approximate": true
+    },
+    "1112": {
+      "date": "2024-06-10",
+      "volume": 110,
+      "approximate": true
+    },
+    "1113": {
+      "date": "2024-06-22",
+      "volume": 110,
+      "approximate": true
+    },
+    "1114": {
+      "date": "2024-07-03",
+      "volume": 110,
+      "approximate": true
+    },
+    "1115": {
+      "date": "2024-07-14",
+      "volume": 110,
+      "approximate": true
+    },
+    "1116": {
+      "date": "2024-07-25",
+      "volume": 110,
+      "approximate": true
+    },
+    "1117": {
+      "date": "2024-08-06",
+      "volume": 110,
+      "approximate": true
+    },
+    "1118": {
+      "date": "2024-08-17",
+      "volume": 110,
+      "approximate": true
+    },
+    "1119": {
+      "date": "2024-08-28",
+      "volume": 110,
+      "approximate": true
+    },
+    "1120": {
+      "date": "2024-09-09",
+      "volume": 110,
+      "approximate": true
+    },
+    "1121": {
+      "date": "2024-09-20",
+      "volume": 110,
+      "approximate": false
+    },
+    "1122": {
+      "date": "2024-09-27",
+      "volume": 111,
+      "approximate": true
+    },
+    "1123": {
+      "date": "2024-10-08",
+      "volume": 111,
+      "approximate": true
+    },
+    "1124": {
+      "date": "2024-10-18",
+      "volume": 111,
+      "approximate": true
+    },
+    "1125": {
+      "date": "2024-10-29",
+      "volume": 111,
+      "approximate": true
+    },
+    "1126": {
+      "date": "2024-11-08",
+      "volume": 111,
+      "approximate": true
+    },
+    "1127": {
+      "date": "2024-11-19",
+      "volume": 111,
+      "approximate": true
+    },
+    "1128": {
+      "date": "2024-11-29",
+      "volume": 111,
+      "approximate": true
+    },
+    "1129": {
+      "date": "2024-12-10",
+      "volume": 111,
+      "approximate": true
+    },
+    "1130": {
+      "date": "2024-12-20",
+      "volume": 111,
+      "approximate": true
+    },
+    "1131": {
+      "date": "2024-12-31",
+      "volume": 111,
+      "approximate": true
+    },
+    "1132": {
+      "date": "2025-01-10",
+      "volume": 111,
+      "approximate": true
+    },
+    "1133": {
+      "date": "2025-01-21",
+      "volume": 111,
+      "approximate": false
+    },
+    "1134": {
+      "date": "2025-01-28",
+      "volume": 112,
+      "approximate": true
+    },
+    "1135": {
+      "date": "2025-02-09",
+      "volume": 112,
+      "approximate": true
+    },
+    "1136": {
+      "date": "2025-02-20",
+      "volume": 112,
+      "approximate": true
+    },
+    "1137": {
+      "date": "2025-03-03",
+      "volume": 112,
+      "approximate": true
+    },
+    "1138": {
+      "date": "2025-03-15",
+      "volume": 112,
+      "approximate": true
+    },
+    "1139": {
+      "date": "2025-03-27",
+      "volume": 112,
+      "approximate": true
+    },
+    "1140": {
+      "date": "2025-04-07",
+      "volume": 112,
+      "approximate": true
+    },
+    "1141": {
+      "date": "2025-04-18",
+      "volume": 112,
+      "approximate": true
+    },
+    "1142": {
+      "date": "2025-04-30",
+      "volume": 112,
+      "approximate": true
+    },
+    "1143": {
+      "date": "2025-05-12",
+      "volume": 112,
+      "approximate": true
+    },
+    "1144": {
+      "date": "2025-05-23",
+      "volume": 112,
+      "approximate": false
+    },
+    "1145": {
+      "date": "2025-05-30",
+      "volume": 113,
+      "approximate": true
+    },
+    "1146": {
+      "date": "2025-06-11",
+      "volume": 113,
+      "approximate": true
+    },
+    "1147": {
+      "date": "2025-06-22",
+      "volume": 113,
+      "approximate": true
+    },
+    "1148": {
+      "date": "2025-07-04",
+      "volume": 113,
+      "approximate": true
+    },
+    "1149": {
+      "date": "2025-07-15",
+      "volume": 113,
+      "approximate": true
+    },
+    "1150": {
+      "date": "2025-07-27",
+      "volume": 113,
+      "approximate": true
+    },
+    "1151": {
+      "date": "2025-08-08",
+      "volume": 113,
+      "approximate": true
+    },
+    "1152": {
+      "date": "2025-08-19",
+      "volume": 113,
+      "approximate": true
+    },
+    "1153": {
+      "date": "2025-08-31",
+      "volume": 113,
+      "approximate": true
+    },
+    "1154": {
+      "date": "2025-09-11",
+      "volume": 113,
+      "approximate": true
+    },
+    "1155": {
+      "date": "2025-09-23",
+      "volume": 113,
+      "approximate": false
+    },
+    "1156": {
+      "date": "2025-09-30",
+      "volume": 114,
+      "approximate": true
+    },
+    "1157": {
+      "date": "2025-10-11",
+      "volume": 114,
+      "approximate": true
+    },
+    "1158": {
+      "date": "2025-10-23",
+      "volume": 114,
+      "approximate": true
+    },
+    "1159": {
+      "date": "2025-11-03",
+      "volume": 114,
+      "approximate": true
+    },
+    "1160": {
+      "date": "2025-11-14",
+      "volume": 114,
+      "approximate": true
+    },
+    "1161": {
+      "date": "2025-11-25",
+      "volume": 114,
+      "approximate": true
+    },
+    "1162": {
+      "date": "2025-12-07",
+      "volume": 114,
+      "approximate": true
+    },
+    "1163": {
+      "date": "2025-12-18",
+      "volume": 114,
+      "approximate": true
+    },
+    "1164": {
+      "date": "2025-12-29",
+      "volume": 114,
+      "approximate": true
+    },
+    "1165": {
+      "date": "2026-01-10",
+      "volume": 114,
+      "approximate": true
+    },
+    "1166": {
+      "date": "2026-01-21",
+      "volume": 114,
+      "approximate": false
+    },
+    "1167": {
+      "date": "2026-01-28",
+      "volume": null,
+      "approximate": true
+    },
+    "1168": {
+      "date": "2026-02-04",
+      "volume": null,
+      "approximate": true
+    },
+    "1169": {
+      "date": "2026-02-11",
+      "volume": null,
+      "approximate": true
+    },
+    "1170": {
+      "date": "2026-02-18",
+      "volume": null,
+      "approximate": true
+    },
+    "1171": {
+      "date": "2026-02-25",
+      "volume": null,
+      "approximate": true
+    },
+    "1172": {
+      "date": "2026-03-04",
+      "volume": null,
+      "approximate": true
+    },
+    "1173": {
+      "date": "2026-03-11",
+      "volume": null,
+      "approximate": true
+    },
+    "1174": {
+      "date": "2026-03-18",
+      "volume": null,
+      "approximate": true
+    },
+    "1175": {
+      "date": "2026-03-25",
+      "volume": null,
+      "approximate": true
+    },
+    "1176": {
+      "date": "2026-04-01",
+      "volume": null,
+      "approximate": true
+    },
+    "1177": {
+      "date": "2026-04-08",
+      "volume": null,
+      "approximate": true
+    },
+    "1178": {
+      "date": "2026-04-15",
+      "volume": null,
+      "approximate": true
+    },
+    "1179": {
+      "date": "2026-04-22",
+      "volume": null,
+      "approximate": true
+    },
+    "1180": {
+      "date": "2026-04-29",
+      "volume": null,
+      "approximate": true
+    },
+    "1181": {
+      "date": "2026-05-06",
+      "volume": null,
+      "approximate": true
+    }
+  }
+}

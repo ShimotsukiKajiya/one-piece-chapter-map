@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shimotsuki Codex · One Piece Reference</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #0c0a14;
+      --surface:   #1a1610;
+      --surface2:  #251f15;
+      --border:    #4a3820;
+      --text:      #e8d8b0;
+      --muted:     #8a7548;
+      --orange:    #FF6B1A;
+      --gold:      #d4a44a;
+      --gold-bright:#f5c95e;
+      --ink-blue:  #6a9ec8;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 25% 15%, rgba(212,164,74,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 85%, rgba(106,158,200,0.04) 0%, transparent 50%),
+        var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Aged-paper grain */
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.012) 1px, transparent 1px);
+      background-size: 14px 14px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ──────────── NEW HERO ────────────
+       Clean, focused, treasure-map themed. No mascots, no rainbow.
+       The Codex is the brand; One Piece is the topic.                */
+    .hero {
+      position: relative;
+      padding: 70px 24px 50px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Logo crest at the top */
+    .hero-crest {
+      width: 110px; height: 110px;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 4px 22px rgba(212,164,74,0.4));
+      animation: crest-float 8s ease-in-out infinite;
+    }
+    @keyframes crest-float {
+      0%, 100% { transform: translateY(0) }
+      50%      { transform: translateY(-6px) }
+    }
+
+    /* Top-line "ONE PIECE" — small, gold, set above the codex name */
+    .hero .top-line {
+      font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--ink-blue);
+      margin-bottom: 14px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    .hero .top-line::before, .hero .top-line::after {
+      content: ''; width: 36px; height: 1px;
+      background: linear-gradient(to right, transparent, var(--ink-blue), transparent);
+    }
+
+    /* Centerpiece: THE SHIMOTSUKI CODEX */
+    .hero h1 {
+      font-size: clamp(2.4rem, 6.5vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      line-height: 1.05;
+      background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 55%, #a07020 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(212,164,74,0.18);
+      margin-bottom: 16px;
+    }
+
+    /* Italic tagline beneath */
+    .hero .tagline {
+      font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+      color: var(--muted);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+
+    .hero .blurb {
+      font-size: 1.05rem; line-height: 1.8;
+      max-width: 640px; margin: 0 auto 36px;
+      color: var(--text);
+    }
+    .hero .blurb strong {
+      color: var(--gold-bright); font-weight: 700;
+    }
+
+    /* Gold rule with ✦ ends — reusable on every page */
+    .gold-rule {
+      width: 240px; height: 2px; margin: 0 auto 32px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      position: relative;
+    }
+    .gold-rule::before, .gold-rule::after {
+      content: '✦'; position: absolute; top: -10px;
+      color: var(--gold); font-size: 0.85rem;
+    }
+    .gold-rule::before { left: -2px; }
+    .gold-rule::after  { right: -2px; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 900px;
+      margin: 0 auto 70px;
+      padding: 0 24px;
+      position: relative;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .stat .num {
+      font-size: 2.2rem; font-weight: 900;
+      color: var(--gold-bright);
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    .stat .label {
+      font-size: 0.7rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-top: 8px;
+    }
+
+    /* ── SECTION HEADER ── */
+    .tier-header {
+      max-width: 1100px;
+      margin: 30px auto 18px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+    .tier-header h2 {
+      font-size: 0.85rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .tier-header .rule {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    /* ── HERO FEATURE GRID (the four entry doors) ── */
+    .features-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      position: relative;
+    }
+
+    /* ── SECONDARY FEATURE GRID (compact, 3-up) ── */
+    .features {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+    .features .feature {
+      padding: 20px 18px;
+    }
+    .features .feature-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .features .feature h3   { font-size: 1.05rem; margin-bottom: 7px; }
+    .features .feature p    { font-size: 0.84rem; line-height: 1.5; margin-bottom: 10px; }
+    .features .feature-stat { font-size: 0.7rem; padding-top: 9px; }
+
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 26px;
+      text-decoration: none;
+      color: inherit;
+      display: flex; flex-direction: column;
+      transition: all 0.18s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 0%, transparent 60%, rgba(212,164,74,0.06) 100%);
+      pointer-events: none;
+    }
+    .feature:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,164,74,0.3);
+    }
+
+    .feature-icon {
+      font-size: 2.4rem; margin-bottom: 14px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+    .feature h3 {
+      font-size: 1.3rem; font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .feature p {
+      font-size: 0.92rem; line-height: 1.6;
+      color: var(--text); flex: 1;
+      margin-bottom: 14px;
+    }
+    .feature-stat {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(212,164,74,0.2);
+    }
+    .feature-stat strong {
+      color: var(--gold-bright); font-weight: 800;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 30px 24px 50px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 980px) {
+      .features    { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .features-hero { grid-template-columns: 1fr; }
+      .features      { grid-template-columns: 1fr; }
+      .stats-bar     { grid-template-columns: repeat(2, 1fr); }
+      .hero-crest    { width: 80px; height: 80px; }
+    }
+
+    /* Corner-ornament SVGs removed — conflicted with the action strip
+       (Search · Info · Settings · Burger) at the top-right. */
+  </style>
+<link rel="stylesheet" href="cite-styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d4a44a">
+  <!-- OG / Twitter cards for shareability -->
+  <meta name="description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta property="og:title" content="The Shimotsuki Codex · One Piece Reference">
+  <meta property="og:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shimotsukicodex.com/">
+  <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <meta property="og:site_name" content="The Shimotsuki Codex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ShimotsukiCodex">
+  <meta name="twitter:title" content="The Shimotsuki Codex · One Piece Reference">
+  <meta name="twitter:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+<style id="nav-burger-critical">
+  /* Reserves space for the top-right action strip from the first paint —
+     prevents layout shift when nav-burger.js loads. */
+  header { padding-right: 240px !important; padding-left: 24px !important; }
+  @media (max-width: 600px) { header { padding-right: 185px !important; } } @media (max-width: 480px) { header { padding-right: 165px !important; } }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img class="hero-crest" src="logo/shimotsuki-codex-mark-primary.png" alt="Shimotsuki Codex crest">
+  <div class="top-line">A One Piece Reference</div>
+  <h1>The Shimotsuki Codex</h1>
+  <div class="tagline">Forging clarity from chaos</div>
+  <div class="gold-rule"></div>
+  <p class="blurb">
+    Every chapter mapped. Every SBS answer archived. Theories weighed against canon.
+    <strong>Sourced, cross-referenced, and free.</strong>
+  </p>
+</section>
+
+<section class="stats-bar">
+  <div class="stat"><div class="num" id="s-chapters">1,181</div><div class="label">Chapters</div></div>
+  <div class="stat"><div class="num" id="s-sbs">1,659</div><div class="label">SBS Q&amp;A</div></div>
+  <div class="stat"><div class="num" id="s-theories">94</div><div class="label">Theories</div></div>
+  <div class="stat"><div class="num" id="s-volumes">106</div><div class="label">Volumes</div></div>
+</section>
+
+<div class="tier-header"><h2>⚓ The Four Pillars</h2><div class="rule"></div></div>
+
+<section class="features-hero">
+
+  <a class="feature" href="atlas.html">
+    <div class="feature-icon">🗺️</div>
+    <h3>Chapter Atlas</h3>
+    <p>Visualize where every character appears across the entire series. Click a character to highlight every chapter they're in — full appearance, flashback, silhouette, or cover story.</p>
+    <div class="feature-stat" id="fs-map" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> appearance entries · <strong>…</strong> characters</div>
+  </a>
+
+  <a class="feature" href="sbs.html">
+    <div class="feature-icon">📜</div>
+    <h3>SBS Vault</h3>
+    <p>Every "Question Corner" entry from every volume Oda has ever published, searchable and categorized. Filter by Devil Fruits, characters, worldbuilding, or just Oda being Oda.</p>
+    <div class="feature-stat" id="fs-sbs" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> Q&amp;A · <strong>…</strong> volumes · <strong>…</strong> categories</div>
+  </a>
+
+  <a class="feature" href="punk-records.html">
+    <div class="feature-icon">🧠</div>
+    <h3>Punk Records</h3>
+    <p>Vegapunk's encyclopedia. Characters · crews · fruits · races · weapons · locations · the whole reference layer of the Codex, organised by what you're looking for.</p>
+    <div class="feature-stat" id="fs-punk" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> characters · <strong>22</strong> reference pages</div>
+  </a>
+
+  <a class="feature" href="theories.html">
+    <div class="feature-icon">🔥</div>
+    <h3>Theory Forge</h3>
+    <p>Browse Reddit's top fan theories — but every one has been weighed against actual canon. Each verdict cites Oda's own SBS quotes when relevant. No more taking strangers at their word.</p>
+    <div class="feature-stat" id="fs-theories" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> theories · <strong>…</strong> debunked by canon · <strong>…</strong> confirmed</div>
+  </a>
+
+</section>
+
+<div class="tier-header"><h2>📚 Deeper Codex</h2><div class="rule"></div></div>
+
+<section class="features">
+
+  <a class="feature" href="workbench.html">
+    <div class="feature-icon">📌</div>
+    <h3>Theory Workbench</h3>
+    <p>Build theories with cited evidence. Pin Fact Cards, set stance, submit to the Codex.</p>
+    <div class="feature-stat" id="fs-workbench" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> Fact Cards · research tool</div>
+  </a>
+
+  <a class="feature" href="prove.html">
+    <div class="feature-icon">🔍</div>
+    <h3>Prove an Idea</h3>
+    <p>Type any claim. Returns CONFIRMED · LIKELY · CONTRADICTED · UNKNOWN with citation chain.</p>
+    <div class="feature-stat">Free-path matcher · zero cost</div>
+  </a>
+
+  <a class="feature" href="corrections.html">
+    <div class="feature-icon">📥</div>
+    <h3>Corrections Inbox</h3>
+    <p>Live feed of reader-submitted corrections, theory suggestions, and SBS fixes from GitHub Issues.</p>
+    <div class="feature-stat">Public submission queue · transparent curation</div>
+  </a>
+
+  <a class="feature" href="fruits.html">
+    <div class="feature-icon">🍎</div>
+    <h3>Devil Fruit Codex</h3>
+    <p>Every named fruit — Paramecia, Logia, Zoan, Mythical, Ancient. Type-coded with debut chapter.</p>
+    <div class="feature-stat"><strong>155</strong> fruits · <strong>5</strong> types</div>
+  </a>
+
+  <a class="feature" href="awakenings.html">
+    <div class="feature-icon">💥</div>
+    <h3>Awakenings</h3>
+    <p>Every canonically-confirmed Devil Fruit awakening in chronological order. Type-coded with status.</p>
+    <div class="feature-stat" id="fs-awakenings" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> awakenings tracked</div>
+  </a>
+
+  <a class="feature" href="bounties.html">
+    <div class="feature-icon">💰</div>
+    <h3>Bounty Wall</h3>
+    <p>Every Marine bounty pinned to a corkboard. Sortable by amount or by chronology of debut.</p>
+    <div class="feature-stat"><strong>246</strong> bounties · max <strong>฿3 B</strong></div>
+  </a>
+
+  <a class="feature" href="ships.html">
+    <div class="feature-icon">⛵</div>
+    <h3>Ships</h3>
+    <p>Named canon ships — Going Merry, Sunny, Moby Dick, Queen Mama Chanter, and the rest of the fleet.</p>
+    <div class="feature-stat" id="fs-ships" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> ships logged</div>
+  </a>
+
+  <a class="feature" href="crews.html">
+    <div class="feature-icon">⚓</div>
+    <h3>Crews &amp; Organisations</h3>
+    <p>Every pirate crew, marine unit, revolutionary cell, and faction with full membership rosters.</p>
+    <div class="feature-stat"><strong>358</strong> crews + orgs</div>
+  </a>
+
+  <a class="feature" href="locations.html">
+    <div class="feature-icon">🗺</div>
+    <h3>Locations</h3>
+    <p>Major canonical islands, kingdoms, and territories — region-coded by sea.</p>
+    <div class="feature-stat" id="fs-locs" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> locations</div>
+  </a>
+
+  <a class="feature" href="families.html">
+    <div class="feature-icon">🌳</div>
+    <h3>Family Trees</h3>
+    <p>Hand-curated bloodlines and adoptive families. Each edge cites its confirming chapter.</p>
+    <div class="feature-stat"><strong>52</strong> relationships</div>
+  </a>
+
+  <a class="feature" href="compare.html">
+    <div class="feature-icon">⚖</div>
+    <h3>Character Compare</h3>
+    <p>Stack 2-6 characters side-by-side. Quick-pick the Strawhats, Yonko, Admirals, or D-Clan.</p>
+    <div class="feature-stat">Side-by-side stat grid</div>
+  </a>
+
+  <a class="feature" href="timeline.html">
+    <div class="feature-icon">📜</div>
+    <h3>Timeline</h3>
+    <p>Vertical scroll through every saga with key canon events anchored to chapters.</p>
+    <div class="feature-stat">10 sagas · 33 arcs · 35 events</div>
+  </a>
+
+  <a class="feature" href="arcs.html">
+    <div class="feature-icon">📚</div>
+    <h3>Story Arcs</h3>
+    <p>The 1,181 chapters grouped by saga and arc — East Blue through Elbaph.</p>
+    <div class="feature-stat"><strong>33</strong> arcs · <strong>10</strong> sagas</div>
+  </a>
+
+  <a class="feature" href="covers.html">
+    <div class="feature-icon">🏴‍☠️</div>
+    <h3>Cover Compendium</h3>
+    <p>The mini-arcs Oda runs on chapter title pages. Often canon, often foreshadowing.</p>
+    <div class="feature-stat"><strong>22</strong> mini-arcs</div>
+  </a>
+
+  <a class="feature" href="sbs-topics.html">
+    <div class="feature-icon">🗂</div>
+    <h3>SBS by Topic</h3>
+    <p>Q&amp;As organised by subject — characters, fruits, world, ages, jokes, behind-the-scenes.</p>
+    <div class="feature-stat">Categorised vault browse</div>
+  </a>
+
+  <a class="feature" href="heatmap.html">
+    <div class="feature-icon">🔥</div>
+    <h3>Canon Density</h3>
+    <p>Every chapter as a coloured cell — brighter means more canon-verified facts attached.</p>
+    <div class="feature-stat">1,181 cells · live-coloured</div>
+  </a>
+
+  <a class="feature" href="voices.html">
+    <div class="feature-icon">🎙️</div>
+    <h3>Voice Cast</h3>
+    <p>Every JP and EN voice actor. Multi-role workhorses tagged — some VAs play 40+ characters.</p>
+    <div class="feature-stat" id="fs-voices" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> JP · <strong>…</strong> EN</div>
+  </a>
+
+  <a class="feature" href="quiz.html">
+    <div class="feature-icon">🎯</div>
+    <h3>Trivia Trial</h3>
+    <p>Test how deep your knowledge runs. Trivia, lore, fruits, epithets, "guess the chapter".</p>
+    <div class="feature-stat">50+ question types · endless rounds</div>
+  </a>
+
+</section>
+
+<!-- ── RANDOM ── surprise-me discovery loop ── -->
+<section style="max-width:900px;margin:20px auto 0;padding:0 24px;position:relative;z-index:1;text-align:center">
+  <button id="random-btn" style="background:linear-gradient(135deg,#1a1610 0%,#251f15 100%);border:1px solid #4a3820;border-left:4px solid #6a9ec8;color:#e8d8b0;border-radius:14px;padding:14px 28px;cursor:pointer;font-family:inherit;font-size:1rem;letter-spacing:1px;transition:transform .15s,border-color .15s">
+    🎲 <span style="color:#9bc1de;font-weight:700;letter-spacing:2px">SURPRISE ME</span> · open something at random from the Codex
+  </button>
+</section>
+
+<!-- ── TODAY IN CANON ── deterministic daily fact draw ── -->
+<section style="max-width:900px;margin:20px auto 60px;padding:0 24px;position:relative;z-index:1">
+  <div id="today-card" style="background:linear-gradient(135deg, #1a1610 0%, #251f15 100%);border:1px solid #4a3820;border-left:4px solid #d4a44a;border-radius:14px;padding:22px 28px;display:none">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="color:#d4a44a;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700">📅 Today in Canon</div>
+      <div id="today-date" style="color:#8a7548;font-size:0.78rem"></div>
+    </div>
+    <div id="today-body" style="color:#e8d8b0;font-size:1.05rem;line-height:1.6"></div>
+    <div id="today-link" style="margin-top:12px;font-size:0.85rem"></div>
+  </div>
+</section>
+
+<footer>
+  The Shimotsuki Codex · Built with calm and Claude · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial
+</footer>
+
+<script>
+// Dynamically load real numbers from data files (with graceful fallback)
+const fmt = n => n.toLocaleString();
+
+// Appearances CSV → chapter count + character count + appearance rows
+fetch('appearances.csv')
+  .then(r => r.text())
+  .then(text => {
+    const lines = text.trim().split(/\r?\n/).slice(1);
+    const chapters = new Set(), chars = new Set();
+    for (const line of lines) {
+      const [ch, name] = line.split(',');
+      if (ch) chapters.add(parseInt(ch));
+      if (name) chars.add(name.replace(/^"|"$/g,'').trim());
+    }
+    document.getElementById('s-chapters').textContent = fmt(chapters.size);
+    const elMap = document.getElementById('fs-map');
+    elMap.innerHTML = `<strong>${fmt(lines.length)}</strong> appearance entries · <strong>${fmt(chars.size)}</strong> characters`;
+    elMap.style.opacity = '1';
+  })
+  .catch(_ => { document.getElementById('s-chapters').textContent = '1,181'; });
+
+// SBS archive → Q&A count + volume count
+fetch('sbs_archive.json')
+  .then(r => r.json())
+  .then(sbs => {
+    const vols = new Set(sbs.map(s => s.volume));
+    const cats = new Set(sbs.map(s => s.category).filter(Boolean));
+    document.getElementById('s-sbs').textContent = fmt(sbs.length);
+    document.getElementById('s-volumes').textContent = vols.size;
+    const elSbs = document.getElementById('fs-sbs');
+    elSbs.innerHTML = `<strong>${fmt(sbs.length)}</strong> Q&A · <strong>${vols.size}</strong> volumes · <strong>${cats.size}</strong> categories`;
+    elSbs.style.opacity = '1';
+  })
+  .catch(_ => {
+    document.getElementById('s-sbs').textContent = '1,659';
+    document.getElementById('s-volumes').textContent = '106';
+    const elSbs = document.getElementById('fs-sbs');
+    elSbs.innerHTML = `<strong>1,659</strong> Q&A · <strong>106</strong> volumes`;
+    elSbs.style.opacity = '1';
+  });
+
+// Workbench → Fact Card count (from baked workbench.html if available)
+fetch('workbench.html').then(r => r.text()).then(html => {
+  const m = html.match(/<script id="workbench-cards"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) return;
+  try {
+    const cards = JSON.parse(m[1]);
+    const elWb = document.getElementById('fs-workbench');
+    elWb.innerHTML = `<strong>${fmt(cards.length)}</strong> Fact Cards across SBS · characters · theories · covers`;
+    elWb.style.opacity = '1';
+  } catch (_) {}
+}).catch(_ => {});
+
+// Punk Records → character total + how many have full data
+fetch('punk_records.json')
+  .then(r => r.json())
+  .then(pr => {
+    const records = Object.values(pr);
+    const total = records.length;
+    const found = records.filter(r => r.found).length;
+    const elPunk = document.getElementById('fs-punk');
+    elPunk.innerHTML = `<strong>${fmt(total)}</strong> characters · <strong>${fmt(found)}</strong> with full canon data`;
+    elPunk.style.opacity = '1';
+  })
+  .catch(_ => {
+    const elPunk = document.getElementById('fs-punk');
+    elPunk.innerHTML = `<strong>1,545</strong> characters · <strong>1,242</strong> with full canon data`;
+    elPunk.style.opacity = '1';
+  });
+
+// Awakenings count
+fetch('awakenings.json').then(r => r.json()).then(j => {
+  const n = (j.awakenings || []).length;
+  const el = document.getElementById('fs-awakenings');
+  if (el) { el.innerHTML = `<strong>${n}</strong> awakenings tracked · type-coded`; el.style.opacity = '1'; }
+}).catch(_ => {});
+
+// Ships count — pull from baked ships.html payload
+fetch('ships.html').then(r => r.text()).then(html => {
+  const m = html.match(/<script id="ships-data"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) return;
+  try {
+    const ships = JSON.parse(m[1]);
+    const found = (Array.isArray(ships) ? ships : Object.values(ships)).filter(s => s && s.found).length;
+    const el = document.getElementById('fs-ships');
+    if (el) { el.innerHTML = `<strong>${found}</strong> named canon ships`; el.style.opacity = '1'; }
+  } catch (_) {}
+}).catch(_ => {});
+
+// Voices count
+fetch('voices.html').then(r => r.text()).then(html => {
+  const m = html.match(/<script id="voices-data"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) return;
+  try {
+    const d = JSON.parse(m[1]);
+    const jp = Object.keys(d.jp || {}).filter(n => n && n.toLowerCase() !== 'unknown').length;
+    const en = Object.keys(d.en || {}).filter(n => n && n.toLowerCase() !== 'unknown').length;
+    const el = document.getElementById('fs-voices');
+    if (el) { el.innerHTML = `<strong>${jp}</strong> JP · <strong>${en}</strong> EN voice actors`; el.style.opacity = '1'; }
+  } catch (_) {}
+}).catch(_ => {});
+
+// Locations count
+fetch('locations.json').then(r => r.json()).then(loc => {
+  const found = Object.values(loc).filter(r => r && r.found).length;
+  const el = document.getElementById('fs-locs');
+  if (el) { el.innerHTML = `<strong>${found}</strong> locations across the seas`; el.style.opacity = '1'; }
+}).catch(_ => {});
+
+// Theories → total + debunked + confirmed
+fetch('theories_import.json')
+  .then(r => r.json())
+  .then(theories => {
+    const debunked  = theories.filter(t => t.status === 'debunked').length;
+    const confirmed = theories.filter(t => t.status === 'confirmed').length;
+    document.getElementById('s-theories').textContent = fmt(theories.length);
+    const elTh = document.getElementById('fs-theories');
+    elTh.innerHTML = `<strong>${fmt(theories.length)}</strong> theories · <strong>${debunked}</strong> debunked by canon · <strong>${confirmed}</strong> confirmed`;
+    elTh.style.opacity = '1';
+  })
+  .catch(_ => {
+    document.getElementById('s-theories').textContent = '94';
+    const elTh = document.getElementById('fs-theories');
+    elTh.innerHTML = `<strong>94</strong> theories`;
+    elTh.style.opacity = '1';
+  });
+</script>
+
+<script>
+// ── RANDOM ── pick a random entity across multiple data sources
+(function() {
+  const btn = document.getElementById('random-btn');
+  if (!btn) return;
+  let pool = null;
+  async function buildPool() {
+    if (pool) return pool;
+    pool = [];
+    try {
+      const [pr, fr, sbs, th, loc] = await Promise.all([
+        fetch('punk_records.json').then(r => r.json()).catch(() => ({})),
+        fetch('devil_fruits.json').then(r => r.json()).catch(() => ({})),
+        fetch('sbs_archive.json').then(r => r.json()).catch(() => []),
+        fetch('theories_import.json').then(r => r.json()).catch(() => []),
+        fetch('locations.json').then(r => r.json()).catch(() => ({})),
+      ]);
+      for (const [n, r] of Object.entries(pr)) {
+        if (r.found && (r.appearances || 0) >= 5)
+          pool.push({ url: 'character.html?name=' + encodeURIComponent(n), label: '👤 ' + n });
+      }
+      for (const [n, r] of Object.entries(fr)) {
+        if (r && r.found)
+          pool.push({ url: 'fruit.html?name=' + encodeURIComponent(n), label: '🍎 ' + n });
+      }
+      for (const e of sbs) {
+        if (e.id_num)
+          pool.push({ url: 'sbs.html#' + String(e.id_num).padStart(4,'0'),
+                       label: '📜 SBS Vol ' + e.volume + ' #' + String(e.id_num).padStart(4,'0') });
+      }
+      for (const t of th) {
+        if (t.num)
+          pool.push({ url: 'theories.html#theory-' + String(t.num).padStart(4,'0'),
+                       label: '🔥 Theory #' + String(t.num).padStart(4,'0') });
+      }
+      for (const [n, r] of Object.entries(loc)) {
+        if (r && r.found)
+          pool.push({ url: 'location.html?name=' + encodeURIComponent(n), label: '🗺 ' + n });
+      }
+    } catch (_) {}
+    return pool;
+  }
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    const items = await buildPool();
+    if (!items.length) { btn.disabled = false; return; }
+    const pick = items[Math.floor(Math.random() * items.length)];
+    location.href = pick.url;
+  });
+})();
+</script>
+
+<script>
+// ── TODAY IN CANON ── deterministic per-day fact rotation
+// Hash today's date → pick from the canon_facts pool. Same fact for
+// everyone all day; new draw at UTC midnight.
+(async function() {
+  function dayHash() {
+    const d = new Date();
+    const ymd = d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
+    // Simple deterministic mix
+    let h = ymd ^ 0x9e3779b9;
+    h = ((h >>> 16) ^ h) * 0x85ebca6b;
+    h = ((h >>> 13) ^ h) * 0xc2b2ae35;
+    h = (h >>> 16) ^ h;
+    return Math.abs(h);
+  }
+  function fmtToday() {
+    return new Date().toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric' });
+  }
+  try {
+    const res = await fetch('canon_facts.json');
+    if (!res.ok) return;
+    const facts = await res.json();
+    // Filter to "interesting" facts — drop opaque appearance-count entries
+    const pool = facts.filter(f =>
+      f.tier === 'canon' &&
+      ['birthday','blood_type','origin','devil_fruit_name','epithet','first_appearance']
+        .includes(f.predicate));
+    if (!pool.length) return;
+    const f = pool[dayHash() % pool.length];
+    const card = document.getElementById('today-card');
+    document.getElementById('today-date').textContent = fmtToday();
+
+    // Format the value depending on predicate
+    const pretty = {
+      birthday:         "'s birthday is",
+      blood_type:       "'s blood type is",
+      origin:           "is from",
+      devil_fruit_name: "ate the",
+      epithet:          "is known as",
+      first_appearance: "first appeared in",
+    }[f.predicate] || "·";
+    let value = f.value;
+    if (f.predicate === 'first_appearance' && typeof value === 'object') {
+      value = `Chapter ${value.chapter} (${value.type})`;
+    }
+
+    document.getElementById('today-body').innerHTML =
+      `<strong style="color:#f5c95e">${f.subject}</strong> ${pretty} <strong>${String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</strong>.`;
+
+    const sbsSrc = (f.sources || []).find(s => s.type === 'sbs');
+    const mangaSrc = (f.sources || []).find(s => s.type === 'manga');
+    const linkParts = [`<a href="character.html?name=${encodeURIComponent(f.subject)}" style="color:#6a9ec8;text-decoration:none;border-bottom:1px dotted #6a9ec8">Open ${f.subject}'s profile →</a>`];
+    if (sbsSrc) {
+      const num = String(sbsSrc.qa_id || '').padStart(4, '0');
+      linkParts.push(`<a href="sbs.html#${num}" style="color:#d4a44a;text-decoration:none;border-bottom:1px dotted #d4a44a;margin-left:14px">SBS Vol ${sbsSrc.volume} #${num}</a>`);
+    } else if (mangaSrc && mangaSrc.chapter) {
+      linkParts.push(`<span style="color:#8a7548;margin-left:14px">Manga · Ch.${mangaSrc.chapter}</span>`);
+    }
+    document.getElementById('today-link').innerHTML = linkParts.join('');
+    card.style.opacity = '0';
+    card.style.transition = 'opacity .4s ease';
+    card.style.display = 'block';
+    requestAnimationFrame(() => { card.style.opacity = '1'; });
+  } catch (_) {}
+})();
+</script>
+<script id="character-forms" type="application/json">
+{
+  "_doc": "Hand-curated character form-change data. Each character has an ordered list of forms; the first entry is the default (base) form. The character.html / crew.html / characters.html UIs let users cycle through forms by clicking the left/right edge of a portrait. Image URLs use the wiki's static.wikia.nocookie.net CDN; null means use the base portrait with a tinted aura badge. Add via PR with manga citation in 'debut'.",
+  "generated_on": "2026-04-27",
+  "_tier_legend": "Tier 1: iconic gear/transformation series · Tier 2: Tobi Roppo · Tier 3: Five Elders + Imu · Tier 4: misc · Tier 5: race-bound (Sulong, Raid Suit)",
+  "characters": {
+    "Monkey D. Luffy": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 1",
+          "tint": null
+        },
+        {
+          "name": "Gear 2",
+          "kind": "haki-tech",
+          "debut": "Ch. 387",
+          "tint": "#ff6b1a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/2/2c/Gear_2_Initial_Pose.png/revision/latest?cb=20250430024718"
+        },
+        {
+          "name": "Gear 3 — Bone Balloon",
+          "kind": "tech",
+          "debut": "Ch. 403",
+          "tint": "#c08030",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/3/37/Gear_3.png/revision/latest?cb=20230202005357"
+        },
+        {
+          "name": "Gear 4 — Boundman",
+          "kind": "tech",
+          "debut": "Ch. 784",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/0/0e/Boundman.png/revision/latest?cb=20230717011658"
+        },
+        {
+          "name": "Gear 4 — Tankman",
+          "kind": "tech",
+          "debut": "Ch. 837",
+          "tint": "#8b4513",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/5/5a/Tankman_Manpuku_Version.png/revision/latest?cb=20170924024646"
+        },
+        {
+          "name": "Gear 4 — Snakeman",
+          "kind": "tech",
+          "debut": "Ch. 894",
+          "tint": "#5e2a08",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/a/ab/Snakeman.png/revision/latest?cb=20190202171603"
+        },
+        {
+          "name": "Gear 5 — Sun God Nika",
+          "kind": "awakened",
+          "debut": "Ch. 1043",
+          "tint": "#f5c95e",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/90/Luffy_Gear_5_Cartoon.png/revision/latest?cb=20250928193536"
+        }
+      ]
+    },
+    "Tony Tony Chopper": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Brain Point",
+          "kind": "default",
+          "debut": "Ch. 134",
+          "tint": null
+        },
+        {
+          "name": "Walk Point",
+          "kind": "form",
+          "debut": "Ch. 134",
+          "tint": "#7ac290",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/e/e4/Walk_Point_17.png/revision/latest?cb=20241110020426"
+        },
+        {
+          "name": "Heavy Point",
+          "kind": "form",
+          "debut": "Ch. 134",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/a/aa/Heavy_Point_Post_Timeskip.png/revision/latest?cb=20240720151037"
+        },
+        {
+          "name": "Jumping Point",
+          "kind": "form",
+          "debut": "Ch. 144",
+          "tint": "#7ac290",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/d/d0/Jumping_Point.PNG/revision/latest?cb=20240720173511"
+        },
+        {
+          "name": "Arm Point",
+          "kind": "form",
+          "debut": "Ch. 144",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/f/f0/Arm_Point.PNG/revision/latest?cb=20240720173518"
+        },
+        {
+          "name": "Horn Point",
+          "kind": "form",
+          "debut": "Ch. 144",
+          "tint": "#7ac290",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/c/cc/Horn_Point.png/revision/latest?cb=20220721064703"
+        },
+        {
+          "name": "Kung-Fu Point",
+          "kind": "form",
+          "debut": "Ch. 596",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/b/b9/Chopper_Uses_Kung-Fu_Point.png/revision/latest?cb=20241229020752"
+        },
+        {
+          "name": "Monster Point",
+          "kind": "awakened",
+          "debut": "Ch. 535",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/2/26/Monster_Chopper_Out_of_Control.png/revision/latest?cb=20160906195931"
+        }
+      ]
+    },
+    "Roronoa Zoro": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 3",
+          "tint": null
+        },
+        {
+          "name": "Asura",
+          "kind": "ability",
+          "debut": "Ch. 416",
+          "tint": "#b388ff",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/e/e5/Nine_Sword_Style.png/revision/latest?cb=20230915035319"
+        },
+        {
+          "name": "King of Hell",
+          "kind": "haki",
+          "debut": "Ch. 1010",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/d/da/King_of_Hell_Rengoku_Oni_Giri.png/revision/latest?cb=20250730215135"
+        }
+      ]
+    },
+    "Sanji": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 43",
+          "tint": null
+        },
+        {
+          "name": "Diable Jambe",
+          "kind": "ability",
+          "debut": "Ch. 386",
+          "tint": "#ff6b1a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/d/d9/Diable_Jambe.png/revision/latest?cb=20230916202858"
+        },
+        {
+          "name": "Ifrit Jambe",
+          "kind": "ability",
+          "debut": "Ch. 1029",
+          "tint": "#e07070",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/7/72/Ifrit_Jambe_Infobox.png/revision/latest?cb=20230408025942"
+        },
+        {
+          "name": "Raid Suit (Stealth Black)",
+          "kind": "tech",
+          "debut": "Ch. 901",
+          "tint": "#1a1610",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/a/a8/Sanji_Raid_Suit_Invisibility.png/revision/latest?cb=20230212035159"
+        },
+        {
+          "name": "Awakened Genome",
+          "kind": "ability",
+          "debut": "Ch. 1029",
+          "tint": "#6a9ec8"
+        }
+      ]
+    },
+    "Nico Robin": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 114",
+          "tint": null
+        },
+        {
+          "name": "Demonio Fleur",
+          "kind": "awakened",
+          "debut": "Ch. 1020",
+          "tint": "#5a3018"
+        }
+      ]
+    },
+    "Franky": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base (BF-37)",
+          "kind": "default",
+          "debut": "Ch. 322",
+          "tint": null
+        },
+        {
+          "name": "Black Rhino FR-U IV",
+          "kind": "tech",
+          "debut": "Ch. 619",
+          "tint": "#1a1610"
+        },
+        {
+          "name": "General Franky",
+          "kind": "tech",
+          "debut": "Ch. 723",
+          "tint": "#6a9ec8",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/97/General_Franky_Digitally_Colored_Manga.png/revision/latest?cb=20211104201149"
+        }
+      ]
+    },
+    "Brook": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 442",
+          "tint": null
+        },
+        {
+          "name": "Soul King",
+          "kind": "form",
+          "debut": "Ch. 599",
+          "tint": "#b388ff"
+        }
+      ]
+    },
+    "Nefertari Vivi": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Princess",
+          "kind": "default",
+          "debut": "Ch. 103",
+          "tint": null
+        },
+        {
+          "name": "Adventurer",
+          "kind": "form",
+          "debut": "Ch. 130",
+          "tint": "#d4a44a"
+        }
+      ]
+    },
+    "Usopp": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 23",
+          "tint": null
+        },
+        {
+          "name": "Sogeking",
+          "kind": "alter-ego",
+          "debut": "Ch. 367",
+          "tint": "#f5c95e",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/2/2d/Usopp_Anime_Sogeking.png/revision/latest?cb=20130329155704"
+        },
+        {
+          "name": "Hero of the Sea",
+          "kind": "form",
+          "debut": "Ch. 651",
+          "tint": "#7ac290"
+        }
+      ]
+    },
+    "Kaidou": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 795",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Beast Man)",
+          "kind": "form",
+          "debut": "Ch. 1003",
+          "tint": "#6a9ec8",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/e/e0/Kaidou%27s_Alternate_Human-Beast_Form.png/revision/latest?cb=20230609163334"
+        },
+        {
+          "name": "Azure Dragon",
+          "kind": "full",
+          "debut": "Ch. 921",
+          "tint": "#3a5a8a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/2/2d/Kaidou_Dragon_Color_Scheme.png/revision/latest?cb=20230408123548"
+        }
+      ]
+    },
+    "King": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Human (masked)",
+          "kind": "default",
+          "debut": "Ch. 922",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Pteranodon)",
+          "kind": "form",
+          "debut": "Ch. 925",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/f/ff/Ryu_Ryu_no_Mi%2C_Model_Pteranodon_Hybrid_Form.png/revision/latest?cb=20230219070507"
+        },
+        {
+          "name": "Full Pteranodon",
+          "kind": "full",
+          "debut": "Ch. 1034",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/96/Ryu_Ryu_no_Mi%2C_Model_Pteranodon_Beast_Form.png/revision/latest?cb=20220418123709"
+        },
+        {
+          "name": "Lunarian Fire",
+          "kind": "race",
+          "debut": "Ch. 1035",
+          "tint": "#ff6b1a"
+        }
+      ]
+    },
+    "Queen": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 924",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Brachiosaurus)",
+          "kind": "form",
+          "debut": "Ch. 990",
+          "tint": "#7ac290"
+        },
+        {
+          "name": "Full Brachiosaurus",
+          "kind": "full",
+          "debut": "Ch. 1031",
+          "tint": "#7ac290",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/4/40/Ryu_Ryu_no_Mi%2C_Model_Brachiosaurus_Beast_Form.png/revision/latest?cb=20221106024038"
+        }
+      ]
+    },
+    "Jack": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 795",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Mammoth)",
+          "kind": "form",
+          "debut": "Ch. 809",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/6/61/Zou_Zou_no_Mi%2C_Model_Mammoth_Hybrid_Form.png/revision/latest?cb=20230115030358"
+        },
+        {
+          "name": "Full Mammoth",
+          "kind": "full",
+          "debut": "Ch. 818",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/a/a3/Zou_Zou_no_Mi%2C_Model_Mammoth_Beast_Form_Original_Anime_Color_Scheme.png/revision/latest?cb=20161010022211"
+        }
+      ]
+    },
+    "Marco": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 552",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Phoenix)",
+          "kind": "form",
+          "debut": "Ch. 553",
+          "tint": "#3a5a8a"
+        },
+        {
+          "name": "Full Phoenix",
+          "kind": "full",
+          "debut": "Ch. 553",
+          "tint": "#3a5a8a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/5/51/Tori_Tori_no_Mi%2C_Model_Phoenix_Infobox.png/revision/latest?cb=20251002184357"
+        }
+      ]
+    },
+    "Donquixote Doflamingo": {
+      "tier": 1,
+      "forms": [
+        {
+          "name": "Base",
+          "kind": "default",
+          "debut": "Ch. 233",
+          "tint": null
+        },
+        {
+          "name": "Awakened (String God)",
+          "kind": "awakened",
+          "debut": "Ch. 783",
+          "tint": "#e07faa"
+        }
+      ]
+    },
+    "X Drake": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 498",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Allosaurus)",
+          "kind": "form",
+          "debut": "Ch. 793",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/b/be/Drake_Allosaurus_Pirate_Warriors_4.png/revision/latest?cb=20200720084003"
+        },
+        {
+          "name": "Full Allosaurus",
+          "kind": "full",
+          "debut": "Ch. 793",
+          "tint": "#a05a18"
+        }
+      ]
+    },
+    "Page One": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 925",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Spinosaurus)",
+          "kind": "form",
+          "debut": "Ch. 911",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/1/1e/Page_One_spinosaurus-human_hybrid_form_Anime_Concept_Art.png/revision/latest?cb=20220101055432"
+        },
+        {
+          "name": "Full Spinosaurus",
+          "kind": "full",
+          "debut": "Ch. 911",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/92/Ryu_Ryu_no_Mi%2C_Model_Spinosaurus_Beast_Form.png/revision/latest?cb=20220807021957"
+        }
+      ]
+    },
+    "Ulti": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 977",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Pachycephalosaurus)",
+          "kind": "form",
+          "debut": "Ch. 977",
+          "tint": "#e07faa",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/5/58/Ryu_Ryu_no_Mi%2C_Model_Pachycephalosaurus_Human-Beast_Form.png/revision/latest?cb=20240831170349"
+        },
+        {
+          "name": "Full Pachycephalosaurus",
+          "kind": "full",
+          "debut": "Ch. 985",
+          "tint": "#e07faa"
+        }
+      ]
+    },
+    "Sasaki": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 978",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Triceratops)",
+          "kind": "form",
+          "debut": "Ch. 1019",
+          "tint": "#a05a18"
+        },
+        {
+          "name": "Full Triceratops",
+          "kind": "full",
+          "debut": "Ch. 1019",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/5/58/Ryu_Ryu_no_Mi%2C_Model_Triceratops_Beast_Form.png/revision/latest?cb=20220529042151"
+        }
+      ]
+    },
+    "Who's-Who": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 978",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Saber Tiger)",
+          "kind": "form",
+          "debut": "Ch. 1019",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/6/6c/Neko_Neko_no_Mi%2C_Model_Saber_Tiger_Human-Beast_Form.png/revision/latest?cb=20221106025519"
+        },
+        {
+          "name": "Full Saber Tiger",
+          "kind": "full",
+          "debut": "Ch. 1019",
+          "tint": "#d4a44a"
+        }
+      ]
+    },
+    "Black Maria": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 977",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Tarantula)",
+          "kind": "form",
+          "debut": "Ch. 1020",
+          "tint": "#5a3018"
+        },
+        {
+          "name": "Full Tarantula",
+          "kind": "full",
+          "debut": "Ch. 1020",
+          "tint": "#5a3018"
+        }
+      ]
+    },
+    "Yamato": {
+      "tier": 2,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 984",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Wolf)",
+          "kind": "form",
+          "debut": "Ch. 1023",
+          "tint": "#6a9ec8"
+        },
+        {
+          "name": "Full Okuchi no Makami",
+          "kind": "full",
+          "debut": "Ch. 1023",
+          "tint": "#6a9ec8",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/1/1d/Inu_Inu_no_Mi%2C_Model_Okuchi_no_Makami_Infobox.png/revision/latest?cb=20221120062131"
+        }
+      ]
+    },
+    "Jaygarcia Saturn": {
+      "tier": 3,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 1086",
+          "tint": null
+        },
+        {
+          "name": "Spider Ox (true form)",
+          "kind": "full",
+          "debut": "Ch. 1095",
+          "tint": "#5a3018",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/2/20/Saturn_Beast_Form.png/revision/latest?cb=20251207161839"
+        }
+      ]
+    },
+    "Marcus Mars": {
+      "tier": 3,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 1086",
+          "tint": null
+        },
+        {
+          "name": "Itsumade Bird (true form)",
+          "kind": "full",
+          "debut": "Ch. 1110",
+          "tint": "#3a5a8a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/9c/Mars_Beast_Form.png/revision/latest?cb=20251026161432"
+        }
+      ]
+    },
+    "Topman Warcury": {
+      "tier": 3,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 1086",
+          "tint": null
+        },
+        {
+          "name": "Boar Demon (true form)",
+          "kind": "full",
+          "debut": "Ch. 1112",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/7/78/Warcury_Beast_Form.png/revision/latest?cb=20251026161546"
+        }
+      ]
+    },
+    "Ethanbaron V. Nusjuro": {
+      "tier": 3,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 1086",
+          "tint": null
+        },
+        {
+          "name": "Sabre-Toothed Cat (true form)",
+          "kind": "full",
+          "debut": "Ch. 1111",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/8/81/Nusjuro_Beast_Form.png/revision/latest?cb=20250921163230"
+        }
+      ]
+    },
+    "Shepherd Ju Peter": {
+      "tier": 3,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 1086",
+          "tint": null
+        },
+        {
+          "name": "Snake-Plant (true form)",
+          "kind": "full",
+          "debut": "Ch. 1112",
+          "tint": "#7ac290",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/d/d8/Ju_Peter_Beast_Form.png/revision/latest?cb=20251116160620"
+        }
+      ]
+    },
+    "Nerona Imu": {
+      "tier": 3,
+      "forms": [
+        {
+          "name": "Bandaged silhouette",
+          "kind": "default",
+          "debut": "Ch. 906",
+          "tint": null
+        },
+        {
+          "name": "True form (silhouette)",
+          "kind": "form",
+          "debut": "Ch. 1086",
+          "tint": "#1a1610",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/4/46/Nerona_Imu_Portrait.png/revision/latest?cb=20260426150542"
+        }
+      ]
+    },
+    "Loki": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Restrained",
+          "kind": "default",
+          "debut": "Ch. 1131",
+          "tint": null
+        },
+        {
+          "name": "Unleashed Giant",
+          "kind": "full",
+          "debut": "Ch. 1145",
+          "tint": "#5a3018"
+        }
+      ]
+    },
+    "Rob Lucci": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 347",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Leopard)",
+          "kind": "form",
+          "debut": "Ch. 348",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/e/ea/Lucci_Hybrid_Form_Burning_Will.png/revision/latest?cb=20200626025834"
+        },
+        {
+          "name": "Full Leopard",
+          "kind": "full",
+          "debut": "Ch. 348",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/98/Neko_Neko_no_Mi%2C_Model_Leopard_Infobox.png/revision/latest?cb=20230306213909"
+        },
+        {
+          "name": "Awakened Leopard",
+          "kind": "awakened",
+          "debut": "Ch. 1071",
+          "tint": "#a05a18",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/95/Neko_Neko_no_Mi_Model_Leopard_Awakened_Form.png/revision/latest?cb=20250824161601"
+        }
+      ]
+    },
+    "Kaku": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 320",
+          "tint": null
+        },
+        {
+          "name": "Hybrid (Giraffe)",
+          "kind": "form",
+          "debut": "Ch. 408",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/4/45/Kaku_Hybrid_Form.png/revision/latest?cb=20230118063503"
+        },
+        {
+          "name": "Full Giraffe",
+          "kind": "full",
+          "debut": "Ch. 408",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/8/8c/Ushi_Ushi_no_Mi%2C_Model_Giraffe_Infobox.png/revision/latest?cb=20230120040539"
+        }
+      ]
+    },
+    "Magellan": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 530",
+          "tint": null
+        },
+        {
+          "name": "Demon",
+          "kind": "form",
+          "debut": "Ch. 543",
+          "tint": "#b388ff",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/9/9c/Venom_Demon_Jigoku_no_Shinpan.png/revision/latest?cb=20241011144823"
+        }
+      ]
+    },
+    "Caesar Clown": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 658",
+          "tint": null
+        },
+        {
+          "name": "Gas Logia",
+          "kind": "form",
+          "debut": "Ch. 689",
+          "tint": "#b388ff"
+        }
+      ]
+    },
+    "Sengoku": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 234",
+          "tint": null
+        },
+        {
+          "name": "Daibutsu (Golden Buddha)",
+          "kind": "full",
+          "debut": "Ch. 569",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/3/3d/Sengoku_Buddha_Form_Pirate_Warriors_4.png/revision/latest?cb=20210902010951"
+        }
+      ]
+    },
+    "Catarina Devon": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 552",
+          "tint": null
+        },
+        {
+          "name": "Kyubi (Nine-Tailed Fox)",
+          "kind": "form",
+          "debut": "Ch. 925",
+          "tint": "#e07faa"
+        }
+      ]
+    },
+    "Jewelry Bonney": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Adult (default)",
+          "kind": "default",
+          "debut": "Ch. 498",
+          "tint": null
+        },
+        {
+          "name": "Child",
+          "kind": "form",
+          "debut": "Ch. 1064",
+          "tint": "#e07faa",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/3/3a/Jewelry_Bonney_as_a_Child.png/revision/latest?cb=20131105210243"
+        },
+        {
+          "name": "Elder",
+          "kind": "form",
+          "debut": "Ch. 1095",
+          "tint": "#8a7548"
+        }
+      ]
+    },
+    "Buggy": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Whole",
+          "kind": "default",
+          "debut": "Ch. 9",
+          "tint": null
+        },
+        {
+          "name": "Bara split",
+          "kind": "form",
+          "debut": "Ch. 16",
+          "tint": "#ff6b1a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/8/83/Bara_Bara_Festival.png/revision/latest?cb=20221027043656"
+        }
+      ]
+    },
+    "Smoker": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 95",
+          "tint": null
+        },
+        {
+          "name": "Smoke (Logia)",
+          "kind": "form",
+          "debut": "Ch. 96",
+          "tint": "#8a7548"
+        }
+      ]
+    },
+    "Crocodile": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 155",
+          "tint": null
+        },
+        {
+          "name": "Sand (Logia)",
+          "kind": "form",
+          "debut": "Ch. 178",
+          "tint": "#d4a44a",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/a/a5/Crocodile_Sand_King_Thousand_Storm.png/revision/latest?cb=20200920111747"
+        }
+      ]
+    },
+    "Sakazuki": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 397",
+          "tint": null
+        },
+        {
+          "name": "Magma (Logia)",
+          "kind": "form",
+          "debut": "Ch. 552",
+          "tint": "#e07070"
+        }
+      ]
+    },
+    "Borsalino": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 504",
+          "tint": null
+        },
+        {
+          "name": "Light (Logia)",
+          "kind": "form",
+          "debut": "Ch. 510",
+          "tint": "#f5c95e",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/8/80/Borsalino_Wielding_Light_Sword.png/revision/latest?cb=20250907162516"
+        }
+      ]
+    },
+    "Kuzan": {
+      "tier": 4,
+      "forms": [
+        {
+          "name": "Human",
+          "kind": "default",
+          "debut": "Ch. 303",
+          "tint": null
+        },
+        {
+          "name": "Ice (Logia)",
+          "kind": "form",
+          "debut": "Ch. 304",
+          "tint": "#6a9ec8"
+        }
+      ]
+    }
+  }
+}
+</script>
+<script src="settings.js"></script>
+<script src="search.js?v=2"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
+<script src="legal-notice.js" defer></script>
+<script src="nav-burger.js?v=28" defer></script>
+</body>
+</html>

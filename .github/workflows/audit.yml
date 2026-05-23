@@ -1,0 +1,72 @@
+name: Daily audit
+
+# Runs the read-only sanity check every day. If it finds any 🔴 ERROR-level
+# issue, opens a GitHub Issue so the maintainer is notified. WARN/INFO
+# findings are uploaded as an artefact but don't trigger an Issue (they're
+# noise-level on a healthy run).
+#
+# Manual button: Actions tab → "Daily audit" → Run workflow
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * *"   # daily 07:00 UTC
+
+permissions:
+  contents: read       # only reads the repo
+  issues:   write      # may file an issue if errors are found
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run audit (capture exit code)
+        id: audit
+        continue-on-error: true
+        run: |
+          set +e
+          python audit.py
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report-${{ github.run_id }}
+          path: docs/audit_report.md
+          if-no-files-found: warn
+
+      - name: File issue on errors (with dedup)
+        if: steps.audit.outputs.rc == '2'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Dedup: if there's already an open audit issue, comment on it
+          # instead of opening a new one. Prevents inbox flood when audit
+          # has been failing for multiple consecutive days.
+          BODY=$(head -n 60 docs/audit_report.md)
+          DATE=$(date -u +%Y-%m-%d)
+          EXISTING=$(gh issue list --label "audit" --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            COMMENT=$(printf "🔴 **Audit still failing on %s**\n\n%s" "$DATE" "$BODY")
+            gh issue comment "$EXISTING" --body "$COMMENT"
+          else
+            gh issue create \
+              --title "🔴 Daily audit found errors $DATE" \
+              --body "$BODY" \
+              --label "audit,needs-review"
+          fi
