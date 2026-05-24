@@ -140,7 +140,9 @@
       defaultCollapsed: true,
       items: [
         { href: 'quiz.html',     icon: '🎯', name: 'Trivia Trial' },
-        { href: 'curate.html',   icon: '✏',  name: 'Curate Facts' },
+        // curate.html removed from public nav 2026-05-23 launch:
+        // it's the maintainer-only review queue, not a visitor surface.
+        // Still reachable by direct URL if you really want.
       ],
     },
     {
