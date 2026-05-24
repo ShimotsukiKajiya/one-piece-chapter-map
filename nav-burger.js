@@ -129,7 +129,9 @@
         // Theory Forge accessed via heading hub-link, not duplicated as an item
         { href: 'workbench.html',    icon: '📌', name: 'Theory Workbench' },
         { href: 'prove.html',        icon: '🔍', name: 'Prove an Idea' },
-        { href: 'conflicts.html',    icon: '⚠',  name: 'Conflicts' },
+        // conflicts.html hidden from public nav 2026-05-24 launch:
+        // internal canon-engine view, currently 0 active conflicts.
+        // Still reachable by direct URL if you need it.
         { href: 'corrections.html',  icon: '📥', name: 'Corrections Inbox' },
       ],
     },
