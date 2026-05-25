@@ -46,7 +46,7 @@
       items: [
         { href: 'atlas.html',        icon: '🧭', name: 'Chapter Atlas' },
         { href: 'chapter-release-map.html', icon: '📅', name: 'Release Map' },
-        { href: 'world-map.html',    icon: '🌐', name: 'World Map', soon: true },
+        { href: 'world-map.html',    icon: '🌐', name: 'World Map' },
         { href: 'sagas.html',        icon: '📖', name: 'Sagas' },
         { href: 'arcs.html',         icon: '🎭', name: 'Story Arcs' },
         { href: 'timeline.html',     icon: '📈', name: 'Timeline' },
