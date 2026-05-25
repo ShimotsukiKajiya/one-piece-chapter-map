@@ -753,7 +753,30 @@
 
       case 'voice_actor_jp':
       case 'voice_actor_en':
-        return `<a href="voices.html" style="${linkStyle}">${esc(value)}</a>`;
+      case 'actor_live_action': {
+        // Each value may be "Name A; Name B" or "Name A · Name B", optionally
+        // with a role parenthetical: "Hideyuki Hori (adult); Nobuhiko Okamoto (young)".
+        // Link each name to voices.html (in-Codex) and add a small external-search
+        // icon that routes JP voice actors to MyAnimeList (better seiyū coverage)
+        // and EN voice actors + live-action actors to IMDB.
+        const isJp = fieldKey === 'voice_actor_jp';
+        const names = value.split(/[;·]+/).map(s => s.trim()).filter(Boolean);
+        const rendered = names.map(fullName => {
+          // Strip trailing parenthetical for the search query (keep it for display).
+          const searchName = fullName.replace(/\s*\([^)]*\)\s*$/, '').trim();
+          const searchUrl = isJp
+            ? `https://myanimelist.net/people.php?q=${encodeURIComponent(searchName)}&cat=person`
+            : `https://www.imdb.com/find/?q=${encodeURIComponent(searchName)}&s=nm`;
+          const target = isJp ? 'MyAnimeList' : 'IMDB';
+          const tooltip = `Search ${searchName} on ${target}`;
+          const inCodex = fieldKey === 'actor_live_action'
+            ? esc(fullName)
+            : `<a href="voices.html" style="${linkStyle}">${esc(fullName)}</a>`;
+          const external = `<a href="${searchUrl}" target="_blank" rel="noopener noreferrer" title="${tooltip}" aria-label="${tooltip}" style="text-decoration:none;font-size:0.85em;margin-left:4px;opacity:0.65;letter-spacing:0;cursor:pointer" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">🎬</a>`;
+          return `${inCodex}${external}`;
+        });
+        return rendered.join(' · ');
+      }
 
       default:
         return null;
@@ -1072,16 +1095,25 @@
       parts.push(`<div class="shard-group"><div class="shard-label">Crew Affiliations</div>${rows}</div>`);
     }
 
-    // Voice Actors
+    // Voice Actors — each name carries an external search link (JP → MAL, EN → IMDB)
     if (d.voices && d.voices.length) {
       const byLang = { jp: [], en: [] };
       for (const row of d.voices) {
         const lang = row.lang === "jp" ? "jp" : "en";
         byLang[lang].push(row._display || row.name || row.from);
       }
+      const renderVa = (name, isJp) => {
+        const searchName = String(name).replace(/\s*\([^)]*\)\s*$/, '').trim();
+        const url = isJp
+          ? `https://myanimelist.net/people.php?q=${encodeURIComponent(searchName)}&cat=person`
+          : `https://www.imdb.com/find/?q=${encodeURIComponent(searchName)}&s=nm`;
+        const target = isJp ? 'MyAnimeList' : 'IMDB';
+        const tip = `Search ${searchName} on ${target}`;
+        return `${escapeHTML(name)} <a href="${url}" target="_blank" rel="noopener noreferrer" title="${tip}" aria-label="${tip}" style="text-decoration:none;font-size:0.85em;opacity:0.65" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">🎬</a>`;
+      };
       const langRows = [];
-      if (byLang.jp.length) langRows.push(`<div class="field" style="margin-bottom:4px;"><div class="field-label">JP</div><div class="field-value">${byLang.jp.map(escapeHTML).join(" · ")}</div></div>`);
-      if (byLang.en.length) langRows.push(`<div class="field" style="margin-bottom:4px;"><div class="field-label">EN</div><div class="field-value">${byLang.en.map(escapeHTML).join(" · ")}</div></div>`);
+      if (byLang.jp.length) langRows.push(`<div class="field" style="margin-bottom:4px;"><div class="field-label">JP</div><div class="field-value">${byLang.jp.map(n => renderVa(n, true)).join(" · ")}</div></div>`);
+      if (byLang.en.length) langRows.push(`<div class="field" style="margin-bottom:4px;"><div class="field-label">EN</div><div class="field-value">${byLang.en.map(n => renderVa(n, false)).join(" · ")}</div></div>`);
       if (langRows.length) parts.push(`<div class="shard-group"><div class="shard-label">Voice Actors</div>${langRows.join("")}</div>`);
     }
 
