@@ -326,10 +326,9 @@
 <section class="stats-bar">
   <div class="stat"><div class="num" id="s-chapters">1,188</div><div class="label">Chapters</div></div>
   <div class="stat"><div class="num" id="s-sbs">1,659</div><div class="label">SBS Q&amp;A</div></div>
-  <div class="stat"><div class="num" id="s-theories">94</div><div class="label">Theories</div></div>
   <div class="stat"><div class="num" id="s-volumes">106</div><div class="label">Volumes</div></div>
 </section>
-<p class="sync-note" style="text-align:center;font-size:0.78rem;color:var(--muted);font-style:italic;margin:-16px auto 28px;letter-spacing:0.3px;max-width:760px">Updated weekly from the One Piece Wiki — new chapters typically land 1–3 days after their wiki page appears.</p>
+<p class="sync-note" style="text-align:center;font-size:0.78rem;color:var(--muted);font-style:italic;margin:-16px auto 28px;letter-spacing:0.3px;max-width:760px">Checked daily against the One Piece Wiki — a new chapter usually lands here within a day of its wiki page appearing.</p>
 
 <section style="max-width:900px;margin:32px auto;padding:24px 28px;background:linear-gradient(135deg,#1a1610 0%,#251f15 100%);border:1px solid #4a3820;border-radius:12px;position:relative;z-index:1">
   <div style="text-align:center;margin-bottom:18px">
@@ -386,11 +385,11 @@
     <div class="feature-stat" id="fs-punk" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> characters · <strong>22</strong> reference pages</div>
   </a>
 
-  <a class="feature" href="theories.html">
-    <div class="feature-icon">🔥</div>
-    <h3>Theory Forge</h3>
-    <p>Browse Reddit's top fan theories — but every one has been weighed against actual canon. Each verdict cites Oda's own SBS quotes when relevant. No more taking strangers at their word.</p>
-    <div class="feature-stat" id="fs-theories" style="opacity:0;transition:opacity .35s ease"><strong>…</strong> theories · <strong>…</strong> debunked by canon · <strong>…</strong> confirmed</div>
+  <a class="feature" href="chapter-release-map.html">
+    <div class="feature-icon">📅</div>
+    <h3>Release Map</h3>
+    <p>Thirty years of One Piece on one calendar — every manga chapter, anime episode, theatrical film and milestone, week by week. See the breaks, the sprints, and the sheer scale of the voyage.</p>
+    <div class="feature-stat">30 years · manga, anime &amp; films on one calendar</div>
   </a>
 
 </section>
@@ -660,23 +659,8 @@ fetch('locations.json').then(r => r.json()).then(loc => {
   if (el) { el.innerHTML = `<strong>${found}</strong> locations across the seas`; el.style.opacity = '1'; }
 }).catch(_ => {});
 
-// Theories → total + debunked + confirmed
-fetch('theories_import.json')
-  .then(r => r.json())
-  .then(theories => {
-    const debunked  = theories.filter(t => t.status === 'debunked').length;
-    const confirmed = theories.filter(t => t.status === 'confirmed').length;
-    document.getElementById('s-theories').textContent = fmt(theories.length);
-    const elTh = document.getElementById('fs-theories');
-    elTh.innerHTML = `<strong>${fmt(theories.length)}</strong> theories · <strong>${debunked}</strong> debunked by canon · <strong>${confirmed}</strong> confirmed`;
-    elTh.style.opacity = '1';
-  })
-  .catch(_ => {
-    document.getElementById('s-theories').textContent = '94';
-    const elTh = document.getElementById('fs-theories');
-    elTh.innerHTML = `<strong>94</strong> theories`;
-    elTh.style.opacity = '1';
-  });
+// Theory Forge pulled from the public surface 2026-07-12 — stat tile and
+// pillar card removed; loader dropped with them.
 </script>
 
 <script>
@@ -689,11 +673,12 @@ fetch('theories_import.json')
     if (pool) return pool;
     pool = [];
     try {
-      const [pr, fr, sbs, th, loc] = await Promise.all([
+      // (theories_import.json dropped from the pool — Theory Forge pulled
+      // from the public surface 2026-07-12)
+      const [pr, fr, sbs, loc] = await Promise.all([
         fetch('punk_records.json').then(r => r.json()).catch(() => ({})),
         fetch('devil_fruits.json').then(r => r.json()).catch(() => ({})),
         fetch('sbs_archive.json').then(r => r.json()).catch(() => []),
-        fetch('theories_import.json').then(r => r.json()).catch(() => []),
         fetch('locations.json').then(r => r.json()).catch(() => ({})),
       ]);
       for (const [n, r] of Object.entries(pr)) {
@@ -708,11 +693,6 @@ fetch('theories_import.json')
         if (e.id_num)
           pool.push({ url: 'sbs.html#' + String(e.id_num).padStart(4,'0'),
                        label: '📜 SBS Vol ' + e.volume + ' #' + String(e.id_num).padStart(4,'0') });
-      }
-      for (const t of th) {
-        if (t.num)
-          pool.push({ url: 'theories.html#theory-' + String(t.num).padStart(4,'0'),
-                       label: '🔥 Theory #' + String(t.num).padStart(4,'0') });
       }
       for (const [n, r] of Object.entries(loc)) {
         if (r && r.found)
@@ -1777,9 +1757,9 @@ fetch('theories_import.json')
 }
 </script>
 <script src="settings.js"></script>
-<script src="search.js?v=2"></script>
+<script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=29" defer></script>
+<script src="nav-burger.js?v=30" defer></script>
 </body>
 </html>

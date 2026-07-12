@@ -58,7 +58,7 @@
 <main>
 <div class="page-hero">
   <h2 class="title">📰 What's New in the Codex</h2>
-  <p class="blurb">A running log of releases. The Codex updates every Sunday via the auto-refresh cron. Bigger feature drops are noted here.</p>
+  <p class="blurb">A running log of releases. The Codex checks for new chapters daily and runs a full data refresh every Sunday. Bigger feature drops are noted here.</p>
   <div class="gold-rule"></div>
 </div>
 
@@ -74,6 +74,8 @@
       <li><strong>Self-updating freshness</strong> — the Spoiler Guard's "I'm caught up" ceiling, the release-map dates, and the Atlas's open arc now track the newest scraped chapter automatically instead of relying on hand-bumped numbers.</li>
       <li><strong>Devil Fruit fixes</strong> — five fruit pages (Mero Mero, Nikyu Nikyu, Sui Sui, Supa Supa, Uo Uo Seiryu) no longer render their natural user and Seraphim copy as one concatenated name.</li>
       <li><strong>Theory archive hardening</strong> — the theory refresher now merges new Reddit posts into the curated archive instead of replacing it, and refuses to write anything on a failed fetch.</li>
+      <li><strong>Daily freshness</strong> — the refresh now runs every day (fast chapter probe) with a full deep refresh on Sundays, so new chapters land within a day of their wiki page appearing.</li>
+      <li><strong>Honesty pass</strong> — Theory Forge and Trivia Trial are unlinked from the site until they're genuinely ready: theory verdicts need human review, and the quiz needs proper spoiler-gating. Both pages say so plainly if you visit them directly.</li>
     </ul>
   </article>
 
@@ -130,9 +132,9 @@
 </main>
 <footer>The Shimotsuki Codex · Built with calm and Claude &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script src="settings.js"></script>
-<script src="search.js?v=2"></script>
+<script src="search.js?v=3"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=29" defer></script>
+<script src="nav-burger.js?v=30" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 </body>
 </html>

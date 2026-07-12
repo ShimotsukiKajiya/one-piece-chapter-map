@@ -61,7 +61,9 @@
     };
 
     sbs          = tryBaked('sbs-data')           || await fetchJson('sbs_archive.json')   || [];
-    theories     = tryBaked('theories-data')      || await fetchJson('theories_import.json') || [];
+    // Theory Forge pulled from the public surface 2026-07-12 — theories
+    // stay out of the search index until verdicts get human review.
+    theories     = [];
     coverStories = tryBaked('cover-stories-data') || await fetchJson('cover_stories.json') || [];
 
     // Build character set — try punk-records-data first (character.html),
@@ -395,7 +397,7 @@
       currentResults = search(q);
       activeIdx = 0;
       if (!q.trim()) {
-        results.innerHTML = `<div class="codex-search-empty">Start typing to search · 1,659 SBS · 94 theories · 21 cover stories · 1,546 characters · 1,181 chapters</div>`;
+        results.innerHTML = `<div class="codex-search-empty">Start typing to search · SBS Q&amp;A · cover stories · characters · chapters</div>`;
         return;
       }
       if (!currentResults.length) {

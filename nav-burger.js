@@ -124,9 +124,10 @@
     {
       label: 'Theories',
       icon: '🔥',
-      hubLink: 'theories.html',  // small '→' button on heading → Theory Forge
+      // hubLink removed 2026-07-12 — Theory Forge pulled from the public
+      // surface until verdicts get proper human review. Page itself now
+      // banners NOT LIVE; still reachable by direct URL.
       items: [
-        // Theory Forge accessed via heading hub-link, not duplicated as an item
         { href: 'workbench.html',    icon: '📌', name: 'Theory Workbench' },
         { href: 'prove.html',        icon: '🔍', name: 'Prove an Idea' },
         // conflicts.html hidden from public nav 2026-05-24 launch:
@@ -141,7 +142,9 @@
       hubLink: 'tools.html',
       defaultCollapsed: true,
       items: [
-        { href: 'quiz.html',     icon: '🎯', name: 'Trivia Trial' },
+        // soon:true 2026-07-12 — quiz pool doesn't respect the spoiler
+        // cutoff; greyed until the rebuilt tiered quiz ships.
+        { href: 'quiz.html',     icon: '🎯', name: 'Trivia Trial', soon: true },
         // curate.html removed from public nav 2026-05-23 launch:
         // it's the maintainer-only review queue, not a visitor surface.
         // Still reachable by direct URL if you really want.
