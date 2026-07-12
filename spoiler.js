@@ -41,7 +41,7 @@
 
   // Updated when a new chapter ships. Single place to bump.
   // Sourced from chapter_dates.json `latest_chapter` at last refresh.
-  const LATEST_PUBLISHED_CHAPTER = 1181;
+  const LATEST_PUBLISHED_CHAPTER = 1188;
 
   // Default state for first-time visitors.
   const DEFAULTS = {
