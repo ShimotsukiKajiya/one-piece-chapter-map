@@ -60,11 +60,22 @@ jobs:
         run: |
           git config user.name  "shimotsuki-codex-bot"
           git config user.email "actions@users.noreply.github.com"
-          # Only stage data files — never code or caches
-          git add -- \
-            appearances.csv sbs_archive.json theories_import.json \
-            volume_covers.json cover_stories.json punk_records.json \
-            docs/audit_report.md baked 2>/dev/null || true
+          # Stage each refreshed output individually — a single missing path
+          # must not abort staging of the rest (this bug froze the site's
+          # data at Ch.1181 from launch until 2026-07-12).
+          # Data files the scrapers/cleaners rewrite:
+          for f in appearances.csv sbs_archive.json theories_import.json \
+                   volume_covers.json cover_stories.json punk_records.json \
+                   canon_facts.json character_forms.json portraits.json \
+                   chr-debut-map.json chapter_dates.json spoiler.js; do
+            git add -- "$f" 2>/dev/null || echo "  (skip: $f not present)"
+          done
+          # Baked site output — bake.py rewrites data blocks inside the
+          # HTML pages themselves; without this the live pages go stale
+          # even when the JSON is fresh.
+          git add -- '*.html' 2>/dev/null || true
+          echo "--- staged changes ---"
+          git diff --cached --stat | tail -15
           if git diff --cached --quiet; then
             echo "No data changes — nothing to commit."
           else

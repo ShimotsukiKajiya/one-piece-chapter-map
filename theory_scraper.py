@@ -17,6 +17,10 @@ import sys
 import time
 from datetime import datetime, timezone, timedelta
 
+if sys.platform == "win32":
+    try: sys.stdout.reconfigure(encoding="utf-8")
+    except Exception: pass
+
 # ── CONFIG ────────────────────────────────────────────────────────
 USER_AGENT    = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
@@ -211,10 +215,46 @@ def main():
     print(f"  ✓ {len(theories)} theories passed — {len(raw) - len(theories)} filtered out")
     print()
 
+    # A failed or empty Reddit fetch must never touch the live archive.
+    # (2026-07-12: an HTTP-blocked run wrote 0 theories over the curated
+    # 94-entry archive — statuses, analysis and numbering all lost until
+    # git restore. Guard added the same day.)
+    if not theories:
+        print("  ⚠  0 theories fetched — refusing to write; existing archive untouched.")
+        sys.exit(1)
+
     # Test mode writes to a separate file so it can never overwrite the live
     # 94-theory archive. (2026-05-02: this protection added after a --test run
     # accidentally clobbered the live file with only 7 entries.)
     output_path = OUTPUT_FILE.replace(".json", ".test.json") if test_mode else OUTPUT_FILE
+
+    # Merge into the existing archive instead of replacing it. Existing rows
+    # own their curated fields (status, analysis, num, chapter edits) — the
+    # scraper only refreshes the volatile Reddit counters on them. New posts
+    # append with default fields. Rows that fell out of Reddit's top results
+    # are kept: dropping them would erase maintainer-reviewed history.
+    existing = []
+    if not test_mode and os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, encoding="utf-8") as f:
+                existing = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            existing = []
+    by_id = {row.get("id"): row for row in existing if row.get("id")}
+    added = updated = 0
+    for fresh in theories:
+        prev = by_id.get(fresh["id"])
+        if prev is not None:
+            prev["score"]    = fresh["score"]
+            prev["comments"] = fresh["comments"]
+            updated += 1
+        else:
+            existing.append(fresh)
+            added += 1
+    merged = sorted(existing, key=lambda t: t.get("score", 0), reverse=True)
+    print(f"  Merge: {added} new · {updated} refreshed · {len(merged)} total in archive")
+    theories = merged
+
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(theories, f, ensure_ascii=False, indent=2)
 

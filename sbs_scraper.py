@@ -20,6 +20,10 @@ import re
 import sys
 import time
 
+if sys.platform == "win32":
+    try: sys.stdout.reconfigure(encoding="utf-8")
+    except Exception: pass
+
 # ── CONFIG ────────────────────────────────────────────────────────
 USER_AGENT  = "OnePieceTheoryTracker/1.0 (fan project)"
 WIKI_API    = "https://onepiece.fandom.com/api.php"

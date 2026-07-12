@@ -22,7 +22,7 @@ import sys
 API_BASE        = "https://onepiece.fandom.com/api.php"
 OUTPUT_FILE     = os.path.join(os.path.dirname(__file__), "appearances.csv")
 CHECKPOINT_FILE = os.path.join(os.path.dirname(__file__), "scraper_progress.json")
-TOTAL_CHAPTERS  = 1181   # Floor; --update auto-probes a few past this for new releases
+TOTAL_CHAPTERS  = 1188   # Floor; --update auto-probes a few past this for new releases
 PROBE_AHEAD     = 5      # In --update mode, try this many past TOTAL_CHAPTERS
 DELAY           = 1.1    # Seconds between requests — do not lower below 1.0
 CHECKPOINT_EVERY = 25    # Save progress every N chapters

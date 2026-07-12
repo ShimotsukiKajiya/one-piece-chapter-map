@@ -94,6 +94,7 @@ STAGES = [
     ("Manual sources",       "ingest_manual_source.py", [],          {"clean"}),
     ("Verify wiki vs SBS",   "verify.py",               [],          {"clean"}),
     ("Find conflicts",       "find_conflicts.py",       [],          {"clean"}),
+    ("Chapter dates",        "chapter_dates_scraper.py",[],          {"clean"}),  # pure computation — extends dates to latest scraped chapter
     ("Bake site",            "bake.py",                 [],          {"bake"}),
     ("Audit",                "audit.py",                [],          {"audit"}),
 ]

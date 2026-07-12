@@ -2175,6 +2175,47 @@ def _bake_chr_debut_map_for_gating():
     print(f"  ✓ chr-debut-map.json     <- {len(out)} names baked ({size_kb} KB)")
 
 
+def _bake_spoiler_latest():
+    """Sync spoiler.js LATEST_PUBLISHED_CHAPTER to the max chapter in
+    appearances.csv. This constant is the Spoiler Shield's caught-up clamp
+    ("I'm caught up" button, cutoff top-bound); before this pass it was a
+    hand-bumped literal and went stale the week after every release.
+    """
+    csv_path = os.path.join(DIR, "appearances.csv")
+    js_path  = os.path.join(DIR, "spoiler.js")
+    if not (os.path.exists(csv_path) and os.path.exists(js_path)):
+        return
+    latest = 0
+    with open(csv_path, encoding="utf-8") as f:
+        next(f, None)  # header
+        for line in f:
+            ch = line.split(",", 1)[0]
+            if ch.isdigit() and int(ch) > latest:
+                latest = int(ch)
+    if latest <= 0:
+        return
+    import re as _re
+    with open(js_path, encoding="utf-8") as f:
+        js = f.read()
+    pat = _re.compile(r"(const LATEST_PUBLISHED_CHAPTER = )(\d+)(;)")
+    m = pat.search(js)
+    if not m:
+        print("  ⚠ spoiler.js: LATEST_PUBLISHED_CHAPTER line not found — skipped")
+        return
+    old = int(m.group(2))
+    if old == latest:
+        print(f"  = spoiler.js             LATEST_PUBLISHED_CHAPTER already {latest}")
+        return
+    if latest < old:
+        # appearances.csv should only ever grow; a lower max means the CSV is
+        # damaged/truncated — never wind the clamp backwards off bad data.
+        print(f"  ⚠ spoiler.js: csv max {latest} < current {old} — refusing to lower")
+        return
+    with open(js_path, "w", encoding="utf-8") as f:
+        f.write(pat.sub(rf"\g<1>{latest}\g<3>", js, count=1))
+    print(f"  ✓ spoiler.js             LATEST_PUBLISHED_CHAPTER {old} -> {latest}")
+
+
 def _bake_home_arc_ranges():
     """Bake compact arc-range lookup into home.html as home-arcs JSON block.
 
@@ -2436,6 +2477,7 @@ def main():
     _bake_home_stats()        # pre-computed stats → home.html (instant display, no async flicker)
     _bake_home_arc_ranges()   # arc chapter ranges → Today in Canon context line
     _bake_chr_debut_map_for_gating()  # name→debut map → Spoiler Shield filter helper on index pages
+    _bake_spoiler_latest()    # sync spoiler.js caught-up clamp to latest scraped chapter
     _bake_atlas_events()      # chapter event maps → atlas.html (debuts, fruits, moments)
     _bake_release_map()       # release-date timeline → chapter-release-map.html
 

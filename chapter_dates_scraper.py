@@ -23,6 +23,7 @@ Output: chapter_dates.json
   }
 """
 import json
+import os
 import sys
 from datetime import datetime, timedelta
 
@@ -76,8 +77,27 @@ VOLUMES = [
 # Anchor: chapter 1 was first published in Weekly Shonen Jump on this date
 ANCHOR_CH1_DATE = "1997-07-22"
 
-# Last known chapter (post latest tankōbon, in WSJ but not yet collected)
+# Last known chapter (post latest tankōbon, in WSJ but not yet collected).
+# This is a FLOOR — main() raises it to the max chapter in appearances.csv
+# (the chapter scraper's ground truth) so this file stays current without
+# hand-bumping every week.
 LATEST_CHAPTER = 1181
+
+
+def _latest_scraped_chapter() -> int:
+    """Max chapter present in appearances.csv, or the LATEST_CHAPTER floor."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "appearances.csv")
+    best = LATEST_CHAPTER
+    try:
+        with open(path, encoding="utf-8") as f:
+            next(f, None)  # header
+            for line in f:
+                ch = line.split(",", 1)[0]
+                if ch.isdigit() and int(ch) > best:
+                    best = int(ch)
+    except OSError:
+        pass
+    return best
 
 
 def parse_date(s: str) -> datetime:
@@ -89,6 +109,8 @@ def fmt_date(d: datetime) -> str:
 
 
 def main() -> None:
+    global LATEST_CHAPTER
+    LATEST_CHAPTER = _latest_scraped_chapter()
     chapters: dict[str, dict] = {}
 
     anchor_ch1 = parse_date(ANCHOR_CH1_DATE)
