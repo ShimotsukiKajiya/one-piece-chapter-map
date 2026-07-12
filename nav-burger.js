@@ -154,7 +154,7 @@
       defaultCollapsed: true,
       items: [
         { href: 'about.html', icon: 'ℹ',  name: 'About the Codex' },
-        { href: 'news.html',  icon: '📰', name: "What's New", soon: true },
+        { href: 'news.html',  icon: '📰', name: "What's New" },
         { href: 'feed.xml',   icon: '📡', name: 'RSS Feed', external: true },
         { href: 'https://github.com/ShimotsukiKajiya/one-piece-chapter-map', icon: '🐙', name: 'GitHub', external: true },
       ],

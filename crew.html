@@ -1300,7 +1300,7 @@ setTimeout(() => { if (window.OPForms) window.OPForms.autoWrap(); }, 50);
 </script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
   // page can later add filter logic via this hook. Currently a no-op for
@@ -1325,7 +1325,7 @@ setTimeout(() => { if (window.OPForms) window.OPForms.autoWrap(); }, 50);
     try {
       const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
       const ch = raw && raw.cutoff_chapter || parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
-      return Math.min(Math.max(ch || 0, 0), 1181);
+      return Math.min(Math.max(ch || 0, 0), ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
     } catch (_) { return 0; }
   }
   function _applySilhouette() {

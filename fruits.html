@@ -284,7 +284,7 @@ function render() {
     const meta = [];
     const eater = EATERS[f.id];
     if (eater) meta.push(`User: <a class="entity-link" href="character.html?id=${encodeURIComponent(eater.id)}">${escapeHTML(eater.name)}</a>`);
-    else if (f.user_current) meta.push(`User: ${escapeHTML(f.user_current.split("·")[0].trim())}`);
+    else if (f.user_current) meta.push(`User: ${escapeHTML(f.user_current.replace(/\)(?=[A-Z])/g, ") · ").replace(/([a-z])(S-[A-Z])/g, "$1 · $2").split("·")[0].trim())}`);
     if (f.debut_chapter) meta.push(`Ch.${f.debut_chapter}`);
     const imgFile = f.infobox_image ? f.infobox_image.replace(/^File:/i,"").trim() : null;
     const imgSrc = (imgFile && !/^\d+px$/.test(imgFile)) ? "https://onepiece.fandom.com/wiki/Special:FilePath/" + encodeURIComponent(imgFile) : null;
@@ -319,6 +319,6 @@ render();
 <script src="search.js?v=2"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 </body>
 </html>

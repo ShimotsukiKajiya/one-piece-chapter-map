@@ -270,7 +270,7 @@ _gateCrewsBySpoiler();
 <script src="search.js?v=2"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 <script>
 // L18+L20 portrait silhouette gate. Sets data-spoiler-silhouette="1" on
 // <html> when the user's cutoff is less than LATEST_PUBLISHED_CHAPTER.
@@ -285,7 +285,7 @@ _gateCrewsBySpoiler();
     try {
       const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
       const ch = raw && raw.cutoff_chapter || parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
-      return Math.min(Math.max(ch || 0, 0), 1181);
+      return Math.min(Math.max(ch || 0, 0), ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
     } catch (_) { return 0; }
   }
   function _applySilhouette() {

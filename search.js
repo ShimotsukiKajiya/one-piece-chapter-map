@@ -168,9 +168,9 @@
     // visible to caught-up readers). Fail-closed.
     function _theoryMinCh(t) {
       const s = String(t.chapter || '');
-      if (!s) return 1181;
+      if (!s) return (window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188;
       const nums = s.match(/\d+/g);
-      if (!nums || !nums.length) return 1181;
+      if (!nums || !nums.length) return (window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188;
       return Math.min.apply(null, nums.map(n => parseInt(n, 10)));
     }
     // SBS volume → approximate last chapter (each manga vol covers ~10 chs).
@@ -178,7 +178,7 @@
     // the manga vol N which contains chapters up to ~N*10).
     function _sbsVolMaxCh(vol) {
       vol = parseInt(vol, 10) || 0;
-      return Math.min(vol * 10 + 5, 1181);  // +5 buffer for Wano-era multi-Q&A volumes
+      return Math.min(vol * 10 + 5, ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));  // +5 buffer for Wano-era multi-Q&A volumes
     }
     // Cover stories: their chapter_range gives the chapter window. Earliest
     // chapter is the minimum spoiler; latest is when the cover ENDS (but
@@ -187,7 +187,7 @@
     // start, you're likely fine seeing the cover existed.
     function _coverMinCh(cs) {
       if (Array.isArray(cs.chapters) && cs.chapters.length) return Math.min.apply(null, cs.chapters);
-      return 1181;
+      return (window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188;
     }
 
     // Cover stories — gated by earliest chapter

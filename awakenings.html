@@ -113,9 +113,9 @@
     try {
       const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
       if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0)
-        return Math.min(raw.cutoff_chapter, 1181);
+        return Math.min(raw.cutoff_chapter, ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
       const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
-      if (legacy > 0) return Math.min(legacy, 1181);
+      if (legacy > 0) return Math.min(legacy, ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
     } catch (_) {}
     return 597;
   }
@@ -430,7 +430,7 @@ document.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
 render();
 </script>
 <script id="chr-id-map" type="application/json">
-{"Marco":"chr:02413","Basil Hawkins":"chr:01629","Charlotte Cracker":"chr:01774","Sengoku":"chr:02797","Donquixote Doflamingo":"chr:01928","Yamato":"chr:03045","Pica":"chr:02645","Shiryu":"chr:02830","Kurozumi Orochi":"chr:02349","Bartolomeo":"chr:01628","Charlotte Katakuri":"chr:01790","Sabo":"chr:02751","S-Snake":"chr:02749","Monkey D. Luffy":"chr:02499","Buggy":"chr:01711","Edward Newgate":"chr:01950","Trafalgar D. Water Law":"chr:02947","Enel":"chr:01960","Catarina Devon":"chr:01741","Marshall D. Teach":"chr:02426","Charlotte Perospero":"chr:01815","Charlotte Linlin":"chr:01793","Eustass Kid":"chr:01970","Sugar":"chr:02880","Kaidou":"chr:02252"}
+{"Bartolomeo":"chr:01628","Sabo":"chr:02751","Monkey D. Luffy":"chr:02499","Enel":"chr:01960","Marco":"chr:02413","Sengoku":"chr:02797","Kurozumi Orochi":"chr:02349","Marshall D. Teach":"chr:02426","Donquixote Doflamingo":"chr:01928","Charlotte Katakuri":"chr:01790","S-Snake":"chr:02749","Basil Hawkins":"chr:01629","Pica":"chr:02645","Edward Newgate":"chr:01950","Sugar":"chr:02880","Yamato":"chr:03045","Kaidou":"chr:02252","Shiryu":"chr:02830","Buggy":"chr:01711","Catarina Devon":"chr:01741","Charlotte Perospero":"chr:01815","Eustass Kid":"chr:01970","Charlotte Cracker":"chr:01774","Charlotte Linlin":"chr:01793","Trafalgar D. Water Law":"chr:02947"}
 </script>
 <script src="chr-link-upgrader.js?v=2"></script>
 <script src="spoiler.js?v=1"></script>
@@ -438,7 +438,7 @@ render();
 <script src="spoiler-onboarding.js?v=1" defer></script>
 <script src="search.js?v=2"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
   // page can later add filter logic via this hook. Currently a no-op for

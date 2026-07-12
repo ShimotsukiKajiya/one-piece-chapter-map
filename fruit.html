@@ -300,7 +300,18 @@ function typeClass(t) {
   return "";
 }
 
+function cleanUsers(s) {
+  if (!s) return s;
+  // Wiki scraper artifact: multi-user infoboxes arrive concatenated, e.g.
+  // "Boa HancockS-Snake (Artificial)" or "Kaidou (Natural)Kouzuki Momonosuke
+  // (Artificial)". Re-split at the seams so each user renders separately.
+  return s
+    .replace(/\)(?=[A-Z])/g, ") · ")            // ")Name"  → ") · Name"
+    .replace(/([a-z])(S-[A-Z])/g, "$1 · $2");   // "…ockS-Snake" → "…ock · S-Snake"
+}
+
 function userLink(s) {
+  s = cleanUsers(s);
   if (!s) return "";
   // Split on " · " or ";" and link each segment to its character profile
   return s.split(/[·;]/).map(part => {
@@ -467,7 +478,7 @@ if (!requested) {
 <script src="search.js?v=2"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
   // page can later add filter logic via this hook. Currently a no-op for

@@ -12494,9 +12494,9 @@ function _bootCutoff() {
   try {
     const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
     if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0)
-      return Math.min(raw.cutoff_chapter, 1181);
+      return Math.min(raw.cutoff_chapter, ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
     const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
-    if (legacy > 0) return Math.min(legacy, 1181);
+    if (legacy > 0) return Math.min(legacy, ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
   } catch (_) {}
   return 597;
 }
@@ -12605,7 +12605,7 @@ render();
 <script src="spoiler-onboarding.js?v=1" defer></script>
 <script src="search.js?v=2"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
@@ -12631,7 +12631,7 @@ render();
     try {
       const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
       const ch = raw && raw.cutoff_chapter || parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
-      return Math.min(Math.max(ch || 0, 0), 1181);
+      return Math.min(Math.max(ch || 0, 0), ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188));
     } catch (_) { return 0; }
   }
   function _applySilhouette() {

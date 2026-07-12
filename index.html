@@ -324,7 +324,7 @@
 </section>
 
 <section class="stats-bar">
-  <div class="stat"><div class="num" id="s-chapters">1,181</div><div class="label">Chapters</div></div>
+  <div class="stat"><div class="num" id="s-chapters">1,188</div><div class="label">Chapters</div></div>
   <div class="stat"><div class="num" id="s-sbs">1,659</div><div class="label">SBS Q&amp;A</div></div>
   <div class="stat"><div class="num" id="s-theories">94</div><div class="label">Theories</div></div>
   <div class="stat"><div class="num" id="s-volumes">106</div><div class="label">Volumes</div></div>
@@ -486,7 +486,7 @@
   <a class="feature" href="arcs.html">
     <div class="feature-icon">📚</div>
     <h3>Story Arcs</h3>
-    <p>The 1,181 chapters grouped by saga and arc — East Blue through Elbaph.</p>
+    <p>Every chapter grouped by saga and arc — East Blue through Elbaph.</p>
     <div class="feature-stat"><strong>33</strong> arcs · <strong>10</strong> sagas</div>
   </a>
 
@@ -508,7 +508,7 @@
     <div class="feature-icon">🔥</div>
     <h3>Canon Density</h3>
     <p>Every chapter as a coloured cell — brighter means more canon-verified facts attached.</p>
-    <div class="feature-stat">1,181 cells · live-coloured</div>
+    <div class="feature-stat">every chapter a cell · live-coloured</div>
   </a>
 
   <a class="feature" href="voices.html">
@@ -570,7 +570,7 @@ fetch('appearances.csv')
     elMap.innerHTML = `<strong>${fmt(lines.length)}</strong> appearance entries · <strong>${fmt(chars.size)}</strong> characters`;
     elMap.style.opacity = '1';
   })
-  .catch(_ => { document.getElementById('s-chapters').textContent = '1,181'; });
+  .catch(_ => { document.getElementById('s-chapters').textContent = '1,188'; });
 
 // SBS archive → Q&A count + volume count
 fetch('sbs_archive.json')
@@ -1780,6 +1780,6 @@ fetch('theories_import.json')
 <script src="search.js?v=2"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=28" defer></script>
+<script src="nav-burger.js?v=29" defer></script>
 </body>
 </html>
