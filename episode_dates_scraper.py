@@ -37,9 +37,12 @@ SEASONS = [
     (19, 783,  891,  "2017-04-09", "2019-06-30"),
     (20, 892,  1088, "2019-07-07", "2023-12-17"),
     (21, 1089, 1155, "2024-01-07", "2025-12-28"),
-    # Season 22 (Elbaph) — started 2026-04-05; 4 episodes aired so far (1156-1159)
-    # End date will keep moving as more episodes air; updated each Standard Training pass.
-    (22, 1156, 1159, "2026-04-05", "2026-04-26"),
+    # Season 22 (Elbaph) — started 2026-04-05; current through ep 1169
+    # (aired 2026-07-12). End date keeps moving as episodes air — this table
+    # is the manual stopgap; the proper fix is a wiki episode scraper
+    # (per-episode airdates + chapters-adapted from Fandom Episode pages),
+    # specced in the admin backlog 2026-07-12.
+    (22, 1156, 1169, "2026-04-05", "2026-07-12"),
 ]
 
 

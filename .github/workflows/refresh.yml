@@ -1,7 +1,13 @@
 name: Refresh Codex data
 
-# Manual button only by default — visit the Actions tab and click "Run workflow".
-# To enable a weekly auto-run, uncomment the `schedule` block below.
+# Runs daily. Scheduled runs pick their own mode:
+#   Mon-Sat  -> quick  (chapter probe + light scrapers, ~5 min; a new
+#                       chapter lands on the site within a day of its
+#                       wiki page appearing)
+#   Sunday   -> full   (everything incl. Punk Records + SBS images,
+#                       ~25 min; new characters get their infobox
+#                       records/portraits weekly)
+# Manual runs via the Actions tab can force any mode.
 on:
   workflow_dispatch:
     inputs:
@@ -14,7 +20,11 @@ on:
           - full       # everything (~25 min)
           - audit-only # just sanity-check existing data, no scraping
   schedule:
-    - cron: "0 6 * * 0"   # every Sunday 06:00 UTC
+    - cron: "0 6 * * *"   # daily 06:00 UTC; Sunday runs upgrade to full
+
+concurrency:
+  group: refresh-codex
+  cancel-in-progress: false
 
 # Only the GITHUB_TOKEN that this workflow auto-receives is used. No secrets
 # are required for the default flow. ANTHROPIC_API_KEY is optional — set it
@@ -49,7 +59,15 @@ jobs:
           # Optional — only used if you've added it as a repo secret.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          case "${{ inputs.mode }}" in
+          MODE="${{ inputs.mode }}"
+          # Scheduled runs have no inputs — pick mode by weekday:
+          # Sunday gets the full pipeline (Punk Records + SBS images),
+          # weekdays get the fast chapter probe.
+          if [ -z "$MODE" ]; then
+            if [ "$(date -u +%u)" = "7" ]; then MODE=full; else MODE=quick; fi
+          fi
+          echo "Pipeline mode: $MODE"
+          case "$MODE" in
             audit-only) python audit.py ;;
             full)       python refresh.py ;;
             quick|*)    python refresh.py --quick ;;

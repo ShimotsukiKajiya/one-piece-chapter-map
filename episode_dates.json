@@ -1,8 +1,8 @@
 {
   "_doc": "Per-episode air date estimates. Season boundaries (seasons[].start_date and end_date) are EXACT — first/last episode of each season are anchored to those dates. Within-season episodes are linearly distributed and flagged approximate=true. Season 1 episode 1 = 1999-10-20 (TX broadcast). Anime took a long break between Season 21 (end 2025-12-28) and Season 22 (start 2026-04-05) which is reflected as a gap in the timeline.",
-  "generated_on": "2026-05-02",
+  "generated_on": "2026-07-12",
   "anchor_episode1": "1999-10-20",
-  "max_episode": 1159,
+  "max_episode": 1169,
   "seasons": [
     {
       "season": 1,
@@ -154,9 +154,9 @@
     {
       "season": 22,
       "first_ep": 1156,
-      "last_ep": 1159,
+      "last_ep": 1169,
       "start_date": "2026-04-05",
-      "end_date": "2026-04-26"
+      "end_date": "2026-07-12"
     }
   ],
   "episodes": {
@@ -5941,17 +5941,67 @@
       "approximate": false
     },
     "1157": {
-      "date": "2026-04-12",
+      "date": "2026-04-13",
       "season": 22,
       "approximate": true
     },
     "1158": {
-      "date": "2026-04-19",
+      "date": "2026-04-20",
       "season": 22,
       "approximate": true
     },
     "1159": {
-      "date": "2026-04-26",
+      "date": "2026-04-28",
+      "season": 22,
+      "approximate": true
+    },
+    "1160": {
+      "date": "2026-05-05",
+      "season": 22,
+      "approximate": true
+    },
+    "1161": {
+      "date": "2026-05-13",
+      "season": 22,
+      "approximate": true
+    },
+    "1162": {
+      "date": "2026-05-20",
+      "season": 22,
+      "approximate": true
+    },
+    "1163": {
+      "date": "2026-05-28",
+      "season": 22,
+      "approximate": true
+    },
+    "1164": {
+      "date": "2026-06-04",
+      "season": 22,
+      "approximate": true
+    },
+    "1165": {
+      "date": "2026-06-12",
+      "season": 22,
+      "approximate": true
+    },
+    "1166": {
+      "date": "2026-06-19",
+      "season": 22,
+      "approximate": true
+    },
+    "1167": {
+      "date": "2026-06-27",
+      "season": 22,
+      "approximate": true
+    },
+    "1168": {
+      "date": "2026-07-04",
+      "season": 22,
+      "approximate": true
+    },
+    "1169": {
+      "date": "2026-07-12",
       "season": 22,
       "approximate": false
     }
