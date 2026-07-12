@@ -219,9 +219,12 @@ def main():
     # (2026-07-12: an HTTP-blocked run wrote 0 theories over the curated
     # 94-entry archive — statuses, analysis and numbering all lost until
     # git restore. Guard added the same day.)
+    # Exit 0: an untouched archive is a soft skip, not a pipeline failure —
+    # exiting nonzero here made refresh.py fail the whole run in CI (Reddit
+    # 403s GitHub runners), which blocked the weekly data commit entirely.
     if not theories:
         print("  ⚠  0 theories fetched — refusing to write; existing archive untouched.")
-        sys.exit(1)
+        sys.exit(0)
 
     # Test mode writes to a separate file so it can never overwrite the live
     # 94-theory archive. (2026-05-02: this protection added after a --test run
