@@ -40,8 +40,21 @@
       items: [{ href: 'home.html', icon: '🏠', name: 'Home' }],
     },
     {
-      label: 'Lore',
-      icon: '📚',
+      label: 'Start Here',
+      icon: '⭐',
+      // The four flagships surfaced up top so first-time visitors reach the
+      // strongest surfaces first. Deliberately duplicated from their home
+      // groups below — a featured shortcut, not a replacement.
+      items: [
+        { href: 'characters.html',          icon: '👤', name: 'Character Archive' },
+        { href: 'sbs.html',                 icon: '📜', name: 'SBS Vault' },
+        { href: 'atlas.html',               icon: '🧭', name: 'Chapter Atlas' },
+        { href: 'chapter-release-map.html', icon: '📅', name: 'Release Map' },
+      ],
+    },
+    {
+      label: 'Story & Maps',
+      icon: '🧭',
       hubLink: 'lore.html',
       items: [
         { href: 'atlas.html',        icon: '🧭', name: 'Chapter Atlas' },
@@ -55,6 +68,12 @@
         { href: 'covers.html',       icon: '🏴‍☠️', name: 'Cover Compendium' },
         { href: 'heatmap.html',      icon: '🔥', name: 'Canon Density' },
         { href: 'episodes.html',     icon: '📺', name: 'Manga ↔ Anime' },
+      ],
+    },
+    {
+      label: 'The Lore',
+      icon: '📜',
+      items: [
         { href: 'sbs.html',          icon: '📜', name: 'SBS Vault' },
         { href: 'sbs-topics.html',   icon: '🗂', name: 'SBS by Topic' },
         { href: 'music.html',        icon: '🎵', name: 'Music & Songs' },
@@ -74,8 +93,6 @@
         { href: 'characters.html',   icon: '👤', name: 'Characters' },
         { href: 'bounties.html',     icon: '💰', name: 'Bounty Wall' },
         { href: 'voices.html',       icon: '🎙️', name: 'Voice Cast' },
-        { href: 'compare.html',      icon: '⚖',  name: 'Compare Stats' },
-        { href: 'heights.html',      icon: '📏', name: 'Compare Heights' },
         // soon:true 2026-07-13 — the tree renderer expects a shape the
         // pipeline never produced (page rendered empty since launch). Greyed
         // until the edge-list→forest renderer is rebuilt.
@@ -125,42 +142,33 @@
       ],
     },
     {
-      label: 'Theories',
-      icon: '🔥',
-      // hubLink removed 2026-07-12 — Theory Forge pulled from the public
-      // surface until verdicts get proper human review. Page itself now
-      // banners NOT LIVE; still reachable by direct URL.
-      items: [
-        { href: 'workbench.html',    icon: '📌', name: 'Theory Workbench' },
-        { href: 'prove.html',        icon: '🔍', name: 'Prove an Idea' },
-        // conflicts.html hidden from public nav 2026-05-24 launch:
-        // internal canon-engine view, currently 0 active conflicts.
-        // Still reachable by direct URL if you need it.
-        { href: 'corrections.html',  icon: '📥', name: 'Corrections Inbox' },
-      ],
-    },
-    {
       label: 'Tools',
       icon: '🛠',
       hubLink: 'tools.html',
-      defaultCollapsed: true,
+      // The interactive tools, gathered in one place (they used to be
+      // scattered under Punk Records / Theories). The 'Theories' group was
+      // retired when Theory Forge was pulled — Workbench lives here now.
       items: [
-        // soon:true 2026-07-12 — quiz pool doesn't respect the spoiler
-        // cutoff; greyed until the rebuilt tiered quiz ships.
-        { href: 'quiz.html',     icon: '🎯', name: 'Trivia Trial', soon: true },
-        // curate.html removed from public nav 2026-05-23 launch:
-        // it's the maintainer-only review queue, not a visitor surface.
-        // Still reachable by direct URL if you really want.
+        { href: 'prove.html',     icon: '🔍', name: 'Prove an Idea' },
+        { href: 'compare.html',   icon: '⚖',  name: 'Compare Stats' },
+        { href: 'heights.html',   icon: '📏', name: 'Compare Heights' },
+        { href: 'workbench.html', icon: '📌', name: 'Theory Workbench' },
+        // soon:true — quiz pool doesn't respect the spoiler cutoff; greyed
+        // until the rebuilt tiered quiz ships.
+        { href: 'quiz.html',      icon: '🎯', name: 'Trivia Trial', soon: true },
+        // curate.html + conflicts.html stay out of public nav (maintainer-only);
+        // reachable by direct URL.
       ],
     },
     {
-      label: 'About',
+      label: 'About & Contribute',
       icon: 'ℹ',
       hubLink: 'about.html',
       defaultCollapsed: true,
       items: [
         { href: 'about.html', icon: 'ℹ',  name: 'About the Codex' },
         { href: 'news.html',  icon: '📰', name: "What's New" },
+        { href: 'corrections.html', icon: '📥', name: 'Corrections Inbox' },
         { href: 'feed.xml',   icon: '📡', name: 'RSS Feed', external: true },
         { href: 'https://github.com/ShimotsukiKajiya/one-piece-chapter-map', icon: '🐙', name: 'GitHub', external: true },
       ],
