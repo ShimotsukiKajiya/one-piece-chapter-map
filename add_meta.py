@@ -21,8 +21,8 @@ if sys.platform == "win32":
 DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://shimotsukicodex.com"
 SITE_DESC = ("The Shimotsuki Codex — a free fan-built One Piece reference. "
-             "Every chapter mapped, every SBS archived, theories weighed against canon.")
-SITE_IMAGE = f"{SITE_URL}/logo/shimotsuki-kajiya-mon.svg"
+             "Every chapter mapped, every SBS archived, spoiler-aware and cross-referenced.")
+SITE_IMAGE = f"{SITE_URL}/logo/shimotsuki-codex-mark-primary.png"
 TWITTER_HANDLE = "@ShimotsukiCodex"
 
 # Files we deliberately leave alone — already have full custom OG tags

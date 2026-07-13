@@ -126,8 +126,8 @@
         <div class="sub">🛡 Spoiler Guard · welcome</div>
         <h2 id="codex-onboarding-title">Your shield is on by default</h2>
         <p>
-          The Codex covers all <strong>1,181 chapters</strong> of One Piece —
-          characters, fights, devil fruits, family trees, theories, the lot.
+          The Codex covers <strong>every chapter</strong> of One Piece —
+          characters, fights, devil fruits, crews, SBS answers, the lot.
           To stop spoilers from reaching you, content past your reading point is
           <strong>hidden everywhere</strong> until you tell us how far you've gotten.
         </p>

@@ -12500,7 +12500,7 @@ function _bootCutoff() {
   } catch (_) {}
   return 597;
 }
-function _isCaughtUp() { return _bootCutoff() >= 1181; }
+function _isCaughtUp() { return _bootCutoff() >= 1188; }
 function _crewVisible(name) {
   if (_isCaughtUp()) return true;
   const minCh = CREW_MIN_CH[name];
@@ -12602,10 +12602,10 @@ render();
 <footer>Crew flags scraped from the One Piece wiki · The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script src="spoiler.js?v=1"></script>
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=3"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the

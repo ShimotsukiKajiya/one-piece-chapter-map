@@ -304,9 +304,23 @@ def main():
     by_id = {f["id"]: f for f in existing}
     new_count = 0
     replaced = 0
+    carried = 0
     for f in facts:
-        if f["id"] in by_id:
+        prev = by_id.get(f["id"])
+        if prev is not None:
             replaced += 1
+            # Carry forward the prior verified_on when the fact's substance is
+            # unchanged. Without this, TODAY re-stamps every fact on every run,
+            # so the daily cron rewrote all ~4,840 facts (pure date churn that
+            # buried the one real change per run). Only genuinely changed facts
+            # get today's date.
+            unchanged = (prev.get("value") == f.get("value")
+                         and prev.get("sources") == f.get("sources")
+                         and prev.get("evidence_notes") == f.get("evidence_notes")
+                         and prev.get("tier") == f.get("tier"))
+            if unchanged and prev.get("verified_on"):
+                f["verified_on"] = prev["verified_on"]
+                carried += 1
         else:
             new_count += 1
         by_id[f["id"]] = f

@@ -258,12 +258,6 @@
       <span class="summary">Every "Question Corner" answer Oda has ever published, fully searchable and cross-linked to the characters mentioned.</span>
       <span class="stat">1,685 Q&amp;As · 107 volumes</span>
     </a>
-    <a class="hub-card" href="theories.html">
-      <span class="ic">🔥</span>
-      <span class="name">Check a Fan Theory</span>
-      <span class="summary">Top r/OnePiece theories weighed against actual canon — each verdict cites Oda's own SBS quotes when relevant.</span>
-      <span class="stat">94 theories · verdicts cited</span>
-    </a>
   </div>
 
   <section>
@@ -296,7 +290,7 @@
       <li><strong>SBS Vault</strong> <span class="status live">Live</span> — every Q&amp;A Oda has ever answered, searchable, with auto-linked references</li>
       <li><strong>SBS by Topic</strong> <span class="status live">Live</span> — same Q&amp;As bucketed by subject for faster browse</li>
       <li><strong>Punk Records</strong> <span class="status live">Live</span> — 1,537 characters with portraits, stats, cross-links</li>
-      <li><strong>Devil Fruit Codex</strong> <span class="status live">Live</span> — 158 fruits, type-coded, user-cross-linked</li>
+      <li><strong>Devil Fruit Codex</strong> <span class="status live">Live</span> — 155 fruits, type-coded, user-cross-linked</li>
       <li><strong>Bounty Wall</strong> <span class="status live">Live</span> — every Marine bounty as a pinned wanted poster on a corkboard</li>
       <li><strong>Locations</strong> <span class="status live">Live</span> — 139 locations with born-here character counts and arc cross-links</li>
       <li><strong>Ships</strong> <span class="status live">Live</span> — 41 named canon ships with crew rosters from the sails-on graph</li>
@@ -385,8 +379,8 @@
     <ul>
       <li><strong>Chapter Atlas</strong> — pulls character appearances from the Fandom wiki via MediaWiki API. Visualises every chapter as a coloured square; click any character to highlight every chapter they're in.</li>
       <li><strong>SBS Vault</strong> — scrapes Oda's "Question Corner" sections from the wiki, parses Q/A pairs, extracts inline images and reader pen names, and categorises every entry via Claude Haiku.</li>
-      <li><strong>Theory Forge</strong> — pulls top fan theories from r/OnePiece, then for each theory searches the SBS archive for relevant Oda quotes. Those quotes are passed to Claude as authoritative canon, which then issues a verdict (active/confirmed/debunked/partial) and cites the SBS volume directly.</li>
-      <li><strong>Trivia Trial</strong> — generates trivia questions from the same appearance data + a curated trivia pool of devil fruits, epithets, and lore facts.</li>
+      <li><strong>Theory Forge</strong> <em>(not live yet)</em> — pulls top fan theories from r/OnePiece, then for each theory searches the SBS archive for relevant Oda quotes. Those quotes are passed to Claude as authoritative canon, which then issues a verdict (active/confirmed/debunked/partial) and cites the SBS volume directly. Offline until the verdicts get proper human review.</li>
+      <li><strong>Trivia Trial</strong> <em>(not live yet)</em> — generates trivia questions from the same appearance data + a curated trivia pool of devil fruits, epithets, and lore facts. Offline until it respects the Spoiler Guard cutoff.</li>
     </ul>
     <p>
       Every page is a static HTML file with all data baked in. Hosted free
@@ -573,6 +567,6 @@
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 </body>
 </html>

@@ -415,7 +415,7 @@
   <div class="modal">
     <h2>Submit to Codex</h2>
     <div class="modal-body">
-      Opens a prefilled GitHub Issue with your theory + full evidence chain. The maintainer reviews submissions before they're added to the public Theory Forge.
+      Opens a prefilled GitHub Issue with your theory + full evidence chain. The maintainer reviews every submission before anything is published.
       <p style="margin-top:10px"><strong>Preview:</strong></p>
     </div>
     <pre id="submit-preview"></pre>
@@ -606,7 +606,7 @@ function _cardMinCh(c) {
 }
 function _cardVisible(c) {
   const cutoff = _wbCutoff();
-  if (cutoff >= 1181) return true;
+  if (cutoff >= 1188) return true;
   return _cardMinCh(c) <= cutoff;
 }
 
@@ -936,7 +936,9 @@ function renderInspect(citation) {
   }
 
   if (t === 'theory') {
-    return `<div style="color:var(--muted)">Theory citations carry their own Theory Forge analysis. <a href="${escapeHTML(c.snapshot.href || 'theories.html')}" style="color:var(--ink-blue)">Open in Theory Forge →</a></div>`;
+    // Theory Forge is pulled from the public surface (2026-07-13) — show the
+    // citation snapshot text without linking out to the unlisted page.
+    return `<div style="color:var(--muted)">Theory citation — the Theory Forge analysis view is being rebuilt and isn't public yet.</div>`;
   }
 
   return `<div style="color:var(--muted)">No structured evidence engine for ${escapeHTML(t)} citations yet. Inspect the source directly: <a href="${escapeHTML(c.snapshot.href || '#')}" style="color:var(--ink-blue)">${escapeHTML(c.snapshot.title)}</a></div>`;
@@ -1036,11 +1038,11 @@ renderResults();
 </script>
 
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
   // page can later add filter logic via this hook. Currently a no-op for

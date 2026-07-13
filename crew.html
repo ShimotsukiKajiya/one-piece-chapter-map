@@ -182,7 +182,7 @@ const CREW_MIN_CH = {
 function _crewBootCutoff(){
   try{
     const raw=JSON.parse(localStorage.getItem("codex-spoiler-state")||"null");
-    if(raw&&typeof raw.cutoff_chapter==="number"&&raw.cutoff_chapter>0)return Math.min(raw.cutoff_chapter,1181);
+    if(raw&&typeof raw.cutoff_chapter==="number"&&raw.cutoff_chapter>0)return Math.min(raw.cutoff_chapter,1188);
     const legacy=parseInt(localStorage.getItem("spoilerCutoff")||"0",10);
     if(legacy>0)return Math.min(legacy,1181);
   }catch(_){}
@@ -1291,7 +1291,7 @@ if (!requested) {
 </script>
 <script src="spoiler.js?v=1"></script>
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=3"></script>
 <script src="forms.js?v=4"></script>
 <script>
@@ -1300,7 +1300,7 @@ setTimeout(() => { if (window.OPForms) window.OPForms.autoWrap(); }, 50);
 </script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
   // page can later add filter logic via this hook. Currently a no-op for

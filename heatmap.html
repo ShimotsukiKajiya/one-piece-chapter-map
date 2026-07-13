@@ -104,7 +104,7 @@ for (const subj of Object.keys(FACTS)) {
   }
 }
 
-const TOTAL_CHAPTERS = 1181;
+const TOTAL_CHAPTERS = 1188;
 function colorFor(n) {
   if (!n) return "#1a1610";
   if (n <= 2)   return "#5f4c20";
@@ -138,10 +138,10 @@ document.getElementById("stats").innerHTML = maxCh
   : `No facts mapped yet.`;
 </script>
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 </body>
 </html>

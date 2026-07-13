@@ -157,7 +157,7 @@
 // This script runs BEFORE spoiler.js loads (script order in this file).
 // Read localStorage directly so we can gate first render correctly.
 // Mirrors character.html's _bootEffectiveCutoff / _isCaughtUp pattern.
-const _LATEST_CH = 1181;
+const _LATEST_CH = 1188;
 function _bootCutoff() {
   try {
     const raw = JSON.parse(localStorage.getItem("codex-spoiler-state") || "null");
@@ -474,11 +474,11 @@ if (!requested) {
 </script>
 <script src="spoiler.js?v=1"></script>
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the
   // page can later add filter logic via this hook. Currently a no-op for

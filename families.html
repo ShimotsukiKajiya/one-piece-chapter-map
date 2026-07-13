@@ -164,6 +164,12 @@ footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--mut
   <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Families</span></a>
 </header>
 <main>
+  <aside class="codex-wip-banner" role="note" aria-label="Family Trees status" style="display:flex;gap:14px;padding:14px 18px;margin:18px auto 0;max-width:880px;background:linear-gradient(135deg,rgba(200,90,60,0.10) 0%,rgba(200,90,60,0.03) 100%);border:1px solid rgba(200,90,60,0.55);border-left:3px solid #c85a3c;border-radius:10px;font-size:0.88rem;line-height:1.6">
+    <div style="flex-shrink:0;align-self:flex-start;background:rgba(200,90,60,0.18);color:#e8927a;padding:4px 9px;border-radius:6px;font-size:.75rem;font-weight:700;letter-spacing:1px">🚧 Not live</div>
+    <div>
+      <strong style="color:#e8927a">Family Trees isn't part of the public Codex yet.</strong> The tree view isn't rendering — the underlying relationship data is solid (52 canon-cited bonds), but the diagram builder needs a rebuild before this goes live. It's unlinked from the site until then. Thanks for your patience.
+    </div>
+  </aside>
   <section class="hero">
     <h2>Family Trees</h2>
     <div class="sub">Blood · Bond · Legacy</div>
@@ -596,9 +602,9 @@ document.getElementById('trees').innerHTML = FAMILIES.map(fam => {
 <script src="spoiler.js?v=1"></script>
 <script src="settings.js"></script>
 <script src="search.js?v=3"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the

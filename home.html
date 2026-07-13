@@ -358,10 +358,10 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#d4a44a">
   <!-- OG / Twitter cards for shareability -->
-  <meta name="description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta name="description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Spoiler-aware, sourced, cross-referenced, and free.">
   <link rel="canonical" href="https://shimotsukicodex.com/home.html">
   <meta property="og:title" content="The Shimotsuki Codex · One Piece Reference">
-  <meta property="og:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta property="og:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Spoiler-aware, sourced, cross-referenced, and free.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shimotsukicodex.com/">
   <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
@@ -369,7 +369,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ShimotsukiCodex">
   <meta name="twitter:title" content="The Shimotsuki Codex · One Piece Reference">
-  <meta name="twitter:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Theories weighed against canon. Sourced, cross-referenced, and free.">
+  <meta name="twitter:description" content="The Shimotsuki Codex — a fan-built One Piece reference. Every chapter mapped. Every SBS answer archived. Spoiler-aware, sourced, cross-referenced, and free.">
   <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
 <style id="nav-burger-critical">
   /* Reserves space for the top-right action strip from the first paint —
@@ -498,7 +498,7 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
     var cutoff = (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0)
       ? Math.min(raw.cutoff_chapter, ((window.CodexSpoiler && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188))
       : (parseInt(localStorage.getItem('spoilerCutoff') || '0', 10) || 597);
-    if (cutoff < 1181) {
+    if (cutoff < 1188) {
       var label = 'Ch. ' + cutoff;
       var ep = (raw && raw.cutoff_episode) || parseInt(localStorage.getItem('spoilerCutoffEp') || '0', 10);
       if (ep) label += ' / Ep. ' + ep;
@@ -637,13 +637,6 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
     <div class="feature-stat" id="fs-locs"><strong>…</strong> locations</div>
   </a>
 
-  <a class="feature" href="families.html">
-    <div class="feature-icon">🌳</div>
-    <h3>Family Trees</h3>
-    <p>Hand-curated bloodlines and adoptive families. Each edge cites its confirming chapter.</p>
-    <div class="feature-stat"><strong>52</strong> relationships</div>
-  </a>
-
   <a class="feature" href="compare.html">
     <div class="feature-icon">⚖</div>
     <h3>Character Compare</h3>
@@ -674,13 +667,6 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
     <div class="feature-stat">every chapter a cell · live-coloured</div>
   </a>
 
-  <a class="feature" href="chapter-release-map.html">
-    <div class="feature-icon">📅</div>
-    <h3>Release Map</h3>
-    <p>30 years of One Piece on a single calendar — every manga chapter, anime episode, film, and milestone mapped by week.</p>
-    <div class="feature-stat">30 years of manga, anime, films &amp; milestones</div>
-  </a>
-
   <a class="feature" href="voices.html">
     <div class="feature-icon">🎙️</div>
     <h3>Voice Cast</h3>
@@ -696,7 +682,7 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
 </footer>
 
 <script id="home-stats" type="application/json">
-{"chapters":"1,188","fsMap":"<strong>26,901</strong> appearance entries · <strong>1,541</strong> characters","sbs":"1,685","sbs_volumes":"107","fsSbs":"<strong>1,685</strong> Q&amp;A · <strong>107</strong> volumes · <strong>10</strong> categories","theories":"94","fsTheories":"<strong>94</strong> theories · <strong>29</strong> debunked by canon · <strong>2</strong> confirmed","characters":"1,537","fsPunk":"<strong>1,537</strong> characters · <strong>1,481</strong> with full canon data","fsAwakenings":"<strong>29</strong> awakenings tracked · type-coded","fsWorkbench":"<strong>3,281</strong> Fact Cards across SBS · characters · theories · covers","ships":"41","fsShips":"<strong>41</strong> named canon ships","voices":"1,333","fsVoices":"<strong>653</strong> JP · <strong>680</strong> EN voice actors","locations":"139","fsLocs":"<strong>139</strong> locations across the seas","crews":"357"}
+{"chapters":"1,188","fsMap":"<strong>26,901</strong> appearance entries · <strong>1,541</strong> characters","sbs":"1,685","sbs_volumes":"107","fsSbs":"<strong>1,685</strong> Q&amp;A · <strong>107</strong> volumes · <strong>10</strong> categories","characters":"1,537","fsPunk":"<strong>1,537</strong> characters · <strong>1,481</strong> with full canon data","fsAwakenings":"<strong>29</strong> awakenings tracked · type-coded","fsWorkbench":"<strong>3,281</strong> Fact Cards across SBS · characters · theories · covers","ships":"41","fsShips":"<strong>41</strong> named canon ships","voices":"1,333","fsVoices":"<strong>653</strong> JP · <strong>680</strong> EN voice actors","locations":"139","fsLocs":"<strong>139</strong> locations across the seas","crews":"357"}
 </script>
 <script id="home-arcs" type="application/json">
 [{"n":"Romance Dawn","s":1,"e":7},{"n":"Orange Town","s":8,"e":21},{"n":"Syrup Village","s":22,"e":41},{"n":"Baratie","s":42,"e":68},{"n":"Arlong Park","s":69,"e":95},{"n":"Loguetown","s":96,"e":100},{"n":"Reverse Mountain","s":101,"e":105},{"n":"Whiskey Peak","s":106,"e":114},{"n":"Little Garden","s":115,"e":129},{"n":"Drum Island","s":130,"e":154},{"n":"Alabasta","s":155,"e":217},{"n":"Jaya","s":218,"e":236},{"n":"Skypiea","s":237,"e":302},{"n":"Long Ring Long Land","s":303,"e":321},{"n":"Water 7","s":322,"e":374},{"n":"Enies Lobby","s":375,"e":430},{"n":"Post-Enies Lobby","s":431,"e":441},{"n":"Thriller Bark","s":442,"e":489},{"n":"Sabaody Archipelago","s":490,"e":513},{"n":"Amazon Lily","s":514,"e":524},{"n":"Impel Down","s":525,"e":549},{"n":"Marineford","s":550,"e":580},{"n":"Post-War","s":581,"e":597},{"n":"Return to Sabaody","s":598,"e":602},{"n":"Fishman Island","s":603,"e":653},{"n":"Punk Hazard","s":654,"e":699},{"n":"Dressrosa","s":700,"e":801},{"n":"Zou","s":802,"e":824},{"n":"Whole Cake Island","s":825,"e":902},{"n":"Reverie","s":903,"e":908},{"n":"Wano Country","s":909,"e":1057},{"n":"Egghead","s":1058,"e":1126},{"n":"Elbaph","s":1127,"e":9999}]
@@ -756,10 +742,10 @@ function saveCache(patch) {
     const s = (id, v) => { const el = document.getElementById(id); if (el && v) el.textContent = v; };
     const h = (id, v) => { const el = document.getElementById(id); if (el && v) el.innerHTML = v; };
     s('s-chapters', b.chapters); s('s-characters', b.characters);
-    s('s-sbs', b.sbs); s('s-theories', b.theories);
+    s('s-sbs', b.sbs);
     s('s-ships', b.ships); s('s-locations', b.locations);
     s('s-crews', b.crews); s('s-voices', b.voices);
-    h('fs-map', b.fsMap); h('fs-sbs', b.fsSbs); h('fs-theories', b.fsTheories);
+    h('fs-map', b.fsMap); h('fs-sbs', b.fsSbs);
     h('fs-punk', b.fsPunk); h('fs-awakenings', b.fsAwakenings);
     h('fs-workbench', b.fsWorkbench); h('fs-ships', b.fsShips);
     h('fs-voices', b.fsVoices); h('fs-locs', b.fsLocs);
@@ -2055,11 +2041,11 @@ if (document.readyState === 'loading') {
 }
 </script>
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>
 // L18+L20 portrait silhouette gate. Sets data-spoiler-silhouette="1" on
 // <html> when the user's cutoff is less than LATEST_PUBLISHED_CHAPTER.

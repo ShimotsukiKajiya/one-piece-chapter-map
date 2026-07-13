@@ -655,10 +655,12 @@ def bake_punk():
         bake_block(char_path, "sbs-index", sbs_payload)
         print(f"  ✓ character.html  ← {len(sbs_idx):>5,} SBS cross-refs")
 
-        th_idx = _build_theory_index(th_path, names)
-        th_payload = json.dumps(th_idx, ensure_ascii=False, separators=(',', ':'))
-        bake_block(char_path, "theory-index", th_payload)
-        print(f"  ✓ character.html  ← {len(th_idx):>5,} theory cross-refs")
+        # Theory Forge pulled 2026-07-13 — bake an EMPTY theory index so the
+        # "Theories mentioning X" section stays dark and no spoiler-laden
+        # theory titles land in character.html source. Restore _build_theory_index
+        # here when Theory Forge relinks.
+        bake_block(char_path, "theory-index", "{}")
+        print(f"  ·  character.html  ← theory cross-refs disabled (Theory Forge pulled)")
         # ── SHARD DOSSIERS (tier-tagged relationship graph) ─────────────────
         shards = _build_shards_index(records)
         if shards:
@@ -2046,16 +2048,8 @@ def _bake_home_stats():
                           f" · <strong>{cats}</strong> categories")
 
     # theories_import.json
-    th_path = os.path.join(DIR, "theories_import.json")
-    if os.path.exists(th_path):
-        with open(th_path, encoding="utf-8") as f:
-            theories = json.load(f)
-        debunked  = sum(1 for t in theories if t.get("status") == "debunked")
-        confirmed = sum(1 for t in theories if t.get("status") == "confirmed")
-        stats["theories"] = _fmt(len(theories))
-        stats["fsTheories"] = (f"<strong>{_fmt(len(theories))}</strong> theories"
-                               f" · <strong>{debunked}</strong> debunked by canon"
-                               f" · <strong>{confirmed}</strong> confirmed")
+    # Theory Forge pulled from the public surface 2026-07-13 — no longer
+    # baked into home-stats (the home tile + feature card were removed).
 
     # punk_records.json
     pr_path = os.path.join(DIR, "punk_records.json")

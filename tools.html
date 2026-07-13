@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="cite-styles.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#d4a44a">
-<meta name="description" content="Interactive tools in the Shimotsuki Codex — trivia, fact curation, and more.">
+<meta name="description" content="Interactive tools in the Shimotsuki Codex — claim-testing, fact curation, and more.">
 <style>
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
   :root{--bg:#0c0a14;--surface:#1a1610;--surface2:#251f15;--border:#4a3820;--text:#e8d8b0;--muted:#8a7548;--gold:#d4a44a;--gold-bright:#f5c95e;--ink-blue:#6a9ec8;--green:#7ac290;--violet:#b388ff;--rose:#e07faa}
@@ -81,7 +81,7 @@
 </style>
   <link rel="canonical" href="https://shimotsukicodex.com/tools.html">
   <meta property="og:title" content="Tools · The Shimotsuki Codex">
-  <meta property="og:description" content="Interactive tools in the Shimotsuki Codex — trivia, fact curation, and more.">
+  <meta property="og:description" content="Interactive tools in the Shimotsuki Codex — claim-testing, fact curation, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shimotsukicodex.com/tools.html">
   <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ShimotsukiCodex">
   <meta name="twitter:title" content="Tools · The Shimotsuki Codex">
-  <meta name="twitter:description" content="Interactive tools in the Shimotsuki Codex — trivia, fact curation, and more.">
+  <meta name="twitter:description" content="Interactive tools in the Shimotsuki Codex — claim-testing, fact curation, and more.">
   <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
 </head>
 <body>
@@ -112,12 +112,6 @@
       <span class="desc">Built from the same data as the rest of the Codex</span>
     </div>
     <div class="cards">
-      <a class="card" href="quiz.html">
-        <span class="ic">🎯</span>
-        <span class="name">Trivia Trial</span>
-        <span class="summary">Test how deep your One Piece knowledge runs. Questions drawn from real Codex data — fruits, epithets, chapter debuts, SBS facts, and more. Endless rounds.</span>
-        <span class="stat">50+ question types · randomised</span>
-      </a>
       <a class="card" href="prove.html">
         <span class="ic">🔍</span>
         <span class="name">Prove an Idea</span>
@@ -147,16 +141,10 @@
       <span class="desc">Help sharpen the Codex</span>
     </div>
     <div class="cards">
-      <a class="card" href="curate.html">
-        <span class="ic">✏</span>
-        <span class="name">Curate Facts</span>
-        <span class="summary">Submit canon fact corrections, new SBS entries, and character data fixes. Your contributions go into the GitHub review queue and are credited on merge.</span>
-        <span class="stat">Submission → GitHub Issues</span>
-      </a>
       <a class="card" href="workbench.html">
         <span class="ic">📌</span>
         <span class="name">Theory Workbench</span>
-        <span class="summary">Build and stress-test theories with cited Fact Cards. Pin evidence from SBS entries, character pages, and canon facts — then submit to the Theory Forge.</span>
+        <span class="summary">Build and stress-test theories with cited Fact Cards. Pin evidence from SBS entries, character pages, and canon facts, then export your case as a GitHub submission.</span>
         <span class="stat">Cited evidence builder</span>
       </a>
       <a class="card" href="corrections.html">
@@ -178,6 +166,6 @@
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 </body>
 </html>

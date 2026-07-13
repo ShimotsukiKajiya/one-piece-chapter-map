@@ -76,7 +76,10 @@
         { href: 'voices.html',       icon: '🎙️', name: 'Voice Cast' },
         { href: 'compare.html',      icon: '⚖',  name: 'Compare Stats' },
         { href: 'heights.html',      icon: '📏', name: 'Compare Heights' },
-        { href: 'families.html',     icon: '🌳', name: 'Family Trees' },
+        // soon:true 2026-07-13 — the tree renderer expects a shape the
+        // pipeline never produced (page rendered empty since launch). Greyed
+        // until the edge-list→forest renderer is rebuilt.
+        { href: 'families.html',     icon: '🌳', name: 'Family Trees', soon: true },
         { href: 'will-of-d.html',    icon: '🇩', name: 'Will of D.' },
         { href: 'crews.html',        icon: '⚓', name: 'Crews & Orgs' },
         { href: 'marines-wg.html',   icon: '🪽', name: 'Marines & World Govt' },
@@ -749,12 +752,13 @@
       return CodexSpoiler.effectiveCutoff('public');
     }
     try {
+      const _cap = (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188;
       const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
       if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0) {
-        return Math.min(raw.cutoff_chapter, 1181);
+        return Math.min(raw.cutoff_chapter, _cap);
       }
       const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
-      if (legacy > 0) return Math.min(legacy, 1181);
+      if (legacy > 0) return Math.min(legacy, _cap);
     } catch (_) {}
     return 597;  // strict default
   }
@@ -853,14 +857,16 @@
       'moments.html','reverie.html','covers.html','heatmap.html','episodes.html',
       'sbs.html','sbs-topics.html','music.html','poneglyphs.html','void-century.html',
       'characters.html','bounties.html','voices.html','compare.html','heights.html',
-      'families.html','will-of-d.html','crews.html','marines-wg.html',
+      'will-of-d.html','crews.html','marines-wg.html',
       'jolly-rogers.html','races.html',
       'fruits.html','awakenings.html','haki.html','combat-styles.html',
       'locations.html','ships.html',
       'weapons.html','items.html','materials.html','tech.html','ancient-weapons.html',
-      'theories.html','workbench.html','prove.html','conflicts.html','corrections.html',
-      'quiz.html','curate.html',
+      'workbench.html','prove.html','corrections.html',
       'about.html','news.html',
+      // Deliberately omitted from prev/next: families.html, theories.html,
+      // quiz.html (pulled — unlinked from the public surface) and
+      // conflicts.html, curate.html (maintainer-only). Reachable by direct URL.
     ];
 
     const cur = location.pathname.split('/').pop() || 'home.html';

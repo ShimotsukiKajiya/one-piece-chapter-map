@@ -20,9 +20,12 @@ if sys.platform == "win32":
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-DESC_RE   = re.compile(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']', re.IGNORECASE)
-OGDESC_RE = re.compile(r'(<meta\s+property=["\']og:description["\']\s+content=)["\']([^"\']*)["\']', re.IGNORECASE)
-TWDESC_RE = re.compile(r'(<meta\s+name=["\']twitter:description["\']\s+content=)["\']([^"\']*)["\']', re.IGNORECASE)
+# Quote-aware: capture the opening quote (group after content=) and match to
+# the SAME quote. The old [^"\']+ class stopped at the first apostrophe, so a
+# double-quoted content="What's new…" was truncated to "What" in og/twitter.
+DESC_RE   = re.compile(r'<meta\s+name=["\']description["\']\s+content=("|\')(.*?)\1', re.IGNORECASE)
+OGDESC_RE = re.compile(r'(<meta\s+property=["\']og:description["\']\s+content=)("|\')(.*?)\2', re.IGNORECASE)
+TWDESC_RE = re.compile(r'(<meta\s+name=["\']twitter:description["\']\s+content=)("|\')(.*?)\2', re.IGNORECASE)
 
 
 def patch_file(path: str) -> str:
@@ -32,10 +35,15 @@ def patch_file(path: str) -> str:
     desc_m = DESC_RE.search(html)
     if not desc_m:
         return "no-description"
-    desc = desc_m.group(1)
+    desc = desc_m.group(2)
 
-    new_html, og_count = OGDESC_RE.subn(rf'\g<1>"{desc}"', html)
-    new_html, tw_count = TWDESC_RE.subn(rf'\g<1>"{desc}"', new_html)
+    # Function replacement so apostrophes/backslashes in desc can't corrupt the
+    # substitution; always rewrap in double quotes.
+    def _repl(m):
+        return f'{m.group(1)}"{desc}"'
+
+    new_html, og_count = OGDESC_RE.subn(_repl, html)
+    new_html, tw_count = TWDESC_RE.subn(_repl, new_html)
 
     if og_count == 0 and tw_count == 0:
         return "no-og-tags"

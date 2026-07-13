@@ -606,7 +606,7 @@ function _bountyCaughtUp() {
   }
   try {
     const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
-    return !!(raw && raw.cutoff_chapter >= 1181);
+    return !!(raw && raw.cutoff_chapter >= 1188);
   } catch (_) { return false; }
 }
 function bountyValue(c) {
@@ -654,7 +654,7 @@ const _bountyCutoff = (typeof CodexSpoiler !== 'undefined') ? CodexSpoiler.effec
 // cutoff. Roger ฿5.56B was revealed Ch.1082; pre-Final-Saga readers
 // shouldn't see it. The ceiling rises by saga.
 function _bountyValuePlausible(value, cutoff) {
-  if (cutoff >= 1181 || cutoff === Infinity) return true;
+  if (cutoff >= 1188 || cutoff === Infinity) return true;
   if (cutoff < 234)  return value <=   100000000;  // East Blue → Marineford boundary, Crocodile 81M
   if (cutoff < 432)  return value <=   300000000;  // Pre-Marineford peak
   if (cutoff < 597)  return value <=   600000000;  // Marineford era
@@ -803,12 +803,12 @@ document.getElementById("sort").addEventListener("change", e => { sort = e.targe
 render();
 </script>
 <script src="settings.js"></script>
-<script src="spoiler-onboarding.js?v=1" defer></script>
+<script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="atmospheres.js" defer></script>
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=30" defer></script>
+<script src="nav-burger.js?v=32" defer></script>
 <script>
 // L18+L20 portrait silhouette gate. Sets data-spoiler-silhouette="1" on
 // <html> when the user's cutoff is less than LATEST_PUBLISHED_CHAPTER.
