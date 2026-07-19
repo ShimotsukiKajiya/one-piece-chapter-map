@@ -6608,6 +6608,30 @@
     "type": "character",
     "voice_actor_en": "Ivan Jasso"
   },
+  "Candelle": {
+    "affiliation": "Esperia Kingdom",
+    "appearances": 3,
+    "first_appearance": "Chapter 1183",
+    "found": true,
+    "name": "Candelle",
+    "name_en": "Candelle",
+    "name_jp": "キャンデル",
+    "name_romaji": "Kyanderu",
+    "occupation": "Queen of Esperia; Captain of Esperia Battle Convoy (former)",
+    "raw_keys": [
+      "affiliation",
+      "colorscheme",
+      "ename",
+      "first",
+      "jname",
+      "occupation",
+      "residence",
+      "rname",
+      "status"
+    ],
+    "residence": "Esperia Kingdom",
+    "status": "2"
+  },
   "Candre": {
     "affiliation": "Marines",
     "age": "Over 30",
@@ -31195,6 +31219,28 @@
     "slug": "manmayer-gunko",
     "type": "character"
   },
+  "Manmayer Gurou": {
+    "affiliation": "Knights of God; World Nobles (Manmayer Family)",
+    "appearances": 2,
+    "first_appearance": "Chapter 1185",
+    "found": true,
+    "name": "Manmayer Gurou",
+    "name_en": "Saint Manmayer Gurou",
+    "name_jp": "マンマイヤー・グロウ聖",
+    "name_romaji": "Manmaiyā Gurou Sei",
+    "raw_keys": [
+      "affiliation",
+      "colorscheme",
+      "ename",
+      "first",
+      "jname",
+      "residence",
+      "rname",
+      "status"
+    ],
+    "residence": "Mary Geoise",
+    "status": "1"
+  },
   "Mansherry": {
     "affiliation": "Tontatta Kingdom",
     "age": "25",
@@ -32028,8 +32074,23 @@
   },
   "Master of the Waters": {
     "appearances": 1,
-    "found": false,
-    "name": "Master of the Waters"
+    "first_appearance": "Chapter 319; Episode 227",
+    "found": true,
+    "name": "Master of the Waters",
+    "name_en": "Local Sea Monster (Long Ring Long Land)",
+    "name_jp": "近海の主 (ロングリングロングランド)",
+    "name_romaji": "Kinkai no Nushi (Ronguringu Rongurando)",
+    "occupation": "Sea King",
+    "raw_keys": [
+      "colorscheme",
+      "ename",
+      "first",
+      "jname",
+      "occupation",
+      "rname",
+      "status"
+    ],
+    "status": "1"
   },
   "Mato": {
     "age": "Over 44",
@@ -41501,6 +41562,31 @@
     "slug": "renona-topakka",
     "status": "2",
     "type": "character"
+  },
+  "Reuven": {
+    "affiliation": "Esperia Kingdom",
+    "appearances": 4,
+    "first_appearance": "Chapter 1183",
+    "found": true,
+    "name": "Reuven",
+    "name_en": "Reuven",
+    "name_jp": "ルーヴェン",
+    "name_romaji": "Rūven",
+    "occupation": "King of Esperia",
+    "raw_keys": [
+      "affiliation",
+      "age2",
+      "colorscheme",
+      "ename",
+      "first",
+      "jname",
+      "occupation",
+      "residence",
+      "rname",
+      "status"
+    ],
+    "residence": "Esperia Kingdom",
+    "status": "2"
   },
   "Richie": {
     "affiliation": "Cross Guild; Buggy's Delivery; Buggy and Alvida Alliance; Buggy Pirates",
