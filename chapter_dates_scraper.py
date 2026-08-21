@@ -77,6 +77,26 @@ VOLUMES = [
 # Anchor: chapter 1 was first published in Weekly Shonen Jump on this date
 ANCHOR_CH1_DATE = "1997-07-22"
 
+# Known WSJ issue dates for chapters published past the latest tankobon.
+# Japanese issue dates (Manga Plus publishes the day before, on the Sunday).
+# Oda's 2026 cadence is roughly three chapters then a break week, so a flat
+# weekly walk drifts badly here; these pins keep the frontier honest. Add a
+# row whenever a new chapter lands and the estimate can be replaced by fact.
+FRONTIER_DATES = {
+    1170: "2026-01-05", 1171: "2026-01-19", 1172: "2026-02-02",
+    1173: "2026-02-09", 1174: "2026-02-16", 1175: "2026-03-02",
+    1176: "2026-03-09", 1177: "2026-03-23", 1178: "2026-03-30",
+    1179: "2026-04-06", 1180: "2026-04-20", 1181: "2026-04-27",
+    1182: "2026-05-11", 1183: "2026-05-25", 1184: "2026-06-01",
+    1185: "2026-06-15", 1186: "2026-06-29", 1187: "2026-07-06",
+    1188: "2026-07-13", 1189: "2026-07-27", 1190: "2026-08-10",
+    1191: "2026-08-24",
+}
+
+# Average days between chapters across 2026 (36 chapters, 12 author breaks and
+# 4 magazine holidays across the year). Used only past the newest pin.
+FRONTIER_CADENCE_DAYS = 10
+
 # Last known chapter (post latest tankōbon, in WSJ but not yet collected).
 # This is a FLOOR — main() raises it to the max chapter in appearances.csv
 # (the chapter scraper's ground truth) so this file stays current without
@@ -166,12 +186,73 @@ def main() -> None:
         last_ch_done = last
         last_date_done = last_wsj
 
-    # 2. Continue weekly cadence for chapters past the last volume
+    # 2. Chapters past the last tankobon.
+    #
+    # Anything in FRONTIER_DATES is a real WSJ issue date and is written exact.
+    # Everything else is bounded by whatever real anchors sit either side of it,
+    # so break weeks get absorbed instead of accumulating as drift.
     if last_ch_done < LATEST_CHAPTER and last_date_done is not None:
-        d = last_date_done
+        pins = {ch: parse_date(v) for ch, v in FRONTIER_DATES.items()
+                if last_ch_done < ch <= LATEST_CHAPTER}
+
+        # Walk each run of unpinned chapters between two known points.
+        anchor_ch, anchor_d = last_ch_done, last_date_done
         for ch in range(last_ch_done + 1, LATEST_CHAPTER + 1):
-            d = d + timedelta(days=7)
+            if ch in pins:
+                span_ch = ch - anchor_ch
+                span_days = (pins[ch] - anchor_d).days
+                gap_chs = list(range(anchor_ch + 1, ch))
+                if span_days <= 0:
+                    # The previous anchor is not credible (a flat 6-week tankobon
+                    # lead badly underestimates break-heavy volumes). Trust the
+                    # pin and walk backwards from it at the observed cadence.
+                    for j, gap_ch in enumerate(reversed(gap_chs), start=1):
+                        d = pins[ch] - timedelta(days=FRONTIER_CADENCE_DAYS * j)
+                        chapters[str(gap_ch)] = {
+                            "date": fmt_date(d), "volume": None, "approximate": True,
+                        }
+                else:
+                    # Spread the run across the real elapsed time between anchors
+                    for i, gap_ch in enumerate(gap_chs, start=1):
+                        d = anchor_d + timedelta(days=round(span_days * i / span_ch))
+                        chapters[str(gap_ch)] = {
+                            "date": fmt_date(d), "volume": None, "approximate": True,
+                        }
+                chapters[str(ch)] = {
+                    "date": fmt_date(pins[ch]), "volume": None, "approximate": False,
+                }
+                anchor_ch, anchor_d = ch, pins[ch]
+
+        # Past the newest anchor there is nothing left to interpolate against,
+        # so step at the observed cadence rather than a flat week.
+        for ch in range(anchor_ch + 1, LATEST_CHAPTER + 1):
+            if str(ch) in chapters:
+                continue
+            d = anchor_d + timedelta(days=FRONTIER_CADENCE_DAYS * (ch - anchor_ch))
             chapters[str(ch)] = {"date": fmt_date(d), "volume": None, "approximate": True}
+
+    # 3. Monotonicity sweep -- a reader scrolling the release map must never
+    # see chapter N+1 dated before chapter N. Walk from the newest chapter back;
+    # wherever the previous chapter is dated on or after this one, pull it back
+    # to a plausible slot and stop calling it exact.
+    HARD = {1} | set(FRONTIER_DATES)
+    adjusted = 0
+    for ch in range(LATEST_CHAPTER, 1, -1):
+        cur, prev = chapters.get(str(ch)), chapters.get(str(ch - 1))
+        if not cur or not prev:
+            continue
+        if parse_date(prev["date"]) < parse_date(cur["date"]):
+            continue
+        if (ch - 1) in HARD:
+            # Two hard anchors disagree -- that is a data error worth shouting about
+            print(f"  WARNING: pinned Ch.{ch - 1} ({prev['date']}) is not before "
+                  f"Ch.{ch} ({cur['date']}) -- check FRONTIER_DATES")
+            continue
+        prev["date"] = fmt_date(parse_date(cur["date"]) - timedelta(days=7))
+        prev["approximate"] = True
+        adjusted += 1
+    if adjusted:
+        print(f"  Monotonicity sweep adjusted {adjusted} estimated chapter date(s)")
 
     out = {
         "_doc": (
@@ -182,9 +263,12 @@ def main() -> None:
             "LAST chapter of each volume is dated to its WSJ issue (also exact) and "
             "earlier chapters in the volume are linearly distributed back. "
             "Chapter 1's anchor is 1997-07-22 (WSJ Issue #34, 1997). "
-            "Chapters past the latest tankōbon use simple +7-day weekly cadence and "
-            "are flagged approximate=true. Real WSJ issue dates may differ by ±1 week "
-            "due to skip-weeks and irregular hiatuses not modelled here."
+            "Chapters past the latest tankōbon are pinned to real WSJ issue dates "
+            "where FRONTIER_DATES knows them (approximate=false); chapters between "
+            "two known anchors are spread across the real elapsed time so break "
+            "weeks are absorbed rather than accumulated. Only chapters newer than "
+            "the last pin are extrapolated, at the observed ~10-day 2026 cadence, "
+            "and those may still drift by a week or so until a pin catches up."
         ),
         "generated_on": datetime.now().strftime("%Y-%m-%d"),
         "anchor_chapter1": ANCHOR_CH1_DATE,

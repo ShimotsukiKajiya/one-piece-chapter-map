@@ -1,5 +1,5 @@
 {
-  "_doc": "Per-chapter publication date estimates. Volume release dates (volumes[].release_date) are EXACT — sourced from Wikipedia 'List of One Piece chapters'. Per-chapter dates are interpolated weekly between volume anchors with a ~6-week tankōbon lead-time, so the LAST chapter of each volume is dated to its WSJ issue (also exact) and earlier chapters in the volume are linearly distributed back. Chapter 1's anchor is 1997-07-22 (WSJ Issue #34, 1997). Chapters past the latest tankōbon use simple +7-day weekly cadence and are flagged approximate=true. Real WSJ issue dates may differ by ±1 week due to skip-weeks and irregular hiatuses not modelled here.",
+  "_doc": "Per-chapter publication date estimates. Volume release dates (volumes[].release_date) are EXACT — sourced from Wikipedia 'List of One Piece chapters'. Per-chapter dates are interpolated weekly between volume anchors with a ~6-week tankōbon lead-time, so the LAST chapter of each volume is dated to its WSJ issue (also exact) and earlier chapters in the volume are linearly distributed back. Chapter 1's anchor is 1997-07-22 (WSJ Issue #34, 1997). Chapters past the latest tankōbon are pinned to real WSJ issue dates where FRONTIER_DATES knows them (approximate=false); chapters between two known anchors are spread across the real elapsed time so break weeks are absorbed rather than accumulated. Only chapters newer than the last pin are extrapolated, at the observed ~10-day 2026 cadence, and those may still drift by a week or so until a pin catches up.",
   "generated_on": "2026-08-21",
   "anchor_chapter1": "1997-07-22",
   "tankobon_lead_days": 42,
@@ -6462,184 +6462,184 @@
       "approximate": true
     },
     "1155": {
-      "date": "2025-09-23",
+      "date": "2025-09-13",
       "volume": 113,
-      "approximate": false
+      "approximate": true
     },
     "1156": {
-      "date": "2025-09-30",
+      "date": "2025-09-20",
       "volume": 114,
       "approximate": true
     },
     "1157": {
-      "date": "2025-10-11",
+      "date": "2025-09-27",
       "volume": 114,
       "approximate": true
     },
     "1158": {
-      "date": "2025-10-23",
+      "date": "2025-10-04",
       "volume": 114,
       "approximate": true
     },
     "1159": {
-      "date": "2025-11-03",
+      "date": "2025-10-11",
       "volume": 114,
       "approximate": true
     },
     "1160": {
-      "date": "2025-11-14",
+      "date": "2025-10-18",
       "volume": 114,
       "approximate": true
     },
     "1161": {
-      "date": "2025-11-25",
+      "date": "2025-10-25",
       "volume": 114,
       "approximate": true
     },
     "1162": {
-      "date": "2025-12-07",
+      "date": "2025-11-01",
       "volume": 114,
       "approximate": true
     },
     "1163": {
-      "date": "2025-12-18",
+      "date": "2025-11-08",
       "volume": 114,
       "approximate": true
     },
     "1164": {
-      "date": "2025-12-29",
+      "date": "2025-11-15",
       "volume": 114,
       "approximate": true
     },
     "1165": {
-      "date": "2026-01-10",
+      "date": "2025-11-22",
       "volume": 114,
       "approximate": true
     },
     "1166": {
-      "date": "2026-01-21",
+      "date": "2025-11-29",
       "volume": 114,
-      "approximate": false
+      "approximate": true
     },
-    "1167": {
-      "date": "2026-01-28",
+    "1169": {
+      "date": "2025-12-26",
       "volume": null,
       "approximate": true
     },
     "1168": {
-      "date": "2026-02-04",
+      "date": "2025-12-16",
       "volume": null,
       "approximate": true
     },
-    "1169": {
-      "date": "2026-02-11",
+    "1167": {
+      "date": "2025-12-06",
       "volume": null,
       "approximate": true
     },
     "1170": {
-      "date": "2026-02-18",
+      "date": "2026-01-05",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1171": {
-      "date": "2026-02-25",
+      "date": "2026-01-19",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1172": {
-      "date": "2026-03-04",
+      "date": "2026-02-02",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1173": {
-      "date": "2026-03-11",
+      "date": "2026-02-09",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1174": {
-      "date": "2026-03-18",
+      "date": "2026-02-16",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1175": {
-      "date": "2026-03-25",
+      "date": "2026-03-02",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1176": {
-      "date": "2026-04-01",
+      "date": "2026-03-09",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1177": {
-      "date": "2026-04-08",
+      "date": "2026-03-23",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1178": {
-      "date": "2026-04-15",
+      "date": "2026-03-30",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1179": {
-      "date": "2026-04-22",
+      "date": "2026-04-06",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1180": {
-      "date": "2026-04-29",
+      "date": "2026-04-20",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1181": {
-      "date": "2026-05-06",
+      "date": "2026-04-27",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1182": {
-      "date": "2026-05-13",
+      "date": "2026-05-11",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1183": {
-      "date": "2026-05-20",
+      "date": "2026-05-25",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1184": {
-      "date": "2026-05-27",
+      "date": "2026-06-01",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1185": {
-      "date": "2026-06-03",
+      "date": "2026-06-15",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1186": {
-      "date": "2026-06-10",
+      "date": "2026-06-29",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1187": {
-      "date": "2026-06-17",
+      "date": "2026-07-06",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1188": {
-      "date": "2026-06-24",
+      "date": "2026-07-13",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1189": {
-      "date": "2026-07-01",
+      "date": "2026-07-27",
       "volume": null,
-      "approximate": true
+      "approximate": false
     },
     "1190": {
-      "date": "2026-07-08",
+      "date": "2026-08-10",
       "volume": null,
-      "approximate": true
+      "approximate": false
     }
   }
 }
