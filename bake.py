@@ -1131,6 +1131,9 @@ def _bake_location_counts(page_name):
         for loc_id, data in loc_shards.items()
         if len(data.get("born_here", [])) > 0 or len(data.get("arcs", [])) > 0
     }
+    # sorted(): built from set-backed lookups, so an unsorted dump reshuffles
+    # identical data every run and the scheduled refresh commits pure churn.
+    counts = dict(sorted(counts.items()))
     payload = json.dumps(counts, ensure_ascii=False, separators=(",", ":"))
     ok, size = bake_block(page, "location-counts", payload)
     if ok:
@@ -1157,6 +1160,8 @@ def bake_locations():
     if os.path.exists(loc_html):
         loc_shards = _build_location_shards_index()
         if loc_shards:
+            # sorted() for byte-stable output -- see the note on location-counts
+            loc_shards = dict(sorted(loc_shards.items()))
             shards_payload = json.dumps(loc_shards, ensure_ascii=False, separators=(",", ":"))
             bake_block(loc_html, "location-shards-data", shards_payload)
     # Bake born-in + set-in counts per location into locations.html
@@ -1561,8 +1566,10 @@ def _bake_chr_id_map(page_name, source_json_path):
 
     _walk(data)
 
+    # sorted(): candidates is a set, so unsorted iteration reshuffles this
+    # block on every run and every scheduled refresh commits pure churn.
     chr_map = {}
-    for name in candidates:
+    for name in sorted(candidates):
         eid = eidx.get(name.lower())
         if eid and eid.startswith("chr:"):
             chr_map[name] = eid
@@ -1986,6 +1993,10 @@ def bake_workbench():
                         continue
                     for variant in candidates:
                         alias_map[variant.lower()] = target
+            # Sorted so the block is byte-stable: alias_map is populated via
+            # set-backed lookups, so an unsorted dump reshuffles identical data
+            # every run and every scheduled refresh commits pure churn.
+            alias_map = dict(sorted(alias_map.items()))
             alias_payload = json.dumps(alias_map, ensure_ascii=False, separators=(",", ":"))
             ok_a, size_a = bake_block(prove_path, "aliases-map", alias_payload)
             if ok_a:
@@ -2127,6 +2138,50 @@ def _bake_home_stats():
     ok, size = bake_block(page, "home-stats", payload)
     if ok:
         print(f"  ✓ home.html     <- {len(stats)} stat fields baked ({size} KB)")
+
+    # Sync the static fallbacks that sit inside the stat tiles. JS overwrites
+    # these from the block above the moment it runs, but crawlers and link
+    # previews read the raw HTML -- leaving them stale publishes wrong numbers.
+    _sync_home_stat_fallbacks(page, stats)
+
+
+# Which hardcoded span maps to which baked stat field.
+_HOME_STAT_IDS = {
+    "s-chapters":  "chapters",
+    "s-characters": "characters",
+    "s-sbs":       "sbs",
+    "s-crews":     "crews",
+    "s-ships":     "ships",
+    "s-locations": "locations",
+    "s-voices":    "voices",
+}
+
+
+def _sync_home_stat_fallbacks(page, stats):
+    """Rewrite <div id="s-xxx">NNN</div> in place to match the baked stats."""
+    import re
+    try:
+        with open(page, encoding="utf-8") as f:
+            html = f.read()
+    except OSError:
+        return
+
+    changed = 0
+    for el_id, field in _HOME_STAT_IDS.items():
+        value = stats.get(field)
+        if not value:
+            continue
+        pattern = re.compile(r'(id="%s"[^>]*>)([^<]*)(</)' % re.escape(el_id))
+        m = pattern.search(html)
+        if not m or m.group(2) == value:
+            continue
+        html = html[:m.start(2)] + value + html[m.end(2):]
+        changed += 1
+
+    if changed:
+        with open(page, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"  ✓ home.html     <- {changed} static stat fallback(s) synced")
 
 
 def _bake_chr_debut_map_for_gating():
