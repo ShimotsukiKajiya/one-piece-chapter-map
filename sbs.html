@@ -112,6 +112,110 @@
     }
     #vol-jump:focus { border-color: var(--orange); }
 
+    /* -- SOURCE CREDIT ---------------------------------------------- */
+    .source-note {
+      margin: 10px 24px 0;
+      max-width: 880px;
+      font-size: .78rem;
+      line-height: 1.65;
+      color: var(--muted, #9a8f7d);
+      opacity: .82;
+    }
+    .source-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .source-note a:hover { color: var(--orange, #e8913c); }
+
+    /* -- VOLUME READING BAR ----------------------------------------- */
+    .vol-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 18px 24px 0;
+      padding: 12px 16px;
+      border: 1px solid var(--orange, #e8913c);
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(232,145,60,.13), rgba(232,145,60,.05));
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(6px);
+    }
+    .vol-bar[hidden] { display: none; }
+    .vol-bar-mid { flex: 1; text-align: center; min-width: 0; }
+    .vol-bar-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: var(--orange, #e8913c);
+    }
+    .vol-bar-sub { font-size: .78rem; color: var(--muted, #9a8f7d); margin-top: 2px; }
+    .vol-nav {
+      flex: 0 0 auto;
+      padding: 8px 14px;
+      border: 1px solid rgba(232,145,60,.45);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--fg, #eae0d0);
+      font: inherit;
+      font-size: .85rem;
+      cursor: pointer;
+      transition: background .15s, border-color .15s, transform .15s;
+    }
+    .vol-nav:hover:not(:disabled) {
+      background: rgba(232,145,60,.18);
+      border-color: var(--orange, #e8913c);
+      transform: translateY(-1px);
+    }
+    .vol-nav:disabled { opacity: .3; cursor: default; }
+    .vol-exit { flex: 0 0 auto; }
+    @media (max-width: 700px) {
+      .vol-bar { gap: 8px; padding: 10px; flex-wrap: wrap; }
+      .vol-nav-lbl { display: none; }
+      .vol-bar-title { font-size: 1rem; }
+      .vol-exit { order: 3; margin: 0 auto; }
+    }
+
+    /* -- SPOILER SHIELD NOTICE -------------------------------------- */
+    .shield-note {
+      margin: 14px 24px 0;
+      padding: 11px 16px;
+      border: 1px solid rgba(77, 187, 255, .45);
+      border-radius: 10px;
+      background: rgba(77, 187, 255, .09);
+      font-size: .85rem;
+      line-height: 1.6;
+      color: var(--fg, #eae0d0);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .shield-note[hidden] { display: none; }
+    .shield-note .sn-text { flex: 1; min-width: 220px; }
+    .shield-note button {
+      padding: 6px 12px;
+      border: 1px solid rgba(77, 187, 255, .6);
+      border-radius: 7px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-size: .8rem;
+      cursor: pointer;
+    }
+    .shield-note button:hover { background: rgba(77, 187, 255, .2); }
+
+    .shield-block {
+      margin: 28px auto;
+      max-width: 620px;
+      padding: 32px 28px;
+      text-align: center;
+      border: 1px solid rgba(77, 187, 255, .4);
+      border-radius: 14px;
+      background: rgba(77, 187, 255, .07);
+    }
+    .shield-block h3 { margin: 0 0 10px; font-size: 1.25rem; color: #4dbbff; }
+    .shield-block p { margin: 0 0 8px; font-size: .9rem; line-height: 1.7; color: var(--muted, #9a8f7d); }
+    .shield-block .sb-actions { margin-top: 18px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
     .stats {
       font-size: 0.75rem; color: var(--muted);
       margin-left: auto;
@@ -468,7 +572,17 @@
       .doon { display: none; }
     }
 
-    .vol-section { margin-bottom: 60px; position: relative; z-index: 2; }
+    .vol-section {
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 2;
+      /* The whole-archive view is 107 volumes deep. Let the browser skip
+         layout and paint for sections that are off-screen; they still exist
+         in the DOM, so search, Ctrl+F and #0432 permalinks behave exactly as
+         before. contain-intrinsic-size keeps the scrollbar honest. */
+      content-visibility: auto;
+      contain-intrinsic-size: auto 1400px;
+    }
 
     /* Wave divider above each volume (except first) */
     .vol-section + .vol-section .vol-header::before {
@@ -785,6 +899,8 @@
 
 <p style="margin:14px 24px 0;font-size:.9rem;line-height:1.6;color:var(--muted,#9a8f7d);max-width:880px">Every SBS Q&amp;A Oda has ever published, searchable and categorised. Outside the manga itself, the SBS is the series' primary source — when the Codex calls a fact <strong>canon</strong>, odds are the receipt lives here.</p>
 
+<p class="source-note">Q&amp;A text compiled from the <a href="https://onepiece.fandom.com/wiki/SBS" rel="noopener">One Piece Wiki</a>'s SBS pages (CC&nbsp;BY-SA), which draw many of their translations from <a href="https://thelibraryofohara.com/sbs-question-corner/" rel="noopener">The Library of Ohara</a> and other community translators. Original text and artwork &copy; Eiichiro Oda / Shueisha. <a href="about.html">How the Codex sources things &rarr;</a></p>
+
 <div class="toolbar">
   <input type="text" id="search" placeholder="Search questions and answers — e.g. 'Luffy age', 'devil fruit', 'Zoro name'…" autocomplete="off">
   <select id="vol-jump">
@@ -794,6 +910,21 @@
   <button id="random-btn" class="chip" title="Jump to a random Q&A">🎲 Surprise me</button>
   <span class="stats" id="stats">Loading…</span>
 </div>
+
+<!-- Volume reading view -- shown only when a single volume is in focus -->
+<div class="vol-bar" id="vol-bar" hidden>
+  <button class="vol-nav" id="vol-prev" type="button">&lsaquo;<span class="vol-nav-lbl"> Previous volume</span></button>
+  <div class="vol-bar-mid">
+    <div class="vol-bar-title" id="vol-bar-title">Volume</div>
+    <div class="vol-bar-sub" id="vol-bar-sub"></div>
+  </div>
+  <button class="vol-nav" id="vol-next" type="button"><span class="vol-nav-lbl">Next volume </span>&rsaquo;</button>
+  <button class="chip vol-exit" id="vol-exit" type="button" title="Show every volume again">&#10005; All volumes</button>
+</div>
+
+<!-- Honest note when the Spoiler Shield is holding volumes back. A silently
+     short archive reads as a broken site; say so and offer the way out. -->
+<div class="shield-note" id="shield-note" hidden></div>
 
 <div class="chips" id="chips"></div>
 
@@ -1079,6 +1210,14 @@ const CATEGORIES = {
 let archive = [];
 let byVolume = {};
 let activeCategory = 'all';
+// Volume reading view: null = every volume on one page (the default);
+// a number = focus one volume only. Driven by ?vol=N so it is shareable.
+let activeVolume = null;
+let volOrder = [];         // ascending volumes visible after the Spoiler Shield
+let fullVolumes = [];      // ascending volumes present in the baked data
+let gatedQaCount = 0;      // Q&As the shield is currently withholding
+let shieldCutoff = Infinity;
+let shieldedVolume = null; // a ?vol=N the reader asked for but cannot see yet
 let covers = {};
 let favorites = new Set(JSON.parse(localStorage.getItem('sbs-favorites') || '[]'));
 
@@ -1105,8 +1244,13 @@ function init(data) {
   // Spoiler Shield: filter SBS Q&As by their volume's last chapter against
   // the user's effective cutoff. SBS Vol N's content references the manga
   // state of that volume, so volume's last chapter is the correct gate.
+  fullVolumes = [...new Set(data.map(qa => parseInt(qa.volume, 10)).filter(Boolean))]
+    .sort((a, b) => a - b);
+  const fullCount = data.length;
+
   if (typeof CodexSpoiler !== 'undefined') {
     const cutoff = CodexSpoiler.effectiveCutoff('public');
+    shieldCutoff = cutoff;
     if (cutoff !== Infinity) {
       // Heuristic until chapter_dates.json loads: vol N ≈ chapter N*10
       data = data.filter(qa => {
@@ -1116,6 +1260,8 @@ function init(data) {
       });
     }
   }
+  // What the shield is holding back -- surfaced to the reader, never silent.
+  gatedQaCount = fullCount - data.length;
   archive = data;
 
   // Load covers (baked-in JSON block)
@@ -1143,6 +1289,24 @@ function init(data) {
   // Build the most-discussed character stats panel
   buildStats();
 
+  volOrder = Object.keys(byVolume).map(Number).sort((a, b) => a - b);
+
+  // Deep links into a single volume, in priority order:
+  //   sbs.html?vol=27   -- the shareable form
+  //   sbs.html#vol-27   -- the older anchor form, still honoured
+  const params = new URLSearchParams(location.search);
+  const hashVol = /^#vol-(\d+)$/.exec(location.hash);
+  const wanted = params.get('vol') || (hashVol ? hashVol[1] : null);
+  if (wanted) {
+    const n = Number(wanted);
+    if (byVolume[String(n)]) {
+      activeVolume = n;
+    } else if (fullVolumes.includes(n)) {
+      // The volume exists -- the reader's own shield is what hides it.
+      shieldedVolume = n;
+    }
+  }
+
   // Honour deep-link to a specific Q&A — wait a tick for layout
   setTimeout(scrollToHashIfAny, 80);
 
@@ -1151,6 +1315,75 @@ function init(data) {
     `${data.length.toLocaleString()} Q&A · ${vols} volumes`;
 
   render('');
+  syncVolBar();
+  syncShieldNote();
+}
+
+// -- VOLUME READING VIEW ------------------------------------------
+// Focus a single volume (or pass null to go back to the whole archive).
+// Keeps the URL in step so the address bar is always a link worth sharing.
+function setVolume(vol, opts) {
+  const o = opts || {};
+  shieldedVolume = null;
+  activeVolume = (vol === null || vol === undefined) ? null : Number(vol);
+  const url = new URL(location.href);
+  if (activeVolume === null) url.searchParams.delete('vol');
+  else url.searchParams.set('vol', String(activeVolume));
+  url.hash = '';
+  history.replaceState(null, '', url);
+  render(document.getElementById('search').value || '');
+  syncVolBar();
+  syncShieldNote();
+  updateClearBtn();
+  if (o.scroll !== false) window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Paint the reading bar to match current state. volOrder skips the three
+// volumes with no SBS at all (11, 26, 46), so prev/next never dead-ends.
+function syncVolBar() {
+  const bar = document.getElementById('vol-bar');
+  if (!bar) return;
+  if (activeVolume === null || shieldedVolume !== null) { bar.hidden = true; return; }
+  bar.hidden = false;
+
+  const idx  = volOrder.indexOf(activeVolume);
+  const prev = idx > 0 ? volOrder[idx - 1] : null;
+  const next = (idx >= 0 && idx < volOrder.length - 1) ? volOrder[idx + 1] : null;
+  const total = (byVolume[activeVolume] || []).length;
+
+  document.getElementById('vol-bar-title').textContent = 'Volume ' + activeVolume;
+  document.getElementById('vol-bar-sub').textContent =
+    total + ' Q&A \u00b7 volume ' + (idx + 1) + ' of ' + volOrder.length + ' with an SBS';
+
+  const pb = document.getElementById('vol-prev');
+  const nb = document.getElementById('vol-next');
+  pb.disabled = (prev === null);
+  nb.disabled = (next === null);
+  pb.title = prev === null ? 'This is the first SBS' : 'Go to Volume ' + prev;
+  nb.title = next === null ? 'This is the latest SBS' : 'Go to Volume ' + next;
+  pb.onclick = () => { if (prev !== null) setVolume(prev); };
+  nb.onclick = () => { if (next !== null) setVolume(next); };
+}
+
+// Jump the reader to the newest chapter and reload so every surface agrees.
+function codexCatchUp() {
+  if (typeof CodexSpoiler === 'undefined') return;
+  CodexSpoiler.setCaughtUp();
+  location.reload();
+}
+
+// A standing, quiet note whenever the shield is trimming the archive.
+function syncShieldNote() {
+  const el = document.getElementById('shield-note');
+  if (!el) return;
+  if (!gatedQaCount || shieldedVolume !== null) { el.hidden = true; return; }
+  const hiddenVols = fullVolumes.length - volOrder.length;
+  el.hidden = false;
+  el.innerHTML =
+    '<span class="sn-text">&#128737; Reading shield on \u2014 showing SBS up to about Chapter ' +
+    shieldCutoff + '. <strong>' + gatedQaCount.toLocaleString() + '</strong> later Q&A across <strong>' +
+    hiddenVols + '</strong> volume' + (hiddenVols === 1 ? '' : 's') + ' are hidden.</span>' +
+    '<button type="button" onclick="codexCatchUp()">&#127988;&#8205;&#9760;&#65039; I\'m fully caught up</button>';
 }
 
 // Top characters / topics Oda discusses most across SBS
@@ -1280,6 +1513,24 @@ function render(query) {
   const main = document.getElementById('main');
   const q    = query.toLowerCase().trim();
 
+  // Asked for a volume the shield will not show yet: explain, do not blank.
+  if (shieldedVolume !== null) {
+    document.getElementById('vol-bar').hidden = true;
+    document.getElementById('shield-note').hidden = true;
+    main.innerHTML =
+      '<div class="shield-block">' +
+      '<h3>Volume ' + shieldedVolume + ' is behind your reading shield</h3>' +
+      '<p>The Codex is currently showing you the story up to about <strong>Chapter ' +
+        shieldCutoff + '</strong>, so this volume\'s SBS stays sealed.</p>' +
+      '<p>Nothing is missing \u2014 it unlocks the moment you tell the Codex where you are.</p>' +
+      '<div class="sb-actions">' +
+        '<button class="chip" onclick="codexCatchUp()">&#127988;&#8205;&#9760;&#65039; I\'m fully caught up</button>' +
+        '<button class="chip" onclick="shieldedVolume=null;setVolume(null)">Browse what I can see</button>' +
+      '</div></div>';
+    document.getElementById('stats').textContent = 'Volume ' + shieldedVolume + ' \u2014 shielded';
+    return;
+  }
+
   let hits = 0;
   let html = '';
 
@@ -1298,7 +1549,11 @@ function render(query) {
     return candidate;
   };
 
-  const sortedVols = Object.keys(byVolume).sort((a,b) => +a - +b);
+  // In volume reading view only one volume is built into the DOM -- the
+  // whole-archive render is ~31k nodes, a single volume is a few hundred.
+  const sortedVols = (activeVolume !== null)
+    ? (byVolume[activeVolume] ? [String(activeVolume)] : [])
+    : Object.keys(byVolume).sort((a,b) => +a - +b);
 
   for (const vol of sortedVols) {
     const items = byVolume[vol];
@@ -1427,19 +1682,29 @@ function render(query) {
   }
 
   if (!hits) {
-    html = `<div class="empty"><h3>No matches</h3><p>Try a different search term.</p></div>`;
+    // Inside a single volume a miss usually means "right search, wrong
+    // volume" -- offer the way out rather than a dead end.
+    html = (activeVolume !== null && q)
+      ? '<div class="empty"><h3>No matches in Volume ' + activeVolume + '</h3>' +
+        '<p>Nothing here answers &ldquo;' + escHtml(query) + '&rdquo;.</p>' +
+        '<p><button class="chip" onclick="setVolume(null)">Search all ' + volOrder.length +
+        ' volumes instead &rarr;</button></p></div>'
+      : '<div class="empty"><h3>No matches</h3><p>Try a different search term.</p></div>';
   }
 
   main.innerHTML = html;
 
   // Update stats with hit count when searching
+  const statsEl = document.getElementById('stats');
   if (q) {
-    document.getElementById('stats').textContent =
-      `${hits} match${hits === 1 ? '' : 'es'} for "${query}"`;
+    statsEl.textContent = (activeVolume !== null)
+      ? hits + ' match' + (hits === 1 ? '' : 'es') + ' in Volume ' + activeVolume
+      : hits + ' match' + (hits === 1 ? '' : 'es') + ' for "' + query + '"';
+  } else if (activeVolume !== null) {
+    statsEl.textContent = 'Volume ' + activeVolume + ' \u00b7 ' + hits + ' Q&A';
   } else {
-    const vols = Object.keys(byVolume).length;
-    document.getElementById('stats').textContent =
-      `${archive.length.toLocaleString()} Q&A · ${vols} volumes`;
+    statsEl.textContent = archive.length.toLocaleString() +
+      ' Q&A \u00b7 ' + Object.keys(byVolume).length + ' volumes';
   }
 }
 
@@ -1479,8 +1744,7 @@ function clearFilters() {
   activeCategory = 'all';
   document.getElementById('search').value = '';
   buildChips();
-  render('');
-  updateClearBtn();
+  setVolume(null, { scroll: false });
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 document.getElementById('clear-btn').addEventListener('click', clearFilters);
@@ -1489,6 +1753,7 @@ document.getElementById('clear-btn').addEventListener('click', clearFilters);
 function updateClearBtn() {
   const btn = document.getElementById('clear-btn');
   const hasFilter = activeCategory !== 'all'
+                 || activeVolume !== null
                  || document.getElementById('search').value.trim() !== '';
   btn.classList.toggle('active', hasFilter);
 }
@@ -1536,9 +1801,19 @@ document.addEventListener('keydown', e => {
 document.getElementById('vol-jump').addEventListener('change', e => {
   const v = e.target.value;
   if (!v) return;
-  const target = document.getElementById(`vol-${v}`);
-  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setVolume(v);
   e.target.value = '';
+});
+
+document.getElementById('vol-exit').addEventListener('click', () => setVolume(null));
+
+// Left/right arrows step through volumes while reading one, unless typing
+document.addEventListener('keydown', e => {
+  if (activeVolume === null) return;
+  if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === 'ArrowLeft')  document.getElementById('vol-prev').click();
+  if (e.key === 'ArrowRight') document.getElementById('vol-next').click();
 });
 
 // ── CITE BUTTON DELEGATION ───────────────────────────────────────
