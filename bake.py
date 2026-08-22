@@ -515,6 +515,14 @@ def _build_shards_index(records):
             continue
         try:
             dossier = _q.character_dossier(chr_id)
+            # Rows come back as references shared by every dossier that
+            # mentions them; annotating in place lets the LAST character
+            # baked overwrite _display for everyone (Luffy's sworn-brother
+            # rows read "Monkey D. Luffy" because Ace and Sabo bake after
+            # him). Copy each row before touching it.
+            for _k, _v in list(dossier.items()):
+                if isinstance(_v, list):
+                    dossier[_k] = [dict(r) if isinstance(r, dict) else r for r in _v]
             # Annotate cross-referenced IDs with display names so JS can show
             # human-readable labels without a client-side entity-index lookup.
             for key in ("fruits", "owns", "crews"):
