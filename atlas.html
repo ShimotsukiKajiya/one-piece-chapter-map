@@ -50,7 +50,10 @@
       gap: 12px;
     }
 
-    .logo h1 {
+    .logo .logo-title {
+      /* was the h1 — carry its UA block margin so the header height holds */
+      display: block;
+      margin: 0.67em 0;
       font-size: clamp(0.95rem, 1.4rem, 1.4rem);
       font-weight: 900;
       letter-spacing: 2px;
@@ -66,6 +69,9 @@
       font-size: 0.75rem;
       color: var(--muted);
       letter-spacing: 1px;
+      /* .logo-sub is now the page h1 — shed the UA heading defaults */
+      margin: 0;
+      font-weight: 400;
     }
 
     .header-stats {
@@ -245,7 +251,7 @@
     @media (max-width: 760px) {
       body { height: auto; overflow: auto; }       /* allow page scroll on mobile */
       header { padding: 4px 14px 8px 14px !important; flex-wrap: wrap; gap: 8px; }
-      .logo h1 { font-size: 1.05rem; letter-spacing: 2px; white-space: normal; }
+      .logo .logo-title { font-size: 1.05rem; letter-spacing: 2px; white-space: normal; }
       .logo-sub { font-size: 0.62rem; }
       nav { gap: 4px; flex-wrap: wrap; }
       nav a { padding: 4px 9px; font-size: 0.72rem; }
@@ -709,8 +715,8 @@
 
 <header>
   <a class="logo" href="home.html" title="Back to home" style="text-decoration:none">
-    <h1>The Shimotsuki Codex</h1>
-    <span class="logo-sub">Chapter Atlas</span>
+    <span class="logo-title">The Shimotsuki Codex</span>
+    <h1 class="logo-sub">Chapter Atlas</h1>
   </a>
 </header>
 
@@ -28842,6 +28848,24 @@ function _makeChapterCell(i) {
 }
 for (let i = 1; i <= TOTAL; i++) _makeChapterCell(i);
 
+// ── CHARACTER SEARCH DATALIST ────────────────────────
+// The grid greys out chapters past the cutoff — the autocomplete must not
+// hand those chapters' character names over anyway. Suggesting "Imu" to a
+// reader parked at Ch. 592 is itself the spoiler. charData holds a debut
+// chapter for every loaded name (both CSV paths fill it), so this filters
+// locally; typing a full name by hand still highlights as before.
+function rebuildCharDatalist() {
+  const dl = document.getElementById('char-datalist');
+  if (!dl) return;
+  const cutoff = _atlasSpoilerCutoff();
+  dl.innerHTML = '';
+  Object.keys(charData).sort().forEach(n => {
+    const rec = charData[n];
+    if (rec && typeof rec.chapter === 'number' && rec.chapter > cutoff) return;
+    const opt = document.createElement('option'); opt.value = n; dl.appendChild(opt);
+  });
+}
+
 // ── LIVE RE-RENDER ON SPOILER CUTOFF CHANGE ──────────────────
 // Walk existing cells, re-apply spoiler class + arc colour, re-add or remove
 // event markers. Cheaper than rebuilding the entire grid.
@@ -28849,6 +28873,8 @@ function _atlasReapplySpoiler() {
   _scrubEventMaps();
   // Also re-render the sidebar legend so arcs past the new cutoff disappear.
   if (typeof buildLegend === 'function') buildLegend();
+  // …and refilter the character autocomplete for the new cutoff.
+  rebuildCharDatalist();
   const cutoff = _atlasSpoilerCutoff();
   for (let i = 1; i <= TOTAL; i++) {
     const el = blocks[i - 1];
@@ -29459,12 +29485,9 @@ function parseCSV(text) {
       if (!chapterDebuts[debut].includes(name)) chapterDebuts[debut].push(name);
     });
 
-    // Rebuild datalist from appearances
-    const dl = document.getElementById('char-datalist');
-    dl.innerHTML = '';
-    Object.keys(appearanceData).sort().forEach(n => {
-      const opt = document.createElement('option'); opt.value = n; dl.appendChild(opt);
-    });
+    // Rebuild datalist from appearances (shield-aware — charData was just
+    // derived above, so every name here has a debut chapter to filter on)
+    rebuildCharDatalist();
 
     appearancesLoaded = true;
     csvLoaded = true;
@@ -29482,11 +29505,7 @@ function parseCSV(text) {
       if (!chapterDebuts[chapter].includes(name)) chapterDebuts[chapter].push(name);
     });
 
-    const dl = document.getElementById('char-datalist');
-    dl.innerHTML = '';
-    Object.keys(charData).sort().forEach(n => {
-      const opt = document.createElement('option'); opt.value = n; dl.appendChild(opt);
-    });
+    rebuildCharDatalist();
 
     csvLoaded = true;
     const total = Object.keys(charData).length;

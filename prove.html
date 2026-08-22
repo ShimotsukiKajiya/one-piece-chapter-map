@@ -27,13 +27,16 @@
     position: sticky; top:0; z-index: 50;
   }
   .logo { text-decoration:none; color:inherit; }
-  .logo h1 {
+  .logo .logo-title {
+    /* was the h1 — carry its UA display/margin so the header layout holds */
+    display: block; margin: 0.67em 0;
     font-size: 1.4rem; font-weight: 900; letter-spacing: 3px;
     background: linear-gradient(180deg, var(--gold-bright), var(--gold));
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .logo-sub { font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  /* .logo-sub is now the page h1 — margin/weight shed the UA heading defaults */
+  .logo-sub { font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin: 0; font-weight: 400; }
   nav { display:flex; gap: 18px; align-items:center; flex-wrap: wrap; }
   nav a { color: var(--text); text-decoration:none; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 10px; border-radius: 6px; }
   nav a:hover, nav a.active { color: var(--gold-bright); background: var(--surface2); }
@@ -148,7 +151,7 @@
 <body>
 
 <header>
-  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Prove</span></a>
+  <a class="logo" href="home.html"><span class="logo-title">The Shimotsuki Codex</span><h1 class="logo-sub">Prove</h1></a>
   
 </header>
 
@@ -271,10 +274,27 @@ function resolveSubject(name) {
   return name;  // unchanged — let downstream handle "unknown"
 }
 
-// Populate datalist with all names (canonical + aliases). Browsers handle
-// ~1.6k datalist options fine — they're filtered as the user types.
+// Populate datalist (canonical + aliases), shield-aware: suggesting a name
+// is itself a spoiler, so anyone debuting past the reading cutoff stays out
+// of autocomplete. Names the debut map doesn't know remain listed (fail-open)
+// — which also keeps file:// working, where the map fetch fails and the list
+// simply shows everything as before. Typing a full name still proves anything.
 const dl = document.getElementById('subj-list');
-dl.innerHTML = CHARS.map(n => `<option value="${escapeHTML(n)}">`).join('');
+function fillSubjectList() {
+  let names = CHARS;
+  if (typeof CodexSpoiler !== 'undefined') {
+    const cutoff = CodexSpoiler.effectiveCutoff('public');
+    names = CHARS.filter(n => {
+      const debut = CodexSpoiler.characterDebutChapter(n);
+      return debut == null || debut <= cutoff;
+    });
+  }
+  dl.innerHTML = names.map(n => `<option value="${escapeHTML(n)}">`).join('');
+}
+fillSubjectList();
+if (typeof CodexSpoiler !== 'undefined' && CodexSpoiler.loadCharacterDebutMap) {
+  CodexSpoiler.loadCharacterDebutMap().then(fillSubjectList);
+}
 
 function escapeHTML(s) {
   if (s == null) return '';

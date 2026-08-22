@@ -14,8 +14,8 @@
   body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.012) 1px,transparent 1px);background-size:14px 14px;pointer-events:none;z-index:0}
   header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
   .logo{text-decoration:none;color:inherit}
-  .logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  .logo .logo-title{display:block;margin:.67em 0;font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin:0;font-weight:400}
   nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
   nav a{color:var(--text);text-decoration:none;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px;border-radius:6px}
   nav a:hover,nav a.active{color:var(--gold-bright);background:var(--surface2)}
@@ -110,7 +110,7 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
 </head>
 <body>
 <header>
-  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Compare</span></a>
+  <a class="logo" href="home.html"><span class="logo-title">The Shimotsuki Codex</span><h1 class="logo-sub">Compare</h1></a>
   
 </header>
 
@@ -177,9 +177,17 @@ const SETS = {
   "d-clan":  ["Monkey D. Luffy","Monkey D. Dragon","Monkey D. Garp","Portgas D. Ace"],
 };
 
-// Datalist
+// Datalist — shield-aware: suggesting a name is itself a spoiler, so anyone
+// whose first chapter is past the reading cutoff stays out of autocomplete.
+// Records without a parseable debut stay listed (fail-open); typing a full
+// name by hand still works — only the suggestions filter.
 const dl = document.getElementById("char-list");
-dl.innerHTML = RAW.slice(0, 600).map(r => `<option value="${escapeHTML(r.name)}">`).join("");
+const _dlCutoff = (typeof CodexSpoiler !== "undefined")
+  ? CodexSpoiler.effectiveCutoff("public") : Infinity;
+dl.innerHTML = RAW.filter(r => {
+  const m = /Chapter\s+(\d+)/i.exec(r.first_appearance || "");
+  return !m || +m[1] <= _dlCutoff;
+}).slice(0, 600).map(r => `<option value="${escapeHTML(r.name)}">`).join("");
 
 // State: list of character names being compared (URL-shared via ?names=A,B,C)
 let chars = [];
