@@ -576,15 +576,8 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
   <a class="feature" href="arcs.html">
     <div class="feature-icon">📚</div>
     <h3>Story Arcs</h3>
-    <p>Every arc from East Blue through Elbaph — chapter ranges, saga grouping, and set-in location links.</p>
+    <p>Every arc from East Blue through the current arc — chapter ranges, saga grouping, and set-in location links.</p>
     <div class="feature-stat"><strong>33</strong> arcs · <strong>10</strong> sagas · every chapter</div>
-  </a>
-
-  <a class="feature" href="workbench.html">
-    <div class="feature-icon">📌</div>
-    <h3>Theory Workbench</h3>
-    <p>Build theories with cited evidence. Pin Fact Cards, set stance, submit to the Codex.</p>
-    <div class="feature-stat" id="fs-workbench"><strong>…</strong> Fact Cards · research tool</div>
   </a>
 
   <a class="feature" href="prove.html">
@@ -747,7 +740,7 @@ function saveCache(patch) {
     s('s-crews', b.crews); s('s-voices', b.voices);
     h('fs-map', b.fsMap); h('fs-sbs', b.fsSbs);
     h('fs-punk', b.fsPunk); h('fs-awakenings', b.fsAwakenings);
-    h('fs-workbench', b.fsWorkbench); h('fs-ships', b.fsShips);
+    h('fs-ships', b.fsShips);
     h('fs-voices', b.fsVoices); h('fs-locs', b.fsLocs);
   } catch (_) {}
 })();
@@ -804,15 +797,6 @@ fetch('awakenings.json').then(r => r.json()).then(j => {
   const fsAwakenings = `<strong>${n}</strong> awakenings tracked · type-coded`;
   setHtml('fs-awakenings', fsAwakenings);
   saveCache({ fsAwakenings });
-}).catch(_ => {});
-
-fetch('workbench.html').then(r => r.text()).then(html => {
-  const m = html.match(/<script id="workbench-cards"[^>]*>([\s\S]*?)<\/script>/);
-  if (!m) return;
-  const cards = JSON.parse(m[1]);
-  const fsWorkbench = `<strong>${fmt(cards.length)}</strong> Fact Cards across SBS · characters · theories · covers`;
-  setHtml('fs-workbench', fsWorkbench);
-  saveCache({ fsWorkbench });
 }).catch(_ => {});
 
 fetch('ships.html').then(r => r.text()).then(html => {
