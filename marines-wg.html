@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marines & World Govt · The Shimotsuki Codex</title>
-<meta name="description" content="Marines and World Government — every named officer, agency, Cipher Pol unit, and Celestial Dragon in One Piece, with ranks and arcs.">
+<meta name="description" content="The World Government and Marine hierarchy — every rank and secret unit, shown only as far as your chapter.">
 <link rel="stylesheet" href="cite-styles.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#d4a44a">
@@ -39,6 +39,12 @@
   .member-note{color:var(--muted);font-size:.74rem;margin-top:3px;line-height:1.4}
 
   footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+.shield-note{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 4px;padding:11px 16px;border:1px solid rgba(77,187,255,.45);border-radius:10px;background:rgba(77,187,255,.09);font-size:.85rem;line-height:1.6}
+.shield-note[hidden]{display:none}
+.shield-note .sn-text{flex:1;min-width:220px}
+.shield-note button{padding:6px 12px;border:1px solid rgba(77,187,255,.6);border-radius:7px;background:transparent;color:inherit;font:inherit;font-size:.8rem;cursor:pointer}
+.shield-note button:hover{background:rgba(77,187,255,.2)}
+.member .asof{font-size:.62rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 </style>
 <style id="nav-burger-critical">
   header { padding-right: 240px !important; padding-left: 24px !important; }
@@ -46,7 +52,7 @@
 </style>
   <link rel="canonical" href="https://shimotsukicodex.com/marines-wg.html">
   <meta property="og:title" content="Marines & World Govt · The Shimotsuki Codex">
-  <meta property="og:description" content="Marines and World Government — every named officer, agency, Cipher Pol unit, and Celestial Dragon in One Piece, with ranks and arcs.">
+  <meta property="og:description" content="The World Government and Marine hierarchy — every rank and secret unit, shown only as far as your chapter.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shimotsukicodex.com/marines-wg.html">
   <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
@@ -54,7 +60,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ShimotsukiCodex">
   <meta name="twitter:title" content="Marines & World Govt · The Shimotsuki Codex">
-  <meta name="twitter:description" content="Marines and World Government — every named officer, agency, Cipher Pol unit, and Celestial Dragon in One Piece, with ranks and arcs.">
+  <meta name="twitter:description" content="The World Government and Marine hierarchy — every rank and secret unit, shown only as far as your chapter.">
   <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
 </head>
 <body>
@@ -64,115 +70,698 @@
 <main>
 <div class="page-hero">
   <h2 class="title">🪽 Marines & World Government</h2>
-  <p class="blurb">The full structural hierarchy of the World Government and the Marines that enforce it — from the Five Elders and the secret occupant of the Empty Throne, down through the Fleet Admiral, the three serving Admirals, the Vice Admirals, the secret Cipher Pol units, and SWORD's deniable rookies.</p>
+  <p class="blurb">The structural hierarchy of the World Government and the Marines that enforce it — shown as far as <em>your</em> chapter knows it. Ranks, units and secrets appear here when the story reveals them, and some of this chart's most important lines are the ones you can't see yet.</p>
   <div class="gold-rule"></div>
 </div>
+  <div class="shield-note" id="shield-note" hidden></div>
   <div id="tiers"></div>
 </main>
 <script id="marines-data" type="application/json">
 {
-  "_doc": "Marines + World Government structural hierarchy. Six tiers from the Five Elders down to common soldiers. Each tier lists current + notable historical members with brief notes.",
-  "generated_on": "2026-04-27",
+  "_doc": "The World Government and Marine hierarchy. LADDERED (2026-08-22): tiers AND members are rung-stacks — the reader sees the hierarchy as it looked at THEIR chapter. A tier can change its own name and summary ('The Five Elders' is the apex of the world a Ch. 300 reader knows; 'Government Apex' with Imu above them is a Ch. 908 truth). Members appear when the reader learns they BELONG here, not at debut — Kalifa and Blueno being CP9 is the Water 7 twist itself (Ch. 347), Vergo's Vice-Admiral entry is clean until Ch. 673 makes him a mole. Maintainer QA flags are in _qa_flags.",
+  "generated_on": "2026-08-22",
+  "_qa_flags": [
+    "Nerona-D: the previous data said 'D. status confirmed' but will-of-d.json lists Nerona D. Imu as NOT confirmed. Rung text currently stops at the family name (1086). If a late chapter (1140s+?) confirmed the D., supply the chapter + wording.",
+    "Nusjuro: previous data said he 'wields the legendary blade Shimotsuki'. Chapter for that name-drop needed before it goes in a rung.",
+    "Imu 1189-1191 new-form rung: needs maintainer wording (same as void-century).",
+    "Uncertain chapters marked in rung notes: Tsuru 556, Momonga 508, Kong 594, Stussy-CP0 892, Coby-SWORD 1061, Saturn-immortality 1110, Onigumo-fruit 1111."
+  ],
   "tiers": [
     {
-      "label": "Government Apex",
       "rank": 0,
-      "summary": "Beyond the Marines — the true rulers of the world.",
+      "rungs": [
+        {
+          "ch": 233,
+          "label": "The Five Elders",
+          "summary": "The highest publicly known authority of the World Government — five old men above even the Fleet Admiral."
+        },
+        {
+          "ch": 908,
+          "label": "Government Apex",
+          "summary": "Beyond the Marines — the true rulers of the world. And above the Five Elders sits something the world was never told about."
+        }
+      ],
       "members": [
-        { "name": "Nerona Imu",                       "role": "Sovereign of the Empty Throne", "note": "Hidden ruler, occupies the Empty Throne. Family name Nerona revealed; D. status confirmed." },
-        { "name": "Saint Jaygarcia Saturn",           "role": "Five Elder · Defence",          "note": "Spider-Ox true form. Known for immortality." },
-        { "name": "Saint Marcus Mars",                "role": "Five Elder · Environment",      "note": "Itsumade Bird true form." },
-        { "name": "Saint Topman Warcury",             "role": "Five Elder · Justice",          "note": "Boar Demon true form." },
-        { "name": "Saint Ethanbaron V. Nusjuro",      "role": "Five Elder · Finance",          "note": "Sabre-Toothed Cat true form. Wields the legendary blade Shimotsuki." },
-        { "name": "Saint Shepherd Ju Peter",          "role": "Five Elder · Agriculture",      "note": "Snake-Plant true form." }
+        {
+          "name": "Imu",
+          "rungs": [
+            {
+              "ch": 908,
+              "role": "Sovereign of the Empty Throne",
+              "note": "The Reverie showed it: the Empty Throne is occupied, and the Five Elders kneel to its occupant. To the world, the throne is still empty."
+            },
+            {
+              "ch": 1086,
+              "role": "Sovereign of the Empty Throne",
+              "note": "Hidden ruler of the world. Erased Lulusia on a word; spoke the name 'Lili' to King Cobra before his death. Family name: Nerona."
+            }
+          ]
+        },
+        {
+          "name": "The Five Elders",
+          "maxCh": 1086,
+          "rungs": [
+            {
+              "ch": 233,
+              "role": "The world's highest authority",
+              "note": "Five unnamed old men who steer the World Government from Mariejois. Even the Fleet Admiral answers to them."
+            },
+            {
+              "ch": 908,
+              "role": "The highest authority... in public",
+              "note": "Five old men who steer the World Government — and who were just seen kneeling to someone the world does not know exists."
+            }
+          ]
+        },
+        {
+          "name": "Saint Jaygarcia Saturn",
+          "rungs": [
+            {
+              "ch": 1086,
+              "role": "Five Elder · Defence",
+              "note": "Warrior God of Science and Defence."
+            },
+            {
+              "ch": 1094,
+              "role": "Five Elder · Defence",
+              "note": "Warrior God of Science and Defence. His true form — a monstrous spider-ox — walked onto Egghead in person."
+            }
+          ]
+        },
+        {
+          "name": "Saint Marcus Mars",
+          "rungs": [
+            {
+              "ch": 1086,
+              "role": "Five Elder · Environment",
+              "note": "Warrior God of Environment."
+            },
+            {
+              "ch": 1110,
+              "role": "Five Elder · Environment",
+              "note": "Warrior God of Environment. True form: the Itsumade bird."
+            }
+          ]
+        },
+        {
+          "name": "Saint Topman Warcury",
+          "rungs": [
+            {
+              "ch": 1086,
+              "role": "Five Elder · Justice",
+              "note": "Warrior God of Justice."
+            },
+            {
+              "ch": 1110,
+              "role": "Five Elder · Justice",
+              "note": "Warrior God of Justice. True form: the boar demon Fengxi."
+            }
+          ]
+        },
+        {
+          "name": "Saint Ethanbaron V. Nusjuro",
+          "rungs": [
+            {
+              "ch": 1086,
+              "role": "Five Elder · Finance",
+              "note": "Warrior God of Finance. Carries a katana at all times."
+            },
+            {
+              "ch": 1110,
+              "role": "Five Elder · Finance",
+              "note": "Warrior God of Finance. True form: the sabre-toothed bakotsu — a skeletal horse-demon on the battlefield."
+            }
+          ]
+        },
+        {
+          "name": "Saint Shepherd Ju Peter",
+          "rungs": [
+            {
+              "ch": 1086,
+              "role": "Five Elder · Agriculture",
+              "note": "Warrior God of Agriculture."
+            },
+            {
+              "ch": 1110,
+              "role": "Five Elder · Agriculture",
+              "note": "Warrior God of Agriculture. True form: the sandworm."
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "Fleet Admiral",
       "rank": 1,
-      "summary": "Supreme commander of the Marines, answers only to the Five Elders.",
+      "rungs": [
+        {
+          "ch": 234,
+          "label": "Fleet Admiral",
+          "summary": "Supreme commander of the Marines, answering only to the Five Elders."
+        }
+      ],
       "members": [
-        { "name": "Sakazuki",                         "role": "Fleet Admiral (current)",        "note": "Magu Magu no Mi (magma). Hard-line Absolute Justice." },
-        { "name": "Sengoku",                          "role": "Fleet Admiral (former)",         "note": "Hito Hito no Mi, Model: Daibutsu. Now an Inspector General." },
-        { "name": "Kong",                             "role": "Fleet Admiral (former)",         "note": "Stepped up to World Government Commander-in-Chief." }
+        {
+          "name": "Sengoku",
+          "rungs": [
+            {
+              "ch": 234,
+              "role": "Fleet Admiral",
+              "note": "'Sengoku the Buddha' — supreme commander of the Marines."
+            },
+            {
+              "ch": 570,
+              "role": "Fleet Admiral",
+              "note": "Hito Hito no Mi, Model: Daibutsu — the Buddha epithet was literal."
+            },
+            {
+              "ch": 650,
+              "role": "Fleet Admiral (former)",
+              "note": "Hito Hito no Mi, Model: Daibutsu. Stepped down after the war; now Inspector General."
+            }
+          ]
+        },
+        {
+          "name": "Sakazuki",
+          "rungs": [
+            {
+              "ch": 650,
+              "role": "Fleet Admiral (current)",
+              "note": "Magu Magu no Mi (magma). Hard-line Absolute Justice. Took the post after beating Kuzan for it."
+            }
+          ]
+        },
+        {
+          "name": "Kong",
+          "rungs": [
+            {
+              "ch": 594,
+              "role": "Fleet Admiral (former)",
+              "note": "Fleet Admiral of Roger's era; stepped up to World Government Commander-in-Chief. (QA: chapter approximate)"
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "Admirals",
       "rank": 2,
-      "summary": "The Marines' top-tier combatants — three serving plus reserves.",
+      "rungs": [
+        {
+          "ch": 303,
+          "label": "Admirals",
+          "summary": "The Marines' top-tier combatants — the Government's greatest military force."
+        }
+      ],
       "members": [
-        { "name": "Borsalino",                        "role": "Admiral Kizaru (current)",       "note": "Pika Pika no Mi (light)." },
-        { "name": "Issho",                            "role": "Admiral Fujitora (current)",     "note": "Gravity-gravity (Zushi Zushi). Voluntarily blinded." },
-        { "name": "Aramaki",                          "role": "Admiral Ryokugyu (current)",     "note": "Mori Mori no Mi (forest)." },
-        { "name": "Kuzan",                            "role": "Admiral Aokiji (former)",        "note": "Hie Hie no Mi (ice). Defected to Blackbeard Pirates." },
-        { "name": "Sakazuki",                         "role": "Admiral Akainu (former)",        "note": "Promoted to Fleet Admiral after defeating Aokiji." }
+        {
+          "name": "Kuzan",
+          "rungs": [
+            {
+              "ch": 319,
+              "role": "Admiral Aokiji",
+              "note": "Hie Hie no Mi (ice). Wanders where he pleases; froze the sea to visit the Straw Hats personally."
+            },
+            {
+              "ch": 650,
+              "role": "Admiral Aokiji (former)",
+              "note": "Hie Hie no Mi (ice). Lost the Fleet Admiral post to Sakazuki after a ten-day duel, and left the Marines."
+            },
+            {
+              "ch": 793,
+              "role": "Admiral Aokiji (former)",
+              "note": "Hie Hie no Mi (ice). Left the Marines after losing the top post — and has since been seen moving with the Blackbeard Pirates."
+            }
+          ]
+        },
+        {
+          "name": "Borsalino",
+          "rungs": [
+            {
+              "ch": 504,
+              "role": "Admiral Kizaru (current)",
+              "note": "Pika Pika no Mi (light). Unsettlingly casual about everything, including violence."
+            }
+          ]
+        },
+        {
+          "name": "Sakazuki",
+          "rungs": [
+            {
+              "ch": 397,
+              "role": "Admiral Akainu",
+              "note": "The admiral who ordered the evacuation ship destroyed at Ohara. Absolute Justice at its most absolute."
+            },
+            {
+              "ch": 650,
+              "role": "Admiral Akainu (former)",
+              "note": "Promoted to Fleet Admiral after defeating Kuzan."
+            }
+          ]
+        },
+        {
+          "name": "Issho",
+          "rungs": [
+            {
+              "ch": 701,
+              "role": "Admiral Fujitora (current)",
+              "note": "Gravity blade (Zushi Zushi no Mi). Blinded himself long ago rather than see the world's ugliness. Post-timeskip recruit."
+            }
+          ]
+        },
+        {
+          "name": "Aramaki",
+          "rungs": [
+            {
+              "ch": 905,
+              "role": "Admiral Ryokugyu (current)",
+              "note": "The other post-timeskip admiral. Hasn't eaten in years, apparently."
+            },
+            {
+              "ch": 1053,
+              "role": "Admiral Ryokugyu (current)",
+              "note": "Mori Mori no Mi (forest). Flew to Wano uninvited and got a lesson in why you knock."
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "Vice Admirals",
       "rank": 3,
-      "summary": "Senior Marine officers — most have powerful Devil Fruits or proven Haki.",
+      "rungs": [
+        {
+          "ch": 92,
+          "label": "Vice Admirals",
+          "summary": "Senior Marine officers — most carry powerful Devil Fruits or proven Haki."
+        }
+      ],
       "members": [
-        { "name": "Monkey D. Garp",                   "role": "Vice Admiral / Hero of the Marines", "note": "Roger's lifelong rival. Trained Coby and others. D. carrier." },
-        { "name": "Tsuru",                            "role": "Vice Admiral / Great Staff Officer", "note": "Wash Wash no Mi (laundry)." },
-        { "name": "Smoker",                           "role": "Vice Admiral",                   "note": "Moku Moku no Mi (smoke). Wano-veteran." },
-        { "name": "Doll",                             "role": "Vice Admiral",                   "note": "Egghead-era Vice Admiral, leads SWORD." },
-        { "name": "Momonga",                          "role": "Vice Admiral",                   "note": "Marineford veteran." },
-        { "name": "Onigumo",                          "role": "Vice Admiral",                   "note": "Six arms (Kumo Kumo no Mi: Rosamygale Grauvogeli, posthumous-revived Ancient Zoan)." },
-        { "name": "Strawberry",                       "role": "Vice Admiral",                   "note": "Tall, distinctive helmet." },
-        { "name": "Bastille",                         "role": "Vice Admiral",                   "note": "Sword and shield." },
-        { "name": "Vergo",                            "role": "Vice Admiral / G-5 (corrupt)",   "note": "Doflamingo's mole. Killed by Law on Punk Hazard." }
+        {
+          "name": "Monkey D. Garp",
+          "rungs": [
+            {
+              "ch": 92,
+              "role": "Vice Admiral / Hero of the Marines",
+              "note": "The Marine who cornered Roger, again and again."
+            },
+            {
+              "ch": 432,
+              "role": "Vice Admiral / Hero of the Marines",
+              "note": "Roger's lifelong rival. Luffy's grandfather. Trains promising rookies with cannonballs."
+            }
+          ]
+        },
+        {
+          "name": "Tsuru",
+          "rungs": [
+            {
+              "ch": 556,
+              "role": "Vice Admiral / Great Staff Officer",
+              "note": "Woshu Woshu no Mi — washes pirates clean, literally. (QA: chapter approximate)"
+            }
+          ]
+        },
+        {
+          "name": "Smoker",
+          "rungs": [
+            {
+              "ch": 97,
+              "role": "Captain (Loguetown)",
+              "note": "Moku Moku no Mi (smoke). The first Marine Luffy couldn't hit."
+            },
+            {
+              "ch": 594,
+              "role": "Vice Admiral",
+              "note": "Moku Moku no Mi (smoke). Promoted after the war; requested the G-5 madhouse on purpose."
+            }
+          ]
+        },
+        {
+          "name": "Momonga",
+          "rungs": [
+            {
+              "ch": 508,
+              "role": "Vice Admiral",
+              "note": "Led the escort to Impel Down; stabbed his own hand to break Hancock's charm. (QA: chapter approximate)"
+            }
+          ]
+        },
+        {
+          "name": "Onigumo",
+          "rungs": [
+            {
+              "ch": 550,
+              "role": "Vice Admiral",
+              "note": "Six-armed Vice Admiral of the Marineford line."
+            },
+            {
+              "ch": 1111,
+              "role": "Vice Admiral",
+              "note": "Kumo Kumo no Mi, Model: Rosamygale Grauvogeli — an ancient spider Zoan. The six arms weren't a costume. (QA: chapter approximate)"
+            }
+          ]
+        },
+        {
+          "name": "Strawberry",
+          "rungs": [
+            {
+              "ch": 550,
+              "role": "Vice Admiral",
+              "note": "Tall, distinctive helmet. Marineford veteran."
+            }
+          ]
+        },
+        {
+          "name": "Bastille",
+          "rungs": [
+            {
+              "ch": 705,
+              "role": "Vice Admiral",
+              "note": "'Shark-Cutter' Bastille — mask, greatsword, Dressrosa command."
+            }
+          ]
+        },
+        {
+          "name": "Vergo",
+          "rungs": [
+            {
+              "ch": 671,
+              "role": "Vice Admiral (G-5)",
+              "note": "Base commander of G-5, respected by his men."
+            },
+            {
+              "ch": 673,
+              "role": "Vice Admiral / G-5 (corrupt)",
+              "note": "Doflamingo's mole inside the Marines since childhood — the reason Law never trusted a uniform."
+            },
+            {
+              "ch": 695,
+              "role": "Vice Admiral / G-5 (corrupt)",
+              "note": "Doflamingo's mole. Killed by Law on Punk Hazard, bisected with the facility."
+            }
+          ]
+        },
+        {
+          "name": "Doll",
+          "rungs": [
+            {
+              "ch": 1061,
+              "role": "Vice Admiral",
+              "note": "Egghead-era Vice Admiral; commands the SWORD unit."
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "Cipher Pol Aigis Zero (CP0)",
       "rank": 4,
-      "summary": "World Government's most secret intelligence + assassination unit. Operates above Marine command. Wears white, faceless masks.",
+      "rungs": [
+        {
+          "ch": 700,
+          "label": "Cipher Pol Aigis Zero (CP0)",
+          "summary": "The World Government's most secret intelligence and assassination unit. Operates above Marine command. White coats, faceless masks."
+        }
+      ],
       "members": [
-        { "name": "Rob Lucci",                        "role": "CP0 agent",                      "note": "Awakened Neko Neko no Mi: Leopard. Egghead arc." },
-        { "name": "Stussy",                           "role": "CP0 agent / MADS clone",         "note": "Vegapunk-era engineered seductress, defected." },
-        { "name": "Kaku",                             "role": "CP0 agent",                      "note": "Ushi Ushi no Mi: Giraffe." },
-        { "name": "Spandam",                          "role": "CP0 chief (former CP9)",         "note": "Yoru sword sheath wielder; villain of Enies Lobby." }
+        {
+          "name": "Rob Lucci",
+          "rungs": [
+            {
+              "ch": 823,
+              "role": "CP0 agent",
+              "note": "The strongest killer CP9 ever produced now wears the white mask."
+            },
+            {
+              "ch": 1069,
+              "role": "CP0 agent",
+              "note": "Awakened Neko Neko no Mi, Model: Leopard. Sent to Egghead to erase Vegapunk."
+            }
+          ]
+        },
+        {
+          "name": "Kaku",
+          "rungs": [
+            {
+              "ch": 1068,
+              "role": "CP0 agent",
+              "note": "Ushi Ushi no Mi, Model: Giraffe. The square-nosed swordsman followed Lucci into the white."
+            }
+          ]
+        },
+        {
+          "name": "Stussy",
+          "rungs": [
+            {
+              "ch": 892,
+              "role": "CP0 agent",
+              "note": "Moved through the underworld as the 'Queen of the Pleasure District' — and answered to the Government all along. (QA: chapter approximate)"
+            },
+            {
+              "ch": 1073,
+              "role": "CP0 agent / MADS clone",
+              "note": "A clone of Miss Buckingham Stussy, made in Vegapunk's MADS era — and she chose to turn on her handlers at Egghead."
+            }
+          ]
+        },
+        {
+          "name": "Spandam",
+          "rungs": [
+            {
+              "ch": 1054,
+              "role": "CP0 (reserve), former CP9 chief",
+              "note": "The Enies Lobby villain survived his own failure and clings on under CP0."
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "Cipher Pol 9 (CP9)",
       "rank": 5,
-      "summary": "Predecessor to CP0 — the unit Lucci, Kaku, Jabra, Kalifa, Blueno, Fukurō, Kumadori served in. Disbanded after Enies Lobby; survivors moved to CP0.",
+      "rungs": [
+        {
+          "ch": 347,
+          "label": "Cipher Pol 9 (CP9)",
+          "summary": "The Government's assassination unit that hid in plain sight at Water 7 for five years."
+        },
+        {
+          "ch": 700,
+          "label": "Cipher Pol 9 (CP9)",
+          "summary": "The Government's assassination unit that hid in plain sight at Water 7. Disbanded after Enies Lobby; its best moved up to CP0."
+        }
+      ],
       "members": [
-        { "name": "Rob Lucci",        "role": "CP9 strongest", "note": "Now CP0." },
-        { "name": "Kaku",             "role": "CP9 swordsman", "note": "Now CP0." },
-        { "name": "Jabra",            "role": "CP9",           "note": "Inu Inu no Mi: Wolf." },
-        { "name": "Kalifa",           "role": "CP9",           "note": "Awa Awa no Mi (bubbles)." },
-        { "name": "Blueno",           "role": "CP9 bartender", "note": "Doa Doa no Mi (door)." },
-        { "name": "Fukurō",           "role": "CP9 zipper-man","note": "Iron Body specialist." },
-        { "name": "Kumadori",         "role": "CP9 actor",     "note": "Hair-extension melodrama." }
+        {
+          "name": "Rob Lucci",
+          "rungs": [
+            {
+              "ch": 347,
+              "role": "CP9 strongest",
+              "note": "The quiet dock-worker was the Government's deadliest assassin."
+            }
+          ]
+        },
+        {
+          "name": "Kaku",
+          "rungs": [
+            {
+              "ch": 347,
+              "role": "CP9 swordsman",
+              "note": "Galley-La's best inspector, and a Government blade."
+            }
+          ]
+        },
+        {
+          "name": "Kalifa",
+          "rungs": [
+            {
+              "ch": 347,
+              "role": "CP9",
+              "note": "Iceburg's secretary was the Government's plant. Awa Awa no Mi (bubbles), acquired at Enies Lobby."
+            }
+          ]
+        },
+        {
+          "name": "Blueno",
+          "rungs": [
+            {
+              "ch": 347,
+              "role": "CP9 bartender",
+              "note": "Poured drinks in Water 7 for five years. Doa Doa no Mi (door)."
+            }
+          ]
+        },
+        {
+          "name": "Jabra",
+          "rungs": [
+            {
+              "ch": 375,
+              "role": "CP9",
+              "note": "Inu Inu no Mi, Model: Wolf. Loudest man on Enies Lobby."
+            }
+          ]
+        },
+        {
+          "name": "Fukurō",
+          "rungs": [
+            {
+              "ch": 375,
+              "role": "CP9 zipper-man",
+              "note": "Iron Body specialist who cannot keep a secret despite the zip."
+            }
+          ]
+        },
+        {
+          "name": "Kumadori",
+          "rungs": [
+            {
+              "ch": 375,
+              "role": "CP9 actor",
+              "note": "Kabuki melodrama and prehensile hair."
+            }
+          ]
+        },
+        {
+          "name": "Spandam",
+          "rungs": [
+            {
+              "ch": 375,
+              "role": "CP9 chief",
+              "note": "Commanded the strongest CP9 in history and still lost everything at Enies Lobby."
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "SWORD",
       "rank": 4,
-      "summary": "Secret Marine cell — operates outside the formal chain of command. Members can resign on paper while staying active. Egghead-era reveal.",
+      "rungs": [
+        {
+          "ch": 956,
+          "label": "SWORD",
+          "summary": "A secret Marine cell operating outside the formal chain of command — members can resign on paper while staying active."
+        }
+      ],
       "members": [
-        { "name": "Coby",             "role": "SWORD captain", "note": "Promoted from Marineford rookie. Hostage on Hachinosu." },
-        { "name": "Helmeppo",         "role": "SWORD",         "note": "Garp's protégé. Coby's partner." },
-        { "name": "X Drake",          "role": "SWORD captain", "note": "Tobi Roppo defector — actually a SWORD plant." },
-        { "name": "Hibari",           "role": "SWORD",         "note": "Egghead Coby-rescue mission." },
-        { "name": "Prince Grus",      "role": "SWORD",         "note": "Eddhead member." },
-        { "name": "Doll",             "role": "SWORD commander", "note": "Vice Admiral leading the unit." }
+        {
+          "name": "X Drake",
+          "rungs": [
+            {
+              "ch": 956,
+              "role": "SWORD captain",
+              "note": "The Supernova inside the Beasts Pirates was a Marine plant all along."
+            }
+          ]
+        },
+        {
+          "name": "Coby",
+          "rungs": [
+            {
+              "ch": 1061,
+              "role": "SWORD captain",
+              "note": "The chore-boy from Alvida's ship now captains the Marines' secret cell. (QA: chapter approximate)"
+            },
+            {
+              "ch": 1080,
+              "role": "SWORD captain",
+              "note": "Promoted from Marineford rookie to SWORD captain — and walked out of Blackbeard's Hachinosu a hero."
+            }
+          ]
+        },
+        {
+          "name": "Helmeppo",
+          "rungs": [
+            {
+              "ch": 1061,
+              "role": "SWORD",
+              "note": "Garp's other protégé. Coby's partner since the very first arc."
+            }
+          ]
+        },
+        {
+          "name": "Hibari",
+          "rungs": [
+            {
+              "ch": 1061,
+              "role": "SWORD",
+              "note": "Sniper on the Coby-rescue mission."
+            }
+          ]
+        },
+        {
+          "name": "Prince Grus",
+          "rungs": [
+            {
+              "ch": 1061,
+              "role": "SWORD",
+              "note": "Egghead-era member."
+            }
+          ]
+        },
+        {
+          "name": "Doll",
+          "rungs": [
+            {
+              "ch": 1061,
+              "role": "SWORD commander",
+              "note": "The Vice Admiral who leads the unit."
+            }
+          ]
+        }
       ]
     },
     {
-      "label": "Marine Branch Captains & Special",
       "rank": 6,
-      "summary": "Captains, instructors, base commanders, and special-operations leads.",
+      "rungs": [
+        {
+          "ch": 96,
+          "label": "Marine Branch Captains & Special",
+          "summary": "Captains, instructors, base commanders, and special-operations leads."
+        }
+      ],
       "members": [
-        { "name": "Tashigi",          "role": "Captain (G-5)",     "note": "Smoker's right hand. Sword collector." },
-        { "name": "Hina",             "role": "Captain → Vice Adm","note": "Ori Ori no Mi (cage)." },
-        { "name": "Coby",             "role": "Captain (SWORD)",   "note": "See SWORD above." },
-        { "name": "T-Bone",           "role": "Captain",           "note": "Giant skeleton swordsman." },
-        { "name": "Sentomaru",        "role": "Captain / Vegapunk bodyguard", "note": "Awa-style martial artist." }
+        {
+          "name": "Tashigi",
+          "rungs": [
+            {
+              "ch": 97,
+              "role": "Sergeant Major (Loguetown)",
+              "note": "Sword collector on a mission to take meito out of criminal hands."
+            },
+            {
+              "ch": 655,
+              "role": "Captain (G-5)",
+              "note": "Smoker's right hand at the G-5 madhouse. Sword collector."
+            }
+          ]
+        },
+        {
+          "name": "Hina",
+          "rungs": [
+            {
+              "ch": 397,
+              "role": "Captain",
+              "note": "'Black Cage' Hina — Ori Ori no Mi. Smoker's old academy classmate."
+            }
+          ]
+        },
+        {
+          "name": "T-Bone",
+          "rungs": [
+            {
+              "ch": 371,
+              "role": "Captain",
+              "note": "'Ship-Cutter' T-Bone — terrifying face, gentlest heart on the sea train line."
+            }
+          ]
+        },
+        {
+          "name": "Sentomaru",
+          "rungs": [
+            {
+              "ch": 508,
+              "role": "Captain / Vegapunk bodyguard",
+              "note": "Axe, attitude, and the tightest lips in the Marines."
+            }
+          ]
+        }
       ]
     }
   ]
@@ -182,27 +771,83 @@
 const RAW = JSON.parse(document.getElementById('marines-data').textContent || '{}');
 const tiers = RAW.tiers || [];
 function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+// Boot-safe cutoff (runs before spoiler.js; same shape as the codex pages).
+function _mwBootCutoff(){
+  try{
+    const raw=JSON.parse(localStorage.getItem("codex-spoiler-state")||"null");
+    if(raw&&raw.shield_mode==="off")return 1188;
+    if(raw&&typeof raw.cutoff_chapter==="number"&&raw.cutoff_chapter>0)return Math.min(raw.cutoff_chapter,1188);
+    const legacy=parseInt(localStorage.getItem("spoilerCutoff")||"0",10);
+    if(legacy>0)return Math.min(legacy,1188);
+  }catch(_){}
+  return 597;
+}
+const _EFF = _mwBootCutoff();
+const _CAUGHT = _EFF >= 1188;
+
+// ── REVEAL LADDER ────────────────────────────────────────────────
+// Tiers AND members are rung-stacks. The apex tier a Ch. 300 reader sees is
+// "The Five Elders" — the top of the world as they know it; at 908 it
+// becomes "Government Apex" and Imu enters above them. Members appear when
+// the reader learns they BELONG here, not at debut: Kalifa being CP9 is the
+// Water 7 twist (347); Vergo's entry is a clean Vice Admiral until 673.
+// Unearned members and whole unearned tiers vanish without trace.
+let _sealedMembers = 0;
+let _sealedTiers = 0;
+
 document.getElementById('tiers').innerHTML = tiers.map(t => {
-  const cls = t.rank <= 1 ? 'tier elite' : t.label.toLowerCase().includes('cipher') || t.label.toLowerCase().includes('sword') ? 'tier shadow' : 'tier';
+  const tRungs = (t.rungs || []).filter(r => typeof r.ch === 'number' && r.ch <= _EFF);
+  if (!tRungs.length) {
+    _sealedTiers++;
+    _sealedMembers += (t.members || []).length;
+    return '';
+  }
+  const tr = tRungs[tRungs.length - 1];
+  const label = tr.label, summary = tr.summary;
+  const members = [];
+  for (const m of (t.members || [])) {
+    // maxCh retires a provisional card once the fuller picture unlocks
+    // (the collective "Five Elders" gives way to the five named men).
+    if (typeof m.maxCh === 'number' && _EFF >= m.maxCh) continue;
+    const mRungs = (m.rungs || []).filter(r => typeof r.ch === 'number' && r.ch <= _EFF);
+    if (!mRungs.length) { _sealedMembers++; continue; }
+    members.push({ name: m.name, r: mRungs[mRungs.length - 1] });
+  }
+  if (!members.length) { _sealedTiers++; return ''; }
+  const cls = t.rank <= 1 ? 'tier elite' : label.toLowerCase().includes('cipher') || label.toLowerCase().includes('sword') ? 'tier shadow' : 'tier';
   return `<section class="${cls}">
     <div class="tier-head">
       <span class="tier-rank">TIER ${String(t.rank).padStart(2,'0')}</span>
-      <span class="tier-label">${escapeHtml(t.label)}</span>
+      <span class="tier-label">${escapeHtml(label)}</span>
     </div>
-    <div class="tier-summary">${escapeHtml(t.summary||'')}</div>
+    <div class="tier-summary">${escapeHtml(summary||'')}</div>
     <div class="members">
-      ${(t.members||[]).map(m => `<a class="member" href="character.html?name=${encodeURIComponent(m.name)}">
-        <div class="member-name">${escapeHtml(m.name)}</div>
-        ${m.role?`<div class="member-role">${escapeHtml(m.role)}</div>`:''}
-        ${m.note?`<div class="member-note">${escapeHtml(m.note)}</div>`:''}
+      ${members.map(({name, r}) => `<a class="member" href="character.html?name=${encodeURIComponent(name)}">
+        <div class="member-name">${escapeHtml(name)}</div>
+        ${r.role?`<div class="member-role">${escapeHtml(r.role)}</div>`:''}
+        ${r.note?`<div class="member-note">${escapeHtml(r.note)}</div>`:''}
+        <div class="asof">as of Ch. ${r.ch}</div>
       </a>`).join('')}
     </div>
   </section>`;
 }).join('');
+
+// Honest global note — the only signal that more exists past the cutoff.
+(function () {
+  const el = document.getElementById('shield-note');
+  if (!el || _CAUGHT) return;
+  const parts = ['&#128737; Reading shield on — this chart shows the hierarchy as Chapter ' + _EFF + ' knows it.'];
+  if (_sealedMembers > 0) parts.push('Ranks, units and <strong>' + _sealedMembers + '</strong> placements are still classified to you.');
+  parts.push('Read on, and the chart declassifies itself.');
+  el.hidden = false;
+  el.innerHTML = '<span class="sn-text">' + parts.join(' ') + '</span>' +
+    '<button type="button" onclick="try{CodexSpoiler.setCaughtUp()}catch(_){};location.reload()">&#127988;&#8205;&#9760;&#65039; I\u2019m fully caught up</button>';
+})();
 </script>
 <footer>The Shimotsuki Codex · Marines & World Government structure &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script id="chr-id-map" type="application/json">
-{"Aramaki":"chr:01594","Bastille":"chr:01632","Blueno":"chr:01678","Borsalino":"chr:01694","Doll":"chr:01921","Fukurō":"chr:01998","Helmeppo":"chr:02119","Hibari":"chr:02126","Hina":"chr:02134","Issho":"chr:02197","Jabra":"chr:02203","Kaku":"chr:02256","Kalifa":"chr:02261","Kong":"chr:02320","Kumadori":"chr:02334","Kuzan":"chr:01592","Momonga":"chr:02491","Monkey D. Garp":"chr:02498","Nerona Imu":"chr:02180","Onigumo":"chr:02609","Prince Grus":"chr:02671","Rob Lucci":"chr:02718","Sakazuki":"chr:01564","Sengoku":"chr:02797","Sentomaru":"chr:02800","Smoker":"chr:02844","Spandam":"chr:02857","Strawberry":"chr:02873","Stussy":"chr:02877","T-Bone":"chr:02894","Tashigi":"chr:02914","Tsuru":"chr:02958","Vergo":"chr:03003","X Drake":"chr:03041"}
+{"Aramaki":"chr:01594","Bastille":"chr:01632","Blueno":"chr:01678","Borsalino":"chr:01694","Doll":"chr:01921","Fukurō":"chr:01998","Helmeppo":"chr:02119","Hibari":"chr:02126","Hina":"chr:02134","Imu":"chr:02180","Issho":"chr:02197","Jabra":"chr:02203","Kaku":"chr:02256","Kalifa":"chr:02261","Kong":"chr:02320","Kumadori":"chr:02334","Kuzan":"chr:01592","Momonga":"chr:02491","Monkey D. Garp":"chr:02498","Onigumo":"chr:02609","Prince Grus":"chr:02671","Rob Lucci":"chr:02718","Sakazuki":"chr:01564","Sengoku":"chr:02797","Sentomaru":"chr:02800","Smoker":"chr:02844","Spandam":"chr:02857","Strawberry":"chr:02873","Stussy":"chr:02877","T-Bone":"chr:02894","Tashigi":"chr:02914","Tsuru":"chr:02958","Vergo":"chr:03003","X Drake":"chr:03041"}
 </script>
 <script src="chr-link-upgrader.js?v=2"></script>
 <script src="spoiler.js?v=1"></script>
