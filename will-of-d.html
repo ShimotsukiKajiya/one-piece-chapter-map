@@ -47,6 +47,12 @@
   .hints li::before{content:'⚓ ';color:var(--gold);margin-right:6px}
 
   footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+.shield-note{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 4px;padding:11px 16px;border:1px solid rgba(77,187,255,.45);border-radius:10px;background:rgba(77,187,255,.09);font-size:.85rem;line-height:1.6}
+.shield-note[hidden]{display:none}
+.shield-note .sn-text{flex:1;min-width:220px}
+.shield-note button{padding:6px 12px;border:1px solid rgba(77,187,255,.6);border-radius:7px;background:transparent;color:inherit;font:inherit;font-size:.8rem;cursor:pointer}
+.shield-note button:hover{background:rgba(77,187,255,.2)}
+.carrier .asof{font-size:.65rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
 </style>
 <style id="nav-burger-critical">
   header { padding-right: 240px !important; padding-left: 24px !important; }
@@ -72,74 +78,211 @@
 <main>
 <div class="page-hero">
   <h2 class="title">🇩 The Will of <span class="D">D.</span></h2>
-  <p class="blurb">A hereditary letter that appears in the names of certain key figures throughout One Piece — passed down through generations as the marker of a single bloodline destined to challenge the gods. The D. is the central mystery of the series. Every confirmed carrier is below, alongside the canon hints about what the letter signifies.</p>
+  <p class="blurb">A hereditary letter that appears in the names of certain key figures throughout One Piece — passed down through generations, its meaning one of the series' oldest mysteries. This page shows only what <em>your</em> chapter has earned — carriers appear here when the story reveals the D. in their name, not when you first meet them. Every confirmed carrier is below, alongside the canon hints about what the letter signifies.</p>
   <div class="gold-rule"></div>
 </div>
+  <div class="shield-note" id="shield-note" hidden></div>
   <div id="grid" class="grid"></div>
   <div id="hints" class="hints"></div>
   <div id="spec" class="hints" style="border-color:var(--muted);margin-top:18px"></div>
 </main>
 <script id="will-data" type="application/json">
 {
-  "_doc": "Every confirmed carrier of the 'Will of D.' in canon. The D. is a hereditary letter in the names of certain key figures — its meaning is the central mystery of One Piece. This page surfaces every D. carrier alongside the canon hints about what the D. signifies.",
-  "generated_on": "2026-04-27",
+  "_doc": "Every confirmed carrier of the 'Will of D.' in canon. LADDERED (2026-08-22): each carrier is a stack of rungs; a reader sees the highest rung their Spoiler Shield cutoff has earned. The gate is when the reader learns the D. IS in the name -- not the character's debut: Law debuts at 498 but 'Trafalgar D. Water Law' is a Ch. 763 reveal, so he is absent from this page for 265 chapters of readers who know him well. Status is part of the rung (Ace is 'active' until Ch. 574). Hints and speculation entries carry their own chapters; speculation about a character is itself a leak of that character. page_min: below Ch. 154 (Kureha names 'the Will of D.') the page shows only a sealed notice.",
+  "generated_on": "2026-08-22",
+  "page_min": 154,
   "carriers": [
-    { "name": "Monkey D. Luffy",        "epithet": "Strawhat / Sun God Nika",   "status": "active",    "first_appearance": "Ch. 1",    "notes": "Protagonist. Awakened the Hito Hito no Mi Model: Nika." },
-    { "name": "Monkey D. Garp",         "epithet": "Hero of the Marines",       "status": "active",    "first_appearance": "Ch. 92",   "notes": "Vice Admiral. Cornered Roger. Luffy's grandfather." },
-    { "name": "Monkey D. Dragon",       "epithet": "World's Worst Criminal",    "status": "active",    "first_appearance": "Ch. 100",  "notes": "Leader of the Revolutionary Army. Luffy's father. Origin unrevealed." },
-    { "name": "Portgas D. Ace",         "epithet": "Fire Fist",                 "status": "deceased",  "first_appearance": "Ch. 154",  "notes": "Born Gol D. Ace; took mother's surname Portgas. Killed at Marineford." },
-    { "name": "Portgas D. Rouge",       "epithet": null,                        "status": "deceased",  "first_appearance": "Ch. 550",  "notes": "Ace's mother. Held her pregnancy 20 months by sheer will to protect Ace." },
-    { "name": "Gol D. Roger",           "epithet": "Pirate King",               "status": "deceased",  "first_appearance": "Ch. 1",    "notes": "First and only Pirate King. Reached Laugh Tale. Executed at Loguetown." },
-    { "name": "Marshall D. Teach",      "epithet": "Blackbeard",                "status": "active",    "first_appearance": "Ch. 234",  "notes": "Yonko. Holds two Devil Fruits (Yami Yami + Gura Gura). Theorised to be more than one person." },
-    { "name": "Trafalgar D. Water Law", "epithet": "Surgeon of Death",          "status": "active",    "first_appearance": "Ch. 498",  "notes": "Worst Generation Supernova. Ope Ope no Mi user. Survived the Amber Lead disease at Flevance." },
-    { "name": "Jaguar D. Saul",         "epithet": null,                        "status": "active",    "first_appearance": "Ch. 393",  "notes": "Former Vice Admiral. Saved baby Robin from the Buster Call on Ohara. Survived Aokiji's freeze — revealed alive on Elbaph." },
-    { "name": "Rocks D. Xebec",         "epithet": "Rocks",                     "status": "deceased",  "first_appearance": "Ch. 957",  "notes": "Captain of the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki). Killed at God Valley by Roger + Garp." }
+    {
+      "name": "Monkey D. Luffy",
+      "first_appearance": "Ch. 1",
+      "rungs": [
+        { "ch": 154, "epithet": "Strawhat", "status": "active",
+          "text": "Protagonist. The D. sits in his name from the very first chapter -- what it means, he neither knows nor cares." },
+        { "ch": 1044, "epithet": "Strawhat / Sun God Nika", "status": "active",
+          "text": "Protagonist. Awakened the Hito Hito no Mi, Model: Nika -- the Sun God fruit. The D. and the Dawn keep pointing at the same man." }
+      ]
+    },
+    {
+      "name": "Monkey D. Garp",
+      "first_appearance": "Ch. 92",
+      "rungs": [
+        { "ch": 154, "epithet": "Hero of the Marines", "status": "active",
+          "text": "The Marine who cornered Roger, over and over." },
+        { "ch": 432, "epithet": "Hero of the Marines", "status": "active",
+          "text": "Vice Admiral. Cornered Roger. Luffy's grandfather." }
+      ]
+    },
+    {
+      "name": "Monkey D. Dragon",
+      "first_appearance": "Ch. 100",
+      "rungs": [
+        { "ch": 432, "epithet": "World's Worst Criminal", "status": "active",
+          "text": "Leader of the Revolutionary Army. Luffy's father. Origin unrevealed." }
+      ]
+    },
+    {
+      "name": "Portgas D. Ace",
+      "first_appearance": "Ch. 154",
+      "rungs": [
+        { "ch": 154, "epithet": "Fire Fist", "status": "active",
+          "text": "Whitebeard's Second Division Commander. Luffy's big brother, hunting a traitor from his own division." },
+        { "ch": 550, "epithet": "Fire Fist", "status": "active",
+          "text": "Born Gol D. Ace -- Roger's son, carried 20 months by Portgas D. Rouge to hide him. He took his mother's name." },
+        { "ch": 574, "epithet": "Fire Fist", "status": "deceased",
+          "text": "Born Gol D. Ace; took his mother's surname Portgas. Killed at Marineford shielding Luffy." }
+      ]
+    },
+    {
+      "name": "Portgas D. Rouge",
+      "first_appearance": "Ch. 550",
+      "rungs": [
+        { "ch": 550, "status": "deceased",
+          "text": "Ace's mother. Held her pregnancy 20 months by sheer will to protect Ace from the Government's hunt." }
+      ]
+    },
+    {
+      "name": "Gol D. Roger",
+      "first_appearance": "Ch. 1",
+      "rungs": [
+        { "ch": 154, "epithet": "Pirate King", "status": "deceased",
+          "text": "The Pirate King's true name -- 'Gold Roger' was a corruption. Conquered the Grand Line; executed at Loguetown with a smile." },
+        { "ch": 968, "epithet": "Pirate King", "status": "deceased",
+          "text": "First and only Pirate King. Reached the final island, learned the truth of the Void Century, and named the island Laugh Tale. Executed at Loguetown." }
+      ]
+    },
+    {
+      "name": "Marshall D. Teach",
+      "first_appearance": "Ch. 234",
+      "rungs": [
+        { "ch": 234, "epithet": "Blackbeard", "status": "active",
+          "text": "The traitor of Whitebeard's Second Division -- the man Ace hunts. Preached about dreams at Mock Town and meant every word." },
+        { "ch": 577, "epithet": "Blackbeard", "status": "active",
+          "text": "Betrayed Whitebeard twice over: took the Yami Yami no Mi, then took the dying Whitebeard's Gura Gura no Mi. The only known holder of two Devil Fruits." },
+        { "ch": 650, "epithet": "Blackbeard", "status": "active",
+          "text": "Yonko. Holds two Devil Fruits (Yami Yami + Gura Gura). Theorised to be more than one person." }
+      ]
+    },
+    {
+      "name": "Trafalgar D. Water Law",
+      "first_appearance": "Ch. 498",
+      "rungs": [
+        { "ch": 763, "epithet": "Surgeon of Death", "status": "active",
+          "text": "Worst Generation Supernova and Ope Ope no Mi user. Survived Flevance's Amber Lead disease; Corazon died keeping the D. in his name a secret." }
+      ]
+    },
+    {
+      "name": "Jaguar D. Saul",
+      "first_appearance": "Ch. 393",
+      "rungs": [
+        { "ch": 393, "status": "deceased",
+          "text": "Former Vice Admiral. Saved baby Robin from the Buster Call on Ohara, and was frozen by Aokiji for it." },
+        { "ch": 1066, "status": "active",
+          "text": "Former Vice Admiral who saved baby Robin from the Buster Call. Aokiji's ice did not kill him -- he lives, and he saved Ohara's books too." }
+      ]
+    },
+    {
+      "name": "Rocks D. Xebec",
+      "first_appearance": "Ch. 957",
+      "rungs": [
+        { "ch": 957, "epithet": "Rocks", "status": "deceased",
+          "text": "Captain of the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki). Killed at God Valley by Roger and Garp together." }
+      ]
+    }
   ],
   "_canon_hints": [
-    "Whitebeard, dying at Marineford: 'One Piece is real.' The implication is that the D. carriers are the ones destined to inherit Roger's will.",
-    "The Five Elders refer to the D. as a 'natural enemy of the gods' — implying it stands against the Tenryubito and the World Government.",
-    "Roger and Whitebeard both said the D. carriers will start a great war that will engulf the world.",
-    "The 'Will of D.' is hereditary — passed down through the D. clan from generation to generation.",
-    "Common reading of the D.: 'Doom' (death-bringers to the Celestial Dragons), 'Dawn' (those who herald a new age — fitting Luffy as the Sun God), or simply the family marker of the lost Ancient Kingdom's lineage."
+    { "ch": 154, "text": "Dr. Kureha, watching Chopper sail away: 'the Will of D. lives on.' The first time anyone names it as a thing that survives its carriers." },
+    { "ch": 576, "text": "Whitebeard, dying at Marineford: 'One Piece is real.' The implication is that the D. carriers are the ones destined to inherit Roger's will." },
+    { "ch": 764, "text": "Corazon told Law the stories: in some lands the D. clan are called 'the natural enemy of the gods' -- and the gods, in this world, wear the Government's crest." },
+    { "ch": 966, "text": "Roger and Whitebeard both spoke of it: the D. carriers will start a great war that will engulf the world." },
+    { "ch": 764, "text": "Common readings of the D.: 'Doom' (death-bringers to the Celestial Dragons), 'Dawn' (those who herald a new age), or simply the family marker of a lineage the world was made to forget." }
   ],
   "_speculation": [
-    "Imu — long theorised to bear the D. (Nerona D. Imu). Family name 'Nerona' is canon, the D. status is fan-deduction from D-clan opposition to the World Government. Not yet confirmed.",
-    "Loki and Harald (Elbaph) — Sun God / Joy Boy connections in the Elbaph arc have prompted D. theories. Not yet confirmed.",
-    "Yamato — sometimes theorised to be a hidden D. via Kaidou's lineage. Not confirmed.",
-    "Shanks — fan theory based on his secrecy and alignment with Joy Boy. Not confirmed."
+    { "ch": 1086, "text": "Imu -- long theorised to bear the D. (Nerona D. Imu). The family name 'Nerona' is canon; the D. status is fan-deduction from the D. clan's opposition to the World Government. Not yet confirmed." },
+    { "ch": 1140, "text": "Loki and Harald (Elbaph) -- Sun God / Joy Boy connections in the Elbaph arc have prompted D. theories. Not yet confirmed." },
+    { "ch": 984, "text": "Yamato -- sometimes theorised to be a hidden D. via Kaidou's lineage. Not confirmed." },
+    { "ch": 1054, "text": "Shanks -- fan theory based on his secrecy and his standing with the world's highest powers. Not confirmed." }
   ]
 }
 </script>
 <script>
 const RAW = JSON.parse(document.getElementById('will-data').textContent || '{}');
 function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-const carriers = RAW.carriers || [];
+
+// Boot-safe cutoff (runs before spoiler.js; same shape as the codex pages).
+function _wdBootCutoff(){
+  try{
+    const raw=JSON.parse(localStorage.getItem("codex-spoiler-state")||"null");
+    if(raw&&raw.shield_mode==="off")return 1188;
+    if(raw&&typeof raw.cutoff_chapter==="number"&&raw.cutoff_chapter>0)return Math.min(raw.cutoff_chapter,1188);
+    const legacy=parseInt(localStorage.getItem("spoilerCutoff")||"0",10);
+    if(legacy>0)return Math.min(legacy,1188);
+  }catch(_){}
+  return 597;
+}
+const _EFF = _wdBootCutoff();
+const _CAUGHT = _EFF >= 1188;
+
+// ── REVEAL LADDER ────────────────────────────────────────────────
+// A carrier appears when the reader learns the D. is in the NAME — not at
+// the character's debut. Law debuts at 498; 'Trafalgar D. Water Law' is a
+// Ch. 763 reveal, so below 763 he is absent without trace. Status rides the
+// rung: Ace is Active until 574, Saul is Deceased until 1066. Hints and
+// speculation entries gate individually — speculation ABOUT a character
+// is itself a leak of that character.
 const grid = document.getElementById('grid');
-grid.innerHTML = carriers.map(c=>`
-  <article class="carrier ${c.status==='deceased'?'deceased':''}">
+let _sealedCarriers = 0;
+
+if (_EFF < (RAW.page_min || 154)) {
+  // Below Kureha's line the Will of D. does not exist for this reader.
+  grid.innerHTML = `<div style="padding:40px 20px;text-align:center;color:var(--muted);line-height:1.7">
+    <div style="font-size:1.6rem;margin-bottom:10px">🛡</div>
+    The mystery this page tracks has not yet surfaced in your reading.<br>
+    It first gets its name in <strong>Chapter ${RAW.page_min || 154}</strong> — keep going.</div>`;
+} else {
+  const visible = [];
+  for (const c of (RAW.carriers || [])) {
+    const rungs = (c.rungs || []).filter(r => typeof r.ch === 'number' && r.ch <= _EFF);
+    if (!rungs.length) { _sealedCarriers++; continue; }
+    visible.push({ c, r: rungs[rungs.length - 1] });
+  }
+  grid.innerHTML = visible.map(({c, r}) => `
+  <article class="carrier ${r.status==='deceased'?'deceased':''}">
     <h3><a href="character.html?name=${encodeURIComponent(c.name)}">${escapeHtml(c.name)}</a></h3>
-    ${c.epithet?`<div class="epithet">"${escapeHtml(c.epithet)}"</div>`:''}
+    ${r.epithet?`<div class="epithet">"${escapeHtml(r.epithet)}"</div>`:''}
     <div class="meta">
-      <span class="badge ${c.status}">${c.status==='active'?'🟢 Active':'⚰ Deceased'}</span>
+      <span class="badge ${r.status}">${r.status==='active'?'🟢 Active':'⚰ Deceased'}</span>
       ${c.first_appearance?`<span>Debut ${escapeHtml(c.first_appearance)}</span>`:''}
+      <span class="asof">as of Ch. ${r.ch}</span>
     </div>
-    <p>${escapeHtml(c.notes||'')}</p>
-  </article>
-`).join('');
-const hints = (RAW._canon_hints||[]);
-if (hints.length) {
-  document.getElementById('hints').innerHTML = `
-    <h3>Canon Hints — what the D. might mean</h3>
-    <ul>${hints.map(h=>`<li>${escapeHtml(h)}</li>`).join('')}</ul>`;
+    <p>${escapeHtml(r.text||'')}</p>
+  </article>`).join('');
+
+  const hints = (RAW._canon_hints||[]).filter(h => _CAUGHT || h.ch <= _EFF);
+  if (hints.length) {
+    document.getElementById('hints').innerHTML = `
+      <h3>Canon Hints — what the D. might mean</h3>
+      <ul>${hints.map(h=>`<li>${escapeHtml(h.text)}</li>`).join('')}</ul>`;
+  }
+  const spec = (RAW._speculation||[]).filter(h => _CAUGHT || h.ch <= _EFF);
+  if (spec.length) {
+    document.getElementById('spec').innerHTML = `
+      <h3 style="color:var(--muted)">Theorised — not yet confirmed</h3>
+      <ul>${spec.map(h=>`<li>${escapeHtml(h.text)}</li>`).join('')}</ul>`;
+  }
+  const fc = document.getElementById('footer-count');
+  if (fc) fc.textContent = visible.length;
+
+  // Honest global note — the only signal that more exists past the cutoff.
+  const note = document.getElementById('shield-note');
+  if (note && !_CAUGHT) {
+    const parts = ['&#128737; Reading shield on — carriers and hints stop at what Chapter ' + _EFF + ' knows.'];
+    if (_sealedCarriers > 0) parts.push('<strong>' + _sealedCarriers + '</strong> carrier' + (_sealedCarriers === 1 ? '' : 's') + ' of the D. ' + (_sealedCarriers === 1 ? 'has' : 'have') + ' not been revealed to you yet.');
+    parts.push('Read on, and this page learns with you.');
+    note.hidden = false;
+    note.innerHTML = '<span class="sn-text">' + parts.join(' ') + '</span>' +
+      '<button type="button" onclick="try{CodexSpoiler.setCaughtUp()}catch(_){};location.reload()">&#127988;&#8205;&#9760;&#65039; I\u2019m fully caught up</button>';
+  }
 }
-const spec = (RAW._speculation||[]);
-if (spec.length) {
-  document.getElementById('spec').innerHTML = `
-    <h3 style="color:var(--muted)">Theorised — not yet confirmed</h3>
-    <ul>${spec.map(h=>`<li>${escapeHtml(h)}</li>`).join('')}</ul>`;
-}
-const fc = document.getElementById('footer-count');
-if (fc) fc.textContent = carriers.length;
 </script>
 <footer><span id="footer-count">…</span> D. carriers confirmed · The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script id="chr-id-map" type="application/json">
