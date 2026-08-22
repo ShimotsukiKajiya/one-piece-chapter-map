@@ -1619,7 +1619,7 @@ function render(query) {
       const isFav = favorites.has(id);
       const favBtn = `<button class="fav-btn ${isFav?'on':''}" onclick="toggleFavorite('${id}', this)" title="${isFav?'Remove from':'Add to'} favorites">${isFav?'❤':'🤍'}</button>`;
       const citeBtn = idStr
-        ? `<button class="cite-btn-sbs" data-sbs-num="${idStr}" data-sbs-vol="${it.volume}" data-sbs-q="${escHtml((it.question||'').slice(0,120))}" title="Pin to Workbench">📌</button>`
+        ? `<button class="cite-btn-sbs" data-sbs-num="${idStr}" data-sbs-vol="${it.volume}" data-sbs-q="${escHtml((it.question||'').slice(0,120))}" title="Pin to Workbench — an early theory-building tool, still work in progress">📌</button>`
         : '';
       html += `  <div class="row row-d">`;
       html += `    <div class="avatar avatar-d"><img src="${(window.CodexAvatars && window.CodexAvatars.getReaderSrc()) || 'logo/reader-avatar.png'}" alt="" onerror="this.remove()">${AVATAR_D}</div>`;
@@ -1838,7 +1838,7 @@ document.addEventListener('click', e => {
 <script src="search.js?v=3"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=33" defer></script>
+<script src="nav-burger.js?v=34" defer></script>
 <footer style="padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted,#8a7548);letter-spacing:1px;border-top:1px solid var(--border,#4a3820);max-width:1100px;margin:60px auto 0">The Shimotsuki Codex &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 </body>
 </html>

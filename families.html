@@ -27,8 +27,8 @@ a:hover{color:var(--gold-bright)}
 
 header{display:flex;align-items:center;padding:18px 28px;border-bottom:1px solid var(--border);background:rgba(26,22,16,.7);position:sticky;top:0;z-index:50}
 .logo{text-decoration:none;color:inherit}
-.logo h1{font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.logo .logo-title{display:block;margin:.67em 0;font-size:1.4rem;font-weight:900;letter-spacing:3px;background:linear-gradient(180deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin:0;font-weight:400}
 
 main{max-width:1400px;margin:0 auto;padding:36px 24px;position:relative;z-index:1}
 
@@ -56,6 +56,13 @@ main{max-width:1400px;margin:0 auto;padding:36px 24px;position:relative;z-index:
 details[open] > .family-summary .family-chevron{transform:rotate(180deg)}
 
 .tree-wrap{padding:36px 28px 28px;overflow-x:auto;background:var(--surface)}
+/* several families have more than one bloodline root — lay roots side by side */
+.tc-roots{display:flex;gap:56px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+.shield-note{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px auto 0;max-width:880px;padding:11px 16px;border:1px solid rgba(77,187,255,.45);border-radius:10px;background:rgba(77,187,255,.09);font-size:.85rem;line-height:1.6}
+.shield-note[hidden]{display:none}
+.shield-note .sn-text{flex:1;min-width:220px}
+.shield-note button{padding:6px 12px;border:1px solid rgba(77,187,255,.6);border-radius:7px;background:transparent;color:inherit;font:inherit;font-size:.8rem;cursor:pointer}
+.shield-note button:hover{background:rgba(77,187,255,.2)}
 
 /* ── tree nodes & connectors ── */
 .tc{display:flex;flex-direction:column;align-items:center}
@@ -161,21 +168,18 @@ footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--mut
 </head>
 <body>
 <header>
-  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Families</span></a>
+  <a class="logo" href="home.html"><span class="logo-title">The Shimotsuki Codex</span><h1 class="logo-sub">Family Trees</h1></a>
 </header>
 <main>
-  <aside class="codex-wip-banner" role="note" aria-label="Family Trees status" style="display:flex;gap:14px;padding:14px 18px;margin:18px auto 0;max-width:880px;background:linear-gradient(135deg,rgba(200,90,60,0.10) 0%,rgba(200,90,60,0.03) 100%);border:1px solid rgba(200,90,60,0.55);border-left:3px solid #c85a3c;border-radius:10px;font-size:0.88rem;line-height:1.6">
-    <div style="flex-shrink:0;align-self:flex-start;background:rgba(200,90,60,0.18);color:#e8927a;padding:4px 9px;border-radius:6px;font-size:.75rem;font-weight:700;letter-spacing:1px">🚧 Not live</div>
-    <div>
-      <strong style="color:#e8927a">Family Trees isn't part of the public Codex yet.</strong> The tree view isn't rendering — the underlying relationship data is solid (52 canon-cited bonds), but the diagram builder needs a rebuild before this goes live. It's unlinked from the site until then. Thanks for your patience.
-    </div>
-  </aside>
   <section class="hero">
     <h2>Family Trees</h2>
     <div class="sub">Blood · Bond · Legacy</div>
     <p class="blurb">Canon bloodlines and adoptive bonds across the Grand Line. Each family can be expanded or collapsed — click a section header to show or hide it, or click any portrait with children to collapse that branch.</p>
     <div class="gold-rule"></div>
   </section>
+
+  <!-- Honest note when the Spoiler Shield is sealing whole families -->
+  <div class="shield-note" id="shield-note" hidden></div>
 
   <div id="trees"></div>
 
@@ -584,18 +588,275 @@ function collapseToggle(btn) {
   btn.textContent = tc.classList.contains('collapsed') ? '▸' : '▾';
 }
 
-document.getElementById('trees').innerHTML = FAMILIES.map(fam => {
-  const treeHtml = renderTree(fam.root);
-  return `<details class="family-section"${fam.open ? ' open' : ''}>
+// ── PRESENTATION FOREST ──────────────────────────────────────────
+// Hand-authored tree layout for the 52 curated bonds in the edges block
+// above (the edges stay the source of truth — when a bond is added there,
+// add it here too; the drift check below warns if the counts diverge).
+//
+// Every node carries `ch`: the chapter its PLACE IN THIS FAMILY is revealed,
+// taken from the edge's own citation. A node is rendered only when the
+// reader's shield cutoff has passed it, so the trees grow as you read:
+// at Ch. 57 Sanji is simply the boy Zeff raised; the royal family he fled
+// appears at 832. `maxCh` retires a provisional node once the fuller
+// picture unlocks. ch:'film' = non-manga source, shown only when caught up.
+// This inline script runs before spoiler.js (which loads later in the body),
+// so the cutoff must be read at DOMContentLoaded rather than at parse time --
+// reading it here would see undefined and render every family ungated.
+let LATEST = 99999;
+let CUTOFF = Infinity;
+
+const FOREST = [
+  { titles: [
+      { ch: 431, name: 'The Monkey Family', icon: '\uD83C\uDF76',
+        desc: 'Garp, Dragon, Luffy \u2014 three generations of trouble' },
+      { ch: 583, name: 'The ASL Brotherhood', icon: '\uD83C\uDF76',
+        desc: 'Three bloodlines, bound by sake cups on Mt. Colubo' },
+    ],
+    roots: [
+      { name: 'Monkey D. Garp', ch: 431, role: 'Marine hero \u00b7 Ch. 431', children: [
+        { name: 'Monkey D. Dragon', ch: 432, role: 'Revolutionary \u00b7 father \u00b7 Ch. 432', children: [
+          { name: 'Monkey D. Luffy', ch: 432, note: 'sworn brother of Ace & Sabo \u00b7 Ch. 583', noteCh: 583 },
+        ]},
+      ]},
+      { couple: [ { name: 'Gol D. Roger' }, { name: 'Portgas D. Rouge' } ], ch: 551,
+        children: [
+          { name: 'Portgas D. Ace', ch: 551, note: 'raised by Dadan \u00b7 adopted by Whitebeard \u00b7 Ch. 552', noteCh: 552 },
+        ]},
+      { name: 'Edward Newgate', ch: 552, role: 'Whitebeard \u00b7 adoptive father of Ace \u00b7 Ch. 552', children: [
+        { name: 'Edward Weevil', ch: 802, adopted: true, role: 'alleged son \u00b7 Ch. 802' },
+      ]},
+      { name: 'Outlook III', ch: 583, role: 'Goa nobility \u00b7 Ch. 583', children: [
+        { name: 'Sabo', ch: 583, note: 'sworn brother of Luffy & Ace \u00b7 Ch. 583' },
+        { name: 'Stelly', ch: 587, adopted: true, role: 'adopted heir \u00b7 Ch. 587' },
+      ]},
+      { name: 'Curly Dadan', ch: 583, role: 'mountain bandit \u00b7 raised Luffy, Ace & Sabo \u00b7 Ch. 583' },
+    ]},
+
+  { titles: [
+      { ch: 57, name: 'Sanji & Zeff', icon: '\uD83C\uDF73',
+        desc: 'The sea-cook and the man who gave up a leg for him' },
+      { ch: 832, name: 'The Vinsmoke Family', icon: '\uD83D\uDC51',
+        desc: 'Germa 66 royalty \u2014 and the son who escaped it' },
+    ],
+    roots: [
+      { name: 'Zeff', ch: 57, maxCh: 832, role: 'guardian \u00b7 Ch. 57', children: [
+        { name: 'Sanji', ch: 57, adopted: true, role: 'sea cook \u00b7 raised on the Baratie' },
+      ]},
+      { couple: [ { name: 'Vinsmoke Judge' }, { name: 'Sora' } ], ch: 832,
+        children: [
+          { name: 'Vinsmoke Reiju',  ch: 832, role: 'daughter \u00b7 Ch. 832' },
+          { name: 'Vinsmoke Ichiji', ch: 832, role: 'son \u00b7 Ch. 832' },
+          { name: 'Vinsmoke Niji',   ch: 832, role: 'son \u00b7 Ch. 832' },
+          { name: 'Vinsmoke Sanji',  ch: 832, note: 'raised by Zeff from Ch. 57' },
+          { name: 'Vinsmoke Yonji',  ch: 832, role: 'son \u00b7 Ch. 832' },
+        ]},
+      { name: 'Zeff', ch: 832, role: 'guardian of Sanji \u00b7 Ch. 57' },
+    ]},
+
+  { titles: [ { ch: 78, name: 'The Bell-m\u00e8re Family', icon: '\uD83C\uDF4A',
+      desc: 'A Marine\u2019s stolen peace \u2014 two daughters and a tangerine grove' } ],
+    roots: [
+      { name: 'Bell-m\u00e8re', ch: 78, role: 'ex-Marine \u00b7 Ch. 78', children: [
+        { name: 'Nojiko', ch: 78, adopted: true, role: 'adopted daughter' },
+        { name: 'Nami',   ch: 78, adopted: true, role: 'adopted daughter' },
+      ]},
+    ]},
+
+  { titles: [
+      { ch: 5,   name: 'Zoro & Kuina', icon: '\u2694\uFE0F',
+        desc: 'Two thousand and one duels at the dojo' },
+      { ch: 952, name: 'The Shimotsuki Line', icon: '\u2744\uFE0F',
+        desc: 'From Wano\u2019s swordsmith village to the world\u2019s greatest swordsman-to-be' },
+    ],
+    roots: [
+      { name: 'Roronoa Zoro', ch: 5, maxCh: 952, role: 'trained at the dojo \u00b7 Ch. 5' },
+      { name: 'Shimotsuki Ushimaru', ch: 952, role: 'daimyo of Ringo \u00b7 Ch. 952', children: [
+        { name: 'Roronoa Zoro', ch: 952, adopted: true, role: 'descendant (implied) \u00b7 Ch. 952' },
+      ]},
+      { name: 'Kuina', ch: 5, role: 'childhood rival \u00b7 Ch. 5' },
+    ]},
+
+  { titles: [ { ch: 391, name: 'The Nico Family', icon: '\uD83D\uDCDA',
+      desc: 'Ohara\u2019s last scholars \u2014 a mother\u2019s sacrifice' } ],
+    roots: [
+      { name: 'Nico Olvia', ch: 391, role: 'Ohara archaeologist \u00b7 Ch. 391', children: [
+        { name: 'Nico Robin', ch: 391 },
+      ]},
+    ]},
+
+  { titles: [ { ch: 142, name: 'Chopper\u2019s Guardians', icon: '\uD83E\uDD8C',
+      desc: 'The quack who loved him and the witch who trained him' } ],
+    roots: [
+      { name: 'Hiriluk', ch: 142, role: 'guardian \u00b7 Ch. 142', children: [
+        { name: 'Tony Tony Chopper', ch: 142, adopted: true, note: 'mentored by Kureha \u00b7 Ch. 153', noteCh: 153 },
+      ]},
+      { name: 'Kureha', ch: 153, role: 'mentor \u00b7 Doctorine \u00b7 Ch. 153' },
+    ]},
+
+  { titles: [ { ch: 651, name: 'The Charlotte Family', icon: '\uD83C\uDF70',
+      desc: 'Big Mom\u2019s brood \u2014 85 children; six charted so far' } ],
+    roots: [
+      { name: 'Charlotte Linlin', ch: 651, role: 'matriarch', children: [
+        { name: 'Charlotte Lola',      ch: 651, role: 'daughter \u00b7 Ch. 651' },
+        { name: 'Charlotte Pudding',   ch: 825, role: 'daughter \u00b7 Ch. 825' },
+        { name: 'Charlotte Perospero', ch: 834, role: 'son \u00b7 Ch. 834' },
+        { name: 'Charlotte Katakuri',  ch: 834, role: 'son \u00b7 Ch. 834' },
+        { name: 'Charlotte Smoothie',  ch: 834, role: 'daughter \u00b7 Ch. 834' },
+        { name: 'Charlotte Cracker',   ch: 836, role: 'son \u00b7 Ch. 836' },
+      ]},
+    ]},
+
+  { titles: [ { ch: 762, name: 'Donquixote & Trafalgar', icon: '\uD83C\uDCCF',
+      desc: 'Two brothers, a fallen house, and the boy one of them saved' } ],
+    roots: [
+      { name: 'Donquixote Homing', ch: 762, role: 'former World Noble \u00b7 Ch. 762', children: [
+        { name: 'Donquixote Doflamingo', ch: 762, role: 'elder son' },
+        { name: 'Donquixote Rosinante', ch: 762, role: 'younger son \u00b7 Corazon', children: [
+          { name: 'Trafalgar D. Water Law', ch: 763, adopted: true, role: 'ward \u00b7 Ch. 763' },
+        ]},
+      ]},
+      { name: 'Lami', ch: 762, role: 'Law\u2019s sister \u00b7 Flevance \u00b7 Ch. 762' },
+    ]},
+
+  { titles: [ { ch: 514, name: 'The Boa Sisters', icon: '\uD83D\uDC0D',
+      desc: 'The three Gorgon sisters of Amazon Lily' } ],
+    roots: [
+      { name: 'Boa Hancock',     ch: 514, role: 'eldest \u00b7 Snake Princess' },
+      { name: 'Boa Sandersonia', ch: 514, role: 'sister \u00b7 Ch. 514' },
+      { name: 'Boa Marigold',    ch: 514, role: 'sister \u00b7 Ch. 514' },
+    ]},
+
+  { titles: [ { ch: 962, name: 'The Kouzuki Clan', icon: '\uD83C\uDF38',
+      desc: 'Wano\u2019s ruling house \u2014 twenty years across time' } ],
+    roots: [
+      { name: 'Kouzuki Sukiyaki', ch: 962, role: 'shogun \u00b7 Ch. 962', children: [
+        { name: 'Kouzuki Oden', ch: 962, maxCh: 965 },
+      ]},
+    ],
+    rootsLate: { ch: 965, roots: [
+      { name: 'Kouzuki Sukiyaki', ch: 962, role: 'shogun \u00b7 Ch. 962', children: [
+        { couple: [ { name: 'Kouzuki Oden' }, { name: 'Kouzuki Toki' } ], ch: 965,
+          children: [
+            { name: 'Kouzuki Momonosuke', ch: 966, role: 'son \u00b7 Ch. 966' },
+            { name: 'Kouzuki Hiyori',     ch: 966, role: 'daughter \u00b7 Ch. 966' },
+          ]},
+      ]},
+    ]},
+  },
+
+  { titles: [ { ch: 984, name: 'Kaidou & Yamato', icon: '\uD83D\uDC09',
+      desc: 'The strongest creature \u2014 and the child who chose another name' } ],
+    roots: [
+      { name: 'Kaidou', ch: 984, role: 'Emperor \u00b7 Ch. 984', children: [
+        { name: 'Yamato', ch: 984, role: 'Kaidou\u2019s child \u00b7 Ch. 984' },
+      ]},
+    ]},
+
+  { titles: [ { ch: 906, name: 'The Empty Throne', icon: '\uD83D\uDC41\uFE0F',
+      desc: 'What sits above the Five Elders' } ],
+    roots: [
+      { name: 'Imu', ch: 906, role: 'sovereign \u00b7 Ch. 906', children: [
+        { name: 'Five Elders', ch: 906, role: 'the world\u2019s highest authority' },
+      ]},
+    ]},
+
+  { titles: [ { ch: 1062, name: 'The Vegapunk Satellites', icon: '\uD83E\uDDE0',
+      desc: 'One genius, six bodies \u2014 a family of the mind' } ],
+    roots: [
+      { name: 'Vegapunk', ch: 1062, role: 'the Stella', children: [
+        { name: 'Vegapunk Shaka',      ch: 1067, role: 'satellite \u00b7 Wisdom' },
+        { name: 'Vegapunk Lilith',     ch: 1062, role: 'satellite \u00b7 Evil' },
+        { name: 'Vegapunk Edison',     ch: 1067, role: 'satellite \u00b7 Thought' },
+        { name: 'Vegapunk Pythagoras', ch: 1067, role: 'satellite \u00b7 Knowledge' },
+        { name: 'Vegapunk Atlas',      ch: 1064, role: 'satellite \u00b7 Violence' },
+        { name: 'Vegapunk York',       ch: 1062, role: 'satellite \u00b7 Greed' },
+      ]},
+    ]},
+
+  { titles: [ { ch: 'film', name: 'Shanks & Uta', icon: '\uD83C\uDFB8',
+      desc: 'The Red Hair pirate and the daughter he left with a village (Film: Red)' } ],
+    roots: [
+      { name: 'Shanks', ch: 'film', role: 'Emperor', children: [
+        { name: 'Uta', ch: 'film', adopted: true, role: 'adoptive daughter \u00b7 Film: Red' },
+      ]},
+    ]},
+];
+
+// ch:'film' (non-manga) shows only for effectively caught-up readers
+function chVisible(ch) {
+  if (ch === 'film') return CUTOFF >= LATEST - 10;
+  return typeof ch === 'number' && ch <= CUTOFF;
+}
+
+// Deep-prune a node against the cutoff. Returns null when the node itself
+// is still sealed; children prune recursively.
+function pruneNode(node) {
+  if (!chVisible(node.ch)) return null;
+  if (typeof node.maxCh === 'number' && CUTOFF >= node.maxCh) return null;
+  const out = Object.assign({}, node);
+  if (node.note && typeof node.noteCh === 'number' && !chVisible(node.noteCh)) delete out.note;
+  out.children = (node.children || []).map(pruneNode).filter(Boolean);
+  return out;
+}
+
+function familyView(fam) {
+  // A family can swap its whole root set once a later reveal restructures it
+  // (e.g. Oden alone -> Oden + Toki as a couple with children).
+  const baseRoots = (fam.rootsLate && chVisible(fam.rootsLate.ch))
+    ? fam.rootsLate.roots : fam.roots;
+  const roots = baseRoots.map(pruneNode).filter(Boolean);
+  if (!roots.length) return null;
+  // Latest title tier the reader has unlocked
+  const tiers = fam.titles.filter(t => chVisible(t.ch));
+  const t = tiers[tiers.length - 1];
+  if (!t) return null;
+  return { title: t, roots };
+}
+
+function renderFamilies() {
+if (typeof CodexSpoiler !== 'undefined') {
+  LATEST = CodexSpoiler.LATEST_PUBLISHED_CHAPTER || 99999;
+  CUTOFF = CodexSpoiler.effectiveCutoff('public');
+}
+const views  = FOREST.map(familyView);
+const sealed = views.filter(v => v === null).length;
+
+document.getElementById('trees').innerHTML = views.map((v, i) => {
+  if (!v) return '';
+  const treeHtml = `<div class="tc-roots">${v.roots.map(renderTree).join('')}</div>`;
+  const open = i === 0 ? ' open' : '';
+  return `<details class="family-section"${open}>
     <summary class="family-summary">
-      <span class="family-icon">${fam.icon}</span>
-      <span class="family-name">${esc(fam.name)}</span>
-      <span class="family-desc">${esc(fam.desc)}</span>
-      <span class="family-chevron">▾</span>
+      <span class="family-icon">${v.title.icon}</span>
+      <span class="family-name">${esc(v.title.name)}</span>
+      <span class="family-desc">${esc(v.title.desc)}</span>
+      <span class="family-chevron">\u25be</span>
     </summary>
     <div class="tree-wrap">${treeHtml}</div>
   </details>`;
 }).join('');
+
+// Honest note when whole families are sealed — never a silently short page.
+(function () {
+  const el = document.getElementById('shield-note');
+  if (!el || !sealed) return;
+  el.hidden = false;
+  el.innerHTML =
+    '<span class="sn-text">&#128737; Reading shield on \u2014 showing family bonds revealed up to about Chapter ' +
+    (CUTOFF === Infinity ? LATEST : CUTOFF) + '. <strong>' + sealed + '</strong> famil' +
+    (sealed === 1 ? 'y is' : 'ies are') + ' still sealed, and sealed members of the families below stay hidden.</span>' +
+    '<button type="button" onclick="CodexSpoiler.setCaughtUp();location.reload()">&#127988;&#8205;&#9760;&#65039; I\'m fully caught up</button>';
+})();
+
+// Drift check: the edges block is the source of truth. If bonds are added
+// there without extending the FOREST layout, say so where a maintainer looks.
+(function () {
+  const n = (FAMILIES && FAMILIES.edges) ? FAMILIES.edges.length : 0;
+  if (n !== 52) console.warn(
+    'families.html: edges block has ' + n + ' bonds but the tree layout was built for 52 \u2014 update FOREST in this page.');
+})();
+}
+document.addEventListener('DOMContentLoaded', renderFamilies);
 </script>
 
 <footer>The Shimotsuki Codex · Family Trees · One Piece &copy; Eiichiro Oda / Shueisha · Fan project, non-commercial</footer>
@@ -604,7 +865,7 @@ document.getElementById('trees').innerHTML = FAMILIES.map(fam => {
 <script src="search.js?v=3"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=33" defer></script>
+<script src="nav-burger.js?v=34" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the

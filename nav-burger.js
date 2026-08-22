@@ -59,7 +59,9 @@
       items: [
         { href: 'atlas.html',        icon: '🧭', name: 'Chapter Atlas' },
         { href: 'chapter-release-map.html', icon: '📅', name: 'Release Map' },
-        { href: 'world-map.html',    icon: '🌐', name: 'World Map' },
+        // soon:true 2026-08-22 — currently a signpost to Artur's map; greyed
+        // until the planned spinnable 3D globe ships.
+        { href: 'world-map.html',    icon: '🌐', name: 'World Map', soon: true },
         { href: 'sagas.html',        icon: '📖', name: 'Sagas' },
         { href: 'arcs.html',         icon: '🎭', name: 'Story Arcs' },
         { href: 'timeline.html',     icon: '📈', name: 'Timeline' },
@@ -93,10 +95,10 @@
         { href: 'characters.html',   icon: '👤', name: 'Characters' },
         { href: 'bounties.html',     icon: '💰', name: 'Bounty Wall' },
         { href: 'voices.html',       icon: '🎙️', name: 'Voice Cast' },
-        // soon:true 2026-07-13 — the tree renderer expects a shape the
-        // pipeline never produced (page rendered empty since launch). Greyed
-        // until the edge-list→forest renderer is rebuilt.
-        { href: 'families.html',     icon: '🌳', name: 'Family Trees', soon: true },
+        // Live again 2026-08-22 — rebuilt as a spoiler-aware forest renderer
+        // (per-bond chapter gates; families grow as the reader advances).
+        { href: 'families.html',     icon: '🌳', name: 'Family Trees' },
+
         { href: 'will-of-d.html',    icon: '🇩', name: 'Will of D.' },
         { href: 'crews.html',        icon: '⚓', name: 'Crews & Orgs' },
         { href: 'marines-wg.html',   icon: '🪽', name: 'Marines & World Govt' },
@@ -152,7 +154,9 @@
         { href: 'prove.html',     icon: '🔍', name: 'Prove an Idea' },
         { href: 'compare.html',   icon: '⚖',  name: 'Compare Stats' },
         { href: 'heights.html',   icon: '📏', name: 'Compare Heights' },
-        { href: 'workbench.html', icon: '📌', name: 'Theory Workbench' },
+        // soon:true 2026-08-22 — the workbench is aspirational, not a product
+        // yet (maintainer call). Page keeps its banner; nav stops selling it.
+        { href: 'workbench.html', icon: '📌', name: 'Theory Workbench', soon: true },
         // soon:true — quiz pool doesn't respect the spoiler cutoff; greyed
         // until the rebuilt tiered quiz ships.
         { href: 'quiz.html',      icon: '🎯', name: 'Trivia Trial', soon: true },
