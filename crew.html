@@ -156,6 +156,14 @@ function escapeHTML(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c
 // (most crews are early-arc and safe). Future: bake first_chapter into
 // crews.json so this can be removed.
 const CREW_MIN_CH = {
+  // 2026-08-22: groups whose captains PREDATE the group itself, so the
+  // rank-0 fallback below would show them early. Curated existence chapters.
+  'Straw Hat Grand Fleet': 800,
+  'Yonta Maria Grand Fleet': 800,
+  'Germa Kingdom':       832,
+  'Four Emperors':       432,
+  'Ninja-Pirate-Mink-Samurai Alliance': 801,
+  'Worst Generation':    498,
   'Whitebeard Pirates':  234,
   'Red Hair Pirates':    1,
   'Blackbeard Pirates':  225,
@@ -213,8 +221,23 @@ if (!requested) {
   if (!c) {
     root.innerHTML = `<div class="not-found"><h2>No record for "${escapeHTML(requested)}"</h2><a href="crews.html">← Browse all crews</a></div>`;
   } else {
-    // L7 gate: refuse-render late-arc crews
-    const _crewMin = CREW_MIN_CH[requested];
+// Existence fallback for crews the hand map doesn't list: the earliest
+// debut among rank-0 members (bake stamps captains with rank 0). A crew is
+// essentially never shown before its captain. No rank-0 debut -> fail-open.
+function _crewRank0Debut(crewRec) {
+  if (!crewRec || !crewRec.members) return null;
+  let best = null;
+  for (const m of crewRec.members) {
+    if (m.rank === 0 && typeof m.debut === 'number') {
+      if (best === null || m.debut < best) best = m.debut;
+    }
+  }
+  return best;
+}
+    // L7 gate: refuse-render late-arc crews. Hand map first, then the
+    // captain's debut derived from baked member data.
+    const _crewMin = (typeof CREW_MIN_CH[requested] === 'number')
+      ? CREW_MIN_CH[requested] : _crewRank0Debut(c);
     const _crewEff = _crewBootCutoff();
     if (typeof _crewMin === 'number' && _crewMin > _crewEff && !_crewUnlocked(requested)) {
       root.innerHTML = _crewShield(requested, _crewMin, _crewEff);
@@ -1305,7 +1328,7 @@ if (!requested) {
 <script src="spoiler.js?v=1"></script>
 <script src="settings.js"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
-<script src="search.js?v=3"></script>
+<script src="search.js?v=4"></script>
 <script src="forms.js?v=4"></script>
 <script>
 // After the dynamic render runs, sweep the page for any [data-form-character] tiles

@@ -149,32 +149,62 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
 const RAW = JSON.parse(document.getElementById("crews-data").textContent || '{"crews":{}}');
 let ALL = Object.entries(RAW.crews || {}).map(([name, info]) => ({name, ...info}));
 
-// Spoiler Shield: filter members by debut chapter, then drop crews with
-// no remaining visible members. Async — waits for chr-debut-map then re-renders.
-function _gateCrewsBySpoiler() {
-  if (typeof CodexSpoiler === 'undefined') return Promise.resolve();
-  const cutoff = CodexSpoiler.effectiveCutoff('public');
-  if (cutoff === Infinity) return Promise.resolve();
-  return CodexSpoiler.loadCharacterDebutMap().then(() => {
-    const filtered = [];
-    for (const crew of ALL) {
-      const visibleMembers = (crew.members || []).filter(m => {
-        const debut = CodexSpoiler.characterDebutChapter(m.name);
-        // No debut info → conservative: hide (fail-closed)
-        if (!debut) return false;
-        return debut <= cutoff;
-      });
-      if (visibleMembers.length === 0) continue;  // entire crew is post-cutoff
-      filtered.push({
-        ...crew,
-        members: visibleMembers,
-        count: visibleMembers.length,
-        current_count: visibleMembers.filter(m => m.status === 'current').length,
-      });
+// Spoiler Shield, synchronous: member debut chapters are BAKED into the
+// crews data now, so the gate runs before first render — the old async
+// chr-debut-map pass gave shielded readers a flash of the ungated list.
+// Two layers:
+//   1. crew EXISTENCE: hand map, else the captain's (rank-0) debut — a
+//      member-debut test alone showed "Beasts Pirates" at Ch. 592 because
+//      Apoo and Drake are members and debut at Sabaody.
+//   2. members: debut-gated, fail-closed on missing; counts are visible
+//      counts.
+const CREW_MIN_CH = {
+  // 2026-08-22: groups whose captains PREDATE the group itself, so the
+  // rank-0 fallback below would show them early. Curated existence chapters.
+  'Straw Hat Grand Fleet': 800,
+  'Yonta Maria Grand Fleet': 800,
+  'Germa Kingdom':       832,
+  'Four Emperors':       432,
+  'Ninja-Pirate-Mink-Samurai Alliance': 801,
+  'Worst Generation':    498,
+  'Whitebeard Pirates':  234,
+  'Big Mom Pirates':     571,
+  'Beasts Pirates':      795,
+  'Cross Guild':         1058,
+};
+// Existence fallback for crews the hand map doesn't list: the earliest
+// debut among rank-0 members (bake stamps captains with rank 0). A crew is
+// essentially never shown before its captain. No rank-0 debut -> fail-open.
+function _crewRank0Debut(crewRec) {
+  if (!crewRec || !crewRec.members) return null;
+  let best = null;
+  for (const m of crewRec.members) {
+    if (m.rank === 0 && typeof m.debut === 'number') {
+      if (best === null || m.debut < best) best = m.debut;
     }
-    ALL = filtered;
-    if (typeof render === 'function') render();
-  });
+  }
+  return best;
+}
+function _gateCrewsBySpoiler() {
+  if (typeof CodexSpoiler === 'undefined') return;
+  const cutoff = CodexSpoiler.effectiveCutoff('public');
+  if (cutoff === Infinity || cutoff >= (CodexSpoiler.LATEST_PUBLISHED_CHAPTER || 1188)) return;
+  const filtered = [];
+  for (const crew of ALL) {
+    const minCh = (typeof CREW_MIN_CH[crew.name] === 'number')
+      ? CREW_MIN_CH[crew.name] : _crewRank0Debut(crew);
+    if (typeof minCh === 'number' && minCh > cutoff) continue;
+    const visibleMembers = (crew.members || []).filter(m =>
+      typeof m.debut === 'number' && m.debut <= cutoff);
+    if (visibleMembers.length === 0) continue;
+    filtered.push({
+      ...crew,
+      members: visibleMembers,
+      count: visibleMembers.length,
+      current_count: visibleMembers.filter(m => m.status === 'current').length,
+    });
+  }
+  ALL = filtered;
 }
 
 let sort = "size-desc", query = "";
@@ -261,13 +291,13 @@ document.getElementById("grid").addEventListener("keydown", e => {
 });
 document.getElementById("search").addEventListener("input", e => {query = e.target.value.trim(); render()});
 document.getElementById("sort").addEventListener("change", e => {sort = e.target.value; render()});
-render();
-// Apply Spoiler Shield filter once chr-debut-map loads (re-renders ALL)
+// Gate BEFORE first paint — no flash of the ungated list.
 _gateCrewsBySpoiler();
+render();
 </script>
 <script src="settings.js"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
-<script src="search.js?v=3"></script>
+<script src="search.js?v=4"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script src="legal-notice.js" defer></script>
 <script src="nav-burger.js?v=34" defer></script>

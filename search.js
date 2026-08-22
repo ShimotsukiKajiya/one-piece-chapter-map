@@ -25,7 +25,21 @@
   let characters = [];
   let chapters = [];
 
-  function getSpoilerCutoff()   { return parseInt(localStorage.getItem('spoilerCutoff')   || '0', 10); }
+  // Unified with the site engine (2026-08-22): the old legacy-key read
+  // defaulted to 0 = ungated, so a first-time visitor typing "imu" got Imu
+  // while every page around the search was holding the 597 default.
+  function getSpoilerCutoff()   {
+    try {
+      const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+      if (raw && raw.shield_mode === 'off') return 1188; // deliberately off -> caught-up
+      if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0) {
+        return Math.min(raw.cutoff_chapter, 1188);
+      }
+    } catch (_) {}
+    const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
+    if (legacy > 0) return Math.min(legacy, 1188);
+    return 597; // first-visit default, same as spoiler.js
+  }
   function getSpoilerCutoffEp() { return parseInt(localStorage.getItem('spoilerCutoffEp') || '0', 10); }
 
   function parseDebut(firstAppearance) {

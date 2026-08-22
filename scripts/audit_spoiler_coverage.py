@@ -40,6 +40,9 @@ EXPECTED_GATED = {
     "haki.html", "poneglyphs.html", "void-century.html", "will-of-d.html",
     "ancient-weapons.html", "marines-wg.html", "combat-styles.html",
     "races.html", "materials.html", "items.html", "tech.html",
+    # 2026-08-22: gained a real reveal_chapter gate; previously in NEITHER
+    # list, which is why 0/29 gatable read as 100% coverage.
+    "weapons.html",
     "awakenings.html", "jolly-rogers.html",
     # Detail pages
     "character.html",

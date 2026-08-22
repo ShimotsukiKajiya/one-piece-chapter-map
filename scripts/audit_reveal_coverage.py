@@ -28,7 +28,9 @@ LIST = "--list" in sys.argv
 # (data file, display name, the page it feeds, candidate chapter fields)
 SOURCES = [
     ("devil_fruits.json",   "Devil Fruits",   "fruits.html",     ["debut_chapter", "first_appearance"]),
-    ("weapons.json",        "Weapons & Meito", "weapons.html",    ["debut_chapter", "debut", "first_appearance"]),
+    # reveal_chapter (2026-08-22): curated fail-late gate = latest story
+    # beat the entry references, so notes/wielder chains can't leak either.
+    ("weapons.json",        "Weapons & Meito", "weapons.html",    ["reveal_chapter", "debut_chapter", "debut", "first_appearance"]),
     ("items.json",          "Items",          "items.html",      ["debut_chapter", "debut", "first_appearance"]),
     ("materials.json",      "Materials",      "materials.html",  ["debut_chapter", "debut", "first_appearance"]),
     ("tech.json",           "Tech & Artifacts", "tech.html",     ["debut_chapter", "debut", "first_appearance"]),

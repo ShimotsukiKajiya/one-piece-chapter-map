@@ -12438,6 +12438,7 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
 <script>
 const RAW = JSON.parse(document.getElementById('rogers-data').textContent || '{"rogers":{}}');
 const CREWS = JSON.parse(document.getElementById('crews-data').textContent || '{"crews":{}}');
+const CREWS_RAW = JSON.parse(document.getElementById('crews-data').textContent || '{"crews":{}}');
 const rogers = RAW.rogers || {};
 function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
@@ -12450,6 +12451,14 @@ const SUPERNOVA = ['Straw Hat Pirates','Heart Pirates','Kid Pirates','On Air Pir
 // hand-curated map gates known-late crews at low cutoffs. Crews not in
 // this map render normally (most crews debut early in arcs and are safe).
 const CREW_MIN_CH = {
+  // 2026-08-22: groups whose captains PREDATE the group itself, so the
+  // rank-0 fallback below would show them early. Curated existence chapters.
+  'Straw Hat Grand Fleet': 800,
+  'Yonta Maria Grand Fleet': 800,
+  'Germa Kingdom':       832,
+  'Four Emperors':       432,
+  'Ninja-Pirate-Mink-Samurai Alliance': 801,
+  'Worst Generation':    498,
   // Yonko Era — only Whitebeard (Ch.234) is pre-Marineford; rest reveal later
   'Whitebeard Pirates':  234,    // Ch.234 mention; full reveal Ch.432+
   'Red Hair Pirates':    1,      // Shanks Ch.1
@@ -12501,11 +12510,28 @@ function _bootCutoff() {
   return 597;
 }
 function _isCaughtUp() { return _bootCutoff() >= 1188; }
+// Existence fallback for crews the hand map doesn't list: the earliest
+// debut among rank-0 members (bake stamps captains with rank 0). A crew is
+// essentially never shown before its captain. No rank-0 debut -> fail-open.
+function _crewRank0Debut(crewRec) {
+  if (!crewRec || !crewRec.members) return null;
+  let best = null;
+  for (const m of crewRec.members) {
+    if (m.rank === 0 && typeof m.debut === 'number') {
+      if (best === null || m.debut < best) best = m.debut;
+    }
+  }
+  return best;
+}
 function _crewVisible(name) {
   if (_isCaughtUp()) return true;
   const minCh = CREW_MIN_CH[name];
   if (typeof minCh === 'number') return minCh <= _bootCutoff();
-  return true;  // unknown → visible (most crews are early-arc; fail-open here is acceptable)
+  // Fall back to the captain's debut from the baked crews data.
+  const rec = (typeof CREWS_RAW !== 'undefined' && CREWS_RAW.crews) ? CREWS_RAW.crews[name] : null;
+  const capDebut = _crewRank0Debut(rec);
+  if (typeof capDebut === 'number') return capDebut <= _bootCutoff();
+  return true;  // no signal at all → visible (fail-open)
 }
 function _eraVisible(era) {
   if (_isCaughtUp()) return true;
@@ -12603,7 +12629,7 @@ render();
 <script src="spoiler.js?v=1"></script>
 <script src="settings.js"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
-<script src="search.js?v=3"></script>
+<script src="search.js?v=4"></script>
 <script src="legal-notice.js" defer></script>
 <script src="nav-burger.js?v=34" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
