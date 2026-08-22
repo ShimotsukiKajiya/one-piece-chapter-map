@@ -1007,6 +1007,18 @@ def _bake_ship_sails(page_name):
 
     chr_name_map = _q._name_index()
 
+    # name -> debut chapter, so ship.html can hide not-yet-debuted crew
+    _debut_of = {}
+    _pr_path = os.path.join(DIR, "punk_records.json")
+    if os.path.exists(_pr_path):
+        with open(_pr_path, encoding="utf-8") as f:
+            for _nm, _rec in json.load(f).items():
+                if isinstance(_rec, dict):
+                    _fa = _rec.get("first_appearance") or ""
+                    _m = _re.search(r"Chapter\s+(\d+)", _fa, _re.I) if _fa else None
+                    if _m:
+                        _debut_of[_nm] = int(_m.group(1))
+
     with open(sails_path, encoding="utf-8") as f:
         sails_rows = json.load(f)
 
@@ -1020,6 +1032,9 @@ def _bake_ship_sails(page_name):
             "current":  row.get("current"),
             "_display": chr_name_map.get(row.get("from", "")),
         }
+        _d = _debut_of.get(entry["_display"] or "")
+        if _d:
+            entry["_debut"] = _d
         if row.get("note"):
             entry["note"] = row["note"]
         by_ship.setdefault(ship_id, []).append(entry)
@@ -1095,14 +1110,30 @@ def _build_location_shards_index():
     with open(arcs_data, encoding="utf-8") as f:
         arcs_raw = json.load(f)
     arc_name_map = {}
+    arc_start_map = {}
     arc_list = arcs_raw if isinstance(arcs_raw, list) else list(arcs_raw.values())
     for a in arc_list:
         if isinstance(a, dict):
             aid = a.get("id") or a.get("arc_id")
             if aid:
                 arc_name_map[aid] = a.get("name", aid)
+                if isinstance(a.get("start"), int):
+                    arc_start_map[aid] = a["start"]
 
     chr_name_map = _q._name_index()
+
+    # name -> debut chapter so location.html can hide not-yet-debuted natives
+    _debut_of = {}
+    _pr_path = os.path.join(DIR, "punk_records.json")
+    if os.path.exists(_pr_path):
+        import re as _re2
+        with open(_pr_path, encoding="utf-8") as f:
+            for _nm, _rec in json.load(f).items():
+                if isinstance(_rec, dict):
+                    _fa = _rec.get("first_appearance") or ""
+                    _m = _re2.search(r"Chapter\s+(\d+)", _fa, _re2.I) if _fa else None
+                    if _m:
+                        _debut_of[_nm] = int(_m.group(1))
 
     set_in_by_loc  = _q.by_to("set-in")
     born_in_by_loc = _q.by_to("born-in")
@@ -1115,10 +1146,18 @@ def _build_location_shards_index():
             dn = arc_name_map.get(row.get("from"))
             if dn:
                 row["_display"] = dn
+            # Arc start chapter -- location.html hides not-yet-reached arcs
+            # (their names are spoilers in themselves; unknown fails closed)
+            _st = arc_start_map.get(row.get("from"))
+            if _st:
+                row["_start"] = _st
         for row in born_rows:
             dn = chr_name_map.get(row.get("from"))
             if dn:
                 row["_display"] = dn
+            _d = _debut_of.get(dn or "")
+            if _d:
+                row["_debut"] = _d
         out[loc_id] = {"arcs": arcs_rows, "born_here": born_rows}
     return out
 
@@ -1435,6 +1474,12 @@ def bake_crews():
             occ = rec.get("occupation", "") or ""
             m["role"] = occ
             m["rank"] = _rank_from_occupation(occ)
+            # Debut chapter so crew.html can hide not-yet-debuted members
+            # from shielded readers (join dates aren't in the data).
+            _fa = rec.get("first_appearance") or ""
+            _m = _re.search(r"Chapter\s+(\d+)", _fa, _re.I) if _fa else None
+            if _m:
+                m["debut"] = int(_m.group(1))
             # Annotate chr_id for ?id= routing
             chr_id = entity_index_raw.get(m["name"].lower())
             if chr_id and chr_id.startswith("chr:"):

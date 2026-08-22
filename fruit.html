@@ -33,13 +33,14 @@
     position:sticky; top:0; z-index:50;
   }
   .logo { text-decoration:none; color:inherit; }
-  .logo h1 {
+  .logo .logo-title {
+    display:block; margin:.67em 0;
     font-size:1.4rem; font-weight:900; letter-spacing:3px;
     background:linear-gradient(180deg, var(--gold-bright), var(--gold));
     -webkit-background-clip:text; background-clip:text;
     -webkit-text-fill-color:transparent;
   }
-  .logo-sub { font-size:0.7rem; color:var(--muted); letter-spacing:2px; text-transform:uppercase; }
+  .logo-sub { font-size:0.7rem; color:var(--muted); letter-spacing:2px; text-transform:uppercase; margin:0; font-weight:400; }
   nav { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
   nav a { color:var(--text); text-decoration:none; font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase; padding:6px 10px; border-radius:6px; }
   nav a:hover, nav a.active { color:var(--gold-bright); background:var(--surface2); }
@@ -138,7 +139,7 @@
 </head>
 <body>
 <header>
-  <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Devil Fruit</span></a>
+  <a class="logo" href="home.html"><span class="logo-title">The Shimotsuki Codex</span><h1 class="logo-sub">Devil Fruit</h1></a>
   
 </header>
 
@@ -161,6 +162,7 @@ const _LATEST_CH = 1188;
 function _bootCutoff() {
   try {
     const raw = JSON.parse(localStorage.getItem("codex-spoiler-state") || "null");
+    if (raw && raw.shield_mode === "off") return _LATEST_CH; // shield off -> caught-up
     if (raw && typeof raw.cutoff_chapter === "number" && raw.cutoff_chapter > 0) {
       return Math.max(0, Math.min(raw.cutoff_chapter, _LATEST_CH));
     }
@@ -364,13 +366,14 @@ function renderEatersSection(fruitId) {
     const status = row.current === false ? " <em>(former)</em>" : "";
     const awk = row.awakened ? " · <strong>Awakened</strong>" : "";
     const ch = row.chapter ? " · " + chLink(row.chapter) : "";
-    return `<div class="field"><div class="field-value">${tierBadge(rowTier(row))} ${chrLink}${status}${awk}${ch}</div></div>`;
+    // No tier badge below caught-up: LIKELY on "Luffy · Ch. 1" invites
+    // exactly the question the later reveal answers. Returns when caught up.
+    return `<div class="field"><div class="field-value">${_CAUGHT_UP ? tierBadge(rowTier(row)) + " " : ""}${chrLink}${status}${awk}${ch}</div></div>`;
   }).join("");
-  const hiddenNote = hiddenCount > 0
-    ? `<div style="font-size:0.78rem;color:var(--muted);font-style:italic;margin-top:6px">
-         🛡 ${hiddenCount} eater${hiddenCount === 1 ? "" : "s"} hidden by Spoiler Guard.
-       </div>`
-    : "";
+  // Silent omission: "1 eater hidden" on the Gomu Gomu page IS the tease.
+  // Hidden rows leave no trace; the page-level shield note says enough.
+  void hiddenCount;
+  const hiddenNote = "";
   return `<div class="section"><h3>Eaters (Shard)</h3>${html}${hiddenNote}</div>`;
 }
 
