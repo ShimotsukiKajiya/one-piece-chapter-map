@@ -808,12 +808,129 @@
       "rank": 10,
       "rungs": [
         {
+          "ch": 3,
+          "label": "Marine Branch Officers",
+          "summary": "The Government's police of the four Blues — the first face of justice most islands ever see. Some wear it better than others."
+        },
+        {
           "ch": 96,
           "label": "Marine Branch Captains & Special",
           "summary": "Captains, instructors, base commanders and special-operations leads."
         }
       ],
       "members": [
+        {
+          "name": "Morgan",
+          "rungs": [
+            {
+              "ch": 4,
+              "role": "Captain, 153rd Branch",
+              "note": "'Axe-Hand' Morgan. Ruled Shells Town through fear and statues."
+            },
+            {
+              "ch": 7,
+              "role": "Captain, 153rd Branch (deposed)",
+              "note": "'Axe-Hand' Morgan. Arrested by his own men after the Shells Town incident."
+            }
+          ]
+        },
+        {
+          "name": "Ripper",
+          "rungs": [
+            {
+              "ch": 7,
+              "role": "Commander, 153rd Branch",
+              "note": "Took command at Shells Town after Morgan's arrest. Enlisted Coby."
+            }
+          ]
+        },
+        {
+          "name": "Coby",
+          "maxCh": 1061,
+          "rungs": [
+            {
+              "ch": 7,
+              "role": "Chore boy, 153rd Branch",
+              "note": "Enlisted at Shells Town after escaping Alvida's crew. Dreams of being an admiral."
+            },
+            {
+              "ch": 96,
+              "role": "Recruit under Garp",
+              "note": "Taken on by Vice Admiral Garp for training alongside Helmeppo."
+            },
+            {
+              "ch": 433,
+              "role": "Petty Officer under Garp",
+              "note": "Garp's trainee. His resolve at Water 7 impressed the wrong grandfather."
+            },
+            {
+              "ch": 594,
+              "role": "Captain",
+              "note": "The rookie who screamed for the war to stop at Marineford — and was heard."
+            }
+          ]
+        },
+        {
+          "name": "Helmeppo",
+          "maxCh": 1061,
+          "rungs": [
+            {
+              "ch": 7,
+              "role": "Chore boy, 153rd Branch",
+              "note": "Morgan's son, stripped of privilege and started from the bottom."
+            },
+            {
+              "ch": 96,
+              "role": "Recruit under Garp",
+              "note": "Trains alongside Coby under Vice Admiral Garp."
+            },
+            {
+              "ch": 594,
+              "role": "Lieutenant Commander",
+              "note": "Garp-trained; Coby's partner since Shells Town."
+            }
+          ]
+        },
+        {
+          "name": "Fullbody",
+          "rungs": [
+            {
+              "ch": 43,
+              "role": "Lieutenant, 'Iron Fist'",
+              "note": "Made the mistake of criticising the Baratie's soup."
+            },
+            {
+              "ch": 98,
+              "role": "Seaman Recruit (demoted)",
+              "note": "'Iron Fist' Fullbody. Demoted after Loguetown; serves under Hina."
+            }
+          ]
+        },
+        {
+          "name": "Nezumi",
+          "rungs": [
+            {
+              "ch": 69,
+              "role": "Captain, 16th Branch",
+              "note": "Commands the branch nearest the Conomi Islands."
+            },
+            {
+              "ch": 93,
+              "role": "Captain, 16th Branch (corrupt)",
+              "note": "On Arlong's payroll for years — the reason no report from Conomi was ever answered."
+            }
+          ]
+        },
+        {
+          "name": "Jango",
+          "rungs": [
+            {
+              "ch": 98,
+              "role": "Seaman Recruit",
+              "note": "The former Black Cat hypnotist, reformed and enlisted under Hina."
+            }
+          ]
+        },
         {
           "name": "Tashigi",
           "rungs": [

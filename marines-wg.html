@@ -75,6 +75,7 @@
 </div>
   <div class="shield-note" id="shield-note" hidden></div>
   <div id="tiers"></div>
+  <p style="margin:22px 0 0;font-size:.85rem;color:var(--muted);line-height:1.6">This chart is the curated command structure. The full Marine roster — every enlisted name in the database, shield-filtered like everything else — lives on the <a class="link" href="crew.html?name=Marines" style="color:var(--ink-blue)">Marines crew page</a>.</p>
 </main>
 <script id="marines-data" type="application/json">
 {
@@ -887,12 +888,129 @@
       "rank": 10,
       "rungs": [
         {
+          "ch": 3,
+          "label": "Marine Branch Officers",
+          "summary": "The Government's police of the four Blues — the first face of justice most islands ever see. Some wear it better than others."
+        },
+        {
           "ch": 96,
           "label": "Marine Branch Captains & Special",
           "summary": "Captains, instructors, base commanders and special-operations leads."
         }
       ],
       "members": [
+        {
+          "name": "Morgan",
+          "rungs": [
+            {
+              "ch": 4,
+              "role": "Captain, 153rd Branch",
+              "note": "'Axe-Hand' Morgan. Ruled Shells Town through fear and statues."
+            },
+            {
+              "ch": 7,
+              "role": "Captain, 153rd Branch (deposed)",
+              "note": "'Axe-Hand' Morgan. Arrested by his own men after the Shells Town incident."
+            }
+          ]
+        },
+        {
+          "name": "Ripper",
+          "rungs": [
+            {
+              "ch": 7,
+              "role": "Commander, 153rd Branch",
+              "note": "Took command at Shells Town after Morgan's arrest. Enlisted Coby."
+            }
+          ]
+        },
+        {
+          "name": "Coby",
+          "maxCh": 1061,
+          "rungs": [
+            {
+              "ch": 7,
+              "role": "Chore boy, 153rd Branch",
+              "note": "Enlisted at Shells Town after escaping Alvida's crew. Dreams of being an admiral."
+            },
+            {
+              "ch": 96,
+              "role": "Recruit under Garp",
+              "note": "Taken on by Vice Admiral Garp for training alongside Helmeppo."
+            },
+            {
+              "ch": 433,
+              "role": "Petty Officer under Garp",
+              "note": "Garp's trainee. His resolve at Water 7 impressed the wrong grandfather."
+            },
+            {
+              "ch": 594,
+              "role": "Captain",
+              "note": "The rookie who screamed for the war to stop at Marineford — and was heard."
+            }
+          ]
+        },
+        {
+          "name": "Helmeppo",
+          "maxCh": 1061,
+          "rungs": [
+            {
+              "ch": 7,
+              "role": "Chore boy, 153rd Branch",
+              "note": "Morgan's son, stripped of privilege and started from the bottom."
+            },
+            {
+              "ch": 96,
+              "role": "Recruit under Garp",
+              "note": "Trains alongside Coby under Vice Admiral Garp."
+            },
+            {
+              "ch": 594,
+              "role": "Lieutenant Commander",
+              "note": "Garp-trained; Coby's partner since Shells Town."
+            }
+          ]
+        },
+        {
+          "name": "Fullbody",
+          "rungs": [
+            {
+              "ch": 43,
+              "role": "Lieutenant, 'Iron Fist'",
+              "note": "Made the mistake of criticising the Baratie's soup."
+            },
+            {
+              "ch": 98,
+              "role": "Seaman Recruit (demoted)",
+              "note": "'Iron Fist' Fullbody. Demoted after Loguetown; serves under Hina."
+            }
+          ]
+        },
+        {
+          "name": "Nezumi",
+          "rungs": [
+            {
+              "ch": 69,
+              "role": "Captain, 16th Branch",
+              "note": "Commands the branch nearest the Conomi Islands."
+            },
+            {
+              "ch": 93,
+              "role": "Captain, 16th Branch (corrupt)",
+              "note": "On Arlong's payroll for years — the reason no report from Conomi was ever answered."
+            }
+          ]
+        },
+        {
+          "name": "Jango",
+          "rungs": [
+            {
+              "ch": 98,
+              "role": "Seaman Recruit",
+              "note": "The former Black Cat hypnotist, reformed and enlisted under Hina."
+            }
+          ]
+        },
         {
           "name": "Tashigi",
           "rungs": [
@@ -1023,7 +1141,7 @@ document.getElementById('tiers').innerHTML = tiers.map(t => {
 </script>
 <footer>The Shimotsuki Codex · Marines & World Government structure &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script id="chr-id-map" type="application/json">
-{"Aramaki":"chr:01594","Bastille":"chr:01632","Blueno":"chr:01678","Borsalino":"chr:01694","Charlos":"chr:01753","Doll":"chr:01921","Donquixote Homing":"chr:01929","Donquixote Mjosgard":"chr:01930","Ethanbaron V. Nusjuro":"chr:01968","Figarland Garling":"chr:01976","Figarland Shamrock":"chr:01977","Fukurō":"chr:01998","Helmeppo":"chr:02119","Hibari":"chr:02126","Hina":"chr:02134","Imu":"chr:02180","Issho":"chr:02197","Jabra":"chr:02203","Jaygarcia Saturn":"chr:02212","Kaku":"chr:02256","Kalifa":"chr:02261","Kong":"chr:02320","Kumadori":"chr:02334","Kuzan":"chr:01592","Manmayer Gunko":"chr:02410","Marcus Mars":"chr:02414","Momonga":"chr:02491","Monkey D. Garp":"chr:02498","Onigumo":"chr:02609","Prince Grus":"chr:02671","Rimoshifu Killingham":"chr:02708","Rob Lucci":"chr:02718","Rosward":"chr:02732","Sakazuki":"chr:01564","Sengoku":"chr:02797","Sentomaru":"chr:02800","Shalria":"chr:02805","Shepherd Ju Peter":"chr:02813","Shepherd Sommers":"chr:02814","Smoker":"chr:02844","Spandam":"chr:02857","Strawberry":"chr:02873","Stussy":"chr:02877","T-Bone":"chr:02894","Tashigi":"chr:02914","Topman Warcury":"chr:02940","Tsuru":"chr:02958","Vergo":"chr:03003","X Drake":"chr:03041"}
+{"Aramaki":"chr:01594","Bastille":"chr:01632","Blueno":"chr:01678","Borsalino":"chr:01694","Charlos":"chr:01753","Doll":"chr:01921","Donquixote Homing":"chr:01929","Donquixote Mjosgard":"chr:01930","Ethanbaron V. Nusjuro":"chr:01968","Figarland Garling":"chr:01976","Figarland Shamrock":"chr:01977","Fukurō":"chr:01998","Fullbody":"chr:01999","Helmeppo":"chr:02119","Hibari":"chr:02126","Hina":"chr:02134","Imu":"chr:02180","Issho":"chr:02197","Jabra":"chr:02203","Jango":"chr:02210","Jaygarcia Saturn":"chr:02212","Kaku":"chr:02256","Kalifa":"chr:02261","Kong":"chr:02320","Kumadori":"chr:02334","Kuzan":"chr:01592","Manmayer Gunko":"chr:02410","Marcus Mars":"chr:02414","Momonga":"chr:02491","Monkey D. Garp":"chr:02498","Morgan":"chr:02506","Nezumi":"chr:02571","Onigumo":"chr:02609","Prince Grus":"chr:02671","Rimoshifu Killingham":"chr:02708","Ripper":"chr:02712","Rob Lucci":"chr:02718","Rosward":"chr:02732","Sakazuki":"chr:01564","Sengoku":"chr:02797","Sentomaru":"chr:02800","Shalria":"chr:02805","Shepherd Ju Peter":"chr:02813","Shepherd Sommers":"chr:02814","Smoker":"chr:02844","Spandam":"chr:02857","Strawberry":"chr:02873","Stussy":"chr:02877","T-Bone":"chr:02894","Tashigi":"chr:02914","Topman Warcury":"chr:02940","Tsuru":"chr:02958","Vergo":"chr:03003","X Drake":"chr:03041"}
 </script>
 <script src="chr-link-upgrader.js?v=2"></script>
 <script src="spoiler.js?v=1"></script>
