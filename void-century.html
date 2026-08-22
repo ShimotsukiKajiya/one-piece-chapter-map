@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Void Century · The Shimotsuki Codex</title>
-<meta name="description" content="The Void Century — what canon actually says about the 100-year gap, the Ancient Kingdom, Joy Boy, and the Will of D.">
+<meta name="description" content="The Void Century — the erased 100 years at the heart of One Piece, compiled from canon reveals and shown only as far as your chapter.">
 <link rel="stylesheet" href="cite-styles.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#d4a44a">
@@ -36,6 +36,12 @@
   .user-chip{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:3px 9px;border-radius:12px;font-size:.74rem;text-decoration:none}
   .user-chip:hover{border-color:var(--gold);color:var(--gold-bright)}
   footer{padding:30px 24px 50px;text-align:center;font-size:.75rem;color:var(--muted);letter-spacing:1px;border-top:1px solid var(--border);max-width:1100px;margin:60px auto 0}
+.shield-note{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 4px;padding:11px 16px;border:1px solid rgba(77,187,255,.45);border-radius:10px;background:rgba(77,187,255,.09);font-size:.85rem;line-height:1.6}
+.shield-note[hidden]{display:none}
+.shield-note .sn-text{flex:1;min-width:220px}
+.shield-note button{padding:6px 12px;border:1px solid rgba(77,187,255,.6);border-radius:7px;background:transparent;color:inherit;font:inherit;font-size:.8rem;cursor:pointer}
+.shield-note button:hover{background:rgba(77,187,255,.2)}
+.item-asof{font-size:.68rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-left:auto}
 </style>
 <style id="nav-burger-critical">
   header { padding-right: 240px !important; padding-left: 24px !important; }
@@ -43,7 +49,7 @@
 </style>
   <link rel="canonical" href="https://shimotsukicodex.com/void-century.html">
   <meta property="og:title" content="The Void Century · The Shimotsuki Codex">
-  <meta property="og:description" content="The Void Century — what canon actually says about the 100-year gap, the Ancient Kingdom, Joy Boy, and the Will of D.">
+  <meta property="og:description" content="The Void Century — the erased 100 years at the heart of One Piece, compiled from canon reveals and shown only as far as your chapter.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shimotsukicodex.com/void-century.html">
   <meta property="og:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
@@ -51,7 +57,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ShimotsukiCodex">
   <meta name="twitter:title" content="The Void Century · The Shimotsuki Codex">
-  <meta name="twitter:description" content="The Void Century — what canon actually says about the 100-year gap, the Ancient Kingdom, Joy Boy, and the Will of D.">
+  <meta name="twitter:description" content="The Void Century — the erased 100 years at the heart of One Piece, compiled from canon reveals and shown only as far as your chapter.">
   <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
 </head>
 <body>
@@ -61,81 +67,200 @@
 <main>
 <div class="page-hero">
   <h2 class="title">🕯 The Void Century</h2>
-  <p class="blurb">The 100-year period 800 years ago that the World Government has erased from history. The mystery at the heart of One Piece — Joy Boy, the Ancient Kingdom, the Twenty Kingdoms, Imu, the Sun God Nika myth, and the truth Roger laughed at. Compiled from canon reveals through the Egghead arc.</p>
+  <p class="blurb">The 100-year period 800 years ago that the World Government has erased from history — the mystery at the heart of One Piece. Each entry below is shown only as far as <em>your</em> chapter: read further, and the page learns more with you.</p>
   <div class="gold-rule"></div>
 </div>
+  <div class="shield-note" id="shield-note" hidden></div>
   <div id="grid" class="grid"></div>
 </main>
 <script id="void-data" type="application/json">
 {
-  "_doc": "The Void Century — the 100-year period 800 years ago that the World Government has erased from history. The mystery at the heart of One Piece. Compiled from canon reveals through Egghead.",
-  "generated_on": "2026-04-27",
+  "_doc": "The Void Century — the 100-year period 800 years ago that the World Government has erased from history. LADDERED (2026-08-22): each topic is a stack of rungs; a reader sees the highest rung their Spoiler Shield cutoff has earned, so the page reads as the mystery looked AT THEIR CHAPTER. Every rung's text must be written entirely from knowledge available at its `ch` — the leak audit sweeps this. A rung may override the topic's display name (the topic title itself can be a spoiler: 'Imu and the Empty Throne' is a Ch. 908 title, not a Ch. 906 one). Topics whose first rung is unearned are omitted and counted in the page's shield note.",
+  "generated_on": "2026-08-22",
   "topics": [
     {
       "name": "The Ancient Kingdom",
       "kind": "people",
-      "summary": "A great kingdom that existed during the Void Century. Allied with Joy Boy. Possessed the Ancient Weapons. Defeated and erased by the Twenty Kingdoms — the proto-World Government. Its name and territory are forbidden knowledge — Professor Clover died for speaking it.",
-      "key_chapters": [395, 906, 1115]
+      "rungs": [
+        {
+          "ch": 395,
+          "text": "A great kingdom that existed during the Void Century — Professor Clover's forbidden theory. An alliance of twenty kingdoms destroyed it 800 years ago and erased every trace; Clover was shot the moment he moved to speak its name, and Ohara burned for studying it."
+        },
+        {
+          "ch": 1116,
+          "text": "A great kingdom of the Void Century, allied with Joy Boy, and holder of the Ancient Weapons. Defeated and erased by the Twenty Kingdoms — the proto-World Government. Its name and territory remain forbidden knowledge — Professor Clover died for nearly speaking it, and Vegapunk gave his life to say more."
+        }
+      ]
     },
     {
       "name": "Joy Boy",
       "kind": "person",
-      "summary": "Apologised in writing on the Sea Forest Poneglyph for failing to keep a promise to Shirahoshi's ancestor (the previous Poseidon). Now revealed: Joy Boy was the original wielder of the Hito Hito no Mi Model: Nika — the Sun God Devil Fruit. Luffy is the second Joy Boy.",
-      "key_chapters": [628, 906, 1043, 1116]
+      "rungs": [
+        {
+          "ch": 628,
+          "text": "A name from the Void Century. On the Sea Forest Poneglyph he left a written apology to the mermaid princess of his era — a promise he could not keep."
+        },
+        {
+          "ch": 968,
+          "text": "A name from the Void Century. He left a written apology on the Sea Forest Poneglyph for a promise he could not keep — and when Roger's crew reached the final island and learned who he was, Roger named that island Laugh Tale."
+        },
+        {
+          "ch": 1043,
+          "text": "The name from the Void Century that Roger laughed about at Laugh Tale. And now Zunesha, who heard the drums 800 years ago, says it plainly: Joy Boy has returned."
+        },
+        {
+          "ch": 1044,
+          "text": "Joy Boy was the original wielder of the Hito Hito no Mi, Model: Nika — the Sun God fruit the World Government hid for 800 years under the name Gomu Gomu. Luffy is the second Joy Boy."
+        },
+        {
+          "ch": 1116,
+          "text": "The first pirate in recorded history — so Vegapunk's broadcast named him. Original wielder of the Hito Hito no Mi, Model: Nika, the Sun God fruit the World Government hid under the name Gomu Gomu. He apologised on the Sea Forest Poneglyph for a promise he could not keep. Luffy is the second Joy Boy."
+        }
+      ]
     },
     {
       "name": "The Twenty Kingdoms / The World Government's founding",
       "kind": "politics",
-      "summary": "20 kingdoms allied 800 years ago to destroy the Ancient Kingdom and form the World Government. Their royal descendants became the Tenryubito (Celestial Dragons), with one exception — the Nefertari family of Alabasta refused to relocate to Mariejois.",
-      "key_chapters": [395, 906]
+      "rungs": [
+        {
+          "ch": 395,
+          "text": "Twenty kingdoms allied 800 years ago to destroy the Ancient Kingdom, and out of that victory founded the World Government. What they buried with it, no one is permitted to know."
+        },
+        {
+          "ch": 722,
+          "text": "Twenty kingdoms allied 800 years ago to destroy the Ancient Kingdom and founded the World Government. Their royal bloodlines relocated to Mariejois and became the Tenryubito — the Celestial Dragons."
+        },
+        {
+          "ch": 908,
+          "text": "Twenty kingdoms allied 800 years ago to destroy the Ancient Kingdom and form the World Government. Their royal descendants became the Tenryubito (Celestial Dragons), with one exception — the Nefertari family of Alabasta refused to relocate to Mariejois."
+        }
+      ]
     },
     {
       "name": "Imu and the Empty Throne",
       "kind": "person",
-      "summary": "The Empty Throne at the centre of the World Government Council was always shown as 'a symbol that none shall sit above the kings.' Reveal at the Reverie: it's actually occupied by Imu, the hidden true ruler. Imu has shown control over Mother Flame and personal hatred of the D. clan.",
-      "key_chapters": [906, 1085, 1115]
+      "rungs": [
+        {
+          "ch": 906,
+          "name": "The Empty Throne",
+          "text": "At the heart of Mariejois stands the Empty Throne — the symbol that no single ruler stands above the world's kings. The weapons of the twenty founding kings are left sworn around it. That is what the world is told."
+        },
+        {
+          "ch": 908,
+          "text": "The Empty Throne was always 'a symbol that none shall sit above the kings.' The Reverie showed the truth: it is occupied. Its name is Imu — and the Five Elders, the highest authority the public knows, kneel to it."
+        },
+        {
+          "ch": 1060,
+          "text": "The Empty Throne is occupied by Imu, the hidden true ruler, before whom the Five Elders kneel. And Imu does not only sit: a kingdom was just erased from the map on Imu's word."
+        },
+        {
+          "ch": 1085,
+          "text": "The Empty Throne's occupant, Imu, is the World Government's hidden true ruler. Imu erased Lulusia on a word, spoke a name 800 years old — 'Lili' — to King Cobra before he died for hearing too much, and burns with open hatred for the initial D."
+        }
+      ]
     },
     {
       "name": "Mother Flame & Lulusia",
       "kind": "event",
-      "summary": "During the Egghead arc, Imu and the Five Elders used a Vegapunk-developed superweapon — the Mother Flame — to vaporise the Lulusia Kingdom from above. The same weapon scared Vegapunk into broadcasting the truth. Demonstrated the World Government still has Ancient-Weapon-tier capability.",
-      "key_chapters": [1060, 1115]
+      "rungs": [
+        {
+          "ch": 1060,
+          "name": "The Erasure of Lulusia",
+          "text": "The Kingdom of Lulusia vanished in a column of light from the sky. Nothing remains — not the people, not the island. The sea where it stood has begun to rise."
+        },
+        {
+          "ch": 1086,
+          "text": "The weapon that erased Lulusia is the Mother Flame — developed by Vegapunk himself and taken by the World Government. Its use is what drove Vegapunk to prepare his message to the world, and it demonstrates the Government still commands Ancient-Weapon-tier power."
+        }
+      ]
     },
     {
       "name": "God Valley Incident",
       "kind": "event",
-      "summary": "38 years ago — Garp + Roger jointly destroyed the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki) on God Valley. The island then disappeared from maps. Recent reveals: Kuma was a child slave there; the Nephilim experiments and Buccaneer race connection happened here.",
-      "key_chapters": [957, 1095, 1102]
+      "rungs": [
+        {
+          "ch": 957,
+          "text": "38 years ago, Garp and Roger together destroyed the Rocks Pirates — Whitebeard, Big Mom, Kaidou and Shiki under one flag — at an island called God Valley. The island then disappeared from every map."
+        },
+        {
+          "ch": 1096,
+          "text": "38 years ago Garp and Roger jointly destroyed the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki) on God Valley, and the island vanished from the maps. The recent Kuma reveals showed what the world was celebrating there: a 'Native Hunting' attended by the Celestial Dragons themselves, where Kuma — a child of the Buccaneer race — was enslaved."
+        }
+      ]
     },
     {
       "name": "Vegapunk's Broadcast",
       "kind": "event",
-      "summary": "Egghead climax — Stella Vegapunk uses a global Visual Den Den Mushi to deliver a posthumous message: humanity is sinking, the past will be revealed, and the Ancient Kingdom's truth must out. He was killed mid-broadcast by Saint Saturn but the recording survives.",
-      "key_chapters": [1112, 1115]
+      "rungs": [
+        {
+          "ch": 1109,
+          "name": "A Voice to the World",
+          "text": "A pre-recorded message from Vegapunk has begun broadcasting to every corner of the world at once — and the World Government is doing everything in its power to stop it."
+        },
+        {
+          "ch": 1116,
+          "text": "Egghead's climax: Vegapunk's posthumous message reached the world — the seas will rise and the world will sink; the Void Century hides a war the Government lost the right to erase; and Joy Boy, history's first pirate, existed. Saint Saturn killed the Stella, but the recording outlived him."
+        }
+      ]
     },
     {
       "name": "Sun God Nika myth",
       "kind": "myth",
-      "summary": "An ancient warrior-deity who 'made slaves laugh and freed them.' Worshipped in secret by the descendants of the people the World Government enslaved. Joy Boy's true name. Luffy embodies Nika via the Hito Hito no Mi Model: Nika (deliberately mislabeled as Gomu Gomu by the World Government for 800 years).",
-      "key_chapters": [1018, 1043, 1044]
+      "rungs": [
+        {
+          "ch": 1018,
+          "name": "The Sun God of the Slaves",
+          "text": "An ancient warrior-deity whispered among the enslaved: the Sun God, the Warrior of Liberation, who would make slaves laugh and set them free. Even knowing the name is dangerous."
+        },
+        {
+          "ch": 1044,
+          "text": "The Sun God Nika — the ancient Warrior of Liberation who 'made slaves laugh and freed them,' worshipped in secret by the descendants of the people the World Government enslaved. Joy Boy's true nature: the Hito Hito no Mi, Model: Nika, deliberately mislabeled 'Gomu Gomu' by the World Government for 800 years. Luffy embodies it."
+        }
+      ]
     },
     {
       "name": "Buster Call doctrine",
       "kind": "politics",
-      "summary": "The World Government's response to anyone reading or transcribing Poneglyphs: total annihilation. Famously used on Ohara, the West Blue island where Robin's mother Olvia worked, after they were caught studying the Poneglyphs.",
-      "key_chapters": [392, 397]
+      "rungs": [
+        {
+          "ch": 397,
+          "text": "The World Government's response to anyone reading or transcribing Poneglyphs: total annihilation. Famously used on Ohara, the West Blue island where Robin's mother Olvia worked, after they were caught studying the Poneglyphs."
+        }
+      ]
     },
     {
       "name": "The Ancient Weapons",
       "kind": "weapons",
-      "summary": "Pluton (warship), Poseidon (the mermaid princess line), and the unrevealed Uranus. Each is an Ancient-Kingdom relic powerful enough to destroy the world. The Strawhats now influence Pluton plans (Franky), Poseidon is their ally (Shirahoshi), and Uranus remains the last great unknown.",
-      "key_chapters": [357, 649, 906, 1085]
+      "rungs": [
+        {
+          "ch": 193,
+          "name": "Pluton",
+          "text": "A weapon from the ancient world called Pluton — a warship said to be capable of destroying the world. Crocodile tore Alabasta apart hunting for it."
+        },
+        {
+          "ch": 431,
+          "name": "Pluton",
+          "text": "Pluton — the ancient warship said to be able to destroy the world. Its blueprints passed down through Water 7's shipwrights for generations, until Franky burned them at Enies Lobby rather than let the Government take them."
+        },
+        {
+          "ch": 650,
+          "text": "Pluton (the warship), Poseidon (not a machine at all — the mermaid princess, reborn each era; Shirahoshi is the current one), and a third that is only a name: Uranus. Each is an Ancient-Kingdom relic capable of ending the world."
+        },
+        {
+          "ch": 1056,
+          "text": "Pluton (warship), Poseidon (the mermaid princess line), and the unrevealed Uranus. Pluton sleeps beneath Wano itself; Poseidon — Shirahoshi — is the Straw Hats' friend; Uranus remains the last great unknown."
+        }
+      ]
     },
     {
       "name": "The Truth Roger Found",
       "kind": "event",
-      "summary": "At Laugh Tale, Roger and his crew read the Rio Poneglyph and learned what really happened during the Void Century. They laughed — not at the answer, but because Roger felt he was 'too early.' He left messages for the next pirate king (Luffy) to find his own way.",
-      "key_chapters": [967, 968]
+      "rungs": [
+        {
+          "ch": 968,
+          "text": "At Laugh Tale, Roger and his crew read the Rio Poneglyph and learned what really happened during the Void Century. They laughed — not at the answer, but because Roger felt he was 'too early.' He left it for the next one to find their own way."
+        }
+      ]
     }
   ]
 }
@@ -144,21 +269,57 @@
 const RAW = JSON.parse(document.getElementById('void-data').textContent || '{}');
 const items = RAW.topics || [];
 function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-document.getElementById('grid').innerHTML = items.map(i => {
-  const usersField = i.users || (i.wielder ? [i.wielder] : []);
-  const users = Array.isArray(usersField) ? usersField : [usersField];
+
+// Boot-safe cutoff (runs before spoiler.js; same shape as the codex pages).
+// 597 first-visit default; shield-off means caught-up.
+function _vcBootCutoff(){
+  try{
+    const raw=JSON.parse(localStorage.getItem("codex-spoiler-state")||"null");
+    if(raw&&raw.shield_mode==="off")return 1188;
+    if(raw&&typeof raw.cutoff_chapter==="number"&&raw.cutoff_chapter>0)return Math.min(raw.cutoff_chapter,1188);
+    const legacy=parseInt(localStorage.getItem("spoilerCutoff")||"0",10);
+    if(legacy>0)return Math.min(legacy,1188);
+  }catch(_){}
+  return 597;
+}
+
+// ── REVEAL LADDER ────────────────────────────────────────────────
+// Each topic is a stack of rungs; the reader sees the HIGHEST rung their
+// cutoff has earned, so the page reads as the mystery looked at THEIR
+// chapter. A rung may override the topic's display name (the title
+// "Imu and the Empty Throne" is itself a Ch. 908 spoiler). Topics with no
+// earned rung vanish without trace and are counted in the shield note --
+// never a per-topic tease, which would itself say "a reveal exists here".
+const _EFF = _vcBootCutoff();
+const _CAUGHT = _EFF >= 1188;
+let _sealed = 0;
+
+document.getElementById('grid').innerHTML = items.map(t => {
+  const rungs = (t.rungs || []).filter(r => typeof r.ch === 'number' && r.ch <= _EFF);
+  if (!rungs.length) { _sealed++; return ''; }
+  const r = rungs[rungs.length - 1];
+  const shownName = r.name || t.name;
   return '<article class="item">' +
     '<div class="item-head">' +
-      '<span class="item-name">' + escapeHtml(i.name) + '</span>' +
-      (i.japanese ? '<span class="item-jp">' + escapeHtml(i.japanese) + '</span>' : '') +
-      (i.kind ? '<span class="item-kind">' + escapeHtml(i.kind) + '</span>' : '') +
-      (i.debut ? '<span class="item-debut">' + escapeHtml(i.debut) + '</span>' : '') +
+      '<span class="item-name">' + escapeHtml(shownName) + '</span>' +
+      (t.kind ? '<span class="item-kind">' + escapeHtml(t.kind) + '</span>' : '') +
+      '<span class="item-asof">as of Ch. ' + r.ch + '</span>' +
     '</div>' +
-    (i.summary ? '<p class="item-notes">' + escapeHtml(i.summary) + '</p>' : '') +
-    (i.notes ? '<p class="item-notes">' + escapeHtml(i.notes) + '</p>' : '') +
-    (users.length ? '<div class="item-users">' + users.map(u => '<a class="user-chip" href="character.html?name=' + encodeURIComponent(u) + '">' + escapeHtml(u) + '</a>').join('') + '</div>' : '') +
+    '<p class="item-notes">' + escapeHtml(r.text) + '</p>' +
   '</article>';
 }).join('');
+
+// Honest global note -- the only signal that more exists past the cutoff.
+(function () {
+  const el = document.getElementById('shield-note');
+  if (!el || _CAUGHT) return;
+  const parts = ['&#128737; Reading shield on — every entry above stops at what Chapter ' + _EFF + ' knows.'];
+  if (_sealed > 0) parts.push('<strong>' + _sealed + '</strong> ' + (_sealed === 1 ? 'mystery has' : 'mysteries have') + ' not surfaced yet.');
+  parts.push('Read on, and this page learns with you.');
+  el.hidden = false;
+  el.innerHTML = '<span class="sn-text">' + parts.join(' ') + '</span>' +
+    '<button type="button" onclick="try{CodexSpoiler.setCaughtUp()}catch(_){};location.reload()">&#127988;&#8205;&#9760;&#65039; I\'m fully caught up</button>';
+})();
 </script>
 <footer>The Shimotsuki Codex · The Void Century curated from canon &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script id="chr-id-map" type="application/json">
