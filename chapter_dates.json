@@ -1,6 +1,6 @@
 {
   "_doc": "Per-chapter publication date estimates. Volume release dates (volumes[].release_date) are EXACT — sourced from Wikipedia 'List of One Piece chapters'. Per-chapter dates are interpolated weekly between volume anchors with a ~6-week tankōbon lead-time, so the LAST chapter of each volume is dated to its WSJ issue (also exact) and earlier chapters in the volume are linearly distributed back. Chapter 1's anchor is 1997-07-22 (WSJ Issue #34, 1997). Chapters past the latest tankōbon are pinned to real WSJ issue dates where FRONTIER_DATES knows them (approximate=false); chapters between two known anchors are spread across the real elapsed time so break weeks are absorbed rather than accumulated. Only chapters newer than the last pin are extrapolated, at the observed ~10-day 2026 cadence, and those may still drift by a week or so until a pin catches up.",
-  "generated_on": "2026-08-21",
+  "generated_on": "2026-08-23",
   "anchor_chapter1": "1997-07-22",
   "tankobon_lead_days": 42,
   "latest_chapter": 1190,
