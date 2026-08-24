@@ -32,7 +32,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.gate import (LORE_PAGES, THRESHOLDS, load_lexicon, load_page, visible,
-                      entry_text, text_leaks, entry_label, gate_chapter, nav_gates)
+                      entry_text, text_leaks, entry_label, gate_chapter, nav_gates,
+                      resolve_rungs)
 
 if sys.platform == "win32":
     try:
@@ -165,6 +166,29 @@ def main():
             continue
         unwired.append(page)
 
+    # ── E. rung boundaries ────────────────────────────────────────────────
+    # A rung overlays only the fields it names. Everything else falls through
+    # from the base entry -- which still carries the LATEST wording. The Tree of
+    # Knowledge rung rewrote `summary` for Ch. 392 but left `location` saying
+    # "destroyed in the Buster Call", a Ch. 395 term. Checking at the page-level
+    # thresholds missed it; only checking AT each rung's own chapter caught it.
+    rung_leaks = []
+    for fname, key, page in LORE_PAGES:
+        for e in load_page(ROOT, fname, key):
+            rungs = e.get("rungs")
+            if not isinstance(rungs, list) or not rungs:
+                continue
+            for r in rungs:
+                ch = r.get("ch")
+                if not isinstance(ch, int):
+                    continue
+                resolved = resolve_rungs(e, ch)
+                if resolved is None:
+                    continue
+                hit = text_leaks(entry_text(resolved), ch, lexicon)
+                if hit:
+                    rung_leaks.append((page, entry_label(e), ch, hit[0], hit[1]))
+
     # ── B. over-hiding ────────────────────────────────────────────────────
     overhidden = []
     for fname, key, page in LORE_PAGES:
@@ -172,7 +196,13 @@ def main():
             ch = gate_chapter(e)
             if ch is None:
                 continue
-            hit = text_leaks(entry_text(e), ch, lexicon)
+            # Resolve rungs first. A laddered entry's BASE text keeps the latest
+            # wording by design, so judging it at the lowest rung's chapter
+            # reports every ladder as over-hidden -- the opposite of the truth.
+            resolved = resolve_rungs(e, ch)
+            if resolved is None:
+                continue
+            hit = text_leaks(entry_text(resolved), ch, lexicon)
             if hit:
                 overhidden.append((page, entry_label(e), ch, hit[0], hit[1]))
 
@@ -180,6 +210,15 @@ def main():
           f"{len(chrome_partial)} blurb-gate only")
     print(f"  B  over-hidden       {len(overhidden):>3} entry/entries suppressed by the lexicon")
     print(f"  D  wiring            {len(unwired):>3} lore page(s) with no gate at all")
+    print(f"  E  rung boundaries   {len(rung_leaks):>3} rung(s) leaking at their own chapter")
+
+    if rung_leaks:
+        print("\n  ✗ RUNG LEAKS — a rung does not override every field that leaks."
+              "\n    Unnamed fields fall through from the base entry, which carries"
+              "\n    the latest wording:\n")
+        for page, label, ch, term, tch in rung_leaks:
+            print(f"      {page:22} {label[:26]:26} rung {ch:>4} → "
+                  f"'{term}' (safe from {tch})")
 
     if unwired:
         print(f"\n  ✗ UNGATED PAGES — these render every entry to every reader:\n")
@@ -216,7 +255,7 @@ def main():
             print(f"      … and {len(overhidden) - 15} more (--verbose)")
 
     print()
-    return 2 if (chrome_leaks or unwired) else 0
+    return 2 if (chrome_leaks or unwired or rung_leaks) else 0
 
 
 if __name__ == "__main__":

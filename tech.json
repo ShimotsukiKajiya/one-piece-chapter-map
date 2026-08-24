@@ -55,8 +55,18 @@
       "kind": "comms",
       "debut": "Ch. 376",
       "notes": "Triggers a Buster Call. Five Elders + Fleet Admiral authorisation only.",
-      "gate_chapter": 395,
-      "gate_source": "explicit+text"
+      "gate_chapter": 376,
+      "gate_source": "rung",
+      "rungs": [
+        {
+          "ch": 376,
+          "notes": "A gold-shelled Den Den Mushi. Only the highest authorities of the World Government may use one."
+        },
+        {
+          "ch": 395,
+          "notes": "Triggers a Buster Call. Five Elders + Fleet Admiral authorisation only."
+        }
+      ]
     },
     {
       "name": "Visual Den Den Mushi",

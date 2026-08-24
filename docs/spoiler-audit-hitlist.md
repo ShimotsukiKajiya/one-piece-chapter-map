@@ -586,3 +586,69 @@ of Hell (~1010).
 Every rung chapter above is ✓ certain except: Tone Dial's 968 (~), Skypiea
 Poneglyph's 628 Poseidon rung (~), and Road Poneglyph's 818 (~). Spot-check
 those three.
+
+---
+
+## Phase 3 — batch 2, 2026-08-24
+
+### Ten more entries laddered
+
+| Entry | Was | Now from |
+|---|---|---|
+| Nine Sword Style (Asura) | 597 | **417** |
+| Diable Jambe | 597 | **405** |
+| Uranus | 1086 | **906** |
+| Cyborgs | 433 | **322** |
+| Numbers | 1086 | **991** |
+| Golden Den Den Mushi | 395 | **376** |
+| Tree of Knowledge Poneglyphs | 395 | **392** |
+| "I want to live!" | 395 | **374** |
+| Lulusia is destroyed | 1086 | **1060** |
+| King of Hell | 597 → 1011 | *raised, not laddered — correct debut is later* |
+
+Over-hidden is **0**. Every rung verified at its own boundary.
+
+### A rung must override EVERY leaking field
+
+The Tree of Knowledge rung rewrote `summary` for Ch. 392 but left `location`
+reading "Ohara — destroyed in the Buster Call" — a Ch. 395 term. Fields the rung
+does not name fall through from the base entry, which always carries the latest
+wording.
+
+The page-level thresholds missed it; it only shows up when checking **at each
+rung's own chapter**. Added to D2 as check **E**, and seed-tested: a deliberately
+leaking rung exits 2.
+
+Check **B** also had to learn about rungs — judging a laddered entry by its base
+text at its lowest rung reported all 14 ladders as over-hidden, the exact
+opposite of the truth.
+
+### Technique gates were wrong across the board
+
+Browser-checking batch 2 showed **Ifrit Jambe — a Wano technique — rendering to
+a Chapter-425 reader**, gated at Ch. 43 because it inherited Sanji's debut. Two
+causes:
+
+1. `combat-styles.json` had **no chapter field registered** in the derivation, so
+   an explicit `debut` added to an entry was silently ignored. Now reads `debut`.
+2. The text-raise only catches entries whose *description* names a gated term.
+   A late technique described in plain language stays wrongly early — which is
+   exactly Ifrit Jambe.
+
+All 16 techniques now carry explicit debut chapters, fail-late where a technique
+is seen before it is named:
+
+    Santoryu 3 · Black Leg 43 · Octopus Pot 69 · Ramen Kenpo 305
+    Rokushiki 347 · Diable Jambe 405 · Asura 417 · Fishman Karate/Jujutsu 528
+    Tonkachi 704 · Electro 806 · Sulong 819 · Iaido 920 · Kappa-ryu 920
+    King of Hell 1011 · Ifrit Jambe 1035
+
+Verified in-browser at effective Ch. 420: 7 styles, Ifrit Jambe and King of Hell
+both correctly absent, no Haki anywhere.
+
+### QA for the maintainer
+
+All 16 technique chapters need a spot-check. Least certain: **Rokushiki 347,
+Fishman Karate/Jujutsu 528, Iaido 920, King of Hell 1011, Ifrit Jambe 1035**.
+Flagged in `combat-styles.json._qa_flags`, plus rung-chapter flags in
+`poneglyphs`, `races` and `ancient-weapons`.

@@ -62,8 +62,18 @@
       "tag": "canon",
       "kind": "rescue",
       "summary": "Robin's cry. The Strawhats burn the World Government flag. The Buster Call comes for Enies Lobby.",
-      "gate_chapter": 395,
-      "gate_source": "explicit+text"
+      "gate_chapter": 374,
+      "gate_source": "rung",
+      "rungs": [
+        {
+          "ch": 374,
+          "summary": "Robin's cry. The Strawhats burn the World Government flag."
+        },
+        {
+          "ch": 395,
+          "summary": "Robin's cry. The Strawhats burn the World Government flag. The Buster Call comes for Enies Lobby."
+        }
+      ]
     },
     {
       "chapter": 430,

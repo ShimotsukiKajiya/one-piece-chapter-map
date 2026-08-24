@@ -49,7 +49,11 @@ SPECS = [
     ("moments.json",         "moments",     "chapter"),
     ("music.json",           "tracks",      "debut"),
     ("reverie.json",         "events",      "chapter_start"),
-    ("combat-styles.json",   "styles",      None),
+    # combat-styles carried no chapter field, so gates were derived from each
+    # technique's USER -- which dates the technique to the user's debut and is
+    # simply wrong for anything they learn later. Ifrit Jambe (Wano) inherited
+    # Sanji's Ch. 43. An explicit `debut` per technique is the fix.
+    ("combat-styles.json",   "styles",      "debut"),
     ("haki.json",            "haki",        "debut_chapter"),
     ("awakenings.json",      "awakenings",  "awakening_chapter"),
     ("weapons.json",         "weapons",     "reveal_chapter"),
