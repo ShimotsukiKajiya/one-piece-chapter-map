@@ -30,6 +30,50 @@
 
   const KEY = 'codex-settings';
 
+  // ── CREW THEME ROSTER ───────────────────────────────────────
+  // The crew picker used to be ten hardcoded <option> tags, which handed a
+  // Ch. 50 reader the entire final crew -- Chopper, Robin, Franky, Brook and
+  // Jinbe included -- from a panel that is on 55 pages. docs/leak-lexicon.json
+  // names the settings panel as a surface a term must not appear on below its
+  // chapter; this is that rule applied.
+  //
+  // Chapters are derived from chr-debut-map.json (built from appearances.csv),
+  // NOT from memory. Robin is the one deliberate override: she debuts at 114
+  // as Miss All Sunday and the name "Robin" is a Ch. 218 reveal, per the name
+  // ladder in field_reveals.json. Fail-late takes 218.
+  const CREW_ROSTER = [
+    { v: 'luffy',   label: '\uD83C\uDFA9 Luffy \u00b7 Red',        ch: 1   },
+    { v: 'zoro',    label: '\uD83D\uDDE1 Zoro \u00b7 Green',       ch: 3   },
+    { v: 'nami',    label: '\uD83C\uDF4A Nami \u00b7 Orange',      ch: 8   },
+    { v: 'usopp',   label: '\uD83C\uDFAF Usopp \u00b7 Yellow',     ch: 23  },
+    { v: 'sanji',   label: '\uD83D\uDEAC Sanji \u00b7 Blue',       ch: 43  },
+    { v: 'chopper', label: '\uD83E\uDD8C Chopper \u00b7 Pink',     ch: 134 },
+    { v: 'robin',   label: '\uD83D\uDCDA Robin \u00b7 Purple',     ch: 218 },
+    { v: 'franky',  label: '\uD83E\uDD16 Franky \u00b7 Sky Cyan',  ch: 329 },
+    { v: 'brook',   label: '\uD83C\uDFBB Brook \u00b7 Indigo',     ch: 442 },
+    { v: 'jinbe',   label: '\uD83D\uDC20 Jinbe \u00b7 Ochre',      ch: 528 }
+  ];
+
+  // Effective cutoff for this panel. Prefers CodexSpoiler (canonical, and
+  // spoiler.js loads before settings.js on every page); falls back to the
+  // same boot-safe localStorage read the codex pages use, including the 597
+  // first-visit default, so a load-order hiccup cannot fail open.
+  function _crewCutoff() {
+    try {
+      if (window.CodexSpoiler && typeof CodexSpoiler.effectiveCutoff === 'function') {
+        return CodexSpoiler.effectiveCutoff('public');
+      }
+      const raw = JSON.parse(localStorage.getItem('codex-spoiler-state') || 'null');
+      if (raw && raw.shield_mode === 'off') return 9999;
+      if (raw && typeof raw.cutoff_chapter === 'number' && raw.cutoff_chapter > 0) {
+        return raw.cutoff_chapter;
+      }
+      const legacy = parseInt(localStorage.getItem('spoilerCutoff') || '0', 10);
+      if (legacy > 0) return legacy;
+    } catch (_) {}
+    return 597;
+  }
+
   // ── AVATAR PATH MAPPINGS ─────────────────────────────────────
   // Variant key → image src. 'svg' / 'none' stay handled by CSS rules below.
   const READER_AVATAR_SRC = {
@@ -408,17 +452,9 @@
           <div class="codex-crew-row">
             <label class="codex-crew-label">…or pick a Strawhat crew theme:</label>
             <select id="codex-crew-select" class="codex-crew-select">
+              <!-- Options are built by renderCrewOptions() so the list can
+                   never name a crewmate the reader has not met. -->
               <option value="">— Standard theme —</option>
-              <option value="luffy">🎩 Luffy · Red</option>
-              <option value="zoro">🗡 Zoro · Green</option>
-              <option value="nami">🍊 Nami · Orange</option>
-              <option value="usopp">🎯 Usopp · Yellow</option>
-              <option value="sanji">🚬 Sanji · Blue</option>
-              <option value="chopper">🦌 Chopper · Pink</option>
-              <option value="robin">📚 Robin · Purple</option>
-              <option value="franky">🤖 Franky · Sky Cyan</option>
-              <option value="brook">🎻 Brook · Indigo</option>
-              <option value="jinbe">🐠 Jinbe · Ochre</option>
             </select>
           </div>
         </div>
@@ -579,6 +615,9 @@
           : 'No cutoff set — defaulting to strict mode (pre-timeskip safe pool).';
       }
       if (typeof window.setSpoilerCutoff === 'function') window.setSpoilerCutoff();
+      // The crew list is cutoff-dependent; re-filter it in place so lowering
+      // the cutoff here takes effect without waiting for a reload.
+      renderCrewOptions(document.getElementById('codex-crew-select'));
     }
 
     if (spoilerApply) {
@@ -648,8 +687,27 @@
     }
   }
 
+  // Rebuild the crew <option> list for the CURRENT cutoff. Called from
+  // refreshUI(), so it re-runs on every open and immediately after the reader
+  // changes their cutoff in this same panel -- no reload needed.
+  function renderCrewOptions(sel) {
+    if (!sel) return;
+    const cut = _crewCutoff();
+    const active = settings.theme;
+    const keep = CREW_ROSTER.filter(c =>
+      // A crewmate the reader has already chosen stays listed even if the
+      // cutoff later drops below their debut: it is the reader's own setting
+      // and hiding it would silently break their theme, not protect them.
+      c.ch <= cut || c.v === active
+    );
+    // Traceless: no counter, no placeholder, no gap. A shorter <select> says
+    // nothing about what is missing from it.
+    sel.innerHTML = '<option value="">\u2014 Standard theme \u2014</option>' +
+      keep.map(c => '<option value="' + c.v + '">' + c.label + '</option>').join('');
+  }
+
   function refreshUI() {
-    const CREW_THEMES = ['luffy','zoro','nami','usopp','sanji','chopper','robin','franky','brook','jinbe'];
+    const CREW_THEMES = CREW_ROSTER.map(c => c.v);
     document.querySelectorAll('.codex-options').forEach(group => {
       const key = group.dataset.key;
       group.querySelectorAll('.codex-opt').forEach(btn => {
@@ -662,9 +720,10 @@
         }
       });
     });
-    // Sync crew dropdown
+    // Sync crew dropdown — rebuild for the current cutoff, then select.
     const crewSelect = document.getElementById('codex-crew-select');
     if (crewSelect) {
+      renderCrewOptions(crewSelect);
       crewSelect.value = CREW_THEMES.includes(settings.theme) ? settings.theme : '';
     }
     document.querySelectorAll('.codex-toggle').forEach(t => {
