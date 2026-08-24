@@ -1,7 +1,7 @@
 {
   "_doc": "Best coverage rate recorded per page. audit_page_coverage.py fails on a drop below these, so a known backlog reports without failing CI while a regression still does. Never lowered automatically.",
   "pages": {
-    "Marines & World Government": 0.291,
-    "Will of D.": 0.8333
+    "Marines & World Government": 0.9101,
+    "Will of D.": 1.0
   }
 }

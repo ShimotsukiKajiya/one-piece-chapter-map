@@ -7,110 +7,234 @@
       "name": "Monkey D. Luffy",
       "first_appearance": "Ch. 1",
       "rungs": [
-        { "ch": 154, "epithet": "Strawhat", "status": "active",
-          "text": "Protagonist. The D. sits in his name from the very first chapter -- what it means, he neither knows nor cares." },
-        { "ch": 1044, "epithet": "Strawhat / Sun God Nika", "status": "active",
-          "text": "Protagonist. Awakened the Hito Hito no Mi, Model: Nika -- the Sun God fruit. The D. and the Dawn keep pointing at the same man." }
+        {
+          "ch": 154,
+          "epithet": "Strawhat",
+          "status": "active",
+          "text": "Protagonist. The D. sits in his name from the very first chapter -- what it means, he neither knows nor cares."
+        },
+        {
+          "ch": 1044,
+          "epithet": "Strawhat / Sun God Nika",
+          "status": "active",
+          "text": "Protagonist. Awakened the Hito Hito no Mi, Model: Nika -- the Sun God fruit. The D. and the Dawn keep pointing at the same man."
+        }
       ]
     },
     {
       "name": "Monkey D. Garp",
       "first_appearance": "Ch. 92",
       "rungs": [
-        { "ch": 154, "epithet": "Hero of the Marines", "status": "active",
-          "text": "The Marine who cornered Roger, over and over." },
-        { "ch": 432, "epithet": "Hero of the Marines", "status": "active",
-          "text": "Vice Admiral. Cornered Roger. Luffy's grandfather." }
+        {
+          "ch": 154,
+          "epithet": "Hero of the Marines",
+          "status": "active",
+          "text": "The Marine who cornered Roger, over and over."
+        },
+        {
+          "ch": 432,
+          "epithet": "Hero of the Marines",
+          "status": "active",
+          "text": "Vice Admiral. Cornered Roger. Luffy's grandfather."
+        }
       ]
     },
     {
       "name": "Monkey D. Dragon",
       "first_appearance": "Ch. 100",
       "rungs": [
-        { "ch": 432, "epithet": "World's Worst Criminal", "status": "active",
-          "text": "Leader of the Revolutionary Army. Luffy's father. Origin unrevealed." }
+        {
+          "ch": 432,
+          "epithet": "World's Worst Criminal",
+          "status": "active",
+          "text": "Leader of the Revolutionary Army. Luffy's father. Origin unrevealed."
+        }
       ]
     },
     {
       "name": "Portgas D. Ace",
       "first_appearance": "Ch. 154",
       "rungs": [
-        { "ch": 154, "epithet": "Fire Fist", "status": "active",
-          "text": "Whitebeard's Second Division Commander. Luffy's big brother, hunting a traitor from his own division." },
-        { "ch": 550, "epithet": "Fire Fist", "status": "active",
-          "text": "Born Gol D. Ace -- Roger's son, carried 20 months by Portgas D. Rouge to hide him. He took his mother's name." },
-        { "ch": 574, "epithet": "Fire Fist", "status": "deceased",
-          "text": "Born Gol D. Ace; took his mother's surname Portgas. Killed at Marineford shielding Luffy." }
+        {
+          "ch": 154,
+          "epithet": "Fire Fist",
+          "status": "active",
+          "text": "Whitebeard's Second Division Commander. Luffy's big brother, hunting a traitor from his own division."
+        },
+        {
+          "ch": 550,
+          "epithet": "Fire Fist",
+          "status": "active",
+          "text": "Born Gol D. Ace -- Roger's son, carried 20 months by Portgas D. Rouge to hide him. He took his mother's name."
+        },
+        {
+          "ch": 574,
+          "epithet": "Fire Fist",
+          "status": "deceased",
+          "text": "Born Gol D. Ace; took his mother's surname Portgas. Killed at Marineford shielding Luffy."
+        }
       ]
     },
     {
       "name": "Portgas D. Rouge",
       "first_appearance": "Ch. 550",
       "rungs": [
-        { "ch": 550, "status": "deceased",
-          "text": "Ace's mother. Held her pregnancy 20 months by sheer will to protect Ace from the Government's hunt." }
+        {
+          "ch": 550,
+          "status": "deceased",
+          "text": "Ace's mother. Held her pregnancy 20 months by sheer will to protect Ace from the Government's hunt."
+        }
       ]
     },
     {
       "name": "Gol D. Roger",
       "first_appearance": "Ch. 1",
       "rungs": [
-        { "ch": 154, "epithet": "Pirate King", "status": "deceased",
-          "text": "The Pirate King's true name -- 'Gold Roger' was a corruption. Conquered the Grand Line; executed at Loguetown with a smile." },
-        { "ch": 968, "epithet": "Pirate King", "status": "deceased",
-          "text": "First and only Pirate King. Reached the final island, learned the truth of the Void Century, and named the island Laugh Tale. Executed at Loguetown." }
+        {
+          "ch": 154,
+          "epithet": "Pirate King",
+          "status": "deceased",
+          "text": "The Pirate King's true name -- 'Gold Roger' was a corruption. Conquered the Grand Line; executed at Loguetown with a smile."
+        },
+        {
+          "ch": 968,
+          "epithet": "Pirate King",
+          "status": "deceased",
+          "text": "First and only Pirate King. Reached the final island, learned the truth of the Void Century, and named the island Laugh Tale. Executed at Loguetown."
+        }
       ]
     },
     {
       "name": "Marshall D. Teach",
       "first_appearance": "Ch. 234",
       "rungs": [
-        { "ch": 234, "epithet": "Blackbeard", "status": "active",
-          "text": "The traitor of Whitebeard's Second Division -- the man Ace hunts. Preached about dreams at Mock Town and meant every word." },
-        { "ch": 577, "epithet": "Blackbeard", "status": "active",
-          "text": "Betrayed Whitebeard twice over: took the Yami Yami no Mi, then took the dying Whitebeard's Gura Gura no Mi. The only known holder of two Devil Fruits." },
-        { "ch": 650, "epithet": "Blackbeard", "status": "active",
-          "text": "Yonko. Holds two Devil Fruits (Yami Yami + Gura Gura). Theorised to be more than one person." }
+        {
+          "ch": 234,
+          "epithet": "Blackbeard",
+          "status": "active",
+          "text": "The traitor of Whitebeard's Second Division -- the man Ace hunts. Preached about dreams at Mock Town and meant every word."
+        },
+        {
+          "ch": 577,
+          "epithet": "Blackbeard",
+          "status": "active",
+          "text": "Betrayed Whitebeard twice over: took the Yami Yami no Mi, then took the dying Whitebeard's Gura Gura no Mi. The only known holder of two Devil Fruits."
+        },
+        {
+          "ch": 650,
+          "epithet": "Blackbeard",
+          "status": "active",
+          "text": "Yonko. Holds two Devil Fruits (Yami Yami + Gura Gura). Theorised to be more than one person."
+        }
       ]
     },
     {
       "name": "Trafalgar D. Water Law",
       "first_appearance": "Ch. 498",
       "rungs": [
-        { "ch": 763, "epithet": "Surgeon of Death", "status": "active",
-          "text": "Worst Generation Supernova and Ope Ope no Mi user. Survived Flevance's Amber Lead disease; Corazon died keeping the D. in his name a secret." }
+        {
+          "ch": 763,
+          "epithet": "Surgeon of Death",
+          "status": "active",
+          "text": "Worst Generation Supernova and Ope Ope no Mi user. Survived Flevance's Amber Lead disease; Corazon died keeping the D. in his name a secret."
+        }
       ]
     },
     {
       "name": "Jaguar D. Saul",
       "first_appearance": "Ch. 393",
       "rungs": [
-        { "ch": 393, "status": "deceased",
-          "text": "Former Vice Admiral. Saved baby Robin from the Buster Call on Ohara, and was frozen by Aokiji for it." },
-        { "ch": 1066, "status": "active",
-          "text": "Former Vice Admiral who saved baby Robin from the Buster Call. Aokiji's ice did not kill him -- he lives, and he saved Ohara's books too." }
+        {
+          "ch": 393,
+          "status": "deceased",
+          "text": "Former Vice Admiral. Saved baby Robin from the Buster Call on Ohara, and was frozen by Aokiji for it."
+        },
+        {
+          "ch": 1066,
+          "status": "active",
+          "text": "Former Vice Admiral who saved baby Robin from the Buster Call. Aokiji's ice did not kill him -- he lives, and he saved Ohara's books too."
+        }
       ]
     },
     {
       "name": "Rocks D. Xebec",
       "first_appearance": "Ch. 957",
       "rungs": [
-        { "ch": 957, "epithet": "Rocks", "status": "deceased",
-          "text": "Captain of the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki). Killed at God Valley by Roger and Garp together." }
+        {
+          "ch": 957,
+          "epithet": "Rocks",
+          "status": "deceased",
+          "text": "Captain of the Rocks Pirates (Whitebeard, Big Mom, Kaidou, Shiki). Killed at God Valley by Roger and Garp together."
+        }
+      ]
+    },
+    {
+      "name": "Clou D. Clover",
+      "first_appearance": "Ch. 391",
+      "rungs": [
+        {
+          "ch": 395,
+          "epithet": "Professor of Ohara",
+          "status": "deceased",
+          "text": "Head of Ohara's archaeologists and keeper of the Tree of Knowledge. Read the Poneglyphs far enough to name the Ancient Kingdom aloud to the Five Elders, and was shot mid-sentence for it."
+        }
+      ]
+    },
+    {
+      "name": "Nefertari D. Lili",
+      "first_appearance": "Ch. 1084",
+      "rungs": [
+        {
+          "ch": 1086,
+          "epithet": "Queen of Arabasta",
+          "status": "deceased",
+          "text": "One of the twenty kings who ended the Void Century and founded the World Government. The Nefertari line alone declined to ascend to Mary Geoise and stayed in Arabasta; the D. in her name went with them and was not spoken again."
+        }
       ]
     }
   ],
   "_canon_hints": [
-    { "ch": 154, "text": "Dr. Kureha, watching Chopper sail away: 'the Will of D. lives on.' The first time anyone names it as a thing that survives its carriers." },
-    { "ch": 576, "text": "Whitebeard, dying at Marineford: 'One Piece is real.' The implication is that the D. carriers are the ones destined to inherit Roger's will." },
-    { "ch": 764, "text": "Corazon told Law the stories: in some lands the D. clan are called 'the natural enemy of the gods' -- and the gods, in this world, wear the Government's crest." },
-    { "ch": 966, "text": "Roger and Whitebeard both spoke of it: the D. carriers will start a great war that will engulf the world." },
-    { "ch": 764, "text": "Common readings of the D.: 'Doom' (death-bringers to the Celestial Dragons), 'Dawn' (those who herald a new age), or simply the family marker of a lineage the world was made to forget." }
+    {
+      "ch": 154,
+      "text": "Dr. Kureha, watching Chopper sail away: 'the Will of D. lives on.' The first time anyone names it as a thing that survives its carriers."
+    },
+    {
+      "ch": 576,
+      "text": "Whitebeard, dying at Marineford: 'One Piece is real.' The implication is that the D. carriers are the ones destined to inherit Roger's will."
+    },
+    {
+      "ch": 764,
+      "text": "Corazon told Law the stories: in some lands the D. clan are called 'the natural enemy of the gods' -- and the gods, in this world, wear the Government's crest."
+    },
+    {
+      "ch": 966,
+      "text": "Roger and Whitebeard both spoke of it: the D. carriers will start a great war that will engulf the world."
+    },
+    {
+      "ch": 764,
+      "text": "Common readings of the D.: 'Doom' (death-bringers to the Celestial Dragons), 'Dawn' (those who herald a new age), or simply the family marker of a lineage the world was made to forget."
+    }
   ],
   "_speculation": [
-    { "ch": 1086, "text": "Imu -- long theorised to bear the D. (Nerona D. Imu). The family name 'Nerona' is canon; the D. status is fan-deduction from the D. clan's opposition to the World Government. Not yet confirmed." },
-    { "ch": 1140, "text": "Loki and Harald (Elbaph) -- Sun God / Joy Boy connections in the Elbaph arc have prompted D. theories. Not yet confirmed." },
-    { "ch": 984, "text": "Yamato -- sometimes theorised to be a hidden D. via Kaidou's lineage. Not confirmed." },
-    { "ch": 1054, "text": "Shanks -- fan theory based on his secrecy and his standing with the world's highest powers. Not confirmed." }
+    {
+      "ch": 1086,
+      "text": "Imu -- long theorised to bear the D. (Nerona D. Imu). The family name 'Nerona' is canon; the D. status is fan-deduction from the D. clan's opposition to the World Government. Not yet confirmed."
+    },
+    {
+      "ch": 1140,
+      "text": "Loki and Harald (Elbaph) -- Sun God / Joy Boy connections in the Elbaph arc have prompted D. theories. Not yet confirmed."
+    },
+    {
+      "ch": 984,
+      "text": "Yamato -- sometimes theorised to be a hidden D. via Kaidou's lineage. Not confirmed."
+    },
+    {
+      "ch": 1054,
+      "text": "Shanks -- fan theory based on his secrecy and his standing with the world's highest powers. Not confirmed."
+    }
+  ],
+  "_qa_flags": [
+    "Clou D. Clover gated at 395 (his death at Ohara). The D. in his name is NOT a manga reveal -- it comes from the Vivre Card, so there is no chapter at which a reader 'learns' it. 395 is the chapter that completes everything the manga tells about him. Maintainer decision needed: keep 395, raise it, or rule that databook-only D. carriers do not belong on a chapter-gated page.",
+    "Nefertari D. Lili gated at 1086 (Imu speaking the name). Her silhouette and the name land at 1084; 1086 is fail-late. Confirm which chapter first prints the D. in the name."
   ]
 }
