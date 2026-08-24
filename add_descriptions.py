@@ -53,7 +53,7 @@ DESCRIPTIONS = {
     "moments.html":       "Iconic moments in One Piece — Oda's chapter title pages, the great speeches, the cries, the fights, anchored to chapter and arc.",
     "music.html":         "One Piece music and songs — Bink's Sake, Soldier Song, Brook's compositions, and other in-canon music with debut chapters.",
     "news.html":          "What's new in the Shimotsuki Codex — recent data updates, new pages, and feature releases.",
-    "poneglyphs.html":    "The Poneglyphs of One Piece — Road, Mother, Rio — every confirmed location, holder, and what each one says.",
+    "poneglyphs.html":    "The Poneglyphs of One Piece — indestructible stones of ancient text, with every confirmed location and holder, shown only as far as your chapter.",
     "prove.html":         "Prove an Idea — claim tester returns CONFIRMED / LIKELY / UNKNOWN / CONTRADICTED with cited evidence from One Piece canon.",
     "punk-records.html":  "Punk Records — 1,500+ One Piece characters with portraits, stats, and cross-links to every chapter they appear in.",
     "quiz.html":          "Trivia Trial — One Piece quiz generated from chapter appearance data and curated facts about devil fruits, epithets, and canon.",
