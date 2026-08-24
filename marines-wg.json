@@ -29,7 +29,9 @@
     "Government Administration tier gated at 79 (Government orphanage). Confirm the chapter.",
     "Rear Admirals & Commodores tier gated at 75 (first commodore shown). Confirm.",
     "Bell-mere gated at 78: she debuts at 77 and her Marine service is told inside the same flashback.",
-    "Vice Admirals tier: the summary named Haki behind a Ch. 92 gate (lexicon: Haki is safe at 597). Split into a 92 rung without the term and a 597 rung with it."
+    "Vice Admirals tier: the summary named Haki behind a Ch. 92 gate (lexicon: Haki is safe at 597). Split into a 92 rung without the term and a 597 rung with it.",
+    "'Coby' renamed to 'Koby' on both cards: punk_records keys him as Koby, so character.html?name=Coby returned 'No record'. 'Coby' is kept as an alias on the record. Revert if the house form is Coby.",
+    "'Bomba (Marine)' and 'Ukkari (Character)' carry a wiki disambiguator inside the punk_records `name` field, so the chart prints it. Both are named that way deliberately: the plain forms link to the wrong record ('Bomba' resolves to chr:01687, a Tontatta of the Straw Hat Grand Fleet) or to none at all. Fix belongs in punk_records — see docs/data-integrity.md."
   ],
   "tiers": [
     {
@@ -1383,7 +1385,7 @@
           ]
         },
         {
-          "name": "Coby",
+          "name": "Koby",
           "rungs": [
             {
               "ch": 1061,
@@ -1489,7 +1491,7 @@
           ]
         },
         {
-          "name": "Coby",
+          "name": "Koby",
           "maxCh": 1061,
           "rungs": [
             {
@@ -1633,6 +1635,15 @@
       ],
       "members": [
         {
+          "name": "Rika",
+          "rungs": [
+            {
+              "ch": 3,
+              "role": "Base staff · 153rd Branch"
+            }
+          ]
+        },
+        {
           "name": "Rokkaku",
           "rungs": [
             {
@@ -1647,15 +1658,6 @@
             {
               "ch": 4,
               "role": "Seaman Recruit · 153rd Branch"
-            }
-          ]
-        },
-        {
-          "name": "Rika",
-          "rungs": [
-            {
-              "ch": 3,
-              "role": "Base staff · 153rd Branch"
             }
           ]
         },
@@ -1834,7 +1836,7 @@
           ]
         },
         {
-          "name": "Bomba",
+          "name": "Bomba (Marine)",
           "rungs": [
             {
               "ch": 711,

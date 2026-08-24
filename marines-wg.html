@@ -109,7 +109,9 @@
     "Government Administration tier gated at 79 (Government orphanage). Confirm the chapter.",
     "Rear Admirals & Commodores tier gated at 75 (first commodore shown). Confirm.",
     "Bell-mere gated at 78: she debuts at 77 and her Marine service is told inside the same flashback.",
-    "Vice Admirals tier: the summary named Haki behind a Ch. 92 gate (lexicon: Haki is safe at 597). Split into a 92 rung without the term and a 597 rung with it."
+    "Vice Admirals tier: the summary named Haki behind a Ch. 92 gate (lexicon: Haki is safe at 597). Split into a 92 rung without the term and a 597 rung with it.",
+    "'Coby' renamed to 'Koby' on both cards: punk_records keys him as Koby, so character.html?name=Coby returned 'No record'. 'Coby' is kept as an alias on the record. Revert if the house form is Coby.",
+    "'Bomba (Marine)' and 'Ukkari (Character)' carry a wiki disambiguator inside the punk_records `name` field, so the chart prints it. Both are named that way deliberately: the plain forms link to the wrong record ('Bomba' resolves to chr:01687, a Tontatta of the Straw Hat Grand Fleet) or to none at all. Fix belongs in punk_records — see docs/data-integrity.md."
   ],
   "tiers": [
     {
@@ -1463,7 +1465,7 @@
           ]
         },
         {
-          "name": "Coby",
+          "name": "Koby",
           "rungs": [
             {
               "ch": 1061,
@@ -1569,7 +1571,7 @@
           ]
         },
         {
-          "name": "Coby",
+          "name": "Koby",
           "maxCh": 1061,
           "rungs": [
             {
@@ -1713,6 +1715,15 @@
       ],
       "members": [
         {
+          "name": "Rika",
+          "rungs": [
+            {
+              "ch": 3,
+              "role": "Base staff · 153rd Branch"
+            }
+          ]
+        },
+        {
           "name": "Rokkaku",
           "rungs": [
             {
@@ -1727,15 +1738,6 @@
             {
               "ch": 4,
               "role": "Seaman Recruit · 153rd Branch"
-            }
-          ]
-        },
-        {
-          "name": "Rika",
-          "rungs": [
-            {
-              "ch": 3,
-              "role": "Base staff · 153rd Branch"
             }
           ]
         },
@@ -1914,7 +1916,7 @@
           ]
         },
         {
-          "name": "Bomba",
+          "name": "Bomba (Marine)",
           "rungs": [
             {
               "ch": 711,
@@ -2379,7 +2381,7 @@ document.getElementById('tiers').innerHTML = tiers.map(t => {
 </script>
 <footer>The Shimotsuki Codex · Marines & World Government structure &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script id="chr-id-map" type="application/json">
-{"Akehende":"chr:01565","Alpha":"chr:01573","Aramaki":"chr:01594","Asahija":"chr:01599","Atlas":"chr:02997","Bartholomew Kuma":"chr:01627","Basilisk":"chr:01630","Baskerville":"chr:01631","Bastille":"chr:01632","Bell-mère":"chr:01642","Bluegrass":"chr:01676","Blueno":"chr:01678","Boa Hancock":"chr:01680","Bogard":"chr:01686","Bomba":"chr:01687","Borsalino":"chr:01694","Brannew":"chr:01696","Buggy":"chr:01711","Cancer":"chr:01728","Candre":"chr:01729","Catacombo":"chr:01740","Charlos":"chr:01753","Comil":"chr:01863","Corgi":"chr:01868","Crocodile":"chr:01876","Daddy Dee":"chr:01881","Daigin":"chr:01886","Dalmatian":"chr:01890","Doberman":"chr:01915","Doll":"chr:01921","Domino":"chr:01923","Donquixote Doflamingo":"chr:01928","Donquixote Homing":"chr:01929","Donquixote Mjosgard":"chr:01930","Donquixote Rosinante":"chr:01931","Donquixote Shivercalero":"chr:01932","Dracule Mihawk":"chr:01940","Edison":"chr:02998","Edward Weevil":"chr:01951","Ethanbaron V. Nusjuro":"chr:01968","Figarland Garling":"chr:01976","Figarland Shamrock":"chr:01977","Fishbonen":"chr:01982","Fukurō":"chr:01998","Fullbody":"chr:01999","Gatherine":"chr:02022","Gecko Moria":"chr:02026","Gion":"chr:02049","Gismonda":"chr:02052","Glove":"chr:02055","Gorilla":"chr:02068","Guernika":"chr:02076","Guillotine":"chr:02077","Hannyabal":"chr:02101","Helmeppo":"chr:02119","Hibari":"chr:02126","Hina":"chr:02134","Hototogisu":"chr:02159","Hound":"chr:02160","Imu":"chr:02180","Issho":"chr:02197","Jabari":"chr:02202","Jabra":"chr:02203","Jaguar D. Saul":"chr:02207","Jalmack":"chr:02209","Jango":"chr:02210","Jaygarcia Saturn":"chr:02212","Jerry":"chr:02219","Jinbe":"chr:02227","John Giant":"chr:02232","Jorge":"chr:02234","Joseph":"chr:02236","Kadar":"chr:02249","Kaku":"chr:02256","Kalifa":"chr:02261","Kashii":"chr:02276","Kibin":"chr:02288","Koda":"chr:02312","Kong":"chr:02320","Kujaku":"chr:02332","Kumadori":"chr:02334","Kuzan":"chr:01592","Kyuji":"chr:02356","Lacroix":"chr:02359","Laskey":"chr:02365","Lilith":"chr:02370","Lines":"chr:02376","Lonz":"chr:02383","Magellan":"chr:02397","Maha":"chr:02401","Makko":"chr:02406","Manmayer Gunko":"chr:02410","Marcus Mars":"chr:02414","Marine Headquarters Court":"chr:02423","Marshall D. Teach":"chr:02426","Mashikaku":"chr:02429","Maynard":"chr:02439","Minochihuahua":"chr:02462","Minokoala":"chr:02463","Minorhinoceros":"chr:02464","Minotaurus":"chr:02466","Minozebra":"chr:02467","Momonga":"chr:02491","Monkey D. Garp":"chr:02498","Morgan":"chr:02506","Mozambia":"chr:02524","Mummy Mee":"chr:02543","Nefertari D. Lili":"chr:02558","Nero":"chr:02568","Nezumi":"chr:02571","Oimo":"chr:02602","Onigumo":"chr:02609","Pike":"chr:02649","Pluming":"chr:02655","Pomsky":"chr:02659","Prince Grus":"chr:02671","Pudding Pudding":"chr:02673","Pythagoras":"chr:03000","Ratel":"chr:02698","Red King":"chr:02701","Rika":"chr:02706","Rimoshifu Killingham":"chr:02708","Ripper":"chr:02712","Rob Lucci":"chr:02718","Rokkaku":"chr:02725","Rosward":"chr:02732","Sadi":"chr:02752","Sakazuki":"chr:01564","Saldeath":"chr:02757","Satchels Maffey":"chr:02775","Sengoku":"chr:02797","Sentomaru":"chr:02800","Shaka":"chr:03001","Shalria":"chr:02805","Sharinguru":"chr:02810","Shepherd Ju Peter":"chr:02813","Shepherd Sommers":"chr:02814","Shine":"chr:02825","Shiryu":"chr:02830","Shu":"chr:02833","Sicily":"chr:02836","Smoker":"chr:02844","Spandam":"chr:02857","Spandine":"chr:02858","Sphinx":"chr:02864","Stainless":"chr:02868","Stalker":"chr:02869","Strawberry":"chr:02873","Stussy":"chr:02877","T-Bone":"chr:02894","Tashigi":"chr:02914","Tensei":"chr:02920","Tokikake":"chr:02930","Topman Warcury":"chr:02940","Tosa":"chr:02943","Trafalgar D. Water Law":"chr:02947","Tsumonsieur Kamaya":"chr:02955","Tsuru":"chr:02958","Ukkari (Character)":"chr:02969","Urban":"chr:02980","Vegapunk":"chr:02996","Vergo":"chr:03003","Very Good":"chr:03004","Wanze":"chr:03025","Who's-Who":"chr:03033","X Drake":"chr:03041","Yamakaji":"chr:03043","Yarisugi":"chr:03049","York":"chr:03002","Zotto":"chr:03078"}
+{"Akehende":"chr:01565","Alpha":"chr:01573","Aramaki":"chr:01594","Asahija":"chr:01599","Atlas":"chr:02997","Bartholomew Kuma":"chr:01627","Basilisk":"chr:01630","Baskerville":"chr:01631","Bastille":"chr:01632","Bell-mère":"chr:01642","Bluegrass":"chr:01676","Blueno":"chr:01678","Boa Hancock":"chr:01680","Bogard":"chr:01686","Bomba (Marine)":"chr:01688","Borsalino":"chr:01694","Brannew":"chr:01696","Buggy":"chr:01711","Cancer":"chr:01728","Candre":"chr:01729","Catacombo":"chr:01740","Charlos":"chr:01753","Comil":"chr:01863","Corgi":"chr:01868","Crocodile":"chr:01876","Daddy Dee":"chr:01881","Daigin":"chr:01886","Dalmatian":"chr:01890","Doberman":"chr:01915","Doll":"chr:01921","Domino":"chr:01923","Donquixote Doflamingo":"chr:01928","Donquixote Homing":"chr:01929","Donquixote Mjosgard":"chr:01930","Donquixote Rosinante":"chr:01931","Donquixote Shivercalero":"chr:01932","Dracule Mihawk":"chr:01940","Edison":"chr:02998","Edward Weevil":"chr:01951","Ethanbaron V. Nusjuro":"chr:01968","Figarland Garling":"chr:01976","Figarland Shamrock":"chr:01977","Fishbonen":"chr:01982","Fukurō":"chr:01998","Fullbody":"chr:01999","Gatherine":"chr:02022","Gecko Moria":"chr:02026","Gion":"chr:02049","Gismonda":"chr:02052","Glove":"chr:02055","Gorilla":"chr:02068","Guernika":"chr:02076","Guillotine":"chr:02077","Hannyabal":"chr:02101","Helmeppo":"chr:02119","Hibari":"chr:02126","Hina":"chr:02134","Hototogisu":"chr:02159","Hound":"chr:02160","Imu":"chr:02180","Issho":"chr:02197","Jabari":"chr:02202","Jabra":"chr:02203","Jaguar D. Saul":"chr:02207","Jalmack":"chr:02209","Jango":"chr:02210","Jaygarcia Saturn":"chr:02212","Jerry":"chr:02219","Jinbe":"chr:02227","John Giant":"chr:02232","Jorge":"chr:02234","Joseph":"chr:02236","Kadar":"chr:02249","Kaku":"chr:02256","Kalifa":"chr:02261","Kashii":"chr:02276","Kibin":"chr:02288","Koby":"chr:02311","Koda":"chr:02312","Kong":"chr:02320","Kujaku":"chr:02332","Kumadori":"chr:02334","Kuzan":"chr:01592","Kyuji":"chr:02356","Lacroix":"chr:02359","Laskey":"chr:02365","Lilith":"chr:02370","Lines":"chr:02376","Lonz":"chr:02383","Magellan":"chr:02397","Maha":"chr:02401","Makko":"chr:02406","Manmayer Gunko":"chr:02410","Marcus Mars":"chr:02414","Marine Headquarters Court":"chr:02423","Marshall D. Teach":"chr:02426","Mashikaku":"chr:02429","Maynard":"chr:02439","Minochihuahua":"chr:02462","Minokoala":"chr:02463","Minorhinoceros":"chr:02464","Minotaurus":"chr:02466","Minozebra":"chr:02467","Momonga":"chr:02491","Monkey D. Garp":"chr:02498","Morgan":"chr:02506","Mozambia":"chr:02524","Mummy Mee":"chr:02543","Nefertari D. Lili":"chr:02558","Nero":"chr:02568","Nezumi":"chr:02571","Oimo":"chr:02602","Onigumo":"chr:02609","Pike":"chr:02649","Pluming":"chr:02655","Pomsky":"chr:02659","Prince Grus":"chr:02671","Pudding Pudding":"chr:02673","Pythagoras":"chr:03000","Ratel":"chr:02698","Red King":"chr:02701","Rika":"chr:02706","Rimoshifu Killingham":"chr:02708","Ripper":"chr:02712","Rob Lucci":"chr:02718","Rokkaku":"chr:02725","Rosward":"chr:02732","Sadi":"chr:02752","Sakazuki":"chr:01564","Saldeath":"chr:02757","Satchels Maffey":"chr:02775","Sengoku":"chr:02797","Sentomaru":"chr:02800","Shaka":"chr:03001","Shalria":"chr:02805","Sharinguru":"chr:02810","Shepherd Ju Peter":"chr:02813","Shepherd Sommers":"chr:02814","Shine":"chr:02825","Shiryu":"chr:02830","Shu":"chr:02833","Sicily":"chr:02836","Smoker":"chr:02844","Spandam":"chr:02857","Spandine":"chr:02858","Sphinx":"chr:02864","Stainless":"chr:02868","Stalker":"chr:02869","Strawberry":"chr:02873","Stussy":"chr:02877","T-Bone":"chr:02894","Tashigi":"chr:02914","Tensei":"chr:02920","Tokikake":"chr:02930","Topman Warcury":"chr:02940","Tosa":"chr:02943","Trafalgar D. Water Law":"chr:02947","Tsumonsieur Kamaya":"chr:02955","Tsuru":"chr:02958","Ukkari (Character)":"chr:02969","Urban":"chr:02980","Vegapunk":"chr:02996","Vergo":"chr:03003","Very Good":"chr:03004","Wanze":"chr:03025","Who's-Who":"chr:03033","X Drake":"chr:03041","Yamakaji":"chr:03043","Yarisugi":"chr:03049","York":"chr:03002","Zotto":"chr:03078"}
 </script>
 <script src="chr-link-upgrader.js?v=2"></script>
 <script src="spoiler.js?v=1"></script>
