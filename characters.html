@@ -295,7 +295,7 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
   }
   function sortFn(a, b) {
     switch (currentSort) {
-      case "appearances": return (b.appearances || 0) - (a.appearances || 0);
+      case "appearances": return apps(b) - apps(a);
       case "alpha":       return (a.name || "").localeCompare(b.name || "");
       case "alpha-rev":   return (b.name || "").localeCompare(a.name || "");
       case "bounty":      return bountyValue(b) - bountyValue(a);
@@ -310,6 +310,56 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
   // spoiler ('there are 200 characters past your cutoff').
   const _charsCutoff = (typeof CodexSpoiler !== 'undefined')
     ? CodexSpoiler.effectiveCutoff('public') : Infinity;
+  // An appearance count is a per-chapter fact, so a shielded reader has to see
+  // the count up to THEIR chapter. character.html already did that; this page
+  // printed the full-series total, so at Ch. 50 the profile said Zoro had 46
+  // appearances and the index said 795. Worse, "Most appearances" is the
+  // default sort, so the ORDER leaked how prominent a character becomes.
+  const _LATEST = (typeof CodexSpoiler !== "undefined" && CodexSpoiler.LATEST_PUBLISHED_CHAPTER) || 1188;
+  const _appsShielded = Number.isFinite(_charsCutoff) && _charsCutoff > 0 && _charsCutoff < _LATEST;
+  let GATED_APPS = null;   // name -> distinct chapters at or below the cutoff
+
+  function apps(c) {
+    if (!_appsShielded) return c.appearances || 0;
+    // Fail closed. Before the CSV lands, or if it never does, show nothing
+    // rather than the full-series total.
+    if (!GATED_APPS) return 0;
+    return GATED_APPS[c.name] || 0;
+  }
+
+  // appearances.csv is chapter,name,type — the same file index.html and
+  // character.html already fetch, so it is usually warm in the cache. Only
+  // loaded when the shield is on; a caught-up reader needs no extra request.
+  async function loadGatedApps(cutoff) {
+    const res = await fetch("appearances.csv");
+    if (!res.ok) throw new Error("appearances.csv " + res.status);
+    const text = await res.text();
+    const lines = text.split(/\r?\n/);
+    const seen = new Map();          // name -> Set of chapter numbers
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i];
+      if (!line) continue;
+      const a = line.indexOf(",");
+      if (a < 0) continue;
+      const ch = parseInt(line.slice(0, a), 10);
+      if (!(ch > 0) || ch > cutoff) continue;
+      const b = line.lastIndexOf(",");
+      // One name is quoted because it contains commas:
+      // 449,"Gyoro, Nin, and Bao",full
+      let name = (b > a ? line.slice(a + 1, b) : line.slice(a + 1)).trim();
+      if (name.charCodeAt(0) === 34 && name.charCodeAt(name.length - 1) === 34) {
+        name = name.slice(1, -1);
+      }
+      if (!name) continue;
+      let set = seen.get(name);
+      if (!set) { set = new Set(); seen.set(name, set); }
+      set.add(ch);
+    }
+    const out = {};
+    seen.forEach((set, name) => { out[name] = set.size; });
+    return out;
+  }
+
   const ALL = RAW.slice()
     .filter(c => debutChapter(c) <= _charsCutoff)
     .sort(sortFn);
@@ -327,7 +377,7 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
       case "bounty":   return !!c.bounty;
       case "df":       return !!c.devil_fruit_name;
       case "strawhat": return STRAWHATS.has(c.name);
-      case "major":    return (c.appearances || 0) >= 50;
+      case "major":    return apps(c) >= 50;
       default: return true;
     }
   }
@@ -356,7 +406,8 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
     const slice = filtered.slice(0, 200);
     grid.innerHTML = slice.map(c => {
       const meta = [];
-      if (c.appearances) meta.push(`${c.appearances} appearance${c.appearances === 1 ? "" : "s"}`);
+      const _apps = apps(c);
+      if (_apps) meta.push(`${_apps} appearance${_apps === 1 ? "" : "s"}`);
       if (c.bounty)            meta.push("bounty");
       if (c.devil_fruit_name)  meta.push("Devil Fruit");
       if (c.haki)              meta.push("haki");
@@ -408,7 +459,18 @@ html[data-spoiler-silhouette="1"] .poster-portrait::after {
     });
   });
 
-  render();
+  // First paint waits for the gated counts when the shield is on -- rendering
+  // the full totals first and correcting them a moment later would flash the
+  // very number this is hiding.
+  (async function initCounts() {
+    if (!_appsShielded) { render(); return; }
+    try {
+      GATED_APPS = await loadGatedApps(_charsCutoff);
+    } catch (_) {
+      GATED_APPS = {};   // fail closed: no counts, never the full totals
+    }
+    render();
+  })();
 </script>
 
 <script id="character-forms" type="application/json">
