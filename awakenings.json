@@ -8,7 +8,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 783,
       "status": "confirmed",
-      "notes": "First on-page Paramecia awakening — turns environment into strings. Doflamingo explains the concept of awakening to Law."
+      "notes": "First on-page Paramecia awakening — turns environment into strings. Doflamingo explains the concept of awakening to Law.",
+      "gate_chapter": 783,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Pero Pero no Mi",
@@ -16,7 +18,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 875,
       "status": "implied",
-      "notes": "Perospero's island-scale candy conversion during Whole Cake matches the awakening pattern, but Oda doesn't name it as awakening on-page. Implied, not stated."
+      "notes": "Perospero's island-scale candy conversion during Whole Cake matches the awakening pattern, but Oda doesn't name it as awakening on-page. Implied, not stated.",
+      "gate_chapter": 875,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Mochi Mochi no Mi",
@@ -24,7 +28,9 @@
       "fruit_type": "Special Paramecia",
       "awakening_chapter": 879,
       "status": "confirmed",
-      "notes": "Awakened mochi armament — transforms surroundings into mochi during the Luffy mirror-world fight. Confirmed canon awakening, alongside Doflamingo as one of the textbook Paramecia examples."
+      "notes": "Awakened mochi armament — transforms surroundings into mochi during the Luffy mirror-world fight. Confirmed canon awakening, alongside Doflamingo as one of the textbook Paramecia examples.",
+      "gate_chapter": 879,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Bisu Bisu no Mi",
@@ -32,7 +38,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 838,
       "status": "implied",
-      "notes": "Cracker's biscuit creation showed traits consistent with awakening."
+      "notes": "Cracker's biscuit creation showed traits consistent with awakening.",
+      "gate_chapter": 838,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Bara Bara no Mi",
@@ -40,7 +48,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 561,
       "status": "implied",
-      "notes": "Impel Down feat — splitting into infinite pieces. Some readers consider this an awakening; not confirmed by Oda."
+      "notes": "Impel Down feat — splitting into infinite pieces. Some readers consider this an awakening; not confirmed by Oda.",
+      "gate_chapter": 561,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Uo Uo no Mi, Model: Seiryu",
@@ -48,7 +58,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": 1037,
       "status": "implied",
-      "notes": "Kaidou's Mythical Zoan feats during Onigashima — extreme regeneration, fire/water/wind dragon attacks. Awakening implied by his power level."
+      "notes": "Kaidou's Mythical Zoan feats during Onigashima — extreme regeneration, fire/water/wind dragon attacks. Awakening implied by his power level.",
+      "gate_chapter": 1037,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Tori Tori no Mi, Model: Phoenix",
@@ -56,7 +68,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": 1003,
       "status": "implied",
-      "notes": "Marco's regeneration during Onigashima far exceeds prior showings; awakening-adjacent ability."
+      "notes": "Marco's regeneration during Onigashima far exceeds prior showings; awakening-adjacent ability.",
+      "gate_chapter": 1003,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Hito Hito no Mi, Model: Nika",
@@ -64,7 +78,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": 1043,
       "status": "confirmed",
-      "notes": "The Nika reveal — Luffy's awakening transforms his body into rubber-cartoon physics, environment included. Possibly the most lore-shaking Wano moment."
+      "notes": "The Nika reveal — Luffy's awakening transforms his body into rubber-cartoon physics, environment included. Possibly the most lore-shaking Wano moment.",
+      "gate_chapter": 1043,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Wara Wara no Mi",
@@ -72,7 +88,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": null,
       "status": "implied",
-      "notes": "Hawkins' straw constructs and fortune-telling extensions hint at awakening but aren't explicitly confirmed."
+      "notes": "Hawkins' straw constructs and fortune-telling extensions hint at awakening but aren't explicitly confirmed.",
+      "gate_chapter": 498,
+      "gate_source": "user"
     },
     {
       "fruit": "Inu Inu no Mi, Model: Okuchi no Makami",
@@ -80,7 +98,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": null,
       "status": "implied",
-      "notes": "Yamato's wolf-deity form during Onigashima shows awakening-tier ice manipulation."
+      "notes": "Yamato's wolf-deity form during Onigashima shows awakening-tier ice manipulation.",
+      "gate_chapter": 971,
+      "gate_source": "user"
     },
     {
       "fruit": "Hebi Hebi no Mi, Model: Yamata-no-Orochi",
@@ -88,7 +108,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": 1052,
       "status": "implied",
-      "notes": "Orochi's regenerative resilience is awakening-tier."
+      "notes": "Orochi's regenerative resilience is awakening-tier.",
+      "gate_chapter": 1052,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Jiki Jiki no Mi",
@@ -96,7 +118,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 1078,
       "status": "confirmed",
-      "notes": "Awakened against Big Mom — Punk Vise + Damned Punk."
+      "notes": "Awakened against Big Mom — Punk Vise + Damned Punk.",
+      "gate_chapter": 1078,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Magu Magu no Mi",
@@ -104,7 +128,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Egghead-era hints at Admiral awakening; not explicitly confirmed."
+      "notes": "Egghead-era hints at Admiral awakening; not explicitly confirmed.",
+      "gate_chapter": 397,
+      "gate_source": "user"
     },
     {
       "fruit": "Hie Hie no Mi",
@@ -112,7 +138,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Hinted via Blackbeard arc events; not explicitly confirmed."
+      "notes": "Hinted via Blackbeard arc events; not explicitly confirmed.",
+      "gate_chapter": 303,
+      "gate_source": "user"
     },
     {
       "fruit": "Pika Pika no Mi",
@@ -120,7 +148,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": 1092,
       "status": "implied",
-      "notes": "Kizaru's Egghead feats hint at awakened-tier light manipulation."
+      "notes": "Kizaru's Egghead feats hint at awakened-tier light manipulation.",
+      "gate_chapter": 1092,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Hito Hito no Mi, Model: Daibutsu",
@@ -128,7 +158,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": null,
       "status": "implied",
-      "notes": "Sengoku's golden Buddha shockwaves at Marineford; awakening status not formally confirmed."
+      "notes": "Sengoku's golden Buddha shockwaves at Marineford; awakening status not formally confirmed.",
+      "gate_chapter": 234,
+      "gate_source": "user"
     },
     {
       "fruit": "Mera Mera no Mi",
@@ -136,7 +168,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Reverie-era feats may hint at progress but not awakening-confirmed."
+      "notes": "Reverie-era feats may hint at progress but not awakening-confirmed.",
+      "gate_chapter": 583,
+      "gate_source": "user"
     },
     {
       "fruit": "Inu Inu no Mi, Model: Kyubi no Kitsune",
@@ -144,7 +178,9 @@
       "fruit_type": "Mythical Zoan",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Future Blackbeard arc development."
+      "notes": "Future Blackbeard arc development.",
+      "gate_chapter": 575,
+      "gate_source": "user"
     },
     {
       "fruit": "Bari Bari no Mi",
@@ -152,7 +188,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": null,
       "status": "implied",
-      "notes": "Bartolomeo's barrier feats during Dressrosa show traits hinting at awakening, though not formally confirmed."
+      "notes": "Bartolomeo's barrier feats during Dressrosa show traits hinting at awakening, though not formally confirmed.",
+      "gate_chapter": 705,
+      "gate_source": "user"
     },
     {
       "fruit": "Ishi Ishi no Mi",
@@ -160,7 +198,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 758,
       "status": "implied",
-      "notes": "Pica's stone manipulation across the entire mountain of Dressrosa fits the textbook description of awakening (environmental conversion as Doflamingo described it), but the manga never explicitly names it as such. Strong implication, not stated canon."
+      "notes": "Pica's stone manipulation across the entire mountain of Dressrosa fits the textbook description of awakening (environmental conversion as Doflamingo described it), but the manga never explicitly names it as such. Strong implication, not stated canon.",
+      "gate_chapter": 758,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Hobi Hobi no Mi",
@@ -168,7 +208,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Sugar's mass toy conversions cover the whole kingdom; some readers consider this consistent with awakening."
+      "notes": "Sugar's mass toy conversions cover the whole kingdom; some readers consider this consistent with awakening.",
+      "gate_chapter": 682,
+      "gate_source": "user"
     },
     {
       "fruit": "Soru Soru no Mi",
@@ -176,7 +218,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 845,
       "status": "implied",
-      "notes": "Big Mom's homie creation at Whole Cake scale (entire island, weather, sea) implies awakening-level reach."
+      "notes": "Big Mom's homie creation at Whole Cake scale (entire island, weather, sea) implies awakening-level reach.",
+      "gate_chapter": 845,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Gura Gura no Mi",
@@ -184,7 +228,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": null,
       "status": "implied",
-      "notes": "Whitebeard's world-shaking quakes at Marineford were referred to as capable of destroying the world; awakening-tier by reputation."
+      "notes": "Whitebeard's world-shaking quakes at Marineford were referred to as capable of destroying the world; awakening-tier by reputation.",
+      "gate_chapter": 159,
+      "gate_source": "user"
     },
     {
       "fruit": "Goro Goro no Mi",
@@ -192,7 +238,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Enel's 200,000,000-volt Amaru and Mantra-fused output remain among the strongest Logia feats; awakening status unconfirmed."
+      "notes": "Enel's 200,000,000-volt Amaru and Mantra-fused output remain among the strongest Logia feats; awakening status unconfirmed.",
+      "gate_chapter": 254,
+      "gate_source": "user"
     },
     {
       "fruit": "Yami Yami no Mi",
@@ -200,7 +248,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": 1063,
       "status": "implied",
-      "notes": "(Updated) Egghead-arc Blackbeard feats vs Law deepen the awakening case — Liberation Punk shockwaves and Black Hole control reach awakening-tier."
+      "notes": "(Updated) Egghead-arc Blackbeard feats vs Law deepen the awakening case — Liberation Punk shockwaves and Black Hole control reach awakening-tier.",
+      "gate_chapter": 1063,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Ope Ope no Mi",
@@ -208,7 +258,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 1081,
       "status": "confirmed",
-      "notes": "(Augmented) Awakened against Blackbeard. Uses K-Room (knowledge of room interior) and powerful R Room — temporary godlike control over a small zone."
+      "notes": "(Augmented) Awakened against Blackbeard. Uses K-Room (knowledge of room interior) and powerful R Room — temporary godlike control over a small zone.",
+      "gate_chapter": 1081,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Suke Suke no Mi",
@@ -216,7 +268,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": null,
       "status": "speculation",
-      "notes": "Shiryu's mastery + Haki coverage during Egghead suggests progress beyond Absalom-tier transparency."
+      "notes": "Shiryu's mastery + Haki coverage during Egghead suggests progress beyond Absalom-tier transparency.",
+      "gate_chapter": 538,
+      "gate_source": "user"
     },
     {
       "fruit": "Mori Mori no Mi",
@@ -224,7 +278,9 @@
       "fruit_type": "Logia",
       "awakening_chapter": 1054,
       "status": "implied",
-      "notes": "Ryokugyu's nutrient-draining grass mass that pacified the entire Onigashima debris field is awakening-tier scale; not formally named."
+      "notes": "Ryokugyu's nutrient-draining grass mass that pacified the entire Onigashima debris field is awakening-tier scale; not formally named.",
+      "gate_chapter": 1054,
+      "gate_source": "explicit"
     },
     {
       "fruit": "Mero Mero no Mi (Seraphim variant)",
@@ -232,7 +288,9 @@
       "fruit_type": "Paramecia",
       "awakening_chapter": 1071,
       "status": "implied",
-      "notes": "S-Snake (Seraphim clone derived from Boa Hancock's lineage factor) shows wide-area petrification on Egghead — broader scale than Boa's own use."
+      "notes": "S-Snake (Seraphim clone derived from Boa Hancock's lineage factor) shows wide-area petrification on Egghead — broader scale than Boa's own use.",
+      "gate_chapter": 1071,
+      "gate_source": "explicit"
     }
   ]
 }

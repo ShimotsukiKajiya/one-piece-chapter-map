@@ -78,7 +78,9 @@
       "location": "Whale Tree, Zou — held by the Mink Tribe rulers Inuarashi & Nekomamushi",
       "debut_chapter": 818,
       "summary": "One of the four Road Poneglyphs. When triangulated with the others, points to Laugh Tale.",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 818,
+      "gate_source": "explicit"
     },
     {
       "name": "Road Poneglyph (Whole Cake Island)",
@@ -86,7 +88,9 @@
       "location": "Charlotte Linlin's library — Big Mom's collection",
       "debut_chapter": 866,
       "summary": "Stolen by Big Mom from Fish-Man Island. Now in Strawhat hands after Wano (rubbing was made by Robin and Brook).",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 866,
+      "gate_source": "explicit"
     },
     {
       "name": "Road Poneglyph (Wano)",
@@ -94,7 +98,9 @@
       "location": "Onigashima — held by Kaidou, now passed to the Strawhats post-Wano",
       "debut_chapter": 1055,
       "summary": "The third Road Poneglyph found by the Strawhats. Robin made a rubbing during the raid.",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 1055,
+      "gate_source": "explicit"
     },
     {
       "name": "Road Poneglyph (Final)",
@@ -102,7 +108,9 @@
       "location": "Unknown — believed to be held by Blackbeard or hidden in Elbaph",
       "debut_chapter": 1058,
       "summary": "The fourth and final Road Poneglyph. Its location is the major remaining quest hook for the endgame.",
-      "status": "unknown"
+      "status": "unknown",
+      "gate_chapter": 1058,
+      "gate_source": "explicit"
     },
     {
       "name": "Rio Poneglyph (Laugh Tale)",
@@ -110,7 +118,9 @@
       "location": "Laugh Tale — the final island",
       "debut_chapter": 967,
       "summary": "The TRUE history. Reading it reveals what really happened in the Void Century. Roger and his crew read it and laughed. Only Robin (current) and Roger Pirates have ever read it.",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 967,
+      "gate_source": "explicit"
     },
     {
       "name": "Tree of Knowledge Poneglyphs (Ohara)",
@@ -118,7 +128,9 @@
       "location": "Ohara — destroyed in the Buster Call",
       "debut_chapter": 392,
       "summary": "Ohara's Tree of Knowledge held a vast collection of Poneglyph rubbings. The Buster Call destroyed everything. Robin (then 8) and Professor Clover died for trying to read them.",
-      "status": "destroyed"
+      "status": "destroyed",
+      "gate_chapter": 392,
+      "gate_source": "explicit"
     },
     {
       "name": "Alabasta Poneglyph",
@@ -126,7 +138,9 @@
       "location": "Tomb of the Kings, Alabasta",
       "debut_chapter": 218,
       "summary": "Refers to Pluton — explicitly says the ancient weapon's blueprint is preserved there. Read by Robin during the Alabasta arc; she chose not to reveal its location to Crocodile.",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 218,
+      "gate_source": "explicit"
     },
     {
       "name": "Skypiea Poneglyph (Shandora)",
@@ -134,14 +148,18 @@
       "location": "Shandora ruins, Skypiea",
       "debut_chapter": 301,
       "summary": "Refers to Poseidon — Shirahoshi (the current Poseidon, then unborn). Robin read it during the Skypiea arc. Roger inscribed his message on it before continuing to Laugh Tale.",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 301,
+      "gate_source": "explicit"
     },
     {
       "name": "Fish-Man Island Poneglyph",
       "kind": "informational",
       "location": "Sea Forest, Fish-Man Island",
       "debut_chapter": 649,
-      "summary": "Read by Robin and translated for King Neptune. Refers to the location of an ancient weapon."
+      "summary": "Read by Robin and translated for King Neptune. Refers to the location of an ancient weapon.",
+      "gate_chapter": 649,
+      "gate_source": "explicit"
     },
     {
       "name": "Roger's Message (Skypiea)",
@@ -149,14 +167,17 @@
       "location": "Inscribed on the Skypiea Poneglyph by Roger himself",
       "debut_chapter": 301,
       "summary": "Roger left a message saying 'I will lead you to the great treasure' — left for whoever followed him to Laugh Tale.",
-      "status": "intact"
+      "status": "intact",
+      "gate_chapter": 301,
+      "gate_source": "explicit"
     }
   ]
 }
 </script>
+<script src="lore-gate.js?v=6"></script>
 <script>
 const RAW = JSON.parse(document.getElementById('poneglyphs-data').textContent || '{}');
-const items = RAW.poneglyphs || [];
+const items = LoreGate.filterList(RAW.poneglyphs || []);
 function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 document.getElementById('grid').innerHTML = items.map(i => {
   const usersField = i.users || (i.wielder ? [i.wielder] : []);
@@ -180,11 +201,11 @@ document.getElementById('grid').innerHTML = items.map(i => {
 </script>
 <script src="chr-link-upgrader.js?v=2"></script>
 <script src="spoiler.js?v=1"></script>
-<script src="settings.js"></script>
+<script src="settings.js?v=2"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=4"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=34" defer></script>
+<script src="nav-burger.js?v=35" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the

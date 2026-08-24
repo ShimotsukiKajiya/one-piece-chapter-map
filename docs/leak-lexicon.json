@@ -1,0 +1,49 @@
+{
+  "_doc": "Leak lexicon — term to first-safe chapter. A term must not appear in ANY reader-facing surface below its chapter: page copy, entry text, nav labels, section counts, settings panel, page titles, meta descriptions. This file is the single source of truth, consumed by lore-gate.js at runtime (synced by scripts/sync_lexicon.py) and by the CI checkers. Add a term whenever a chapter introduces a name or concept that did not exist before it.",
+  "generated_on": "2026-08-24",
+  "_policy": {
+    "first_safe_chapter": "The chapter at which a reader may see this term. Below it, the term must not render.",
+    "fail_late": "When two candidate chapters are plausible, take the LATER one. Over-hiding costs a little completeness; leaking costs the story.",
+    "confidence": "certain = verified beat | confident = spot-check the number | qa = maintainer must confirm",
+    "matching": "Plain substring, case-sensitive. Longer terms are listed first so they win over shorter overlapping ones."
+  },
+  "_qa_flags": [
+    "Poneglyph 202, Pluton 193, Uranus 906 and Vegapunk 433 are marked qa — the exact chapter the term first appears in dialogue needs confirming against the manga.",
+    "Marshall D. Teach 234: Blackbeard debuts at 223 as an epithet; 234 is used for the full name. Confirm.",
+    "Warlord 69 is the Shichibukai system being named by Yosaku. Confirm."
+  ],
+  "terms": [
+    { "term": "Trafalgar D. Water Law", "ch": 763, "confidence": "certain", "note": "Full name at Dressrosa; he debuts at 498 as Trafalgar Law." },
+    { "term": "Marshall D. Teach", "ch": 234, "confidence": "qa", "note": "Debuts as Blackbeard at 223." },
+    { "term": "Rocks D. Xebec", "ch": 957, "confidence": "certain" },
+    { "term": "Kouzuki Oden", "ch": 920, "confidence": "confident" },
+    { "term": "God's Knights", "ch": 1086, "confidence": "certain" },
+    { "term": "Ancient Kingdom", "ch": 395, "confidence": "confident", "note": "Clover's forbidden theory at Ohara." },
+    { "term": "Mother Flame", "ch": 1086, "confidence": "certain" },
+    { "term": "Empty Throne", "ch": 908, "confidence": "certain" },
+    { "term": "Void Century", "ch": 395, "confidence": "confident" },
+    { "term": "Buster Call", "ch": 395, "confidence": "confident" },
+    { "term": "Celestial Dragon", "ch": 497, "confidence": "confident" },
+    { "term": "Four Emperors", "ch": 432, "confidence": "confident" },
+    { "term": "Laugh Tale", "ch": 967, "confidence": "certain", "note": "Renamed from the earlier romanisation at Wano." },
+    { "term": "World Noble", "ch": 497, "confidence": "confident" },
+    { "term": "Devil Fruit", "ch": 19, "confidence": "confident" },
+    { "term": "Poneglyph", "ch": 202, "confidence": "qa" },
+    { "term": "Awakening", "ch": 783, "confidence": "confident", "note": "Doflamingo's Ito Ito awakening is the first formal reveal of awakening as a mechanic. Impel Down's awakened Zoan jailer beasts (530) use the word earlier but do not explain it — awakenings.html gates its whole page at 783 on that reasoning, and fail-late defers to the later number." },
+    { "term": "Flevance", "ch": 762, "confidence": "confident", "note": "Law's backstory flashback." },
+    { "term": "Vegapunk", "ch": 433, "confidence": "qa", "note": "Name first referenced long before he appears." },
+    { "term": "Shamrock", "ch": 1136, "confidence": "confident" },
+    { "term": "Lulusia", "ch": 1060, "confidence": "certain" },
+    { "term": "Poseidon", "ch": 628, "confidence": "confident" },
+    { "term": "Ope Ope", "ch": 504, "confidence": "certain" },
+    { "term": "Joy Boy", "ch": 628, "confidence": "certain" },
+    { "term": "Uranus", "ch": 906, "confidence": "qa" },
+    { "term": "Nerona", "ch": 1086, "confidence": "certain" },
+    { "term": "Gear 5", "ch": 1044, "confidence": "certain" },
+    { "term": "Pluton", "ch": 193, "confidence": "qa" },
+    { "term": "Yonko", "ch": 432, "confidence": "confident" },
+    { "term": "Haki", "ch": 597, "confidence": "certain", "note": "Rayleigh names the three types. Hinted from 507." },
+    { "term": "Nika", "ch": 1018, "confidence": "certain", "note": "Name at 1018; the truth of it at 1044." },
+    { "term": "Imu", "ch": 908, "confidence": "certain" }
+  ]
+}

@@ -78,7 +78,14 @@
       "debut": "Ch. 357",
       "summary": "An ancient battleship of devastating power. Capable of destroying an entire island in a single salvo. Its blueprints were entrusted to the shipwrights of Water 7 (the Galley-La family) and to Iceburg specifically. Tom is said to have inherited the original blueprint and passed it through Franky's master-line.",
       "current_holder": "Plans destroyed by Iceburg + Franky; whereabouts of any actual Pluton weapon: legendary, possibly hidden in Wano under Onigashima, or never built.",
-      "key_chapters": [357, 430, 1043, 1052]
+      "key_chapters": [
+        357,
+        430,
+        1043,
+        1052
+      ],
+      "gate_chapter": 357,
+      "gate_source": "explicit"
     },
     {
       "name": "Poseidon",
@@ -87,7 +94,13 @@
       "debut": "Ch. 649",
       "summary": "Not a weapon but a PERSON — a Mermaid Princess born once in centuries with the ability to command the Sea Kings (the colossal sea creatures). Considered an Ancient Weapon because the Sea Kings she can summon are themselves world-destroying. Shirahoshi is the current Poseidon.",
       "current_holder": "Shirahoshi (Princess of Fish-Man Island).",
-      "key_chapters": [649, 906, 1064]
+      "key_chapters": [
+        649,
+        906,
+        1064
+      ],
+      "gate_chapter": 649,
+      "gate_source": "explicit"
     },
     {
       "name": "Uranus",
@@ -96,7 +109,13 @@
       "debut": "Ch. 906",
       "summary": "The mysterious third Ancient Weapon. Its nature is the most heavily speculated. Theories range from a sun-based superweapon (Mother Flame) to a person (Imu themselves) to a meteorological device. Mentioned by name only at the Reverie.",
       "current_holder": "Unrevealed — possibly held by Imu or the Five Elders themselves.",
-      "key_chapters": [906, 1085, 1115]
+      "key_chapters": [
+        906,
+        1085,
+        1115
+      ],
+      "gate_chapter": 906,
+      "gate_source": "explicit"
     }
   ],
   "_lore": [
@@ -107,9 +126,10 @@
   ]
 }
 </script>
+<script src="lore-gate.js?v=6"></script>
 <script>
 const RAW = JSON.parse(document.getElementById('ancient-data').textContent || '{}');
-const items = RAW.weapons || [];
+const items = LoreGate.filterList(RAW.weapons || []);
 function escapeHtml(s){if(s==null)return"";return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 document.getElementById('grid').innerHTML = items.map(i => {
   const usersField = i.users || (i.wielder ? [i.wielder] : []);
@@ -131,11 +151,11 @@ document.getElementById('grid').innerHTML = items.map(i => {
 <script id="chr-id-map" type="application/json">{}</script>
 <script src="chr-link-upgrader.js?v=2"></script>
 <script src="spoiler.js?v=1"></script>
-<script src="settings.js"></script>
+<script src="settings.js?v=2"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=4"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=34" defer></script>
+<script src="nav-burger.js?v=35" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Spoiler Shield: page-scoped soft gate. Reads effective cutoff so the

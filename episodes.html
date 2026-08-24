@@ -101,8 +101,9 @@
   <meta name="twitter:title" content="Manga ↔ Anime · The Shimotsuki Codex">
   <meta name="twitter:description" content="Manga ↔ Anime cross-reference — every One Piece arc with its chapter range, episode range, and any filler interruptions.">
   <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <script src="lore-gate.js?v=6"></script>
 </head>
-<body>
+<body data-lore-scrub="1">
 <header>
   <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">Manga ↔ Anime</span></a>
 </header>
@@ -359,12 +360,12 @@ fetch('episode_map.json').then(r=>r.ok?r.json():null).then(d=>{
 }).catch(()=>{});
 </script>
 <footer>The Shimotsuki Codex · Manga ↔ Anime arc-level cross-reference &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
-<script src="settings.js"></script>
+<script src="settings.js?v=2"></script>
 <script src="search.js?v=4"></script>
 <script src="legal-notice.js" defer></script>
 <script src="spoiler.js?v=1"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
-<script src="nav-burger.js?v=34" defer></script>
+<script src="nav-burger.js?v=35" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
   // Soft gate: read effective cutoff so any future per-page filter logic can

@@ -42,6 +42,59 @@ jobs:
           python audit.py
           echo "rc=$?" >> "$GITHUB_OUTPUT"
 
+      # ── Spoiler Shield checks ────────────────────────────────────────
+      # audit.py checks the data is coherent. These check the SHIELD:
+      #   D2 leak behaviour — does a reader see something they shouldn't?
+      #   D3 blankness      — can a reader reach a page that shows nothing?
+      # Both are pure-Python (gating is data-driven), so no browser needed.
+      # Any failure feeds the same issue-filing step as the main audit.
+      - name: Lexicon in sync with lore-gate.js
+        id: lexicon
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/sync_lexicon.py
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Every lore entry has a gate chapter
+        id: gatecov
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/derive_gate_chapters.py | tee /tmp/derive.txt
+          grep -q "Every entry has a gate chapter" /tmp/derive.txt
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: D2 — leak behaviour
+        id: leaks
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/audit_leak_behaviour.py --verbose
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: D3 — blankness
+        id: blank
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/audit_blankness.py --table
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Fail the job if any shield check failed
+        if: >
+          steps.lexicon.outputs.rc != '0' ||
+          steps.gatecov.outputs.rc != '0' ||
+          steps.leaks.outputs.rc  != '0' ||
+          steps.blank.outputs.rc  != '0'
+        run: |
+          echo "::error::Spoiler Shield check failed —" \
+               "lexicon=${{ steps.lexicon.outputs.rc }}" \
+               "gate-coverage=${{ steps.gatecov.outputs.rc }}" \
+               "leaks=${{ steps.leaks.outputs.rc }}" \
+               "blankness=${{ steps.blank.outputs.rc }}"
+          exit 1
+
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4

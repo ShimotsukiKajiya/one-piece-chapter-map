@@ -79,8 +79,8 @@
         { href: 'sbs.html',          icon: '📜', name: 'SBS Vault' },
         { href: 'sbs-topics.html',   icon: '🗂', name: 'SBS by Topic' },
         { href: 'music.html',        icon: '🎵', name: 'Music & Songs' },
-        { href: 'poneglyphs.html',   icon: '🪨', name: 'Poneglyphs' },
-        { href: 'void-century.html', icon: '🕯', name: 'Void Century' },
+        { href: 'poneglyphs.html',   icon: '🪨', name: 'Poneglyphs', minCh: 218 },
+        { href: 'void-century.html', icon: '🕯', name: 'Void Century', minCh: 395 },
       ],
     },
     {
@@ -99,7 +99,7 @@
         // (per-bond chapter gates; families grow as the reader advances).
         { href: 'families.html',     icon: '🌳', name: 'Family Trees' },
 
-        { href: 'will-of-d.html',    icon: '🇩', name: 'Will of D.' },
+        { href: 'will-of-d.html',    icon: '🇩', name: 'Will of D.', minCh: 154 },
         { href: 'crews.html',        icon: '⚓', name: 'Crews & Orgs' },
         { href: 'marines-wg.html',   icon: '🪽', name: 'Marines & World Govt' },
         { href: 'jolly-rogers.html', icon: '🏴‍☠️', name: 'Jolly Rogers' },
@@ -111,8 +111,8 @@
           icon: '💥',
           items: [
             { href: 'fruits.html',       icon: '🍎', name: 'Devil Fruits' },
-            { href: 'awakenings.html',   icon: '💥', name: 'Awakenings' },
-            { href: 'haki.html',         icon: '✦',  name: 'Haki Codex' },
+            { href: 'awakenings.html',   icon: '💥', name: 'Awakenings', minCh: 783 },
+            { href: 'haki.html',         icon: '✦',  name: 'Haki Codex', minCh: 597 },
             { href: 'combat-styles.html',icon: '🥋', name: 'Combat Styles' },
             // Sulong, Electro, and other race-bound powers live in
             // Combat Styles. Races & Tribes (the peoples themselves)
@@ -134,11 +134,11 @@
           label: 'Gear',
           icon: '⚔',
           items: [
-            { href: 'weapons.html',      icon: '⚔',  name: 'Weapons & Meito' },
-            { href: 'items.html',        icon: '🧪', name: 'Items' },
-            { href: 'materials.html',    icon: '⚙',  name: 'Materials' },
-            { href: 'tech.html',         icon: '🤖', name: 'Tech & Artifacts' },
-            { href: 'ancient-weapons.html', icon: '🏛', name: 'Ancient Weapons' },
+            { href: 'weapons.html',      icon: '⚔',  name: 'Weapons & Meito', minCh: 50 },
+            { href: 'items.html',        icon: '🧪', name: 'Items', minCh: 9 },
+            { href: 'materials.html',    icon: '⚙',  name: 'Materials', minCh: 145 },
+            { href: 'tech.html',         icon: '🤖', name: 'Tech & Artifacts', minCh: 90 },
+            { href: 'ancient-weapons.html', icon: '🏛', name: 'Ancient Weapons', minCh: 357 },
           ],
         },
       ],
@@ -778,7 +778,7 @@
   function renderItem(item) {
     // Per-item cutoff gate. Items with `minCh` attribute hidden when their
     // referenced arc/concept is past the user's effective cutoff.
-    if (typeof item.minCh === 'number' && item.minCh > _effCutoff()) return '';
+    if (!itemVisible(item)) return '';
 
     const isActive = !item.soon && !item.external && item.href.toLowerCase() === currentPage;
     const cls = ['item'];
@@ -796,9 +796,21 @@
     </a>`;
   }
 
+  // A gated item must not be countable. If the label is hidden but the section
+  // count still includes it, the reader can subtract and learn something is
+  // there — the same countable-omission leak the shield exists to prevent.
+  function itemVisible(item) {
+    return !(typeof item.minCh === 'number' && item.minCh > _effCutoff());
+  }
+  function visibleCount(items) {
+    return (items || []).filter(itemVisible).length;
+  }
   function totalItemCount(group) {
-    if (group.subGroups) return group.subGroups.reduce((n, s) => n + s.items.length, 0);
-    return (group.items || []).length;
+    if (group.subGroups) {
+      return group.subGroups.reduce((n, s) => n + visibleCount(s.items), 0)
+           + visibleCount(group.items);
+    }
+    return visibleCount(group.items);
   }
 
   for (const group of GROUPS) {
@@ -833,7 +845,7 @@
           <h4 data-group-label="${group.label}/${sub.label}">
             <span class="gicon">${sub.icon}</span>
             <span class="glabel">${sub.label}</span>
-            <span class="gcount">${sub.items.length}</span>
+            <span class="gcount">${visibleCount(sub.items)}</span>
             <span class="chevron"></span>
           </h4>`;
         for (const item of sub.items) html += renderItem(item);

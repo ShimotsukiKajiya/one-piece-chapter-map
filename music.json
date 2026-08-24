@@ -7,144 +7,221 @@
       "kind": "in-universe",
       "tag": "canon",
       "debut": "Ch. 487",
-      "performers": ["Brook","Roger Pirates","most pirates"],
-      "summary": "The most iconic in-universe song. A pirate sea shanty about a journey to deliver Bink's sake. Brook's signature performance, played at every emotional pirate moment — Whole Cake departure, Sunny christening, Thriller Bark farewell."
+      "performers": [
+        "Brook",
+        "Roger Pirates",
+        "most pirates"
+      ],
+      "summary": "The most iconic in-universe song. A pirate sea shanty about a journey to deliver Bink's sake. Brook's signature performance, played at every emotional pirate moment — Whole Cake departure, Sunny christening, Thriller Bark farewell.",
+      "gate_chapter": 487,
+      "gate_source": "explicit"
     },
     {
       "title": "We Are!",
       "kind": "anime-opening",
       "tag": "anime",
       "debut": "Episode 1",
-      "performers": ["Hiroshi Kitadani","TVXQ (cover)"],
-      "summary": "The first and most iconic anime opening. Played as the Strawhats set sail at the start of the series. Returned for major milestone episodes."
+      "performers": [
+        "Hiroshi Kitadani",
+        "TVXQ (cover)"
+      ],
+      "summary": "The first and most iconic anime opening. Played as the Strawhats set sail at the start of the series. Returned for major milestone episodes.",
+      "gate_chapter": 2,
+      "gate_source": "episode"
     },
     {
       "title": "Hikari e",
       "kind": "anime-opening",
       "tag": "anime",
       "debut": "Episode 48",
-      "performers": ["The Babystars"],
-      "summary": "Second opening — the Alabasta-era theme. The Strawhats running across the desert is iconic OP imagery from this era."
+      "performers": [
+        "The Babystars"
+      ],
+      "summary": "Second opening — the Alabasta-era theme. The Strawhats running across the desert is iconic OP imagery from this era.",
+      "gate_chapter": 98,
+      "gate_source": "episode"
     },
     {
       "title": "Hands Up!",
       "kind": "anime-opening",
       "tag": "anime",
       "debut": "Episode 590",
-      "performers": ["Kota Shinzato"],
-      "summary": "Dressrosa-era opening. Crowd-favourite chorus — fans throw their hands up at conventions."
+      "performers": [
+        "Kota Shinzato"
+      ],
+      "summary": "Dressrosa-era opening. Crowd-favourite chorus — fans throw their hands up at conventions.",
+      "gate_chapter": 665,
+      "gate_source": "episode-filler"
     },
     {
       "title": "Wano-Kuni",
       "kind": "anime-opening",
       "tag": "anime",
       "debut": "Episode 957",
-      "performers": ["Hiroshi Kitadani"],
-      "summary": "Wano arc opening — bombastic samurai imagery, Kaidou storm, the rooftop fight teaser."
+      "performers": [
+        "Hiroshi Kitadani"
+      ],
+      "summary": "Wano arc opening — bombastic samurai imagery, Kaidou storm, the rooftop fight teaser.",
+      "gate_chapter": 956,
+      "gate_source": "episode"
     },
     {
       "title": "Memories",
       "kind": "anime-ending",
       "tag": "anime",
       "debut": "Episode 1",
-      "performers": ["Maki Otsuki"],
-      "summary": "First ending theme — gentle, nostalgic. Played as Luffy walks away from Foosha at the start of the journey."
+      "performers": [
+        "Maki Otsuki"
+      ],
+      "summary": "First ending theme — gentle, nostalgic. Played as Luffy walks away from Foosha at the start of the journey.",
+      "gate_chapter": 2,
+      "gate_source": "episode"
     },
     {
       "title": "Overtaken (Difficulty x Pride)",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 312",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "The most iconic OST cue. Plays at impossible-victory moments — Luffy vs Lucci, Whitebeard's last stand, Marineford. Goosebumps guaranteed."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "The most iconic OST cue. Plays at impossible-victory moments — Luffy vs Lucci, Whitebeard's last stand, Marineford. Goosebumps guaranteed.",
+      "gate_chapter": 430,
+      "gate_source": "episode"
     },
     {
       "title": "Mother Sea",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 32",
-      "performers": ["Kohei Tanaka (composer)","Etsuko Yakushimaru (vocals)"],
-      "summary": "The Going Merry's farewell. Played as the crew burns the Merry — the most heart-shattering scene in the series."
+      "performers": [
+        "Kohei Tanaka (composer)",
+        "Etsuko Yakushimaru (vocals)"
+      ],
+      "summary": "The Going Merry's farewell. Played as the crew burns the Merry — the most heart-shattering scene in the series.",
+      "gate_chapter": 73,
+      "gate_source": "episode"
     },
     {
       "title": "Brook's Soul Solid Songs",
       "kind": "in-universe",
       "tag": "canon",
       "debut": "Ch. 489",
-      "performers": ["Brook"],
-      "summary": "Brook's various Soul-King-era anthems — 'New World' (his own song), 'Dead End Adventure' covers."
+      "performers": [
+        "Brook"
+      ],
+      "summary": "Brook's various Soul-King-era anthems — 'New World' (his own song), 'Dead End Adventure' covers.",
+      "gate_chapter": 489,
+      "gate_source": "explicit"
     },
     {
       "title": "Dawn",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 1",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "The opening fanfare — heard before every major announcement, voyage start, treasure reveal."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "The opening fanfare — heard before every major announcement, voyage start, treasure reveal.",
+      "gate_chapter": 2,
+      "gate_source": "episode"
     },
     {
       "title": "Romance Dawn (theme)",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 1",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "Luffy's hat / Romance Dawn motif — most associated with the Strawhat hat, Shanks's final words, and emotional callbacks."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "Luffy's hat / Romance Dawn motif — most associated with the Strawhat hat, Shanks's final words, and emotional callbacks.",
+      "gate_chapter": 2,
+      "gate_source": "episode"
     },
     {
       "title": "Pirate King's Fanfare",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 4",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "Plays whenever someone declares 'I'm going to be Pirate King!' Triumphant brass."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "Plays whenever someone declares 'I'm going to be Pirate King!' Triumphant brass.",
+      "gate_chapter": 8,
+      "gate_source": "episode"
     },
     {
       "title": "Difficulty x Pride",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 405",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "Sub-cue used in Marineford and beyond — desperation-into-resolve. Often paired with Overtaken."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "Sub-cue used in Marineford and beyond — desperation-into-resolve. Often paired with Overtaken.",
+      "gate_chapter": 513,
+      "gate_source": "episode"
     },
     {
       "title": "Mugiwara no Luffy Tarou (Strawhat Luffy-tarou)",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 939",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "Wano-flavoured shamisen + brass version of the Luffy theme. Plays during his Wano sumo-style moments."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "Wano-flavoured shamisen + brass version of the Luffy theme. Plays during his Wano sumo-style moments.",
+      "gate_chapter": 942,
+      "gate_source": "episode"
     },
     {
       "title": "Drum of Liberation",
       "kind": "ost",
       "tag": "anime",
       "debut": "Episode 1071",
-      "performers": ["Kohei Tanaka (composer)"],
-      "summary": "Gear 5 / Sun God Nika theme. Cartoon-style drums and laughter motif. Plays during Luffy's Nika awakening."
+      "performers": [
+        "Kohei Tanaka (composer)"
+      ],
+      "summary": "Gear 5 / Sun God Nika theme. Cartoon-style drums and laughter motif. Plays during Luffy's Nika awakening.",
+      "gate_chapter": 1044,
+      "gate_source": "episode"
     },
     {
       "title": "Binks no Sake (movie version)",
       "kind": "movie-track",
       "tag": "movie",
       "debut": "Film: Stampede (2019)",
-      "performers": ["Strawhat crew (in-universe)"],
-      "summary": "Stampede movie's emotional callback rendition. Used in the climactic Crew-vs-Bullet sequence."
+      "performers": [
+        "Strawhat crew (in-universe)"
+      ],
+      "summary": "Stampede movie's emotional callback rendition. Used in the climactic Crew-vs-Bullet sequence.",
+      "gate_chapter": 960,
+      "gate_source": "film-qa"
     },
     {
       "title": "Film: Red — anything by Ado",
       "kind": "movie-track",
       "tag": "movie",
       "debut": "Film: Red (2022)",
-      "performers": ["Ado","Uta (in-universe)"],
-      "summary": "Uta's set-list — 'New Genesis', 'Tot Musica', 'Backlight', 'I'm Invincible'. Ado vocals, Uta in-canon. The Red soundtrack went #1 in Japan."
+      "performers": [
+        "Ado",
+        "Uta (in-universe)"
+      ],
+      "summary": "Uta's set-list — 'New Genesis', 'Tot Musica', 'Backlight', 'I'm Invincible'. Ado vocals, Uta in-canon. The Red soundtrack went #1 in Japan.",
+      "gate_chapter": 1060,
+      "gate_source": "film-qa"
     },
     {
       "title": "Brand New World",
       "kind": "anime-opening",
       "tag": "anime",
       "debut": "Episode 279",
-      "performers": ["D-51"],
-      "summary": "Post-Enies Lobby opening — Strawhat crew expanded after Robin's rescue, Sunny launched, beginning of the Thriller Bark era."
+      "performers": [
+        "D-51"
+      ],
+      "summary": "Post-Enies Lobby opening — Strawhat crew expanded after Robin's rescue, Sunny launched, beginning of the Thriller Bark era.",
+      "gate_chapter": 400,
+      "gate_source": "episode-filler"
     }
   ]
 }

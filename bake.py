@@ -607,6 +607,42 @@ def bake_punk():
         if ok:
             print(f"  ✓ {page:<15} ← {len(records):>5,} characters  ({size} KB)")
 
+    # ── STATUS REVEALS (life/death gating for the Spoiler Shield) ──
+    # A character's status is a spoiler in its own right — it gates on the
+    # chapter the reader LEARNS it, never on the character's debut. Records
+    # without an entry here are omitted for shielded readers (fail-closed).
+    status_path = os.path.join(DIR, "status_reveals.json")
+    if os.path.exists(status_path):
+        with open(status_path, encoding="utf-8") as f:
+            status_doc = json.load(f)
+        reveals = status_doc.get("reveals", {})
+        status_payload = json.dumps(reveals, ensure_ascii=False, separators=(',', ':'))
+        for page in ("character.html",):
+            path = os.path.join(DIR, page)
+            if not os.path.exists(path): continue
+            ok, size = bake_block(path, "status-reveals-data", status_payload)
+            if ok:
+                undated = sum(1 for r in records
+                              if str(r.get("status", "")).strip() == "2"
+                              and r.get("name") not in reveals)
+                print(f"  ✓ {page:<15} ← {len(reveals):>5,} status reveals  "
+                      f"({undated} deceased still undated → omitted while shielded)")
+
+    # ── FIELD REVEALS (per-field infobox gating + name ladders) ──
+    field_path = os.path.join(DIR, "field_reveals.json")
+    if os.path.exists(field_path):
+        with open(field_path, encoding="utf-8") as f:
+            field_doc = json.load(f)
+        freveals = field_doc.get("reveals", {})
+        fpayload = json.dumps(freveals, ensure_ascii=False, separators=(',', ':'))
+        fpath = os.path.join(DIR, "character.html")
+        if os.path.exists(fpath):
+            ok, size = bake_block(fpath, "field-reveals-data", fpayload)
+            if ok:
+                ladders = sum(1 for v in freveals.values() if isinstance(v.get("name"), list))
+                print(f"  ✓ character.html  ← {len(freveals):>5,} field reveals  "
+                      f"({ladders} name ladders)")
+
     # ── CANON FACTS (manga-derived, 🟢 tier with source citations) ──
     # Group facts by subject for fast O(1) lookup in the profile renderer.
     facts_path = os.path.join(DIR, "canon_facts.json")

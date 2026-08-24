@@ -464,7 +464,7 @@
             <button class="codex-opt" data-val="minimal">🌙 Minimal</button>
             <button class="codex-opt" data-val="off">🚫 Off</button>
           </div>
-          <div class="codex-crew-label">Page-themed scenes — Haki lightning on Punk Records, treasure on Bounty Wall, etc.</div>
+          <div class="codex-crew-label">Page-themed scenes that match whichever section you are reading.</div>
         </div>
 
         <div class="codex-section">

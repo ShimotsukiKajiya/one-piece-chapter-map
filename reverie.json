@@ -8,7 +8,22 @@
       "chapter_end": 908,
       "tag": "canon",
       "summary": "The Levely opens at Mariejois. Kings and queens from 50 member nations gather. The Strawhat-aligned royals (Vivi, Rebecca, Wapol, Mansherry, Inuarashi, Nekomamushi, Neptune family) all attend.",
-      "participants": ["Nefertari Cobra","Nefertari Vivi","Riku Doldo III","Rebecca","Wapol","Inuarashi","Nekomamushi","King Neptune","Shirahoshi","Stelly","Sai","Leo"]
+      "participants": [
+        "Nefertari Cobra",
+        "Nefertari Vivi",
+        "Riku Doldo III",
+        "Rebecca",
+        "Wapol",
+        "Inuarashi",
+        "Nekomamushi",
+        "King Neptune",
+        "Shirahoshi",
+        "Stelly",
+        "Sai",
+        "Leo"
+      ],
+      "gate_chapter": 903,
+      "gate_source": "explicit"
     },
     {
       "title": "Sabo enters the Pangaea Castle",
@@ -16,7 +31,16 @@
       "chapter_end": 905,
       "tag": "canon",
       "summary": "Sabo and the Revolutionary commanders infiltrate Mariejois to free Kuma. Confrontation with the Five Elders begins.",
-      "participants": ["Sabo","Karasu","Morley","Lindbergh","Belo Betty","Monkey D. Dragon"]
+      "participants": [
+        "Sabo",
+        "Karasu",
+        "Morley",
+        "Lindbergh",
+        "Belo Betty",
+        "Monkey D. Dragon"
+      ],
+      "gate_chapter": 904,
+      "gate_source": "explicit"
     },
     {
       "title": "The Empty Throne is occupied — Imu revealed",
@@ -24,7 +48,16 @@
       "chapter_end": 906,
       "tag": "canon",
       "summary": "The Five Elders bow before the Empty Throne — and Imu sits upon it. The hidden ruler of the World Government is shown for the first time. Imu views the photographs of Luffy, Blackbeard, Shirahoshi, Vivi, and someone whose name is hidden — vowing to erase 'this lineage' from history.",
-      "participants": ["Imu","Saint Jaygarcia Saturn","Saint Marcus Mars","Saint Topman Warcury","Saint Ethanbaron V. Nusjuro","Saint Shepherd Ju Peter"]
+      "participants": [
+        "Imu",
+        "Saint Jaygarcia Saturn",
+        "Saint Marcus Mars",
+        "Saint Topman Warcury",
+        "Saint Ethanbaron V. Nusjuro",
+        "Saint Shepherd Ju Peter"
+      ],
+      "gate_chapter": 906,
+      "gate_source": "explicit"
     },
     {
       "title": "Cobra confronts the Five Elders about D.",
@@ -32,7 +65,12 @@
       "chapter_end": 907,
       "tag": "canon",
       "summary": "King Cobra of Alabasta privately asks the Five Elders the meaning of the Will of D. and the truth of Lily, the lost queen of the Ancient Kingdom — making the connection that Nefertari Lily is one of the 20 founders who refused to take the Tenryubito surname.",
-      "participants": ["Nefertari Cobra","Saint Jaygarcia Saturn"]
+      "participants": [
+        "Nefertari Cobra",
+        "Saint Jaygarcia Saturn"
+      ],
+      "gate_chapter": 907,
+      "gate_source": "explicit"
     },
     {
       "title": "Sabo's escape — Cobra's death (offscreen)",
@@ -40,7 +78,13 @@
       "chapter_end": 908,
       "tag": "canon",
       "summary": "Sabo escapes Mariejois and disappears. Cobra is reported dead — Sabo is framed as the killer. The truth is later revealed: Imu killed Cobra after he asked too many questions.",
-      "participants": ["Sabo","Nefertari Cobra","Imu"]
+      "participants": [
+        "Sabo",
+        "Nefertari Cobra",
+        "Imu"
+      ],
+      "gate_chapter": 908,
+      "gate_source": "explicit"
     },
     {
       "title": "Sabo's broadcast — Egghead-era reveal",
@@ -48,7 +92,13 @@
       "chapter_end": 1085,
       "tag": "canon",
       "summary": "Through Morgans's interview, Sabo's account of the Reverie reaches the world: he saw Imu, witnessed Cobra's death, learned of the Empty Throne. The truth begins to leak.",
-      "participants": ["Sabo","Morgans","Vivi"]
+      "participants": [
+        "Sabo",
+        "Morgans",
+        "Vivi"
+      ],
+      "gate_chapter": 1083,
+      "gate_source": "explicit"
     },
     {
       "title": "Lulusia is destroyed",
@@ -56,7 +106,13 @@
       "chapter_end": 1060,
       "tag": "canon",
       "summary": "Imu uses the Mother Flame to vaporise the Kingdom of Lulusia from above — the first on-page demonstration of an Ancient-Weapon-tier weapon since the Void Century. The world learns nothing officially; survivors cover the news.",
-      "participants": ["Imu","King Seki of Lulusia","Saint Jaygarcia Saturn"]
+      "participants": [
+        "Imu",
+        "King Seki of Lulusia",
+        "Saint Jaygarcia Saturn"
+      ],
+      "gate_chapter": 1060,
+      "gate_source": "explicit"
     },
     {
       "title": "Aftermath — Worst Generation reshapes the world",
@@ -64,7 +120,16 @@
       "chapter_end": 1085,
       "tag": "canon",
       "summary": "Wano concludes. Kaidou and Big Mom are defeated. Buggy joins the Yonko under the Cross Guild banner. Shanks and Blackbeard advance. The Reverie's secrets begin to unravel publicly. The Final Saga begins.",
-      "participants": ["Monkey D. Luffy","Eustass Kid","Trafalgar D. Water Law","Buggy","Shanks","Marshall D. Teach"]
+      "participants": [
+        "Monkey D. Luffy",
+        "Eustass Kid",
+        "Trafalgar D. Water Law",
+        "Buggy",
+        "Shanks",
+        "Marshall D. Teach"
+      ],
+      "gate_chapter": 1080,
+      "gate_source": "explicit"
     }
   ]
 }

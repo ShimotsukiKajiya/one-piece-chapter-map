@@ -96,8 +96,9 @@
   <meta name="twitter:title" content="World Map · The Shimotsuki Codex">
   <meta name="twitter:description" content="Interactive One Piece world map — click any island to see its arcs, debut chapter, and characters introduced there.">
   <meta name="twitter:image" content="https://shimotsukicodex.com/logo/shimotsuki-codex-mark-primary.png">
+  <script src="lore-gate.js?v=6"></script>
 </head>
-<body>
+<body data-lore-scrub="1">
 <header>
   <a class="logo" href="home.html"><h1>The Shimotsuki Codex</h1><span class="logo-sub">World Map</span></a>
 </header>
@@ -365,11 +366,11 @@ document.querySelectorAll('.island').forEach(el => {
 </script>
 <footer>The Shimotsuki Codex · World map (schematic) — for navigation, not geography exam &middot; One Piece &copy; Eiichiro Oda / Shueisha &middot; Fan project, non-commercial</footer>
 <script src="spoiler.js?v=1"></script>
-<script src="settings.js"></script>
+<script src="settings.js?v=2"></script>
 <script src="spoiler-onboarding.js?v=2" defer></script>
 <script src="search.js?v=4"></script>
 <script src="legal-notice.js" defer></script>
-<script src="nav-burger.js?v=34" defer></script>
+<script src="nav-burger.js?v=35" defer></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <script>
 // L6 fix: per-island min-chapter gate. Hides SVG islands whose first

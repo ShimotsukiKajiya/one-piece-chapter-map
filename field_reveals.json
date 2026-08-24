@@ -1,0 +1,75 @@
+{
+  "_doc": "Per-character reveal gating for punk_records infobox fields. The Spoiler Shield gates a fact on the chapter the READER LEARNS it, never on the character's debut. Two shapes: `name` is a rung ladder (the display name changes as the story reveals it); every other key is a plain chapter number meaning 'hide this field below this chapter'. Consumed by character.html via bake.py block `field-reveals-data`.",
+  "generated_on": "2026-08-22",
+  "_policy": {
+    "name": "Ordered rungs [{ch, value, jp, romaji}]. Highest rung with ch <= cutoff wins; below the first rung the first rung is used. Display only — c.name remains the lookup key everywhere.",
+    "field_gate": "Plain integer. Field is hidden while cutoff < ch.",
+    "undated": "Fields with no entry are shown (fail-open). This is a KNOWN RESIDUAL: unlike `status`, omitting every undated field would strip most of the infobox for shielded readers. The annotation scrubber in character.html catches the common cross-cutting leaks ('(former)', '(at death)', '(after timeskip)'). Extend this file as leaks are found.",
+    "fail_late": "When torn between two candidate chapters take the LATER one."
+  },
+  "_qa_flags": [
+    "Charlotte Linlin: name rung at 828 is a deliberate fail-late over-hide; 'Big Mom' is used from 651 and the Charlotte name appears earlier than 828. Confirm and tighten.",
+    "Nico Robin: 218 used for the 'Nico Robin' name reveal -- confirm the exact chapter.",
+    "Kouzuki Momonosuke: 819 used for the Kouzuki lineage reveal -- confirm.",
+    "Marshall D. Teach: 234 used for the full-name reveal after the Blackbeard debut at 223 -- confirm.",
+    "Only 8 name ladders are authored. Any character whose stored name is a later, fuller form than their debut name still leaks. Candidates surface via the alias heuristic in codex-coverage-check."
+  ],
+  "reveals": {
+    "Trafalgar D. Water Law": {
+      "name": [
+        { "ch": 498, "value": "Trafalgar Law", "jp": "トラファルガー・ロー", "romaji": "Torafarugā Rō" },
+        { "ch": 763, "value": "Trafalgar D. Water Law", "jp": "トラファルガー・D・ワーテル・ロー", "romaji": "Torafarugā Dī Wāteru Rō" }
+      ],
+      "residence": 762,
+      "origin": 762,
+      "_note": "Flevance and the North Blue origin are the Ch. 762 flashback."
+    },
+    "Gol D. Roger": {
+      "name": [
+        { "ch": 1, "value": "Gold Roger", "jp": "ゴールド・ロジャー", "romaji": "Gōrudo Rojā" },
+        { "ch": 154, "value": "Gol D. Roger", "jp": "ゴール・D・ロジャー", "romaji": "Gōru Dī Rojā" }
+      ],
+      "_note": "The world calls him Gold Roger; his true name lands with the D."
+    },
+    "Nerona Imu": {
+      "name": [
+        { "ch": 906, "value": "Imu", "jp": "イム聖", "romaji": "Imu Sei" },
+        { "ch": 1086, "value": "Nerona Imu", "jp": "ネロナ・イム聖", "romaji": "Nerona Imu Sei" }
+      ]
+    },
+    "Nico Robin": {
+      "name": [
+        { "ch": 114, "value": "Miss All Sunday", "jp": "ミス・オールサンデー", "romaji": "Misu Ōru Sandē" },
+        { "ch": 218, "value": "Nico Robin", "jp": "ニコ・ロビン", "romaji": "Niko Robin" }
+      ],
+      "origin": 391,
+      "_note": "Ohara origin is the Ch. 391+ flashback."
+    },
+    "Marshall D. Teach": {
+      "name": [
+        { "ch": 223, "value": "Blackbeard", "jp": "黒ひげ", "romaji": "Kurohige" },
+        { "ch": 234, "value": "Marshall D. Teach", "jp": "マーシャル・D・ティーチ", "romaji": "Māsharu Dī Tīchi" }
+      ]
+    },
+    "Donquixote Rosinante": {
+      "name": [
+        { "ch": 761, "value": "Corazon", "jp": "コラソン", "romaji": "Korason" },
+        { "ch": 766, "value": "Donquixote Rosinante", "jp": "ドンキホーテ・ロシナンテ", "romaji": "Donkihōte Roshinante" }
+      ],
+      "residence": 763,
+      "origin": 763
+    },
+    "Kouzuki Momonosuke": {
+      "name": [
+        { "ch": 685, "value": "Momonosuke", "jp": "モモの助", "romaji": "Momonosuke" },
+        { "ch": 819, "value": "Kouzuki Momonosuke", "jp": "光月モモの助", "romaji": "Kōzuki Momonosuke" }
+      ]
+    },
+    "Charlotte Linlin": {
+      "name": [
+        { "ch": 651, "value": "Big Mom", "jp": "ビッグ・マム", "romaji": "Biggu Mamu" },
+        { "ch": 828, "value": "Charlotte Linlin", "jp": "シャーロット・リンリン", "romaji": "Shārotto Rinrin" }
+      ]
+    }
+  }
+}
