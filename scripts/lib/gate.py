@@ -81,18 +81,46 @@ def text_leaks(text, cutoff, lexicon):
     return None
 
 
+def resolve_rungs(entry, cutoff):
+    """Mirror of resolveRungs() in lore-gate.js — keep the two in step.
+
+    An entry with `rungs` renders the highest rung the reader has earned, its
+    fields laid over the base entry. Returns None when no rung is earned."""
+    rungs = entry.get("rungs")
+    if not isinstance(rungs, list) or not rungs:
+        return entry
+    pick = None
+    for r in rungs:
+        ch = r.get("ch")
+        if not isinstance(ch, int) or ch > cutoff:
+            continue
+        if isinstance(r.get("maxCh"), int) and cutoff > r["maxCh"]:
+            continue
+        if pick is None or ch >= pick["ch"]:
+            pick = r
+    if pick is None:
+        return None
+    out = {k: v for k, v in entry.items() if k != "rungs"}
+    out.update({k: v for k, v in pick.items() if k not in ("ch", "maxCh")})
+    out["gate_chapter"] = pick["ch"]
+    return out
+
+
 def visible(entries, cutoff, lexicon):
     """The entries a reader at `cutoff` sees. Caught-up sees everything."""
     if cutoff >= CAP:
-        return list(entries)
+        return [resolve_rungs(e, CAP) or e for e in entries]
     out = []
     for e in entries:
-        ch = gate_chapter(e)
+        resolved = resolve_rungs(e, cutoff)
+        if resolved is None:
+            continue
+        ch = gate_chapter(resolved)
         if ch is None or ch > cutoff:
             continue
-        if text_leaks(entry_text(e), cutoff, lexicon):
+        if text_leaks(entry_text(resolved), cutoff, lexicon):
             continue
-        out.append(e)
+        out.append(resolved)
     return out
 
 

@@ -130,9 +130,57 @@
     return items.filter(function (e) { return textLeaks(entryText(e), cut) === null; });
   }
 
+  /* RUNG LADDER — the answer to a page going blank.
+   *
+   * An entry may carry `rungs: [{ch, ...fields}]`, each a snapshot of the truth
+   * as it stood at that chapter. The reader sees the HIGHEST rung they have
+   * earned, with its fields laid over the base entry. So the Skypiea Poneglyph
+   * can appear at Ch. 301 described as a stone the Shandia guarded, and only
+   * become "a Road Poneglyph pointing to Laugh Tale" at 967 -- instead of being
+   * hidden for 666 chapters because its only description used a late name.
+   *
+   * `maxCh` retires a provisional rung when a fuller one lands. Retire, never
+   * delete: a reader below maxCh must still see the older, partial version.
+   *
+   * Returns null when no rung is earned -- the entry is simply not there yet.
+   */
+  function resolveRungs(entry, cut) {
+    var rungs = entry && entry.rungs;
+    if (!Array.isArray(rungs) || !rungs.length) return entry;
+    var pick = null;
+    for (var i = 0; i < rungs.length; i++) {
+      var r = rungs[i];
+      if (typeof r.ch !== 'number' || r.ch > cut) continue;
+      if (typeof r.maxCh === 'number' && cut > r.maxCh) continue;
+      if (!pick || r.ch >= pick.ch) pick = r;
+    }
+    if (!pick) return null;
+    var out = {}, k;
+    for (k in entry) {
+      if (Object.prototype.hasOwnProperty.call(entry, k) && k !== 'rungs') out[k] = entry[k];
+    }
+    for (k in pick) {
+      if (Object.prototype.hasOwnProperty.call(pick, k) && k !== 'ch' && k !== 'maxCh') {
+        out[k] = pick[k];
+      }
+    }
+    out.gate_chapter = pick.ch;
+    return out;
+  }
+
   function filterList(items, keys) {
     if (!Array.isArray(items)) return [];
-    return items.filter(function (e) { return isSafe(e, keys); });
+    if (isCaughtUp()) {
+      return items.map(function (e) { return resolveRungs(e, CAP) || e; });
+    }
+    var cut = cutoff(), out = [];
+    for (var i = 0; i < items.length; i++) {
+      var resolved = resolveRungs(items[i], cut);
+      if (!resolved) continue;                    // no rung earned yet
+      if (!isSafe(resolved, keys)) continue;      // debut + lexicon gates
+      out.push(resolved);
+    }
+    return out;
   }
 
   /* Prose pages: drop any element whose own text names an unearned concept.

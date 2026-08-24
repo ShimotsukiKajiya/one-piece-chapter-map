@@ -64,8 +64,8 @@
         "Don Chinjao"
       ],
       "advanced": "Coating (Haoshoku Imbue) — coat weapon/limbs in Conqueror's, dealing damage at a distance via shockwave-like crackling black lightning. Luffy and Kaidou used this on Onigashima.",
-      "gate_chapter": 234,
-      "gate_source": "explicit"
+      "gate_chapter": 597,
+      "gate_source": "explicit+text"
     },
     {
       "name": "Future Sight",
@@ -127,7 +127,22 @@
       ],
       "advanced": "Same as Observation Haki — Skypiea simply names it differently, as the rest of the world hadn't yet revealed Haki to readers.",
       "gate_chapter": 254,
-      "gate_source": "explicit"
+      "gate_source": "rung",
+      "rungs": [
+        {
+          "ch": 254,
+          "summary": "Skypiea's name for the ability to sense presence and intent at a distance, and to hear a moment before it happens. Aisa is born with it; Enel uses it to monitor an entire sky island.",
+          "advanced": "Practitioners describe it as hearing the voice of everything around them."
+        },
+        {
+          "ch": 597,
+          "summary": "Skypiea's name for Observation Haki. Aisa is born with it; Enel uses it to monitor an entire sky island.",
+          "advanced": "Identical to Observation Haki; Skypiea simply uses its own name for it."
+        }
+      ]
     }
+  ],
+  "_qa_flags": [
+    "Mantra: the previous 'advanced' text explained that Haki 'hadn't yet been revealed to readers' — production commentary addressed to the reader, which breaks the encyclopedic register. Rewritten in-world."
   ]
 }

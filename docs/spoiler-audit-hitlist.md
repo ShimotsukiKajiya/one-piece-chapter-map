@@ -504,3 +504,85 @@ never wrote about. Worth a targeted table parser; not urgent.
 
 `audit.py` · `sync_lexicon` · D2 · D3 · D4 · D5 · spoiler-coverage — all exit 0.
 Six checks run daily in `audit.yml`; external truth runs on demand.
+
+---
+
+## Phase 3 — laddering, batch 1, 2026-08-24
+
+### The 25 "over-hidden" entries were mostly a different problem
+
+Reading them rather than assuming: most were not missing rungs, they were
+**wrong gate chapters**. Deriving a technique's chapter from its *user's* debut
+assumes the technique existed when the user did — "Diable Jambe" inherited
+Sanji's Ch. 43, "King of Hell" inherited Zoro's Ch. 3.
+
+The correctness fix is mechanical and needs no editorial judgement: **an entry
+cannot be shown before the reader can read its own description.** Where the text
+names a term the reader has not met, the gate rises to that term's chapter.
+Added to `derive_gate_chapters.py`; 25 entries raised, over-hidden now **0**.
+
+Laddering then becomes an *enhancement* — bringing an entry back earlier with
+wording safe for that chapter — rather than a repair.
+
+### The rung mechanism
+
+`resolveRungs()` in `lore-gate.js`, mirrored by `resolve_rungs()` in
+`scripts/lib/gate.py` (the two must change together). An entry may carry
+`rungs: [{ch, ...fields}]`; the reader sees the highest rung earned, its fields
+laid over the base entry. `maxCh` retires a provisional rung. No rung earned →
+the entry is simply not there yet.
+
+### Batch 1 — five entries laddered
+
+| Entry | Was | Now shows from | Recovered |
+|---|---|---|---|
+| Tone Dial | 967 | **237** | 730 chapters |
+| Skypiea Poneglyph (Shandora) | 967 | **301** | 666 — three rungs (301 · 628 · 967) |
+| Roger's Message (Skypiea) | 967 | **301** | 666 |
+| Road Poneglyph (Zou) | 967 | **818** | 149 |
+| Mantra | 597 | **254** | 343 — see caveat |
+
+Verified at every boundary: each rung flips exactly at its chapter, **0 leaks at
+any rung**. In the browser at effective Ch. 305 the Poneglyphs page now renders
+3 entries with no Laugh Tale, Poseidon or Buster Call anywhere; at Ch. 970 it
+renders 8 with the full text restored.
+
+### Two entries deliberately NOT laddered
+
+- **Tenryubito (Celestial Dragons)** — the entry's own *name* is the Ch. 497
+  reveal. Any earlier rung would leak in the title. Gate stays 497.
+- **Three-Eyed Tribe** — its Ch. 86 gate derives from a member's debut and looks
+  wrong; the member list needs review before anything is built on it (it lists
+  Nico Olvia, who is not of the Three-Eye Tribe, plus two speculative entries).
+  Flagged in `races.json._qa_flags`.
+
+### Caveat: the Mantra rung is currently inert
+
+It renders correctly at effective Ch. 255 — but `haki.html` is nav-gated at 597
+because the page's own title is the spoiler, so a Ch. 260 reader can never reach
+it. The rung is right and costs nothing, but it does not restore early access.
+To actually surface Mantra at 254 it would need to live on a page not named for
+a late term — `combat-styles.html` is ungated and would show it. **Maintainer
+call, not done.**
+
+### Latent bug caught before it bit
+
+`derive_gate_chapters.py` would have recomputed a laddered entry's gate from its
+*base* fields — which still carry the latest wording — and raised it back over
+the ladder, silently undoing this work on the next data refresh. Laddered
+entries now govern their own gate from the lowest rung. Verified: re-running
+`--write` leaves all five ladders intact, and RAISED correctly drops 25 → 20.
+
+### Remaining ladder candidates
+
+Uranus (906→1086), Numbers (991→1086), Cyborgs (322→433), Golden Den Den Mushi
+(376→395), Tree of Knowledge Poneglyphs (392→395), "I want to live!" (374→395),
+Lulusia destroyed (1060→1086). Plus three technique entries whose real debut
+chapters are needed rather than rungs: Diable Jambe (~405), Asura (~417), King
+of Hell (~1010).
+
+### QA for the maintainer
+
+Every rung chapter above is ✓ certain except: Tone Dial's 968 (~), Skypiea
+Poneglyph's 628 Poseidon rung (~), and Road Poneglyph's 818 (~). Spot-check
+those three.

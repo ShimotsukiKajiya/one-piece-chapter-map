@@ -149,10 +149,56 @@ def user_chapter(entry, resolver):
     return resolver.earliest_debut(names)
 
 
+def load_lexicon():
+    with open(os.path.join(ROOT, "docs", "leak-lexicon.json"), encoding="utf-8") as f:
+        terms = [(t["term"], int(t["ch"])) for t in json.load(f)["terms"]]
+    terms.sort(key=lambda t: (-len(t[0]), t[0]))
+    return terms
+
+
+def entry_text(entry):
+    parts = []
+    for k, v in entry.items():
+        if k.startswith("_") or k in ("gate_chapter", "gate_source"):
+            continue
+        if isinstance(v, str):
+            parts.append(v)
+        elif isinstance(v, list):
+            parts += [x for x in v if isinstance(x, str)]
+    return " ".join(parts)
+
+
+def raise_for_text(entry, lexicon):
+    """An entry cannot be shown before the reader can read its own description.
+
+    Deriving a technique's chapter from its USER'S debut assumes the technique
+    existed when the user did, which is false -- "Diable Jambe" inherited
+    Sanji's Ch. 43 and "King of Hell" inherited Zoro's Ch. 3. Where the text
+    names a term the reader has not met, the gate rises to that term's chapter.
+
+    Fail-late and mechanical: no editorial judgement, no guessing. Laddering can
+    later bring an entry back EARLIER with a rung written for that chapter, but
+    that is an enhancement, not a correction."""
+    ch = entry.get("gate_chapter")
+    if ch is None:
+        return None
+    text = entry_text(entry)
+    needed = ch
+    blocker = None
+    for term, tch in lexicon:
+        if tch > needed and term in text:
+            needed, blocker = tch, term
+    if needed > ch:
+        return needed, blocker
+    return None
+
+
 def main():
     write = "--write" in sys.argv
     resolver = Resolver(ROOT)
     ep_map = build_episode_map()
+    lexicon = load_lexicon()
+    raised = []
 
     print("=" * 70)
     print("  Derive gate chapters for curated lore entries")
@@ -170,6 +216,22 @@ def main():
         gates = []
 
         for e in items:
+            # A laddered entry governs its own gate: the lowest rung is the
+            # chapter it first appears, and the rung system already keeps each
+            # wording safe for its own chapter. Re-deriving from the base
+            # fields would recompute a gate from the LATEST wording and raise
+            # it back over the ladder, silently undoing the laddering work on
+            # the next refresh.
+            rungs = e.get("rungs")
+            if isinstance(rungs, list) and rungs:
+                chs = [r["ch"] for r in rungs if isinstance(r.get("ch"), int)]
+                if chs:
+                    e["gate_chapter"] = min(chs)
+                    e["gate_source"] = "rung"
+                    counts["explicit"] += 1
+                    gates.append(min(chs))
+                    continue
+
             ch, src = explicit_chapter(e.get(ck) if ck else None, ep_map)
             if ch is None:
                 ch = user_chapter(e, resolver)
@@ -179,9 +241,17 @@ def main():
                 undated_all.append((fname, e.get("name") or e.get("title") or "?"))
             else:
                 counts[src if src in counts else "explicit"] += 1
-                gates.append(ch)
                 e["gate_chapter"] = ch
                 e["gate_source"] = src
+                bump = raise_for_text(e, lexicon)
+                if bump:
+                    new_ch, blocker = bump
+                    raised.append((fname, e.get("name") or e.get("title") or "?",
+                                   ch, new_ch, blocker))
+                    e["gate_chapter"] = new_ch
+                    e["gate_source"] = src + "+text"
+                    ch = new_ch
+                gates.append(ch)
 
         first = min(gates) if gates else None
         total_undated += counts["none"]
@@ -195,6 +265,15 @@ def main():
                 f.write("\n")
 
     print("\n  " + "-" * 68)
+
+    if raised:
+        print(f"\n  RAISED ({len(raised)}) — gate moved up because the entry's own text"
+              f"\n  names something the reader could not yet have met:\n")
+        for fname, name, was, now, blocker in raised:
+            print(f"    {name[:32]:32} {was:>4} → {now:>4}   ('{blocker}')")
+        print("\n    These are candidates for laddering: a rung written for the"
+              "\n    earlier chapter would bring them back without the later term.")
+
     if undated_all:
         print(f"\n  STILL UNDATED ({total_undated}) -- these stay hidden from shielded readers:")
         for fname, name in undated_all:
