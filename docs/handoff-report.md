@@ -1,7 +1,8 @@
 # Handoff report — 2026-08-24
 
 **No check went from 0 to non-zero.** All six CI checks were green before and are
-green after, and D1 and the new ladder-leak checker are green too.
+green after, D1 is green, and the ladder-leak checker added since is green too.
+CI now runs seven shield checks rather than six.
 
 **Read this first, because it is the surprise of the run.** Three live spoiler
 leaks were found on pages the six checks structurally cannot see. `gate.py`'s
@@ -17,7 +18,7 @@ numbering.
 
 ---
 
-## Suite status — the six checks and their exit codes, before and after
+## Suite status — the checks and their exit codes, before and after
 
 | Check | Script | Before | After |
 |---|---|---:|---:|
@@ -27,13 +28,21 @@ numbering.
 | D3 blankness | `scripts/audit_blankness.py` | 0 | 0 |
 | D4 truth provenance | `scripts/audit_truth_provenance.py` | 0 | 0 |
 | D5 page coverage | `scripts/audit_page_coverage.py` | 0 | 0 |
+| ladder leaks **(added to CI)** | `scripts/audit_ladder_leaks.py` | *(did not exist)* | 0 |
+
+The daily audit now runs **seven** shield checks, not six. The ladder-leak
+checker found **3 leaks** on its first run; all three are fixed and it exits 0.
+Its CI step was proved not to be a no-op: reintroducing the `Haki` leak makes it
+exit 1 and name the term, the chapter and the field, and restoring returns it
+to 0. `coverage` was also added to the failure echo — D5 was in the `if`
+condition but missing from the message, so a coverage-only failure printed no
+reason.
 
 Also run, not in CI:
 
 | Check | Before | After |
 |---|---:|---:|
 | D1 structure — `scripts/audit_spoiler_coverage.py` | 0 (49/49 pages) | 0 (49/49 pages) |
-| ladder leaks — `scripts/audit_ladder_leaks.py` **(new)** | *(did not exist)* — **3 leaks** on first run | 0 |
 | `scripts/audit_external_truth.py` (network) | 0 | 0 |
 
 D5 briefly exited **2** mid-run, correctly: I raised the baseline to 91%, then
@@ -402,8 +411,9 @@ itself; every number here is derived from repo data or explicitly marked `?`.
   named by Yosaku. Confirm"* and there is no such term in `terms`. Adding one
   means re-syncing `lore-gate.js` and cache-busting it, and I would not touch
   the shield's runtime on a coverage pass. **Recommended below.**
-- **Did not wire `audit_ladder_leaks.py` into CI.** It passes now; wiring it in
-  is a CI change and yours to approve.
+- ~~**Did not wire `audit_ladder_leaks.py` into CI.**~~ **Done on request** — it
+  is now the seventh shield step in `.github/workflows/audit.yml`, and it was
+  negative-tested rather than assumed.
 - **Did not fix the `prove.html` bake nondeterminism** — the fix is the §2 C2
   merge, which is a `punk_records` edit.
 - **Did not extend `lib/resolve.py`** for the `Grus`/`Prince Grus` class. It is
@@ -478,12 +488,16 @@ by URL and by search, and the tab title renders before any JavaScript runs.
 
 **Recommendation, in order of cost:**
 
-1. **Rewrite the `poneglyphs` description now.** It is the only one that leaks
-   *past* its own gate, it is a one-line edit, and search engines have it. Drop
-   the three named types: *"The stones that carry the world's erased history —
-   what is known of them, shown only as far as your chapter."* Then add
-   `Road Poneglyph` and `Rio Poneglyph` to `docs/leak-lexicon.json` so this class
-   is caught rather than noticed.
+1. ~~**Rewrite the `poneglyphs` description now.**~~ **Done on request.** It now
+   reads *"The Poneglyphs of One Piece — indestructible stones of ancient text,
+   with every confirmed location and holder, shown only as far as your
+   chapter."* — 145 characters, naming nothing later than `Poneglyphs` itself,
+   which is first safe at 202 ✓ and is already in the page title. Changed in
+   `add_descriptions.py` (the source of truth for the dict), in the page, and in
+   the `og:`/`twitter:` copies, verified in sync and surviving a re-bake.
+   **Still open:** adding `Road Poneglyph` and `Rio Poneglyph` to
+   `docs/leak-lexicon.json` so this class is *caught* rather than noticed. That
+   means re-syncing `lore-gate.js` and cache-busting it, so it is still yours.
 2. **Accept the other three as a known, bounded limit** and say so on
    `about.html`. A client-side shield cannot gate a `<meta>` tag, and the
    honest position — *"page titles and search descriptions are not shielded"* —
@@ -494,16 +508,15 @@ by URL and by search, and the tab title renders before any JavaScript runs.
    pages showing generic titles to crawlers. It is a real change to `bake.py`
    and I would not do it without you asking.
 
-### 4. Wire `scripts/audit_ladder_leaks.py` into the daily audit
+### 4. ~~Wire `scripts/audit_ladder_leaks.py` into the daily audit~~ — done
 
-Not on your list, but it is the direct lesson of this run. `LORE_PAGES` is a flat
-structure, the three laddered pages are not, and **both D2 and D3 skip all
-three** — which is why a Ch. 597 ✓ term sat behind a Ch. 92 ~ gate with every
-check green. It exits 0 today. One more step in `.github/workflows/audit.yml`
-alongside the other six closes the hole.
+`LORE_PAGES` is a flat structure, the three laddered pages are not, and **both D2
+and D3 skip all three** — which is why a Ch. 597 ✓ term sat behind a Ch. 92 ~
+gate with every check green. It is now the seventh shield step in
+`.github/workflows/audit.yml`, negative-tested.
 
-While there: **`marines-wg.html` is blank for a reader below Ch. 4 ✓**, and the
-page has no `minCh` in `nav-burger.js`, so the link is live from Chapter 1. D3
+**Still open, and the reason this section stays here.** **`marines-wg.html` is
+blank for a reader below Ch. 4 ✓**, and the page has no `minCh` in `nav-burger.js`, so the link is live from Chapter 1. D3
 does not see it. `void-century.html` is blank below Ch. 193 ✓ but is nav-gated at
 395, so only a direct URL reaches it. `will-of-d.html` handles its floor properly
 with `page_min` 154 ✓ and a sealed notice — that is the pattern the other two
