@@ -1617,6 +1617,68 @@ def bake_simple_codex(page, slot_id, data_file):
     if ok: print(f"  ✓ {page:<22} ← {data_file}  ({size} KB)")
 
 
+def _bake_loc_debut_map():
+    """place name -> debut chapter, baked into character.html.
+
+    The residence row on a character page enumerates a whole life's worth of
+    places. Without a date for each one it printed all of them, so a Ch. 50
+    reader was told Sanji lives in Germa Kingdom -- a Ch. 832 reveal.
+
+    Two sources, both already in the repo, neither of them recall:
+      locations.json  first_appearance / debut_chapter
+      arcs.json       an arc is named for the place it visits, and its START
+                      chapter is at or after that place is first named, so
+                      using it is fail-late.
+
+    Where both offer a chapter the LOWER wins: locations.json is the direct
+    observation and the arc start is the fallback estimate.
+    """
+    import re as _re
+    with open(os.path.join(DIR, "locations.json"), encoding="utf-8") as f:
+        locs = json.load(f)
+    with open(os.path.join(DIR, "arcs.json"), encoding="utf-8") as f:
+        arcs = json.load(f)
+    arc_items = arcs.get("arcs") if isinstance(arcs, dict) else arcs
+
+    out = {}
+
+    def put(name, ch):
+        if not isinstance(name, str):
+            return
+        name = name.strip()
+        # ASCII place names only -- the JP/romaji aliases never appear in the
+        # residence strings this map is consulted for.
+        if not name or not _re.fullmatch(r"[A-Za-z0-9'\- .]+", name):
+            return
+        if name not in out or ch < out[name]:
+            out[name] = ch
+
+    for rec in (locs.values() if isinstance(locs, dict) else locs):
+        if not isinstance(rec, dict):
+            continue
+        ch = rec.get("debut_chapter")
+        if not isinstance(ch, int):
+            m = _re.search(r"Chapter (\d+)", str(rec.get("first_appearance") or ""))
+            ch = int(m.group(1)) if m else None
+        if not isinstance(ch, int):
+            continue
+        put(rec.get("name"), ch)
+        put(rec.get("name_en"), ch)
+        for a in rec.get("aliases") or []:
+            put(a, ch)
+
+    for arc in arc_items or []:
+        start = arc.get("start")
+        if isinstance(start, int):
+            put(arc.get("arc"), start)
+            put(arc.get("name"), start)
+
+    payload = json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+    ok, kb = bake_block(os.path.join(DIR, "character.html"), "loc-debut-map", payload)
+    if ok:
+        print(f"  \u2713 character.html <- loc-debut-map ({len(out)} places)  ({kb} KB)")
+
+
 def _bake_chr_id_map(page_name, source_json_path):
     """For a LORE page: extract all strings from the source JSON, resolve those
     that match chr: IDs in entity_index, bake the resulting {name: chr_id} map
@@ -2614,6 +2676,7 @@ def main():
     _bake_lore_chr_ids()  # chr-id-map blocks for LORE pages (enables chr-link-upgrader.js)
     _bake_home_stats()        # pre-computed stats → home.html (instant display, no async flicker)
     _bake_home_arc_ranges()   # arc chapter ranges → Today in Canon context line
+    _bake_loc_debut_map()     # place→debut map → residence gating on character.html
     _bake_chr_debut_map_for_gating()  # name→debut map → Spoiler Shield filter helper on index pages
     _bake_spoiler_latest()    # sync spoiler.js caught-up clamp to latest scraped chapter
     _bake_atlas_events()      # chapter event maps → atlas.html (debuts, fruits, moments)
