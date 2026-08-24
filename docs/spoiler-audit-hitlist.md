@@ -408,3 +408,99 @@ promotes a tier itself.
 
 `audit.py` · `sync_lexicon` · D2 · D3 · D4 · spoiler-coverage — all exit 0.
 Five checks now run daily in `audit.yml`.
+
+---
+
+## Phase 4 — D5 Coverage + external truth, 2026-08-24
+
+### D5 — `scripts/audit_page_coverage.py`
+
+Derives each page's belongs-set from the data, never from recall, and compares
+via `lib/resolve.py` so Coby/Koby match instead of reading as absent. It
+independently reproduced the manual findings — Will of D. missing exactly
+**Clou D. Clover** and **Nefertari D. Lili**, and the WG chart's missing
+institutions — which is the point: the machine now finds what previously
+depended on someone remembering.
+
+Missing entries are grouped by institution, because a missing *tier* outranks a
+missing person:
+
+| Group | Missing |
+|---|---|
+| Marines (other ranks) | 37 |
+| Admirals / Vice Admirals | 28 |
+| Impel Down | 13 |
+| **Seven Warlords** | **11 — no tier on the page at all** |
+| World Government (civil) | 9 |
+| SSG / Vegapunk | 7 |
+| World Nobles | 7 |
+| CP0 | 6 |
+
+Marines & World Government sits at **29%**, Will of D. at **83%**.
+
+**Gated on regression, not on the backlog.** A check that fails every morning
+over known work trains people to ignore it. Coverage is measured against
+`docs/coverage-baseline.json`; an existing hole reports, a *drop* fails. Tested
+by raising the baseline: exits 2, restores to 0.
+
+### Data integrity, surfaced because it corrupts coverage silently
+
+- **Imu exists twice** — `'Imu'` (no entity id, 3 appearances) and
+  `'Nerona Imu'` (chr:02569, 32). The page lists Imu, so the fuller record reads
+  as uncovered.
+- **`Rosward Charlos` / `Rosward Rosward` / `Rosward Shalria`** — the wiki's
+  family prefix prepended to first names, duplicating the real records.
+- **86 records carry no entity id** and cannot be linked or cross-referenced.
+
+Detection requires the same first-appearance chapter as corroboration; name
+shape alone over-reported ('Gorilla' vs 'Blue Gorilla' are different people).
+
+### External truth — `scripts/audit_external_truth.py`
+
+The only checker that asks whether the Codex agrees with the outside world.
+Compares stored values against the One Piece Wiki, and — more useful — reads the
+wiki's own `{{Qref}}` citations to find facts where **the wiki cites Oda and the
+Codex does not**.
+
+On a 25-character sample: **63 promotable, 1 drift, 0 parse gaps.**
+
+- **Drift: Brook's residence.** The wiki now lists **Esperia Kingdom (former)**,
+  an Elbaph-era reveal postdating the Codex's April scrape. Nothing internal
+  could have caught this.
+- **Promotable:** Luffy's birthday (SBS 15) and blood type (SBS 66), Nami,
+  Zoro, Sanji, Usopp, Robin, Franky — the same birthday cluster sitting in the
+  curate queue, independently confirmed from a second direction.
+
+Reports only. It cannot promote a tier or change a value. Deliberately **not**
+in the daily CI — it depends on a third-party service and a network blip must
+never fail the build.
+
+### Why the Canon Engine missed these
+
+Traced rather than assumed. Koby's height is cited to SBS 110, which **is** in
+the local archive — but Oda answered in a *positional table*:
+
+> `[Name · Drake · Kujaku · Grus · Koby · … || Height · 233 cm · 180 cm · 205 cm · 167 cm · …]`
+
+Names and values align by index, ~180 characters apart. `verify.py`'s proximity
+matcher works within ~80 characters, so it cannot read this shape at all.
+
+Only **13 of 1,685** SBS answers use it, so this is a real but bounded gap — not
+the explanation for the 847 skipped, most of which are simply characters Oda
+never wrote about. Worth a targeted table parser; not urgent.
+
+### Two false positives fixed in the checker itself
+
+- `{{W|Tairō|Great Elder}}` displays its *last* parameter. Stripping it
+  wholesale invented a Kin'emon "drift". Drift went 2 → 1, and the survivor is
+  real.
+- Major characters carry no infobox on the article — it is transcluded from
+  `Template:<Name> Tabs Top`. Without that fallback every prominent character
+  yielded zero fields, which reads identically to "nothing to report". Since the
+  sample is ordered *by prominence*, it was gutting itself. Parse gaps are now
+  reported explicitly and never counted as a pass.
+
+### Suite
+
+`audit.py` · `sync_lexicon` · D2 · D3 · D4 · D5 · spoiler-coverage — all exit 0.
+Six checks run daily in `audit.yml`; external truth runs on demand.
