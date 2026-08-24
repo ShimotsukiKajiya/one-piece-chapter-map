@@ -4,7 +4,12 @@ Every check in CI reads **data**. This pass drove the actual pages at real
 cutoffs and read what a reader would see. Three leaks turned up that no checker
 looks for, because none of them lives in the lore JSON the lexicon guards.
 
-**Nothing here is fixed.** These are findings.
+**All three are now fixed** (commits `6b62ec4`, `6b63a76`, `9a2ea58`), and each
+section below records what changed and what it cost. The findings are kept in
+full rather than deleted — the *reason* each leak existed is the part worth
+keeping, because all three lived in page code and character records rather than
+in the lore JSON the lexicon guards, which is why D1–D5 and the ladder checker
+were all structurally blind to them.
 
 ## Method, and its limits
 
@@ -24,11 +29,11 @@ page could not be mistaken for a clean one.
 
 ---
 
-## 1. Character infobox `residence` leaks places that do not exist yet
+## 1. `residence` leaked places that do not exist yet — FIXED
 
-**Severity: high. It is on the most-read page type in the site.**
+**Severity was: high. It is on the most-read page type in the site.**
 
-At Ch. 50, `character.html?name=Sanji` renders:
+What it looked like. At Ch. 50, `character.html?name=Sanji` rendered:
 
 > Residence: East Blue (Baratie); **Germa Kingdom**; Momoiro Island — SPEC Wiki
 
@@ -86,9 +91,30 @@ class**, because the wiki does not order residences chronologically: Nami's
 first listed residence is Oykot Kingdom (Ch. 77 ✓, she debuts at 8), Smoker's is
 G-5 (Ch. 681 ✓, he debuts at 97). First-segment-only is a heuristic, not a gate.
 
-**The real fix** is to gate `residence` per place against `locations.json`, which
-already holds a `debut_chapter` for 106 locations. That is a feature, not a
-one-liner, and it is the maintainer's call.
+**The real fix**, and the one taken. `residence` is now gated **per place**
+rather than truncated to its first segment, because "keep the first" is a guess
+that still leaked Nami's Oykot Kingdom and Smoker's G-5. A segment survives only
+if every place named in it can be dated and has been reached — brackets checked
+as well as the outer name, since `Grand Line (Whole Cake Island)` is safe
+outside and a Ch. 825 reveal inside.
+
+A new `loc-debut-map` block on `character.html`, baked by `_bake_loc_debut_map()`,
+supplies the dates from two sources already in the repo: `locations.json`
+`first_appearance`, and `arcs.json` start chapters — an arc is named for the
+place it visits, and its start is at or after that place is first named, so
+using it is fail-late. Lower of the two wins. **193 places**, up from 106.
+
+**What it costs, stated plainly.** Undatable places are dropped rather than kept,
+because the page's own banner promises it omits "details the Codex can't yet
+date" and the undatable set includes Hachinosu, Mary Geoise and the Flower
+Capital. Only 42% of residence segments are datable, so **roughly half of
+shielded readers' residence rows disappear**. The cure is more coverage in
+`locations.json` — 54 of its 160 records carry no date, and Hachinosu, Zou,
+Mary Geoise and Baltigo are absent from it entirely — not a looser gate.
+
+Verified in the browser: at Ch. 50 Sanji reads `East Blue (Baratie)` and Zoro
+reads `Shimotsuki Village`; at Ch. 600 Sanji gains Momoiro Island (523) and
+still withholds Germa; caught-up is unchanged, full annotations and all.
 
 **Caveat on these numbers.** `locations.json` dates when a *place first appears*,
 not when it is first *named*. Several rows overstate on that account — the
@@ -98,11 +124,12 @@ G-5 rows do not have that problem.
 
 ---
 
-## 2. The settings panel names the whole Straw Hat crew, at every chapter
+## 2. The settings panel named the whole Straw Hat crew — FIXED
 
-**Severity: high, and it is on 55 pages.**
+**Severity was: high, and it is on 55 pages.**
 
-`settings.js` renders a crew-theme picker as a hardcoded `<option>` list:
+What it looked like. `settings.js` rendered the crew-theme picker as a hardcoded
+`<option>` list:
 
 ```
 🎩 Luffy · 🗡 Zoro · 🍊 Nami · 🎯 Usopp · 🚬 Sanji ·
@@ -122,16 +149,28 @@ The leak-lexicon policy names this surface explicitly: *"a term must not appear
 in ANY reader-facing surface below its chapter: page copy, entry text, nav
 labels, section counts, **settings panel**, page titles, meta descriptions."*
 
-Fix: filter the options by debut chapter against the effective cutoff. Note the
-trap already recorded in the audit — **`settings.js` is cache-busted (`?v=2`)
-across 55 pages, so a fix has to bump every one of them to `?v=3` or it will
-never reach a reader.**
+**Fixed.** The list is built by `renderCrewOptions()` from a `CREW_ROSTER` whose
+chapters come from `chr-debut-map.json`, not from memory. Robin is the one
+deliberate override: she debuts at 114 ✓ as Miss All Sunday and "Robin" is a
+Ch. 218 ✓ reveal per the name ladder in `field_reveals.json`, so fail-late takes
+218. Rebuilt on every panel open and again immediately after the reader changes
+their cutoff in that same panel, so it never needs a reload. A crew theme the
+reader has already selected stays listed even if their cutoff later drops below
+that debut — it is their own setting, and hiding it would break the theme rather
+than protect them. Removal is traceless: no counter, no placeholder, no gap.
+
+All 55 pages were bumped to `settings.js?v=3`. Without that bump the fix could
+never have reached a reader — the trap `settings.js` was already on record for.
+
+Verified: Ch. 50 shows 5 options, Ch. 220 shows 6, Ch. 530 shows 9, caught-up
+shows 10. The one-off gaps at 220 and 530 are the shield's own 5-chapter safety
+buffer holding Robin and Jinbe back, which is correct.
 
 ---
 
-## 3. Appearance counts are gated on the profile and ungated on the index
+## 3. Appearance counts disagreed between profile and index — FIXED
 
-**Severity: low, but it is an inconsistency, not a judgement call.**
+**Severity was: low for the number, higher for the sort order it drove.**
 
 At the same Ch. 50 cutoff:
 
@@ -141,10 +180,30 @@ At the same Ch. 50 cutoff:
 The index also shows "Monkey D. Luffy … 1012 appearances". One of the two is
 wrong for a shielded reader, and it is the index.
 
-A related cosmetic point on the same cards: the `bounty` label renders with no
-value when the bounty is gated, leaving a bare word "bounty" in the card text.
-Correct suppression, but a visible empty label is a trace — the traceless-omission
-rule would remove the label with the value.
+**The sort was the worse half.** "Most appearances" is the default sort, so the
+ORDER leaked how prominent a character eventually becomes — Kaya and Jango buried
+under people who matter 700 chapters later.
+
+**Fixed.** `apps(c)` returns a count of distinct chapters at or below the
+reader's cutoff, computed from `appearances.csv` — the same file `index.html`
+and `character.html` already fetch, so it is usually warm. It feeds the count,
+the sort and the "Major (50+ apps)" filter alike. Loaded before the first paint,
+because rendering the full totals and correcting them a moment later would flash
+the very number this hides. Fails closed: if the fetch fails the count is
+omitted, never the full total. Skipped entirely when caught up, so that reader
+pays no extra request.
+
+Verified: Ch. 50 gives Luffy 45 / Zoro 42 / Nami 36 / Kuro 17, ordered by who
+matters *so far*; caught-up restores 1012 / 832 / 795 and issues no CSV request.
+
+Profile and index can still differ by a few chapters — 46 against 42 here. That
+is the shield's own `auto` mode relaxing the buffer on detail pages and holding
+it strict on indexes. Deliberate, so it has not been forced equal.
+
+A related cosmetic point on the same cards, **not fixed**: the `bounty` label
+renders with no value when the bounty is gated, leaving a bare word "bounty" in
+the card text. Correct suppression, but a visible empty label is a trace — the
+traceless-omission rule would remove the label with the value.
 
 ---
 
@@ -170,14 +229,17 @@ all, and it is not a story beat — noted rather than filed as a leak.
 
 ---
 
-## Recommended order
+## Still open
 
-1. **`settings.js` crew picker** — widest blast radius, on 55 pages, and the
-   leak is the crew roster itself. Remember the `?v=` bump.
-2. **`scrubLate()` `;` split** — one line, kills the worst residence leaks.
-3. **`residence` gated per place against `locations.json`** — the actual fix for
-   the class.
-4. **Appearance count on `characters.html`** — make it agree with the profile.
-5. A checker for this class. All three findings live in **page code and
+1. **`locations.json` coverage.** 54 of 160 records carry no date, and
+   Hachinosu, Zou, Mary Geoise and Baltigo are not in the file at all. Every
+   date added there restores a residence row that fix 1 currently drops. This is
+   the single highest-value follow-up.
+2. **A checker for this class.** All three leaks lived in **page code and
    character records**, not in the lore JSON the lexicon guards, so D1–D5 and
-   the ladder checker are all structurally blind to them.
+   `audit_ladder_leaks.py` were all structurally blind to them. A checker that
+   joins `punk_records` field values against `locations.json` / `chr-debut-map.json`
+   would have caught findings 1 and 2 from the data alone.
+3. **The bare `bounty` label** on gated index cards (§3).
+4. **The rest of the 49 gated pages.** This was a hand-driven sample of about
+   eight. The method's limits in the section above have not changed.
