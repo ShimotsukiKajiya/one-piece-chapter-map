@@ -81,18 +81,31 @@ jobs:
           python scripts/audit_blankness.py --table
           echo "rc=$?" >> "$GITHUB_OUTPUT"
 
+      # D4 fails when the Canon Engine has not been re-run since the last data
+      # refresh. Verification silently sat a full cycle behind before this
+      # existed, while still reading as current.
+      - name: D4 — truth provenance and verification freshness
+        id: truth
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/audit_truth_provenance.py
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
       - name: Fail the job if any shield check failed
         if: >
           steps.lexicon.outputs.rc != '0' ||
           steps.gatecov.outputs.rc != '0' ||
           steps.leaks.outputs.rc  != '0' ||
-          steps.blank.outputs.rc  != '0'
+          steps.blank.outputs.rc  != '0' ||
+          steps.truth.outputs.rc  != '0'
         run: |
           echo "::error::Spoiler Shield check failed —" \
                "lexicon=${{ steps.lexicon.outputs.rc }}" \
                "gate-coverage=${{ steps.gatecov.outputs.rc }}" \
                "leaks=${{ steps.leaks.outputs.rc }}" \
-               "blankness=${{ steps.blank.outputs.rc }}"
+               "blankness=${{ steps.blank.outputs.rc }}" \
+               "truth=${{ steps.truth.outputs.rc }}"
           exit 1
 
       - name: Upload audit report

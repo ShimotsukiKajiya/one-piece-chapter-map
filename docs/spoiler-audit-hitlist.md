@@ -344,3 +344,67 @@ Worth recording, because both would have produced false confidence:
 - **Derivation must be followed by `bake.py`** — the lore JSONs are baked into
   the HTML, so deriving without re-baking leaves pages serving stale data. Cost
   one confusing debug cycle.
+
+---
+
+## Phase 2 — D4 Truth, 2026-08-24
+
+### Canon Engine re-run against current data (Ch. 1190)
+
+| | July run | Now | Delta |
+|---|---|---|---|
+| 🟢 canon promotions | 199 | 199 | — |
+| 🔵 likely promotions | 386 | 386 | — |
+| skipped (no SBS hit) | 843 | 847 | +4 new characters |
+| ambiguous → curate | 189 | 189 | — |
+| conflicts | 0 | 0 | — |
+
+`canon_facts.json` diffed byte-for-byte before and after: **0 added, 0 removed,
+0 tier or value changes.** The "stale by a data cycle" worry was real in the
+reporting but benign in substance — the refresh added four characters with no
+SBS-verifiable claims. Now proven rather than assumed, and the report dates are
+current.
+
+### What the tiers actually rest on
+
+`scripts/audit_truth_provenance.py` (new) makes the basis explicit instead of
+letting a 🟢 badge imply more than it should:
+
+- **4,279 of 4,901 facts (87%)** are mechanically derived appearance counts from
+  a wiki-sourced chapter list, tagged canon.
+- **597 (12%)** are cross-checked against Oda — SBS or Vivre Card.
+- **339 of 1,540 characters (22%)** have a single Oda-verified fact.
+- Every reader-facing infobox field — occupation (1,279), birthday (728),
+  residence (705), origin (600), bounty (248) — is wiki-derived, 🔵 at best.
+
+The script states the conclusion in its own output: the Codex can claim
+**internally consistent and correctly tiered**. It cannot yet claim
+**independently verified**. That distinction is now printed, not implied.
+
+### Staleness is now enforced, not hoped for
+
+D4 fails (exit 2) when `verification_report.md` or `conflicts_report.md`
+predates `chapter_dates.generated_on`. Tested by backdating the report:
+exits 2, restores to 0. Wired into `audit.yml`, so the engine cannot silently
+fall behind a refresh again.
+
+### The curate backlog is worth a session
+
+189 ambiguous claims await a human decision. Triaged so the value is visible
+before opening `curate.html`:
+
+- **131 likely confirmable** — birthday, with the subject named in the same SBS
+  answer (Zoro → November 11 sits in an SBS list that names him)
+- **5 likely digit coincidence** — the proximity rule matched a citation, not a
+  claim (Nami's ฿366,000,000 matched an SBS mentioning *Chapter 366*)
+- 53 need a real look
+
+Fields: birthday 147, height 26, bounty 14, occupation 2. Clearing the
+confirmable ones would lift Oda-verified facts from 597 toward ~728 and push
+character coverage meaningfully above 22%. The script reports; it never
+promotes a tier itself.
+
+### Suite status
+
+`audit.py` · `sync_lexicon` · D2 · D3 · D4 · spoiler-coverage — all exit 0.
+Five checks now run daily in `audit.yml`.
