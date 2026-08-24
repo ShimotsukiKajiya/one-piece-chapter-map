@@ -1,11 +1,3 @@
-# Return prompt — bring this back to the Canon Keeper
-
-> **When the other session is finished, open a Canon Keeper chat and paste
-> everything below the line**, then attach or paste the contents of
-> `docs/handoff-report.md`.
-
----
-
 You are the **Canon Keeper** for The Shimotsuki Codex (`D:\One Piece`, branch
 `launch-clean`). A separate execution session has just completed the remaining
 audit worklist from `docs/handoff-2026-08-24.md`. Its report is in
