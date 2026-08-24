@@ -11,483 +11,580 @@ Sampled **150** characters.
 The Canon Engine only sees SBS text already in the repo, so it
 cannot find these. Each is a candidate for curate.html.
 
-| Character | Field | Wiki cites | Value |
-|---|---|---|---|
-| Monkey D. Luffy | birthday | SBS 15 | May 5th (Children's Day) |
-| Monkey D. Luffy | blood_type | SBS 66 | F |
-| Nami | birthday | SBS 15 | July 3rd |
-| Nami | blood_type | SBS 66 | X |
-| Nami | residence | Vivre Card | Oykot Kingdom (former) Cocoyasi Vi |
-| Roronoa Zoro | blood_type | SBS 66 | XF |
-| Sanji | birthday | SBS 15 | March 2nd |
-| Usopp | birthday | SBS 15 | April 1st (April Fool's Day) |
-| Nico Robin | birthday | SBS 25 | February 6th |
-| Franky | birthday | SBS 43 | March 9th |
-| Franky | blood_type | SBS 66 | XF |
-| Brook | birthday | SBS 50 | April 3rd |
-| Brook | blood_type | SBS 66 | X |
-| Trafalgar D. Water Law | birthday | SBS 59 | October 6th |
-| Trafalgar D. Water Law | blood_type | Vivre Card | F |
-| Kin'emon | blood_type | Vivre Card | X |
-| Kin'emon | origin | Vivre Card | Grand Line (Wano Country) |
-| Kin'emon | residence | SBS 113 | Wano Country (Kuri); Flower Capita |
-| Kin'emon | age | Vivre Card | 36 (born 56 years ago) |
-| Kin'emon | occupation | SBS 113 | Samurai; Great Elder of the Shogun |
-| Nefertari Vivi | birthday | SBS 16 | February 2nd |
-| Nefertari Vivi | height | Vivre Card | 169 cm (5'7") |
-| Charlotte Linlin | blood_type | Vivre Card | X |
-| Charlotte Linlin | origin | Vivre Card | Grand Line |
-| Kouzuki Momonosuke | birthday | Vivre Card | October 7th |
-| Kouzuki Momonosuke | height | Vivre Card | 110 cm (3'7") (child body) 322 cm  |
-| Kouzuki Momonosuke | blood_type | Vivre Card | X |
-| Kouzuki Momonosuke | residence | SBS 113 | Wano Country (Kuri); Flower Capita |
-| Donquixote Doflamingo | blood_type | Vivre Card | X |
-| Donquixote Doflamingo | origin | Vivre Card | Red Line (Mary Geoise) |
-| Rob Lucci | birthday | SBS 43 | June 2nd |
-| Rob Lucci | height | Vivre Card | 212 cm (6'11") |
-| Rob Lucci | blood_type | Vivre Card | XF |
-| Rob Lucci | origin | Vivre Card | Grand Line (Guanhao) |
-| Rob Lucci | residence | Vivre Card | Guanhao (former) |
-| Rob Lucci | epithet | Vivre Card | "Massacre Weapon" |
-| Carrot | height | Vivre Card | 161 cm (5'3") |
-| Carrot | blood_type | Vivre Card | F |
-| Carrot | origin | Vivre Card | Grand Line (Mokomo Dukedom) |
-| Carrot | age | Vivre Card | 15 |
-| Portgas D. Ace | birthday | SBS 48 | January 1st |
-| Portgas D. Ace | origin | Vivre Card | South Blue (Baterilla) |
-| Buggy | birthday | SBS 60 | August 8th |
-| Buggy | blood_type | Vivre Card | F |
-| Napoleon | birthday | SBS 90 | December 2nd |
-| Napoleon | height | Vivre Card | At least 848 cm (27'10") (As a swo |
-| Napoleon | origin | Vivre Card | Grand Line |
-| Kaku | birthday | SBS 43 | August 7th |
-| Kaku | height | Vivre Card | 193 cm (6'4") |
-| Kaku | blood_type | Vivre Card | X |
-| Kaku | origin | Vivre Card | East Blue |
-| Kaku | residence | Vivre Card | Guanhao (former) |
-| Yamato | birthday | SBS 98 | November 3rd |
-| Yamato | height | SBS | 263 cm (8'8") |
-| Yamato | blood_type | Vivre Card | F |
-| Crocodile | birthday | SBS 59 | September 5th |
-| Crocodile | origin | Vivre Card | Grand Line |
-| Crocodile | age | SBS 58 | 44 (debut) 46 (after timeskip) |
-| Kaidou | height | Vivre Card | 710 cm (23'4") |
-| Kaidou | blood_type | Vivre Card | F |
-| Kaidou | origin | Vivre Card | Grand Line |
-| Kaidou | age | Vivre Card | 59 |
-| Kaidou | epithet | Vivre Card | "Kaidou of the Beasts" "The Strong |
-| Caesar Clown | birthday | SBS 71 | April 9th |
-| Caesar Clown | height | Vivre Card | 309 cm (10'1") |
-| Caesar Clown | blood_type | Vivre Card | X |
-| Caesar Clown | origin | Vivre Card | Grand Line |
-| Caesar Clown | age | Vivre Card | 55 |
-| Hatchan | bounty | Vivre Card | 8,000,000 |
-| Hatchan | height | Vivre Card | 220 cm (7'3") |
-| Hatchan | age | Vivre Card | 36 (debut) 38 (after timeskip) |
-| Eustass Kid | birthday | SBS 60 | January 10th |
-| Eustass Kid | blood_type | Vivre Card | F |
-| Hattori | age | Vivre Card | 18 (debut) 20 (after timeskip) |
-| Smoker | height | Vivre Card | 209 cm (6'10") |
-| Smoker | blood_type | Vivre Card | XF |
-| Smoker | origin | Vivre Card | Grand Line |
-| Inuarashi | blood_type | Vivre Card | X |
-| Inuarashi | origin | Vivre Card | Grand Line (Mokomo Dukedom) |
-| Inuarashi | age | Vivre Card | 40 |
-| Kikunojo | birthday | Vivre Card | September 9th |
-| Kikunojo | blood_type | Vivre Card | XF |
-| Kikunojo | age | Vivre Card | 22 (born 42 years ago) |
-| Raizo | blood_type | Vivre Card | X |
-| Raizo | age | Vivre Card | 35 (born 55 years ago) |
-| Bartholomew Kuma | origin | Vivre Card | South Blue (Sorbet Kingdom) |
-| Bartholomew Kuma | age | SBS 58 | 45 (debut) 47 (after timeskip) |
-| Bartholomew Kuma | epithet | Vivre Card | "Tyrant" "Pacifist" "Hero" |
-| Tashigi | origin | Vivre Card | East Blue |
-| Kurozumi Kanjuro | birthday | SBS 86 | July 21st |
-| Kurozumi Kanjuro | height | SBS 96, Vivre Card | 347 cm (11'5") |
-| Kurozumi Kanjuro | blood_type | Vivre Card | X |
-| Kurozumi Kanjuro | origin | Vivre Card | Grand Line (Wano Country) |
-| Kurozumi Kanjuro | residence | Vivre Card | Wano Country (Kuri) Wano Country ( |
-| Monkey D. Garp | height | Vivre Card | 287 cm (9'5") |
-| Monkey D. Garp | blood_type | Vivre Card | F |
-| Monkey D. Garp | origin | Vivre Card | East Blue (Goa Kingdom) |
-| Caribou | height | Vivre Card | 228 cm (7'6") |
-| Caribou | blood_type | Vivre Card | XF |
-| Caribou | origin | Vivre Card | North Blue |
-| Caribou | age | Vivre Card | 32 |
-| Zeus | height | Vivre Card | At least 232 cm (7'7") (as a Cloud |
-| Zeus | origin | Vivre Card | Grand Line |
-| Zeus | epithet | Vivre Card | "Zeus the Thundercloud" |
-| Jewelry Bonney | birthday | SBS 60 | September 1st |
-| Jewelry Bonney | blood_type | Vivre Card | F |
-| Jewelry Bonney | origin | Vivre Card | Red Line (Mary Geoise) |
-| Kalifa | height | Vivre Card | 185 cm (6'1") |
-| Kalifa | blood_type | Vivre Card | XF |
-| Kalifa | origin | Vivre Card | Grand Line |
-| Kawamatsu | blood_type | Vivre Card | F |
-| Kawamatsu | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Kawamatsu | age | Vivre Card | 41 |
-| Rebecca | height | Vivre Card | 171 cm (5'7") |
-| Rebecca | origin | Vivre Card | Grand Line (Dressrosa) |
-| Edward Newgate | birthday | SBS 57 | April 6th |
-| Edward Newgate | blood_type | Vivre Card | F |
-| Edward Newgate | origin | Vivre Card | Grand Line (Sphinx) |
-| Sabo | bounty | Vivre Card | Unknown 602,000,000 |
-| Sabo | blood_type | Vivre Card | X |
-| Sabo | origin | Vivre Card | East Blue (Goa Kingdom) |
-| Bartolomeo | birthday | SBS | October 6th |
-| Bartolomeo | height | SBS | 220 cm (7'3") |
-| Bartolomeo | blood_type | Vivre Card | X |
-| Bartolomeo | origin | SBS 72 | East Blue |
-| Emporio Ivankov | birthday | SBS 59 | January 8th |
-| Emporio Ivankov | height | Vivre Card | 449 cm (14'8") |
-| Emporio Ivankov | blood_type | Vivre Card | XF |
-| Emporio Ivankov | origin | Vivre Card | Grand Line (Kamabakka Kingdom) |
-| Emporio Ivankov | age | Vivre Card | 51 (debut) 53 (after timeskip) |
-| Karoo | birthday | SBS 82 | November 8th |
-| Karoo | blood_type | Vivre Card | F |
-| Karoo | origin | Vivre Card | Grand Line (Arabasta Kingdom) |
-| Karoo | age | Vivre Card | 14 (debut) 16 (after timeskip) |
-| Marco | birthday | SBS 59 | October 5th |
-| Marco | bounty | Vivre Card | 1,374,000,000 |
-| Marco | height | Vivre Card | 203 cm (6'8") |
-| Marco | blood_type | Vivre Card | X |
-| Marco | origin | Vivre Card | Grand Line |
-| Marco | age | Vivre Card | 43 (debut) 45 (after timeskip) |
-| Hajrudin | blood_type | Vivre Card | XF |
-| Hajrudin | origin | Vivre Card | Grand Line (Elbaph) |
-| Nekomamushi | origin | Vivre Card | Grand Line (Mokomo Dukedom) |
-| Nekomamushi | age | Vivre Card | 40 |
-| Camie | birthday | SBS 53 | November 3rd |
-| Camie | height | Vivre Card | 197 cm (6’6”) |
-| Camie | blood_type | Vivre Card | X |
-| Camie | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Camie | age | Vivre Card | 16 (debut) 18 (after timeskip) |
-| Leo | height | Vivre Card | 23 cm (9") |
-| Leo | origin | Vivre Card | Grand Line (Green Bit) |
-| Leo | epithet | Vivre Card | "Warrior" |
-| Leo | occupation | SBS 73 | Captain of the Fifth Ship of the S |
-| Capone Bege | age | SBS 68, Vivre Card | 40 (debut) 42 (after timeskip) |
-| Shanks | birthday | SBS 54 | March 9th |
-| Shanks | blood_type | Vivre Card | XF |
-| Bepo | bounty | Vivre Card | 1,500 500 |
-| Bepo | height | Vivre Card | 240 cm (7'10") |
-| Brogy | height | Vivre Card | 2130 cm (69'10") |
-| Brogy | blood_type | Vivre Card | F |
-| Brogy | origin | Vivre Card | Grand Line (Elbaph) |
-| Enel | height | Vivre Card | 266 cm (8'9") |
-| Enel | age | Vivre Card | 37 (debut) 39 (after timeskip) |
-| Jango | height | Vivre Card | 207 cm (6’9½”) |
-| Jango | origin | Vivre Card | East Blue |
-| Jango | age | Vivre Card | 27 (debut) 29 (after timeskip) |
-| Kyros | birthday | SBS 81 | September 22nd |
-| Kyros | height | Vivre Card | 298 cm (9'9") |
-| Kyros | origin | Vivre Card | Grand Line (Dressrosa) |
-| Kyros | age | Vivre Card | 44 |
-| Shinobu | birthday | Vivre Card | October 23rd |
-| Shinobu | blood_type | Vivre Card | F |
-| Shinobu | age | Vivre Card | 49 |
-| Queen | birthday | Vivre Card | July 13th |
-| Queen | height | Vivre Card | 612 cm (20'1") |
-| Queen | blood_type | Vivre Card | XF |
-| Queen | origin | Vivre Card | Grand Line |
-| Queen | age | Vivre Card | 56 |
-| Boa Hancock | birthday | SBS 54 | September 2nd |
-| Boa Hancock | height | SBS | 191 cm (6'3") (debut, after timesk |
-| Boa Hancock | origin | Vivre Card | Calm Belt (Amazon Lily) |
-| Boa Hancock | age | SBS 58 | 29 (debut) 31 (after timeskip) |
-| Dorry | blood_type | Vivre Card | F |
-| Dorry | origin | Vivre Card | Grand Line (Elbaph) |
-| Koby | height | SBS | 167 cm (5'6") |
-| Koby | blood_type | Vivre Card | F |
-| Koby | origin | Vivre Card | East Blue (Satsuruzo Kingdom) |
-| Borsalino | blood_type | Vivre Card | XF |
-| Borsalino | origin | Vivre Card | North Blue |
-| Marshall D. Teach | birthday | SBS 59 | August 3rd |
-| Marshall D. Teach | height | SBS | 344 cm (11'3") (debut, after times |
-| Marshall D. Teach | blood_type | Vivre Card | F |
-| Marshall D. Teach | origin | Vivre Card | Grand Line (Shade Port) |
-| Marshall D. Teach | age | SBS 58 | 38 (debut) 40 (after timeskip) |
-| Paulie | birthday | SBS 43 | July 8th |
-| Paulie | height | Vivre Card | 195 cm (6'5") |
-| Paulie | origin | Vivre Card | Grand Line (Water 7) |
-| Paulie | age | Vivre Card | 24 (debut) 26 (after timeskip) |
-| Galdino | birthday | SBS 60 | March 3rd |
-| Galdino | bounty | Vivre Card | 24,000,000 |
-| Galdino | height | Vivre Card | 179 cm (5'10") |
-| Galdino | blood_type | Vivre Card | F |
-| Galdino | origin | Vivre Card | South Blue |
-| Galdino | age | Vivre Card | 35 (debut) 37 (after timeskip) |
-| Galdino | epithet | Vivre Card | "Loan Shark" |
-| Denjiro | birthday | Vivre Card | October 26th |
-| Denjiro | blood_type | Vivre Card | XF |
-| Denjiro | age | Vivre Card | 47 |
-| Pappag | height | Vivre Card | 50 cm (1'7") |
-| Pappag | blood_type | Vivre Card | XF |
-| Pappag | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Pappag | age | Vivre Card | 31 (debut) 33 (after timeskip) |
-| Blueno | height | Vivre Card | 258 cm (8'5½") |
-| Blueno | blood_type | Vivre Card | X |
-| Blueno | origin | Vivre Card | North Blue |
-| Riku Doldo III | height | Vivre Card | 261 cm (8'6¾") |
-| Riku Doldo III | blood_type | Vivre Card | S |
-| Riku Doldo III | origin | Vivre Card | Grand Line (Dressrosa) |
-| Riku Doldo III | age | Vivre Card | 60 |
-| Kokoro | height | Vivre Card | 168 cm (5'6") |
-| Kokoro | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Kokoro | age | Vivre Card | 70 (debut) 72 (after timeskip) |
-| Kuzan | height | Vivre Card | 298 cm (9'9¼") |
-| Kuzan | blood_type | Vivre Card | F |
-| Kuzan | origin | Vivre Card | South Blue (Vespa Kingdom territor |
-| Prometheus | height | Vivre Card | At least 239 cm (7'10") |
-| Prometheus | origin | Vivre Card | Grand Line |
-| Prometheus | epithet | Vivre Card | "Prometheus the Sun" |
-| Silvers Rayleigh | birthday | SBS 60 | May 13th |
-| Silvers Rayleigh | height | Vivre Card | 188 cm (6'2") |
-| Silvers Rayleigh | blood_type | Vivre Card | XF |
-| Cavendish | height | Vivre Card | 208 cm (6'10") |
-| Cavendish | blood_type | Vivre Card | XF |
-| Cavendish | origin | Vivre Card | Grand Line (Bourgeois Kingdom) |
-| Hyougoro | birthday | Vivre Card | February 14th |
-| Hyougoro | height | Vivre Card | 100 cm (3'3") |
-| Hyougoro | age | Vivre Card | 70 |
-| Sengoku | height | Vivre Card | 278 cm (9'1") |
-| Sengoku | blood_type | Vivre Card | F |
-| Helmeppo | bounty | Vivre Card | ★ ( 100,000,000) |
-| Helmeppo | age | SBS 110 | 20 (debut) 22 (after timeskip) |
-| Pedro | height | Vivre Card | 233 cm (7'8") |
-| Pedro | blood_type | Vivre Card | F |
-| Pedro | origin | Vivre Card | Grand Line (Mokomo Dukedom) |
-| Viola | height | Vivre Card | 178 cm (5'10") |
-| Viola | blood_type | Vivre Card | X |
-| Viola | origin | Vivre Card | Grand Line (Dressrosa) |
-| Viola | age | SBS 75 | 29 |
-| Bentham | blood_type | Vivre Card | F |
-| Bentham | origin | Vivre Card | East Blue |
-| Bentham | age | Vivre Card | 30 (debut) 32 (after timeskip) |
-| Bentham | epithet | Vivre Card | "Bentham of the Wild" |
-| Killer | birthday | SBS 60 | February 2nd |
-| Killer | age | SBS 68, Vivre Card | 25 (debut) 27 (after timeskip) |
-| Kouzuki Hiyori | birthday | Vivre Card | December 23rd |
-| Kouzuki Hiyori | height | Vivre Card | 170 cm (5'7") |
-| Kouzuki Hiyori | blood_type | Vivre Card | XF |
-| Shirahoshi | birthday | SBS 65 | April 4th |
-| Shirahoshi | height | Vivre Card | 1187 cm (38'11") |
-| Shirahoshi | blood_type | Vivre Card | X |
-| Shirahoshi | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Sai | bounty | Vivre Card | 210,000,000 |
-| Sai | height | Vivre Card | 242 cm (7'11") |
-| Sai | blood_type | Vivre Card | F |
-| Sai | origin | Vivre Card | West Blue (Kano Country) |
-| Vegapunk | height | Vivre Card | 314cm (10'4") |
-| Wapol | height | Vivre Card | 207 cm (6'9") |
-| Wapol | blood_type | Vivre Card | X |
-| Wapol | origin | Vivre Card | Grand Line (Drum Kingdom) |
-| X Drake | height | SBS | 233 cm (7'8") (debut, after timesk |
-| X Drake | age | SBS 68, SBS 97 | 31 (debut) 33 (after timeskip) |
-| Mozu and Kiwi | height | Vivre Card | 187 cm (6'1") |
-| Mozu and Kiwi | blood_type | Vivre Card | F |
-| Mozu and Kiwi | origin | Vivre Card | Grand Line (Water 7, Slums) |
-| Mozu and Kiwi | age | Vivre Card | 19 (Mozu, debut); 21 (Mozu, after  |
-| Ashura Doji | birthday | Vivre Card | April 10th |
-| Ashura Doji | blood_type | Vivre Card | X |
-| Kashii | height | Vivre Card | 1700 cm (55'9") |
-| Kashii | blood_type | Vivre Card | X |
-| Kashii | origin | Vivre Card | Grand Line (Elbaph) |
-| Kashii | age | Vivre Card | 154 (debut) 156 (after timeskip) |
-| Sakazuki | height | Vivre Card | 306 cm (10’) |
-| Sakazuki | blood_type | Vivre Card | F |
-| Sakazuki | origin | Vivre Card | North Blue |
-| Vinsmoke Reiju | birthday | SBS 86 | November 30th |
-| Vinsmoke Reiju | height | SBS | 173 cm (5'8") |
-| Vinsmoke Reiju | blood_type | SBS | F |
-| Vinsmoke Reiju | origin | Vivre Card | North Blue (Germa Kingdom) |
-| Vinsmoke Reiju | age | SBS 84 | 24 |
-| Nefertari Cobra | birthday | SBS 82 | February 13th |
-| Nefertari Cobra | height | Vivre Card | 182 cm (6'0") |
-| Nefertari Cobra | blood_type | Vivre Card | F |
-| Nefertari Cobra | origin | Vivre Card | Grand Line (Arabasta Kingdom) |
-| Nefertari Cobra | age | Vivre Card | 48 (debut) 50 (after timeskip, at  |
-| Charlotte Perospero | height | SBS | 333 cm (10'11") |
-| Charlotte Perospero | blood_type | Vivre Card | X |
-| Charlotte Perospero | origin | Vivre Card | Grand Line (At a random port) |
-| Charlotte Perospero | age | SBS 88 | 50 |
-| Iceburg | birthday | SBS 43 | January 3rd |
-| Iceburg | height | Vivre Card | 199 cm (6'6") |
-| Iceburg | blood_type | Vivre Card | X |
-| Iceburg | origin | Vivre Card | Grand Line (Water 7) |
-| Iceburg | age | Vivre Card | 38 (debut) 40 (after timeskip) |
-| Issho | birthday | SBS 74 | August 10th |
-| Issho | height | Vivre Card | 270 cm (8'10") |
-| Issho | residence | SBS | Aoi Kingdom (former) Soja Island ( |
-| Issho | age | Vivre Card | 54 |
-| Oimo | height | Vivre Card | 1600 cm (52'6") |
-| Oimo | blood_type | Vivre Card | F |
-| Oimo | origin | Vivre Card | Grand Line (Elbaph) |
-| Oimo | age | Vivre Card | 151 (debut) 153 (after timeskip) |
-| Zambai | height | Vivre Card | 227 cm (7'5") |
-| Zambai | origin | Vivre Card | Grand Line (Water 7) |
-| Zambai | age | Vivre Card | 33 (debut) 35 (after timeskip) |
-| Baby 5 | height | Vivre Card | 181 cm (5'11¼") |
-| Baby 5 | blood_type | Vivre Card | XF |
-| Baby 5 | origin | Vivre Card | North Blue |
-| Charlotte Pudding | height | Vivre Card | 166 cm (5'5") |
-| Charlotte Pudding | blood_type | Vivre Card | XF |
-| Charlotte Pudding | origin | Vivre Card | Grand Line (Totto Land) |
-| Chimney | height | Vivre Card | 115 cm (3'9") |
-| Chimney | origin | Vivre Card | Grand Line (Water 7) |
-| Chimney | age | Vivre Card | 8 (debut) 10 (after timeskip) |
-| Dracule Mihawk | blood_type | Vivre Card | S |
-| Dracule Mihawk | age | SBS 58 | 41 (debut) 43 (after timeskip) |
-| Izou | bounty | Vivre Card | 510,000,000 |
-| Izou | blood_type | Vivre Card | X |
-| Izou | age | Vivre Card | 43 (debut) 45 (after timeskip, at  |
-| Monkey D. Dragon | bounty | Vivre Card | Unknown |
-| Monkey D. Dragon | height | Vivre Card | 256 cm (8'5") |
-| Monkey D. Dragon | blood_type | Vivre Card | F |
-| Monkey D. Dragon | origin | Vivre Card | East Blue (Goa Kingdom) |
-| Monkey D. Dragon | age | Vivre Card | 53 (debut) 55 (after timeskip) |
-| Monkey D. Dragon | occupation | Vivre Card | Supreme Commander of the Revolutio |
-| Kurozumi Orochi | birthday | Vivre Card | September 23rd |
-| Kurozumi Orochi | height | Vivre Card | 350 cm (11'6") |
-| Kurozumi Orochi | blood_type | Vivre Card | XF |
-| Kurozumi Orochi | origin | Vivre Card | Grand Line (Wano Country) |
-| Neptune | height | Vivre Card | 1220 cm (40') |
-| Neptune | blood_type | Vivre Card | X |
-| Neptune | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Neptune | age | Vivre Card | 70 |
-| Shachi | birthday | SBS 81 | April 7th |
-| Shachi | residence | SBS 84 | Swallow Island (former) |
-| Vinsmoke Ichiji | birthday | SBS | March 2nd |
-| Vinsmoke Ichiji | height | SBS | 186 cm (6'1") |
-| Vinsmoke Ichiji | blood_type | SBS | S (RH-) |
-| Vinsmoke Ichiji | origin | Vivre Card | North Blue (Germa Kingdom) |
-| Vinsmoke Ichiji | age | SBS 84 | 21 |
-| Chinjao | bounty | Vivre Card | 542,000,000 |
-| Chinjao | height | Vivre Card | 520 cm (17'1") |
-| Chinjao | blood_type | Vivre Card | F |
-| Chinjao | origin | Vivre Card | West Blue (Kano Country) |
-| Chinjao | age | Vivre Card | 78 |
-| Vinsmoke Niji | birthday | SBS | March 2nd |
-| Vinsmoke Niji | height | SBS | 185 cm (6'1") |
-| Vinsmoke Niji | blood_type | SBS | S (RH-) |
-| Vinsmoke Niji | origin | Vivre Card | North Blue (Germa Kingdom) |
-| Vinsmoke Niji | age | SBS 84 | 21 |
-| Gecko Moria | blood_type | Vivre Card | X |
-| Gecko Moria | origin | Vivre Card | West Blue |
-| Gecko Moria | residence | SBS | Thriller Bark; Wano Country (Ringo |
-| Gecko Moria | age | SBS 58 | 48 (debut) 50 (after timeskip) |
-| Bellamy | height | Vivre Card | 240 cm (7'10") |
-| Bellamy | blood_type | Vivre Card | F |
-| Charlotte Brûlée | birthday | SBS 87 | March 6th |
-| Charlotte Brûlée | height | Vivre Card | 350 cm (11'6") |
-| Charlotte Brûlée | blood_type | Vivre Card | S |
-| Charlotte Brûlée | origin | Vivre Card | Grand Line (At a random port) |
-| Gan Fall | height | Vivre Card | 180 cm (5'11") |
-| Gan Fall | blood_type | Vivre Card | X |
-| Gan Fall | origin | Vivre Card | Grand Line (Skypiea) |
-| Gan Fall | age | Vivre Card | 66 (debut); 68 (after timeskip) |
-| Peepley Lulu | height | Vivre Card | 206 cm (6'9") |
-| Peepley Lulu | blood_type | Vivre Card | S |
-| Peepley Lulu | origin | Vivre Card | Grand Line (Water 7) |
-| Peepley Lulu | age | Vivre Card | 31 (debut) 33 (after timeskip) |
-| Scratchmen Apoo | blood_type | Vivre Card | XF |
-| Scratchmen Apoo | age | SBS 68, Vivre Card | 29 (debut) 31 (after timeskip) |
-| Lilith | origin | Vivre Card | Grand Line (Egghead) |
-| Basil Hawkins | birthday | SBS 60 | September 9th |
-| Basil Hawkins | age | SBS 68, Vivre Card | 29 (debut) 31 (after timeskip) |
-| Bomba | occupation | SBS 73 | Vice Chief; Pirate |
-| Charlotte Chiffon | height | Vivre Card | 215 cm (7'1") |
-| Charlotte Chiffon | blood_type | Vivre Card | F |
-| Charlotte Chiffon | origin | Vivre Card | Grand Line (Totto Land) |
-| Daz Bonez | bounty | Vivre Card | 75,000,000 |
-| Daz Bonez | height | Vivre Card | 212 cm (6'11½") |
-| Daz Bonez | blood_type | Vivre Card | F |
-| Daz Bonez | origin | Vivre Card | West Blue |
-| Daz Bonez | age | Vivre Card | 29 (debut) 31 (after timeskip) |
-| Jesus Burgess | bounty | Vivre Card | At least 20,000,000 |
-| Jesus Burgess | height | Vivre Card | 355 cm (11'8") |
-| Jesus Burgess | blood_type | Vivre Card | F |
-| Jesus Burgess | origin | Vivre Card | Grand Line |
-| Jesus Burgess | age | Vivre Card | 27 (debut) 29 (after timeskip) |
-| Penguin | birthday | SBS 81 | April 25th |
-| Penguin | residence | SBS 84 | Swallow Island (former) |
-| Vinsmoke Yonji | birthday | SBS | March 2nd |
-| Vinsmoke Yonji | height | SBS | 194 cm (6'4") |
-| Vinsmoke Yonji | blood_type | SBS | S (RH-) |
-| Vinsmoke Yonji | origin | Vivre Card | North Blue (Germa Kingdom) |
-| Vinsmoke Yonji | age | SBS 84 | 21 |
-| Gotti | bounty | Vivre Card | 90,000,000 |
-| Gotti | height | Vivre Card | 375 cm (12'4") |
-| Gotti | origin | Vivre Card | West Blue |
-| Gotti | age | Vivre Card | 33 |
-| Gotti | occupation | Vivre Card | Pirate, Assassin, Combatant |
-| Jabra | height | Vivre Card | 212 cm (6'11½") |
-| Jabra | origin | Vivre Card | North Blue |
-| Jabra | residence | Vivre Card | Guanhao (former) |
-| Kurozumi Tama | birthday | Vivre Card | March 3rd |
-| Kurozumi Tama | height | Vivre Card | 108 cm (3'6½") |
-| Kurozumi Tama | blood_type | Vivre Card | F |
-| Spandam | height | Vivre Card | 192 cm (6'3½") |
-| Spandam | blood_type | Vivre Card | XF |
-| Spandam | origin | Vivre Card | Grand Line |
-| Spandam | occupation | SBS 109 | CP0 Chief (former); CP9 Chief (for |
-| Tilestone | height | Vivre Card | 255 cm (8'4") |
-| Tilestone | blood_type | Vivre Card | S |
-| Tilestone | origin | Vivre Card | Grand Line (Water 7) |
-| Tilestone | age | Vivre Card | 33 (debut) 35 (after timeskip) |
-| Charlotte Katakuri | blood_type | Vivre Card | XF |
-| Charlotte Katakuri | origin | Vivre Card | Grand Line (On a boat) |
-| Charlotte Katakuri | residence | SBS | Komugi Island; Hachinosu (former) |
-| Diamante | bounty | Vivre Card | 99,000,000 |
-| Diamante | height | Vivre Card | 525 cm (17'3") |
-| Diamante | origin | Vivre Card | North Blue |
-| Diamante | age | SBS 75 | 45 |
-| Gedatsu | height | Vivre Card | 220 cm (7'2") |
-| Gedatsu | origin | Vivre Card | Sky Islands (Birka) |
-| Gedatsu | age | Vivre Card | 29 (debut) 31 (after timeskip) |
-| Kabu | birthday | SBS 91 | July 1st |
-| Trebol | bounty | Vivre Card | 99,000,000 |
-| Trebol | height | Vivre Card | 349 cm (11'5") |
-| Trebol | blood_type | Vivre Card | F |
-| Trebol | origin | Vivre Card | North Blue |
-| Trebol | age | SBS 75 | 49 |
-| Vinsmoke Judge | height | Vivre Card | 272 cm (8'11") |
-| Vinsmoke Judge | origin | Vivre Card | North Blue (Germa Kingdom) |
-| Vinsmoke Judge | age | Vivre Card | 56 |
-| Vito | bounty | Vivre Card | 95,000,000 |
-| Vito | height | Vivre Card | 242 cm (7'11") |
-| Vito | origin | Vivre Card | West Blue |
-| Vito | age | Vivre Card | 36 |
-| Fukaboshi | height | Vivre Card | 604 cm (19’10”) |
-| Fukaboshi | blood_type | Vivre Card | S |
-| Fukaboshi | origin | Vivre Card | Grand Line (Ryugu Kingdom) |
-| Fukaboshi | age | Vivre Card | 24 |
-| Fullbody | birthday | Vivre Card | September 7th |
-| Fullbody | height | Vivre Card | 184 cm (6'0") |
-| Fullbody | blood_type | Vivre Card | F |
-| Fullbody | origin | Vivre Card | North Blue |
-| Fullbody | age | Vivre Card | 26 (debut) 28 (after timeskip) |
-| Fullbody | occupation | SBS 98 | Marine Lieutenant Commander; Marin |
-| Gol D. Roger | height | Vivre Card | 274 cm (9'0") |
-| Gol D. Roger | origin | Vivre Card | East Blue (Loguetown) |
-| Inhel | occupation | SBS | Scout ; Pirate |
-| Mikita | birthday | SBS 81 | February 14th |
-| Mikita | bounty | Vivre Card | 7,500,000 |
-| Mikita | height | Vivre Card | 177 cm (5'10") |
-| Mikita | blood_type | Vivre Card | XF |
-| Mikita | origin | Vivre Card | West Blue |
-| Mikita | age | Vivre Card | 22 (debut) 24 (after timeskip) |
-| Mikita | epithet | Vivre Card | "Courier" |
+### By field and cited source
+
+| Field | SBS | Vivre Card | other | total |
+|---|---:|---:|---:|---:|
+| origin | 1 | 97 | 0 | 98 |
+| blood_type | 9 | 88 | 0 | 97 |
+| height | 12 | 80 | 0 | 92 |
+| age | 20 | 53 | 0 | 73 |
+| birthday | 48 | 11 | 0 | 59 |
+| bounty | 0 | 17 | 0 | 17 |
+| residence | 7 | 5 | 0 | 12 |
+| epithet | 0 | 9 | 0 | 9 |
+| occupation | 6 | 2 | 0 | 8 |
+
+### By cited source
+
+#### Cited to SBS (103)
+
+**age** — 20
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Crocodile | SBS 58 | 44 (debut) 46 (after timeskip) |
+| Bartholomew Kuma | SBS 58 | 45 (debut) 47 (after timeskip) |
+| Capone Bege | SBS 68, Vivre Card | 40 (debut) 42 (after timeskip) |
+| Boa Hancock | SBS 58 | 29 (debut) 31 (after timeskip) |
+| Marshall D. Teach | SBS 58 | 38 (debut) 40 (after timeskip) |
+| Helmeppo | SBS 110 | 20 (debut) 22 (after timeskip) |
+| Viola | SBS 75 | 29 |
+| Killer | SBS 68, Vivre Card | 25 (debut) 27 (after timeskip) |
+| X Drake | SBS 68, SBS 97 | 31 (debut) 33 (after timeskip) |
+| Vinsmoke Reiju | SBS 84 | 24 |
+| Charlotte Perospero | SBS 88 | 50 |
+| Dracule Mihawk | SBS 58 | 41 (debut) 43 (after timeskip) |
+| Vinsmoke Ichiji | SBS 84 | 21 |
+| Vinsmoke Niji | SBS 84 | 21 |
+| Gecko Moria | SBS 58 | 48 (debut) 50 (after timeskip) |
+| Scratchmen Apoo | SBS 68, Vivre Card | 29 (debut) 31 (after timeskip) |
+| Basil Hawkins | SBS 68, Vivre Card | 29 (debut) 31 (after timeskip) |
+| Vinsmoke Yonji | SBS 84 | 21 |
+| Diamante | SBS 75 | 45 |
+| Trebol | SBS 75 | 49 |
+
+**birthday** — 48
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Monkey D. Luffy | SBS 15 | May 5th (Children's Day) |
+| Nami | SBS 15 | July 3rd |
+| Sanji | SBS 15 | March 2nd |
+| Usopp | SBS 15 | April 1st (April Fool's Day) |
+| Nico Robin | SBS 25 | February 6th |
+| Franky | SBS 43 | March 9th |
+| Brook | SBS 50 | April 3rd |
+| Trafalgar D. Water Law | SBS 59 | October 6th |
+| Nefertari Vivi | SBS 16 | February 2nd |
+| Rob Lucci | SBS 43 | June 2nd |
+| Portgas D. Ace | SBS 48 | January 1st |
+| Buggy | SBS 60 | August 8th |
+| Napoleon | SBS 90 | December 2nd |
+| Kaku | SBS 43 | August 7th |
+| Yamato | SBS 98 | November 3rd |
+| Crocodile | SBS 59 | September 5th |
+| Caesar Clown | SBS 71 | April 9th |
+| Eustass Kid | SBS 60 | January 10th |
+| Kurozumi Kanjuro | SBS 86 | July 21st |
+| Jewelry Bonney | SBS 60 | September 1st |
+| Edward Newgate | SBS 57 | April 6th |
+| Bartolomeo | SBS | October 6th |
+| Emporio Ivankov | SBS 59 | January 8th |
+| Karoo | SBS 82 | November 8th |
+| Marco | SBS 59 | October 5th |
+| Camie | SBS 53 | November 3rd |
+| Shanks | SBS 54 | March 9th |
+| Kyros | SBS 81 | September 22nd |
+| Boa Hancock | SBS 54 | September 2nd |
+| Marshall D. Teach | SBS 59 | August 3rd |
+| Paulie | SBS 43 | July 8th |
+| Galdino | SBS 60 | March 3rd |
+| Silvers Rayleigh | SBS 60 | May 13th |
+| Killer | SBS 60 | February 2nd |
+| Shirahoshi | SBS 65 | April 4th |
+| Vinsmoke Reiju | SBS 86 | November 30th |
+| Nefertari Cobra | SBS 82 | February 13th |
+| Iceburg | SBS 43 | January 3rd |
+| Issho | SBS 74 | August 10th |
+| Shachi | SBS 81 | April 7th |
+| Vinsmoke Ichiji | SBS | March 2nd |
+| Vinsmoke Niji | SBS | March 2nd |
+| Charlotte Brûlée | SBS 87 | March 6th |
+| Basil Hawkins | SBS 60 | September 9th |
+| Penguin | SBS 81 | April 25th |
+| Vinsmoke Yonji | SBS | March 2nd |
+| Kabu | SBS 91 | July 1st |
+| Mikita | SBS 81 | February 14th |
+
+**blood_type** — 9
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Monkey D. Luffy | SBS 66 | F |
+| Nami | SBS 66 | X |
+| Roronoa Zoro | SBS 66 | XF |
+| Franky | SBS 66 | XF |
+| Brook | SBS 66 | X |
+| Vinsmoke Reiju | SBS | F |
+| Vinsmoke Ichiji | SBS | S (RH-) |
+| Vinsmoke Niji | SBS | S (RH-) |
+| Vinsmoke Yonji | SBS | S (RH-) |
+
+**height** — 12
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Yamato | SBS | 263 cm (8'8") |
+| Kurozumi Kanjuro | SBS 96, Vivre Card | 347 cm (11'5") |
+| Bartolomeo | SBS | 220 cm (7'3") |
+| Boa Hancock | SBS | 191 cm (6'3") (debut, after timesk |
+| Koby | SBS | 167 cm (5'6") |
+| Marshall D. Teach | SBS | 344 cm (11'3") (debut, after times |
+| X Drake | SBS | 233 cm (7'8") (debut, after timesk |
+| Vinsmoke Reiju | SBS | 173 cm (5'8") |
+| Charlotte Perospero | SBS | 333 cm (10'11") |
+| Vinsmoke Ichiji | SBS | 186 cm (6'1") |
+| Vinsmoke Niji | SBS | 185 cm (6'1") |
+| Vinsmoke Yonji | SBS | 194 cm (6'4") |
+
+**occupation** — 6
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Kin'emon | SBS 113 | Samurai; Great Elder of the Shogun |
+| Leo | SBS 73 | Captain of the Fifth Ship of the S |
+| Bomba | SBS 73 | Vice Chief; Pirate |
+| Spandam | SBS 109 | CP0 Chief (former); CP9 Chief (for |
+| Fullbody | SBS 98 | Marine Lieutenant Commander; Marin |
+| Inhel | SBS | Scout ; Pirate |
+
+**origin** — 1
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Bartolomeo | SBS 72 | East Blue |
+
+**residence** — 7
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Kin'emon | SBS 113 | Wano Country (Kuri); Flower Capita |
+| Kouzuki Momonosuke | SBS 113 | Wano Country (Kuri); Flower Capita |
+| Issho | SBS | Aoi Kingdom (former) Soja Island ( |
+| Shachi | SBS 84 | Swallow Island (former) |
+| Gecko Moria | SBS | Thriller Bark; Wano Country (Ringo |
+| Penguin | SBS 84 | Swallow Island (former) |
+| Charlotte Katakuri | SBS | Komugi Island; Hachinosu (former) |
+
+#### Cited to Vivre Card (362)
+
+**age** — 53
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Kin'emon | Vivre Card | 36 (born 56 years ago) |
+| Carrot | Vivre Card | 15 |
+| Kaidou | Vivre Card | 59 |
+| Caesar Clown | Vivre Card | 55 |
+| Hatchan | Vivre Card | 36 (debut) 38 (after timeskip) |
+| Hattori | Vivre Card | 18 (debut) 20 (after timeskip) |
+| Inuarashi | Vivre Card | 40 |
+| Kikunojo | Vivre Card | 22 (born 42 years ago) |
+| Raizo | Vivre Card | 35 (born 55 years ago) |
+| Caribou | Vivre Card | 32 |
+| Kawamatsu | Vivre Card | 41 |
+| Emporio Ivankov | Vivre Card | 51 (debut) 53 (after timeskip) |
+| Karoo | Vivre Card | 14 (debut) 16 (after timeskip) |
+| Marco | Vivre Card | 43 (debut) 45 (after timeskip) |
+| Nekomamushi | Vivre Card | 40 |
+| Camie | Vivre Card | 16 (debut) 18 (after timeskip) |
+| Enel | Vivre Card | 37 (debut) 39 (after timeskip) |
+| Jango | Vivre Card | 27 (debut) 29 (after timeskip) |
+| Kyros | Vivre Card | 44 |
+| Shinobu | Vivre Card | 49 |
+| Queen | Vivre Card | 56 |
+| Paulie | Vivre Card | 24 (debut) 26 (after timeskip) |
+| Galdino | Vivre Card | 35 (debut) 37 (after timeskip) |
+| Denjiro | Vivre Card | 47 |
+| Pappag | Vivre Card | 31 (debut) 33 (after timeskip) |
+| Riku Doldo III | Vivre Card | 60 |
+| Kokoro | Vivre Card | 70 (debut) 72 (after timeskip) |
+| Hyougoro | Vivre Card | 70 |
+| Bentham | Vivre Card | 30 (debut) 32 (after timeskip) |
+| Mozu and Kiwi | Vivre Card | 19 (Mozu, debut); 21 (Mozu, after  |
+| Kashii | Vivre Card | 154 (debut) 156 (after timeskip) |
+| Nefertari Cobra | Vivre Card | 48 (debut) 50 (after timeskip, at  |
+| Iceburg | Vivre Card | 38 (debut) 40 (after timeskip) |
+| Issho | Vivre Card | 54 |
+| Oimo | Vivre Card | 151 (debut) 153 (after timeskip) |
+| Zambai | Vivre Card | 33 (debut) 35 (after timeskip) |
+| Chimney | Vivre Card | 8 (debut) 10 (after timeskip) |
+| Izou | Vivre Card | 43 (debut) 45 (after timeskip, at  |
+| Monkey D. Dragon | Vivre Card | 53 (debut) 55 (after timeskip) |
+| Neptune | Vivre Card | 70 |
+| Chinjao | Vivre Card | 78 |
+| Gan Fall | Vivre Card | 66 (debut); 68 (after timeskip) |
+| Peepley Lulu | Vivre Card | 31 (debut) 33 (after timeskip) |
+| Daz Bonez | Vivre Card | 29 (debut) 31 (after timeskip) |
+| Jesus Burgess | Vivre Card | 27 (debut) 29 (after timeskip) |
+| Gotti | Vivre Card | 33 |
+| Tilestone | Vivre Card | 33 (debut) 35 (after timeskip) |
+| Gedatsu | Vivre Card | 29 (debut) 31 (after timeskip) |
+| Vinsmoke Judge | Vivre Card | 56 |
+| Vito | Vivre Card | 36 |
+| Fukaboshi | Vivre Card | 24 |
+| Fullbody | Vivre Card | 26 (debut) 28 (after timeskip) |
+| Mikita | Vivre Card | 22 (debut) 24 (after timeskip) |
+
+**birthday** — 11
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Kouzuki Momonosuke | Vivre Card | October 7th |
+| Kikunojo | Vivre Card | September 9th |
+| Shinobu | Vivre Card | October 23rd |
+| Queen | Vivre Card | July 13th |
+| Denjiro | Vivre Card | October 26th |
+| Hyougoro | Vivre Card | February 14th |
+| Kouzuki Hiyori | Vivre Card | December 23rd |
+| Ashura Doji | Vivre Card | April 10th |
+| Kurozumi Orochi | Vivre Card | September 23rd |
+| Kurozumi Tama | Vivre Card | March 3rd |
+| Fullbody | Vivre Card | September 7th |
+
+**blood_type** — 88
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Trafalgar D. Water Law | Vivre Card | F |
+| Kin'emon | Vivre Card | X |
+| Charlotte Linlin | Vivre Card | X |
+| Kouzuki Momonosuke | Vivre Card | X |
+| Donquixote Doflamingo | Vivre Card | X |
+| Rob Lucci | Vivre Card | XF |
+| Carrot | Vivre Card | F |
+| Buggy | Vivre Card | F |
+| Kaku | Vivre Card | X |
+| Yamato | Vivre Card | F |
+| Kaidou | Vivre Card | F |
+| Caesar Clown | Vivre Card | X |
+| Eustass Kid | Vivre Card | F |
+| Smoker | Vivre Card | XF |
+| Inuarashi | Vivre Card | X |
+| Kikunojo | Vivre Card | XF |
+| Raizo | Vivre Card | X |
+| Kurozumi Kanjuro | Vivre Card | X |
+| Monkey D. Garp | Vivre Card | F |
+| Caribou | Vivre Card | XF |
+| Jewelry Bonney | Vivre Card | F |
+| Kalifa | Vivre Card | XF |
+| Kawamatsu | Vivre Card | F |
+| Edward Newgate | Vivre Card | F |
+| Sabo | Vivre Card | X |
+| Bartolomeo | Vivre Card | X |
+| Emporio Ivankov | Vivre Card | XF |
+| Karoo | Vivre Card | F |
+| Marco | Vivre Card | X |
+| Hajrudin | Vivre Card | XF |
+| Camie | Vivre Card | X |
+| Shanks | Vivre Card | XF |
+| Brogy | Vivre Card | F |
+| Shinobu | Vivre Card | F |
+| Queen | Vivre Card | XF |
+| Dorry | Vivre Card | F |
+| Koby | Vivre Card | F |
+| Borsalino | Vivre Card | XF |
+| Marshall D. Teach | Vivre Card | F |
+| Galdino | Vivre Card | F |
+| Denjiro | Vivre Card | XF |
+| Pappag | Vivre Card | XF |
+| Blueno | Vivre Card | X |
+| Riku Doldo III | Vivre Card | S |
+| Kuzan | Vivre Card | F |
+| Silvers Rayleigh | Vivre Card | XF |
+| Cavendish | Vivre Card | XF |
+| Sengoku | Vivre Card | F |
+| Pedro | Vivre Card | F |
+| Viola | Vivre Card | X |
+| Bentham | Vivre Card | F |
+| Kouzuki Hiyori | Vivre Card | XF |
+| Shirahoshi | Vivre Card | X |
+| Sai | Vivre Card | F |
+| Wapol | Vivre Card | X |
+| Mozu and Kiwi | Vivre Card | F |
+| Ashura Doji | Vivre Card | X |
+| Kashii | Vivre Card | X |
+| Sakazuki | Vivre Card | F |
+| Nefertari Cobra | Vivre Card | F |
+| Charlotte Perospero | Vivre Card | X |
+| Iceburg | Vivre Card | X |
+| Oimo | Vivre Card | F |
+| Baby 5 | Vivre Card | XF |
+| Charlotte Pudding | Vivre Card | XF |
+| Dracule Mihawk | Vivre Card | S |
+| Izou | Vivre Card | X |
+| Monkey D. Dragon | Vivre Card | F |
+| Kurozumi Orochi | Vivre Card | XF |
+| Neptune | Vivre Card | X |
+| Chinjao | Vivre Card | F |
+| Gecko Moria | Vivre Card | X |
+| Bellamy | Vivre Card | F |
+| Charlotte Brûlée | Vivre Card | S |
+| Gan Fall | Vivre Card | X |
+| Peepley Lulu | Vivre Card | S |
+| Scratchmen Apoo | Vivre Card | XF |
+| Charlotte Chiffon | Vivre Card | F |
+| Daz Bonez | Vivre Card | F |
+| Jesus Burgess | Vivre Card | F |
+| Kurozumi Tama | Vivre Card | F |
+| Spandam | Vivre Card | XF |
+| Tilestone | Vivre Card | S |
+| Charlotte Katakuri | Vivre Card | XF |
+| Trebol | Vivre Card | F |
+| Fukaboshi | Vivre Card | S |
+| Fullbody | Vivre Card | F |
+| Mikita | Vivre Card | XF |
+
+**bounty** — 17
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Hatchan | Vivre Card | 8,000,000 |
+| Sabo | Vivre Card | Unknown 602,000,000 |
+| Marco | Vivre Card | 1,374,000,000 |
+| Bepo | Vivre Card | 1,500 500 |
+| Galdino | Vivre Card | 24,000,000 |
+| Helmeppo | Vivre Card | ★ ( 100,000,000) |
+| Sai | Vivre Card | 210,000,000 |
+| Izou | Vivre Card | 510,000,000 |
+| Monkey D. Dragon | Vivre Card | Unknown |
+| Chinjao | Vivre Card | 542,000,000 |
+| Daz Bonez | Vivre Card | 75,000,000 |
+| Jesus Burgess | Vivre Card | At least 20,000,000 |
+| Gotti | Vivre Card | 90,000,000 |
+| Diamante | Vivre Card | 99,000,000 |
+| Trebol | Vivre Card | 99,000,000 |
+| Vito | Vivre Card | 95,000,000 |
+| Mikita | Vivre Card | 7,500,000 |
+
+**epithet** — 9
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Rob Lucci | Vivre Card | "Massacre Weapon" |
+| Kaidou | Vivre Card | "Kaidou of the Beasts" "The Strong |
+| Bartholomew Kuma | Vivre Card | "Tyrant" "Pacifist" "Hero" |
+| Zeus | Vivre Card | "Zeus the Thundercloud" |
+| Leo | Vivre Card | "Warrior" |
+| Galdino | Vivre Card | "Loan Shark" |
+| Prometheus | Vivre Card | "Prometheus the Sun" |
+| Bentham | Vivre Card | "Bentham of the Wild" |
+| Mikita | Vivre Card | "Courier" |
+
+**height** — 80
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Nefertari Vivi | Vivre Card | 169 cm (5'7") |
+| Kouzuki Momonosuke | Vivre Card | 110 cm (3'7") (child body) 322 cm  |
+| Rob Lucci | Vivre Card | 212 cm (6'11") |
+| Carrot | Vivre Card | 161 cm (5'3") |
+| Napoleon | Vivre Card | At least 848 cm (27'10") (As a swo |
+| Kaku | Vivre Card | 193 cm (6'4") |
+| Kaidou | Vivre Card | 710 cm (23'4") |
+| Caesar Clown | Vivre Card | 309 cm (10'1") |
+| Hatchan | Vivre Card | 220 cm (7'3") |
+| Smoker | Vivre Card | 209 cm (6'10") |
+| Monkey D. Garp | Vivre Card | 287 cm (9'5") |
+| Caribou | Vivre Card | 228 cm (7'6") |
+| Zeus | Vivre Card | At least 232 cm (7'7") (as a Cloud |
+| Kalifa | Vivre Card | 185 cm (6'1") |
+| Rebecca | Vivre Card | 171 cm (5'7") |
+| Emporio Ivankov | Vivre Card | 449 cm (14'8") |
+| Marco | Vivre Card | 203 cm (6'8") |
+| Camie | Vivre Card | 197 cm (6’6”) |
+| Leo | Vivre Card | 23 cm (9") |
+| Bepo | Vivre Card | 240 cm (7'10") |
+| Brogy | Vivre Card | 2130 cm (69'10") |
+| Enel | Vivre Card | 266 cm (8'9") |
+| Jango | Vivre Card | 207 cm (6’9½”) |
+| Kyros | Vivre Card | 298 cm (9'9") |
+| Queen | Vivre Card | 612 cm (20'1") |
+| Paulie | Vivre Card | 195 cm (6'5") |
+| Galdino | Vivre Card | 179 cm (5'10") |
+| Pappag | Vivre Card | 50 cm (1'7") |
+| Blueno | Vivre Card | 258 cm (8'5½") |
+| Riku Doldo III | Vivre Card | 261 cm (8'6¾") |
+| Kokoro | Vivre Card | 168 cm (5'6") |
+| Kuzan | Vivre Card | 298 cm (9'9¼") |
+| Prometheus | Vivre Card | At least 239 cm (7'10") |
+| Silvers Rayleigh | Vivre Card | 188 cm (6'2") |
+| Cavendish | Vivre Card | 208 cm (6'10") |
+| Hyougoro | Vivre Card | 100 cm (3'3") |
+| Sengoku | Vivre Card | 278 cm (9'1") |
+| Pedro | Vivre Card | 233 cm (7'8") |
+| Viola | Vivre Card | 178 cm (5'10") |
+| Kouzuki Hiyori | Vivre Card | 170 cm (5'7") |
+| Shirahoshi | Vivre Card | 1187 cm (38'11") |
+| Sai | Vivre Card | 242 cm (7'11") |
+| Vegapunk | Vivre Card | 314cm (10'4") |
+| Wapol | Vivre Card | 207 cm (6'9") |
+| Mozu and Kiwi | Vivre Card | 187 cm (6'1") |
+| Kashii | Vivre Card | 1700 cm (55'9") |
+| Sakazuki | Vivre Card | 306 cm (10’) |
+| Nefertari Cobra | Vivre Card | 182 cm (6'0") |
+| Iceburg | Vivre Card | 199 cm (6'6") |
+| Issho | Vivre Card | 270 cm (8'10") |
+| Oimo | Vivre Card | 1600 cm (52'6") |
+| Zambai | Vivre Card | 227 cm (7'5") |
+| Baby 5 | Vivre Card | 181 cm (5'11¼") |
+| Charlotte Pudding | Vivre Card | 166 cm (5'5") |
+| Chimney | Vivre Card | 115 cm (3'9") |
+| Monkey D. Dragon | Vivre Card | 256 cm (8'5") |
+| Kurozumi Orochi | Vivre Card | 350 cm (11'6") |
+| Neptune | Vivre Card | 1220 cm (40') |
+| Chinjao | Vivre Card | 520 cm (17'1") |
+| Bellamy | Vivre Card | 240 cm (7'10") |
+| Charlotte Brûlée | Vivre Card | 350 cm (11'6") |
+| Gan Fall | Vivre Card | 180 cm (5'11") |
+| Peepley Lulu | Vivre Card | 206 cm (6'9") |
+| Charlotte Chiffon | Vivre Card | 215 cm (7'1") |
+| Daz Bonez | Vivre Card | 212 cm (6'11½") |
+| Jesus Burgess | Vivre Card | 355 cm (11'8") |
+| Gotti | Vivre Card | 375 cm (12'4") |
+| Jabra | Vivre Card | 212 cm (6'11½") |
+| Kurozumi Tama | Vivre Card | 108 cm (3'6½") |
+| Spandam | Vivre Card | 192 cm (6'3½") |
+| Tilestone | Vivre Card | 255 cm (8'4") |
+| Diamante | Vivre Card | 525 cm (17'3") |
+| Gedatsu | Vivre Card | 220 cm (7'2") |
+| Trebol | Vivre Card | 349 cm (11'5") |
+| Vinsmoke Judge | Vivre Card | 272 cm (8'11") |
+| Vito | Vivre Card | 242 cm (7'11") |
+| Fukaboshi | Vivre Card | 604 cm (19’10”) |
+| Fullbody | Vivre Card | 184 cm (6'0") |
+| Gol D. Roger | Vivre Card | 274 cm (9'0") |
+| Mikita | Vivre Card | 177 cm (5'10") |
+
+**occupation** — 2
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Monkey D. Dragon | Vivre Card | Supreme Commander of the Revolutio |
+| Gotti | Vivre Card | Pirate, Assassin, Combatant |
+
+**origin** — 97
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Kin'emon | Vivre Card | Grand Line (Wano Country) |
+| Charlotte Linlin | Vivre Card | Grand Line |
+| Donquixote Doflamingo | Vivre Card | Red Line (Mary Geoise) |
+| Rob Lucci | Vivre Card | Grand Line (Guanhao) |
+| Carrot | Vivre Card | Grand Line (Mokomo Dukedom) |
+| Portgas D. Ace | Vivre Card | South Blue (Baterilla) |
+| Napoleon | Vivre Card | Grand Line |
+| Kaku | Vivre Card | East Blue |
+| Crocodile | Vivre Card | Grand Line |
+| Kaidou | Vivre Card | Grand Line |
+| Caesar Clown | Vivre Card | Grand Line |
+| Smoker | Vivre Card | Grand Line |
+| Inuarashi | Vivre Card | Grand Line (Mokomo Dukedom) |
+| Bartholomew Kuma | Vivre Card | South Blue (Sorbet Kingdom) |
+| Tashigi | Vivre Card | East Blue |
+| Kurozumi Kanjuro | Vivre Card | Grand Line (Wano Country) |
+| Monkey D. Garp | Vivre Card | East Blue (Goa Kingdom) |
+| Caribou | Vivre Card | North Blue |
+| Zeus | Vivre Card | Grand Line |
+| Jewelry Bonney | Vivre Card | Red Line (Mary Geoise) |
+| Kalifa | Vivre Card | Grand Line |
+| Kawamatsu | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Rebecca | Vivre Card | Grand Line (Dressrosa) |
+| Edward Newgate | Vivre Card | Grand Line (Sphinx) |
+| Sabo | Vivre Card | East Blue (Goa Kingdom) |
+| Emporio Ivankov | Vivre Card | Grand Line (Kamabakka Kingdom) |
+| Karoo | Vivre Card | Grand Line (Arabasta Kingdom) |
+| Marco | Vivre Card | Grand Line |
+| Hajrudin | Vivre Card | Grand Line (Elbaph) |
+| Nekomamushi | Vivre Card | Grand Line (Mokomo Dukedom) |
+| Camie | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Leo | Vivre Card | Grand Line (Green Bit) |
+| Brogy | Vivre Card | Grand Line (Elbaph) |
+| Jango | Vivre Card | East Blue |
+| Kyros | Vivre Card | Grand Line (Dressrosa) |
+| Queen | Vivre Card | Grand Line |
+| Boa Hancock | Vivre Card | Calm Belt (Amazon Lily) |
+| Dorry | Vivre Card | Grand Line (Elbaph) |
+| Koby | Vivre Card | East Blue (Satsuruzo Kingdom) |
+| Borsalino | Vivre Card | North Blue |
+| Marshall D. Teach | Vivre Card | Grand Line (Shade Port) |
+| Paulie | Vivre Card | Grand Line (Water 7) |
+| Galdino | Vivre Card | South Blue |
+| Pappag | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Blueno | Vivre Card | North Blue |
+| Riku Doldo III | Vivre Card | Grand Line (Dressrosa) |
+| Kokoro | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Kuzan | Vivre Card | South Blue (Vespa Kingdom territor |
+| Prometheus | Vivre Card | Grand Line |
+| Cavendish | Vivre Card | Grand Line (Bourgeois Kingdom) |
+| Pedro | Vivre Card | Grand Line (Mokomo Dukedom) |
+| Viola | Vivre Card | Grand Line (Dressrosa) |
+| Bentham | Vivre Card | East Blue |
+| Shirahoshi | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Sai | Vivre Card | West Blue (Kano Country) |
+| Wapol | Vivre Card | Grand Line (Drum Kingdom) |
+| Mozu and Kiwi | Vivre Card | Grand Line (Water 7, Slums) |
+| Kashii | Vivre Card | Grand Line (Elbaph) |
+| Sakazuki | Vivre Card | North Blue |
+| Vinsmoke Reiju | Vivre Card | North Blue (Germa Kingdom) |
+| Nefertari Cobra | Vivre Card | Grand Line (Arabasta Kingdom) |
+| Charlotte Perospero | Vivre Card | Grand Line (At a random port) |
+| Iceburg | Vivre Card | Grand Line (Water 7) |
+| Oimo | Vivre Card | Grand Line (Elbaph) |
+| Zambai | Vivre Card | Grand Line (Water 7) |
+| Baby 5 | Vivre Card | North Blue |
+| Charlotte Pudding | Vivre Card | Grand Line (Totto Land) |
+| Chimney | Vivre Card | Grand Line (Water 7) |
+| Monkey D. Dragon | Vivre Card | East Blue (Goa Kingdom) |
+| Kurozumi Orochi | Vivre Card | Grand Line (Wano Country) |
+| Neptune | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Vinsmoke Ichiji | Vivre Card | North Blue (Germa Kingdom) |
+| Chinjao | Vivre Card | West Blue (Kano Country) |
+| Vinsmoke Niji | Vivre Card | North Blue (Germa Kingdom) |
+| Gecko Moria | Vivre Card | West Blue |
+| Charlotte Brûlée | Vivre Card | Grand Line (At a random port) |
+| Gan Fall | Vivre Card | Grand Line (Skypiea) |
+| Peepley Lulu | Vivre Card | Grand Line (Water 7) |
+| Lilith | Vivre Card | Grand Line (Egghead) |
+| Charlotte Chiffon | Vivre Card | Grand Line (Totto Land) |
+| Daz Bonez | Vivre Card | West Blue |
+| Jesus Burgess | Vivre Card | Grand Line |
+| Vinsmoke Yonji | Vivre Card | North Blue (Germa Kingdom) |
+| Gotti | Vivre Card | West Blue |
+| Jabra | Vivre Card | North Blue |
+| Spandam | Vivre Card | Grand Line |
+| Tilestone | Vivre Card | Grand Line (Water 7) |
+| Charlotte Katakuri | Vivre Card | Grand Line (On a boat) |
+| Diamante | Vivre Card | North Blue |
+| Gedatsu | Vivre Card | Sky Islands (Birka) |
+| Trebol | Vivre Card | North Blue |
+| Vinsmoke Judge | Vivre Card | North Blue (Germa Kingdom) |
+| Vito | Vivre Card | West Blue |
+| Fukaboshi | Vivre Card | Grand Line (Ryugu Kingdom) |
+| Fullbody | Vivre Card | North Blue |
+| Gol D. Roger | Vivre Card | East Blue (Loguetown) |
+| Mikita | Vivre Card | West Blue |
+
+**residence** — 5
+
+| Character | Wiki cites | Value |
+|---|---|---|
+| Nami | Vivre Card | Oykot Kingdom (former) Cocoyasi Vi |
+| Rob Lucci | Vivre Card | Guanhao (former) |
+| Kaku | Vivre Card | Guanhao (former) |
+| Kurozumi Kanjuro | Vivre Card | Wano Country (Kuri) Wano Country ( |
+| Jabra | Vivre Card | Guanhao (former) |
 
 ## Drift — stored value differs from the wiki's current value
 
 | Character | Field | Codex | Wiki |
 |---|---|---|---|
-| Brook | residence | Florian Triangle (former); Namakura Island ( | Esperia Kingdom (former); Florian Triangle ( |
+| Brook | residence | Florian Triangle (former); Namakura Island (former, temporary) | Esperia Kingdom (former); Florian Triangle (former); Namakura Island (former, temporary) |
 | Sabo | age | 10 (flashback, debut) · 22 (after timeskip) | 10 (debut) 22 (after timeskip) |
-| Marco | occupation | 1st Division Commander (former); Doctor; App | Doctor; 1st Division Commander (former); App |
+| Marco | occupation | 1st Division Commander (former); Doctor; Apprentice (former) | Doctor; 1st Division Commander (former); Apprentice (former) |
 | Camie | residence | Mermaid Cove (Coral Hill) | Coral Hill (Mermaid Cove) |
 | Hyougoro | residence | Flower Capital (former); Udon, Wano Country | Flower Capital; Udon, Wano Country (former) |
 | Neptune | epithet | God of the Sea; Great Knight of the Sea | "Sea God"; "Great Knight of the Sea" |
-| Chinjao | epithet | Don Chinjao; "Chinjao the Drill" | Don Chinjao・チンジャオ|Don Chinjao}}; "Chinjao th |
-| Bellamy | occupation | Dyer; Pirate Captain (former) | Dyer; Pirate (former); Pirate Captain (forme |
+| Chinjao | epithet | Don Chinjao; "Chinjao the Drill" | Don Chinjao・チンジャオ|Don Chinjao}}; "Chinjao the Drill" |
+| Bellamy | occupation | Dyer; Pirate Captain (former) | Dyer; Pirate (former); Pirate Captain (former) |

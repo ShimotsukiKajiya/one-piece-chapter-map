@@ -212,7 +212,10 @@ def main():
             # first segment only -- the Codex stores "16 (debut) · 18 (after
             # timeskip)" where the wiki has the same content differently joined
             if a != b and not (a.startswith(b[:14]) or b.startswith(a[:14])):
-                drift.append((name, codex_field, str(ours)[:44], theirs[:44]))
+                # 44 characters cut most drift rows mid-word, which makes
+                # them unreadable and therefore unactionable -- the point
+                # of a drift row is to SEE what changed.
+                drift.append((name, codex_field, str(ours)[:200], theirs[:200]))
 
             srcs = cited_sources(raw)
             oda = {s for s in srcs if s.startswith(("SBS", "Vivre"))}
@@ -238,13 +241,46 @@ def main():
              f"Sampled **{len(records)}** characters.", ""]
 
     if promotable:
+        # Two axes matter to the maintainer working curate.html: which FIELD a
+        # claim is (one decision often settles a whole column) and which Oda
+        # source the wiki cites (SBS and Vivre Card are both canon under
+        # docs/canon-policy.md, but they are checked in different places).
+        def source_class(cite):
+            c = (cite or "").lower()
+            if "sbs" in c:
+                return "SBS"
+            if "vivre" in c:
+                return "Vivre Card"
+            return "other"
+
+        by_field = {}
+        for n, f, cite, v in promotable:
+            b = by_field.setdefault(f, {"SBS": 0, "Vivre Card": 0, "other": 0})
+            b[source_class(cite)] += 1
+
         lines += ["## Promotable — the wiki cites Oda where the Codex does not", "",
                   "The Canon Engine only sees SBS text already in the repo, so it",
                   "cannot find these. Each is a candidate for curate.html.", "",
-                  "| Character | Field | Wiki cites | Value |", "|---|---|---|---|"]
-        for n, f, s, v in promotable:
-            lines.append(f"| {n} | {f} | {s} | {v} |")
-        lines.append("")
+                  "### By field and cited source", "",
+                  "| Field | SBS | Vivre Card | other | total |", "|---|---:|---:|---:|---:|"]
+        for f in sorted(by_field, key=lambda k: -sum(by_field[k].values())):
+            b = by_field[f]
+            lines.append(f"| {f} | {b['SBS']} | {b['Vivre Card']} | {b['other']} | "
+                         f"{sum(b.values())} |")
+        lines += ["", "### By cited source", ""]
+
+        for cls in ("SBS", "Vivre Card", "other"):
+            rows = [(n, f, c, v) for n, f, c, v in promotable if source_class(c) == cls]
+            if not rows:
+                continue
+            lines += [f"#### Cited to {cls} ({len(rows)})", ""]
+            for f in sorted({r[1] for r in rows}):
+                sub = [r for r in rows if r[1] == f]
+                lines += [f"**{f}** — {len(sub)}", "",
+                          "| Character | Wiki cites | Value |", "|---|---|---|"]
+                for n, _, c, v in sub:
+                    lines.append(f"| {n} | {c} | {v} |")
+                lines.append("")
 
     if drift:
         lines += ["## Drift — stored value differs from the wiki's current value", "",
