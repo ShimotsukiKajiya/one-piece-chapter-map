@@ -114,3 +114,20 @@ docs/canon_link_conflicts_owns.json
 
 # Archived internal docs
 docs/archive/
+
+# Audit, handoff and planning docs from the 2026-08 / 2026-09 audit passes.
+# Spoiler-dense and internal: kept local, never served. Listed by name like
+# the blocks above, so NEW internal docs still need adding here.
+docs/canon-keeper-brief-2026-08-24.md
+docs/codex-audit-session-report-2026-09-13.md
+docs/curate-triage.md
+docs/curate_queue_positional.json
+docs/data-integrity.md
+docs/external_conflicts.md
+docs/handoff-2026-08-24.md
+docs/handoff-report.md
+docs/handoff-return-prompt.md
+docs/live-leak-findings.md
+docs/planning-session-prompt.md
+docs/session-report-2026-08-24.md
+docs/spoiler-audit-hitlist.md
