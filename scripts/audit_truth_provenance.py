@@ -62,10 +62,21 @@ def main():
     print("=" * 74)
 
     # ── staleness ─────────────────────────────────────────────────────────
+    # The two reports are gitignored, so a CI checkout never has them and this
+    # check failed there every day. Read the dates the refresh bot commits as
+    # well: verify.py stamps verified_on on every fact it matches, and bake.py
+    # copies find_conflicts.py's generated_on into conflicts.html. Take the later
+    # of tracked and report so a local run that skipped the bake still counts.
     data_on = chapters.get("generated_on")
-    verified_on = report_date("docs/verification_report.md",
-                              r"Verification Report — (\d{4}-\d{2}-\d{2})")
-    conflicts_on = report_date("docs/conflicts_report.md", r"(\d{4}-\d{2}-\d{2})")
+    verified_on = max(filter(None, (
+        max((f.get("verified_on") or "" for f in facts), default="") or None,
+        report_date("docs/verification_report.md",
+                    r"Verification Report — (\d{4}-\d{2}-\d{2})"),
+    )), default=None)
+    conflicts_on = max(filter(None, (
+        report_date("conflicts.html", r'"generated_on": "(\d{4}-\d{2}-\d{2})"'),
+        report_date("docs/conflicts_report.md", r"(\d{4}-\d{2}-\d{2})"),
+    )), default=None)
 
     print(f"\n  data generated      {data_on}   (latest chapter "
           f"{chapters.get('latest_chapter')})")
