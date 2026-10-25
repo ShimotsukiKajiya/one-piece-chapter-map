@@ -11351,6 +11351,24 @@
     "voice_actor_en": "Mike Smith",
     "voice_actor_jp": "Takashi Matsuyama"
   },
+  "Clara": {
+    "appearances": 1,
+    "first_appearance": "Chapter 1196",
+    "found": true,
+    "name": "Clara",
+    "name_en": "Clara",
+    "name_jp": "クララ",
+    "name_romaji": "Kurara",
+    "raw_keys": [
+      "colorscheme",
+      "ename",
+      "first",
+      "jname",
+      "residence",
+      "rname"
+    ],
+    "residence": "Kamabakka Kingdom (Momoiro Island)"
+  },
   "Clione": {
     "affiliation": "Heart Pirates; Ninja-Pirate-Mink-Samurai Alliance (disbanded)",
     "aliases": [
